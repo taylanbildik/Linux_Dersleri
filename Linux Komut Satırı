@@ -1,0 +1,6 @@
+Linux kullanma kararı aldığımıza göre ilk olarak öğrenmemiz gereken şey Linux komut satırı ve Linux terminali(konsol) kavramlarıdır.
+Ancak bu kavramları daha iyi anlamak için Linux'un kalbi olan Linux çekirdeğinden başlasak daha iyi olur.Burada geçen Linux sizi 
+şaşırtmasın linux aslında çekirdek(kernel) yapının ismidir.Ancak zamanla GNU/Linux demek zor gelmiş olsa gerek insalar işletim sisteminin 
+bütününe Linux demeye başlamışlar.Şimdiden söylememde fayda var bu anlamında kullanıcam.Zaten yeri geldikçe çekirdekten mi yoksa işletim 
+sisteminin bütününden mi bahsediyorum anlayacaksınız.Bu küçük uyarının ardından kernel yani çekirdeği açıklayarak devam edelim.
+#Çekirdek (kernel)
