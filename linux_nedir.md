@@ -35,9 +35,8 @@ GPL 4 temel özgürlük üzerine kurulmuştur bunlar:
 
 GPL Richard Stallman tarafından geliştirilmiş çok akıllıca detaylarla bağlayıcılığı bulunan lisans türüdür. Burda herkes kazançlıdır.Kaynak kodları paylaşılmak zorunda olduğu için her şey şeffaf ve oldukça berraktır .Burada insani bir hizmet vardır. Yani savunulan şey daha fazla rant değil, insanların gönül rahatlığı ile sınır olmadan ihtiyaçlarını karşılamasıdır. Bu konu hakkında ayrıca avantajları ve dezavantajları sıralayabiliriz ancak konuyu çok genişletmemek ve sizlere araştırma kendi kendine bulup öğrenme alışkanlığı kazandırmak adına bu konuyu burada kesiyorum. Ben yazmaktan üşenmiyorum ancak benim burada yazıyı genişletmem sizin araştırıp kendin kendinize öğrenmenizden ve bu araştırma alışkanlığını kazanmanızdan daha yararınıza olmayacak lütfen buna inanın. Birde benim konu içinde veya dışında belirtmiş olduğum kaynaklarla sakın ola sınırlı kalmayın. Ben bir başlangıç noktası ve referans olması adına sizlerle bunları paylaşıyorum. Benden bu yüzden nefret edebilirsiniz ancak, araştırma ve kendi kendine öğrenme ateşi sizi sardığında hak vereceğinizi umuyorum. Sözümü o çok bilindik bir çin ata sözü ile noktalıyorum.
 
-"Bir kişiye iyilik yapmak istiyorsan ona balık verme, balık tutmayı öğret." Konfüçyüs
 
-> "Bir kişiye iyilik yapmak istiyorsan ona balık verme, balık tutmayı öğret."  **Konfüçyüs**
+> ### "Bir kişiye iyilik yapmak istiyorsan ona balık verme, balık tutmayı öğret."  **Konfüçyüs**
 
 GNU
 -------------
