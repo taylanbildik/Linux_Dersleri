@@ -4,8 +4,6 @@ Linux Nedir ?
 
 Başlamadan.. Şunu bilin ki Linux tek başına işletim sistemi değil **çekirdektir !** 
 
-----------
-
 
 UNIX
 -------------
@@ -37,6 +35,7 @@ GPL Richard Stallman tarafından geliştirilmiş çok akıllıca detaylarla bağ
 
 
 > ### "Bir kişiye iyilik yapmak istiyorsan ona balık verme, balık tutmayı öğret."  **Konfüçyüs**
+
 
 GNU
 -------------
