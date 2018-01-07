@@ -8,7 +8,7 @@ Bu kısımda bir nevi öğrenmeyi öğrenicez. Bunu da Linux sistemlerinin sahip
 
 Bu bağlamda Linux sistemlerinin temel döküman-bilgi kaynaklarını 3 türe ayırabiliriz.
 
-Bunlar; bilgi sayfaları(info), kılavuz sayfaları(manuel) ve uygulamalar ile gelen /usr/share/doc konumunda bulunan dökümanlardır. Bizler de zaman zaman unuttuğumuz için veya bilmediğimizden dolayı bu yardım sayfalarına ve dökümanlarına danışacağız. Bu girizgahtan sonra artık yavaş yavaş yardım alma komutlarımıza geçelim.
+Bunlar; bilgi sayfaları(info), kılavuz sayfaları(manuel) ve uygulamalar ile gelen <kbd>/usr/share/doc</kbd> konumunda bulunan dökümanlardır. Bizler de zaman zaman unuttuğumuz için veya bilmediğimizden dolayı bu yardım sayfalarına ve dökümanlarına danışacağız. Bu girizgahtan sonra artık yavaş yavaş yardım alma komutlarımıza geçelim.
 
 help Komutu
 ------------------
