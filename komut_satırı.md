@@ -31,6 +31,7 @@ Konsolu daha yakından incelemek adına bir konsol ekranı açalım. Yeni bir ko
 
 <p>Konsola girmiş olduğumuz komut yorumlandı ve neticesinde bize <kbd>/bin/bash</kbd> şeklinde bir çıktı verdi. Bu çıktı bize mevcut sistemde kullanılan ana kabuk programının BASH olduğunu bildirmiş oldu. Burada komut yorumlandı dedik ancak neye göre oldu bu iş ? İşte bu noktada devreye ortam değişkenleri(çevre değişkenleri) giriyor. Bu kısımları fazlaca incelediğimi düşünenler olabilir ancak emin olun öğrendiğiniz her şey birbiri ile bağlı ve bütünü anlamak için bilmek gerekli. İleride yeri geldikçe bunları daha net kavrayacağız zaten.</p><p>Anlatımları mümkün oldukça teknik dilden uzak sade anlaşılır ve sizlerin de sürekli etkileşimde olacağı şekilde aktarmaya çalışıyorum. Yani burada yazanları kuru kuruya ezberlemeyecek, ilerleyiş sırasında uygulamalar yaparak konuları anlamış olacağız.</p>
 <p>Tamda bu noktada uygulama yaparak öğrenmenin önemini belirten Konfüçyüs'ün bir sözünü hatırlatmak istiyorum:</p>
+
 > ### "Bana anlat unuturum, bana göster hatırlarım, beni dahil et, anlarım."  **Konfüçyüs**
 
 <p>İlerleyişimize gelin ortam değişkenlerini tanıyarak devam edelim.</p>
@@ -63,7 +64,7 @@ Konsolu daha yakından incelemek adına bir konsol ekranı açalım. Yeni bir ko
 
 <p>Bunun için dosyanın en alt satıra inerek eklemek istediğim dosyanın tam dizin adresini aşağıdaki şeklinde dosyaya ekliyorum.</p>
 
-   PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH
+     PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH
 
 ![enter image description here](https://i.hizliresim.com/Oo20NQ.png)
 
