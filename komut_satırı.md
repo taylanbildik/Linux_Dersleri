@@ -149,7 +149,7 @@ Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <co
 
 ![enter image description here](https://i.hizliresim.com/rOL2mB.png)
 
-Gördüğünüz üzere konsol TERM değişkeninin değerini xterm olduğunu göstermiş oldu. Zaten daha önce yaygın olarak kullanıldığından söz ettiğimiz için bu çıktı bizi şaşırtmadı. Eğer bu çıktıyı teyit etmek istersek konsola xterm komutunu verdiğimizde xterm açılacak ve çıktı teyit edilmiş olacaktır.
+Gördüğünüz üzere konsol TERM değişkeninin değerini xterm olduğunu göstermiş oldu. Zaten daha önce yaygın olarak kullanıldığından söz ettiğimiz için bu çıktı bizi şaşırtmadı. Eğer bu çıktıyı teyit etmek istersek konsola <code>xterm </code> komutunu verdiğimizde xterm açılacak ve çıktı teyit edilmiş olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/D7Xd8z.png)
 
@@ -165,7 +165,7 @@ Gelin şimdi teker teker kullanımlarına değinelim.
 
 Sadece o an kullanmkata olduğumuz terminale(konsol) özel olan ve terminali kapattıktan sonra sıfırlanan ortam değişkenidir. Aşağıdaki örnek ile adım adım açıklayalım bu durumu:
 
-Terminali açtım ve komut satırına " asdf " yazdım. Konsol yanıt olarak " bash: asdf: komut yok " yazısını ekrana bastı.
+Terminali açtım ve komut satırına "<code> asdf </code> " yazdım. Konsol yanıt olarak " <code>bash: asdf: komut yok</code> " yazısını ekrana bastı.
 
 ![enter image description here](https://i.hizliresim.com/z0RBA6.png)
 
@@ -175,7 +175,7 @@ Görüldüğü gibi konsol çıktısı Türkçe oldu ancak ben bu çıktıları 
 
 Çıktıda da görüldüğü gibi dil değişmiş ve yazdığımız <code>asdf</code> komutunun neticesinde konsol, ekrana "bash: asdf: command not found" yazısını basmış oldu. Sonuç olarak geçerli terminal için dil ingilizceye çevrilmiş oldu.
 
-Bütün bu işlemler sadece bu komut penceresi için sınırlı. Yani açmış olduğumuz terminal ekranını(konsol/komut pencersi) kapatırsak yeni bir tane açtığımızda başlangıçta olduğu gibi konsol bize Türkçe yanıt verecektir. Yani bu şekilde yapılan tüm değişiklikler sadece yapıldığı konsol için geçerli. Bunu kendiniz de deneyerek görebilirsiniz.
+Bütün bu işlemler sadece bu komut penceresi için sınırlı. Yani açmış olduğumuz terminal ekranını(konsol/komut penceresi) kapatırsak yeni bir tane açtığımızda başlangıçta olduğu gibi konsol bize Türkçe yanıt verecektir. Yani bu şekilde yapılan tüm değişiklikler sadece yapıldığı konsol için geçerli. Bunu kendiniz de deneyerek görebilirsiniz.
 
 
 ### Kullanıcıya (Oturuma) Özel
@@ -186,7 +186,7 @@ Bulunduğumuz oturumda kalıcı değişiklik yapmak için birisi grafiksel diğe
 
 Kodu kısaca açıklayacak olursak <code>leafpad</code>sistemde mevcut bulunan basit metin düzenleyicisinin adıdır, <code>~</code>(Alt Gr + ü kombinasyonu ile oluşturulan "tilde" karakteri) karakteri ev dizinini temsil ediyor <code>/.bashrc </code> ise düzenleme yapacağımız dosyanın adıdır. Bu kısa açıklama sonrası komutları tam olarak anlamamış olabilirsiniz. Ancak yakında her birine değineceğiz ve bu kısımlar da tam anlamıyla oturmuş olacak. Yani şimdilik bu kodlara çok takılmadan asıl anlatılmak istenilene odaklanın lütfen.
 
-leafpad ~/.bashrc komutunu verdikten sonra karşınıza .bashrc dosyasının açılmış olması gerek. 
+<code>leafpad ~/.bashrc </code> komutunu verdikten sonra karşınıza <kbd>.bashrc</kbd> dosyasının açılmış olması gerek. 
 
 ![enter image description here](https://i.hizliresim.com/6JRXPv.png)
 
@@ -209,13 +209,14 @@ Artık böylelikle değişiklik yaptığımız bu kullanıcı oturumunu ne zaman
 
 ### Sistem Genelinde
 
-Eğer yaptığımız değişiklik bütün kullanıcı oturumlarında aynı şekilde geçerli olsun istiyorsak değişkenin sistemde her oturum açıldığında okunan bir dosyada bulunması gerekmektedir. İşte bizim de yapacağımız değişiklikler tüm kullanıcılar için geçerli olsun istiyorsak, yapacağımız değişikliği<kbd> bash.bashrc</kbd> dosyasına eklemeliyiz. Dosyamızın tam konumu <kbd>/etc/bash.bashrc </kbd> dizininde yer alıyor. Bu dosyada ilgili değişikliği nano aracı ile yapmak için konsola <code>nano -w /etc/bash.bashrc </code>komutunu veriyoruz.
+Eğer yaptığımız değişiklik bütün kullanıcı oturumlarında aynı şekilde geçerli olsun istiyorsak değişkenin sistemde her oturum açıldığında okunan bir dosyada bulunması gerekmektedir. İşte bizim de yapacağımız değişiklikler tüm kullanıcılar için geçerli olsun istiyorsak, yapacağımız değişikliği <kbd> bash.bashrc</kbd> dosyasına eklemeliyiz. Dosyamızın tam konumu <kbd>/etc/bash.bashrc </kbd> dizininde yer alıyor. Bu dosyada ilgili değişikliği nano aracı ile yapmak için konsola <code>nano -w /etc/bash.bashrc </code>komutunu veriyoruz.
 
 ![enter image description here](https://i.hizliresim.com/JQLlgY.png)
 
-Örnek olması açısından dosyamızın en son satırına dil değişikliği işlevindeki "export LANG=C" ifadesini ekliyorum. Bu sayede terminal dili bütün sistemdeki kullanıcılar için ingilizce olacaktır.
+Örnek olması açısından dosyamızın en son satırına dil değişikliği işlevindeki "<code>export LANG=C </code>" ifadesini ekliyorum. Bu sayede terminal dili bütün sistemdeki kullanıcılar için ingilizce olacaktır.
 
 İlgili ifadeyi <kbd>bash.bashrc</kbd> dosyamıza ekleyip dosyamızı kaydediyoruz .
+
 ![enter image description here](https://i.hizliresim.com/D7Xy4z.png)
 ![enter image description here](https://i.hizliresim.com/m2lJ1V.png)
 
@@ -303,7 +304,7 @@ Ve sonuç bizleri şaşırtmayarak yine birleşik komut içerisinde yazdığım�
 
 Burada 1. komut başarısız olduğu için 2. komut ekrana basılmış oldu. Yani bir nevi önlem amaçlı bir kullanımdır. Biz konsola bu kullanım ile diyoruz ki; "Eğer verdiğim ilk komut başarısız olursa ikinci komutu çalıştır." yani bu durumda eğer ilk komut başarızı olursa hemen devreye ikinci komut girecektir ancak ilk komut başarılı olursa ikinci komut çalışmayacaktır.
 
-###Kısayol Koruması
+### Kısayol Koruması
 
 Buraya gelene kadar bir çok kısayoldan ve bu kısayolların avantajlarından bahsettik ancak kısayollar bazen istemediğimiz sonuçlar doğurabiliyor. Biz de böyle durumlarla karşılaşmamak adına şimdiden ufak önlemler alsak iyi olur. Önceki kısımlarda <kbd>Ctrl+D</kbd> kısayolunun mevcut konsolu kapattığını öğrenmiştik. Bu çok kullanışlı bir kısayol olsa da bazen istemeden de olsa konsolun ansızın kapanmasına neden olabiliyor. Yani bir kontrol mekanizması oluşturmamız sonradan üzülmemek için şart. Bu kontrol sağlama imkanını bize ignoreeof verir. ignoreeof tanımını kullanmanın 2 farklı yolu vardır. Bunlardan birisi sadece mecvut Terminal için geçerli diğeri ise sürekli ve oturumdaki tüm terminallerde geçerli olmak üzere kullanılmasıdır. Sürekli ve tüm Terminal ekranlarında geçerli olsun istiyorsak. Gerekli ayarlamaları yapmak üzere komut satırımıza <code> nano -w ~/.bashrc</code> komutunu veriyoruz ve <kbd> .bashrc</kbd> dosyasının en alt satırına <code>export IGNOREEOF=2</code> yazıp <kbd>Ctrl + X </kbd> kombinasyonunu kullanarak dosyanın ismini değiştirmeden kaydederek çıkıyoruz.(Bütün kullanıcılarda bu korumayı sağlamak için değişikliği <kbd>bash.bashrc</kbd> dosyasında yapmamız gerektiğini biliyorsunuz.)
 
@@ -311,13 +312,13 @@ Böylece koruma sistemi kuruldu ve artık test etmeye hazır. Komut satırınday
 
 ![enter image description here](https://i.hizliresim.com/G9n9B7.gif)
 
-Burada biz IGNOREEOF=2 şeklinde belirttik ve bu tanımlama bizi 2 kez Ctrl + D kapatma kombinasyonundan korudu. Ancak sizler bu bana yetmez yada 2 kez fazla olur diyorsanız tanımı istediğiniz değerlerde ayarlayabilirsiniz. Örneğin IGNOREEOF=4 olabilir ya da IGNOREEOF=1 olabilir, bu değer tamamen size kalmış. Ayrıca ufak bir hatırlatma, yaptığınız değişiklikler ancak Terminali kapatıp açtığınızda geçerli olur.
+Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 kez <kbd>Ctrl + D </kbd> kapatma kombinasyonundan korudu. Ancak sizler bu bana yetmez ya da 2 kez fazla olur diyorsanız tanımı istediğiniz değerlerde ayarlayabilirsiniz. Örneğin <code> IGNOREEOF=4 </code> olabilir ya da <code>IGNOREEOF=1</code> olabilir, bu değer tamamen size kalmış. Ayrıca ufak bir hatırlatma, yaptığınız değişiklikler ancak Terminali kapatıp açtığınızda geçerli olur.
 
 Şimdi de yalnızca mevcut Terminal için geçici koruma nasıl sağlarız ona değinelim. Koruma katmanı ne kadar hayat kurtarıcı olsa da sürekli olması bazen rahatsız edici olabilir. İşte bu noktada sadece önemli ve gerekli gördüğümüz zaman bu özelliği açıp kapatma seçeneğine sahibiz. Bunu da iki farklı yolla yapabiliriz.
 
-İlki, komut satırına <code>ignoreeof=2</code> şeklinde komut vermek. Bu komut ile mecvut Terminal ekranı ancak 3.kez <kbd>Ctrl + D</kbd> tuş kombinasyonu uygulandığında kapanacaktır. Buradaki sayıyı dilediğiniz gibi değiştirebileceğinizi biliyorsunuz. Eğer bu özelliği devre dışı bırakmak istersek komut satırına <code>ignoreeof=0</code> yazmamız yeterli.
+İlk yol, komut satırına <code>ignoreeof=2</code> şeklinde komut vermek. Bu komut sayesinde mecvut Terminal ekranı ancak 3.kez <kbd>Ctrl + D</kbd> tuş kombinasyonu uygulandığında kapanacaktır. Buradaki sayıyı dilediğiniz gibi değiştirebileceğinizi biliyorsunuz. Eğer bu özelliği devre dışı bırakmak istersek komut satırına <code>ignoreeof=0</code> yazmamız yeterli.
 
-İkinci yöntem ise komut satırına <code>set -o ignoreeof</code> yazmak. Bu komut ile de mevcut komut satırımız ancak 11.kez <kbd>Ctrl + D </kbd>yapmamız sonucunda kapanacaktır. Bunun haricinde birde <code>set -o ignoreeof</code>komutunu verirsek konsol ekranı anında sonlanır. Bu özelliği devre dışı bırakmak isterseniz de komut satırına <code> set +o ignoreeof</code> yazmalısınız.
+İkinci yöntem ise komut satırına <code>set -o ignoreeof</code> yazmak. Bu komut ile de mevcut komut satırımız ancak 11.kez <kbd>Ctrl + D </kbd>yapmamız sonucunda kapanacaktır. Bunun haricinde birde <code>exit</code> komutunu verirsek konsol ekranı anında sonlanır. Bu özelliği devre dışı bırakmak isterseniz de komut satırına <code> set +o ignoreeof</code> yazmalısınız.
 
 ![enter image description here](https://i.hizliresim.com/EPlPD8.gif)
 
