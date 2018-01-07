@@ -125,3 +125,34 @@ Ayrıca burada ekstra bir bilgi olsun diye burada belirtmek isterim ki ev dizini
 
 ![enter image description here](https://i.hizliresim.com/W720BN.png)
 ![enter image description here](https://i.hizliresim.com/3E87rr.png)
+
+
+Komutumuzu girdikten sonra ulaştığımız konumda hangi dosyaların olduğunu görmek için konsola <code>ls</code> komutunu verdik. Konsol bize Desktop(masaüstü) ve ev dizininde bulunan diğer dosyalarında çıktılarını verdi. Yani bu demek oluyor ki ev dizinine kullanıcı ismini bilmemize gerek olmadan kolayca ulaştık. Örnek durumda açıkladığımız program kısayolu oluşturma işlemi ana dizini tutan HOME ortam değişkeni sayesinde kolayca gerçekleştirilebilir oluyor.
+
+Komutu biraz açıklayacak olursak <code>cd</code>  dizinler arası geçiş yapmamızı sağlayan bir komut <code>$</code>  (dolar işareti) tanımlanmış olan değişkene erişme işlemini yapan parametremiz, HOME ise ev dizinini tutan ortam değişkeni. Son olarak <code>ls</code>  komutu bulunduğumuz konumdaki dosyaları listeliyor. Burada bahsi geçen tüm komutları ileride ele alacağız şimdilik bu açıklama yeterli.
+
+Temel ve sık kullanılan değişkellerden birkaçını da kısaca açıklayacak olursak:
+
+**SHELL:** Çalışmakta olan kabuk programının adını ve yeri.
+
+**PATH:** Konsola komut girildiğinde, komut için gereken ilgili dosyaların aranacağı dizinler diğer bir adıyla yol.
+
+**HOME:** Kullanıncının ev dizinini içeren değişken.
+
+**TERM:** Komut satırı uygulamalarının hangi terminalde çalışacağını belirtir. Birçok çeşidi vardır ancak xterm yaygın şekilde karşımıza çıkmaktadır.
+
+Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <code>echo $ORTAM_DEĞİŞKENİ</code> şeklinde komut vererek ilgili bilgilere ulaşabiliriz. Örneğin TERM değişkeninie bir bakalım.
+
+![enter image description here](https://i.hizliresim.com/rOL2mB.png)
+
+Gördüğünüz üzere konsol TERM değişkeninin değerini xterm olduğunu göstermiş oldu. Zaten daha önce yaygın olarak kullanıldığından söz ettiğimiz için bu çıktı bizi şaşırtmadı. Eğer bu çıktıyı teyit etmek istersek konsola xterm komutunu verdiğimizde xterm açılacak ve çıktı teyit edilmiş olacaktır.
+
+![enter image description here](https://i.hizliresim.com/D7Xd8z.png)
+
+İstersek diğer ortam değişkenlei için de aynı şekilde tek tek bilgi alabiliriz. Ancak ortam değişkenleri sabit ve sınırlı değildir. Sistemde var olanların haricinde bizde kendimiz ortam değişkenleri tanımlayabiliriz. Tanımlamaları üç farklı kategoriye ayırabiliriz;
+
+- **konsola(terminal) özel :** yalnızca geçerli, açık olan terminaldeki uygulamalar için kullanılabilen
+- **kullanıcı :** yalnızca tek kullanıcı için geçerli ve o kullanıcının her oturum açtığında kullanabildiği
+- **sistem geneli :** sistemde öntanımlı olarak ayarlanmış sürekli kullanılabilir
+
+Gelin şimdi teker teker kullanımlarına değinelim.
