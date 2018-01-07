@@ -256,6 +256,24 @@ Ben Ctrl + Shift + T şekilinde ayarladım. Elbette siz kısayol tuş kombinasyo
 
 Son olarak "Ekle" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu(ctrl+shift+T) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
 
-###Bash Shell Kısayolları
+### Bash Shell Kısayolları
 
 Bash Shell programının ne işe yaradığını daha önceki kısımlarda açıklamıştık. Şimdi ise komut yazarken işimizi kolaylaştıracak olan bazı Bash Shell kısayollarını görücez. Burada verilenleri direk olarak kullanmanız beklenmediğini daha önceki kısımlarda söylemiştim. Kısayolların oturması için çokça pratik gerek. Pratik yaptıkça zaten zamanla istemeden de olsa öğrenmiş ve farkında olmadan kullanıyor olacağız emin olun.
+
+## İmleç Hareketleri:
+
+<div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th>Kısayol</th><th>Kısayol Açıklaması</th></tr></thead><tbody><tr><td><kbd>Ctrl + A</kbd></td><td>imleç satır başına gider.</td></tr><tr><td><kbd>Ctrl + E</kbd></td><td>imleç satır sonuna gider.</td></tr><tr><td><kbd>Ctrl + P</kbd></td><td>önce çalıştırılmış komut gösterilir.</td></tr><tr><td><kbd>Ctrl + N</kbd></td><td>sonra çalıştırılmış komut gösterilir.</td></tr><tr><td><kbd>Alt + B</kbd></td><td>sola doğru(geri) bir kelime kadar imleç kayar.</td></tr><tr><td><kbd>Alt + F</kbd></td><td>sağa doğru(ileri) bir kelime kadar imleç kayar.</td></tr><tr><td><kbd>Ctrl + F</kbd></td><td>imleç bir karakter ileri gider.</td></tr><tr><td><kbd>Ctrl + B</kbd></td><td>imleç bir karakter geri gider.</td></tr><tr><td><kbd>Ctrl + XX</kbd></td><td>geçerli imleç konumundan, imleç satır başına geçer.</td></tr></tbody></table></div>
+
+* * *
+
+## Düzenleme
+
+<div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th width="21%">Kısayol </th><th width="79%">Kısayol Açıklaması</th></tr></thead><tbody><tr><td><kbd>Ctrl + L</kbd></td><td>ekran temizlenir ve imleç en üst satıra çıkar yani `clear` komutu ile aynı işlemi yapar.</td></tr><tr><td><kbd>Alt + D</kbd></td><td>imleçten sonraki kelimeyi siler.</td></tr><tr><td><kbd>Ctrl + U</kbd></td><td>imlecin solundaki her şeyi siler.</td></tr><tr><td><kbd>Ctrl + K</kbd></td><td>imlecin sağındaki her şeyi siler.</td></tr><tr><td><kbd>Ctrl + C</kbd></td><td>komutu keser.</td></tr><tr><td><kbd>Ctrl + Y</kbd></td><td>kesilmiş olan son metni ekrana yapıştırır.</td></tr><tr><td><kbd>Ctrl + W</kbd></td><td>imleçten önceki kelime panoya kopyalanır.</td></tr><tr><td><kbd>Ctrl + K</kbd></td><td>imleçten sonraki kelime panoya kopyalanır.</td></tr><tr><td><kbd>Ctrl + U</kbd></td><td>imleçten önceki kelime silinir.</td></tr><tr><td><kbd>Esc + T</kbd></td><td>imleçten önceki iki kelime yer değiştir.</td></tr><tr><td><kbd>Ctrl + H</kbd></td><td>sola doğru tek tek karakterleri siler.(Yani Backspace gibi davranır)</td></tr><tr><td><kbd>Alt + U</kbd></td><td>imleç in başladığı yerden sözcüğün sonuna kadar bütün karakterleri büyük harf yapar.</td></tr><tr><td><kbd>Alt + L</kbd></td><td>imleç in başladığı yerden sözcüğün sonuna kadar bütün karakterleri küçük harf yapar.</td></tr><tr><td><kbd>Alt + C</kbd></td><td>imleç in üstünde bulunduğu karakteri büyük harf yapar.</td></tr><tr><td><kbd>Ctrl + R</kbd></td><td>daha önce kullanılmış olan komutlar arasında arama yapma ve o komutu tekrardan kullanma imkanı sağlar.</td></tr><tr><td><kbd>Alt + R</kbd></td><td>değişiklikleri iptal eder ve satırı eski haline getirir.</td></tr><tr><td><kbd>Ctrl + _</kbd></td><td>değişiklikleri iptal eder.</td></tr></tbody></table></div>
+
+* * *
+
+<section>
+
+## Özel Tuşlar
+
+<div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th width="21%">Kısayol </th><th width="79%">Kısayol Açıklaması</th></tr></thead><tbody><tr><td><kbd>Ctrl + I</kbd></td><td>Tab tuşu görevi görür.(Tab tuşu otamatik tamamlama sağlar, unutmanız veya hatırlamamanız halinde hayat kurtarıcı etkidedir eminim çok kullancaksınız ileride. Bu bağlamda çok kıymetli bir kısayoldur. Kısayol harici direk olarak <kbd>Tab</kbd> tuşuna basmanız da gayet kullanışlı.)</td></tr><tr><td><kbd>Ctrl + J</kbd></td><td>Yeni satır (Newline)</td></tr><tr><td><kbd>Ctrl + M</kbd></td><td>Giriş/Onay (<kbd>Enter</kbd>)</td></tr><tr><td><kbd>Ctrl + [</kbd></td><td> Escape(<kbd>Esc</kbd>) tuşu işlevi görür.</td></tr><tr><td><kbd>Ctrl + D</kbd></td><td>Terminali sonlandırır.</td></tr></tbody></table></div></section>
