@@ -141,3 +141,113 @@ Ve ikinci yol olan `$(komut)` parametre bütünü; yine <code>ls</code> komutu i
 Sonuç itibari ile ilk <code>echo ls</code> komutunun çıktısı olan "ls" ifadesi bizim almak istediğimiz çıktıyı bizlere vermedi. Yani bu kullanım bizim yapmak istediğimiz iş olan komutun çıktılarının ekrana bastırılması için doğru bir kullanım değildi. Doğru kullanım şekli ise ikinci ve üçüncü komut olan <code>echo `ls`</code>, `echo $(ls)` şeklindedir. Bu komutların çıktısı istediğimiz şekilde, yani `ls` komutunun çıktısını(bulunduğumuz dizinde yer alan dosyaların bilgisi) ekrana basacak şekilde bizlere verdi. Sözü edilen durumu aşağıdaki çıktıyı inceleyerek bir bütün halinde kavrayabilirsiniz.
 
 ![enter image description here](https://i.hizliresim.com/G9b3X6.png)
+
+
+more
+-
+Şimdiye kadar öyle yada böyle terminal üzerinden dosya okuma işlemi yapmamıza yardımcı olan komutlar gördük. Bu komutumuzda aynı şekilde metin dosyalarını terminal üzerinden okumamıza olanak sağlayan bir komuttur.
+
+Örneğin daha önce de içeriğini okuyup değişiklik yapmış olduğumuz dosya olan <kbd>profile</kbd> dosyasının içeriğini <code>more</code> komutu yardımı ile okuyalım.
+
+Bunun için <kbd>/etc/profile</kbd> konumunda bulunan dosyamı <code>more</code> komutu ile açmak üzere konsola <code>more /etc/profile</code> şeklinde komutu girerek <kbd>profile</kbd> dosya içeriğini okumaya teşebbüs ediyorum.
+Komutumuzun ardından terminal ekranında karşımıza <kbd>profile</kbd> dosyasının içeriği aşağıdaki gibi geldi.
+
+![enter image description here](https://i.hizliresim.com/8YmP6A.png)
+
+Çıktıda görüldüğü gibi dosyanın içeriği ancak terminal ekranına sığacak şekilde görüntüleniyor. Hatta alt kısımda --More--(77%) şeklinde yazan yazı bizlere içeriğin devamı olduğunu belirtiyor. Eğer devamını okumak istersek <kbd>enter</kbd> tuşuna basarak adım adım alt satırlara bakabiliriz. Ayrıca <kbd>space</kbd> tuşu ile de sayfa sayfa atlayarak içeriğe göz atabiliriz. Eğer atladığınız sayfadan bir önceki sayfaya geri dönmek istersek <kbd>b</kbd> tuşunu, şayet dosya içeriğini görüntüleyen bu ekranı kapatmak istersek ise <kbd>q</kbd> tuşunu kullanmamız yeterli.
+
+less
+-
+Bu komutumuz da üst kısımda açıkladığımız more komutu ile aynı işlevdedir. Ayrıntısını merak ederseniz man sayfasına göz atmanız yeterli olacaktır.
+
+Ben yine de <code>less</code> komutu ile profile dosyasının içeriğinin okunduğu şeklini aşağıya bırakıyorum. Eğer <code>more</more> komutunda bir problem yaşamadıysanız bu komut kullanımında da kesinlikle yaşamazsınız.
+
+![enter image description here](https://i.hizliresim.com/D7oBOZ.png)
+
+
+head-tail
+-
+
+Aslında komutların isimleri yani head(kafa/baş) ve tail(kuyruk) bizlere komut hakkında az çok bilgi veriyor. Şöyleki bir dosyanın sadece baş kısmında ilk 10 satırı görüntülemek istersek <code>head</code> şayet son 10 satırı görüntülemek istersek ise <code>tail</code> komutunu kullanırız. Ayrıca bu komutlar özel parametre alarak istenildiği sayıda baştan veya sondan olmak üzere istenilen satırların görüntülenmesine olanak sağlar. Daha iyi anlamak adına hemen kullanımlarına geçelim.
+
+Dosya içeriğinin ilk 10 satırını görüntülemek için <code>head dosya_adı</code> şeklinde komutumuzu kullanıyoruz.
+
+![enter image description here](https://i.hizliresim.com/RnE1gZ.png)
+
+Şimdi burada 10 satır içerik yok gibi gelebilir ancak dosya içerisindeki boş satırlar da bu 10 satıra dahil olduğundan çıktıyı boş satırlar ile saydığınızda tam olarak 10 satırın görüntülendiğini göreceksiniz.
+
+Dosya içeriğinin son 10 satırını görüntülemek için <code>tail dosya_adı </code> şeklinde komutumuzu kullanıyoruz.
+
+![enter image description here](https://i.hizliresim.com/p6vX5J.png)
+
+Şimdi istediğimiz sayıda baştan veya sondan dizinleri görüntüleyelim. Ben örnek olması açısından baştan 6 sondan 2 satırı görüntülemek üzere komutumu veriyorum. Komutun kullanımı <code>head -n 6 </code> ve <code>tail -n 2</code> şeklinde.
+
+Baştan 6 satırın çıktıları.
+
+![enter image description here](https://i.hizliresim.com/kOZGMy.png)
+
+Sondan 2 satırın çıktıları.
+
+![enter image description here](https://i.hizliresim.com/NZYlLQ.png)
+
+
+nl
+-
+Bu komutun işlevi satırları numaralandırarak çıktı vermektir. Hemen görelim.
+
+![enter image description here](https://i.hizliresim.com/EPQrOv.png)
+
+Çıktıda da görüldüğü üzere dosya içeriğinde yer alan ifadeler satır satır numaralandırılarak ekrana basılmış oldu.
+
+Ayrıca eğer listelenen içerik uzunsa bir önceki öğrendiğimiz <code>head-tail </code> komutları yardımı ile bu alanı düzenli şekilde sınırlandırabiliriz.
+
+sort
+-
+Dosya çıktılarının alfabetik olarak düzenlenmesini sağlar. Örnek üzerinden devam edelim. Ben <kbd>isimler.txt</kbd> adında bir dosya oluşturdum ve içerisine karışık olarak isimler ekledim.
+Ve bu isimleri alfabetik sıraya dizmek için <code>sort isimler.txt</code> komutunu kullandım.
+
+![enter image description here](https://i.hizliresim.com/azPdn7.png)
+
+Eğer ters alfabetik şekilde yani z den a ya doğru sıralamak istersek <code>-r</code> parametresi kullanılır.
+
+![enter image description here](https://i.hizliresim.com/Yg3qdA.png)
+
+
+paste
+-
+
+Örneğin iki dosyanın içeriğini aynı anda yan yana olacak şekilde komut satırında listelemek istersek bu notkada bu işi yapmamızı <code>paste </code> komutu sağlıyor. Kullanımı <code>paste dosya1 dosya2 </code> şeklindedir.
+
+Ben <kbd>yaşlar.txt</kbd> ve <kbd>isimler.txt</kbd> adlı dosyaları aynı anda yana yana görüntülemek adına komut satırına <code>paste isimler.txt yaşlar.txt </code> komutunu verdim.
+
+![enter image description here](https://i.hizliresim.com/m2q4XY.png)
+
+
+tee
+-
+Yazmak istediğimiz ifadeleri hem komut satırına yansıtıp hem de bu ifadelerim bir dosya içerisine kayıt olmasını isterseniz kullanacağınız komut <code>tee</code> komutu olacaktır.
+
+Örnek üzerinden devam edelim.
+
+<code>tee metin</code> komutu ile "metin" isminde bir dosya açıyorum ve içerisine birtakım ifadeler ekliyorum daha sonra ekleme işlemim bittiğinde dosyayı kaydederek kapatmak üzere <kbd>Ctrl + D</kbd> tuş kombinasyonunu uyguluyorum. En son oluşturmuş olduğum dosya içeriğine bakmak üzere <code>cat</code> komutunu kullanıyorum.
+
+![enter image description here](https://i.hizliresim.com/Z92Mpz.png)
+
+Çıktıda da görüldüğü üzere terminal ekranında yazdığımız her bir satır tekrar ederek konsola basıldı ve sonuçta oluşturmuş olduğumuz "metin" isimli dosyanın içeriği de yazmış olduğumuz ifadeler ile dolmuş oldu.
+
+cmp
+-
+Bu komut sayesinde dosyalar arasından karşılaştırma yapmamız mümkün.
+
+Örneğin ben <kbd>isimler.txt </kbd> dosyasını kopyaladım ve 5. satırındaki ismi değiştirdim. Ve bu iki dosyayı <code>cmp</code> komutu ile kıyasladım.
+
+![enter image description here](https://i.hizliresim.com/oOn0pq.png)
+
+İki dosyanın da içeriğini <code>cat</code> komutu ile yazdırdık görüldüğü üzere iki dosya arasındaki fark, bir dosyada mehmet ismi yerine enes isminin yer almasıdır. <code>cmp</code> komutunun çıktısında da bu durum farklı olan satır ve bayt bilgisi verilerek ifade edeliyor.
+
+
+grep
+-
+Bu komut en çok kullanılan terminal komutları içerisinde bulunuyor. Bu komutumuzu bizler de oldukça sık kullanıyor olacağız. Dosya ya da komut çıktısında bir ifade aramak için yani bir nevi filtreleme işlemi için grep komutunu kullanabiliriz. Komutumuzun kullanım şekillerini örnekler ile açıklamaya devame edelim.
+
+Eğer bir dosya içerisindeki herhangi bir kelimeyi sorgulamak istersek komutumuzu grep "aranacak_ifade" dosya_adı şeklinde komut satırına giriyoruz.
