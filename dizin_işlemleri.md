@@ -63,7 +63,7 @@ En temel kullanımı ile başlayacak olursak, <code>ls</code> komutu içinde bul
 
 Görüldüğü üzere <code>ls</code> komutumuzu kullanmamız ardından bulunduğumuz ana konumda yer alan tüm dosyalar konsola basılmış oldu.
 
-###ls-l
+### ls-l
 
 
 Eğer çıktımız ayrıntılı olsun istiyorsak komut satırına komutu parametresi ile beraber <code>ls -l</code> şeklinde yazmamız gerekiyor.
@@ -72,7 +72,7 @@ Eğer çıktımız ayrıntılı olsun istiyorsak komut satırına komutu paramet
 
 Çıktımızda dosya izinleri, dosya boyutu, oluşturulma tarihi gibi bilgiler sıralanmış oldu. Tabii ki <code>ls</code> komutu kullanımı bununla sınırlı değil, parametreler ile devam edelim .
 
-###ls-a
+### ls-a
 
 
 Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli dosyaları da aynı şekilde listeleyebiliriz. Bunun için <code>ls</code> komutunun <code>a</code> parametresini kullanıyoruz. Çıktımızın düzenli ve listeli olması adına <code>a </code> parametresinin yanına bir de <code>l</code> parametresi kullanmak istiyorum. Bunun için komut satırına <code>ls -la</code> şeklinde veya <code>ls -al</code> şeklinde komutunu girmemiz gerekiyor. Ayrıca bu komutu <code>ls -a -l</code> şeklinde ayrı arı ayrı olarak da girebiliriz. Sonuçta bu komutun parametresi hem birleşik hemde ayrı ayrı şekilde yazılabilir. Kullanım tercihi size kalmış.
@@ -81,42 +81,42 @@ Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli
 ![enter image description here](https://i.hizliresim.com/lOBrVr.png)
 ![enter image description here](https://i.hizliresim.com/Vr2Xbv.png)
 
-###ls -A
+### ls -A
 
 
 <kbd>.</kbd> ve <kbd>..</kbd> dizinleri hariç gizli dosyalar da dahil bütün dosyaları görmek istersek <code>ls</code>komutumuzu <code>ls -A</code> şeklinde kullanabiliriz. Ayrıca çıktıları düzgün şekilde listelemek adına <code>l</code> parametresi de dahil edebileceğimizi biliyorsunuz.
 
 ![enter image description here](https://i.hizliresim.com/nOYmBM.png)
 
-###ls -h
+### ls -h
 
 
 Listelenen dizinlerin boyutunu okunaklı(human readable) şekilde verir. Okunaklıdan kasıt dosya boyutunu KB, MB, GB türünden büyüklük olarak vermesidir. Karşılaştırmanız acısından bir normal şekilde birde daha okunaklı şekilde olanın çıktılarını aşağıda veriyorum. (Ayrıca komutumuza <code>-l</code> parametresini eklemiş olmamızın sebebi dizin ayrıntılarını dolayısıyla da dosya boyutunu görebilmektir.)
 
 ![enter image description here](https://i.hizliresim.com/Z92Q0V.png)
 
-###ls -i
+### ls -i
 
 
 Düğüm numarasını verir. Düğüm(inode) numarası nedir diyecek olursanız bu konuya ileride değineceğiz şimdiilik bu parametrenin bu görevi gördüğünü bilsek yeter.
 
 ![enter image description here](https://i.hizliresim.com/jyz1oL.png)
 
-###ls -r
+### ls -r
 
 
 Konsola basılan çıktıyı ters çevirerek basar. Karşılaştırmanız açısından normal liste sırası ve <code>-r</code> parametreli ters liste sırasını aşağıda veriyorum.
 
 ![enter image description here](https://i.hizliresim.com/BLo6kM.png)
 
-###ls -S
+### ls -S
 
 
 Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralanacağından komutun daha net anlaşılması için <kbd>/root/run<kbd> dizini altında işlem yaptım.
 
 ![enter image description here](https://i.hizliresim.com/vjY8q4.png)
 
-###ls -t
+### ls -t
 
 
 Dosyanın değiştirilme tarihine göre sıralar.
