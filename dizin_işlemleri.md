@@ -54,6 +54,7 @@ Eğer sürekli iki dosya arasında gidip geliyorsak bir önceki dosyaya <code>cd
 
 ls
 -
+
 Listeleme ve görüntüleme işini yapan bu komutumuzu anlatmadan önce defalarca kullandık. Bu da gösteriyor ki <code>ls</code> komutu çok yaygın şekilde kullanılan komutlardan. Bu komuta sürekli işimiz düşecek. Bu komutun da pek çok parametresi mevcut ben hepsini olmasa da birkaçını ele alarak anlatıma devam ediyorum.
 
 En temel kullanımı ile başlayacak olursak, <code>ls</code> komutu içinde bulunduğumuz dizinde yer alanları bizlere gösterir. Örneğimize ana dizindeyken <code>ls</code> komutunu vererek başlayalım.
@@ -64,6 +65,7 @@ Görüldüğü üzere <code>ls</code> komutumuzu kullanmamız ardından bulundu�
 
 ###ls-l
 
+
 Eğer çıktımız ayrıntılı olsun istiyorsak komut satırına komutu parametresi ile beraber <code>ls -l</code> şeklinde yazmamız gerekiyor.
 
 ![enter image description here](https://i.hizliresim.com/BLo6Bp.png)
@@ -72,6 +74,7 @@ Eğer çıktımız ayrıntılı olsun istiyorsak komut satırına komutu paramet
 
 ###ls-a
 
+
 Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli dosyaları da aynı şekilde listeleyebiliriz. Bunun için <code>ls</code> komutunun <code>a</code> parametresini kullanıyoruz. Çıktımızın düzenli ve listeli olması adına <code>a </code> parametresinin yanına bir de <code>l</code> parametresi kullanmak istiyorum. Bunun için komut satırına <code>ls -la</code> şeklinde veya <code>ls -al</code> şeklinde komutunu girmemiz gerekiyor. Ayrıca bu komutu <code>ls -a -l</code> şeklinde ayrı arı ayrı olarak da girebiliriz. Sonuçta bu komutun parametresi hem birleşik hemde ayrı ayrı şekilde yazılabilir. Kullanım tercihi size kalmış.
 
 ![enter image description here](https://i.hizliresim.com/oOn819.png)
@@ -79,32 +82,43 @@ Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli
 ![enter image description here](https://i.hizliresim.com/Vr2Xbv.png)
 
 ###ls -A
+
+
 <kbd>.</kbd> ve <kbd>..</kbd> dizinleri hariç gizli dosyalar da dahil bütün dosyaları görmek istersek <code>ls</code>komutumuzu <code>ls -A</code> şeklinde kullanabiliriz. Ayrıca çıktıları düzgün şekilde listelemek adına <code>l</code> parametresi de dahil edebileceğimizi biliyorsunuz.
 
 ![enter image description here](https://i.hizliresim.com/nOYmBM.png)
 
 ###ls -h
+
+
 Listelenen dizinlerin boyutunu okunaklı(human readable) şekilde verir. Okunaklıdan kasıt dosya boyutunu KB, MB, GB türünden büyüklük olarak vermesidir. Karşılaştırmanız acısından bir normal şekilde birde daha okunaklı şekilde olanın çıktılarını aşağıda veriyorum. (Ayrıca komutumuza <code>-l</code> parametresini eklemiş olmamızın sebebi dizin ayrıntılarını dolayısıyla da dosya boyutunu görebilmektir.)
 
 ![enter image description here](https://i.hizliresim.com/Z92Q0V.png)
 
 ###ls -i
+
+
 Düğüm numarasını verir. Düğüm(inode) numarası nedir diyecek olursanız bu konuya ileride değineceğiz şimdiilik bu parametrenin bu görevi gördüğünü bilsek yeter.
 
 ![enter image description here](https://i.hizliresim.com/jyz1oL.png)
 
 ###ls -r
+
+
 Konsola basılan çıktıyı ters çevirerek basar. Karşılaştırmanız açısından normal liste sırası ve <code>-r</code> parametreli ters liste sırasını aşağıda veriyorum.
 
 ![enter image description here](https://i.hizliresim.com/BLo6kM.png)
 
 ###ls -S
 
+
 Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralanacağından komutun daha net anlaşılması için <kbd>/root/run<kbd> dizini altında işlem yaptım.
 
 ![enter image description here](https://i.hizliresim.com/vjY8q4.png)
 
 ###ls -t
+
+
 Dosyanın değiştirilme tarihine göre sıralar.
 
 ![enter image description here](https://i.hizliresim.com/Lbdgr0.png)
@@ -113,10 +127,13 @@ Yukarıda bahsi geçen <code>ls</code> komutu, açıkladığım parametreleri d�
 
 Dizin Oluşturma Ve Silme
 =
+
 Dizin oluşturmak için <code>mkdir</code> , silmek için ise ileride tekrar dosya sistemlerinde değineceğimiz <code>rm</code> komutu kullanılıyor.
 
 mkdir
 -
+
+
 Dosya oluşturmamıza olanak sağlayan komuttur. En temel kullanımı <code>mkdir dosya_adı</code> şeklindedir. Örneğin bulunduğumuz konuma dosyalar adında bir dizin oluşturalım. Bunun için komut satırına <code>mkdir dosyalar</code> yazmamız yeterli. Ayrıca dosyamızın oluşup oluşmadığını da <code>ls</code> komutu ile teyit ediyoruz.
 
 ![enter image description here](https://i.hizliresim.com/oOn8vX.png)
@@ -133,6 +150,7 @@ Burada yer alan izin kavramı hakkında endişelenmeyin ileride "Erişim Yetkile
 
 rm
 -
+
 Komutumuzu ileride dosya işlemleri bölümünde tekrardan ele alacağız. Ancak şimdi <code>rm</code> yani silme komutunun dizinler üzerinde kullanımı öğrenmeliyiz.
 
 Dizin dediğimiz şey iç içe sırlanmış dosya ve belgelerden oluşan bir yol. Yani bu yolu silmek istediğimizde içerisindeki her şeyi de silmeliyiz. Bu yüzden komutumuzu <code>-r</code> parametresi ile birlikte kullanarak dizinin içerisindeki dosyalar da dahil her şeyi silmesini söylemiş oluruz. Yani komutun dizin silme işlemi için kullanım <code>rm -r silinecek_dizin</code> şeklindedir.
