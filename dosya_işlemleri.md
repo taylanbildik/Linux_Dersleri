@@ -4,6 +4,7 @@ Konumuz itibari ile dosyalarla epeyce haşır neşir olacağız. Yapacağımız 
 
 touch
 -
+
 <code>touch</code> komutu bize kolaylıkla metin dosyası oluşturma imkanı tanıyor. İşte bu yüzden dosya işlemleri konumuza <code>touch</code> komutu ile başlamak gayet doğru bir karar olacaktır.
 
 Kendimize <code>touch</code> komutunu kullanarak boş bir dosya oluşturmak için komut satırına <code>touch dosya_ismi </code> şeklinde yazmamız gerekiyor. Burada fark ettiyseniz herhangi bir uzantı girmeme gerek kalmadı. Çünkü Linux sisteminde uzantı belirtme zorunluluğu bulunmuyor. Bu durumu gözlemlemek için konsola <code> touch yeni </code> komutunu vererek "yeni" adından bir dosya oluşturalım. 
@@ -28,6 +29,7 @@ Neticede "yeni_belge" isimli dosya benim belirtmiş olduğum ileri bir tarihte k
 
 cat
 -
+
 <code>cat </code> komutu temelde dosya içeriğini terminal ekranından okumamıza olanak sağlayan bir aracı çağıran komuttur. Ancak bu komut bizlere temel işlevinin dışında da dosyalar ile ilgili pek çok işlem yapma imkanı sağlıyor. Sırasıyla bunların bazılarına göz atacağız. Ama ilk olarak temel işlevi olan terminal üzerinden dosya okuma işlevini görelim.
 
 Bunun için konsola açmak istediğimiz dosyanın konumundayken <code>cat açılacak_dosya</code> şeklinde komut vermemiz gerek.
@@ -68,12 +70,14 @@ Belki defalarca söyledim ancak bu komut için de söylemem gerek ki daha fazla 
 
 tac
 -
+
 İsminden de anlamış olacaksınız ki <code>tac</code> komutu önce gördüğümüz <code>cat</code> komutunun tersi şekilde çıktı veriyor. Bu durumu daha iyi anlamak için karşılaştırmalı olarak verilen çıktıyı inceleyiniz.
 
 ![enter image description here](https://i.hizliresim.com/8Ym86d.png)
 
 rev
 -
+
 Hazır terslikten bahsetmişken <code>rev</code> komutundan da söz etmemek olmaz. Bu komut dizeleri sondan başa doğru çevirerek ters şekilde ekrana basıyor. Bu durum en iyi örnek ile açıklanır. Hatta <code>cat</code> komutu ile de karşılaştırırsak sonuç daha net oraya çıkacaktır.
 
 ![enter image description here](https://i.hizliresim.com/D7o3Oy.png)
@@ -145,6 +149,7 @@ Sonuç itibari ile ilk <code>echo ls</code> komutunun çıktısı olan "ls" ifad
 
 more
 -
+
 Şimdiye kadar öyle yada böyle terminal üzerinden dosya okuma işlemi yapmamıza yardımcı olan komutlar gördük. Bu komutumuzda aynı şekilde metin dosyalarını terminal üzerinden okumamıza olanak sağlayan bir komuttur.
 
 Örneğin daha önce de içeriğini okuyup değişiklik yapmış olduğumuz dosya olan <kbd>profile</kbd> dosyasının içeriğini <code>more</code> komutu yardımı ile okuyalım.
@@ -158,16 +163,15 @@ Komutumuzun ardından terminal ekranında karşımıza <kbd>profile</kbd> dosyas
 
 less
 -
+
 Bu komutumuz da üst kısımda açıkladığımız more komutu ile aynı işlevdedir. Ayrıntısını merak ederseniz man sayfasına göz atmanız yeterli olacaktır.
 
 Ben yine de <code>less</code> komutu ile profile dosyasının içeriğinin okunduğu şeklini aşağıya bırakıyorum. Eğer <code>more</more> komutunda bir problem yaşamadıysanız bu komut kullanımında da kesinlikle yaşamazsınız.
 
 ![enter image description here](https://i.hizliresim.com/D7oBOZ.png)
 
-
 head-tail
 -
-
 Aslında komutların isimleri yani head(kafa/baş) ve tail(kuyruk) bizlere komut hakkında az çok bilgi veriyor. Şöyleki bir dosyanın sadece baş kısmında ilk 10 satırı görüntülemek istersek <code>head</code> şayet son 10 satırı görüntülemek istersek ise <code>tail</code> komutunu kullanırız. Ayrıca bu komutlar özel parametre alarak istenildiği sayıda baştan veya sondan olmak üzere istenilen satırların görüntülenmesine olanak sağlar. Daha iyi anlamak adına hemen kullanımlarına geçelim.
 
 Dosya içeriğinin ilk 10 satırını görüntülemek için <code>head dosya_adı</code> şeklinde komutumuzu kullanıyoruz.
@@ -190,19 +194,20 @@ Sondan 2 satırın çıktıları.
 
 ![enter image description here](https://i.hizliresim.com/NZYlLQ.png)
 
-
 nl
 -
+
 Bu komutun işlevi satırları numaralandırarak çıktı vermektir. Hemen görelim.
 
 ![enter image description here](https://i.hizliresim.com/EPQrOv.png)
 
 Çıktıda da görüldüğü üzere dosya içeriğinde yer alan ifadeler satır satır numaralandırılarak ekrana basılmış oldu.
 
-Ayrıca eğer listelenen içerik uzunsa bir önceki öğrendiğimiz <code>head-tail </code> komutları yardımı ile bu alanı düzenli şekilde sınırlandırabiliriz.
+Ayrıca eğer listelenen içerik uzunsa bir önceki öğrendiğimiz <code>head-tail</code> komutları yardımı ile bu alanı düzenli şekilde sınırlandırabiliriz.
 
 sort
 -
+
 Dosya çıktılarının alfabetik olarak düzenlenmesini sağlar. Örnek üzerinden devam edelim. Ben <kbd>isimler.txt</kbd> adında bir dosya oluşturdum ve içerisine karışık olarak isimler ekledim.
 Ve bu isimleri alfabetik sıraya dizmek için <code>sort isimler.txt</code> komutunu kullandım.
 
@@ -225,6 +230,7 @@ Ben <kbd>yaşlar.txt</kbd> ve <kbd>isimler.txt</kbd> adlı dosyaları aynı anda
 
 tee
 -
+
 Yazmak istediğimiz ifadeleri hem komut satırına yansıtıp hem de bu ifadelerim bir dosya içerisine kayıt olmasını isterseniz kullanacağınız komut <code>tee</code> komutu olacaktır.
 
 Örnek üzerinden devam edelim.
@@ -237,6 +243,7 @@ Yazmak istediğimiz ifadeleri hem komut satırına yansıtıp hem de bu ifadeler
 
 cmp
 -
+
 Bu komut sayesinde dosyalar arasından karşılaştırma yapmamız mümkün.
 
 Örneğin ben <kbd>isimler.txt </kbd> dosyasını kopyaladım ve 5. satırındaki ismi değiştirdim. Ve bu iki dosyayı <code>cmp</code> komutu ile kıyasladım.
@@ -248,6 +255,191 @@ Bu komut sayesinde dosyalar arasından karşılaştırma yapmamız mümkün.
 
 grep
 -
-Bu komut en çok kullanılan terminal komutları içerisinde bulunuyor. Bu komutumuzu bizler de oldukça sık kullanıyor olacağız. Dosya ya da komut çıktısında bir ifade aramak için yani bir nevi filtreleme işlemi için grep komutunu kullanabiliriz. Komutumuzun kullanım şekillerini örnekler ile açıklamaya devame edelim.
 
-Eğer bir dosya içerisindeki herhangi bir kelimeyi sorgulamak istersek komutumuzu grep "aranacak_ifade" dosya_adı şeklinde komut satırına giriyoruz.
+Bu komut en çok kullanılan terminal komutları içerisinde bulunuyor. Bu komutumuzu bizler de oldukça sık kullanıyor olacağız. Dosya ya da komut çıktısında bir ifade aramak için yani bir nevi filtreleme işlemi için <code>grep</code> komutunu kullanabiliriz. Komutun kullanım şekillerini örnekler ile açıklamaya devam edelim.
+
+Eğer bir dosya içerisindeki herhangi bir kelimeyi sorgulamak istersek komutumuzu `grep "aranacak_ifade" dosya_adı` şeklinde komut satırına giriyoruz. Ben basit bir örnek olması açısından <kbd>isimler.txt</kbd> dosyası içerisinde "hasan" ismi varmı diye kontrol etmek üzere konsola `grep "hasan" isimler.txt` komutunu veriyorum.
+
+![enter image description here](https://i.hizliresim.com/6JYE40.png)
+
+Arama işleminde linux sistemi gereği büyük küçük harf duyarlılığına sahip olduğundan "hasan" şeklinde arama yaptığımızda diğer büyük küçük haldeki anahtar kelimeler çıktıda basılmayacaktır. Eğer bu küçük büyük harf duyarlılığı dışında arama yapmak istersek `-i` parametresini kullanabiliriz.  Bu durumu gözlemlemek için büyük küçük harflerden oluşan kelimelerin olduğu bir dosya üzerinde `grep` komutunu kullanalım.
+
+![enter image description here](https://i.hizliresim.com/W7Wylm.png)
+
+Eğer arama işlemini tek dosya yerine bulunduğumuz dizin içerisindeki tüm dosyaları kapsayacak şekilde gerçekleştirmek istersek wildcard yani genel kapsama işlevinde olan joker `*` karakteri yardımıyla bu işlemi gerçekleştirebiliriz.
+
+Hemen örneklere geçelim. Hasan ismini masaüstü konumundayken aratıyorum. Bunun için `grep "hasan" *` komutunu konsola verdim. 
+
+![enter image description here](https://i.hizliresim.com/3E23X0.png)
+
+Gördüğünüz gibi çıktı bize içerisinde "hasan" ifadesi geçen tüm dosyaları verdi. 
+
+Çıktıda aradığımız ifadenin hangi dosyada yer aldığını bulmuş olduk. Ayrıca yukarıdaki komutu `grep -r "hasan" *` şeklinde de yazabilirdik. Genellikle de bu 2. komut kullanılıyor ancak hangi şekilde kullanacağınızı seçmek size kalıyor.
+
+![enter image description here](https://i.hizliresim.com/RnE4a7.png)
+
+İkinci kullanım şeklinde ilkinden farklı olarak "grep: yeni_dizin: Bir dizin" gibi bir çıktı almadık.
+
+Wildcardlardan söz etmişken dosya içerisinde arama işleminin başka bir kullanım şekline de değinelim isterim. Eğer aranacak kelime belirli bir isim ile başlayan dosyalar içerisinde aranacaksa bunu wildcard(joker) yardımıyla özellikle belirtebiliriz.
+
+Kullanımı `grep "aranacak_ifade" dosya_adı_başlangıcı*` şeklindedir. Ben ilk önce masaüstünde yer alan dosyaları listeledim daha sonra "hasan" ifadesini aramaya koyuldum. İlk önce "metin" ismi ile başlayan belgelerde `grep "hasan" metin*` komutunu kullanarak aradım. 
+
+![enter image description here](https://i.hizliresim.com/JQdGpW.png)
+
+Ancak çıktıda da görüleceği gibi "hasan" ifadesi "metin" ismi ile başlayan belgeler içerisinde yer almıyormuş ki komut çıktısı bize hiç bir sonuç vermedi. 
+
+Bende "hasan" ismini bu sefer "isimler" adıyla başlayan belgeler içerisinde aramak için `grep "hasan" isimler*` komutunu kullandım. Bunun neticesinde komut satırı bize "hasan" isminin geçtiği belgelerin yerini vermiş oldu. 
+
+![enter image description here](https://i.hizliresim.com/D7oA9l.png)
+
+Buradaki asıl kullanım amacı; komutu, belirli isimlere sahip olan dosyalar içerisinden anahtar kelimeyi aramak üzerine sınırlandırmak.
+
+Bunların dışında eğer arama sonucunun görüntülenmesini sınırlandırmak istersek;
+Örnek olması açısından "filazof" isimli dosyadan "jo" ile başlayan isimleri listeliyorum.
+
+![enter image description here](https://i.hizliresim.com/p6va7r.png)
+
+Arama sonucu sonrasında kaç satır gözükeceğini `-A` parametresi sayesinden `grep -A 3 "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
+
+![enter image description here](https://i.hizliresim.com/D7oAVo.png)
+
+Sonucun üzerindeki kaç satırın gözükeceğini `-B` parametresi sayesinden `grep -B 5 "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
+
+![enter image description here](https://i.hizliresim.com/EPQ0nz.png)
+
+Baştan ve sondan kaç satır görüntüleneceğini ise `-C` parametresi sayesinden `grep -C 2 "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
+
+![enter image description here](https://i.hizliresim.com/kOZa2q.png)
+
+Şimdi ise sıklıkla kullanılan pipe ile `grep` kullanımına bakalım. Pipe nedir diyecek olursanız kabaca iki işlemi(process) birbirine bağlayan `|` görünümündeki yardımcı argüman diyebiliriz. Zaten daha önce de iki işlemin birbirine bağlanması gereken durumlarla karşılaşmış ve pipe kullanmıştık.
+
+`grep` ile kullanımına geçecek olursak örneğin masaüstünde yer alan dosyalardan yalnızca "metin" isimli olanları listelemek isteyelim. Bunun için ilk olarak masüstünde yer alan dosyalarımızı listelemek üzere komut satırına `ls` daha sonra ise `ls` komutundan gelecek olan çıktıları pipe yardımı ile `grep` komutuna bağlayarak listelenen bütün bu dosyalar içerisinden sadece "metin" adı geçenleri filtreleyebilelim..
+
+Bu işlemi gerçekleştirmek için `ls | grep "metin"` komut bütününü kullanıyorum.
+
+![enter image description here](https://i.hizliresim.com/D7oA4y.png)
+
+`grep` komutunun kullanım şekli ve alanı elbette bu kadar ile sınırlı değil ancak sizler daha fazla bilgiye nasıl ulaşacağınızı biliyorsunuz.
+
+
+find
+-
+
+`find` komutu da hemen hemen daha önce görmüş olduğumuz `locate` komutu ile aynı görevi görüyor. Örneğin, isminini birazını bildiğimiz ama dosya dizinini hatırlamadığımız dosyaları bulmamıza yardımcı oluyor.
+
+Komut kullanım kalıbı `find dosya_yolu -name aranacak_ifade` şeklindedir. Tam kullanım şekli için aşağıdaki örneği inceleyebilirsiniz.
+
+![enter image description here](https://i.hizliresim.com/oOnmrq.png)
+
+Çıktıda <kbd>etc</kbd> konumda yer alan içerisinde "local" ifadesi geçen dosyalar komutumuz sayesinde listelenmiş oldu. Ancak aradığımız şeyi bulmak adına değiştirilme tarihi, boyut, dosya-dizin gibi ayrıntıları belirterek çıktıları daha spesifik şekilde sınırlandırabiliriz. Bazı özel arama parametreleri açıklayalım hemen.
+
+- **type f :** Yalnızca dosyalar.
+- **type d :** Yalnızca dizinler.
+- **size +500k :** 500 Kbyt'dan büyük olan dosyalar.
+- **size -500k :** 500 Kbyt'dan küçük olan dosyalar.
+- **ctime 10 :** Tam olarak 10 gün önce değişikliğe uğramış dosya/dizinler.
+- **ctime -10 :** 10 günden daha kısa bir süre önce değişikliğe uğramış  dosya/dizinler.
+- **ctime +10 :** 10 günden daha uzun bir süre değişikliğe uğramış dosya/dizinler.
+- **perm 755 :** Yalnızca erişim izni 755 olan dosya/dizinler.
+Örnek olması açısından yukarıdaki arama parametrelerinin ilk ikisinin çıktılarını aşağıya ekliyorum.
+
+![enter image description here](https://i.hizliresim.com/lOBDvp.png)
+
+
+xargs
+-
+`xargs` komutu kabaca kendisinden önce verilen girdi verilerini kendisinden sonrakine tek tek aktarmaktır. Biliyorum böyle denilince hiçbir şey anlaşılmıyor. O yüzden `xargs` komutunu `find` komutuyla birlikte kullanarak örnek üzerinden komutumuzu ve kullanım mantığını açıklamış olalım.
+
+Örneğin <kbd>.jpg</kbd> uzantılı bir resim dosyasını araştırıp daha sonra bulduğumuz bu dosyayı silelim. Ben duvar kağıdı için daha önce internetten bir <kbd>.jpg</kbd> uzantılı bir resim indirmiştim. Bu resim hem indirilenler(downloads) hem de resimler konumunda yer alıyor, biliyorum ancak komutun kullanımını denemek üzere dosyanın konumunu bilmiyormuşçasına bir test edelim. Testimizde <kbd>root</kbd> dizinindeki <kbd>.jpg</kbd> uzantılı dosyaları araştıralım ve silelim.
+
+![enter image description here](https://i.hizliresim.com/m2qD12.png)
+
+Çıktıda da görüldüğü gibi <kbd>.jpg</kbd> uzantılı resim dosyası silmeden önce çıktıda belirtilen konumlarda bulunuyordu. Ancak arama ve silme işlemini gerçekleştirmemiz ile birlikte dosya silindi. Bunu da tekrar arama işlevindeki `find` komutunu vererek teyit etmiş olduk
+
+Komutumuzun işleyişi tam olarak şöyle oldu;
+
+`find /root -name *.jpg` komutu ile <kbd>root></kbd> dizini altındaki tüm <kbd>.jpg</kbd> uzantılı dosyaları listeledik.
+
+Bu listelenen dosya konum ve varlık bilgilerini `xargs` komutuna `pipe( | )` argümanı sayesinde aktardık.
+
+`xargs` komutu ise eline geçen bu bilgiler sayesinde dosyanın konumunu saptayarak silme işlemini gerçekleştirebildi.
+
+`xargs` komutu `exec` isimli başka bir komuta benzer şekilde çalışmaktadır. Merak edip öğrenmek isteyen arkadaşlar ayrıca `exec` komutuna bakabilirler.
+
+Dosya Kopyalama-Taşıma-Silme İşlemleri
+-
+Bu kısımda dosyaları kopyalama taşıma ve silme gibi işlemleri ele alacağız. Zaten kullanacağımız komutlar kısa oldukları için kullanımı ve akılda kalması çok kolay. İlk olarak dosya kopyalama işlemi ile anlatıma başlayalım.
+
+### cp
+
+`cp` komutu kopyalama işlevindedir. Kullanımı `cp kaynak hedef` şeklindedir. Örnek üzerinden açıklayalım.
+
+![enter image description here](https://i.hizliresim.com/EPQ05D.png)
+
+
+Komutumuzu açıklayacak olursak;
+
+Desktop dizinindeyken ls komutu ile bulunduğumuz dizindeki dosyaları listeliyoruz. Ve çıktıda da görüldüğü üzere masaüstünde filazof isimli bir belge bulunmuyor.
+
+`cd yeni_dizin` komutuyla  <kbd> yeni_dizin </kbd> konumuna gidiyoruz.
+
+`ls` komutu ile buradaki dosyaları listeliyoruz. Bu dizinde yalnızca "yeni" isimli bir klasör mevcut.
+
+`cd ..` komutu ile bir önceki dizine dönüyoruz.
+
+"filazof" dosyasını <kbd>yeni_dizin</kbd> konumuna taşımak üzere `cp filazof yeni_dizin` şeklinde komutumuzu kullanıyoruz.
+
+Daha sonrasında ise `cd yeni_dizin` komutu ile yeni_dizin konumuna gidip `ls` komutu yazarak "filazof" isimli dosyamızın kopyalandığını teyit ettik.
+
+Eğer bir dosyayı A dizininden B dizinine taşırsak ve B dizini içerisinde A dizininden taşıdığımız belge ile aynı isimde dosya varsa taşıdığımız dosya mevcut konumda bulunan aynı isimdeki eski dosyanın üzerine yazılacaktır. Bu da B konumunda var olan eski dosyanın önceki içeriğinin yok olması demek. Böyle talihsiz bir durum yaşamamak için `cp` komutunu kullanmadan önce `-i` parametresini de eklememizde fayda var. Bu parametre `cp` komutunun aynı isimli bir dosya ile karşılaşma durumunda bize onay sormasını sağlayacaktır.
+
+Anlatılanları daha iyi anlamak adına hemen bir örnek yapalım. Daha önceden <kbd>yeni_dizin</kbd> konumuna taşımış olduğumuz "filazof" dosyasını `-i` parametresini kullanarak tekrar `cp` komutu ile taşımaya çalışalım.
+
+![enter image description here](https://i.hizliresim.com/jyzDVg.png)
+
+Çıktıda da görüldüğü gibi `-i` parametresini kullanarak yazdığımız kopyalama komutu bize "cp: 'Desktop/merhaba''ın üzerine yazılsın mı? " şeklinde bir uyarıda bulundu ve bizden onay bekledi.
+
+Elbette bu işlemleri çoklu dosya taşıma için de kullanabiliriz.
+
+![enter image description here](https://i.hizliresim.com/2Jvl8O.png)
+
+Hangi komutu neden kullandık zaten bir önceki örneğe benzer olduğu için tekrar açıklamıyorum. Çıktıları inceleyerek çok rahat şekilde anlayabilirsiniz.
+
+Eğer o anda çalıştığımız dizine başka bir konumdan dosya kopyalamak istersek komutumuzu `cp kopyalanacak_dosya_konumu .` şeklinde kullanabiliriz. Nokta( . ) bizim o anda bulunduğumuz çalışma konumunu ifade ediyor. Örneği incelediğinizde her şey daha net anlaşılacaktır.
+
+![enter image description here](https://i.hizliresim.com/BLodDG.png)
+
+Görüldüğü üzere kopyalanacak olan dosyanın konumunu belirttik ancak bulunduğumuz konuma yani kopyalamak istediğimiz konumun direk adresini belirtmemize gerek kalmadı. Bunun yerine bulunduğumuz konumu temsil eden `.`(nokta) kullanmamız dosyanın kopyalanmasını sağladı.
+
+Eğer bulunduğumuz konumdan bir üst konuma kopyalamak istersek komutu `cp dosya_adresi ..` şeklinde kullanmamız yeterli olacaktır.
+
+![enter image description here](https://i.hizliresim.com/Vr27vR.png)
+
+Çıktıları karşılaştırarak dosyayı bir önceki dizine kopyalamayı (iki nokta) `..` ile kolaylıkla yapabildiğimizi görebilirsiniz.
+
+
+### mv
+Bu komut dosya taşıma ve uzantı değiştirme gibi işlevlere sahiptir. Dosya taşıma işlevi tıpkı `cp` komutunda olduğu gibidir. Yani komutun kullanımı `mv dosya_konumu taşınacak_konum` şeklindedir.
+
+![enter image description here](https://i.hizliresim.com/Z92q7z.png)
+
+### rm
+
+Dosya dizin silme işlevinde kullandığımız komuttur. Kullanımı `rm silinecek_dosya_dizin` şeklindedir.
+
+![enter image description here](https://i.hizliresim.com/vjYDnD.png)
+
+
+Dosyalar tekil olarak silinebileceği gibi çoklu silme işlemi de gerçekleştirilebilir. Hatta daha önce gördüğümüz joker karakterleri de kullanırsak isim, uzantı gibi filtrelere göre sınırlandırarak toplu dosya silme işlemi gerçekleştirebiliriz. Örnek olması açısından masaüstünde yer alan 2 adat <kbd>.py</kbd> uzantılı dosyayı tek seferde `rm *.py` komutu ile siliyorum.
+
+![enter image description here](https://i.hizliresim.com/1JjoMb.png)
+
+Joker karakterlerin kullanım alanları oldukça geniştir. Sizler de ihtiyacınıza göre filtreleme yaparak bu işlemleri istediğiniz doğrultuda gerçekleştirebilirsiniz.
+
+### shred
+
+Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. `shred` komutu dosyanın içerisine rastgele bitler yazarak dosyanın okunmaz hale gelmesini sağlıyor. Parametresiz kullanımda dosyaya 3 kez rastgele bit eklerken `n` parametresini kullanarak bu eklenecek olan rastgele bit sayısını istediğimiz doğrultuda düzenleyebiliyoruz. Eğer yapılan işlemi komut satırından takip etmek istersek `v` parametresini de kullanabiliriz. Ayrıca `u` parametresini kullanmamız halinde dosya işlem sonrasında silinir.
+
+![enter image description here](https://i.hizliresim.com/rOYDZz.png)
+
+![enter image description here](https://i.hizliresim.com/Lbd61z.png)
