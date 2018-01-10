@@ -166,12 +166,14 @@ less
 
 Bu komutumuz da üst kısımda açıkladığımız more komutu ile aynı işlevdedir. Ayrıntısını merak ederseniz man sayfasına göz atmanız yeterli olacaktır.
 
-Ben yine de <code>less</code> komutu ile profile dosyasının içeriğinin okunduğu şeklini aşağıya bırakıyorum. Eğer <code>more</more> komutunda bir problem yaşamadıysanız bu komut kullanımında da kesinlikle yaşamazsınız.
+Ben yine de <code>less</code> komutu ile profile dosyasının içeriğinin okunduğu şeklini aşağıya bırakıyorum. Eğer <code>more</code> komutunda bir problem yaşamadıysanız bu komut kullanımında da kesinlikle yaşamazsınız.
 
 ![enter image description here](https://i.hizliresim.com/D7oBOZ.png)
 
+
 head-tail
 -
+
 Aslında komutların isimleri yani head(kafa/baş) ve tail(kuyruk) bizlere komut hakkında az çok bilgi veriyor. Şöyleki bir dosyanın sadece baş kısmında ilk 10 satırı görüntülemek istersek <code>head</code> şayet son 10 satırı görüntülemek istersek ise <code>tail</code> komutunu kullanırız. Ayrıca bu komutlar özel parametre alarak istenildiği sayıda baştan veya sondan olmak üzere istenilen satırların görüntülenmesine olanak sağlar. Daha iyi anlamak adına hemen kullanımlarına geçelim.
 
 Dosya içeriğinin ilk 10 satırını görüntülemek için <code>head dosya_adı</code> şeklinde komutumuzu kullanıyoruz.
