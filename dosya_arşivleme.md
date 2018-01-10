@@ -1,0 +1,80 @@
+Dosya Arşiv İşlemleri
+=
+Bu bölümde dosya arşivleme, sıkıştırma-açma gibi işlemleri ele alıcaz. Zaten bu kavramlar sizlere yabancı gelmemeli zira daha önce hangi işletim sistemini kullanmış olursanız olun öyle ya da böyle karşınıza çıkmıştır. Genellikle yüksek boyutlu dosyaların sıkıştırılmasında veya veri kaybı olmadan güvenli transfer yapabilmek için ve bunlar gibi pek çok sebep dolayasıyla arşiv dosyaları ile sıklıkla karşılaşıyoruz, karşılaşmaya da devam edicez.
+
+Konumuza arşiv dosyası oluşturarak başlayalım.
+
+tar
+-
+
+`tar` komutunun açılımı (Tape ARchive) şeklindedir. Bu komut bir veya birden fazla dosyayı tek bir forma sokarak arşivlenmiş duruma getirir. Örnekler üzerinden anlatıma devam edelim.
+
+Masaüstünde yer alan ismi "metin" ile başlayan her şeyi <kbd>metinler.tar</kbd> şeklinde arşivlemek isteyelim. Bunun için komut satırına `tar -cf metinler.tar metin*` yazmalıyız.
+
+
+Kullandığımız komut bütününü tek tek izah edelim;
+
+`tar`(Tape ARchive) arşivleme işlevini yapan program.
+
+`-c`(create archive) parametresi joker `*` yardımıyla dosya ismi ile başlayan her şeyi paketleyip <kbd>dosyalar.tar</kbd> isimli dosyaya yollar.
+
+Kullandığımız `-f` parametresi de hangi dosyaya yazılacağını belirtir.
+
+Dosyaları tekrar açmak için `tar -xf metinler.tar` komutunu kullanabiliriz. Veya açılan dosyaları konsol üzerinden takip etmek için `v` parametresi kullanarak aynı işlemi gerçekleştirebiliriz.
+
+
+
+Eğer arşivi başka bir klasöre çıkarmak istersek komutumuzu `tar -xf metinler.tar -C hedef_klasör` şeklinde kullanabiliriz.
+
+
+
+Görüldüğü gibi arşivin içerisindekiler öncekilerden farklı olarak direk çalıştığımız dizine değil, belirtmiş olduğumuz hedef klasöre çıkarılmış oldu.
+
+Arşivi çıkarmadan içerisindekileri görmek istersek `tar -tf metinler.tar` komutunu kullanabiliriz.
+
+
+
+Oluşturmuş olduğumuz arşive sonradan ekleme yapmak için `-r` parametresini kullanabiliriz.
+
+Hemen <kbd>metinler.tar</kbd> arşivine aynı dosya konumunda  yer alan <kbd>yeni</kbd> isimli klasörü eklemeye çalışalım.
+
+
+
+
+Başta ve sondaki arşivin durumunu karşılaştırdığımızda <kbd>yeni</kbd> isimli klasörün arşive eklenmiş olduğunu gördük.
+
+`tar` komutunun kullanım şekilleri elbetteki yukarıdaki anlatılanlar ile sınırlı değil. Ancak biz genel olarak sıklıkla karşılaşılan kullanım şekillerini ele almış olduk. Daha fazla bilgiye nasıl ulaşacağınızı biliyorsunuz.
+
+gzip-gunzip-bzip2-bunzip2
+-
+
+Biz daha önceki kısımlarda `tar` komutu ile dosyaları sadece arşivlemiş ancak sıkıştırma işlemi yapmamıştık. Şimdi ise gerektiğinde dosyaları sıkıştırmayı ve bu dosyaları açmayı göreceğiz.
+
+Sıkıştırma işleminde iki temel araç kullanılıyor. Bunlar `gzip` ve `bzip2` araçları. Sıkıştırılmış olan dosyaları açma işleminde ise `gzip` ile sıkıştırılan dosyalar için `gunzip`, `bzip2` ile sıkıştırılan dosyalar için ise `bunzip2` kullanılıyor.
+
+Masaüstünde yer alan dosyalardan örnek yapalım hemen. Ben "metin" adıyla başlayan dosyaları `gzip` arşivine almak için daha önceden de defalarca kullanmış olduğumuz `*` joker karakterinin yardımıyla `gzip metin*` komutunu veriyorum. Daha sonra aynı işlemi "isim" adı ile başlayan belgeler için bu defa `bzip2` yardımıyla `bzip2 isim*` şeklinde arşivleyerek gerçekleştiriyorum.
+
+
+Sıkıştırdığımız dosyayı tekrar dışarı çıkarmak istersek komutu `-d` parametresi ile birlikte kullanmamız gerekiyor.
+
+
+
+Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her ikisini de birlikte kullanma vakti geldi.
+
+`gzip` ile `bzip2` arasında `tar` komutu yardımı ile arşivleme işlemi yaparken ufak bir fark var. Bu fark `gzip` ile arşivleme yaparken komutun `czvf` şeklinde parametre almasıyla, `bzip2` ile arşivleme işlemi yaparken aldığı parametrenin `cjvf` olmasıdır. Bunun dışında kullanım şekilleri aynıdır.
+
+Örnekler ile açıklayalım.
+
+Her iki şekilde de metin isimli belgeleri bir arşiv içine almaya çalışalım. Sırasıyla bunu ilk olarak `gzip` ile daha sonra ise `bzip2` ile yapalım. Dosya adı verirken kullanılan <kbd>tar.gz</kbd> ve <kbd>tar.bz2</kbd> uzantılarına dikkat edin aksi halde işlem hata verecektir.
+
+
+
+Gördüğünüz gibi `gzip` kullanırken parametre olarak `czvf` verdik ve oluşturduğumuz dosyanın uzantısını da <kbd>tar.gz</kbd>  şeklinde yaptık. Aynı şekilde `bzip2` için ise `cjvf` parametrelerini kullandık ve dosya adımızın uzantısını <kbd>tar.bz2</kbd>  şeklinde oldu. Daha önce de söylediğim gibi bu ayrıntılara dikkat etmezseniz işlem kaçınılmaz olarak başarısız olacaktır.
+
+Sıkıştırmış olduğumuz arşivleri tekrar açmak için ise `gzip` için `xzvf` parametresi `bzip2` için ise `xzjf` parametresini kullanacağız. 
+
+Arşivler açılmış oldu. Eğer arşivi belirli bir konuma çıkarmak istersek daha önce de öğrenmiş olduğumuz şekilde `-C` parametresi ile bu işlemi gerçekleştirebiliriz. Eğer `-C` parametresi kullanmazsak arşiv içindekiler doğrudan belirttiğimiz konuma açılır. `-C` parametresi hedef konuma arşivin ismi ile bir dosya oluşturur ve o dosya içerisine çıkarma işlemini yapar. 
+
+Daha önceden öğrendiğimiz işlemleri de aynı şekilde sıkıştırılmış arşiv dosyalarında da yapabiliyoruz. O yüzden aynı şeyleri burada tekrardan vermemiz anlamsız olur.
+
+İlk başlarda akılda kalması hatırlanması zor gelebilir ancak sizler de zamanla, kullana kullana bu komutlara alışacaksınız. Unuttuğunuz yerde zaten tekrar açıp bakabilirsiniz.
