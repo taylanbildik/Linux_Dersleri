@@ -27,4 +27,4 @@ Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
 - [Log Yönetimi](https://github.com/taylanbildik/Linux_Dersleri/blob/master/log_kay%C4%B1tlar%C4%B1.md)
 
 
-Tek parça ve sıralı Linux Dokümantasyonu için [buraya](https://github.com/taylanbildik/Linux_Dersleri/blob/master/Linux_dok%C3%BCmantasyonu.md) tıklayın.
+### Tek parça ve sıralı Linux Dokümantasyonu için [buraya](https://github.com/taylanbildik/Linux_Dersleri/blob/master/Linux_dok%C3%BCmantasyonu.md) tıklayın.
