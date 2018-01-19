@@ -101,22 +101,31 @@ Sırasıyla kullanım parametrelerine göz atalım:
 
 **b :** blok uzunluğu bayt cinsinden gösterir.(aşağıdaki kullanımda yer alan `s` ve `v` parametreleri ileride açıklanmıştır)
 
+![enter image description here](https://i.hizliresim.com/YgvayE.png)
 
+**c :** bir seferde sınanacak blok sayısı belirtilir ve bu sayı öntanımlı olarak tek seferde 16 blok okuyacak şekildedir. Bu sayının arttırılması bu işlemin verimini yani hatalı blokların bulunma ihtimalini artırır ancak arttırıldığı sayıya bağlı olarak bellek kullanımı da artacağı için bu sayının yüksek tutulması durumunda sistem "tamponları ayırmada bellek yetersizliği" hatasını verecek ve işlemi sonlandıracaktır. Tersi durumda yani bu sayının çok düşük tutulması da hatalı blokların gizli kalmasına neden olarak yapılan işin verimini düşürecektir. Yani dengeli kullanım çok önemlidir.
 
+![enter image description here](https://i.hizliresim.com/8Yl3OW.png)
 
+**f :** dosya sisteminin zarar görüp sistemin çökebileceği durumlarda `badblocks` tarama yapmayı reddeder. Ancak siz çoğu durumda önerilmese de yinede tarama yapmaya zorlamak isterseniz `f` parametresini kullanabilirsiniz.
 
+![enter image description here](https://i.hizliresim.com/D7lr1m.png)
 
+**p :** diskin kaç defa taranacağını belirtir öntanımlı olarak bu değer sıfırdır yani ekstra değer belirtilmezse disk yalnızca 1 kez taranır.
 
+![enter image description here](https://i.hizliresim.com/m2GabZ.png)
 
+**s :** taranan blokların numaralarını çıktı olarak vererek sürecin gelişimini gösterir.
 
+![enter image description here](https://i.hizliresim.com/NZ5dXL.gif)
 
+**v :** süreçle ilgili ayrıntılı bilgi verir.
 
+![enter image description here](https://i.hizliresim.com/azoavg.gif)
 
+Bu parametreler dışında da başka parametreler mecvut konsola `man badblocks` yazarsanız zaten diğer parametreler hakkında da kısaca bilgi sahibi olabilirsiniz.
 
-
-
-
-
+Neticede `badblocks` komutu ve parametreleri yardımı ile hatalı blok tespiti yapabiliyoruz. Şimdi de bu hatalı blokları düzeltme kısmına gelelim.
 
 
 fsck
