@@ -16,7 +16,7 @@ Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
 - [Kullanıcı İşlemleri](https://github.com/taylanbildik/Linux_Dersleri/blob/master/kullan%C4%B1c%C4%B1_i%C5%9Flemleri.md)
 - [Süreç İşlemleri](https://github.com/taylanbildik/Linux_Dersleri/blob/master/s%C3%BCre%C3%A7_i%C5%9Flemleri.md)
 - [Disk İşlemleri](https://github.com/taylanbildik/Linux_Dersleri/blob/master/disk_i%C5%9Flemleri.md)
-- [Çalışma Seviyeleri- Servisler](https://github.com/taylanbildik/Linux_Dersleri/blob/master/%C3%A7al%C4%B1%C5%9Fma_seviyeleri-servisler.md)
+- [Çalışma Seviyeleri - Servisler](https://github.com/taylanbildik/Linux_Dersleri/blob/master/%C3%A7al%C4%B1%C5%9Fma_seviyeleri-servisler.md)
 - [Sembolik Link ve Katı Link](https://github.com/taylanbildik/Linux_Dersleri/blob/master/sembolik_link-ve-kat%C4%B1_link.md)
 - [Güncelleme Kurma Kaldırma İşlemleri](https://github.com/taylanbildik/Linux_Dersleri/blob/master/kurma-kald%C4%B1rma-g%C3%BCncelleme_i%C5%9Flemleri.md)
 - [Joker Karakterler](https://github.com/taylanbildik/Linux_Dersleri/blob/master/joker_karakterler%28wildcards%29.md)
