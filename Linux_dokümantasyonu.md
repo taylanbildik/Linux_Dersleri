@@ -719,7 +719,7 @@ komutunu kullanmalıyız.
 
 ![enter image description here](https://i.hizliresim.com/m2q790.png)
 
-Örneğin bir alt dizine geçip orada yer alan başka bir klasöre girmek istiyoruz diyelim. Bunun için komutumuzu <code>cd ../klasör_adı </code> şeklinde bir kullanabiliriz. Ben örnek olması açısından <kbd>/root/etc </kbd> dizini içerisindeyken bir geri dizine dönüp daha sonra Desktop konumuna gelmek için <code>cd ../Desktop</kbd> komutunu kullanıyorum. 
+Örneğin bir alt dizine geçip orada yer alan başka bir klasöre girmek istiyoruz diyelim. Bunun için komutumuzu <code>cd ../klasör_adı </code> şeklinde bir kullanabiliriz. Ben örnek olması açısından <kbd>/root/etc </kbd> dizini içerisindeyken bir geri dizine dönüp daha sonra Desktop konumuna gelmek için `cd ../Desktop` komutunu kullanıyorum. 
 
 ![enter image description here](https://i.hizliresim.com/EPQ61Z.png)
 
