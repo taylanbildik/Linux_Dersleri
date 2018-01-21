@@ -6,7 +6,7 @@ Linux kurmak veya kurmadan kullanmak için çok fazla metod bulunuyor. Ben sadec
 Kurulum ve Kullanım Metodları
 -
  
-Sanal olarak kurulum (Vmware & Virtualbox)
-İkincil işletim sistemi olarak kurmak (Dualboot)
-Live versiyon olarak kullanmak.
-Linux VPS aracılığı ile kullanmak.
+- Sanal olarak kurulum (Vmware & Virtualbox)
+- İkincil işletim sistemi olarak kurmak (Dualboot)
+- Live versiyon olarak kullanmak.
+- Linux VPS aracılığı ile kullanmak.
