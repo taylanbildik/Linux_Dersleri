@@ -198,3 +198,5 @@ Eğer son kullandığımız komutu tekrar kullanmak istersek komut satırına <c
 Bunlar dışında da çok farklı kullanım şekilleri de mevcut. Bu bilgilere <code>man</code> komutu yardımı ile nasıl ulaşacağınızı biliyorsunuz.
 
 Ayrıca son yazılan komutlara ulaşmak için klavyede yer alan yön tuşlarından <kbd>↑</kbd>(yukarı) ve <kbd>↓</kbd>(aşağı) tuşlarını kullanarak önceki ve sonraki komutlarınıza ulaşabilirsiniz. Genellikle yön tuşlarını kullanmak bize anlık işlemlerimizde hız katmaktadır. Sizler de bu pratiklikleri mutlaka yeri geldikçe sıklıkla kullanacaksınız.
+
+![enter image description here](https://i.hizliresim.com/oO7a6m.gif)
