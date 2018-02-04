@@ -325,6 +325,6 @@ Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 
 
 İkinci yöntem ise komut satırına <code>set -o ignoreeof</code> yazmak. Bu komut ile de mevcut komut satırımız ancak 11.kez <kbd>Ctrl + D </kbd>yapmamız sonucunda kapanacaktır. Bunun haricinde birde <code>exit</code> komutunu verirsek konsol ekranı anında sonlanır. Bu özelliği devre dışı bırakmak isterseniz de komut satırına <code> set +o ignoreeof</code> yazmalısınız.
 
-![enter image description here](https://i.hizliresim.com/MdJ4X6.gif)
+![enter image description here](https://i.hizliresim.com/3EoJNO.gif)
 
   [1]: https://ss64.com/bash/syntax-keyboard.html
