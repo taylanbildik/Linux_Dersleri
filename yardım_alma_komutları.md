@@ -61,7 +61,7 @@ Hazır yeri gelmişken yukarıda gördüğümüz <code>man</code> sayfası yapı
 
 Bu çıktıların doğruluğu man sayfalarının tutulduğu <kbd>/usr/share/man </kbd>dizinine gidilerek kontrol edilebilir. Örneğin ben <kbd>/usr/share/man/man1</kbd> konumuna gittiğimde <code>whatis</code> komutunun yardım sayfalarının burada olduğunu görebiliyorum. Sizler çıktıları de bu şekilde teyit edebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/p6PVoL.png)
+![enter image description here](https://i.hizliresim.com/vj47n6.png)
 
 <code>whatis</code> komutunun kullanımı bu kadar ile sınırlı değil ancak ben geri kalanını burada vermiyorum. Dileyen arkadaşlar <code>man</code>komutu yardımı ile gerekli bilgilere ulaşabilirler.
 
