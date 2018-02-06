@@ -19,7 +19,7 @@ Linux, `/` (root) klasöründen başlayarak, boot işlemindeki önem sırasına 
 
 <img src="https://i.hizliresim.com/azXYRR.gif" width="875">
 
-Ayrıca belirtmekte fayda var, Linux küçük büyük harf duyarlılığına sahiptir. Yani Linux'ta DOSYA_ADI,Dosya_Adı,dosya_adı,DoSyA_aDı..vb. gibi ismlendirilmiş dosyaların hepsi **ayrı/farklı** bir dosya olarak tanınır. Windows'ta ise aynı isimli dosyalar, küçük büyük harf ayrımı gözetilmeksizin aynı olarak tanınır. Hemen bu durumu teyit etmek için Windows ve Linux sisteminde bir test işlemi gerçekleştirelim.
+Ayrıca belirtmekte fayda var, Linux küçük büyük harf duyarlılığına sahiptir. Yani Linux'ta `DOSYA_ADI`,`Dosya_Adı`,`dosya_adı`,`DoSyA_aDı`..vb. gibi ismlendirilmiş dosyaların hepsi **ayrı/farklı** bir dosya olarak tanınır. Windows'ta ise aynı isimli dosyalar, küçük büyük harf ayrımı gözetilmeksizin aynı olarak tanınır. Hemen bu durumu teyit etmek için Windows ve Linux sistemlerinde dosya oluşturma işlemi gerçekleştirelim.
 
 **#Windows**
 <img src="https://i.hizliresim.com/XPd6mk.gif" width="875">
@@ -30,4 +30,11 @@ Gelin bu durumu birde Linux sisteminde test edelim.
 **#Linux**
 <img src="https://i.hizliresim.com/QVQLXv.gif" width="875">
 Test sonucundan da anlaşılacağı gibi Linux işletim sisteminde küçük büyük harf duyarlılığı bulunuyor. 
-O yüzden işlemlerimizi yaparken özellikle de ileride konsol(terminal/komut penceresi) ekranından işlem yaparken bu küçük büyük harf duyarlılığı son derece önem kazanacak.
+O yüzden işlemlerimizi yaparken özellikle de ileride konsol(terminal/komut penceresi) ekranından işlem yaparken bu küçük büyük harf duyarlılığı son derece önem kazanacak. Bu önemli detayı da öğrendikten sonra gelin anlatıma devam edelim.
+
+Daha iyi anlaşılması adına anlatımları Windows ile karşılaştırma yaparak gerçekleştiriyorum. Ve yine bir karşılaştırma daha; Windows işletim sistemine bir program eklediğimizde programın dosyaları `Program Files`(Program Dosyaları) dizini içerisine programın kendi adındaki bir klasöre eklenir.(Örneğin `C:\Program Files\program_adı` şeklinde.) Programın dosyaları tek bir dosya içerisindedir yani.(Anlatımda kast edilen program dosyalarının tek dosya içerisinde bulunma durumuna harici sistem kayıt dosyaları ve benzeri dosyalar dahil değildir.) Ancak Linux'ta bir program eklenme durumunda programın tüm dosyaları programın isminin yer aldığı bir klasöre gitmez. 
+
+Örneğin; sistem otomatik olarak program dökümanlarını `/usr/share/doc/program_ad/` altına koyarken, eğer varsa info dosyaları da,`/usr/share/info` dizini içerisine atar. Yani kısacası programı kurduğunuzda programın dosyaları ilgili konumlara otomatik olarak dağılır. Tek bir klasör içerisinde yer almaz.
+
+Özetle Linux sisteminde her şey bir dosya(root-kök dosyası(`/`)) içerisinde yer alır. Ve bu dosya sistemi hiyerarşik bir yapıda bulunur. Tüm bu tek kök dosya sistemi ve hiyerarşik yapılanmanın amacı **çok kullanıcılı ve dağıtık bir sistemi güvenli ve kolay bir şekilde kurup yönetebilmektir**. 
+Yani örneğin sistemde "burak" isimli kullanıcı hesabı var diyelim. Burak kullanıcısının sistemi kullanması için gereken sistem dosyalarını çalıştırma yetkisi var yani sistemi normal bir şekilde kullanabiliyor. Ancak eğer burak kullanıcısının dosyaları değiştirme yetkisi yoksa /home/burak dizininden önceki dizinlerde değişiklik(dosyaları silme, üzerine veri yazma-okuma vs..) yapamaz. Bu sistem sayesinde bütün kullanıcılar yetkileri dahilinde işlemlerini güvenli şekilde yerine getirebilir.
