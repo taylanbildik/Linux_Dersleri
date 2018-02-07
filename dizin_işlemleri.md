@@ -10,13 +10,13 @@ pwd
 
 Bu komut sayesinde o an bulunduğumuz dizinin adını öğrenebiliriz. Genellikle sistem yöneticilerinin sık kullandığı bir komuttur.
 
-Örnek vermek gerekirse Linux'ta hiyerarşik bir düzen var dedik. Bu hiyerarşik düzen kök dizinine(root) bağlıdır her kullanıcı buna root da dahil kendi ev dizinine(home) sahiptir. Böylece neden root(kök) isminin kullanıldığını da anlamış oluyoruz. Konsol çalışmaya varsayılan olarak kendi ev dizininde başlar. Root kullanıcısının ev dizini <kbd>/root</kbd> dizinidir. Bunu teyit etmek istersek <code>pwd </code> komutunu kullanabiliriz.
+Örnek vermek gerekirse Linux'ta hiyerarşik bir düzen var dedik. Bu hiyerarşik düzen kök dizinine(root) bağlıdır her kullanıcı buna root da dahil kendi ev dizinine(home) sahiptir. Böylece neden root(kök) isminin kullanıldığını da tekrar anlamış oluyoruz. Konsol çalışmaya varsayılan olarak kendi ev dizininde başlar. Root kullanıcısının ev dizini <kbd>/root</kbd> dizinidir. Bunu teyit etmek istersek <code>pwd</code> komutunu kullanabiliriz.
 
 ![enter image description here](https://i.hizliresim.com/azPMZQ.png)
 
 Root kullanıcısının dışında da sistemde başka kullanıcılar olabilir. Bu kullanıcıların ev dizini(home) ise <kbd>/home/kullanıcı_adı </kbd> şeklindedir.
 
-Bu durumu test etmek için "kullanici" adında yeni bir kullanıcı oturumu oluşturdum ve oluşturduğum bu oturum içerisinde komut satırına <code>pwd </code> komutunu verdim. Çıktısı aşağıdaki şekilde oldu.
+Bu durumu test etmek için "kullanici" adında yeni bir kullanıcı oturumu oluşturdum ve oluşturduğum bu oturum içerisinde komut satırına <code>pwd</code> komutunu verdim. Çıktısı aşağıdaki şekilde oldu.
 
 ![enter image description here](https://i.hizliresim.com/Yg3WGZ.png)
 
@@ -25,11 +25,11 @@ cd (Change Directory)
 
 Bu komut sayesinde dizinler arası geçiş yapabiliyoruz. Zaten daha önceki kısımlarda da bu komutu kullanmak durumunda kalmıştık hatırlarsanız.
 
-Komutumuzu kullanırken gitmek istediğimiz dizinin adresini vermeliyiz. Ben önceki bölümlerde oluştuduğum dizinin en alt klasörüne gitmek istiyorum. Bunun için komut satırına <code>cd Desktop/yeni_dizin/yeni/en_yeni </code> şeklinde bir komut veriyorum.
+Komutumuzu kullanırken gitmek istediğimiz dizinin adresini vermeliyiz. Ben önceki bölümlerde oluşturduğum dizinin en alt klasörüne gitmek istiyorum. Bunun için komut satırına <code>cd Desktop/yeni_dizin/yeni/en_yeni</code> şeklinde bir komut veriyorum.
 
 ![enter image description here](https://i.hizliresim.com/8Ym2y7.png)
 
-Artık gitmek istediğim dizinin içerisindeyiz. Eğer bir önceki dizine (bir dizin geriye) dönmek istersek komut satırına <code>cd .. </code> yazmamız yeterli.
+Artık gitmek istediğim dizinin içerisindeyiz. Eğer bir önceki dizine (bir dizin geriye) dönmek istersek komut satırına <code>cd ..</code> yazmamız yeterli.
 
 ![enter image description here](https://i.hizliresim.com/D7o6vv.png)
 
@@ -38,15 +38,15 @@ komutunu kullanmalıyız.
 
 ![enter image description here](https://i.hizliresim.com/m2q790.png)
 
-Örneğin bir alt dizine geçip orada yer alan başka bir klasöre girmek istiyoruz diyelim. Bunun için komutumuzu <code>cd ../klasör_adı </code> şeklinde bir kullanabiliriz. Ben örnek olması açısından <kbd>/root/etc </kbd> dizini içerisindeyken bir geri dizine dönüp daha sonra Desktop konumuna gelmek için <code>cd ../Desktop</code> komutunu kullanıyorum. 
+Örneğin bir alt dizine geçip orada yer alan başka bir klasöre girmek istiyoruz diyelim. Bunun için komutumuzu <code>cd ../klasör_adı </code> şeklinde bir kullanabiliriz. Ben örnek olması açısından <kbd>/etc</kbd> dizini içerisindeyken bir geri dizine dönüp daha sonra home konumuna gelmek için <code>cd ../home</code> komutunu kullanıyorum. 
 
-![enter image description here](https://i.hizliresim.com/EPQ61Z.png)
+![enter image description here](https://i.hizliresim.com/gOXBJ5.png)
 
 Ancak dikkat etmeniz gereken nokta komutu yazarken iki noktadan (..)hemen sonra boşluk bırakmadan gitmek istediğimiz dizini belirtiyoruz. Eğer boşluk bırakarak yazarsak aşağıdaki şekilde bir uyarı alırız.
 
-![enter image description here](https://i.hizliresim.com/jyz17m.png)
+![enter image description here](https://i.hizliresim.com/9mGOP5.png)
 
-Eğer sürekli iki dosya arasında gidip geliyorsak bir önceki dosyaya <code>cd - </code> komutu ile dönebiliriz.
+Eğer sürekli iki dosya arasında gidip geliyorsak bir önceki dosyaya <code>cd -</code> komutu ile dönebiliriz.
 
 ![enter image description here](https://i.hizliresim.com/NZYgQX.gif)
 
