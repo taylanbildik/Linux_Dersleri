@@ -1621,7 +1621,7 @@ Eğer <kbd>.rar</kbd> dosyasını açmak istiyorsak `unrar` komutumuzu `unrar x 
 Erişim Yetkileri
 =
 
-Linux sistemlerinin yapısı gereği güvenlik açısından dosya ve dizinlere ait birçok kısıtlama ve yetkilendirme ayarları vardır. Bu yetkilerin hepsine sahip olan tek kullanıcı ise root kullanıcısıdır. Bu yüzden sistemi kullanırken eğer root kullanıcısı isek önümüzde uyarıcı bizi kısıtlayıcı bir mekanizma olmayacağından kimi durumlarda yapacağımız değişiklikler olumsuz sorunlara yol açabilir. Bu yüzden root kullanıcısıyken yapılan işlemlere dikkat etmek gerekir.
+Linux sistemlerinin yapısı gereği güvenlik açısından dosya ve dizinlere ait birçok kısıtlama ve yetkilendirme ayarları vardır. Bu yetkilerin hepsine sahip olan tek kullanıcı ise root kullanıcısıdır. Bu yüzden sistemi kullanırken eğer root kullanıcısı isek önümüzde uyarıcı bizi kısıtlayıcı bir mekanizma olmayacağından kimi durumlarda yapacağımız değişiklikler olumsuz sorunlara yol açabilir. Bu yüzden root kullanıcısıyken yapılan işlemlere dikkat etmek gerekir.(Hatta kimi dağıtımlarda root kullanıcı hesabı varsayılan olarak engellenmiştir, ancak istenildiği takdirde ve gereken ayarlar yapıldığında kullanılabilir olur.)
 
 Bu girizgahtan sonra her kullanıcının kendine verilen yetkiler çerçevesince hareket edebildiğini öğrenmiş olduk. Kullanıcıların dosya veya dizinler ile ilgili yapabileceği üç eylem bulunmaktadır. Bunlar;
 
@@ -1629,7 +1629,7 @@ Bu girizgahtan sonra her kullanıcının kendine verilen yetkiler çerçevesince
 
 **yazma(w):** Dosya veya klasör üzerinde değişiklik yapma.
 
-**çalıştırma(x):** Hedef dosyayı çalıştırma veya klasöre içerisine erişme.
+**çalıştırma(x):** Hedef dosyayı çalıştırma veya klasör içerisine erişme.
 
 Aslında bu eylemler sizlere yabancı gelmemeli. Zira daha önce `chmod` komutu yardımı ile gerekli dosyanın iznini değiştirmiş ve dosyamızı çalıştırmayı başarmıştık.
 
@@ -1641,19 +1641,19 @@ Aslında bu eylemler sizlere yabancı gelmemeli. Zira daha önce `chmod` komutu 
 
 <kbd>drwxr-xr-x</kbd> ve <kbd>-rw-r--r-- </kbd>şeklinde gördüğümüz kısımlar dosya izinlerini ifade ediyor.
 
-Bazı ifadelerin başında olan <kbd>d </kbd>harfi o ifadenin dizin olduğunu belirtiyor.
+Bazı ifadelerin başında olan <kbd>d</kbd> harfi o ifadenin dizin olduğunu belirtiyor.
 
 Geriye kalan kısımları ayrı ayrı açıklayacak olursak <kbd>-</kbd> işareti ile ayrılan kısımlar o izine sahip kullanıcı grubunu temsil ediyor. Daha iyi anlamak için <kbd>d</kbd> harfi hariç <kbd>-</kbd> işaretini ayırdığımız zaman geri kalan harfleri üç adet üçlü grup haline getirelim;
 
-<kbd>rwxr-xr-x</kbd>=<kbd>rwx</kbd><kbd> r-x </kbd><kbd>r-x</kbd>
+<kbd>rwxr-xr-x</kbd>=<kbd>rwx</kbd> <kbd> r-x </kbd> <kbd>r-x</kbd>
 
-<kbd>rw-r--r--</kbd>=<kbd>rw-</kbd> <kbd>r--</kbd><kbd> r--</kbd>
+<kbd>rw-r--r--</kbd>=<kbd>rw-</kbd> <kbd>r--</kbd> <kbd> r--</kbd>
 
 Sırayla birinci harf kümesi dosya sahibinin izinlerini, ikinci harf kümesi grup izinleri ve son küme de diğer kullanıcıların izinlerini belirtir. 
 
 ![enter image description here](https://i.hizliresim.com/2JvLR2.png)
 
-Buna göre yukarıdaki dosyalarda;
+Buna göre yukarıdaki dosyalarda bulunan izinleri açıklayacak olursak;
 
 **r :** okuma yetkisi
 
@@ -1663,7 +1663,7 @@ Buna göre yukarıdaki dosyalarda;
 
 **rwx :** dosyanın sahibi olan kullanıcı okuyabilir, yazabilir, çalıştırabilir.
 
-**r-x :** dosya sahibi grup ile aynı grup okuyabilir, çalıştırabilir fakat yazamaz.
+**r-x :** dosya sahibi grup ile aynı gruba kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
 
 **r-x :** diğer kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
 
@@ -1752,6 +1752,8 @@ Komutun kullanımı `chattr +i dosya_adı` şeklindedir. Hemen bir örnek yapal�
 
 ![enter image description here](https://i.hizliresim.com/Md9zYQ.png)
 
+Bu tür dosyaları listelemek için `lsattr` komutu kullanılıyor. Bizde dosyaların durumunu daha sonradan karşılaştırabilmek adına ilk olarak konsola `lsattr` komutunu verdik.
+
 <kbd>test.txt </kbd> isimli dosyamızı `chattr +i test.txt` komutu ile koruma altına aldık.
 
 Daha sonra bunu teyit etmek için `lsattr` komutunu kullandık.
@@ -1762,7 +1764,7 @@ Eğer bu işlemi geri almak ve dosyamızı üzerinde değişiklikler yapılabili
 
 ![enter image description here](https://i.hizliresim.com/QV1kX3.png)
 
-Çıktıda da görüldüğü gibi hedef dosyamızın solundaki `-i` işareti yok olmuş, dolayısı ile <kbd>test.txt</kbd> isimli dosyamızın artık eski halinde dönerek düzenlenebilir forma girmiş olduğunu gördük. Ve dosyamızı silerek bu durumu teyit ettik.
+Çıktıda da görüldüğü gibi hedef dosyamızın solundaki `-i` işareti yok olmuş. Dolayısıyla <kbd>test.txt</kbd> isimli dosyamızın artık eski halinde dönerek düzenlenebilir forma girmiş olduğunu gördük. Ve dosyamızı silerek bu durumu teyit ettik.
 
 
 ----------
