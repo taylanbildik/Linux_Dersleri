@@ -9,6 +9,7 @@ Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
 - [Komut Satırı](https://github.com/taylanbildik/Linux_Dersleri/blob/master/komut_sat%C4%B1r%C4%B1.md)
 - [Yardım Alma Komutları](https://github.com/taylanbildik/Linux_Dersleri/blob/master/yard%C4%B1m_alma_komutlar%C4%B1.md)
 - [Bilgi Alma Komutları](https://github.com/taylanbildik/Linux_Dersleri/blob/master/bilgi_alma.md)
+- [Linux Dosya Sistemi Hiyerarşisi](https://github.com/taylanbildik/Linux_Dersleri/blob/master/Linux_dosya_sistemi_hiyerar%C5%9Fisi.md)
 - [Dizin İşlemleri](https://github.com/taylanbildik/Linux_Dersleri/blob/master/dizin_i%C5%9Flemleri.md)
 - [Dosya İşlemleri](https://github.com/taylanbildik/Linux_Dersleri/blob/master/dosya_i%C5%9Flemleri.md)
 - [Dosya Arşivleme](https://github.com/taylanbildik/Linux_Dersleri/blob/master/dosya_ar%C5%9Fivleme.md)
