@@ -75,7 +75,7 @@ Eğer çıktımız ayrıntılı olsun istiyorsak komut satırına komutu paramet
 ### ls-a
 
 
-Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli dosyaları da aynı şekilde listeleyebiliriz. Bunun için <code>ls</code> komutunun <code>a</code> parametresini kullanıyoruz. Çıktımızın düzenli ve listeli olması adına <code>a </code> parametresinin yanına bir de <code>l</code> parametresi kullanmak istiyorum. Bunun için komut satırına <code>ls -la</code> şeklinde veya <code>ls -al</code> şeklinde komutunu girmemiz gerekiyor. Ayrıca bu komutu <code>ls -a -l</code> şeklinde ayrı arı ayrı olarak da girebiliriz. Sonuçta bu komutun parametresi hem birleşik hemde ayrı ayrı şekilde yazılabilir. Kullanım tercihi size kalmış.
+Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli dosyaları da aynı şekilde listeleyebiliriz. Bunun için <code>ls</code> komutunun <code>a</code> parametresini kullanıyoruz. Çıktımızın düzenli ve listeli olması adına <code>a</code> parametresinin yanına bir de <code>l</code> parametresi kullanmak istiyorum. Bunun için komut satırına <code>ls -la</code> şeklinde veya <code>ls -al</code> şeklinde komutu girmemiz gerekiyor. Ayrıca bu komutu <code>ls -a -l</code> şeklinde ayrı ayrı olarak da girebiliriz. Sonuçta bu komutun parametresi hem birleşik hemde ayrı ayrı şekilde yazılabilir. Kullanım tercihi size kalmış.
 
 ![enter image description here](https://i.hizliresim.com/oOn819.png)
 ![enter image description here](https://i.hizliresim.com/lOBrVr.png)
@@ -84,7 +84,7 @@ Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli
 ### ls -A
 
 
-<kbd>.</kbd> ve <kbd>..</kbd> dizinleri hariç gizli dosyalar da dahil bütün dosyaları görmek istersek <code>ls</code>komutumuzu <code>ls -A</code> şeklinde kullanabiliriz. Ayrıca çıktıları düzgün şekilde listelemek adına <code>l</code> parametresi de dahil edebileceğimizi biliyorsunuz.
+<kbd>.</kbd> ve <kbd>..</kbd> dizinleri hariç gizli dosyalar da dahil bütün dosyaları görmek istersek <code>ls</code> komutumuzu <code>ls -A</code> şeklinde kullanabiliriz. Ayrıca çıktıları düzgün şekilde listelemek adına <code>l</code> parametresi de dahil edebileceğimizi biliyorsunuz.
 
 ![enter image description here](https://i.hizliresim.com/nOYmBM.png)
 
@@ -98,7 +98,7 @@ Listelenen dizinlerin boyutunu okunaklı(human readable) şekilde verir. Okunakl
 ### ls -i
 
 
-Düğüm numarasını verir. Düğüm(inode) numarası nedir diyecek olursanız bu konuya ileride değineceğiz şimdiilik bu parametrenin bu görevi gördüğünü bilsek yeter.
+Düğüm numarasını verir. Düğüm(inode) numarası nedir diyecek olursanız bu konuya ileride değineceğiz şimdiilik bu parametrenin bu görevi yerine getirdiğini bilsek yeter.
 
 ![enter image description here](https://i.hizliresim.com/jyz1oL.png)
 
@@ -133,7 +133,6 @@ Dizin oluşturmak için <code>mkdir</code> , silmek için ise ileride tekrar dos
 mkdir
 -
 
-
 Dosya oluşturmamıza olanak sağlayan komuttur. En temel kullanımı <code>mkdir dosya_adı</code> şeklindedir. Örneğin bulunduğumuz konuma dosyalar adında bir dizin oluşturalım. Bunun için komut satırına <code>mkdir dosyalar</code> yazmamız yeterli. Ayrıca dosyamızın oluşup oluşmadığını da <code>ls</code> komutu ile teyit ediyoruz.
 
 ![enter image description here](https://i.hizliresim.com/oOn8vX.png)
@@ -157,18 +156,18 @@ Dizin dediğimiz şey iç içe sırlanmış dosya ve belgelerden oluşan bir yol
 
 ![enter image description here](https://i.hizliresim.com/1JjD5B.png)
 
-Ve dizinimiz içerisinde bulunanlar ile birlikte silinmiş oldu. Eğer komutumuzu parametresiz olarak yani <code>-r</code> olmadan <code>rm secure </code> şeklinde verseydik komut satırı bu işlemi dizinin içerisinde dosya ve belgelerin bulunması nedeniyle gerçekleştiremezdi.(Klasör içerisinde hiçbir şey bulunmasa dahi aynı uyarıyı verecektir.) Bu durumu denemek için daha önceden oluşturmuş olduğumuz <kbd>dosyalar</kbd> isimli klasörümüzü <code>-r</code> parametresi olmadan silmeye çalışalım.
+Ve dizin, içerisinde bulunanlar ile birlikte silinmiş oldu. Eğer komutumuzu parametresiz olarak yani <code>-r</code> olmadan <code>rm secure</code> şeklinde verseydik komut satırı bu işlemi dizinin içerisinde dosya ve belgelerin bulunması nedeniyle gerçekleştiremezdi.(Klasör içerisinde hiçbir şey bulunmasa dahi aynı uyarıyı verecektir.) Bu durumu denemek için daha önceden oluşturmuş olduğumuz <kbd>dosyalar</kbd> isimli klasörümüzü <code>-r</code> parametresi olmadan silmeye çalışalım.
 
 ![enter image description here](https://i.hizliresim.com/Vr2XdB.png)
 
 Konsol bize "'dosyalar' silinemedi: Bu bir dizin" şeklinde uyarı verdi.
 
-Eğer silmeden önce sorulsun yani bizi uyarsın istiyorsak komuta <code>-i</code> parametresi de eklemeliyiz.
+Eğer silmeden(işlem yapılmadan) önce bize sorulsun yani bizi uyarsın istiyorsak komuta <code>-i</code> parametresi de ekleyebiliriz.
 
 ![enter image description here](https://i.hizliresim.com/nOYmnN.png)
 
-Gördüğünüz gibi konsol işlem yapmadan önce her işi bize sordu ve "y" yanıtını aldığı için silme işlemine devam etti. Bu sayede dizinleri kontrollü şekilde silmiş olduk.(Kullandığınız sistemin diline göre onaylama yanıtı değişmektedir. Örneğin kullandığınız dil Türkçe ise onay vermek için kullanılan yanıt "e" olacaktır.)
+Gördüğünüz gibi konsol işlem yapmadan önce her işi bize sordu ve "y" yanıtını aldığı için silme işlemine devam etti. Bu sayede dizinleri kontrollü şekilde silmiş olduk.(Kullandığınız sistemin diline göre onaylama yanıtı değişmektedir. Örneğin kullandığınız dil Türkçe ise onay vermek için kullanılan yanıt "e"{burdaki "e" den kasıt "evet" onayının kısaltması olan "e" karakteridir.} olacaktır.)
 
-Ayrıca dizin silme işlemlerini <code>rm -ri dizin1 dizin2 dizin3</code> şeklinde kullanarak toplu şekilde de gerçekleştirebilirsiniz.
+Ayrıca dizin silme işlemlerini <code>rm -ri dizin1 dizin2 dizin3</code> şeklinde kullanarak toplu şekilde silme işlemi de gerçekleştirebilirsiniz.
 
 ![enter image description here](https://i.hizliresim.com/Z92Q43.png)
