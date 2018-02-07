@@ -1504,8 +1504,7 @@ Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. `shred` 
 
 Dosya Arşiv İşlemleri
 =
-Bu bölümde dosya arşivleme, sıkıştırma-açma gibi işlemleri ele alıcaz. Zaten bu kavramlar sizlere yabancı gelmemeli zira daha önce hangi işletim sistemini kullanmış olursanız olun öyle ya da böyle karşınıza çıkmıştır. Genellikle yüksek boyutlu dosyaların sıkıştırılmasında veya veri kaybı olmadan güvenli transfer yapabilmek için ve bunlar gibi pek çok sebep dolayasıyla arşiv dosyaları ile sıklıkla karşılaşıyoruz, karşılaşmaya da devam edicez.
-
+Bu bölümde dosya arşivleme, sıkıştırma-açma gibi işlemleri ele alacağız. Zaten bu kavramlar sizlere yabancı gelmemeli zira daha önce hangi işletim sistemini kullanmış olursanız olun öyle ya da böyle karşınıza çıkmıştır. Genellikle yüksek boyutlu dosyaların sıkıştırılmasında veya veri kaybı olmadan güvenli transfer yapabilmek için ve bunlar gibi pek çok sebep dolayasıyla arşiv dosyaları ile sıklıkla karşılaşıyoruz, karşılaşmaya da devam edeceğiz.
 Konumuza arşiv dosyası oluşturarak başlayalım.
 
 tar
@@ -1570,13 +1569,13 @@ Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her i
 
 Örnekler ile açıklayalım.
 
-Her iki şekilde de metin isimli belgeleri bir arşiv içine almaya çalışalım. Sırasıyla bunu ilk olarak `gzip` ile daha sonra ise `bzip2` ile yapalım. Dosya adı verirken kullanılan <kbd>tar.gz</kbd> ve <kbd>tar.bz2</kbd> uzantılarına dikkat edin aksi halde işlem hata verecektir.
+Her iki şekilde de "metin" isimli belgeleri bir arşiv içine almaya çalışalım. Sırasıyla bunu ilk olarak `gzip` ile daha sonra ise `bzip2` ile yapalım. Dosya adı verirken kullanılan <kbd>tar.gz</kbd> ve <kbd>tar.bz2</kbd> uzantılarına dikkat edin aksi halde işlem hata verecektir.
 
 ![enter image description here](https://i.hizliresim.com/A1ZpDq.png)
 
-Gördüğünüz gibi `gzip` kullanırken parametre olarak `czvf` verdik ve oluşturduğumuz dosyanın uzantısını da <kbd>tar.gz</kbd>  şeklinde yaptık. Aynı şekilde `bzip2` için ise `cjvf` parametrelerini kullandık ve dosya adımızın uzantısını <kbd>tar.bz2</kbd>  şeklinde oldu. Daha önce de söylediğim gibi bu ayrıntılara dikkat etmezseniz işlem kaçınılmaz olarak başarısız olacaktır.
+Gördüğünüz gibi `gzip` kullanırken parametre olarak `czvf` verdik ve oluşturduğumuz dosyanın uzantısını da <kbd>tar.gz</kbd>  şeklinde yaptık. Aynı şekilde `bzip2` için ise `cjvf` parametrelerini kullandık ve dosya adımızın uzantısı <kbd>tar.bz2</kbd>  şeklinde oldu. Daha önce de söylediğim gibi bu ayrıntılara dikkat etmezseniz işlem kaçınılmaz olarak başarısız olacaktır.
 
-Sıkıştırmış olduğumuz arşivleri tekrar açmak için ise `gzip` için `xzvf` parametresi `bzip2` için ise `xzjf` parametresini kullanacağız. 
+Sıkıştırmış olduğumuz arşivleri tekrar açmak için ise `gzip` için `xzvf` parametresi `bzip2` için ise `xjvf` parametresini kullanacağız. 
 
 ![enter image description here](https://i.hizliresim.com/4aY5jq.png)
 
@@ -1610,7 +1609,7 @@ Bunun için komutumuzu konsola `zip dosya_adı.zip eklenecek_dosya` şeklinde gi
 
 ![enter image description here](https://i.hizliresim.com/OoJP8P.png)
 
-Eğer `zip` komutu ile sıkıştırdığımız dosyayı açmak istersek <kbd>.zip </kbd>dosyalarını açma işlevindeki `unzip` komutunu `unzip dosya_adı.zip` şeklinde kullanabiliriz.
+Eğer `zip` komutu ile sıkıştırdığımız dosyayı açmak istersek <kbd>.zip</kbd> dosyalarını açma işlevindeki `unzip` komutunu `unzip dosya_adı.zip` şeklinde kullanabiliriz.
 
 ![enter image description here](https://i.hizliresim.com/4aY5WJ.png)
 
