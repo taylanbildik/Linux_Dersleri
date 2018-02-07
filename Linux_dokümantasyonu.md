@@ -4,7 +4,7 @@ Başlamadan.. Şunu bilin ki Linux tek başına işletim sistemi değil çekirde
 
 UNIX
 -
-Burada sizlere çok tarihi veya çok teknik olmayan bir üslupla, linux hakkında genel bilgi sahibi olamanızı sağlayacak şekilde Linux'un ortaya çıkış hikayesini anlatacağım. Zamanında Bell Laboratuvarı'nda geliştirilen UNIX adında bir işletim sistemi vardı. Bu sistem kendi bünyesinde bulundurduğu araçları sayesinde üniversite ve diğer ihtiyaç duyulan yerlerde kullanılıyordu. Buraya kadar her şey gayet güzel ancak Unix lisans ücreti istiyordu ve bu durum çoğu kullanıcının hoşuna gitmedi. Bunun sonucunda "para ödemek yerine bende kendi işletim sistemimi yazarım" diye düşünenler ortaya çıktı ve bu da UNIX'e mecbur olunmadığı eğer istenirse yeni bir sistemin yazılabileceği düşüncesini ortaya koydu ve bir akımı başlattı. Bunun sonucunda birçok işletim sistemi geliştirme girişimleri oldu ancak sonuçta geliştirilen sistemler stabil şekilde çalışmıyorlardı. Tabi bu durum sonsuza kadar böyle kalmayacaktı..
+Burada sizlere çok tarihi veya çok teknik olmayan bir üslupla, linux hakkında genel bilgi sahibi olamanızı sağlayacak şekilde Linux'un ortaya çıkış hikayesini anlatacağım. Zamanında Bell Laboratuvarı'nda geliştirilen UNIX adında bir işletim sistemi vardı. Bu sistem kendi bünyesinde bulundurduğu araçları sayesinde üniversite ve diğer ihtiyaç duyulan yerlerde kullanılıyordu. Buraya kadar her şey gayet güzel ancak Unix lisans ücreti istiyordu ve bu durum çoğu kullanıcının hoşuna gitmedi. Bunun sonucunda "para ödemek yerine bende kendi işletim sistemimi yazarım" diye düşünenler ortaya çıktı ve bu da UNIX'e mecbur olunmadığı eğer istenirse yeni bir sisteminin yazılabileceği düşüncesini ortaya koydu ve bir akımı başlattı. Bunun sonucunda birçok işletim sistemi geliştirme girişimleri oldu ancak sonuçta geliştirilen sistemler stabil şekilde çalışmıyorlardı. Tabi bu durum sonsuza kadar böyle kalmayacaktı..
 
 Linus Torvalds
 -
@@ -43,6 +43,7 @@ Sonuç Olarak
 Linux bir işletim sistemi değil çekirdektir(kernel) GNU/Linux bütünü bir işletim sistemidir. Ancak genellikle söylenmesi uzun veya zor geldiği için zamanla sadece Linux olarak geçmeye başlamıştır. Ben de yazımda GNU/Linux yerine Linux kullanıyor olacağım. Ancak emin olun çekirdekten(kernel) yani Linux'tan bahsettiğimde ve GNU/Linux(işletim sistemi)'tan bahsettiğimde hangisini kastettiğimi anlıyor olacaksınız.
 
 
+
 ----------
 
 
@@ -65,20 +66,20 @@ Linux VPS aracılığı ile kullanmak.
 Komut Satırı
 ===================
 
-Esaslı bir giriş yapabilmemiz için öğrenmemiz gereken ilk kavram Linux Komut Satırı diğer bir adıyla Linux Terminali (konsol) olacaktır. Ancak bundan önce Linux çekirdeğini (kernel) ele alamalıyız. Linux çekirdeği yani kernel Linux'un kalbi kabul edilir. En önemli ana görevinin tanımı kısaca yazılımla donanımın haberleşmesini sağlamaktır. Ayrıca Linux'un yani çekirdeğin ingilizce karşılığı "kernel"dir ben de gerektiğinde bu isim ile kullanacağım. Yabancı terimleri kullanma nedenim eninde sonunda bu terimlere alışmamız gerektiği ve bu durumun ne kadar erken olursa bizim için o kadar iyi olacağıdır.
+Esaslı bir giriş yapabilmemiz için öğrenmemiz gereken ilk kavram Linux Komut Satırı diğer bir adıyla Linux Terminali (konsol) olacaktır. Ancak bundan önce Linux çekirdeğini (kernel) ele almalıyız. Linux çekirdeği yani kernel Linux'un kalbi kabul edilir. En önemli ana görevinin tanımı kısaca yazılımla donanımın haberleşmesini sağlamaktır. Ayrıca Linux'un yani çekirdeğin ingilizce karşılığı "kernel"dir ben de gerektiğinde bu isim ile kullanacağım. Yabancı terimleri kullanma nedenim eninde sonunda bu terimlere alışmamız gerektiği ve bu durumun ne kadar erken olursa bizim için o kadar iyi olacağıdır.
 Kernel (çekirdek)'i biraz daha açıklayacak olursak:
 
 
 Kernel
 -------------
 
-Biz ister grafiksel arayüzü kullanalım istersek de yalnız komut satırını kullanacak olalım; örneğin bir dosyayı bir yerden başka bir yere sürükleyerek taşırsak ya da komut satırından komutlar yardımı ile bu işi gerçekleştirsek de yapılan işlem aslında arka tarafta komutların yorumlanarak çalıştırılması ile gerçekleşmektedir. Bu işlemleri gerçekleştirmekle görevli bazı yapılar vardır. Çekirdek(kernel) de kullanıcıdan gelen girdilerle birlikte sistemin işleyebilmesi (process) için donanıma iş yaptırmakla görevlidir. Ancak direk olarak kullanıcıdan alınan komutlar Kernel'e geçmez. Bundan önce komut satırı dediğimiz bir kabuk(shell) programını temel alarak çalışan bir yapı, kullanıcı ile çekirdek arasında aracı bir katman görevi görür.
+Biz ister grafiksel arayüzü kullanalım istersek de yalnız komut satırını kullanacak olalım; örneğin bir dosyayı bir yerden başka bir yere taşırken; ister sürükle bırak yöntemiyle(grafiksel arayüz kullanarak) taşıyalım istersek de bu işi komut satırından komutlar yardımı ile gerçekleştirelim neticede yapılan işlem aslında arka tarafta komutların yorumlanarak çalıştırılması ile gerçekleşmektedir. Bu işlemleri gerçekleştirmekle görevli bazı yapılar vardır. Çekirdek(kernel) de kullanıcıdan gelen girdilerle birlikte sistemin işleyebilmesi (process) için donanıma iş yaptırmakla görevlidir. Ancak direk olarak kullanıcıdan alınan komutlar Kernel'e geçmez. Bundan önce komut satırı dediğimiz bir kabuk(shell) programını temel alarak çalışan bir yapı, kullanıcı ile çekirdek arasında aracı bir katman görevi görür.
 
 Shell (kabuk) programını açıklayacak olursak:
 
 Shell
 -------------
-Mantığını oturtmanız ve kavramların daha kolay yerleşmesi açısından bir fıstık düşünün. Bu fıstığın dış katmanı Kabuk (Shell) iç kısmı ise Çekirdek (Kernel)'olacaktır. Bu benzetme sayesinde isimlerin de nereden geldiği az çok açıklığa kavuşmuş oldu. Shell'in görevi bir üst kısımda belirttiğimiz gibi kullanıcı ile kernel arasında aracı bir katman olarak kullanıcıdan gelen girdileri kernele uygun şekilde iletmektir. Sistemde yapmak istediklerimiz ve yapabileceklerimiz Shell'in esnek ve kullanışlı yapısına yani yeteneklerine bağlı olarak değişmektedir. Bu bağlamda Shell'in sisteme hükmetmekteki anahtarlardan olduğunu söyleyebiliriz. Shell hakkındaki biraz önceki açıklamalara("yeteneklerine bağlı olarak değişmektedir") bakarak birden fazla Shell programının olduğunu tahmin etmiş olabilirisiniz. Tebrik ederim çok doğru, Linux sistemlerinde BASH dışında (ksh,tcsh,zsh,fish...) gibi birçok Shell (kabuk) programı mevcuttur. Ancak yetenekleri dolayısıyla olsa gerek en çok tercih edilen kabuk programı BASH kabuk programıdır. İnanmıyorsanız bir test edelim sizin sisteminizde hangi kabuk programı kullanılıyor.
+Mantığını oturtmanız ve kavramların daha kolay yerleşmesi açısından bir fıstık düşünün. Bu fıstığın dış katmanı Kabuk (Shell) iç kısmı ise Çekirdek (Kernel)'olacaktır. Bu benzetme sayesinde isimlerin de nereden geldiği az çok açıklığa kavuşmuş oldu. Shell'in görevi bir üst kısımda belirttiğimiz gibi kullanıcı ile kernel arasında aracı bir katman olarak kullanıcıdan gelen girdileri kernele uygun şekilde iletmektir. Sistemde yapmak istediklerimiz ve yapabileceklerimiz Shell'in esnek ve kullanışlı yapısına yani yeteneklerine bağlı olarak değişmektedir. Bu bağlamda Shell'in sisteme hükmetmekteki anahtarlardan olduğunu söyleyebiliriz. Shell hakkındaki biraz önceki açıklamalara("yeteneklerine bağlı olarak değişmektedir") bakarak birden fazla Shell programının olduğunu tahmin etmiş olabilirsiniz. Tebrik ederim çok doğru, Linux sistemlerinde BASH dışında (ksh,tcsh,zsh,fish...) gibi birçok Shell (kabuk) programı mevcuttur. Ancak yetenekleri dolayısıyla olsa gerek en çok tercih edilen kabuk programı BASH kabuk programıdır. İnanmıyorsanız bir test edelim sizin sisteminizde hangi kabuk programı kullanılıyor.
 
 Bunun için konsolunuzu açın ve aşağıdaki komutu girin diyecektim ki... "Hayda.. daha konsol nedir açıklamadın ki !" diyeceksiniz haklısınız temeli oturtmak adına buralara kadar geldik ama direk konsol şudur demedik. Ancak zaten bu kısıma kadar Konsol'un ne olduğunu dolaylı olarak da olsa açıklamış olduk.
 
@@ -87,9 +88,13 @@ Konsol, kullanıcı ile Shell arasından yer alarak kullanıcının komut girmes
 Konsolu daha yakından incelemek adına bir konsol ekranı açalım. Yeni bir konsol ekranı açmak için kısayol tuşları olduğu gibi grafik arayüz aracılığı ile de açmak mümkün. Linux bize çok sayıda konsol açma imkanı tanır. Aynı anda 6 ayrı konsol açıp hepsinde ayrı işlem yapabiliriz. Bunu kanıtlamak istersek..(Anlatımlar Kali linux işletim sistemi üzerinden gerçekleştirilmektedir. Dolayısıyla anlatım sırasında anlatılanların uygulanması noktasına gelindiğinde sizlerden kali linux işletim sistemini halihazırda açık ve kullanıma hazır şekilde bekletiyor olmanız beklenmektir.) Grafiksel arayüzden komut satırına geçmek için <kbd>Crtl + Alt + (f1,f2,f3,f4,f5,f6)</kbd> tuş kombinasyonunu kullanabiliriz. Demiştim ya 6 farklı konsol açılabiliyor işte açtığınız konsolun numarası da <kbd>tty1,tty2,tty3,tty4,tty5,tty6</kbd> gibi "tty_konsol_numarası" şeklinde konsolda görülüyor. Örneğin ben <kbd>Ctrl + Alt + f3</kbd> tuş kombinasyonunu yaptığımda karşıma aşağıdakine benzer bir komut satırı geliyor ve benden login olmamı yani kullanıcı adımı ve sonrasında şifremi yazarak giriş yapmamı bekliyor.
 
 ![enter image description here](https://i.hizliresim.com/76mqWv.png)
- <p>Eğer bu komut satırından çıkıp tekrar kullanıcı arayüzüne yani grafiksel arayüze geçmek isterseniz <kbd>Ctrl + Alt + (f7,f8,f9,f10,f11,f12) </kbd> kombinasyonlarından herhangi birini kullanarak bunu başarabilirsiniz. Ancak kimi Kali Linux sürümlerinde durum böyle olamayabiliyor yani eğer <kbd>Ctrl + Alt + f7</kbd> ve sonrası tuş kombinasyonu grafik arayüze dönmenizi sağlamaz ise bu sefer <kbd>Ctrl+Alt+f1</kbd> veya <kbd>Ctrl + Alt + f2 </kbd> şeklinde dönmeye çalışın. Grafik arayüzden Terminal(konsol) ile çalışmak isterseniz masaüstünde bulunan Terminal simgesine tıklamanız yeterli olacaktır.(Genelde görev çubuğunda sabit şekilde yer alır.) Eğer masaüstünde yok bulamıyorum diyorsanız arama çubuğu ve benzeri yardımcılar aracılığı ile lütfen "konsol" veya "terminal" şeklinde aratarak kendiniz bulun. Ayrıca kısayollardan bahsetmiştim örneğin bazı dağıtımlarda <kbd>Ctrl + Alt + T</kbd> tuş kombinasyonu direk olarak terminal ekranını açıyor. Ancak bu kısayollar ayarlar aracılığı ile ve ayrıca da dağıtımdan dağıtıma farklılık gösterdiği için bu kısayolları sizin kendi kullandığınız dağıtıma göre araştırmanız gerek. Korkmayın inanılmaz kolay bir işlem, hem böylelikle yavaş yavaş Linux öğrenmenin aslında araştırmak ve kendi kendine öğrenmek olduğunu öğreniyoruz. Zaten ileride Kali Linux için <a href="#terminal_kısayolları">kısayollar</a> konularına ayrıca değineceğim.
-      <p>Şimdilik konumuza dönecek olursak Shell'in ne olduğunu açıklamıştık ve en çok tercih edilen kabuk programının BASH kabuk programı olduğunu söylemiştik.Bunu teyit etmek için komut satırına <code>echo $SHELL</code> komutumuzu giriyoruz.
-      <p>Girdiğimiz komutu açıklayacak olursak ' <kbd>echo</kbd> ' komut satırında ekrana yazdırma işlevini görür örneğin ben komut satırına <code>echo "Merhabalar"</code> yazarsam komut satırı ' Merhabalar ' çıktısını verecektir.' <kbd>$</kbd> ' işareti bir parametre ve tanımlanan değişkene normal bir kullanıcı olarak erişebilmeyi sağlıyor. Şimdilik bu komut bütünü hakkında bu kadar bilgi yeter. Eğer komutun açıklamasını anlamadıysanız sorun yok. Okumaya devam ettikçe parçalar yerine oturmaya başlayacak. Zaten ileride bu konuların her birine tek tek değineceğiz ve sizler de anlamış olacaksınız. Şimdi devam edecek olursak:</p>
+Eğer bu komut satırından çıkıp tekrar kullanıcı arayüzüne yani grafiksel arayüze geçmek isterseniz <kbd>Ctrl + Alt + (f7,f8,f9,f10,f11,f12) </kbd> kombinasyonlarından herhangi birini kullanarak bunu başarabilirsiniz. Ancak kimi Kali Linux sürümlerinde durum böyle olamayabiliyor yani eğer <kbd>Ctrl + Alt + f7</kbd> ve sonrası tuş kombinasyonu grafik arayüze dönmenizi sağlamaz ise bu sefer <kbd>Ctrl+Alt+f1</kbd> veya <kbd>Ctrl + Alt + f2 </kbd> şeklinde dönmeye çalışın. Grafik arayüzden Terminal(konsol) ile çalışmak isterseniz masaüstünde bulunan Terminal simgesine tıklamanız yeterli olacaktır.(Genelde görev çubuğunda sabit şekilde yer alır.) Eğer masaüstünde yok bulamıyorum diyorsanız arama çubuğu ve benzeri yardımcılar aracılığı ile lütfen "konsol" veya "terminal" şeklinde aratarak kendiniz bulun. Konsol(terminal) açma işlemi hemen aşağıda .gif resmi ile gösterilmiştir.
+
+![konsol(terminal) ekranı açma işlemi](https://i.hizliresim.com/1JdkDY.gif)
+
+Ayrıca kısayollardan bahsetmiştim örneğin bazı dağıtımlarda <kbd>Ctrl + Alt + T</kbd> tuş kombinasyonu direk olarak terminal ekranını açıyor. Ancak bu kısayollar ayarlar aracılığı ile ve ayrıca da dağıtımdan dağıtıma farklılık gösterdiği için bu kısayolları sizin kendi kullandığınız dağıtıma göre araştırmanız gerek. Korkmayın inanılmaz kolay bir işlem, hem böylelikle yavaş yavaş Linux öğrenmenin aslında araştırmak ve kendi kendine öğrenmek olduğunu öğreniyoruz. Zaten ileride Kali Linux için <a href="#k%C4%B1sayollar">kısayollar</a> konularına ayrıca değineceğim.
+      Şimdilik konumuza dönecek olursak Shell'in ne olduğunu açıklamıştık ve en çok tercih edilen kabuk programının BASH kabuk programı olduğunu söylemiştik. Bunu teyit etmek için komut satırına <code>echo $SHELL</code> komutumuzu giriyoruz.
+      Girdiğimiz komutu açıklayacak olursak ' <kbd>echo</kbd> ' komut satırında ekrana yazdırma işlevini görür örneğin ben komut satırına <code>echo "Merhabalar"</code> yazarsam komut satırı ' Merhabalar ' çıktısını verecektir.' <kbd>$</kbd> ' işareti bir parametre ve tanımlanan değişkene normal bir kullanıcı olarak erişebilmeyi sağlıyor. Şimdilik bu komut bütünü hakkında bu kadar bilgi yeter. Eğer komutun açıklamasını anlamadıysanız sorun yok. Okumaya devam ettikçe parçalar yerine oturmaya başlayacak. Zaten ileride bu konuların her birine tek tek değineceğiz ve sizler de anlamış olacaksınız. Şimdi devam edecek olursak:
 
 ![enter image description here](https://i.hizliresim.com/Pl302Q.png)
 
@@ -109,10 +114,10 @@ Konsolu daha yakından incelemek adına bir konsol ekranı açalım. Yeni bir ko
 ![enter image description here](https://i.hizliresim.com/gOlqv2.png)
 
 <p>Çıktının bize gösterdiği yani konsolun demek istediği şu:</p> 
-<p>Konsoldan girilen komutu çalıştırabilmem için sırasıyla bu <kbd>/usr/local/sbin: /usr/local/bin: /usr/sbin: /usr/bin: /sbin: /bin</kbd> dizinlere bakmam gerek.Eğer verilen komutun çalıştırılabilir dosyası bu dizinlerin içerisinde ise çalıştırırım, yoksa çalıştıramam. </p>
-<p>Çıktıda görüllen iki nokta üst üste (<kbd>:</kbd>) işareti ile ayrılmış dizinlere PATH(yol) ortam değişkeni deniyor. Ben yine de emin olamadım diyenler için gelin PATH yoluna ekli olmayan bir progamı kendimiz ekleyelim ve konsoldan verdiğiniz bir komutla direk olarak çalışmasını sağlayalım. Adım adım ilerleyelim.</p>
+<p>Konsoldan girilen komutu çalıştırabilmem için sırasıyla bu <kbd>/usr/local/sbin: /usr/local/bin: /usr/sbin: /usr/bin: /sbin: /bin</kbd> dizinlere bakmam gerek. Eğer verilen komutun çalıştırılabilir dosyası bu dizinlerin içerisinde ise çalıştırırım, yoksa çalıştıramam. </p>
+<p>Çıktıda görülen iki nokta üst üste (<kbd>:</kbd>) işareti ile ayrılmış dizinlere PATH(yol) ortam değişkeni deniyor. Ben yine de emin olamadım diyenler için gelin PATH yoluna ekli olmayan bir progamı kendimiz ekleyelim ve konsoldan vereceğimiz bir komutla direk olarak çalışmasını sağlayalım. Adım adım ilerleyelim.</p>
 
-<p>Ben masaütünde "yeni_dizin" adında bir klasör oluşturdum daha sonra içerisine "yeni" diye başka bir klasör daha oluşturdum son olarak bu klasörün de içerisine "en_yeni" şeklinde bir klasör daha oluşturdum. Yani oluşturduğum dizinin tam adresi <kbd>yeni_dizin /yeni /en_yeni</kbd> şeklinde oluşmuş oldu.</p>
+<p>Ben masaüstünde "yeni_dizin" adında bir klasör oluşturdum daha sonra içerisine "yeni" diye başka bir klasör daha oluşturdum son olarak bu klasörün de içerisine "en_yeni" şeklinde bir klasör daha oluşturdum. Yani oluşturduğum dizinin tam adresi <kbd>yeni_dizin /yeni /en_yeni</kbd> şeklinde oluşmuş oldu.</p>
 <p>Şimdi oluşturduğum dizinin en alt klasörünün(en_yeni) içine girerek leafpad programı aracılığı ile metin belgesi oluşturuyorum ve belgenin içine  <code>echo "Program Çalıştı"</code> yazarak oluşturmuş olduğum dosya dizininin en alt dosyaya yani "en_yeni" ismindeki klasöre dosyamı "komut.sh" ismiyle kaydediyorum. Dosya sonuna eklediğimiz <kbd>.sh</kbd> eki ile bir betik dosyası halini aldı. Betik dosyası genel tanımı ile konsol komutlarını içerisine kaydettikten sonra tek seferde bir bütün halinde komutları çalıştırabildiğimiz dosya türüdür. Zaten fark ettiyseniz dosyamızın içerisine daha önce de konsolda verdiğimiz komutlardan birini olan <code>echo</code> komutunu ekledik. Yani bu oluşturmuş olduğumuz betik dosyası Terminal üzerinden çalıştığında komut satırına "Program Çalıştı" şeklinde bir çıktı vericek. Betik dosyasının dizin içerisindeki tam konumu aşağıdaki şekildedir.</p>
 
 ![enter image description here](https://i.hizliresim.com/Z9NZjZ.png)
@@ -159,15 +164,15 @@ Son olarak bana, "Yazılacak Dosya Adı: <kdb>/etc/profile</kdb>" diye belirtiyo
 		
 <p><code>nano -w /etc/profile</code> bu komutta; <code>nano</code> komutu, konsol üzerinden dosya içeriğini okumamıza olanak sağlayan bir araç ve <code>nano</code> komutunun yanındaki <code>-w</code> karakteri ise dosyada değişiklik yapmamıza olanak sağlayan parametredir. Biz bu parametre sayesinde nano aracı ile belgeyi yazma(write) kipinde açmış oluyoruz. Geri kalan <code>/etc/profile</code> kısmı ise <kbd>profile</kbd> dosyasının bulunduğu konumu belirtiyor. Bu sayede nano aracı ile yazma kipinde <kbd>/etc/profile</kbd> konumundaki <kbd>profile</kbd> dosyasını komut satırı üzerinden görebiliyor ve değişiklik yapabiliyoruz.</p>
 
-<p><code>PATH="/root/Desktop/yeni_dizin/yeni/</code> <code>en_yeni:$PATH"</code>ifadesi ise mevcut PATH(yola) yeni dizin eklememize olanak sağlayan bir bütündür. Burada açıklanacak özel bir durum yok kullanım şekli itibari ile PATH yoluna dizin ekleme işlemi için gereken ifade bütünüdür.</p>
+<p><code>PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH"</code>ifadesi ise mevcut PATH(yola) yeni dizin eklememize olanak sağlayan bir bütündür. Burada açıklanacak özel bir durum yok kullanım şekli itibari ile PATH yoluna dizin ekleme işlemi için gereken ifade bütünüdür.</p>
 
 <p><code>echo $PATH</code> komutunu daha önce de görmüştük buradki <code>echo</code> komutu PATH ortam değişkeninde bulunan dizinleri görmemizi sağlıyor.</p>
-<p><code>chmod +rwx komut.sh</code> komutunda, <code>chmod</code> yetkilendirme ayarlamaları yapmamıza olanak sağlıyor.<code>+rwx</code> parametrelerinden " + "işareti ekleme," r "işareti okuma, " w "işareti yazma, " x "işareti ise çalıştırma yetkisi olmak üzere bizlere bir bütün olarak dosyayı çalıştırabilmemiz için gereken yetkilendirmeyi sağlıyor. Geri kalan <code>komut.sh</code> kısım ise zaten yetkilendirme vermek istediğimiz dosyanın adı.</p>	
+<p><code>chmod +rwx komut.sh</code> komutunda, <code>chmod</code> yetkilendirme ayarlamaları yapmamıza olanak sağlıyor. <code>+rwx</code> parametrelerinden " + "işareti ekleme," r "işareti okuma, " w "işareti yazma, " x "işareti ise çalıştırma yetkisi olmak üzere bizlere bir bütün olarak dosyayı çalıştırabilmemiz için gereken yetkilendirmeyi sağlıyor. Geri kalan <code>komut.sh</code> kısım ise zaten yetkilendirme vermek istediğimiz dosyanın adı.</p>	
 
 			
-<p>Şimdi bu kısımlar sizlere çok fazla detaya girilmiş belki de gereksiz yere eklenmiş gibi gelebilir ancak bu dokümanı bir bütün olarak kabul etmelisiniz. Dokümantasyon bir sefer okudum bitti değil ihtiyacınız oldukça tekrar tekrar bakasınız diye var. Yani buraları okuyup uygulayıp kavradıktan sonra böyle bir ihtiyacınız olduğunda bu konunun burada olduğunu bilin. Burada yer alan anlatımlar temeli oluşturma üzerine sıralı ve bağlantılı şekilde ilerliyor. Burada bunları ezberlemenize gerek yok zaten öğrenmenin temelinde de ezber yok. O yüzden rahat olun her şey kullandıkça gelişecek ancak dediğim gibi artık böyle birşeyin varlığından haberdarsınız yeri geldiğinde ihtiyacınız olan bilgiler burada olacak. </p>
+<p>Şimdi bu kısımlar sizlere çok fazla detaya girilmiş belki de gereksiz yere eklenmiş gibi gelebilir ancak bu dokümanı bir bütün olarak kabul etmelisiniz. Dokümantasyon bir sefer okudum bitti değil ihtiyacınız oldukça tekrar tekrar bakasınız diye var. Yani buraları okuyup uygulayıp kavradıktan sonra böyle bir ihtiyacınız olduğunda bu konunun burada olduğunu bilin. Burada yer alan anlatımlar temeli oluşturma üzerine sıralı ve bağlantılı şekilde ilerliyor. Burada bunları ezberlemenize gerek yok zaten öğrenmenin temelinde de ezber yok.(Aman M.E.B. duymasın*!) O yüzden rahat olun her şey kullandıkça gelişecek ancak dediğim gibi artık böyle bir şeyin varlığından haberdarsınız yeri geldiğinde ihtiyacınız olan bilgiler burada olacak. </p>
 
-<p>Ortam değişkenleri dedik ancak şu ana kadar sadece PATH değişkeninden bahsettik. Tabii ki sistemde sadece PATH değişkeni bulunmuyor bu değişken dışında da pek çok ortam değişkeni mevcut. Bunları görmek istersek komut satırına <code>set</code> , <code>env</code> yada <code>printenv</code> komutlarından birini ihtiyacımıza göre kullanabiliriz. Bu üç komut arasındaki farklar aşağıdaki şekildedir.</p>
+<p>Ortam değişkenleri dedik ancak şu ana kadar sadece PATH değişkeninden bahsettik. Tabii ki sistemde sadece PATH değişkeni bulunmuyor bu değişken dışında da pek çok ortam değişkeni mevcut. Bunları görmek istersek komut satırına <code>set</code> , <code>env</code> ya da <code>printenv</code> komutlarından birini ihtiyacımıza göre kullanabiliriz. Bu üç komut arasındaki farklar aşağıdaki şekildedir.</p>
 
 **set :** Shell'e ait olan değişkenlerin adını ve değerlerini verir.
 
@@ -189,7 +194,7 @@ Mesela bende <kbd>/home/taylan/Desktop</kbd> olan masaüstü dizini sizde<kbd> /
 
 ![enter image description here](https://i.hizliresim.com/6JR9g3.png)
 
-Ayrıca burada ekstra bir bilgi olsun diye burada belirtmek isterim ki ev dizinine gitmek için iki farklı yol daha bulunmaktadır. Bunlardan ilki yalnızca <code>cd</code> komutunu kullanmak diğeri ise <code>cd ~</code> komutunu kullanmaktır. ( Burada yer alan <kbd>~</kbd> işareti Türkçe klavyede <kbd>Alt Gr + </kbd> tuş kombinaysonu ile oluşturuluyor. )
+Ayrıca burada ekstra bir bilgi olsun diye belirtmek isterim ki ev dizinine gitmek için iki farklı yol daha bulunmaktadır. Bunlardan ilki yalnızca <code>cd</code> komutunu kullanmak diğeri ise <code>cd ~</code> komutunu kullanmaktır. ( Burada yer alan <kbd> ~</kbd> işareti Türkçe klavyede <kbd>Alt Gr + </kbd> tuş kombinaysonu ile oluşturuluyor. )
 
 ![enter image description here](https://i.hizliresim.com/W720BN.png)
 ![enter image description here](https://i.hizliresim.com/3E87rr.png)
@@ -213,11 +218,11 @@ Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <co
 
 ![enter image description here](https://i.hizliresim.com/rOL2mB.png)
 
-Gördüğünüz üzere konsol TERM değişkeninin değerini xterm olduğunu göstermiş oldu. Zaten daha önce yaygın olarak kullanıldığından söz ettiğimiz için bu çıktı bizi şaşırtmadı. Eğer bu çıktıyı teyit etmek istersek konsola <code>xterm </code> komutunu verdiğimizde xterm açılacak ve çıktı teyit edilmiş olacaktır.
+Gördüğünüz üzere konsol TERM değişkeninin değerini xterm olduğunu göstermiş oldu. Zaten daha önce yaygın olarak kullanıldığından söz ettiğimiz için bu çıktı bizi şaşırtmadı. Eğer bu çıktıyı teyit etmek istersek konsola <code>xterm</code> komutunu verdiğimizde xterm açılacak ve çıktı teyit edilmiş olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/D7Xd8z.png)
 
-İstersek diğer ortam değişkenlei için de aynı şekilde tek tek bilgi alabiliriz. Ancak ortam değişkenleri sabit ve sınırlı değildir. Sistemde var olanların haricinde bizde kendimiz ortam değişkenleri tanımlayabiliriz. Tanımlamaları üç farklı kategoriye ayırabiliriz;
+İstersek diğer ortam değişkenleri için de aynı şekilde tek tek bilgi alabiliriz. Ancak ortam değişkenleri sabit ve sınırlı değildir. Sistemde var olanların haricinde bizde kendimiz ortam değişkenleri tanımlayabiliriz. Tanımlamaları üç farklı kategoriye ayırabiliriz;
 
 - **konsola(terminal) özel :** yalnızca geçerli, açık olan terminaldeki uygulamalar için kullanılabilen
 - **kullanıcı :** yalnızca tek kullanıcı için geçerli ve o kullanıcının her oturum açtığında kullanabildiği
@@ -227,9 +232,9 @@ Gelin şimdi teker teker kullanımlarına değinelim.
 
 ### Mevcut Konsola Özel
 
-Sadece o an kullanmkata olduğumuz terminale(konsol) özel olan ve terminali kapattıktan sonra sıfırlanan ortam değişkenidir. Aşağıdaki örnek ile adım adım açıklayalım bu durumu:
+Sadece o an kullanmakta olduğumuz terminale(konsol) özel olan ve terminali kapattıktan sonra sıfırlanan ortam değişkenidir. Aşağıdaki örnek ile adım adım açıklayalım bu durumu:
 
-Terminali açtım ve komut satırına "<code> asdf </code> " yazdım. Konsol yanıt olarak " <code>bash: asdf: komut yok</code> " yazısını ekrana bastı.
+Terminali açtım ve komut satırına "<code>asdf</code> "(anlamsız karşılığı olmayan bir ifade/komut) yazdım. Konsol yanıt olarak " <code>bash: asdf: komut yok</code> " yazısını ekrana bastı.
 
 ![enter image description here](https://i.hizliresim.com/z0RBA6.png)
 
@@ -244,21 +249,22 @@ Bütün bu işlemler sadece bu komut penceresi için sınırlı. Yani açmış o
 
 ### Kullanıcıya (Oturuma) Özel
 
-Daha önce BASH kabuğundan bahsetmiştik ve mevcut sistemimizde bulunup bulunmadığını da kontrol etmiştik. Bash her oturum açtığımızda tüm ayarlarını ve davranışlarını " <kbd>.bashrc</kbd> " isimli gizli bir dosyadan okur. Ufak bir bilgi daha; başında <kbd>.</kbd> (nokta) olan dosyalar gizli dosya görevindedir. Konuya dönecek olursak bizim mevcut oturumumuzda ortam değişkenlerinde kalıcı değişiklik yapabilmemiz için yapmak istediğimiz değişiklikleri " <kbd>.bashrc</kbd> " isimli dosyaya eklememiz gerekiyor ki oturum açtığımızda sistem burada yaptığımız değişiklikleri her seferinde görebilsin.
+Daha önce BASH kabuğundan bahsetmiştik ve mevcut sistemimizde bulunup bulunmadığını da kontrol etmiştik. BASH her oturum açtığımızda tüm ayarlarını ve davranışlarını " <kbd>.bashrc</kbd> " isimli gizli bir dosyadan okur. Ufak bir bilgi daha; başında <kbd>.</kbd> (nokta) olan dosyalar gizli dosya görevindedir. Konuya dönecek olursak bizim mevcut oturumumuzda ortam değişkenlerinde kalıcı değişiklik yapabilmemiz için yapmak istediğimiz değişiklikleri " <kbd>.bashrc</kbd> " isimli dosyaya eklememiz gerekiyor ki oturum açtığımızda sistem burada yaptığımız değişiklikleri her seferinde görebilsin.
 
 Bulunduğumuz oturumda kalıcı değişiklik yapmak için birisi grafiksel diğeri ise sadece komut satırı arayüzü olmak üzere iki farklı yoldan nasıl değişiklik yaparız onu görelim. İsterseniz ilk olarak grafiksel arayüz ile başlayalım. Öncelikle <kbd>.bashrc</kbd> dosyasını açmalıyız. Dosyayı açmak için konsola <code>leafpad ~/.bashrc</code> komutunu veriyoruz.
 
-Kodu kısaca açıklayacak olursak <code>leafpad</code>sistemde mevcut bulunan basit metin düzenleyicisinin adıdır, <code>~</code>(Alt Gr + ü kombinasyonu ile oluşturulan "tilde" karakteri) karakteri ev dizinini temsil ediyor <code>/.bashrc </code> ise düzenleme yapacağımız dosyanın adıdır. Bu kısa açıklama sonrası komutları tam olarak anlamamış olabilirsiniz. Ancak yakında her birine değineceğiz ve bu kısımlar da tam anlamıyla oturmuş olacak. Yani şimdilik bu kodlara çok takılmadan asıl anlatılmak istenilene odaklanın lütfen.
+Kodu kısaca açıklayacak olursak <code>leafpad</code> sistemde mevcut bulunan basit metin düzenleyicisinin adıdır, <code>~</code>(Alt Gr + ü kombinasyonu ile oluşturulan "tilde" karakteri) karakteri ev dizinini temsil ediyor <code>/.bashrc</code> ise düzenleme yapacağımız dosyanın adıdır. Bu kısa açıklama sonrası komutları tam olarak anlamamış olabilirsiniz. Ancak yakında her birine değineceğiz ve bu kısımlar da tam anlamıyla oturmuş olacak. Yani şimdilik bu kodlara çok takılmadan asıl anlatılmak istenilene odaklanın lütfen.
 
-<code>leafpad ~/.bashrc </code> komutunu verdikten sonra karşınıza <kbd>.bashrc</kbd> dosyasının açılmış olması gerek. 
+<code>leafpad ~/.bashrc</code> komutunu verdikten sonra karşınıza <kbd>.bashrc</kbd> dosyasının açılmış olması gerek. 
 
 ![enter image description here](https://i.hizliresim.com/6JRXPv.png)
 
-Şimdi yapmak istediğimiz değişikliği dosyanın en alt satırına yani dosyanın sonuna eklemeliyiz. Bu eklemeyi <code>export DEĞİŞKEN_ADI=değeri </code> şeklinde yapıyoruz. Ben örnek olması açsından dil değişikliğini ele aldım. Bu sebepten dil değişimi(Türkçe olan dili ingilizceye çevirmek) için gerekli olan yazı dizisini <code>export LANG=C</code> şeklinde dosyanın sonuna ekledim ve dosyayı kaydederek kapattım.
+Şimdi yapmak istediğimiz değişikliği dosyanın en alt satırına yani dosyanın sonuna eklemeliyiz. Bu eklemeyi <code>export DEĞİŞKEN_ADI=değeri</code> şeklinde yapıyoruz. Ben örnek olması açısından dil değişikliğini ele aldım. Bu sebepten dil değişimi(Türkçe olan dili ingilizceye çevirmek) için gerekli olan yazı dizisini <code>export LANG=C</code> şeklinde dosyanın sonuna ekledim ve dosyayı kaydederek kapattım.
 
-Geldik diğer yöntem olan yalnızca konsol ekranını kullanarak değişiklik yapmaya. Bunun için konsola <code>nano -w ~/.bashrc</code> komutumuzu veriyoruz.
+Geldik diğer yöntem olan yalnızca konsol ekranını kullanarak değişiklik yapmaya.
 
-Komutumuzu girdikten sonra karşımıza konsol ekranı içerisinde <kbd>.bashrc</kbd> dosyasının içeriği geliyor. Klavyedeki yön tuşlarını kullanarak en alt satıra iniyoruz ve oraya yapmak istediğimiz değişkliği giriyoruz. Ben dilde değişiklik yapacağım için satırın sonuna <code>export LANG=C </code> şeklinde ekleme yaptım .
+Bunun için konsola <code>nano -w ~/.bashrc</code> komutumuzu veriyoruz.
+Komutumuzu girdikten sonra karşımıza konsol ekranı içerisinde <kbd>.bashrc</kbd> dosyasının içeriği geliyor. Klavyedeki yön tuşlarını kullanarak en alt satıra iniyoruz ve oraya yapmak istediğimiz değişkliği giriyoruz. Ben dilde değişiklik yapacağım için satırın sonuna <code>export LANG=C</code> şeklinde ekleme yaptım .
 
 ![enter image description here](https://i.hizliresim.com/A12kGr.png)
 
@@ -273,7 +279,7 @@ Artık böylelikle değişiklik yaptığımız bu kullanıcı oturumunu ne zaman
 
 ### Sistem Genelinde
 
-Eğer yaptığımız değişiklik bütün kullanıcı oturumlarında aynı şekilde geçerli olsun istiyorsak değişkenin sistemde her oturum açıldığında okunan bir dosyada bulunması gerekmektedir. İşte bizim de yapacağımız değişiklikler tüm kullanıcılar için geçerli olsun istiyorsak, yapacağımız değişikliği <kbd> bash.bashrc</kbd> dosyasına eklemeliyiz. Dosyamızın tam konumu <kbd>/etc/bash.bashrc </kbd> dizininde yer alıyor. Bu dosyada ilgili değişikliği nano aracı ile yapmak için konsola <code>nano -w /etc/bash.bashrc </code>komutunu veriyoruz.
+Eğer yaptığımız değişiklik bütün kullanıcı oturumlarında aynı şekilde geçerli olsun istiyorsak değişkenin sistemde her oturum açıldığında okunan bir dosyada bulunması gerekmektedir. İşte bizim de yapacağımız değişiklikler tüm kullanıcılar için geçerli olsun istiyorsak, yapacağımız değişikliği <kbd> bash.bashrc</kbd> dosyasına eklemeliyiz. Dosyamızın tam konumu <kbd>/etc/bash.bashrc </kbd> dizininde yer alıyor. Bu dosyada ilgili değişikliği nano aracı ile yapmak için konsola <code>nano -w /etc/bash.bashrc</code>komutunu veriyoruz.
 
 ![enter image description here](https://i.hizliresim.com/JQLlgY.png)
 
@@ -290,23 +296,23 @@ Sıra geldi değişikliklerin sistem tarafından tanınmasına. Yapılan değiş
 
 Çıktımız ingilizce olduğuna göre başarmışız demektir. Yaptığımız bu değişiklik bütün kullanıcılar için yani sistem geneli için geçerlidir. Bu durumu başka bir hesap oluşturarak kendiniz de gözlemleyebilirsiniz.
 
-Ayrıca değişiklikleri geri almak isterseniz eklediğiniz ifadeyi ilgili dosyadan silin ve sistemi <code>source ilgili_dosya_adı</code> şeklindeki komut bütünü ile yeniden konfigüre edin, bütün değişimler düzelmiş olacaktır.
+Ayrıca değişiklikleri geri almak isterseniz eklediğiniz ifadeyi ilgili dosyadan silin ve sistemi <code>source ilgili_dosya_adı</code> şeklindeki komut bütünü ile yeniden konfigüre edin, bütün değişimler düzelmiş olacaktır.(<code>source</code> komutunu kullanmak zorunda değilsiniz, hatta bu komut yerine sistemi yeniden başlatmanız daha iyi olacaktır.)
 
 Kısayollar
 -------------
 
 
-Bu bölümde birlikte sistem üzerinde gerekli hakimiyeti sağlamak için bize kolaylıklar sağlayan bazı kısayolları ve bazı önemli bilgileri öğrenip uygulayacağız. Kısayolları şimdi öğrenmemizin sebebi ileride komutları uygularken bizlere kolaylıklar sağlayarak bize hız katacak olmalarıdır. Hem şimdi öğrenirsek eğitim boyunca da sürekli pratik yapma imkanı bulmuş oluruz. Benim tecrübeme göre eğitim asla ezber üzerine kurulamaz.(aman M.E.B duymasın*! ) Öğrenme denilen olgu uygulama yani sürekli olarak yapılan pratik ile gerçekleşir. Bu bölümde öğreneceğiniz bilgiler belki başlangıç için fazlaca gözükebilir. Ancak her kısayolu ve bilgiyi direk ve sürekli olarak kullanmasak bile burada olduğunu bilmeli ve gerektiğinde dönüp tekrar bakabilmeliyiz. O yüzden gözünüze fazla gözükürse endişe etmenize gerek yok. Zaten bunlar hayati olarak sayılmazlar ancak zamanla göreceksiniz ki işlerimizi kolaylaştırarak Linux sistemini verimli şekilde kullanmamızı sağlıyor olacaklar. Neyse bu kadar açıklama yeter gelin konumuza Terminal için kısayol atama işlemleri ile başlayalım.
+Bu bölümde sistem üzerinde gerekli hakimiyeti sağlamak için bize kolaylıklar sağlayan bazı kısayolları ve bazı önemli bilgileri öğrenip uygulayacağız. Kısayolları şimdi öğrenmemizin sebebi ileride komutları uygularken bizlere kolaylıklar sağlayarak bize hız katacak olmalarıdır. Hem şimdi öğrenirsek eğitim boyunca da sürekli pratik yapma imkanı bulmuş oluruz. Benim tecrübeme göre eğitim asla ezber üzerine kurulamaz.(Daha önce de söylemiştik M.E.B'in haberi olmasın lütfen*!) Öğrenme denilen olgu uygulama yani sürekli olarak yapılan pratik ile gerçekleşir. Bu bölümde öğreneceğiniz bilgiler belki başlangıç için fazlaca gözükebilir. Ancak her kısayolu ve bilgiyi direk ve sürekli olarak kullanmasak bile burada olduğunu bilmeli ve gerektiğinde dönüp tekrar bakabilmeliyiz. O yüzden gözünüze fazla gözükürse endişe etmenize gerek yok. Zaten bunlar hayati olarak sayılmazlar ancak zamanla göreceksiniz ki işlerimizi kolaylaştırarak Linux sistemini verimli şekilde kullanmamızı sağlıyor olacaklar. Neyse bu kadar açıklama yeter gelin konumuza Terminal için kısayol atama işlemleri ile başlayalım.
 
 ### Terminal Kısayolları
 
-Genelde başka bir işletim sisteminden geçiş yapan arkadaşlar konsoldan bir komutu kopyalamak üzere, alıştıkları gibi <kbd>Ctlr + C</kbd> ve kopyalanan komutu yapıştırmak için ise <kbd>Ctrl + V</kbd> tuş kombinasyonunu denerler. Ancak komut satırında görürler ki kopyalamak için bastıkları<kbd>Ctrl + V</kbd> tuş kombinasyonu <kbd>^C</kbd> yapıştırmak için bastıkları <kbd>Ctrl + V </kbd>tuş kombinasyonu ise <kbd>^V</kbd> şeklinde konsola çıktı basmış. Tabi yanlış basmış olma ihtimaline karşı aynı işlemi genellikle tekrar deneyen arkadaşlar olur ancak yine aynı çıktıları alınca anlaşılır ki o işler öyle olmuyormuş :) İşin şakası bir yana insanın zamanla edindiği alışkanlıklarını değiştirmesi zor olabiliyor. O yüzden Terminalde <kbd>Ctrl + Shift + C </kbd> ve <kbd>Ctrl + Shift + V </kbd> olan kopyala-yapıştır kısayolunu daha önceden alışmış olduğumuz gibi değiştirmek bizim en doğal hakkımız. Bunun için eğer isterseniz yalnızca kopyala-yapıştır kısayolunu değiştirebilir yada diğer mevcut tüm kısayolları istediğiniz ve alıştığınız şekilde düzenleyebilirsiniz. Düzenlemek için, yeni Kali Linux versiyonlarında Terminal'in üst kısmında yer alan sekmelerden sırasıyla Düzenle > Tercihler > Kısayollar sekmelerini takip ederek açılan pencerede yer alan kısayolları dilediğiniz şekilde değiştirebilirsiniz.
+Genelde başka bir işletim sisteminden geçiş yapan arkadaşlar konsoldan bir komutu kopyalamak üzere, alıştıkları gibi <kbd>Ctlr + C</kbd> ve kopyalanan komutu yapıştırmak için ise <kbd>Ctrl + V</kbd> tuş kombinasyonunu denerler. Ancak komut satırında görürler ki kopyalamak için bastıkları <kbd>Ctrl + V</kbd> tuş kombinasyonu <kbd>^C</kbd> yapıştırmak için bastıkları <kbd>Ctrl + V </kbd> tuş kombinasyonu ise <kbd>^V</kbd> şeklinde konsola çıktı basmış. Tabi yanlış basmış olma ihtimaline karşı aynı işlemi genellikle tekrar deneyen arkadaşlar olur ancak yine aynı çıktıları alınca anlaşılır ki o işler öyle olmuyormuş :) İşin şakası bir yana insanın zamanla edindiği alışkanlıklarını değiştirmesi zor olabiliyor. O yüzden Terminalde <kbd>Ctrl + Shift + C </kbd> ve <kbd>Ctrl + Shift + V </kbd> olan kopyala-yapıştır kısayolunu daha önceden alışmış olduğumuz gibi değiştirmek bizim en doğal hakkımız. Bunun için eğer isterseniz yalnızca kopyala-yapıştır kısayolunu değiştirebilir ya da diğer mevcut tüm kısayolları istediğiniz ve alıştığınız şekilde düzenleyebilirsiniz. Düzenlemek için, yeni Kali Linux versiyonlarında Terminal'in üst kısmında yer alan sekmelerden sırasıyla Düzenle > Tercihler > Kısayollar sekmelerini takip ederek açılan pencerede yer alan kısayolları dilediğiniz şekilde değiştirebilirsiniz.
 
 ![enter image description here](https://i.hizliresim.com/nOPJq1.gif)
 
 Eğer eski bir versiyon kullanıyorsanız dediğim adımlarla Terminal kısayollarına ulaşamamış olabilirisiniz. Ancak Terminal'in üst kısmında yer alan sekmelere göz atarak "kısayollar" penceresine ulaşabilirsiniz. Sonuçta sürekli yenilikler olduğu için her versiyona özel bu tarz şeyleri yazmak gereksiz olacaktır. Kendiniz de biraz kurcalama ile çok rahat keşfedebilirsiniz.
 
-Terminalin kısayollar penceresine ulaştığımıza göre artık istediğimiz şekilde değişiklik yapabliriz. Buradaki kısayol seçeneklerine göz atın hangisi size uymuyorsa dilediğiniz şekilde düzenleyin. Ayrıca bilmediğiniz kısayollar varsa onlara da göz atmayı ihmal etmeyin.
+Terminalin kısayollar penceresine ulaştığımıza göre artık istediğimiz şekilde değişiklik yapabiliriz. Buradaki kısayol seçeneklerine göz atın hangisi size uymuyorsa dilediğiniz şekilde düzenleyin. Ayrıca bilmediğiniz kısayollar varsa onlara da göz atmayı ihmal etmeyin.
 
 ### Sistem Kısayolları
 
@@ -342,7 +348,7 @@ Bash Shell programının ne işe yaradığını daha önceki kısımlarda açık
 
 ## Düzenleme
 
-<div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th width="21%">Kısayol </th><th width="79%">Kısayol Açıklaması</th></tr></thead><tbody><tr><td><kbd>Ctrl + L</kbd></td><td>ekran temizlenir ve imleç en üst satıra çıkar yani `clear` komutu ile aynı işlemi yapar.</td></tr><tr><td><kbd>Alt + D</kbd></td><td>imleçten sonraki kelimeyi siler.</td></tr><tr><td><kbd>Ctrl + U</kbd></td><td>imlecin solundaki her şeyi siler.</td></tr><tr><td><kbd>Ctrl + K</kbd></td><td>imlecin sağındaki her şeyi siler.</td></tr><tr><td><kbd>Ctrl + C</kbd></td><td>komutu keser.</td></tr><tr><td><kbd>Ctrl + Y</kbd></td><td>kesilmiş olan son metni ekrana yapıştırır.</td></tr><tr><td><kbd>Ctrl + W</kbd></td><td>imleçten önceki kelime panoya kopyalanır.</td></tr><tr><td><kbd>Ctrl + K</kbd></td><td>imleçten sonraki kelime panoya kopyalanır.</td></tr><tr><td><kbd>Ctrl + U</kbd></td><td>imleçten önceki kelime silinir.</td></tr><tr><td><kbd>Esc + T</kbd></td><td>imleçten önceki iki kelime yer değiştir.</td></tr><tr><td><kbd>Ctrl + H</kbd></td><td>sola doğru tek tek karakterleri siler.(Yani Backspace gibi davranır)</td></tr><tr><td><kbd>Alt + U</kbd></td><td>imleç in başladığı yerden sözcüğün sonuna kadar bütün karakterleri büyük harf yapar.</td></tr><tr><td><kbd>Alt + L</kbd></td><td>imleç in başladığı yerden sözcüğün sonuna kadar bütün karakterleri küçük harf yapar.</td></tr><tr><td><kbd>Alt + C</kbd></td><td>imleç in üstünde bulunduğu karakteri büyük harf yapar.</td></tr><tr><td><kbd>Ctrl + R</kbd></td><td>daha önce kullanılmış olan komutlar arasında arama yapma ve o komutu tekrardan kullanma imkanı sağlar.</td></tr><tr><td><kbd>Alt + R</kbd></td><td>değişiklikleri iptal eder ve satırı eski haline getirir.</td></tr><tr><td><kbd>Ctrl + _</kbd></td><td>değişiklikleri iptal eder.</td></tr></tbody></table></div>
+<div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th width="21%">Kısayol </th><th width="79%">Kısayol Açıklaması</th></tr></thead><tbody><tr><td><kbd>Ctrl + L</kbd></td><td>ekran temizlenir ve imleç en üst satıra çıkar yani `clear` komutu ile aynı işlemi yapar.</td></tr><tr><td><kbd>Alt + D</kbd></td><td>imleçten sonraki kelimeyi siler.</td></tr><tr><td><kbd>Ctrl + U</kbd></td><td>imlecin solundaki her şeyi siler.</td></tr><tr><td><kbd>Ctrl + K</kbd></td><td>imlecin sağındaki her şeyi siler.</td></tr><tr><td><kbd>Ctrl + C</kbd></td><td>komutu keser.</td></tr><tr><td><kbd>Ctrl + Y</kbd></td><td>kesilmiş olan son metni ekrana yapıştırır.</td></tr><tr><td><kbd>Ctrl + W</kbd></td><td>imleçten önceki kelime panoya kopyalanır.</td></tr><tr><td><kbd>Ctrl + K</kbd></td><td>imleçten sonraki kelime panoya kopyalanır.</td></tr><tr><td><kbd>Ctrl + U</kbd></td><td>imleçten önceki kelime silinir.</td></tr><tr><td><kbd>Esc + T</kbd></td><td>imleçten önceki iki kelime yer değiştir.</td></tr><tr><td><kbd>Ctrl + H</kbd></td><td>sola doğru tek tek karakterleri siler.(Yani Backspace gibi davranır)</td></tr><tr><td><kbd>Alt + U</kbd></td><td>imlecin başladığı yerden sözcüğün sonuna kadar bütün karakterleri büyük harf yapar.</td></tr><tr><td><kbd>Alt + L</kbd></td><td>imlecin başladığı yerden sözcüğün sonuna kadar bütün karakterleri küçük harf yapar.</td></tr><tr><td><kbd>Alt + C</kbd></td><td>imlecin üstünde bulunduğu karakteri büyük harf yapar.</td></tr><tr><td><kbd>Ctrl + R</kbd></td><td>daha önce kullanılmış olan komutlar arasında arama yapma ve o komutu tekrardan kullanma imkanı sağlar.</td></tr><tr><td><kbd>Alt + R</kbd></td><td>değişiklikleri iptal eder ve satırı eski haline getirir.</td></tr><tr><td><kbd>Ctrl + _</kbd></td><td>değişiklikleri iptal eder.</td></tr></tbody></table></div>
 
 * * *
 
@@ -362,7 +368,7 @@ Hazır konu kısayollardan ve pratiklikten açılmışken aynı anda birden fazl
 
 ![enter image description here](https://i.hizliresim.com/3E8Ea5.png)
 
-Ve sonuç bizleri şaşırtmayarak yine birleşik komut içerisinde yazdığımız ortam değişkenlerinin değerlerini aynı anda ekrana bastırdı. Ve son olarak <kbd> || </kbd> operatörü var. Bu operatör diğerlerinden farklı olarak kullandığımızda, eğer verilen komutlardan birincisi başarısız olursa diğerini basar. Bu operatörü de kısaca şu örnek ile inceleyelim.
+Ve sonuç bizleri şaşırtmayarak yine birleşik komut içerisinde yazdığımız ortam değişkenlerinin değerlerini aynı anda ekrana bastırdı. Ve son olarak <kbd> || </kbd> operatörü var. Bu operatör diğerlerinden farklı olarak, kullandığımızda eğer verilen komutlardan birincisi başarısız olursa diğerini basar. Bu operatörü de kısaca şu örnek ile inceleyelim.
 
 ![enter image description here](https://i.hizliresim.com/A1216r.png)
 
@@ -374,7 +380,7 @@ Buraya gelene kadar bir çok kısayoldan ve bu kısayolların avantajlarından b
 
 Böylece koruma sistemi kuruldu ve artık test etmeye hazır. Komut satırındayken iki kez <kbd>Ctrl + D </kbd> tuş kombinasyonunu uygularsak konsol bize iki defa uyarıda bulunacaktır ve çıkmak için ancak 3. defa bastığımızda ya da komut satırına <code>exit</code> yazdığımızda konsol kapanacaktır.
 
-![enter image description here](https://i.hizliresim.com/G9n9B7.gif)
+![enter image description here](https://i.hizliresim.com/rO9vjB.gif)
 
 Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 kez <kbd>Ctrl + D </kbd> kapatma kombinasyonundan korudu. Ancak sizler bu bana yetmez ya da 2 kez fazla olur diyorsanız tanımı istediğiniz değerlerde ayarlayabilirsiniz. Örneğin <code> IGNOREEOF=4 </code> olabilir ya da <code>IGNOREEOF=1</code> olabilir, bu değer tamamen size kalmış. Ayrıca ufak bir hatırlatma, yaptığınız değişiklikler ancak Terminali kapatıp açtığınızda geçerli olur.
 
@@ -384,10 +390,9 @@ Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 
 
 İkinci yöntem ise komut satırına <code>set -o ignoreeof</code> yazmak. Bu komut ile de mevcut komut satırımız ancak 11.kez <kbd>Ctrl + D </kbd>yapmamız sonucunda kapanacaktır. Bunun haricinde birde <code>exit</code> komutunu verirsek konsol ekranı anında sonlanır. Bu özelliği devre dışı bırakmak isterseniz de komut satırına <code> set +o ignoreeof</code> yazmalısınız.
 
-![enter image description here](https://i.hizliresim.com/EPlPD8.gif)
+![enter image description here](https://i.hizliresim.com/3EoJNO.gif)
 
   [1]: https://ss64.com/bash/syntax-keyboard.html
-
 
 ----------
 
@@ -397,19 +402,19 @@ Yardım Almak
 ===========
 
 
-Bu kısımda bir nevi öğrenmeyi öğrenicez. Bunu da Linux sistemlerinin sahip olduğu çok geniş çaplı yardım sistemi kullanarak başaracağız. Linux sistemlerinde yer alan bu geniş çaplı yardım mekanizmasının bulunmasının birçok nedeni var. Ancak genel olarak, çok fazla komutun çok fazla argüman alması veya her bir programın kendine has kurulum ve kullanım komutlarının olmasından kaynaklanıyor. Linux'un kendi sahip olduğu yardım sayfalarının dışında da birçok yardım alma konuları mevcut. Zaten zamanla göreceksiniz ki Linux ile ilgili hemen her araç ve programla ilgili gerekli yardım ve dokümanlar, programın ve aracın beraberinde geliyor olacak.
+Bu kısımda bir nevi öğrenmeyi öğreneceğiz. Bunu da Linux sistemlerinin sahip olduğu çok geniş çaplı yardım sistemini kullanarak başaracağız. Linux sistemlerinde yer alan bu geniş çaplı yardım mekanizmasının bulunmasının birçok nedeni var. Ancak genel olarak, çok fazla komutun çok fazla argüman alması veya her bir programın kendine has kurulum ve kullanım komutlarının olmasından kaynaklanıyor. Linux'un kendi sahip olduğu yardım sayfalarının dışında da birçok yardım alma konuları mevcut. Zaten zamanla göreceksiniz ki Linux'a kurmak için edindiğimiz hemen her araç veya program kurulum dosyalarının beraberinde kurulum ve kullanımla ilgili açıklamayı içeren belge(ler) ile geliyor.
 
 Bu bağlamda Linux sistemlerinin temel döküman-bilgi kaynaklarını 3 türe ayırabiliriz.
 
-Bunlar; bilgi sayfaları(info), kılavuz sayfaları(manuel) ve uygulamalar ile gelen <kbd>/usr/share/doc</kbd> konumunda bulunan dökümanlardır. Bizler de zaman zaman unuttuğumuz için veya bilmediğimizden dolayı bu yardım sayfalarına ve dökümanlarına danışacağız. Bu girizgahtan sonra artık yavaş yavaş yardım alma komutlarımıza geçelim.
+Bunlar; **bilgi sayfaları(info)**, **kılavuz sayfaları(manuel)** ve **uygulamalar ile gelen <kbd>/usr/share/doc</kbd> konumunda bulunan dökümanlar**dır. Bizler de zaman zaman unuttuğumuz için veya bilmediğimizden dolayı bu yardım sayfalarına ve dökümanlarına danışacağız. Bu girizgahtan sonra artık yavaş yavaş yardım alma komutlarımıza geçelim.
 
 help Komutu
 ------------------
-Hiç ingilizce bilmiyorum diyen birinin bile "help" ifadesinin "yardım" anlamında olduğunu bildiğini düşünüyorum. Yani bu sebepten <code>help </code> komutu akılda kalması en kolay komutlardandır. Komutun kullanımına geçecek olursak örneğin daha önce kullandığımız yetki verme işini gören <code>chmod</code> komutu ile ilgili yardım almak isteyelim. Bunun için komut satırına <code>chmod --help</code> şeklinde komutumuzu yazıyoruz. Ve aşağıda görüldüğü gibi gerekli bilgileri içeren yardım sayfası bizi karşılıyor.
+Hiç ingilizce bilmiyorum diyen birinin bile "help" ifadesinin "yardım" anlamında olduğunu bildiğini düşünüyorum. Yani bu sebepten <code>help</code> komutu akılda kalması en kolay komutlardandır. Komutun kullanımına geçecek olursak örneğin daha önce kullandığımız yetki verme işini gören <code>chmod</code> komutu ile ilgili yardım(bilgi) almak isteyelim. Bunun için komut satırına <code>chmod --help</code> şeklinde komutumuzu yazıyoruz. Ve aşağıda görüldüğü gibi gerekli bilgileri içeren yardım sayfası bizi karşılıyor.
 
 ![enter image description here](https://i.hizliresim.com/Vrp96Z.png)
 
-Bu kullanımın dışında <code>help</code> komutunun birde <code>help</code> komut şeklinde kullanımı var ancak bu kullanımda her zaman komut hakkında yardım bilgisi bulunmayabiliyor o yüzden ilk öğrendiğimiz yol önceliğiniz olsun. Örneğin <code>help chmod</code> yazdığımızda komut satırı yardım bilgisi bulunmadığını belirtti.
+Bu kullanımın dışında <code>help</code> komutunun birde <code>help komut</code> şeklinde kullanımı var ancak bu kullanımda her zaman komut hakkında yardım bilgisi bulunmayabiliyor o yüzden ilk öğrendiğimiz yol önceliğiniz olsun. Örneğin <code>help chmod</code> yazdığımızda komut satırı yardım bilgisi bulunmadığını belirtti.
 
 ![enter image description here](https://i.hizliresim.com/nOPQmV.png)
 
@@ -417,7 +422,7 @@ man(Manuel Sayfası) Komutu
 -----------------------------------------
 man(manuel) sayfaları temel yardım alma dosyalarıdır. Ve kılavuz sayfaları olarak da bilinir.
 
-<code>man </code> komutunu kullanmak için komut satırına <code>man komut </code> şeklinde hakkında bilgi edinip yardım almak istediğimiz komutu giriyoruz. Örneğin ben <code>chmod </code> hakkındaki bilgilere ulaşmak istiyorsam konsola <code>man chmod </code> şeklinde yazarak gerekli bilgilere ulaşabilirim. Komutun çıktısında göreceğiniz gibi uzunca bir açıklama sizleri bekliyor. Açılan bu kılavuz sayfasında yön tuşlarını ve <kbd>space</kbd> tuşunu kullanarak gezinebilirsiniz. Ayrıca <code> man</code> sayfasının kısayollarını ve kullanımını görmek isterseniz <code> man</code>  sayfası açıkken <kbd>h</kbd> tuşuna basarsanız sizi <code> man</code> klavuzunun yardım sayfası karşılar, orada kullanımı ile ilgili detaylı bilgi yardımı mevcuttur. Kılavuz sayfasını kapatmak isterseniz ise sadece <kbd>q</kbd>  tuşuna basmanız yeterli.
+<code>man</code> komutunu kullanmak için komut satırına, hakkında bilgi edinip yardım almak istediğimiz komutu <code>man komut</code> şeklinde  giriyoruz. Örneğin ben <code>chmod</code> hakkındaki bilgilere ulaşmak istiyorsam konsola <code>man chmod</code> şeklinde yazarak gerekli bilgilere ulaşabilirim. Komutun çıktısında göreceğiniz gibi uzunca bir açıklama sizleri bekliyor. Açılan bu kılavuz sayfasında yön tuşlarını ve <kbd>space</kbd> tuşunu kullanarak gezinebilirsiniz. Ayrıca <code> man</code> sayfasının kısayollarını ve kullanımını görmek isterseniz <code> man</code>  sayfası açıkken <kbd>h</kbd> tuşuna basarsanız sizi <code> man</code> klavuzunun yardım sayfası karşılar, orada kullanımı ile ilgili detaylı bilgi yardımı mevcuttur. Kılavuz sayfasını kapatmak isterseniz ise sadece <kbd>q</kbd>  tuşuna basmanız yeterli.
 
 Şimdi biraz da man sayfasının iç yapısına değinecek olursak:
 
@@ -427,11 +432,11 @@ man(manuel) sayfaları temel yardım alma dosyalarıdır. Ve kılavuz sayfaları
 - **EXAMPLES:** Komutun kullanımı ile ilgili örnekler ve açıklamalar.
 - **SEE ALSO:** Diğer ilgili başlıklar.
 
-<code>man</code> kılavuzunun komutlarla ilgili tuttuğu bilgi sayfaları <kbd>/usr/share/man</kbd> konumu altında tutulur. Görmek için konsola <code>cd /usr/share/man && ls </code> komutunu girdiğimizde çıktılar aşağıdaki şekildedir.
+<code>man</code> kılavuzunun komutlarla ilgili tuttuğu bilgi sayfaları <kbd>/usr/share/man</kbd> konumu altında tutulur. Görmek için konsola <code>cd /usr/share/man && ls</code> komutunu girdiğimizde çıktılar aşağıdaki şekildedir.
 
 ![enter image description here](https://i.hizliresim.com/kOr90r.png)
 
-Komutu açıklayacak olursak <code>cd</code> komutu <kbd> /usr/share/man </kbd> dizinine gitmemizi sağlıyor <kbd>&&</kbd> ise daha önce gördüğümüz gibi iki komutu aynı anda çalıştırma imkanı tanıyor. <code>ls </code> komutu ise ileride de göreceğimiz gibi klasörde bulunan bütün ögeleri listeliyor. Şimdilik bu açıklama yeterli olacaktır. Biraz da bu çıktıdaki sonuçlara bakalım örneğin <code>man </code> sayfasının yapılanması nasıl oluyor yani yukarıdaki komut çıktısında yer alan dil dosyaları dışındaki dosyalar yani <kbd>man1,man2,man3,man4,man5,man6,man7,man8</kbd> ne ifade ediyor kısaca ona değinelim.
+Komutu açıklayacak olursak <code>cd</code> komutu <kbd> /usr/share/man </kbd> dizinine gitmemizi sağlıyor <kbd>&&</kbd> ise daha önce gördüğümüz gibi iki komutu aynı anda çalıştırma imkanı tanıyor. <code>ls</code> komutu ise ileride de göreceğimiz gibi klasörde bulunan bütün ögeleri listeliyor. Şimdilik bu açıklama yeterli olacaktır. Biraz da bu çıktıdaki sonuçlara bakalım örneğin <code>man</code> sayfasının yapılanması nasıl oluyor yani yukarıdaki komut çıktısında yer alan dil dosyaları dışındaki dosyalar yani <kbd>man1,man2,man3,man4,man5,man6,man7,man8</kbd> ne ifade ediyor kısaca ona değinelim.
 
 - **man1:** genel kullanıcı programlarını ifade eder.
 - **man2:** sistem programlarını ifade eder.
@@ -444,24 +449,24 @@ Komutu açıklayacak olursak <code>cd</code> komutu <kbd> /usr/share/man </kbd> 
 
 whatis Komutu
 ---------------------
-Hazır yeri gelmişken yukarıda gördüğümüz <code>man</code> sayfası yapılanmasıyla ilgili olarak <code>whatis </code> komutundan da söz edelim. Bu komut sayesinde hangi komutun hangi <code>man</code> sayfasında olduğunu öğrenebiliyoruz. Daha iyi anlamak için örnekler yapalım. Komutun kullanımı <code>whatis </code> komut şeklindedir.
+Hazır yeri gelmişken yukarıda gördüğümüz <code>man</code> sayfası yapılanmasıyla ilgili olarak <code>whatis</code> komutundan da söz edelim. Bu komut sayesinde hangi komutun hangi <code>man</code> sayfasında olduğunu öğrenebiliyoruz. Daha iyi anlamak için örnekler yapalım. Komutun kullanımı <code>whatis komut</code> şeklindedir.
 
 ![enter image description here](https://i.hizliresim.com/JQLZyY.png)
 
-<code>whatis </code> komutuna, <code>chmod</code> komutunun <code>man</code> sayfasındaki açıklamalarının yukarıdaki açıkladığımız (man1,man2..3..4..5..6..7..8..) dosyalarından hangi dosyada olduğunu sorduk. Konsol yanıt olarak hem 1 hemde 2 de bulunduğunu bizlere bildirdi. Siz bunu istediğiniz komut için sorgulayabilirsiniz hatta <code>whatis </code> komutu için bile sorgulayabiliriz.
+<code>whatis</code> komutuna, <code>chmod</code> komutunun <code>man</code> sayfasındaki açıklamalarının yukarıdaki açıkladığımız (man1,man2..3..4..5..6..7..8) dosyalarından hangi dosyada olduğunu sorduk. Konsol yanıt olarak hem 1 hemde 2 de bulunduğunu bizlere bildirdi. Siz bunu istediğiniz komut için sorgulayabilirsiniz hatta <code>whatis</code> komutu için bile sorgulayabiliriz.
 
 ![enter image description here](https://i.hizliresim.com/YgPQAZ.png)
 
 Bu çıktıların doğruluğu man sayfalarının tutulduğu <kbd>/usr/share/man </kbd>dizinine gidilerek kontrol edilebilir. Örneğin ben <kbd>/usr/share/man/man1</kbd> konumuna gittiğimde <code>whatis</code> komutunun yardım sayfalarının burada olduğunu görebiliyorum. Sizler çıktıları de bu şekilde teyit edebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/dOjLz7.png)
+![enter image description here](https://i.hizliresim.com/vj47n6.png)
 
-<code>whatis</code> komutunun kullanımı bu kadar ile sınırlı değil ancak ben geri kalanını burada vermiyorum. Dileyen arkadaşlar <code>man </code>komutu yardımı ile gerekli bilgilere ulaşabilirler.
+<code>whatis</code> komutunun kullanımı bu kadar ile sınırlı değil ancak ben geri kalanını burada vermiyorum. Dileyen arkadaşlar <code>man</code>komutu yardımı ile gerekli bilgilere ulaşabilirler.
 
 apropos Komutu
 -----------------------
 
-Yardım alma komutlarını noktalamadan önce; Sizlere <code>man </code>sayfasındayken <kbd>h</kbd> tuşuna basarsak <code>man </code> sayfasının kullanımı hakkında detaylı bilgiye ulaşabileceğimizi belirtmiştim. O sayfaya bakarsanız <code>man -k</code> şeklinde parametre alan komutun işlevinin, sorguladığımız komutun geçtiği uygulamaları listelemek olduğunu görebilirsiniz. Yani örnek vermek gerekirse komut satırına <code>man -k chmod </code> yazdığımızda çıktısı aşağıdaki şekilde olacaktır.
+Yardım alma komutlarını noktalamadan önce; Sizlere <code>man</code> sayfasındayken <kbd>h</kbd> tuşuna basarsak <code>man</code> sayfasının kullanımı hakkında detaylı bilgiye ulaşabileceğimizi belirtmiştim. O sayfaya bakarsanız <code>man -k</code> şeklinde parametre alan komutun işlevinin, sorguladığımız komutun geçtiği uygulamaları listelemek olduğunu görebilirsiniz. Yani örnek vermek gerekirse komut satırına <code>man -k chmod</code> yazdığımızda çıktısı aşağıdaki şekilde olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/p6450a.png)
 
@@ -473,6 +478,8 @@ Gördüğünüz gibi belirtmiş olduğumuz chmod komutunun geçtiği uygulamalar
 
 Bu konudaki noktayı da man kılavuz sayfaları güncelleme işlemi ile yapalım. Nedir bu işlem diyecek olursanız. Aradığımız yardımı man sayfasında bulamıyorsak güncelleyerek tekrar sorgulayabiliriz. Ara ara güncellemek yeni bilgilere de ulaşmamıza olanak sağlar. Güncelleme için konsola <code>mandb</code> komutunu girmemiz yeterli olacaktır. Komut satırı, güncelleme işleminden sonra yapılan değişiklikleri de son satırda bizlere bildirir.
 
+![enter image description here](https://i.hizliresim.com/6JnGq7.png)
+
 Yardım alma komutlarını bilmek bir zorunluluk değil ihtiyaç meselesidir. Zaten zamanla bu komutlara ve kullanımlarına alışacaksınız. Açıklamaların İngilizce olmasını da dert etmeyin, ne yaparsak yapalım eninde sonunda bu işlerin yolu ingilizceden geçiyor artık bu duruma alışmamız gerek. Bu noktada kendimizi biraz zorlamalı ve kesinlikle pes etmemeliyiz. Kendimizi biraz zorlayarak çaba harcayarak öğrenirsek, öğrenilenler kesinlikle daha da kalıcı oluyor. Sakın pes etmeyin çok iyi gidiyoruz...
 
 
@@ -481,17 +488,17 @@ Yardım alma komutlarını bilmek bir zorunluluk değil ihtiyaç meselesidir. Za
 Bilgi Almak
 =
 
-Bilgi alma komutları sistemimizde bulunan herhangi birşey hakkında(programlar,dosyalar vs..) bilgi almamızı sağlayan komutlara verilen genel isimdir. Bu komutlara gerekli durumlarda çok sık başvururuz. Şimdi bilgi alma komutlarının neler olduğunu ve kullanım şekillerine bakalım.
+Bilgi alma komutları sistemimizde bulunan herhangi bir şey hakkında(programlar,dosyalar vs..) bilgi almamızı sağlayan komutlara verilen genel isimdir. Bu komutlara gerekli durumlarda çok sık başvururuz. Şimdi bilgi alma komutlarının neler olduğuna ve kullanım şekillerine bakalım.
 
 uname
 -
-Tek başına çekirdek adını verse de aldığı parametreler ile farklı bilgiler de sunabilir. Hangi parametrenin ne iş yaptığını <code>man uname </code> komutu ile öğrenebileceğinizi biliyorsunuz. Kısaca bilmemiz gereken; bu komut genel olarak sistemde kullanılan çekirdek hakkında bilgiler verir.
+Tek başına çekirdek adını verse de aldığı parametreler ile farklı bilgiler de sunabilir. Hangi parametrenin ne iş yaptığını <code>man uname</code> komutu ile öğrenebileceğinizi biliyorsunuz. Kısaca bilmemiz gereken; bu komut genel olarak sistemde kullanılan çekirdek hakkında bilgiler verir.
 
 ![enter image description here](https://i.hizliresim.com/EPlXDD.png)
 
 hostname
 -
-Bilgisayarımızın adını diğer bir adıyla host adını verir. Eğer isterseniz bu adı değiştirebilirsiniz. Örnek veriyorum komut satırına <code>hostname burak </code> yazarsanız hostname yani bilgisayarınızın adı burak olarak değişmiş olacaktır.
+Bilgisayarımızın adını diğer bir adıyla host adını verir. Eğer isterseniz bu adı değiştirebilirsiniz. Örnek veriyorum; komut satırına <code>hostname burak</code> yazarsanız hostname yani bilgisayarınızın adı burak olarak değişmiş olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/5D9Znq.png)
 
@@ -515,7 +522,8 @@ Bu komut kullandığımız dağıtım hakkında farklı bilgiler sunan parametre
 
 whoami
 -
-Sinemayı takip eden arkadaşların ilk aklına ne geldi biliyorum :) 
+Sinemayı takip eden arkadaşların aklına ilk ne geldi biliyorum :) 
+
 Bu komut kimlik sorgu işlevi görüyor. Komut satırımıza komutumuzu vererek sonucuna bakalım.
 
 ![enter image description here](https://i.hizliresim.com/76m9oW.png)
@@ -529,8 +537,11 @@ Yine <code>whoami</code> komutuna benzer ancak çok ufak farkların olduğu birk
 Sıra sıra bakalım:
 
 **whoami:** mecvut kullanıcının hangi kimlikle çalıştığını gösteriyor.
+
 **who:** sistemde hangi kullanıcının çalıştığını gösteriyor.
+
 **w:** hangi kullanıcı hangi uygulamayı çalıştırıyor bunun bilgisini gösteriyor.
+
 Bunun dışında bu komutlar da parametre alabiliyorlar. Hangi parametreleri aldıklarını nasıl öğrenebileceğinizi zaten biliyorsunuz. Ben yinede aşağıda birkaçının çıktısını bırakıyorum.
 
 ![enter image description here](https://i.hizliresim.com/Pl38P5.png)
@@ -556,7 +567,7 @@ Herhangi bir komutun tam yol bilgisini öğrenmek için kullanılır.
 
 whereis
 -
-Bu komutunda özel parametreleri vardır man sayfasından kontrol edin lütfen. Bunun dışında parametresiz hali <code>apropos</code> komutuna benzer şekilde bir çıktı verir. Ancak </code> komutundan farklı olarak ilgili komutun man sayfası konumunun tam dizin adresini belirtir.
+Bu komutunda özel parametreleri vardır man sayfasından kontrol edin lütfen. Bunun dışında parametresiz hali <code>apropos</code> komutuna benzer şekilde bir çıktı verir. Ancak <code>apropos</code> komutundan farklı olarak ilgili komutun man sayfası konumunun tam dizin adresini belirtir.
 
 ![enter image description here](https://i.hizliresim.com/dOjQPp.png)
 
@@ -568,7 +579,7 @@ Bu komut ile aradığımız bir dosyanın nerede olduğunu öğrenebiliriz. Komu
 
 ![enter image description here](https://i.hizliresim.com/Z92Jja.png)
 
-Bu komutun ne kadar kıymetli olduğunu işiniz düştükçe ve kullandıkça anlayacaksınız. Genelde bir dosyayı arama çubuğu yardımı ile aramak sonuç vermez ve bu arama işlemi oldukça hantal çalışır. Ancak örneğin ben dosya konumunu bilmediğim bir dosyaya ulaşmak istiyorum. İşte burada kahramanız <code>locate</code> komutu çıkageliyor ve bize saniyeler içerisinde sonucu veriyor. Komutumu denemek amacıyla kali linux içerisinde yer alan bir araç olan armitage aracını aratıyorum. Bunun için komut satırına <code>locate armitage</code> yazmalıyım.
+Bu komutun ne kadar kıymetli olduğunu işiniz düştükçe ve kullandıkça anlayacaksınız. Genelde bir dosyayı arama çubuğu yardımı ile aramak sonuç vermez ve bu arama işlemi oldukça hantal çalışır. Ancak örneğin ben dosya konumunu bilmediğim bir dosyaya ulaşmak istiyorum. İşte burada kahramanız <code>locate</code> komutu çıkageliyor ve bize saniyeler içerisinde sonucu veriyor. Komutu denemek amacıyla kali linux içerisinde yer alan bir araç olan armitage aracını aratıyorum. Bunun için komut satırına <code>locate armitage</code> yazmalıyım.
 
 ![enter image description here](https://i.hizliresim.com/oOn9qm.png)
 
@@ -583,19 +594,19 @@ Eğer daha önce de Linux deneyimi yaşadıysanız ve sorunlar ile karşılaşt�
 
 Bahsi geçen tablo sıralı şekilde ve Numara-Türkçe karşılığı olacak şekilde aşağıdaki gibidir.
 
-<div class="table-responsive"> <table class="table table-bordered table-striped"> <thead> <tr> <th width="10%">Numara </th> <th width="90%">Açıklama</th> </tr></thead> <tbody><tr> <td>0</td><td>Bios</td></tr><tr> <td>&nbsp;1</td><td>Sistem</td></tr><tr> <td>2</td><td>Baz kurulu</td></tr><tr> <td>3</td><td>Şasi</td></tr><tr> <td>4</td><td>İşlemci</td></tr><tr> <td>5</td><td>Bellek denetleyicisi </td></tr><tr> <td>6</td><td>Bellek modülü</td></tr><tr> <td>7</td><td>Önbellek</td></tr><tr> <td>8</td><td>Port bağlantısı</td></tr><tr> <td>9</td><td>Sistem yuvaları</td></tr><tr> <td>10</td><td>On Board Cihazları</td></tr><tr> <td>11</td><td>OEM Dizeleri</td></tr><tr> <td>12</td><td>Sistem Yapılandırma Seçenekleri</td></tr><tr> <td>13</td><td>BIOS Dili</td></tr><tr> <td>14</td><td>Grup Dernekler</td></tr><tr> <td>15</td><td>Sistem Event Log</td></tr><tr> <td>16</td><td>Fiziksel Bellek Array</td></tr><tr> <td>17</td><td>Bellek Cihazı</td></tr><tr> <td>18</td><td>32-bit bellek hatası</td></tr><tr> <td>19</td><td>Bellek Dizisi Haritalı Adres</td></tr><tr> <td>20</td><td>Bellek Cihazo Haritalı Adres</td></tr><tr> <td>21</td><td>Dahili İşaret Aygıtı</td></tr><tr> <td>22</td><td>Taşınabilir Pil</td></tr><tr> <td>23</td><td>Sistem Sıfırlama</td></tr><tr> <td>24</td><td>Dananım Güvenlik</td></tr><tr> <td>25</td><td>Sistem Güç Denetimleri</td></tr><tr> <td>26</td><td>Gerilim Probu</td></tr><tr> <td>27</td><td>Soğutma Cihazı</td></tr><tr> <td>28</td><td>Sıcaklık Probu</td></tr><tr> <td>29</td><td>Elektrik Akımı Probu</td></tr><tr> <td>30</td><td>Uzaktan Erişim</td></tr><tr> <td>31</td><td>Boot Bütünlüğü Hizmetleri</td></tr><tr> <td>32</td><td>Sistem Önyükleme</td></tr><tr> <td>33</td><td>64-bit Bellek Hatası</td></tr><tr> <td>34</td><td>Yönetim Cihazı</td></tr><tr> <td>35</td><td>Yönetimi Cihaz Bileşeni</td></tr><tr> <td>36</td><td>Yönetimi Cihaz Eşik Verileri</td></tr><tr> <td>37</td><td>Bellek Kanal</td></tr><tr> <td>38</td><td>IPMI Cihazı</td></tr><tr> <td>39</td><td>Güç Kaynağı</td></tr></tbody></table> </div>
+<div class="table-responsive"> <table class="table table-bordered table-striped"> <thead> <tr> <th width="10%">Numara </th> <th width="90%">Açıklama</th> </tr></thead> <tbody><tr> <td>0</td><td>Bios</td></tr><tr> <td>1</td><td>Sistem</td></tr><tr> <td>2</td><td>Baz kurulu</td></tr><tr> <td>3</td><td>Şasi</td></tr><tr> <td>4</td><td>İşlemci</td></tr><tr> <td>5</td><td>Bellek denetleyicisi </td></tr><tr> <td>6</td><td>Bellek modülü</td></tr><tr> <td>7</td><td>Önbellek</td></tr><tr> <td>8</td><td>Port bağlantısı</td></tr><tr> <td>9</td><td>Sistem yuvaları</td></tr><tr> <td>10</td><td>On Board Cihazları</td></tr><tr> <td>11</td><td>OEM Dizeleri</td></tr><tr> <td>12</td><td>Sistem Yapılandırma Seçenekleri</td></tr><tr> <td>13</td><td>BIOS Dili</td></tr><tr> <td>14</td><td>Grup Dernekler</td></tr><tr> <td>15</td><td>Sistem Event Log</td></tr><tr> <td>16</td><td>Fiziksel Bellek Array</td></tr><tr> <td>17</td><td>Bellek Cihazı</td></tr><tr> <td>18</td><td>32-bit bellek hatası</td></tr><tr> <td>19</td><td>Bellek Dizisi Haritalı Adres</td></tr><tr> <td>20</td><td>Bellek Cihazo Haritalı Adres</td></tr><tr> <td>21</td><td>Dahili İşaret Aygıtı</td></tr><tr> <td>22</td><td>Taşınabilir Pil</td></tr><tr> <td>23</td><td>Sistem Sıfırlama</td></tr><tr> <td>24</td><td>Dananım Güvenlik</td></tr><tr> <td>25</td><td>Sistem Güç Denetimleri</td></tr><tr> <td>26</td><td>Gerilim Probu</td></tr><tr> <td>27</td><td>Soğutma Cihazı</td></tr><tr> <td>28</td><td>Sıcaklık Probu</td></tr><tr> <td>29</td><td>Elektrik Akımı Probu</td></tr><tr> <td>30</td><td>Uzaktan Erişim</td></tr><tr> <td>31</td><td>Boot Bütünlüğü Hizmetleri</td></tr><tr> <td>32</td><td>Sistem Önyükleme</td></tr><tr> <td>33</td><td>64-bit Bellek Hatası</td></tr><tr> <td>34</td><td>Yönetim Cihazı</td></tr><tr> <td>35</td><td>Yönetimi Cihaz Bileşeni</td></tr><tr> <td>36</td><td>Yönetimi Cihaz Eşik Verileri</td></tr><tr> <td>37</td><td>Bellek Kanal</td></tr><tr> <td>38</td><td>IPMI Cihazı</td></tr><tr> <td>39</td><td>Güç Kaynağı</td></tr></tbody></table> </div>
 
 Başta belirttiğim gibi <code>dmidecode</code> kendi içinde parametre alan bir komut olduğu için istediğimiz spesifik bilgiye doğrudan da ulaşmamız mümkün. Detaylı bilgi için man kılavuz sayfasına bakın lütfen. Ancak küçük bir örnek vermem gerekirse bios hakkında bilgi edinmek istediğimizde <code>dmidecode -t bios</code> şeklinde komut satırına girmemiz yeterli. 
 
 ![enter image description here](https://i.hizliresim.com/Vr268n.png)
 
-Burada ayrıca <code>dmidecode -t bios</code> yerine sıralamada bulunan numarasını yani <code>dmidecode -t 0 </code>yazarak da aynı işlemi gerçekleştirebilirdik.
+Burada ayrıca <code>dmidecode -t bios</code> yerine sıralamada bulunan numarasını yani <code>dmidecode -t 0</code> yazarak da aynı işlemi gerçekleştirebilirdik.
 
 ![enter image description here](https://i.hizliresim.com/nOY290.png)
 
 fdisk-l
 -
-Başlıkta da yer aldığı gibi bu bölümde <code>fdisk </code> komutunun yalnıcza <code>l </code> parametresinin işlevini göreceğiz. Bu komutu burada vermemin sebebi sistem hakkında bilgi alırken diskin de sistem dahilinde olmasıdır. Zaten ileride tekrar ele alacağımızdan şimdilik bu kadarı da yeterli olacaktır. Bu komutu diskler üzerinde işlem gerçekleştirirken kullanıyoruz. Eğer komut satırımıza <code>fdisk -l </code> şeklinde komut verirsek karşımıza sistemimizdeki disk bölümleri gelir.
+Başlıkta da yer aldığı gibi bu bölümde <code>fdisk</code> komutunun yalnızca <code>l</code> parametresinin işlevini göreceğiz. Bu komutu burada vermemin sebebi sistem hakkında bilgi alırken diskin de sistem dahilinde olmasıdır. Zaten ileride tekrar ele alacağımızdan şimdilik bu kadarı da yeterli olacaktır. Bu komutu diskler üzerinde işlem gerçekleştirirken kullanıyoruz. Eğer komut satırımıza <code>fdisk -l</code> şeklinde komut verirsek karşımıza sistemimizdeki disk bölümleri gelir.
 
 ![enter image description here](https://i.hizliresim.com/vjYRAv.png)
 
@@ -621,7 +632,7 @@ Bu komut ile kullanılan bellek miktarını KB cinsinden öğrenebiliriz. Ancak 
 
 modinfo
 -
-Bu komut sayesinde Linux kernel modüllerinin bilgisi alınabilir. Bu modülleri ekran bastırmak isterseniz komut satırına <code>lsmod</code> yazarak mödülleri listeleyebilirsiniz.
+Bu komut sayesinde Linux kernel modüllerinin bilgisi alınabilir. Bu modülleri ekran bastırmak isterseniz komut satırına <code>lsmod</code> yazarak modülleri listeleyebilirsiniz.
 
 ![enter image description here](https://i.hizliresim.com/762PW5.png)
 
@@ -647,7 +658,7 @@ history
 
 Bu kısıma gelene kadar konsola bir çok komut yazdık. Peki o yazılan komutların daha sonra kullanılmak üzere saklandığını biliyor muydunuz ?
 
-Evet girilen her komut <kbd>.bash_history </kbd> dosyasında tutuluyor. Biz bu dosyanın içeriğini yani daha önceki yazdığımız kodları görmek istersek komut satırına <code> history </code> yazmalıyız. Çıktı çok uzun olacağından çıktının tamamını aşağıda vermedim.
+Evet girilen her komut <kbd>.bash_history </kbd> dosyasında tutuluyor. Biz bu dosyanın içeriğini yani daha önceki yazdığımız kodları görmek istersek komut satırına <code>history</code> yazmalıyız. Çıktı çok uzun olacağından çıktının tamamını aşağıda vermedim.
 
 ![enter image description here](https://i.hizliresim.com/2Jv532.png)
 
@@ -655,15 +666,15 @@ Hazır liste uzun demişken eğer bu listenin limitini öğrenmek istersek komut
 
 ![enter image description here](https://i.hizliresim.com/m2q5y8.png)
 
-Bu çıktı bize komutların tutulduğu dosyada en son 1000 komuta kadar kayıt yapıldığını belirtiyor. Eğer tutulan komutların 1000 'den daha fazla olmasını isterseniz <code> .bashrc </code> dosyasında <code>HISTSIZE=1000 </code> yazan değeri istediğiniz doğrultuda düzenlemeniz lazım.
+Bu çıktı bize komutların tutulduğu dosyada en son 1000 komuta kadar kayıt yapıldığını belirtiyor. Eğer tutulan komutların 1000 'den daha fazla olmasını isterseniz <kbd>.bashrc</kbd> dosyasında <code>HISTSIZE=1000</code> yazan değeri istediğiniz doğrultuda düzenleyebilirsiniz.
 
 Komutun kullanımına geçmeden önce bu komutu sadece basit ve kısa komutların tekrar kullanılması olarak değerlendirmeyin. Örneğin sürekli kullandığınız çok uzun ve karmaşık bir komut düşünün. Bu komutun her defasında yazılması eziyet, bir yere kopyalanıp oradan tekrar tekrar kopyala-yapıştır şeklinde kullanılması ise hantallık olacaktır.
 
-Komutun kullanımına gelecek olursak örnek üzerinden açıklayalım. Benim kayıt dosyamın bir kısmı aşağıdaki şekilde, ben burada yer alan 600. komutu yani <code> vmstat</code> komutunu kullanmak istiyorum. Bunun için komut satırına <code>!555</code>  yazmam yeterli olacaktır. Komutun kullanımı <code>!komut_numarası</code> şeklinde. Örnek için çıktıyı inceleyebilirsiniz.
+Komutun kullanımına gelecek olursak örnek üzerinden açıklayalım. Benim kayıt dosyamın bir kısmı aşağıdaki şekilde, ben burada yer alan 600. komutu yani <code> vmstat</code> komutunu kullanmak istiyorum. Bunun için komut satırına <code>!600</code> yazmam yeterli olacaktır. Komutun kullanımı <code>!komut_numarası</code> şeklinde. Örnek için çıktıyı inceleyebilirsiniz.
 
 ![enter image description here](https://i.hizliresim.com/BLo4QM.png)
 
-Daha önceden kullandığımız bir komutu aynı şekilde tekrar kullanmak için ise komut satırına <code>!komut </code> şeklinde komut girmeliyiz. Örnek vermek gerekirse daha önceki kısımlarda <code>stat</code> komutu ile <kbd>root</kbd> dizini hakkında bilgi edinmiştik. Ve bu bilgiye ulaşmak için <code>stat /root</code> komutunu kullanmıştık. Ben şimdi tekrar aynı komuta ulaşmak için komut satırına <code>!stat</code> yazıyorum ve çıktısı tıpkı <code>stat /root</code> yazdığımda olduğu gibi oluyor. Yani bu sayede komutun geri kalanını uzun uzun yazmak gibi bir dert kalmıyor.
+Daha önceden kullandığımız bir komutu aynı şekilde tekrar kullanmak için ise komut satırına <code>!komut</code> şeklinde komut girmeliyiz. Örnek vermek gerekirse daha önceki kısımlarda <code>stat</code> komutu ile <kbd>root</kbd> dizini hakkında bilgi edinmiştik. Ve bu bilgiye ulaşmak için <code>stat /root</code> komutunu kullanmıştık. Ben şimdi tekrar aynı komuta ulaşmak için komut satırına <code>!stat</code> yazıyorum ve çıktısı tıpkı <code>stat /root</code> yazdığımda olduğu gibi oluyor. Yani bu sayede komutun geri kalanını uzun uzun yazmak gibi bir dert kalmıyor.
 
 ![enter image description here](https://i.hizliresim.com/EPQpdz.png)
 
@@ -673,12 +684,190 @@ Eğer son kullandığımız komutu tekrar kullanmak istersek komut satırına <c
 
 Bunlar dışında da çok farklı kullanım şekilleri de mevcut. Bu bilgilere <code>man</code> komutu yardımı ile nasıl ulaşacağınızı biliyorsunuz.
 
-Ayrıca son yazılan komutlara ulaşmak için klavyede yer alan yön tuşlarından <kbd> ileri</kbd> ve <kbd>geri</kbd> tuşlarını kullanarak önceki ve sonraki komutlarınıza ulaşabilirsiniz. Genellikle yön tuşlarını kullanmak bize anlık işlemlerimizde hız katmaktadır. Sizler de bu pratiklikleri mutlaka yeri geldikçe sıklıkla kullanacaksınız.
+Ayrıca son yazılan komutlara ulaşmak için klavyede yer alan yön tuşlarından <kbd>↑</kbd>(yukarı) ve <kbd>↓</kbd>(aşağı) tuşlarını kullanarak önceki ve sonraki komutlarınıza ulaşabilirsiniz. Genellikle yön tuşlarını kullanmak bize anlık işlemlerimizde hız katmaktadır. Sizler de bu pratiklikleri mutlaka yeri geldikçe sıklıkla kullanacaksınız.
+
+![enter image description here](https://i.hizliresim.com/oO7a6m.gif)
+
 
 
 ----------
 
 
+Linux Dosya Sistemi Hiyerarşisi
+=
+Linux’un Windows’dan farklı olan dosya hiyerarşi sistemini kavramak ve ileride ele alacağımız dosya-dizin işlemleri konularında zorluk çekmemek adına bu kısımda “***Linux dosya sistemi hiyerarşisi***” konusunu ele alacağız.
+
+
+## Nedir bu hiyerarşi ve neden gerekli? ##
+
+Hiyerarşi kelimesinin sözlükteki genel anlamı; “Yunanca yetki, rütbe veya aşama sırası anlamında kullanılan kelime.” şeklindedir.
+
+Linux sistemlerinde de aynı şekilde sınıflandırma yapılarak dosyaların sıraya koyulmasına bunun sonucunda tıpkı bir ağaç misali oluşan dosya sistemlerine genel olarak “**Linux dosya sistemi hiyerarşisi**” deniyor. 
+
+Genellikle bütün dağıtımlarda aynı hiyerarşik düzen vardır.(Genellikle diyorum çünkü küçük farkların dışında tüm dağıtımlar aynı hiyerarşik yapıya sahiptir. Zaten eğer her dağıtımın hiyerarşik dosya sistemi tamamen farklı olsaydı o zaman geliştiriciler için ayrı bir uğraş ve içinden çıkılmaz bir karmaşa olurdu. O yüzden buraya çok takılmayın lütfen, istisnalar kaideyi bozmaz diyerek devam ediyoruz. :) )
+
+Linux **"Tekil Hiyerarşik Klasör Yapısı"**'nı benimsemiştir. Yani bu da şu demek oluyor; her şey <kbd>/</kbd> (slash) simgesiyle ifade edilen <code>root</code> klasöründen başlar, aşağıya doğru iner. Merak edenler için  de söyleyelim “Root” kelimesinin karşılığı da Türkçe olarak “kök” anlamına geliyor. Bu sayede “root” kelimesinin de nereden geldiği ve neden kullanıldığı da az çok açıklığa kavuşuyor sanırım. 
+
+![enter image description here](https://i.hizliresim.com/OoEvq3.png)
+
+Linux, `/` (root) klasöründen başlayarak, boot işlemindeki önem sırasına göre klasörleri ilgili konumlara yerleştirir. Bu yerleştirme işleminde yani klasörler arası geçişlerde klasörler arasını ayırmak için <kbd>/</kbd>(slash) işareti kullanılır. Herhangi bir dizin ya da dosyanın sistemdeki adresi önce kök dizinden başlar sonra o dosya ya da dizine ulaşmak için geçilmesi gereken dizinler arasına yine <kbd>/</kbd> yazılarak elde edilir. Örneğin `/home/burak` yolu, kök dizininde(/), home isimli dizin içindeki burak dizininin konumunu belirtir. Bu ifadede en baştaki `/` işareti kök dizini belirtmektedir.
+
+<img src="https://i.hizliresim.com/azXYRR.gif" width="875">
+
+Ayrıca belirtmekte fayda var, Linux küçük büyük harf duyarlılığına sahiptir. Yani Linux'ta `DOSYA_ADI`,`Dosya_Adı`,`dosya_adı`,`DoSyA_aDı`..vb. gibi ismlendirilmiş dosyaların hepsi **ayrı/farklı** bir dosya olarak tanınır. Windows'ta ise aynı isimli dosyalar, küçük büyük harf ayrımı gözetilmeksizin aynı olarak tanınır. Hemen bu durumu teyit etmek için Windows ve Linux sistemlerinde dosya oluşturma işlemi gerçekleştirelim.
+
+**#Windows**
+<img src="https://i.hizliresim.com/XPd6mk.gif" width="875">
+Gördüğünüz gibi Windows işletim sisteminde büyük küçük harf duyarlılığı bulunmuyor. 
+
+Gelin bu durumu birde Linux sisteminde test edelim.
+
+**#Linux**
+<img src="https://i.hizliresim.com/QVQLXv.gif" width="875">
+Test sonucundan da anlaşılacağı gibi Linux işletim sisteminde küçük büyük harf duyarlılığı bulunuyor. 
+O yüzden işlemlerimizi yaparken özellikle de ileride konsol(terminal/komut penceresi) ekranından işlem yaparken bu küçük büyük harf duyarlılığı son derece önem kazanacak. Bu önemli detayı da öğrendikten sonra gelin anlatıma devam edelim.
+
+Daha iyi anlaşılması adına anlatımları Windows ile karşılaştırma yaparak gerçekleştiriyorum. Ve yine bir karşılaştırma daha; Windows işletim sistemine bir program eklediğimizde programın dosyaları `Program Files`(Program Dosyaları) dizini içerisine programın kendi adındaki bir klasöre eklenir.(Örneğin `C:\Program Files\program_adı` şeklinde.) Programın dosyaları tek bir dosya içerisindedir yani.(Anlatımda kast edilen program dosyalarının tek dosya içerisinde bulunma durumuna harici sistem kayıt dosyaları ve benzeri dosyalar dahil değildir.) Ancak Linux'ta bir program eklenme durumunda programın tüm dosyaları programın isminin yer aldığı bir klasöre gitmez. 
+
+Örneğin; sistem otomatik olarak program dökümanlarını `/usr/share/doc/program_ad/` altına koyarken, eğer varsa info dosyaları da,`/usr/share/info` dizini içerisine atar. Yani kısacası programı kurduğunuzda programın dosyaları ilgili konumlara otomatik olarak dağılır. Tek bir klasör içerisinde yer almaz.
+
+Özetle Linux sisteminde her şey bir dosya(root-kök dosyası(`/`)) içerisinde yer alır. Ve bu dosya sistemi hiyerarşik bir yapıda bulunur. Tüm bu tek kök dosya sistemi ve hiyerarşik yapılanmanın amacı **çok kullanıcılı ve dağıtık bir sistemi güvenli ve kolay bir şekilde kurup yönetebilmektir**. Buradaki "**dağıtık**" kavramı ne diyecek olursanız; Örneğin birden çok bilgisayarın olduğu bir ağda bilgisayarlardan birisindeki bir ağ dizinine(neden ağ üzerinden bağlanıyor? neden ağ dizini aracılı ile yapılıyor ? gibi sorularınız varsa buradaki ağ kavramı bilgisayarları birbirine bağlayan bağlantı ağı anlamında. Yani buradaki esas önemli nokta bilgisayarların birbirine bağlanmasıdır.) kök dosyası altındaki dosyalar istenildiği gibi dağıtılarak bölünebilir. Örneğin x_bilgisayarı'na `/bin` dizini bağlanır, bir diğer bilgisayara `/var` dizini içerisindeki e-posta sunucusunun dosyalarının olduğu dizin, bir diğerine de `/home` dizini bağlanabilir.
+
+Bu sayede fiziksel olarak pek çok bilgisayara dağılmış olan bir sunucu tek bir kök dosya sisteminden sanki tek bir bilgisayarmış gibi yönetilerek kullanılabilir. Bu sayede hem iş yükü dağılımı yapılarak sistem performansı arttırılmış olur hem de yetkilendirme ve yönetim kısıtlamaları dahilinde sistemin ayrı ayrı parçalara dağılımı ile sisteme ekstra güvenlik önlemi katılmış olunur.
+Biraz daha net anlamak adına aşağıdaki görseli inceleyebilirsiniz.
+
+![](https://i.hizliresim.com/VrEB1B.png)
+Siz şimdi "*ben sadece masaüstü bilgisayardan kullanıcam bu dosya sistemi benim için gereksiz.*" diyebilirsiniz. Ancak bu dosya sistemi tekil kullancılar için de sağladığı güvenlik özellikleri nedeniyle gerekli bir sistemdir.
+
+Daha iyi anlamak için benzer bir duruma masaüstü kullanıcıları için örnek verelim.
+
+Örneğin sistemde "burak" isimli kullanıcı hesabı var diyelim. Burak kullanıcısının sistemi kullanması için gereken sistem dosyalarını çalıştırma yetkisi var yani sistemi normal bir şekilde kullanabiliyor. Ancak burak kullanıcısının dosyaları değiştirme yetkisi yoksa `/home/burak` dizininden önceki dizinlerde değişiklik(dosyaları silme, üzerine veri yazma vs..) yapamaz. Bu sistem sayesinde bütün kullanıcılar, yetkileri dahilinde işlemlerini güvenli şekilde yerine getirler. Bu sayede yönetim ve güvenlik sağlama işi kolaylaşır.
+Bu duruma örnek olması için çok basit bir test yapalım.
+Root(yetkili ve tüm izinlere sahip kullanıcı) ile burak isimli kullanıcı hesaplarından "Deneme" isimli dosyada değişiklik yapıp, yaptığımız değişikliği kaydetmeye çalışalım.
+<img src="https://i.hizliresim.com/jyBNom.gif" width="875">
+Gördüğünüz gibi "root" kullanıcı hesabındayken kayıt işlemini tamamlayabildim ancak "burak" kullanıcı hesabında yetki iznim olmadığı için dosyada yaptığım değişikliği kayıt edemedim. 
+Bu da demek oluyor ki kullanıcılar sadece sahip oldukları yetkileri dahilinde işlemler gerçekleştirebiliyor. Bu sayede sistem yönetimi ve güvenliği kolaylıkla sağlanabiliyor.
+
+Artık kısaca Linux dosya sisteminin neden bu şekilde olduğunu ve sağladığı avantajları anladıysak gelin bu hiyerarşik yapıdaki dosyalara ve işlevlerine daha da yakından bakalım.
+
+Aşağıda verilen bilgiler tamamiyle [bu kaynaktan](https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi) alınmıştır.
+Ayrıca aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.
+
+/bin
+-
+
+İşletim sisteminizi kullanmak için gereken birçok komut `/bin` klasörü altındadır. cat, mkdir, cp, ls, mv, rm vb. temel komutların hepsi buradadır. Sistem boot ettiğinde, ilk olarak `/bin` klasörü çalışır hâle getirilir. Sistemde ne kadar ciddi bir sorun olursa olsun `/bin` klasöründeki komutlar çalışmaya devam eder. Sisteminizde bir sorun meydana geldiğinde `/bin` klasörü altındaki komutları kullanarak sistemi onarabiliriz.
+
+/boot
+-
+
+Boot, işletim sisteminin yüklenme evresidir. `/boot` klasörü, boot işlemi için gerekli olan tüm dosyaları içerir (çekirdek görüntüsü, sistem haritası, önyükleyici yapılandırması gibi). Bilgisayarın başlangıç (boot) aşamasında gerekmeyen ayar ve yapılandırma dosyaları burada bulunmaz; başka klasörlerden gerektiği zamanlarda yüklenir.
+
+/dev
+-
+
+Linux'ta her şey bir dosyadır; donanım aygıtları da öyle. USB girişleri, seri ve paralel portlar, depolama ortamları, CD-ROM'lar vb... Bütün aygıtlar `/dev` klasörü altında tutulan dosyalardan ibarettir. Örneğin `/dev` altında bulunan `sda1` dosyası, sabit diskinizi temsil eder. Ya da `/dev/dsp`, ses aygıtınızdır. Bunları programlar vasıtasıyla kullanırız; ancak bu dosyalar üzerinden doğrudan müdahale etmek de mümkündür.
+
+
+<div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th>Konumu</th><th>Cihaz Açıklaması</th></tr></thead><tbody><tr><td><kbd>/dev/ttyS0</kbd></td><td>Fare, modem gibi aygıtların bağlandığı seri port (COM 1).</td></tr><tr><td><kbd>/dev/psaux</kbd></td><td>PS/2 girişi; fare ve klavyeler içindir.</td></tr><tr><td><kbd>/dev/lp0</kbd></td><td>Paralel port (LPT 1); yazıcı, tarayıcı vs...</td></tr><tr><td><kbd>/dev/dsp</kbd></td><td>Birincil ses aygıtı
+</td></tr><tr><td><kbd>/dev/usb </kbd></td><td>USB aygıtları</td></tr><tr><td><kbd>/dev/sda</kbd></td><td>SCSI aygıtlar, USB bellekler, harici CD-ROM'lar vs...</td></tr><tr><td><kbd>/dev/scd</kbd></td><td>SCSI CD-ROM'lar</td></tr><tr><td><kbd>/dev/js0 </kbd></td><td>Oyun çubuğu (Joystick)</td></tr></tbody></table></div>
+
+* * *
+/etc
+-
+
+İşletim sistemini bir vücuda benzetirsek, `/etc` klasörünü sinir sisteminin merkezi olarak görebiliriz. Sisteme dair bütün ayarları barındırır, bulunduğu bilgisayara özel birçok yapılandırma bilgisini içerir. Durağandır, çalıştırılmak için değildir.
+
+/home
+-
+
+`home` klasörü kullanıcıların kalesi olarak tabir edilir. `home` klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin /home/ahmet , /home/ayşe gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları tutulmaktadır. Kullanıcının çeşitli programlarda yaptığı ayarları barındıran dosyalar gizli dosya oldukları için görüntülenebilmeleri için gizli dosyaların görünür hale getirilmesi gereklidir. Kullanıcılar `/home` dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. `/home` dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.
+
+`/home` dizini, aynı zamanda kullanıcı ayar dosyalarını barındırıyor olması nedeniyle bu dizinini, Windows'taki `Documents and Settings` ya da `Application` klasörlerine benzetebiliriz.
+
+/initrd
+-
+
+initrd, "initial ramdisk" kısaltmasıdır. Anlamı, yaklaşık olarak "Başlangıç Bellek Diski" şeklinde ifade edilebilir. Boot aşamasında ilk önce çekirdek (kernel) yüklenir. Bundan sonra bilgisayarınızın belleğinde bir Bellek Diski oluşturulur. Oluşturulan Bellek Disk üzerinde `/` (root) yansısı açılır ve kök dizin olarak monte edilir. `/initrd` bu işlemlerin yapılması ve Linux'un yüklenmesi için gereklidir.
+
+/lib
+-
+
+Çekirdek modülleri ve paylaşılan kütüphane dosyaları bu klasörde bulunur. Var olan çekirdek modüllerini `/lib/modules/[versiyon_numarası]` içerisinde bulabilirsiniz. Bahsedilen kütüphane dosyalarıysa, sistemi başlatmak ve `/bin` ile `/sbin` içerisindeki komutları çalıştırmak için gereklidir. Paylaşılan kütüphane dosyalarını, Windows'ta DLL ile eş tutabiliriz. Linux'ta kütüphane dosyalarının sonu ".so" ile biter.
+
+/lost+found
+-
+
+İngilizce bir terim olan “Lost and Found” kayıp eşya bürosu demektir. `/lost+found` klasörü de tam olarak bu işlevi görmektedir. Bazen sisteminizde herhangi bir problem olur; örneğin bilgisayarı resetlerseniz, elektrik gider sonrasında bilgisayarı yeniden başlatırsınız. Bu gibi durumlarda Linux'ta fsck (File System Check) komutu devreye sokulur. Bu komut Windows'taki Scandisk programına benzetilebilir. Düzeltilemeyen bir sorun varsa, bağlantıları kopmuş kayıp dosyalar ortaya çıkmışsa, bunlar `/lost+found` altına atılır. Kısaca özetlersek; kötü bir sistem kapanmasından sonra, olması gereken bazı dosyaları bulamıyorsanız, kayıp eşya bürosuna bakmanızda yarar var. Ancak bu klasöre girmek istediğinizde erişimi engelleyen bir ileti ile karşılaşırsınız, bu klasörün içeriğine ulaşabilmek için dosya yöneticisini tam yetki ile açmanız gereklidir.
+
+/media
+-
+
+Kaldırılabilir aygıtların (USB bellek, SD kart, CD vb.) ve sistem bağlangıcında bağlanmayan sabit disk bölümlerinin bağlanma noktasıdır. Söz konusu depolama ortamları sisteme bağlanmamış iken dizin içeriği boş görünür.
+
+/mnt
+-
+
+İşletim sisteminin kurulu olduğu disk bölümü hariç olmak üzere sistem başlangıcında bağlanan sabit disk bölümleri ve donanım aygıtlarının bağlanma noktasıdır. (İşletim sisteminin kurulu olduğu disk bölümünün içeriği ise doğrudan `/` (kök dizin) altında bulunur.)
+
+Bağlama(mount) işlemi, bir disk bölümünün sisteme bağlanarak kullanıma hazır hâle gelmesi demektir. Nereye bağladığınız sizin tercihinizdir, değiştirmeniz mümkündür. Yani bir diski, `/media` veya `/mnt` klasörüne ya da bir başka yere bağlamanız fark etmeyecektir. `/media` ve `/mnt` genel kabul görmüş bağlantı noktalarıdır.
+
+/opt
+-
+
+İşletim sisteminden bağımsız, sistem için zorunlu olmayan 3. parti kullanıcı programları bu dizinde bulunur. Örneğin; Google Earth programını indirip kurmak istediğinizde, 'default' olarak kurulacağı nokta, `/opt/google-earth` adresidir.
+
+Elbette üçüncü parti bir programı kurarken bu kurulum konumunu değiştirebilir, size uygun gelen bir başka konuma yükleyebilirsiniz. Ancak daha önce de bahsettiğimiz gibi bazı şeyler genel kabule dayanır.
+
+/proc
+-
+
+Süreçler, sistem belleği, bağlı aygıtlar, donanım yapılandırmalarıyla ilgili bilgileri içeren özel bir “sanal” dosya sistemidir. Bildiğimiz anlamda fiziksel dosyalar bulundurmaz; sistem durumuna dair bilgi içeren sanal dosyaları vardır. Bir bilgi alma merkezi olarak görülebilir, birçok uygulama buradaki bilgilerden yararlanmaktadır. Örneğin `cat /proc/swaps` yazarak sisteminizdeki takas dosyalarına dair bilgi alabilir ya da `cat /proc/cpuinfo` komutuyla işlemcinizin özelliklerini görebilirsiniz.
+
+`/proc` klasörü içersindeki dosyalar, sadece sistem durumunu görüntülemek için kullanılmaz, gerektiğinde sistemde ayarlama yapmak için de kullanılabilir. Fakat son kullanıcılara hitap eden bir konu değildir.
+
+/root
+-
+
+Linux/Unix sistemlerde, işletim sistemine her türlü müdahalede bulunabilme yetkisine sahip, "root" adıyla tanımlanmış, süper yetkili özel bir kullanıcı hesabı vardır. `/root` dizini, bu özel kullanıcı hesabının ev dizinidir. Root kullanıcısına "kök kullanıcı" da denilir.
+
+Kullanıcıların, sistemi root hesabıyla açma ihtiyacı bulunmaması nedeniyle ve ayrıca sistemi root olarak açmanın güvenlik zaafiyetine yol açabilecek olması nedeniyle pek çok Linux dağıtımında root hesabıyla sisteme giriş yapılması, öntanımlı olarak engellemiştir. Linux dağıtımlarında, yetki gerektiren bir işlemin yapılabilmesi için sistem root olarak açılmaz, bunun yerine geçici olarak root hakları elde edilir. Bunun için, önce bir uçbirim komut satırı penceresi açılır. Sonra kullanmakta olduğunuz Linux dağıtımına bağlı olarak `su`, `su -` , `su root` ya da `sudo` komutlarından biri girilir ve ardından root kullanıcısının (ya da yönetici hesabın) parolası girilir.
+
+
+/sbin
+-
+
+Linux'ta normal kullanıcının kullanabileceği komutlarla, kök kullanıcının (root) kullanabileceği komutlar ayrılmıştır. root tarafından kullanılacak bakım ve yönetim için kullanılan önemli programlar, `/sbin` altında tutulur. Daha az öneme sahip yönetim komutlarıysa, `/usr/sbin` klasöründedir. Eğer yerelde, yani kullandığınız makineye özgü kök kullanıcı (root) komutları bulunuyorsa, bunları da `/usr/local/sbin` altında bulabilirsiniz.
+
+/usr
+-
+
+Unix ilk çıktığında, kullanıcılara ait ev klasörleri, `/usr` altında tutulurdu. Örneğin; "burak" isimli bir kullanıcının ev klasörü `/usr/burak` şeklindeydi. Bu yöntem zamanla değişti ve `/home `klasörü doğmuş oldu. `/usr` klasörü hâlâ çok önemli bir yapıdır ve işletim sisteminizde kullandığınız her şeyle ilişkisi bulunur.
+
+Kurduğunuz pek çok program `/usr` içine kurulur. Her ne kadar Linux'ta kurulan bir programa ait tüm dosyalar `usr` dizini içine atılmıyor olsa da `usr` dizini Windows'taki `Program Files` klasörü ile benzer görev görmektedir. `/opt` adresi işletim sistemi dışında gelen 3.parti programlar içindir. Fakat işletim sistemi aracılığıyla ya da paket yönetim sistemlerini kullanarak yüklediğiniz her şey `/usr` altına aktarılır. Aynı zamanda yüklediğiniz programların çalışmak için ihtiyaç duyacağı kütüphane dosyaları, `/usr/lib` altındadır.
+
+`/usr`, daha geniş bir tanımla; tüm kullanıcılarca paylaşılan verileri (programlar, komutlar, kütüphaneler, dokümanlar gibi) içeren dizindir. `/usr` ile ilgili söylenebilecek bir başka nokta da "local" klasörüdür. Linux, sunucu olarak birçok istemciye hizmet verebilecek bir işletim sistemidir. Bir Linux sunucu (server) kurarsanız, ona bağlanan yüzlerce istemci (client) olabilir. Her istemci bilgisayara, `/usr` altındaki programların ayrı ayrı yüklenmesi gerekmez; bir başka konumdan bu komutları çalıştırabilirsiniz. Ancak `/usr` altında bulunan "local" klasörü sadece kullandığınız makineye özeldir. Örneğin `/usr/local/bin` klasörü içinde bulunan bütün komutlar, direkt olarak kullandığınız makineye yüklenmiştir. `/usr/bin` komutları ise geneldir ve bir ağ üstündeki bütün makinelerden erişilebilir. "local" gördüğünüzde, bunun sadece sizin makinenize özel olduğunu bilin.
+
+/var
+-
+
+Log dosyaları, e-posta ve yazıcı kuyrukları gibi değişken sistem bilgilerini barındırır. Sisteminize dair tutulan log'ları buradan görebilir; güvenlik durumunu buradan kontrol edebilirsiniz.
+
+/tmp
+-
+
+Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olarak kullanır. `/tmp` klasörünün içeriği genellikle KB'lar mertebesinde kalır ve genellikle işletim sistemi yeniden başlarken içindeki dosyalar silinir. Her ne kadar `tmp` klasörü geçici dosyalar için de olsa bu klasör altında bulunan dosyaları, ne yaptığınızdan emin değilseniz, kesinlikle silmemelisiniz! Aksi taktirde sismetinizde ya da bazı programlarda sorun çıkabilir. Örneğin açık bir soket dosyasını sildiğinizde, onu kullanan programa ve kendinize sorun çıkartabilirsiniz.
+
+----------
+
+Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik şekilde aşağıdaki görsel ile verdim. Eğer konuyu anlayarak ve özümseyerek okuduysanız bu grafiğe bakarak bir çırpıda hangi dosyanın genel olanarak hangi işlevde olduğunu hatırlayabilirsiniz.
+![](https://i.hizliresim.com/Z9Ylna.png)
+
+**Kaynakça :**[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html)
+
+
+
+----------
 
 
 
