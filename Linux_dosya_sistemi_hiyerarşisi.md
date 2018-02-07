@@ -163,7 +163,9 @@ Log dosyaları, e-posta ve yazıcı kuyrukları gibi değişken sistem bilgileri
 
 Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olarak kullanır. `/tmp` klasörünün içeriği genellikle KB'lar mertebesinde kalır ve genellikle işletim sistemi yeniden başlarken içindeki dosyalar silinir. Her ne kadar `tmp` klasörü geçici dosyalar için de olsa bu klasör altında bulunan dosyaları, ne yaptığınızdan emin değilseniz, kesinlikle silmemelisiniz! Aksi taktirde sismetinizde ya da bazı programlarda sorun çıkabilir. Örneğin açık bir soket dosyasını sildiğinizde, onu kullanan programa ve kendinize sorun çıkartabilirsiniz.
 
-Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik şekilde aşağıdaki görsel ile verdim. Eğer konuyu analayarak ve özümseyerek okuduysanız bu grafiğe bakarak bir çırpıda hangi dosyanın genel olanarak hangi işlevde olduğunu hatırlayabilirsiniz.
+----------
+
+Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik şekilde aşağıdaki görsel ile verdim. Eğer konuyu anlayarak ve özümseyerek okuduysanız bu grafiğe bakarak bir çırpıda hangi dosyanın genel olanarak hangi işlevde olduğunu hatırlayabilirsiniz.
 ![](https://i.hizliresim.com/Z9Ylna.png)
 
 **Kaynakça :**[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html)
