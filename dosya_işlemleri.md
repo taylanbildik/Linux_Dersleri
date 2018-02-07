@@ -7,11 +7,11 @@ touch
 
 <code>touch</code> komutu bize kolaylıkla metin dosyası oluşturma imkanı tanıyor. İşte bu yüzden dosya işlemleri konumuza <code>touch</code> komutu ile başlamak gayet doğru bir karar olacaktır.
 
-Kendimize <code>touch</code> komutunu kullanarak boş bir dosya oluşturmak için komut satırına <code>touch dosya_ismi </code> şeklinde yazmamız gerekiyor. Burada fark ettiyseniz herhangi bir uzantı girmeme gerek kalmadı. Çünkü Linux sisteminde uzantı belirtme zorunluluğu bulunmuyor. Bu durumu gözlemlemek için konsola <code> touch yeni </code> komutunu vererek "yeni" adından bir dosya oluşturalım. 
+Kendimize <code>touch</code> komutunu kullanarak boş bir dosya oluşturmak için komut satırına <code>touch dosya_ismi</code> şeklinde yazmamız gerekiyor. Burada fark ettiyseniz herhangi bir uzantı girmeme gerek kalmadı. Çünkü Linux sisteminde uzantı belirtme zorunluluğu bulunmuyor. Bu durumu gözlemlemek için konsola <code>touch yeni</code> komutunu vererek "yeni" adından bir dosya oluşturalım. 
 
 ![enter image description here](https://i.hizliresim.com/6JYmDk.png)
 
-Görüldüğü üzere dosyamız bulunduğumuz ana dizinde oluşmuş oldu. Bunu teyit etmek için de çıktıda görüldüğü gibi daha önce öğrenmiş olduğumuz <code>ls </code> komutunu kullandık.
+Görüldüğü üzere dosyamız bulunduğumuz ana dizinde oluşmuş oldu. Bunu teyit etmek için de çıktıda görüldüğü gibi daha önce öğrenmiş olduğumuz listeleme görevinde olan <code>ls</code> komutunu kullandık.
 
 Peki bir tane değil de birden fazla dosya oluşturmak istersek. İşte bunun için de komutumuzu <code>touch yeni1 yeni2 yeni3</code> şeklinde yazmamız yeterli.
 
@@ -30,12 +30,13 @@ Neticede "yeni_belge" isimli dosya benim belirtmiş olduğum ileri bir tarihte k
 cat
 -
 
-<code>cat </code> komutu temelde dosya içeriğini terminal ekranından okumamıza olanak sağlayan bir aracı çağıran komuttur. Ancak bu komut bizlere temel işlevinin dışında da dosyalar ile ilgili pek çok işlem yapma imkanı sağlıyor. Sırasıyla bunların bazılarına göz atacağız. Ama ilk olarak temel işlevi olan terminal üzerinden dosya okuma işlevini görelim.
+<code>cat</code> komutu temelde dosya içeriğini terminal ekranından okumamıza olanak sağlayan komuttur. Ancak bu komut bizlere temel işlevinin dışında da dosyalar ile ilgili pek çok işlem yapma imkanı sağlıyor. Sırasıyla bunların bazılarına göz atacağız. Ama ilk olarak temel işlevi olan terminal üzerinden dosya okuma işlevini görelim.
 
 Bunun için konsola açmak istediğimiz dosyanın konumundayken <code>cat açılacak_dosya</code> şeklinde komut vermemiz gerek.
-Ben masaüstü konumunda yer alan" test.txt" isimli dosyanın içeriğini okumak üzere konsola <code>cat test.txt</code> komutunu veriyorum.(Dosyayı grafik arayüzü aracılığı ile de açarak durumu kıyaslamanızı istedim.)
+Ben masaüstü konumunda yer alan "test.txt" isimli dosyanın içeriğini okumak üzere konsola <code>cat test.txt</code> komutunu veriyorum.(Dosyayı grafik arayüzü aracılığı ile de açarak durumu kıyaslamanızı istedim.)
 
 ![enter image description here](https://i.hizliresim.com/RnEQgo.png)
+![enter image description here](https://i.hizliresim.com/PlQm37.png)
 
 Şimdi ise tıpkı <code>touch</code> komutunda çoklu dosyalar ile ilgili işlem yaptığımız gibi <code>cat</code> komutu ile de çoklu dosya okuma işlemini gerçekleştirelim. Çoklu dosya okuma işlemi için komut satırına <code> cat dosya1 dosya2 dosya3</code> şeklinde okumak istediğimiz dosyaların adlarını yazıyoruz.
 
@@ -45,11 +46,11 @@ Dosya içeriğine yazı eklemek istersek <code>cat > dosya_adı</code> şeklinde
 
 ![enter image description here](https://i.hizliresim.com/vjYZyO.gif)
 
-Ancak  var olan bir dosyanın adıyla bu komutu kullandıysanız, eğer dosya içerisinde mevcut yazı bulunuyorsa bu işlemin ardından eski veriler silinerek yalnızca girilen yeni veri dosyaya işlenip kayıt oluyor. 
+Ancak var olan bir dosyanın adıyla bu komutu kullandıysanız ve dosya içerisinde yazı bulunuyorsa bu işlemin ardından dosyada bulunan eski veriler silinerek yalnızca girilen yeni veri(ler) dosyaya işlenip kayıt oluyor. 
 
 ![enter image description here](https://i.hizliresim.com/nOYEy1.gif)
 
-Bizler eğer önceki veriler silinmesin ve üzerine yeni veri ekleyebilelim istersek komutumuzu <code> cat >> yeni3.txt </code> şeklinde kullanarak ve yeni gireceğimiz verileri girdikten sonra<kbd> Ctrl + D</kbd> tuş kombinasyonu ile dosyamızı yeni eklenmiş verileriyle birlikte kaydedip kapatabiliriz.
+Bizler eğer önceki veriler silinmesin ve üzerine yeni veri ekleyebilelim istersek komutumuzu <code>cat >> yeni3.txt</code> şeklinde kullanarak; yeni gireceğimiz verileri girdikten sonra <kbd>Ctrl + D</kbd> tuş kombinasyonu ile dosyamızı yeni eklenmiş verileriyle birlikte kaydedip kapatabiliriz.
 
 ![enter image description here](https://i.hizliresim.com/1JjN71.gif)
 
@@ -59,9 +60,9 @@ Ayrıca yeri gelmişken kullanmış olduğumuz <kbd>></kbd> yönlendirme operat�
 
 ![enter image description here](https://i.hizliresim.com/NZYkLk.png)
 
-Komutta açıklanacak bir durum yok zaten hepsi bildiğimiz komutlar. Zaten burada asıl önemli olan <kbd>></kbd>  operatörünün kullanımıydı. Eğer anladıysak ne âlâ.. devam edelim.
+Komutta açıklanacak bir durum yok zaten hepsi bildiğimiz komutlar. Burada asıl önemli olan <kbd>></kbd>  operatörünün kullanımıydı. Eğer anladıysak ne âlâ.. devam edelim.
 
-<code>cat</code> komutunun işlevlerine devam ediyoruz şimdi ise bir dosyada yer alan verileri başka bir dosyaya kopyalamak var. Bunun için komutumuzu <code>cat veri_alınan_dosya > veri_alan_dosya </code> şeklinde kullanıyoruz.
+<code>cat</code> komutunun işlevlerine devam ediyoruz şimdi ise bir dosyada yer alan verileri başka bir dosyaya kopyalamak var. Bunun için komutumuzu <code>cat veri_alınan_dosya > veri_alan_dosya</code> şeklinde kullanıyoruz.
 
 ![enter image description here](https://i.hizliresim.com/Yg34dD.png)
 
@@ -83,7 +84,7 @@ Hazır terslikten bahsetmişken <code>rev</code> komutundan da söz etmemek olma
 ![enter image description here](https://i.hizliresim.com/D7o3Oy.png)
 
 
-Çıktılarda görüldüğü gibi dosya içeriğinde yer alan ifadeler <code>rev</code>komutu sayesinde ters şekilde ekrana basılmış oldu.
+Çıktılarda görüldüğü gibi dosya içeriğinde yer alan ifadeler <code>rev</code> komutu sayesinde ters şekilde ekrana basılmış oldu.
 
 Şimdi ben bu komutu nerede kullanacağım neden öğrendim demeyin. Bu konuya daha önce de değinmiştim, şimdi tekrar söylüyorum; burada öğrendiğimiz her komutu her zaman doğrudan  kullanmayabilirsiniz ancak yeri geldiğinde böyle bir komutun varlığından haberdar olarak gerektiğinde dokümantasyona bakmak suretiyle komutun kullanımına en kısa sürede ulaşabilirsiniz. Yani bu komutun varlığından haberdarsınız eğer gerekirse burada olacak..
 
@@ -92,7 +93,7 @@ echo
 
 Bu komutumuzu daha önce defaatle kullanmak durumunda kalmıştık hatırlarsanız. Kullandıkça da işlevinden bahsetmiştik ancak şimdi komutumuzu ele alarak biraz daha yakından bakmaya başlıyoruz.
 
-Temel işlevi terminal ekranına istenilen bilgileri çıktı olarak göndermektir. Komutumuzu kullanırsak daha net anlaşılacaktır. Örneğin komut satırına "Merhabalar" yazdırmak isteyelim bunun için komut satırına <code>echo Merhabalar </code> şeklinde komutumuzu girmemiz yeterli.
+Temel işlevi terminal ekranına istenilen bilgileri çıktı olarak göndermektir. Komutumuzu kullanırsak daha net anlaşılacaktır. Örneğin komut satırına "Merhabalar" yazdırmak isteyelim bunun için komut satırına <code>echo Merhabalar</code> şeklinde komutumuzu girmemiz yeterli.
 
 ![enter image description here](https://i.hizliresim.com/5DpYzj.png)
 
@@ -124,7 +125,7 @@ Var olan dosya içeriğine yeni bir ifade eklemek için komutu <code>echo "Yeni 
 
 ![enter image description here](https://i.hizliresim.com/4aY0O4.png)
 
-<kbd>* </kbd> joker karakteridir ve herhangi dosya dizin isimlerinin yerini tutar. Yani <code>echo</code> komutuna <kbd>* </kbd> karakteri eklediğimizde mevcut dizinde yer alan tüm dosya dizinler  <kbd>* </kbd> parametresi ile kapsanacağı için ne var ne yok listeleniyor. Bu duruma örnek olması açısından bulunduğumuz dizinde yer alan dosyalarda örneğin "list" adı ile başlayanları çıktı olarak almak istersek komut satırına <code>echo liste*</code> şeklinde komut vermemiz yeterlidir. (Joker karakter/wildcard konusundan bu karakterler açıklanmıştır.)
+<kbd>*</kbd>(yıldız işareti) joker karakteridir ve herhangi dosya dizin isimlerinin yerini tutar. Yani <code>echo</code> komutuna <kbd>* </kbd> karakteri eklediğimizde mevcut dizinde yer alan tüm dosya dizinler  <kbd>* </kbd> parametresi ile kapsanacağı için ne var ne yok listeleniyor. Bu duruma örnek olması açısından bulunduğumuz dizinde yer alan dosyalarda örneğin "list" adı ile başlayanları çıktı olarak almak istersek komut satırına <code>echo liste*</code> şeklinde komut vermemiz yeterlidir. (Joker karakter/wildcard konusundan bu karakterler açıklanmıştır.)
 
 ![enter image description here](https://i.hizliresim.com/JQd3Bo.png)
 
@@ -132,7 +133,7 @@ Son olarak <code>echo</code> komutunun kullanım şekillerinden olan, bir komutu
 
 İlk olarak ters tırnak işaretli olan kullanımı ele alalım.
 
-Ters tırnak işaretini oluşturmak için Türkçe klavyede <kbd> AltGr + ,</kbd> tuş kombinasyonunu kullanabiliriz. Komutun kullanımını için ise istediğimiz komutu tırnak içerisinde <code>echo</code> komutunun yanında kullanmak üzere <code>echo `komut`</code> şeklinde yazıyoruz.
+Ters tırnak işaretini oluşturmak için Türkçe klavyede <kbd>AltGr + ,</kbd> tuş kombinasyonunu kullanabiliriz. Komutun kullanımını için ise istediğimiz komutu tırnak içerisinde <code>echo</code> komutunun yanında kullanmak üzere <code> echo `komut` </code> şeklinde yazıyoruz.
 
 Hemen bu kullanım ile ilgili bir örnek yapalım ve <code>ls</code> komutunun çıkıtlarını <code>echo</code> komutu yardımı ile basalım.
 
