@@ -2170,10 +2170,11 @@ Disk ile ilgili yapabileceğimiz bölümleme, formatlama, yedekleme ve diğer i�
 > **Komutlara geçmeden önce disk üzerinde yapacağımız işlemlerde son derece dikkatli olmamız gerektiğini aklınızdan çıkarmayın lütfen.**
 
 > **Yapacağımız yanlışlar dosyalarımızın kalıcı olarak silinmesine ve daha farklı sorunlara yol açabilir.**
+> **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
 
 gparted
 -
-Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk aracı denilebilir. Grafiksel arayüze sahip olduğu için açıklamasını burada vermem, resim kullanmayacağım için verimsiz olur. Ancak internetteki Türkçe-İngilizce kaynaklarda kullanımı hakkında bolca bilgiye ulaşabilirsiniz. Açmak için konsola `gparted` yazmanız yeterli olacaktır.
+Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk aracı denilebilir. Grafiksel arayüze sahip olduğu için açıklamasını burada vermem resimler ile verimsiz ve yetersiz olur. Ancak hazırladığım eğtim kursunda anlatımı videolu şekilde gerçekleştirdim eğer isterseniz [kursumu satın alarak](https://www.udemy.com/) hem bana destek olabilir hem de bu kaynağın açıklamalı anlatımını edinmiş olursunuz. Kursumu satın almak istemezseniz internetteki Türkçe-İngilizce kaynaklarda kullanımı hakkında bolca bilgiye ulaşabilirsiniz. Açmak için konsola `gparted` yazmanız yeterli olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/nOA9Oa.png)
 
@@ -2185,7 +2186,7 @@ fdisk
 
 Komutun aldığı temel parametreleri ele alarak konumuza devam edelim.
 
-İlk olarak sistemimizde bulunan disk bölümlerini listeleyelim. Bunun için l parametresini kullanıyoruz.
+İlk olarak sistemimizde bulunan disk bölümlerini listeleyelim. Bunun için `l` parametresini kullanıyoruz.
 
 **fdisk -l :** disk bölümlerini listeler.
 
@@ -2223,7 +2224,7 @@ Ben `p` parametresi ile listelediğim disk bölüm tablosundan 3. bölümü yani
 
 **n :** yeni disk bölümü oluşturur.
 
-`n`parametremiz ile diskte yeni bir alan oluşturabiliriz.`n` parametresini girince bize bölümleme tipinin öncelikli(primary) mi yoksa genişletişmiş(extended) mi olması gerektiğini soruyor.Aralarındaki farklar nedir diyecek olursanız.
+`n` parametremiz ile diskte yeni bir alan oluşturabiliriz. `n` parametresini girince bize bölümleme tipinin öncelikli(primary) mi yoksa genişletilmiş(extended) mi olması gerektiğini soruyor. Aralarındaki farklar nedir diyecek olursanız:
 
 **Primary Partition** denilen kısım işletim sistemlerini kurduğumuz sabit disk bölümüdür. Bir sabit diskte maksimum 4 tane primary partition olabiliyor ve bunlardan bir tanesinin mutlaka aktif partition olması gerekiyor ki işletim sisteminiz boot işlemi sırasında çalıştırılabilsin.
 
@@ -2347,7 +2348,6 @@ USB nin açılacağı hedef klasör oluştuğuna göre artık USB diskimizi bura
 
 Görüldüğü gibi USB disk <kbd>Desktop/USB</kbd> konumuna bağlanmış bulunuyor.
 
-
 ----------
 
 
@@ -2358,17 +2358,16 @@ Sistem açıldığında hangi çalışma seviyesindeyse o seviyeye göre belirle
 Seviyeler ve ifade ettikleri aşağıdaki tabloda verilmiştir.
 
 <table class="table table-bordered table-striped">  <thead> <tr> <th>Runlevel</th> <th>Çalışma Modu</th> <th>İşlevler</th> </tr></thead> <tbody> <tr> <th scope="row">0</th> <td>Halt</td><td>Kapatma işleminin başladığı seviye.</td></tr><tr> <th scope="row">1</th> <td>Tek Kullanılıcı</td><td>Ağ servisleri olmadan sistem bakımı için kullanılan seviye.</td></tr><tr> <th scope="row">2</th> <td>Ağ Desteği Olmadan Çok Kullanıcılı</td><td>Ağ desteği olmadan normal kullanım seviyesi.</td></tr><tr> <th scope="row">3</th> <td>Ağ Destekli Çok Kullanıcılı</td><td>Ağ destekli normal kullanım seviyesi.</td></tr><tr> <th scope="row">4</th> <td>Tanımsız</td><td>Kullanılmıyor ancak kullanıcı tarafından tanımlanabilir durumdaki seviye.</td></tr><tr> <th scope="row">5</th> <td>Grafiksel Kullanıcı Arayüzü</td><td>Grafiksel arayüzün çalıştığı seviye. Hemen her linux dağıtımında bu seviye varsayılan olarak başlatılır.</td></tr><tr> <th scope="row">6</th> <td>Yeniden Başlatma(Reboot)</td><td>Sistemin yeniden başlatıldığı seviye.</td></tr></tbody> </table>  
-Yetki kalıplarının sayısal karşılıkları.
 
 O anda hangi seviyede çalıştığımızı öğrenmek istersek komut satırına `runlevel` komutunu vermemiz yeterli.
 
 ![enter image description here](https://i.hizliresim.com/y0nmA7.png)
 
-Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de daha önce de sölediğimiz gibi linux sistemi varsayılan olarak 5 seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu `init çalışma_seviyesi` şeklinde yapabiliriz.
+Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de daha önce de söylediğimiz gibi linux, sistemi varsayılan olarak 5. seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu `init çalışma_seviyesi` şeklinde yapabiliriz.
 
 Bu şekilde sistemi yeniden başlatana kadar seçtiğimiz çalışma seviyesinde devam edebiliriz. Ancak dediğim gibi sistemi yeniden başlattığınızda sistem varsayılan olarak 5. seviyede başlayacaktır.
 
-Ayrıca yeri gelmişken sistemi kapatmak istersek bunu hiç bir hizmetin çalışmadığını 0. runlevel ile `init 0` komutunu vererek yapabiliriz.
+Ayrıca yeri gelmişken sistemi kapatmak istersek bunu hiç bir hizmetin çalışmadığını 0. runlevel ile yani `init 0` komutunu vererek yapabiliriz.
 
 Ayrıca kapatma işlemi için;
 
@@ -2414,7 +2413,7 @@ Son olarak ise sistemde bulunan tüm servislerin sıralanmasını sağlayan `ser
 
 ![enter image description here](https://i.hizliresim.com/p6Yjjq.gif)
 
-Çıktıdaki servislerin sol tarafında yer alan <kbd>[ - ] </kbd>işareti servisin çalışmadığını, <kbd>[ + ]</kbd> işareti servisin çalıştığını ve <kbd>[ ? ]</kbd> işareti ise servisin durumunun belirsiz olduğunu ifade ediyor.
+Çıktıdaki servislerin sol tarafında yer alan <kbd>[ - ]</kbd> işareti servisin çalışmadığını, <kbd>[ + ]</kbd> işareti servisin çalıştığını ve <kbd>[ ? ]</kbd> işareti ise servisin durumunun belirsiz olduğunu ifade ediyor.
 
 
 ----------
@@ -2424,7 +2423,7 @@ Son olarak ise sistemde bulunan tüm servislerin sıralanmasını sağlayan `ser
 Sembolik Link Ve Katı Link
 =
 
-Linux sistemlerinde sembolik ve katı olmak üzere iki çeşit bağlantı türü vardır. Bunları sırası ile açıklayacak olursak;
+Linux sistemlerinde sembolik ve katı olmak üzere iki çeşit bağlantı(link) türü vardır. Bunları sırası ile açıklayacak olursak;
 
 Sembolik link ile oluşturulmuş bağlantılar dosyaların kısayolu görevini görür ve görevi yalnızca ilgili dosyaya yönlendirme yapmaktır.
 
@@ -2450,7 +2449,7 @@ Her bir inode(düğüm) numarasının benzersiz olduğunu söylemiştik. Bu duru
 
 ![enter image description here](https://i.hizliresim.com/azBY04.png)
 
-Çıktıda yer alan soldaki numaralar ilgili dosyanın inode numarasını temsil ediyor.
+Çıktıda yer alan soldaki numaralar, ilgili dosyanın inode numarasını temsil ediyor.
 
 Konumuza sembolik link oluşturma ile devam edelim.
 
@@ -2461,11 +2460,11 @@ Sembolik link oluşturmak için `ln -s` komutu kullanılır. Komutun kullanım �
 
 Örnek bir dosya oluşturarak sembolik link komutu yardımı ile dosyamıza kısayol oluşturalım.
 
-Music dosya konumundayken `touch` komutu yardımı ile <kbd>klasik<kbd> isimli bir dosya oluşturduk.
+Music dosya konumundayken `touch` komutu yardımı ile "klasik" isimli bir dosya oluşturduk.
 
 ![enter image description here](https://i.hizliresim.com/Yg56W2.png)
 
-Oluşturduğumuz klasik isimli dosyanın kısayolunu, komutumuzu `ln -s dosya_adı kısayol_adı` şeklinde kullanarak oluşturduk.
+Oluşturduğumuz "klasik" isimli dosyanın kısayolunu, komutumuzu `ln -s dosya_adı kısayol_adı` şeklinde kullanarak oluşturduk.
 
 ![enter image description here](https://i.hizliresim.com/Z913d3.png)
 
@@ -2494,9 +2493,9 @@ Ayrıca ilk `ls -li` çıktısında kısayol dosyasının sol tarafında yer ala
 
 Katı Link
 -
-Sıra geldi katı link bağlatısının kullanımına. Katı link bağlantısı için `ln` komutu kullanılıyor. Örnek üzerinden ilerleyelim.
+Sıra geldi katı link bağlantısının kullanımına. Katı link bağlantısı için `ln` komutu kullanılıyor. Örnek üzerinden ilerleyelim.
 
-Örnek olması açısından <kbd>Music</kbd> klasörü altında <kbd>caz </kbd>adında bir dosya oluşturuyorum. Daha sonra oluşturduğum <kbd>caz </kbd> isimli klasörün katı linkini `ln caz caz_kati` komutu ile oluşturuyorum.
+Örnek olması açısından <kbd>Music</kbd> klasörü altında "caz" adında bir dosya oluşturuyorum. Daha sonra oluşturduğum "caz" isimli klasörün katı linkini `ln caz caz_kati` komutu ile oluşturuyorum.
 
 ![enter image description here](https://i.hizliresim.com/lOzq3r.png)
 
@@ -2510,7 +2509,7 @@ Hemen daha önce yaptığımız gibi `file` komutu ile orijinal dosya ve link il
 
 ![enter image description here](https://i.hizliresim.com/2JQaN2.png)
 
-Komutun sonucunda her ikisininde ayrı ayrı dosyalar olduğunu görmüş olduk. Bu da demek oluyor ki biz eğer orijinal dosyayı silersek sembolik linkte olduğu gibi link ile oluşturulmuş dosya kullanılmaz hale gelmeyecektir. Bunu da hemen test edelim.
+Komutun sonucunda her ikisininde ayrı ayrı dosyalar olduğunu görmüş olduk. Bu da demek oluyor ki biz eğer orijinal dosyayı silersek sembolik linkte olduğu gibi katı link ile oluşturulmuş dosya kullanılmaz hale gelmeyecektir. Bunu da hemen test edelim.
 
 ![enter image description here](https://i.hizliresim.com/jyY61L.png)
 
@@ -2523,7 +2522,7 @@ Gördüğünüz gibi orijinal dosyayı silmeme rağmen katı link ile oluşturmu
 Kurma-Kaldırma-Güncelleme İşlemleri
 =
 
-Linux kullanacaksak mutlaka bilmemiz gerekenler arasında sistemi güncelleme, program kurma ve kaldırma gibi işlemleri yerine getirmek var. Bu işlemleri nasıl yetine getirebileceğimizi bu konunun devamında öğrenicez. İlk olarak sistemi güncelleme işlemi yapalım.
+Linux kullanacaksak mutlaka bilmemiz gerekenler arasında sistemi güncelleme, program kurma ve kaldırma gibi işlemleri yerine getirmek var. Bu işlemleri nasıl yerine getirebileceğimizi bu konunun devamında öğreneceğiz. İlk olarak sistemi güncelleme işlemi yapalım.
 
 Sistemi Güncelleme
 -
@@ -2533,7 +2532,7 @@ Dağıtımlar ve kullanılan paketlere göre komutları aşağıdaki tabloda ver
 
 <table class="table"> <thead> <tr> <th>Dağıtım</th> <th>Paketler</th> <th>Komutlar</th> </tr></thead> <tbody> <tr> <th scope="row">Debian</th> <td>.deb</td><td><code>apt</code> , <code>apt-cache</code> , <code>apt-get</code> , <code>dpkg</code></td></tr><tr> <th scope="row">Ubuntu</th> <td>.deb</td><td><code>apt</code> , <code>apt-cache</code> , <code>apt-get</code> , <code>dpkg</code></td></tr><tr> <th scope="row">CentOs</th> <td>.rpm</td><td><code>yum</code></td></tr><tr> <th scope="row">Fedora</th> <td>.rpm</td><td><code>dnf</code></td></tr><tr> <th scope="row">FreeBSD</th> <td>.txz</td><td><code>make</code> , <code>pkg</code></td></tr></tbody> </table>
 
-Debian paketlerinin <kbd>.deb</kbd> uzantılı olduğunu yukarıdaki tabloda gördük. Kullandığımız dağıtım olan Kali'de debian tabanlı olduğu için anlatıma bu doğrultuda devam edeceğiz.
+Debian paketlerinin <kbd>.deb</kbd> uzantılı olduğunu yukarıdaki tabloda gördük. Kullandığımız dağıtım olan Kali'de Debian tabanlı olduğu için anlatıma bu doğrultuda devam edeceğiz.
 
     apt-get update
 
@@ -2557,13 +2556,21 @@ Kurulu olan tüm paketleri siler.
 
 Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>soruces.list</kbd> dosyasına kullanıdığımız versiyona uygun depoları eklemeliyiz.
 
-Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>soruces.list</kbd> dosyasına eklememiz gerekiyor. Ben kali 2016.1 sonrası versiyonunu kullandığım için aşağıdaki repoları ekliyorum.
+Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>soruces.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3)versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>soruces.list</kbd> dosyasına ekliyorum.
 
-![enter image description here](https://i.hizliresim.com/2JQ02O.png)
+`deb http://http.kali.org/kali kali-rolling main contrib non-free`
 
 Ancak dediğim gibi sizler kullandığınız versiyona uygun olan repoları seçmelisiniz.
 
-Repoları `nano -w /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
+Kali 1.0 ve sonrası için: **`deb http://old.kali.org/kali moto main non-free contrib`**
+
+Kali 2.0 ve sonrası için: **`deb http://old.kali.org/kali sana main non-free contrib`**
+
+Kali 2016.1 ve sonrası için:**`deb http://http.kali.org/kali kali-rolling main contrib non-free`**
+
+
+Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
+![](https://camo.githubusercontent.com/59ce93a434143705c35a81775f6d74724c7469b6/68747470733a2f2f692e68697a6c69726573696d2e636f6d2f324a5130324f2e706e67)
 
 Sıra gelidi güncelleme işlemine, bunun için `apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y` komut bütününü kullanabiliriz.
 
@@ -2587,7 +2594,6 @@ Paket Yönetim Sistemi İle Kurulum
 -
 Bu işlem için kullandığımız dağıtıma uygun derleyiciyi kullanmalıyız. Daha önce Kali'nin <kbd>.deb</kbd> uzantılı paketleme sistemi olduğunu öğrenmiştik. Bu yüzden biz <kbd>.deb</kbd> uzantılı kurulum paketlerini açmak için `dpkg` komutunu kullanıyoruz. Sanırım kodun kısaltmasının nereden geldiğini bilirsek daha kolay akılda kalabilir. Kodun kısaltması "debian package(debian paketi)" kısaltmasından gelmektedir. Ayrıca `dpkg` komutunu kullanmada yardımcı bir paket yöneticisi programı(synaptic) kullanarak da kurulum işlemlerini yerine getirebiliriz. Konumuza ilk olarak `dpkg` komutu ve kullanımı ile devam edelim.
 
-Şimdi komutun kullanımına geçelim.
 
 Örnek olması açısından ben "master pdf" adında bir programın kurulumunu ele aldım. Bunun için öncelikle programın <kbd>.deb</kbd> uzantılı dosyasını sitesinden indirdim.
 
@@ -2667,6 +2673,8 @@ Linux'a uyumlu sürümü bulunan açık kaynak kodlu yazılımların kaynak kod 
 
 Programı derlemeden önce gerekli kütüphaneler ve bağımlılıkları kontrol ediyoruz.
 
+`./configure`
+
 Eksik çıkarsa bunları kurmamız gerekicek.
 
 Make aşaması için derleme yapacak paketleri `apt-get install build-essential` komutu ile kuruyoruz.
@@ -2674,6 +2682,7 @@ Make aşaması için derleme yapacak paketleri `apt-get install build-essential`
 `make` diyerek programımızı derlemiş oluyoruz.
 
 Son olarak `make install` komutu ile programı sistemimize kuruyoruz.
+
 
 
 ----------
@@ -2694,9 +2703,9 @@ Yukarıdaki kullanımın yerine joker karakter(wildcard)desteğini kullanmak biz
 
 Bahsi geçen joker karakterler ve kullanım alanları aşağıdaki gibidir;
 
-*** :** Anlamı `*` olan yere herhangi bir şey gelebileceğidir.
+**`*`** : Anlamı `*` olan yere herhangi bir şey gelebileceğidir.
 
-Örneğin "dosya" ismiyle başlayan tüm belgeleri tek seferde silmek için komutu `rm  dosya*`şeklinde kullanabilirim.
+Örneğin "dosya" ismiyle başlayan tüm belgeleri tek seferde silmek için komutu `rm  dosya*` şeklinde kullanabilirim.
 
 ![enter image description here](https://i.hizliresim.com/dOW0W4.png)
 
@@ -2712,7 +2721,7 @@ Aynı şekilde yıldız (asterix) * işaretinden sonra bir ifade belirtirsek de 
 
 **? :** Herhangi bir tek karakterle eşleşir
 
-Karakterin kullanımına örnek olarak. Diyelim ki dizin içerisinde hem "index_page" hem de "index-page" şeklinde isimlere sahip dosyalarınız var. Yani başlangıç ve bitiş isimleri aynı ancak aradaki işaretler farklı. İşte böyle bir durumda hem<kbd> _ </kbd> işaretini hem de <kbd> - </kbd> işaretini karşılayacak olan soru işareti <kbd>?</kbd> joker karakterini kullanabiliriz.
+Karakterin kullanımına örnek olarak. Diyelim ki dizin içerisinde hem "index_page" hem de "index-page" şeklinde isimlere sahip dosyalarınız var. Yani başlangıç ve bitiş isimleri aynı ancak aradaki işaretler farklı. İşte böyle bir durumda hem <kbd> _ </kbd> işaretini hem de <kbd> - </kbd> işaretini karşılayacak olan soru işareti <kbd>?</kbd> joker karakterini kullanabiliriz.
 
 ![enter image description here](https://i.hizliresim.com/0E4L48.png)
 
@@ -2732,7 +2741,7 @@ Bir örnek daha verelim.
 
 Ayrıca kullanım şekillerine çok fazla örnek verilebilir ancak burada birkaç örnek daha vererek keşfi size bırakıyorum.
 
-Burada belirtilen x y z temsili değerleri ifade etmektedir !
+Burada belirtilen **x y z** temsili değerleri ifade etmektedir !
 
 **[0-9] :** 0'dan 9'a kadar olan rakamları kapsar.
 
@@ -2764,7 +2773,7 @@ Burada belirtilen x y z temsili değerleri ifade etmektedir !
 
 Ağ(Network) Komutları
 =
-Ağ ve komutları başlı başına bir kitap konusu o yüzden burada sıkça veya gerekli durumda işimize yarayacak belli başlı komutları ele alıcaz. Eğer detaylı bilgi edinmek istiyorsanız internet aracılığı ile network(ağ) hakkında bir çok güncel kaynağa ulaşabilirsiniz. Lafı daha fazla uzatmadan anlatıma `ifconfig` komutu ile başlayalım.
+Ağ ve komutları başlı başına bir kitap konusu o yüzden burada sadece sıkça veya gerekli durumda işimize yarayacak belli başlı komutları ele alacağız. Eğer detaylı bilgi edinmek istiyorsanız internet aracılığı ile network(ağ) hakkında bir çok güncel kaynağa ulaşabilirsiniz. Lafı daha fazla uzatmadan anlatıma `ifconfig` komutu ile başlayalım.
 
 ifconfig
 -
@@ -2775,13 +2784,13 @@ Ağ bağlantı kartlarını listelemek için `ifconfig` komutu kullanılır.(Bu 
 
 ![enter image description here](https://i.hizliresim.com/6JZPVl.png)
 
-Çıktıda yer alan eth0 ethernet kartımızı ifade ediyor. Başka ethernet kartları olması durumunda diğer kartlar da eth1 .. eth2 şeklinde belirtilir.
+Çıktıda yer alan **eth0** ethernet kartımızı ifade ediyor. Başka ethernet kartları olması durumunda diğer kartlar da **eth1** .. **eth2** şeklinde belirtilir.
 
-lo bilgisayarın kendisini yani localhost'u ifade ediyor.
+**lo** bilgisayarın kendisini yani localhost'u ifade ediyor.
 
-wlan0 ise kablosuz ağ kartını ifade eder. Yine başka kartlar olması durumunda wlan1 .. wlan2 şeklide belirtilir.
+**wlan0** ise kablosuz ağ kartını ifade eder. Yine başka kartlar olması durumunda **wlan1** .. **wlan2** şeklide belirtilir.
 
-Ayrıca bütün kart bilgilerini listelemek yerine teker teker de listelemek de mümkün bunun için komutumuzu `ifconfig kart_adı` şeklinde girmemiz yeterli.
+Ayrıca bütün kart bilgilerini listelemek yerine teker teker de listelemek mümkün. Bunun için komutumuzu `ifconfig kart_adı` şeklinde girmemiz yeterli.
 
 Örneğin yalnızca kablosuz kart bilgilerini listelemek istersem `ifconfig wlan0` komutunu vermem yeterli olacaktır.
 
@@ -2789,7 +2798,7 @@ Ayrıca bütün kart bilgilerini listelemek yerine teker teker de listelemek de 
 
 Yukarıdaki çıktıda yer alan ayarlarda değişiklik yapmamız mümkün. Örneğin kablosuz ağ bağlantısının yerel ip adresini değiştirmek istersek komutumuzu `ifconfig wlan0 yeni_ip_adresi` şeklinde kullanabiliriz.
 
-Ben kablosuz bağlantımın 192.168.1.9 olan adresi 192.168.1.10 olarak değiştirmek istiyorum bunun için `ifconfig wlan0 192.168.1.10` komutunu vermem yeterli.
+Ben kablosuz bağlantımın **192.168.1.9** olan adresi **192.168.1.10** olarak değiştirmek istiyorum bunun için `ifconfig wlan0 192.168.1.10` komutunu vermem yeterli.
 
 Gelin bu durumu çıktıları karşılaştırarak test edelim.
 
@@ -2797,7 +2806,7 @@ Gelin bu durumu çıktıları karşılaştırarak test edelim.
 
 Ve son duruma bakarak ip adresimizin istediğimiz şekilde değiştiğini görmüş olduk. Aynı şekilde ağ maskesini(netmask) ve broadcat adreslerini dilediğimiz gibi düzenleyebiliriz. Hatta bu işlemi hepsi birlikte olacak şekilde bile yapabiliriz. Bunun için komutumuzu `ifconfig wlan0 yeni_ip_adresi netmask yeni_ağ_maskesi broadcast yeni_broadcast_adresi`  şeklinde kullanmamız yeterli olacaktır.
 
-Bu duruma bir örnek ile açıklayalım.
+Bu durumu bir örnek ile açıklayalım.
 Değişiklik yapmak üzere konsola `ifconfig wlan0 192.168.1.15 netmask 255.255.255.255 broadcast 192.168.2.255` komutunu girerek bir önceki durumu ile karşılaştıralım.
 
 ![enter image description here](https://i.hizliresim.com/RnJkZY.png)
@@ -2812,14 +2821,14 @@ Kablosuz kartı kapatmak istersek `ifconfig wlan0 down` komutunu kullanırız.
 
 Kapalı kablosuz kartı açmak istersek ise `ifconfig wlan0 up` komutunu kullanırız.
 
-Ayrıca diğer kartlar için de aynı şekilde komutumuzu `ifconfig kart_adı down` ve `ifconfig kart_adı up` şeklinde kullanabiliriz.
+Ayrıca diğer kartlar için de açama-kapama işleminde aynı şekilde komutumuzu `ifconfig kart_adı down` ve `ifconfig kart_adı up` şeklinde kullanabiliriz.
 
 
 ping
 -
-Hedef ile bizim sistemimiz arasında iletişimin sağlanıp sağlanmadığını kontrol etmeye yarar. Sonuç olarak hedef sunucunun çalışıp çalışmadığını veya aktarım hızının ne kadar hızlı olduğunu öğrenmemizi sağlar. Bir tür kontrol mekanizması da diyebiliriz. Komutun kullanımı `ping hedef_adresi` şeklindedir.
+Hedef ile bizim sistemimiz arasında iletişimin sağlanıp sağlanmadığını kontrol etmeye yarar. Sonuç olarak hedef sunucunun çalışıp çalışmadığını veya aktarım hızının ne kadar olduğunu öğrenmemizi sağlar. Bir tür kontrol mekanizması da diyebiliriz. Komutun kullanımı `ping hedef_adresi` şeklindedir.
 
-Örneğin biz www.google.com adresi ile aramızdaki iletişimin hızını sorgulayalım. Bunun için komut satırına `ping www.google.com` yazıyorum. Ancak burada önemli bir nokta var o da bu işlemin biz <kbd>Ctrl + C</kbd> tuş kombinasyonu ile durdurana kadar devam edecek olamasıdır. 
+Örneğin biz www.google.com adresi ile aramızdaki iletişimin hızını sorgulayalım. Bunun için komut satırına `ping www.google.com` yazıyorum. Ancak burada önemli bir nokta var o da bu işlemin biz <kbd>Ctrl + C</kbd> tuş kombinasyonu ile durdurana kadar devam edecek olmasıdır. 
 
 ![enter image description here](https://i.hizliresim.com/p6Rz3o.png)
 
@@ -2857,9 +2866,9 @@ Whois sorgusuna örnek olarak yine offensive-security adresini hedef alalım.
 
 host
 -
-Hedef adres hakkında bilgi almanızı sağlar. Bu komutun alabildiği farklı parametreli bulunmaktadır ancak ben bu kısımda bunlara değinmeden yalnızca temel kullanımına örnek veriyorum. Kullanımı `host adres_adı` şeklindedir.
+Hedef adres hakkında bilgi almanızı sağlar.`host` komutu ile IP adresinden alan adı(domain name) ve alan adın(domain name)’dan IP adresine ulaşabiliriz. Bu komutun alabildiği farklı parametreleri bulunmaktadır. Ancak ben bu kısımda bunlara değinmeden yalnızca temel kullanımına örnek veriyorum. Kullanımı `host adres_adı` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/YgvkLk.png)
+![enter image description here](https://i.hizliresim.com/vjXR9A.png)
 
 Bu komut hakkında ufak bir araştırma ile çok fazla Türkçe de dahil olmak üzere kaynağa ulaşabilirsiniz.
 
@@ -2870,7 +2879,7 @@ dig
 
 dig(domain information groper/domain bilgi çukuru) DNS kayıtlarına bakmak için kullamımı oldukça kolay olduğundan yaygın olarak kullanılmaktadır.
 
-Bu komutumuz da parametreler alabilmektedir ancak ben burada sizlere yine temel işevinden bahsederek geriye kalan parametreli kullanımların araştırmasını sizlere bırakıyorum. DNS sorgulaması yapmak istediğimiz adresi konsoldan `dig hedef_adresi` şeklinde belirtiyoruz.
+Bu komutumuz da parametreler alabilmektedir ancak ben burada sizlere yine temel işevinden bahsederek geriye kalan parametrelerini araştırmayı sizlere bırakıyorum. DNS sorgulaması yapmak istediğimiz adresi konsoldan `dig hedef_adresi` şeklinde belirtiyoruz.
 
 Örnek olması açısından ben tekrar offensive-security adresini hedef alıyorum.
 
@@ -2897,7 +2906,7 @@ Ayrıca adres çözümlemesi yapmadan direk olarak bağlantıları takip etmek i
 
 DNS Ayarları
 -
-Komut satırından DNS ayarlarımızı değiştirmek istersek DNS bilgilerinin tutulduğu <kbd>/etc/resolv.conf/</kbd> dosyasında değişiklik yapmamız gerekiyor. İşlemeleri adım adım açıklayarak ilerletiyorum.
+Komut satırından DNS ayarlarımızı değiştirmek istersek DNS bilgilerinin tutulduğu <kbd>/etc/resolv.conf/</kbd> dosyasında değişiklik yapmamız gerekiyor. İşlemeleri adım adım açıklayarak ilerleyelim.
 
 İlk olarak DNS ayarlarının bulunduğu dosya içeriğine göz atıyorum. Çünkü daha sonra değişiklik yaptığımızda ilk hali ile kıyaslamamız gerekecek. Bu işlemi `cat` komutu yardımı ile gerçekleştireceğiz.
 
