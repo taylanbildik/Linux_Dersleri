@@ -19,7 +19,7 @@ komutu ile teyit ettim.
 
 ![enter image description here](https://i.hizliresim.com/PlY6r8.gif)
 
-Ve.. bulunduğum dizin içerisine istediğim dosya indirilmiş oldu. 
+Ve.. bulunduğum dizin içerisine istediğim dosya(aircrack-ng) indirilmiş oldu. 
 
 **Toplu Dosya İndirmek :**
 
@@ -37,11 +37,11 @@ PDF belgelerimiz toplu şekilde indirilmiş oldu şimdi de bu dosyaların varlı
 
 
 **Özel Konum Belirterek İndirmek :**
-Eğer dosyanın konsolun üzerinde çalıştığı konuma değil de bizim istediğimiz özel bir konuma inmesini istersek bunun için `wget -P kaydedilecek_dizin_yolu dosya_linki` şeklinde komut vermemiz gerekiyor.
+Eğer dosyanın konsolun üzerinde çalıştığı konuma değil de bizim istediğimiz özel bir konuma indirilmesini istersek bunun için `wget -P kaydedilecek_dizin_yolu dosya_linki` şeklinde komut vermemiz gerekiyor.
 
 ![enter image description here](https://i.hizliresim.com/jyv1yD.gif)
 
-Dosyamızın istediğimiz konuma indirmek için tam yolunu belirtmemiz gerekiyordu bu nedenle buradaki `~/Desktop` kullanımı sizi şaşırtmasın <kbd>~</kbd> işareti ana dizini temsil ediyor.
+Dosyamızı istediğimiz konuma indirmek için indireceğimiz dizin adresinin tam yolunu belirtmemiz gerekiyordu bu nedenle buradaki `~/Desktop` kullanımı sizi şaşırtmasın <kbd>~</kbd> işareti ana dizini temsil ediyor.
 
 Ve sonuç olarak indirdiğimiz konuma gelerek dosyanın varlığını teyit etmiş olduk.
 
@@ -52,10 +52,10 @@ Ve sonuç olarak indirdiğimiz konuma gelerek dosyanın varlığını teyit etmi
 
 Dosyamızı "aircrack" ismi ile indirip <kbd>/Desktop</kbd> dizinine kaydettik bu durumu da `ls -l` komutu ile teyit ettik.
 
-Ayrıca indirlen dosyanın konumunu değiştirmeden yalnızca ismini değiştirmek isterseniz de herhangi bir konum belirtmeden yalnızca yeni dosya ismini belirtmeniz yeterli olacaktır. Örneğin `wget yeni_isim dosya_link` şeklinde bir kullanım indirilen dosyanın isminde değişiklik yapılarak indirilmesini sağlar.
+Ayrıca indirilen dosyanın konumunu değiştirmeden yalnızca ismini değiştirmek isterseniz de herhangi bir konum belirtmeden yalnızca yeni dosya ismini belirtmeniz yeterli olacaktır. Örneğin `wget yeni_isim dosya_link` şeklinde bir kullanım indirilen dosyanın isminde değişiklik yapılarak indirilmesini sağlar.
 
 **Kesintiye Uğrayan İndirmenin Devam Ettirilmesi :**
-Bir şekilde dosyanın indirme süreci kesilirse yani dosya tam olarak indirilemez ise dosyanın geri kalanının daha sonra indirmesi mümkündür. Bunun için kesintiye uğrayan dosyayı tekrar indirmek istersek `wget` komutuna ek olarak `-c` parametresi eklenmelidir. Böylelikle `wget -c indirme_linki` şeklinde bir kullanım sonucunda eğer dosya tam olarak indirilemezse sonradan dosyayı tekrar baştan indirmek yerine kaldığı yerden devam ettirme şansımız olur. Bu durum özellikle de büyük dosyalar için gerçekten çok büyük kolaylık sağlıyor.
+Bir şekilde dosyanın indirme süreci kesilirse yani dosya tam olarak indirilemez ise dosyanın geri kalanının daha sonra indirilmesi mümkündür. Kesintiye uğrayan dosyayı tekrar indirmek için `wget` komutuna ek olarak `-c` parametresi eklenmelidir. Böylelikle `wget -c indirme_linki` şeklinde bir kullanım sonucunda eğer dosya tam olarak indirilemezse sonradan dosyayı tekrar baştan indirmek yerine kaldığı yerden devam ettirme şansımız olur. Bu durum özellikle de büyük dosyalar için gerçekten çok büyük kolaylık sağlıyor.
 Adım adım yaptığım işlemleri inceleyelim.
 
 İlk olarak içi tamamen boş olan <kbd>/Documents</kbd> dizinine `cd /Documents` komutu ile ulaştım. Bu dizinin içerisinin boş olduğunu `ls -l` komutu ile teyit ettim.
@@ -66,7 +66,7 @@ Adım adım yaptığım işlemleri inceleyelim.
 
 ![enter image description here](https://i.hizliresim.com/9m9qD8.gif)
 
-İndirme işlemi durdurduktan sonra <kbd>/Documents</kbd> dizinini kontrol etmek için `ls -l` komutunu kullandım. Ve dosyamın 638681 bayt kadarının inmiş olduğunu gördüm.
+İndirme işlemi durdurduktan sonra <kbd>/Documents</kbd> dizinini kontrol etmek için `ls -l` komutunu kullandım. Ve dosyamın **638681** bayt kadarının inmiş olduğunu gördüm.
 
 ![enter image description here](https://i.hizliresim.com/76VXNl.png)
 
@@ -74,9 +74,9 @@ Durdurmuş olduğum indirme işlemine devam etmek üzere `wget` komutu ile berab
 
 ![enter image description here](https://i.hizliresim.com/qGm8Jq.gif)
 
-Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini ls -l komutu ile teyit ettim.
+Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini `ls -l` komutu ile teyit ettim.
 
-Çıktıları karşılaştıracak olursanız başta 638681 bayt'ta kalan indirme sonuç itibari ile 4379880 bayt yani dosyanın tamamı şeklinde indirilmiş oldu. Yani dosya indirme işlemi yarıda dahi kesilse en baştan indirmemize gerek kalmadan `wget` komutunun `-c` parametresi sayesinde kaldığı yerden indirme işlemini devam ettirebiliyoruz.
+Çıktıları karşılaştıracak olursanız başta **638681** bayt'ta kalan indirme sonuç itibari ile **4379880** bayt yani dosyanın tamamı şeklinde indirilmiş oldu. Yani dosya indirme işlemi yarıda dahi kesilse en baştan indirmemize gerek kalmadan `wget` komutunun `-c` parametresi sayesinde kaldığı yerden indirme işlemini devam ettirebiliyoruz.
 
 **İndirme Hızını Belirlemek :**
 Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceğini belirleyebiliriz. Bu limitleme işlemi için komutumuzu `wget --limit-rate=indirme_limitiK /indirme_linki` şeklinde kullanıyoruz.
@@ -92,4 +92,4 @@ Zaten üst kısımda yer alan çıktının sonucunda da bu hız sınırlamasın�
 
 ![enter image description here](https://i.hizliresim.com/gO4VWN.gif)
 
-Dosyamızı arkaplanada indiriyoruz ve çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` dosyasına bakabiliriz.
+Dosyamızı arkaplanda indiriyoruz ve konsol çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` komutu ile kayıt dosyasına bakabiliriz.
