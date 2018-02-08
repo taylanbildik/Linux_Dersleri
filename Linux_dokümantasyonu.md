@@ -1962,6 +1962,8 @@ Gördüğünüz gibi yönetici hesabına erişmek için bizlerden parola bilgisi
 
 
 
+
+
 Süreçler(process)
 =
 
@@ -1999,7 +2001,7 @@ Genel Liste
 Şimdi bazı parametrelerimizi çıktıları ile birlikte inceleyelim.
 
 
-<kbd>a</kbd> , <kbd>u</kbd> ve <kbd>x</kbd> parametrelerini genellikle kullanıldığı gibi yani bir bütün olarak `-aux`şeklinde ele alalım.
+<kbd>a</kbd> , <kbd>u</kbd> ve <kbd>x</kbd> parametrelerini genellikle kullanıldığı gibi yani bir bütün olarak `-aux` şeklinde ele alalım.
 
 Komut `aux` parametreleri ile `ps -aux` şeklinde kullanıldığında sistemde ve terminallerde çalışan tüm süreçleri ve süreç sahiplerini gösterir.
 
@@ -2123,7 +2125,7 @@ Diyelim ki leafpad aracımızı açtık ve her ne nedenle olursa olsun yanıt ve
 
 ![enter image description here](https://i.hizliresim.com/qG22NW.gif)
 
-Anlatım havada kalmış olabilir o yüzden xkill komutunun kullanımını kesinlikle sizler de hemen deneyin akılda kalması kolay bir komut zaten.
+Anlatım havada kalmış olabilir o yüzden `xkill` komutunun kullanımını kesinlikle sizler de hemen deneyin akılda kalması kolay bir komut zaten.
 
 fg-bg-jobs
 -
@@ -2132,11 +2134,11 @@ Son olarak gayet kullanışlı komutlar olan `fg` ve `bg` komutlarına değinere
 
 Kullanımın rahat şekilde anlaşılması için adım adım gidelim.
 
-Konsoldan leafpad uygulamasını açalım. Bunun için konsola leafpad yazmamız yeterli.
+Konsoldan leafpad uygulamasını açalım. Bunun için konsola `leafpad` yazmamız yeterli.
 
 Yazdıktan sonra ekrana leafpad uygulaması geldi.
 
-Programı çalıştırdığımız konsol şu anda leafpad uygulamasını çalıştırmakla meşgul. Yani bu demek oluyor ki eğer biz bu konsol üzerinden yeni bir komut girmek istersek bu mümün olmayacak. İşte bu yüzden halihazırda çalışan leafpad uygulamasının çalışmasını durdurup arkaplana atmalıyız ki yeni komutlar girdiğimizde konsol leafpad uygulaması ile meşgul olmasın.
+Programı çalıştırdığımız konsol şu anda leafpad uygulamasını çalıştırmakla meşgul. Yani bu demek oluyor ki eğer biz bu konsol üzerinden yeni bir komut girmek istersek bu mümkün olmayacak. İşte bu yüzden halihazırda çalışan leafpad uygulamasının çalışmasını durdurup arkaplana atmalıyız ki yeni komutlar girdiğimizde konsol leafpad uygulaması ile meşgul olmasın.
 
 Konsolda çalışan leafpad uygulamamızı arkaplana atmak yani duraklatmak için <kbd>Ctrl + Z </kbd> tuş kombinasyonunu kullanıyoruz. Bu işlemin ardından konsol bize aşağıdaki gibi bir çıktı basarak leafpad uygulamasının durduğunu haber veriyor.
 
