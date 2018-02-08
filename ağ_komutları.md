@@ -1,6 +1,6 @@
 Ağ(Network) Komutları
 =
-Ağ ve komutları başlı başına bir kitap konusu o yüzden burada sıkça veya gerekli durumda işimize yarayacak belli başlı komutları ele alıcaz. Eğer detaylı bilgi edinmek istiyorsanız internet aracılığı ile network(ağ) hakkında bir çok güncel kaynağa ulaşabilirsiniz. Lafı daha fazla uzatmadan anlatıma `ifconfig` komutu ile başlayalım.
+Ağ ve komutları başlı başına bir kitap konusu o yüzden burada sadece sıkça veya gerekli durumda işimize yarayacak belli başlı komutları ele alacağız. Eğer detaylı bilgi edinmek istiyorsanız internet aracılığı ile network(ağ) hakkında bir çok güncel kaynağa ulaşabilirsiniz. Lafı daha fazla uzatmadan anlatıma `ifconfig` komutu ile başlayalım.
 
 ifconfig
 -
@@ -11,13 +11,13 @@ Ağ bağlantı kartlarını listelemek için `ifconfig` komutu kullanılır.(Bu 
 
 ![enter image description here](https://i.hizliresim.com/6JZPVl.png)
 
-Çıktıda yer alan eth0 ethernet kartımızı ifade ediyor. Başka ethernet kartları olması durumunda diğer kartlar da eth1 .. eth2 şeklinde belirtilir.
+Çıktıda yer alan **eth0** ethernet kartımızı ifade ediyor. Başka ethernet kartları olması durumunda diğer kartlar da **eth1** .. **eth2** şeklinde belirtilir.
 
-lo bilgisayarın kendisini yani localhost'u ifade ediyor.
+**lo** bilgisayarın kendisini yani localhost'u ifade ediyor.
 
-wlan0 ise kablosuz ağ kartını ifade eder. Yine başka kartlar olması durumunda wlan1 .. wlan2 şeklide belirtilir.
+**wlan0** ise kablosuz ağ kartını ifade eder. Yine başka kartlar olması durumunda **wlan1** .. **wlan2** şeklide belirtilir.
 
-Ayrıca bütün kart bilgilerini listelemek yerine teker teker de listelemek de mümkün bunun için komutumuzu `ifconfig kart_adı` şeklinde girmemiz yeterli.
+Ayrıca bütün kart bilgilerini listelemek yerine teker teker de listelemek mümkün. Bunun için komutumuzu `ifconfig kart_adı` şeklinde girmemiz yeterli.
 
 Örneğin yalnızca kablosuz kart bilgilerini listelemek istersem `ifconfig wlan0` komutunu vermem yeterli olacaktır.
 
@@ -25,7 +25,7 @@ Ayrıca bütün kart bilgilerini listelemek yerine teker teker de listelemek de 
 
 Yukarıdaki çıktıda yer alan ayarlarda değişiklik yapmamız mümkün. Örneğin kablosuz ağ bağlantısının yerel ip adresini değiştirmek istersek komutumuzu `ifconfig wlan0 yeni_ip_adresi` şeklinde kullanabiliriz.
 
-Ben kablosuz bağlantımın 192.168.1.9 olan adresi 192.168.1.10 olarak değiştirmek istiyorum bunun için `ifconfig wlan0 192.168.1.10` komutunu vermem yeterli.
+Ben kablosuz bağlantımın **192.168.1.9** olan adresi **192.168.1.10** olarak değiştirmek istiyorum bunun için `ifconfig wlan0 192.168.1.10` komutunu vermem yeterli.
 
 Gelin bu durumu çıktıları karşılaştırarak test edelim.
 
@@ -33,7 +33,7 @@ Gelin bu durumu çıktıları karşılaştırarak test edelim.
 
 Ve son duruma bakarak ip adresimizin istediğimiz şekilde değiştiğini görmüş olduk. Aynı şekilde ağ maskesini(netmask) ve broadcat adreslerini dilediğimiz gibi düzenleyebiliriz. Hatta bu işlemi hepsi birlikte olacak şekilde bile yapabiliriz. Bunun için komutumuzu `ifconfig wlan0 yeni_ip_adresi netmask yeni_ağ_maskesi broadcast yeni_broadcast_adresi`  şeklinde kullanmamız yeterli olacaktır.
 
-Bu duruma bir örnek ile açıklayalım.
+Bu durumu bir örnek ile açıklayalım.
 Değişiklik yapmak üzere konsola `ifconfig wlan0 192.168.1.15 netmask 255.255.255.255 broadcast 192.168.2.255` komutunu girerek bir önceki durumu ile karşılaştıralım.
 
 ![enter image description here](https://i.hizliresim.com/RnJkZY.png)
@@ -48,14 +48,14 @@ Kablosuz kartı kapatmak istersek `ifconfig wlan0 down` komutunu kullanırız.
 
 Kapalı kablosuz kartı açmak istersek ise `ifconfig wlan0 up` komutunu kullanırız.
 
-Ayrıca diğer kartlar için de aynı şekilde komutumuzu `ifconfig kart_adı down` ve `ifconfig kart_adı up` şeklinde kullanabiliriz.
+Ayrıca diğer kartlar için de açama-kapama işleminde aynı şekilde komutumuzu `ifconfig kart_adı down` ve `ifconfig kart_adı up` şeklinde kullanabiliriz.
 
 
 ping
 -
-Hedef ile bizim sistemimiz arasında iletişimin sağlanıp sağlanmadığını kontrol etmeye yarar. Sonuç olarak hedef sunucunun çalışıp çalışmadığını veya aktarım hızının ne kadar hızlı olduğunu öğrenmemizi sağlar. Bir tür kontrol mekanizması da diyebiliriz. Komutun kullanımı `ping hedef_adresi` şeklindedir.
+Hedef ile bizim sistemimiz arasında iletişimin sağlanıp sağlanmadığını kontrol etmeye yarar. Sonuç olarak hedef sunucunun çalışıp çalışmadığını veya aktarım hızının ne kadar olduğunu öğrenmemizi sağlar. Bir tür kontrol mekanizması da diyebiliriz. Komutun kullanımı `ping hedef_adresi` şeklindedir.
 
-Örneğin biz www.google.com adresi ile aramızdaki iletişimin hızını sorgulayalım. Bunun için komut satırına `ping www.google.com` yazıyorum. Ancak burada önemli bir nokta var o da bu işlemin biz <kbd>Ctrl + C</kbd> tuş kombinasyonu ile durdurana kadar devam edecek olamasıdır. 
+Örneğin biz www.google.com adresi ile aramızdaki iletişimin hızını sorgulayalım. Bunun için komut satırına `ping www.google.com` yazıyorum. Ancak burada önemli bir nokta var o da bu işlemin biz <kbd>Ctrl + C</kbd> tuş kombinasyonu ile durdurana kadar devam edecek olmasıdır. 
 
 ![enter image description here](https://i.hizliresim.com/p6Rz3o.png)
 
@@ -93,9 +93,9 @@ Whois sorgusuna örnek olarak yine offensive-security adresini hedef alalım.
 
 host
 -
-Hedef adres hakkında bilgi almanızı sağlar. Bu komutun alabildiği farklı parametreli bulunmaktadır ancak ben bu kısımda bunlara değinmeden yalnızca temel kullanımına örnek veriyorum. Kullanımı `host adres_adı` şeklindedir.
+Hedef adres hakkında bilgi almanızı sağlar.`host` komutu ile IP adresinden alan adı(domain name) ve alan adın(domain name)’dan IP adresine ulaşabiliriz. Bu komutun alabildiği farklı parametreleri bulunmaktadır. Ancak ben bu kısımda bunlara değinmeden yalnızca temel kullanımına örnek veriyorum. Kullanımı `host adres_adı` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/YgvkLk.png)
+![enter image description here](https://i.hizliresim.com/vjXR9A.png)
 
 Bu komut hakkında ufak bir araştırma ile çok fazla Türkçe de dahil olmak üzere kaynağa ulaşabilirsiniz.
 
@@ -106,7 +106,7 @@ dig
 
 dig(domain information groper/domain bilgi çukuru) DNS kayıtlarına bakmak için kullamımı oldukça kolay olduğundan yaygın olarak kullanılmaktadır.
 
-Bu komutumuz da parametreler alabilmektedir ancak ben burada sizlere yine temel işevinden bahsederek geriye kalan parametreli kullanımların araştırmasını sizlere bırakıyorum. DNS sorgulaması yapmak istediğimiz adresi konsoldan `dig hedef_adresi` şeklinde belirtiyoruz.
+Bu komutumuz da parametreler alabilmektedir ancak ben burada sizlere yine temel işevinden bahsederek geriye kalan parametrelerini araştırmayı sizlere bırakıyorum. DNS sorgulaması yapmak istediğimiz adresi konsoldan `dig hedef_adresi` şeklinde belirtiyoruz.
 
 Örnek olması açısından ben tekrar offensive-security adresini hedef alıyorum.
 
@@ -133,7 +133,7 @@ Ayrıca adres çözümlemesi yapmadan direk olarak bağlantıları takip etmek i
 
 DNS Ayarları
 -
-Komut satırından DNS ayarlarımızı değiştirmek istersek DNS bilgilerinin tutulduğu <kbd>/etc/resolv.conf/</kbd> dosyasında değişiklik yapmamız gerekiyor. İşlemeleri adım adım açıklayarak ilerletiyorum.
+Komut satırından DNS ayarlarımızı değiştirmek istersek DNS bilgilerinin tutulduğu <kbd>/etc/resolv.conf/</kbd> dosyasında değişiklik yapmamız gerekiyor. İşlemeleri adım adım açıklayarak ilerleyelim.
 
 İlk olarak DNS ayarlarının bulunduğu dosya içeriğine göz atıyorum. Çünkü daha sonra değişiklik yaptığımızda ilk hali ile kıyaslamamız gerekecek. Bu işlemi `cat` komutu yardımı ile gerçekleştireceğiz.
 
