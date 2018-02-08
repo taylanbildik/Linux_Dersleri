@@ -1,7 +1,7 @@
 Kurma-Kaldırma-Güncelleme İşlemleri
 =
 
-Linux kullanacaksak mutlaka bilmemiz gerekenler arasında sistemi güncelleme, program kurma ve kaldırma gibi işlemleri yerine getirmek var. Bu işlemleri nasıl yetine getirebileceğimizi bu konunun devamında öğrenicez. İlk olarak sistemi güncelleme işlemi yapalım.
+Linux kullanacaksak mutlaka bilmemiz gerekenler arasında sistemi güncelleme, program kurma ve kaldırma gibi işlemleri yerine getirmek var. Bu işlemleri nasıl yerine getirebileceğimizi bu konunun devamında öğreneceğiz. İlk olarak sistemi güncelleme işlemi yapalım.
 
 Sistemi Güncelleme
 -
@@ -11,7 +11,7 @@ Dağıtımlar ve kullanılan paketlere göre komutları aşağıdaki tabloda ver
 
 <table class="table"> <thead> <tr> <th>Dağıtım</th> <th>Paketler</th> <th>Komutlar</th> </tr></thead> <tbody> <tr> <th scope="row">Debian</th> <td>.deb</td><td><code>apt</code> , <code>apt-cache</code> , <code>apt-get</code> , <code>dpkg</code></td></tr><tr> <th scope="row">Ubuntu</th> <td>.deb</td><td><code>apt</code> , <code>apt-cache</code> , <code>apt-get</code> , <code>dpkg</code></td></tr><tr> <th scope="row">CentOs</th> <td>.rpm</td><td><code>yum</code></td></tr><tr> <th scope="row">Fedora</th> <td>.rpm</td><td><code>dnf</code></td></tr><tr> <th scope="row">FreeBSD</th> <td>.txz</td><td><code>make</code> , <code>pkg</code></td></tr></tbody> </table>
 
-Debian paketlerinin <kbd>.deb</kbd> uzantılı olduğunu yukarıdaki tabloda gördük. Kullandığımız dağıtım olan Kali'de debian tabanlı olduğu için anlatıma bu doğrultuda devam edeceğiz.
+Debian paketlerinin <kbd>.deb</kbd> uzantılı olduğunu yukarıdaki tabloda gördük. Kullandığımız dağıtım olan Kali'de Debian tabanlı olduğu için anlatıma bu doğrultuda devam edeceğiz.
 
     apt-get update
 
@@ -35,13 +35,21 @@ Kurulu olan tüm paketleri siler.
 
 Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>soruces.list</kbd> dosyasına kullanıdığımız versiyona uygun depoları eklemeliyiz.
 
-Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>soruces.list</kbd> dosyasına eklememiz gerekiyor. Ben kali 2016.1 sonrası versiyonunu kullandığım için aşağıdaki repoları ekliyorum.
+Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>soruces.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3)versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>soruces.list</kbd> dosyasına ekliyorum.
 
-![enter image description here](https://i.hizliresim.com/2JQ02O.png)
+`deb http://http.kali.org/kali kali-rolling main contrib non-free`
 
 Ancak dediğim gibi sizler kullandığınız versiyona uygun olan repoları seçmelisiniz.
 
-Repoları `nano -w /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
+Kali 1.0 ve sonrası için: **`deb http://old.kali.org/kali moto main non-free contrib`**
+
+Kali 2.0 ve sonrası için: **`deb http://old.kali.org/kali sana main non-free contrib`**
+
+Kali 2016.1 ve sonrası için:**`deb http://http.kali.org/kali kali-rolling main contrib non-free`**
+
+
+Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
+![](https://camo.githubusercontent.com/59ce93a434143705c35a81775f6d74724c7469b6/68747470733a2f2f692e68697a6c69726573696d2e636f6d2f324a5130324f2e706e67)
 
 Sıra gelidi güncelleme işlemine, bunun için `apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y` komut bütününü kullanabiliriz.
 
@@ -65,7 +73,6 @@ Paket Yönetim Sistemi İle Kurulum
 -
 Bu işlem için kullandığımız dağıtıma uygun derleyiciyi kullanmalıyız. Daha önce Kali'nin <kbd>.deb</kbd> uzantılı paketleme sistemi olduğunu öğrenmiştik. Bu yüzden biz <kbd>.deb</kbd> uzantılı kurulum paketlerini açmak için `dpkg` komutunu kullanıyoruz. Sanırım kodun kısaltmasının nereden geldiğini bilirsek daha kolay akılda kalabilir. Kodun kısaltması "debian package(debian paketi)" kısaltmasından gelmektedir. Ayrıca `dpkg` komutunu kullanmada yardımcı bir paket yöneticisi programı(synaptic) kullanarak da kurulum işlemlerini yerine getirebiliriz. Konumuza ilk olarak `dpkg` komutu ve kullanımı ile devam edelim.
 
-Şimdi komutun kullanımına geçelim.
 
 Örnek olması açısından ben "master pdf" adında bir programın kurulumunu ele aldım. Bunun için öncelikle programın <kbd>.deb</kbd> uzantılı dosyasını sitesinden indirdim.
 
@@ -144,6 +151,8 @@ Linux'a uyumlu sürümü bulunan açık kaynak kodlu yazılımların kaynak kod 
 İndirdiğimiz program arşivini klasöre çıkartırız.
 
 Programı derlemeden önce gerekli kütüphaneler ve bağımlılıkları kontrol ediyoruz.
+
+`./configure`
 
 Eksik çıkarsa bunları kurmamız gerekicek.
 
