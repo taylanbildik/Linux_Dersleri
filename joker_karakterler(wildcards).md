@@ -13,9 +13,9 @@ Yukarıdaki kullanımın yerine joker karakter(wildcard)desteğini kullanmak biz
 
 Bahsi geçen joker karakterler ve kullanım alanları aşağıdaki gibidir;
 
-*** :** Anlamı `*` olan yere herhangi bir şey gelebileceğidir.
+**`*`** : Anlamı `*` olan yere herhangi bir şey gelebileceğidir.
 
-Örneğin "dosya" ismiyle başlayan tüm belgeleri tek seferde silmek için komutu `rm  dosya*`şeklinde kullanabilirim.
+Örneğin "dosya" ismiyle başlayan tüm belgeleri tek seferde silmek için komutu `rm  dosya*` şeklinde kullanabilirim.
 
 ![enter image description here](https://i.hizliresim.com/dOW0W4.png)
 
@@ -31,7 +31,7 @@ Aynı şekilde yıldız (asterix) * işaretinden sonra bir ifade belirtirsek de 
 
 **? :** Herhangi bir tek karakterle eşleşir
 
-Karakterin kullanımına örnek olarak. Diyelim ki dizin içerisinde hem "index_page" hem de "index-page" şeklinde isimlere sahip dosyalarınız var. Yani başlangıç ve bitiş isimleri aynı ancak aradaki işaretler farklı. İşte böyle bir durumda hem<kbd> _ </kbd> işaretini hem de <kbd> - </kbd> işaretini karşılayacak olan soru işareti <kbd>?</kbd> joker karakterini kullanabiliriz.
+Karakterin kullanımına örnek olarak. Diyelim ki dizin içerisinde hem "index_page" hem de "index-page" şeklinde isimlere sahip dosyalarınız var. Yani başlangıç ve bitiş isimleri aynı ancak aradaki işaretler farklı. İşte böyle bir durumda hem <kbd> _ </kbd> işaretini hem de <kbd> - </kbd> işaretini karşılayacak olan soru işareti <kbd>?</kbd> joker karakterini kullanabiliriz.
 
 ![enter image description here](https://i.hizliresim.com/0E4L48.png)
 
@@ -51,7 +51,7 @@ Bir örnek daha verelim.
 
 Ayrıca kullanım şekillerine çok fazla örnek verilebilir ancak burada birkaç örnek daha vererek keşfi size bırakıyorum.
 
-Burada belirtilen x y z temsili değerleri ifade etmektedir !
+Burada belirtilen **x y z** temsili değerleri ifade etmektedir !
 
 **[0-9] :** 0'dan 9'a kadar olan rakamları kapsar.
 
