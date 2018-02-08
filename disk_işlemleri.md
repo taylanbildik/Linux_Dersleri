@@ -5,10 +5,11 @@ Disk ile ilgili yapabileceğimiz bölümleme, formatlama, yedekleme ve diğer i�
 > **Komutlara geçmeden önce disk üzerinde yapacağımız işlemlerde son derece dikkatli olmamız gerektiğini aklınızdan çıkarmayın lütfen.**
 
 > **Yapacağımız yanlışlar dosyalarımızın kalıcı olarak silinmesine ve daha farklı sorunlara yol açabilir.**
+> **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
 
 gparted
 -
-Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk aracı denilebilir. Grafiksel arayüze sahip olduğu için açıklamasını burada vermem, resim kullanmayacağım için verimsiz olur. Ancak internetteki Türkçe-İngilizce kaynaklarda kullanımı hakkında bolca bilgiye ulaşabilirsiniz. Açmak için konsola `gparted` yazmanız yeterli olacaktır.
+Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk aracı denilebilir. Grafiksel arayüze sahip olduğu için açıklamasını burada vermem resimler ile verimsiz ve yetersiz olur. Ancak hazırladığım eğtim kursunda anlatımı videolu şekilde gerçekleştirdim eğer isterseniz [kursumu satın alarak](https://www.udemy.com/) hem bana destek olabilir hem de bu kaynağın açıklamalı anlatımını edinmiş olursunuz. Kursumu satın almak istemezseniz internetteki Türkçe-İngilizce kaynaklarda kullanımı hakkında bolca bilgiye ulaşabilirsiniz. Açmak için konsola `gparted` yazmanız yeterli olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/nOA9Oa.png)
 
@@ -20,7 +21,7 @@ fdisk
 
 Komutun aldığı temel parametreleri ele alarak konumuza devam edelim.
 
-İlk olarak sistemimizde bulunan disk bölümlerini listeleyelim. Bunun için l parametresini kullanıyoruz.
+İlk olarak sistemimizde bulunan disk bölümlerini listeleyelim. Bunun için `l` parametresini kullanıyoruz.
 
 **fdisk -l :** disk bölümlerini listeler.
 
@@ -58,7 +59,7 @@ Ben `p` parametresi ile listelediğim disk bölüm tablosundan 3. bölümü yani
 
 **n :** yeni disk bölümü oluşturur.
 
-`n`parametremiz ile diskte yeni bir alan oluşturabiliriz.`n` parametresini girince bize bölümleme tipinin öncelikli(primary) mi yoksa genişletişmiş(extended) mi olması gerektiğini soruyor.Aralarındaki farklar nedir diyecek olursanız.
+`n` parametremiz ile diskte yeni bir alan oluşturabiliriz. `n` parametresini girince bize bölümleme tipinin öncelikli(primary) mi yoksa genişletilmiş(extended) mi olması gerektiğini soruyor. Aralarındaki farklar nedir diyecek olursanız:
 
 **Primary Partition** denilen kısım işletim sistemlerini kurduğumuz sabit disk bölümüdür. Bir sabit diskte maksimum 4 tane primary partition olabiliyor ve bunlardan bir tanesinin mutlaka aktif partition olması gerekiyor ki işletim sisteminiz boot işlemi sırasında çalıştırılabilsin.
 
