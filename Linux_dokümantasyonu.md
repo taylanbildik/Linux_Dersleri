@@ -2936,6 +2936,7 @@ Yerel bir alan adı sunucusu işlevindedir. Sistemde alan adı çözümlemesi ya
 ----------
 
 
+
 Vim Editörü
 =
 
@@ -2957,11 +2958,11 @@ Editörle çalışmak için <kbd>i</kbd> tuşuna basıyoruz ve editör sol alt k
 ![enter image description here](https://i.hizliresim.com/nOk73V.png)
 
 
-Gerekli ifadeleri girdikten sonra komut vermek istersek ESC tuşuna bastırktan sonra komutları : karakteri başta olacak şekilde vermemiz gerekiyor. Kullanabileceğimiz bazı komutlar aşağıdaki şekildedir.
+Gerekli ifadeleri girdikten sonra komut vermek istersek <kbd>ESC</kbd> tuşuna bastırktan sonra komutları `:` karakteri başta olacak şekilde vermemiz gerekiyor. Kullanabileceğimiz bazı komutlar aşağıdaki şekildedir.
 
 **:q =** Eğer yapılan değişiklikler kayıt edilmişse Vim editörünü kapatır. Aksi durumda uyarı verecektir.
 
-**:q! =** Editörü kaydetemeden kapatır.
+**:q! =** Editörü kaydetmeden direk olarak kapatır.
 
 **:w =** Yapılan değişiklikleri kaydeder.
 
@@ -3037,7 +3038,7 @@ Komutumuzu verdikten sonra <kbd>dosya_1</kbd> vim editöründe açılacaktır. G
 
 Eğer geçiş yaptığımız dosyadan bir öncekine dönmek istersek `:previous` komutunu kullanmamız yeterli olacaktır.
 
-Ayrıca kaç dosyanın vim editöründe çalıştığını pencere ekranının üst bilgi kısmından öğrenebiliriz. Örneğin ben 3 dosya ile çalıştığım için üst kısımda bulunduğum dosya bilgisi ile beraber dosya_1 (~) (1 of 3) - VIM şeklinde bir üst bilgi yazısı bulunuyor.
+Ayrıca kaç dosyanın vim editöründe çalıştığını pencere ekranının üst bilgi kısmından öğrenebiliriz. Örneğin ben 3 dosya ile çalıştığım için üst kısımda bulunduğum dosya bilgisi ile beraber **dosya1 (~) (1 of 3) - VIM** şeklinde bir üst bilgi yazısı bulunuyor.
 
 Dosya içerinde bulunan ifadeleri değiştirmek istersek `:satır_sayısı s/eski_ifade/yeni_ifade/g` şeklinde bir komut bütünümüz bulunuyor. Bu gösterim ile anlamamış olabilirsiniz o yüzden hemen birkaç örnek ile konuyu açıklayalım.
 
@@ -3064,7 +3065,7 @@ Biz yine de birkaç kısa kullanım şeklini daha görelim.
 
 Eğer direk olarak konsol üzerinden veri girişi yapmak istersek konsola `vim -` komutunu girmeliyiz.
 
-Böylelikle konsol bize Vim: Reading from stdin... çıktısını verecek ve bizden veri girişi bekleyecektir.
+Böylelikle konsol bize **Vim: Reading from stdin...** çıktısını verecek ve bizden veri girişi bekleyecektir.
 
 Ben örnek olması açısından konsoldan birkaç ifade ekliyorum.
 
@@ -3084,7 +3085,7 @@ Dosyamızın özelliklerini `file vim_metni` komutu ile öğrenip, dosyanın iç
 
 İstediğimiz bilgilere kolayca ulaşabildik. Bu durumu birde dosyamızı şifreleyerek test edelim. Bunun için konsola `vim -x vim_metni` şeklinde komut veriyoruz ve konsol bizden şifre belirlememizi istiyor.
 
-Dosyamıza birkaç veri daha ekledikten sonra dosyamızı `:w` komutu ile kaydettik. Ve sonuç olarak vim editörü alt bilgi çubuğunda bize dosyanın şifrelendiğini aşağıdaki çıktıda yer alan "vim_metni" [crypted] şekilde ifade ederek belirtti.
+Dosyamıza birkaç veri daha ekledikten sonra dosyamızı `:w` komutu ile kaydettik. Ve sonuç olarak vim editörü alt bilgi çubuğunda bize dosyanın şifrelendiğini aşağıdaki çıktıda yer alan **"vim_metni" [crypted]** şekilde ifade ederek belirtti.
 
 ![enter image description here](https://i.hizliresim.com/jyL2Pj.png)
 
@@ -3095,17 +3096,17 @@ Daha sonra dosyamızı tekrar `file` ve `cat` komutları ile sınadık.
 
 Konsol çıktısında da görüldüğü gibi bizden bir parola isteniyor. Eğer parolayı doğru girersek dosyamız açılacaktır.
 
-Ancak sizlere önemli bir uyarı;
+**Ancak sizlere önemli bir uyarı;**
 
 Bu dosya şifreleme olayı iyi hoş ancak çok çok önemli bir nokta var o da belirlediğiniz şifre. Eğer uzun, karmaşık yazarsanız bu şifreyi unutma riskiniz yüksek olacağından daha sonra bulmanız veya bir şekide kırmanız da bir o kadar zor olacaktır. Ayrıca kısa ve kolay şifreler de kolayca kırılabileceğinden pek güvenli bir yol sayılmaz. Yani anlayacağınız ne unutacağınız kadar uzun veya karmaşık ne de kolay kırlabilecek kadar kısa olsun. Şimdiden sizleri uyarıyorum sonradan bu durum yüzünden aman başınız ağrımasın.
 
 Konumuza yavaş yavaş bitirmek üzere devam edecek olursak.
 
-Örneğin vim editöründe kod yazıyordunuz ve kod 101. satırda hata verdi. Bu durumda 101. satırı aramak yerine editöre `:101` şeklinde hatalı kodun bulunduğu satır girerek ilgili satıra ulaşmış olabiliyoruz. Yani direk olarak atlamak istediğimiz satırı vim editörüne `:satır_numarası` şeklinde girerek bu işlemi gerçekleştirebiliriz.
+Örneğin vim editöründe kod yazıyordunuz ve kod 101. satırda hata verdi. Bu durumda 101. satırı aramak yerine editöre `:101` şeklinde yazarak hatalı kodun bulunduğu satıra ulaşabiliyoruz. Yani direk olarak atlamak istediğimiz satırı vim editörüne `:satır_numarası` şeklinde girerek bu işlemi gerçekleştirebiliriz.
 
 ![enter image description here](https://i.hizliresim.com/rOjVL1.gif)
 
-Eğer yazdığınız ifadeler içerinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu kullanılırken bir önceki aynı ifadeye dönmek için ise `:?` komutlarını kullanıyoruz.
+Eğer yazdığınız ifadeler içerinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu, bir önceki aynı ifadeye dönmek için ise `:?` komutunu kullanıyoruz.
 
 ![enter image description here](https://i.hizliresim.com/G9Ekbv.gif)
 
@@ -3114,7 +3115,7 @@ Eğer aradığımız ifadede büyük küçük harf duyarlılığı olmadan hedef
 
 Vim editörü anlatımının burada sonuna geliyoruz. Ancak dediğim gibi zaten vim editörü başlı başına bir dokümantasyon konusu ki bu bilgileri burada izah etsek bile fazlaca gereksiz ayrıntıya değinmiş, sizlere boş yere yormuş olurduk. Vim editörü ancak baştan beri bahsi geçen kendi kendine öğrenme, deneme, alıştırma yapma ve özümseme ile öğrenilecek bir konudur. Kullanmanız şart değil kimisi çok sever kullanır kimisi ayrıntılarından nefret eder bırakır.
 
-Neticede internette yer alan tüm zengin kaynaklar ile birlikte man kılavuz sayfasından, vim editörü içerisinde iken `:help` komutundan ve daha önce verdiğim vim editörü [wiki kaynağından](http://vim.wikia.com/wiki/Vim_Tips_Wiki) diğer tüm bilgilere ulaşabilirsiniz.(Benim önerim vim editörü içerisindeki `:help` komutu ile ulaşabileceğiniz dokümantasyonu takip etmenizdir.) Ve unutmayın bu araç ancak ve ancak kendi kendine kurcalayacak öğrenilebilir.
+Neticede internette yer alan tüm zengin kaynaklar ile birlikte man kılavuz sayfasından, vim editörü içerisinde iken `:help` komutundan ve daha önce verdiğim vim editörü [wiki kaynağından](http://vim.wikia.com/wiki/Vim_Tips_Wiki) diğer tüm bilgilere ulaşabilirsiniz.(Benim önerim vim editörü içerisindeki `:help` komutu ile ulaşabileceğiniz dokümantasyonu takip etmenizdir.) Ve unutmayın bu araç ancak ve ancak öğrenmek isteyen kişinin kendi kendine kurcalaması ve bolca alıştırmalar yapmasıyla öğrenilebilir.
 
 
 ----------
@@ -3141,7 +3142,7 @@ komutu ile teyit ettim.
 
 ![enter image description here](https://i.hizliresim.com/PlY6r8.gif)
 
-Ve.. bulunduğum dizin içerisine istediğim dosya indirilmiş oldu. 
+Ve.. bulunduğum dizin içerisine istediğim dosya(aircrack-ng) indirilmiş oldu. 
 
 **Toplu Dosya İndirmek :**
 
@@ -3159,11 +3160,11 @@ PDF belgelerimiz toplu şekilde indirilmiş oldu şimdi de bu dosyaların varlı
 
 
 **Özel Konum Belirterek İndirmek :**
-Eğer dosyanın konsolun üzerinde çalıştığı konuma değil de bizim istediğimiz özel bir konuma inmesini istersek bunun için `wget -P kaydedilecek_dizin_yolu dosya_linki` şeklinde komut vermemiz gerekiyor.
+Eğer dosyanın konsolun üzerinde çalıştığı konuma değil de bizim istediğimiz özel bir konuma indirilmesini istersek bunun için `wget -P kaydedilecek_dizin_yolu dosya_linki` şeklinde komut vermemiz gerekiyor.
 
 ![enter image description here](https://i.hizliresim.com/jyv1yD.gif)
 
-Dosyamızın istediğimiz konuma indirmek için tam yolunu belirtmemiz gerekiyordu bu nedenle buradaki `~/Desktop` kullanımı sizi şaşırtmasın <kbd>~</kbd> işareti ana dizini temsil ediyor.
+Dosyamızı istediğimiz konuma indirmek için indireceğimiz dizin adresinin tam yolunu belirtmemiz gerekiyordu bu nedenle buradaki `~/Desktop` kullanımı sizi şaşırtmasın <kbd>~</kbd> işareti ana dizini temsil ediyor.
 
 Ve sonuç olarak indirdiğimiz konuma gelerek dosyanın varlığını teyit etmiş olduk.
 
@@ -3174,10 +3175,10 @@ Ve sonuç olarak indirdiğimiz konuma gelerek dosyanın varlığını teyit etmi
 
 Dosyamızı "aircrack" ismi ile indirip <kbd>/Desktop</kbd> dizinine kaydettik bu durumu da `ls -l` komutu ile teyit ettik.
 
-Ayrıca indirlen dosyanın konumunu değiştirmeden yalnızca ismini değiştirmek isterseniz de herhangi bir konum belirtmeden yalnızca yeni dosya ismini belirtmeniz yeterli olacaktır. Örneğin `wget yeni_isim dosya_link` şeklinde bir kullanım indirilen dosyanın isminde değişiklik yapılarak indirilmesini sağlar.
+Ayrıca indirilen dosyanın konumunu değiştirmeden yalnızca ismini değiştirmek isterseniz de herhangi bir konum belirtmeden yalnızca yeni dosya ismini belirtmeniz yeterli olacaktır. Örneğin `wget yeni_isim dosya_link` şeklinde bir kullanım indirilen dosyanın isminde değişiklik yapılarak indirilmesini sağlar.
 
 **Kesintiye Uğrayan İndirmenin Devam Ettirilmesi :**
-Bir şekilde dosyanın indirme süreci kesilirse yani dosya tam olarak indirilemez ise dosyanın geri kalanının daha sonra indirmesi mümkündür. Bunun için kesintiye uğrayan dosyayı tekrar indirmek istersek `wget` komutuna ek olarak `-c` parametresi eklenmelidir. Böylelikle `wget -c indirme_linki` şeklinde bir kullanım sonucunda eğer dosya tam olarak indirilemezse sonradan dosyayı tekrar baştan indirmek yerine kaldığı yerden devam ettirme şansımız olur. Bu durum özellikle de büyük dosyalar için gerçekten çok büyük kolaylık sağlıyor.
+Bir şekilde dosyanın indirme süreci kesilirse yani dosya tam olarak indirilemez ise dosyanın geri kalanının daha sonra indirilmesi mümkündür. Kesintiye uğrayan dosyayı tekrar indirmek için `wget` komutuna ek olarak `-c` parametresi eklenmelidir. Böylelikle `wget -c indirme_linki` şeklinde bir kullanım sonucunda eğer dosya tam olarak indirilemezse sonradan dosyayı tekrar baştan indirmek yerine kaldığı yerden devam ettirme şansımız olur. Bu durum özellikle de büyük dosyalar için gerçekten çok büyük kolaylık sağlıyor.
 Adım adım yaptığım işlemleri inceleyelim.
 
 İlk olarak içi tamamen boş olan <kbd>/Documents</kbd> dizinine `cd /Documents` komutu ile ulaştım. Bu dizinin içerisinin boş olduğunu `ls -l` komutu ile teyit ettim.
@@ -3188,7 +3189,7 @@ Adım adım yaptığım işlemleri inceleyelim.
 
 ![enter image description here](https://i.hizliresim.com/9m9qD8.gif)
 
-İndirme işlemi durdurduktan sonra <kbd>/Documents</kbd> dizinini kontrol etmek için `ls -l` komutunu kullandım. Ve dosyamın 638681 bayt kadarının inmiş olduğunu gördüm.
+İndirme işlemi durdurduktan sonra <kbd>/Documents</kbd> dizinini kontrol etmek için `ls -l` komutunu kullandım. Ve dosyamın **638681** bayt kadarının inmiş olduğunu gördüm.
 
 ![enter image description here](https://i.hizliresim.com/76VXNl.png)
 
@@ -3196,9 +3197,9 @@ Durdurmuş olduğum indirme işlemine devam etmek üzere `wget` komutu ile berab
 
 ![enter image description here](https://i.hizliresim.com/qGm8Jq.gif)
 
-Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini ls -l komutu ile teyit ettim.
+Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini `ls -l` komutu ile teyit ettim.
 
-Çıktıları karşılaştıracak olursanız başta 638681 bayt'ta kalan indirme sonuç itibari ile 4379880 bayt yani dosyanın tamamı şeklinde indirilmiş oldu. Yani dosya indirme işlemi yarıda dahi kesilse en baştan indirmemize gerek kalmadan `wget` komutunun `-c` parametresi sayesinde kaldığı yerden indirme işlemini devam ettirebiliyoruz.
+Çıktıları karşılaştıracak olursanız başta **638681** bayt'ta kalan indirme sonuç itibari ile **4379880** bayt yani dosyanın tamamı şeklinde indirilmiş oldu. Yani dosya indirme işlemi yarıda dahi kesilse en baştan indirmemize gerek kalmadan `wget` komutunun `-c` parametresi sayesinde kaldığı yerden indirme işlemini devam ettirebiliyoruz.
 
 **İndirme Hızını Belirlemek :**
 Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceğini belirleyebiliriz. Bu limitleme işlemi için komutumuzu `wget --limit-rate=indirme_limitiK /indirme_linki` şeklinde kullanıyoruz.
@@ -3214,7 +3215,7 @@ Zaten üst kısımda yer alan çıktının sonucunda da bu hız sınırlamasın�
 
 ![enter image description here](https://i.hizliresim.com/gO4VWN.gif)
 
-Dosyamızı arkaplanada indiriyoruz ve çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` dosyasına bakabiliriz.
+Dosyamızı arkaplanda indiriyoruz ve konsol çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` komutu ile kayıt dosyasına bakabiliriz.
 
 
 ----------
@@ -3223,7 +3224,7 @@ Dosyamızı arkaplanada indiriyoruz ve çıktıda bize indirme detaylarının <k
 Zamanlanmış Görevler
 =
 
-Sistemde yapılması gereken rutin işlerin zamanı geldiğinde otomatik olarak yapılması işine zamanlanmış görevler deniliyor. Örneğin benim her pazartesi sistemi yedeklemem gerekiyor diyelim, bunu her pazartesi elle yapmak yerine bu işi zamanlanmış görevlere ekleyerek otomatiğe bağlayabilirim.
+Sistemde yapılması gereken rutin işlerin zamanı geldiğinde otomatik olarak yapılması işine zamanlanmış görevler deniyor. Bu rutin işlere örnek söylemek gerekirse; benim her pazartesi sistemi yedeklemem gerekiyor diyelim, bunu her pazartesi elle yapmak yerine bu işi zamanlanmış görevlere ekleyerek otomatiğe bağlayabilirim.
 
 cron
 -
@@ -3234,11 +3235,11 @@ Anlatıma `cron` servisinin çalışma durumunu kontrol ederek başlayalım. Bun
 ![enter image description here](https://i.hizliresim.com/vjgoRp.png)
 
 
-Cron servisimizin çalıştığını teyit etmiş olduk. Cron servisinin yapılandırma dosyası <kbd>/etc/crontab</kbd>konumunda yer alıyor göz atmak için konsola `cat /etc/crontab` komutunu verebiliriz.
+Cron servisimizin çalıştığını teyit etmiş olduk. Cron servisinin yapılandırma dosyası <kbd>/etc/crontab</kbd> konumunda yer alıyor göz atmak için konsola `cat /etc/crontab` komutunu verebiliriz.
 
 ![enter image description here](https://i.hizliresim.com/6JZ62E.png)
 
-Şimdi de düzenleme yapmak adına konsola `crontab -e` komutunu verelim. Burada yer alan `-e` parametresi edit kelimesini yani düzenleme ifadesini temsil ediyor.
+Şimdi de düzenleme yapmak adına konsola `crontab -e` komutunu verelim. Burada yer alan `-e` parametresi "edit" kelimesini yani "düzenleme" ifadesini temsil ediyor.
 
 ![enter image description here](https://i.hizliresim.com/y0PnM9.png)
 
@@ -3250,11 +3251,11 @@ Konsol bize düzenleme yaparken hangi aracı kullanmak istediğimizi soruyor. Be
 
 ![enter image description here](https://i.hizliresim.com/3E9RD5.png)
 
-Yukarıdaki şema yeterince açıklayıcı olmadıysa endişelenmenize gerek yok. Örnekler üzerinden yapacağımız anlatım ile cron servisimizin kullanımını rahat şekilde anlamış olacağınıza inanıyorum.
+Yukarıdaki şema yeterince açıklayıcı olmadıysa endişelenmenize gerek yok. Örnekler üzerinden yapacağımız anlatım ile **cron** servisimizin kullanımını rahat şekilde anlamış olacağınıza inanıyorum.
 
-Zamanlanmış görevleri yerine getiren servis cron ve bu servisin yerine getirdiği işlere de cron job deniliyor. Bu tanımın çok da önemi yok ancak bunu böyle bilseniz daha iyi olur. Bizler de kendi zamanlanmış görevlerimizi (cron jobs) atamak istersek crontab -e komutu ile açtığımı dosyanın son satırına yapmak istediğimiz işi ve tam tarih düzenini girmemiz gerekiyor. Bu görevleri nasıl oluşturacağımızı konunun devamında örnekler üzerinden öğreniyor olacağız.
+Zamanlanmış görevleri yerine getiren servis **cron** ve bu servisin yerine getirdiği işlere de **cron job** deniliyor. Bu tanımın çok da önemi yok ancak bunu böyle bilseniz daha iyi olur. Bizler de kendi zamanlanmış görevlerimizi (cron jobs) atamak istersek `crontab -e` komutu ile açtığımız dosyanın son satırına yapmak istediğimiz işi ve tam tarih düzenini girmemiz gerekiyor. Bu görevleri nasıl oluşturacağımızı konunun devamında örnekler üzerinden öğreniyor olacağız.
 
-Örnekler
+**#Örnekler**
 
 Kullanımın anlaşılması amacıyla örnekleri olabildiğince basit tuttum.
 
@@ -3263,7 +3264,7 @@ O anın tarihi detaylarını <kbd>zamanlar.txt</kbd> isimli klasöre kaydetmek i
 Bütün yıl boyunca her dakikanın çıktılarını kaydetmesini istersem aşağıdaki şekilde bir kullanım işimizi görür.
 
 ![enter image description here](https://i.hizliresim.com/Z9L1kz.png)
-![enter image description here](https://i.hizliresim.com/RnJ6YZ.png)
+<img src="https://i.hizliresim.com/RnJ6YZ.png" width="875">
 
 Yıldız işareti (<kbd>*</kbd>) olan kısımlar hepsini kapsamaktadır yani haftanın bütün günleri, ayın bütün günleri ve saatin bütün dakikaları.. gibi.
 
@@ -3277,7 +3278,7 @@ Görev istediğimiz şekilde yani her dakikada yazılacak şekilde otomatik olar
 
 Şimdi spesifik bir zaman belirleyerek görevin yerine getirilme durumunu ele alalım.
 
-Her gün 10:25 da otomatik olarak <kbd>test.txt</kbd> isimli belgeye "test yazısı" yazdırmak için kalıbı crontab dosyasına aşağıdaki şekilde yazmalıyız.(Ayrıca başta hangi ifadenin neyin karşılığı olduğunu belirttiğim için tekrar tekrar üzerlerine yazmıyorum. Eğer şaşırırsanız yukarıdaki kısımları tekrar gözden geçirebilirsiniz.)
+Her gün 10:25 da otomatik olarak <kbd>test.txt</kbd> isimli belgeye "test yazısı" yazdırmak için kalıbı **crontab** dosyasına aşağıdaki şekilde yazmalıyız.(Ayrıca başta hangi ifadenin neyin karşılığı olduğunu belirttiğim için tekrar tekrar üzerlerine yazmıyorum. Eğer şaşırırsanız yukarıdaki kısımları tekrar gözden geçirebilirsiniz.)
 
     15 14 * * * echo "test yazısı" >> ~/Desktop/test.txt
 
@@ -3291,7 +3292,7 @@ Her gün 10:25 da otomatik olarak <kbd>test.txt</kbd> isimli belgeye "test yazı
 
 Eğer belirli bir saat-tarih arasında belirli kere tekrar eden görev atamak istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
 
-Örneğin 5 dk bir çalışmasını istediğiniz komutu aşağıdaki şekilde crontab dosyasına ekleyebilirsiniz.
+Örneğin 5 dk bir çalışmasını istediğiniz komutu aşağıdaki şekilde **crontab** dosyasına ekleyebilirsiniz.
 
     */5 * * * * komut
 
@@ -3299,7 +3300,7 @@ Her saatin ilk 5 dk 2 kere çalışmasını istersek kullanım şekli aşağıda
 
     0-5/2 * * * * komut
 
-Örneğin cron job yani verdiğimiz görev komutu günün ilk 5 saatinde 10 defa çalışmasını istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
+Örneğin **cron job** yani verdiğimiz görev komutu günün ilk 5 saatinde 10 defa çalışmasını istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
 
     * 0-5/10 * * * komut
 
@@ -3313,9 +3314,10 @@ Eğer belirlenen zamanlanmış görevleri listelemek istersek `crontab -l` komut
 
 ![enter image description here](https://i.hizliresim.com/4aLRl0.png)
 
-Şayet oluşturduğumuz tüm zamanlanmış görevleri silmek istersek `crontab -r` komutunu kullanmalıyız. Buradaki `-r` parametresi remove kelimesini yani silme işlevini temsil ediyor.
+Şayet oluşturduğumuz tüm zamanlanmış görevleri silmek istersek `crontab -r` komutunu kullanmalıyız. Buradaki `-r` parametresi "remove" kelimesini yani "silme" işlevini temsil ediyor.
 
 ![enter image description here](https://i.hizliresim.com/oOAz7o.png)
+
 
 
 ----------
@@ -3323,17 +3325,17 @@ Eğer belirlenen zamanlanmış görevleri listelemek istersek `crontab -l` komut
 
 Log Kayıtları
 -
-Sistemde olan sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere log deniyor. Neden log tutulmak zorunda diye soracak olursanız kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlamada, gerektiğinde veri kurtarmada ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır. Yani sistem bütünü için çok önemli yer tutmaktadır.
+Sistemde olan sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere **log** deniyor. Neden **log** tutulmak zorunda diye soracak olursanız kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır. Yani sistem bütünü için çok önemli yer tutmaktadır.
 
 Log Dosyaları
 -
-Linux sisteminde log dosyalarının çok büyük kısmı <kbd>/var/log </kbd> dizini altında tutuluyor. Ayrıca log dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına `cd /var/log` yazarak log dosyalarının tutulduğu dizine gidip dizin içerisinde iken `ls` komutu ile dizin içeriğini listeleyelim.
+Linux sisteminde **log** dosyalarının çok büyük kısmı <kbd>/var/log </kbd> dizini altında tutuluyor. Ayrıca **log** dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına `cd /var/log` yazarak **log** dosyalarının tutulduğu dizine gidip dizin içerisinde iken `ls` komutu ile dizin içeriğini listeleyelim.
 
 ![enter image description here](https://i.hizliresim.com/OoRdaD.png)
 
-Örneğin <kbd>user.log</kbd> dosyasını `cat user.log` şeklinde açarak sistemde yapılmış olan oturum açma işlemlerini ve detaylarını inceleyebilirim. Ancak bu noktada bir kısa bilgi linux sistemi log dosyalarının çok fazla yer kaplamasını önlemek için üzerine yazma metodunu kullanıyor. Bu noktada cron servisi ile log kayıtlı her hafta eklenerek maksimum 1 ay kadar eskiyi yani 4 haftayı kayıt altında tutuyor.
+Örneğin <kbd>user.log</kbd> dosyasını `cat user.log` şeklinde açarak sistemde yapılmış olan oturum açma işlemlerini ve detaylarını inceleyebilirim. Ancak bu noktada bir kısa bilgi Linux sistemi **log** dosyalarının çok fazla yer kaplamasını önlemek için üzerine yazma metodunu kullanıyor. Bu noktada **cron** servisi ile **log** kayıtları her hafta eklenerek maksimum 1 ay kadar eskiyi yani 4 haftayı kayıt altında tutuyor.
 
-Log dosyalarını incelerken kolaylık olması açısından daha önce de kullanmış olduğumu ve dosyanın alt(tail/kuyruk) kısımlarını listeleyen `tail` komutundan yararlanacağız.
+**Log** dosyalarını incelerken kolaylık olması açısından daha önce de kullanmış olduğumu ve dosyanın alt(tail/kuyruk) kısımlarını listeleyen `tail` komutundan yararlanacağız.
 
 ![enter image description here](https://i.hizliresim.com/z0mEyj.png)
 
@@ -3342,7 +3344,7 @@ Bu sayede uzun uzadıya dosyanın tamamına bakmak yerine son eklenen bilgileri 
 
 dmesg
 -
-Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler iletiler ve kernel hakkındaki kayıtlar <kbd>/proc/kmsg</kbd> dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını `dmesg` komutu ile görüntüleyebiliriz. Yani `dmesg` komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur. Yani genelde sorun yaşadığınızda forum ve benzeri topluluklarda sizden bu komut istenirse komutun hangi amaca hizmet ettiğini bilmeniz için ve aynı zamanda komutun log konusu ile bağlantılı olduğu için sizlere açıkladım.
+Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler ve kernel hakkındaki kayıtlar <kbd>/proc/kmsg</kbd> dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını `dmesg` komutu ile görüntüleyebiliriz. Yani `dmesg` komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur. Yani genelde sorun yaşadığınızda forum ve benzeri topluluklarda sizden bu komut istenirse komutun hangi amaca hizmet ettiğini bilmeniz için ve aynı zamanda komutun **log** konusu ile bağlantılı olduğu için sizlere açıkladım.
 
 ![enter image description here](https://i.hizliresim.com/G9v1GZ.png)
 
@@ -3353,4 +3355,4 @@ last
 -
 Sistemde oturum açan kullanıcıları listelemek için `last` komutunu kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/JQpEWQ.png)
+<img src="https://i.hizliresim.com/JQpEWQ.png" width="875">
