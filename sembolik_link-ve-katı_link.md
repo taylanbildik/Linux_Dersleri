@@ -1,7 +1,7 @@
 Sembolik Link Ve Katı Link
 =
 
-Linux sistemlerinde sembolik ve katı olmak üzere iki çeşit bağlantı türü vardır. Bunları sırası ile açıklayacak olursak;
+Linux sistemlerinde sembolik ve katı olmak üzere iki çeşit bağlantı(link) türü vardır. Bunları sırası ile açıklayacak olursak;
 
 Sembolik link ile oluşturulmuş bağlantılar dosyaların kısayolu görevini görür ve görevi yalnızca ilgili dosyaya yönlendirme yapmaktır.
 
@@ -27,7 +27,7 @@ Her bir inode(düğüm) numarasının benzersiz olduğunu söylemiştik. Bu duru
 
 ![enter image description here](https://i.hizliresim.com/azBY04.png)
 
-Çıktıda yer alan soldaki numaralar ilgili dosyanın inode numarasını temsil ediyor.
+Çıktıda yer alan soldaki numaralar, ilgili dosyanın inode numarasını temsil ediyor.
 
 Konumuza sembolik link oluşturma ile devam edelim.
 
@@ -38,11 +38,11 @@ Sembolik link oluşturmak için `ln -s` komutu kullanılır. Komutun kullanım �
 
 Örnek bir dosya oluşturarak sembolik link komutu yardımı ile dosyamıza kısayol oluşturalım.
 
-Music dosya konumundayken `touch` komutu yardımı ile <kbd>klasik<kbd> isimli bir dosya oluşturduk.
+Music dosya konumundayken `touch` komutu yardımı ile "klasik" isimli bir dosya oluşturduk.
 
 ![enter image description here](https://i.hizliresim.com/Yg56W2.png)
 
-Oluşturduğumuz klasik isimli dosyanın kısayolunu, komutumuzu `ln -s dosya_adı kısayol_adı` şeklinde kullanarak oluşturduk.
+Oluşturduğumuz "klasik" isimli dosyanın kısayolunu, komutumuzu `ln -s dosya_adı kısayol_adı` şeklinde kullanarak oluşturduk.
 
 ![enter image description here](https://i.hizliresim.com/Z913d3.png)
 
@@ -71,9 +71,9 @@ Ayrıca ilk `ls -li` çıktısında kısayol dosyasının sol tarafında yer ala
 
 Katı Link
 -
-Sıra geldi katı link bağlatısının kullanımına. Katı link bağlantısı için `ln` komutu kullanılıyor. Örnek üzerinden ilerleyelim.
+Sıra geldi katı link bağlantısının kullanımına. Katı link bağlantısı için `ln` komutu kullanılıyor. Örnek üzerinden ilerleyelim.
 
-Örnek olması açısından <kbd>Music</kbd> klasörü altında <kbd>caz </kbd>adında bir dosya oluşturuyorum. Daha sonra oluşturduğum <kbd>caz </kbd> isimli klasörün katı linkini `ln caz caz_kati` komutu ile oluşturuyorum.
+Örnek olması açısından <kbd>Music</kbd> klasörü altında "caz" adında bir dosya oluşturuyorum. Daha sonra oluşturduğum "caz" isimli klasörün katı linkini `ln caz caz_kati` komutu ile oluşturuyorum.
 
 ![enter image description here](https://i.hizliresim.com/lOzq3r.png)
 
@@ -87,7 +87,7 @@ Hemen daha önce yaptığımız gibi `file` komutu ile orijinal dosya ve link il
 
 ![enter image description here](https://i.hizliresim.com/2JQaN2.png)
 
-Komutun sonucunda her ikisininde ayrı ayrı dosyalar olduğunu görmüş olduk. Bu da demek oluyor ki biz eğer orijinal dosyayı silersek sembolik linkte olduğu gibi link ile oluşturulmuş dosya kullanılmaz hale gelmeyecektir. Bunu da hemen test edelim.
+Komutun sonucunda her ikisininde ayrı ayrı dosyalar olduğunu görmüş olduk. Bu da demek oluyor ki biz eğer orijinal dosyayı silersek sembolik linkte olduğu gibi katı link ile oluşturulmuş dosya kullanılmaz hale gelmeyecektir. Bunu da hemen test edelim.
 
 ![enter image description here](https://i.hizliresim.com/jyY61L.png)
 
