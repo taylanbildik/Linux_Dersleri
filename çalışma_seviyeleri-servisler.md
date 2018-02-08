@@ -11,11 +11,11 @@ O anda hangi seviyede çalıştığımızı öğrenmek istersek komut satırına
 
 ![enter image description here](https://i.hizliresim.com/y0nmA7.png)
 
-Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de daha önce de sölediğimiz gibi linux sistemi varsayılan olarak 5 seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu `init çalışma_seviyesi` şeklinde yapabiliriz.
+Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de daha önce de söylediğimiz gibi linux, sistemi varsayılan olarak 5. seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu `init çalışma_seviyesi` şeklinde yapabiliriz.
 
 Bu şekilde sistemi yeniden başlatana kadar seçtiğimiz çalışma seviyesinde devam edebiliriz. Ancak dediğim gibi sistemi yeniden başlattığınızda sistem varsayılan olarak 5. seviyede başlayacaktır.
 
-Ayrıca yeri gelmişken sistemi kapatmak istersek bunu hiç bir hizmetin çalışmadığını 0. runlevel ile `init 0` komutunu vererek yapabiliriz.
+Ayrıca yeri gelmişken sistemi kapatmak istersek bunu hiç bir hizmetin çalışmadığını 0. runlevel ile yani `init 0` komutunu vererek yapabiliriz.
 
 Ayrıca kapatma işlemi için;
 
@@ -61,4 +61,4 @@ Son olarak ise sistemde bulunan tüm servislerin sıralanmasını sağlayan `ser
 
 ![enter image description here](https://i.hizliresim.com/p6Yjjq.gif)
 
-Çıktıdaki servislerin sol tarafında yer alan <kbd>[ - ] </kbd>işareti servisin çalışmadığını, <kbd>[ + ]</kbd> işareti servisin çalıştığını ve <kbd>[ ? ]</kbd> işareti ise servisin durumunun belirsiz olduğunu ifade ediyor.
+Çıktıdaki servislerin sol tarafında yer alan <kbd>[ - ]</kbd> işareti servisin çalışmadığını, <kbd>[ + ]</kbd> işareti servisin çalıştığını ve <kbd>[ ? ]</kbd> işareti ise servisin durumunun belirsiz olduğunu ifade ediyor.
