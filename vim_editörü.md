@@ -20,11 +20,11 @@ Editörle çalışmak için <kbd>i</kbd> tuşuna basıyoruz ve editör sol alt k
 ![enter image description here](https://i.hizliresim.com/nOk73V.png)
 
 
-Gerekli ifadeleri girdikten sonra komut vermek istersek ESC tuşuna bastırktan sonra komutları : karakteri başta olacak şekilde vermemiz gerekiyor. Kullanabileceğimiz bazı komutlar aşağıdaki şekildedir.
+Gerekli ifadeleri girdikten sonra komut vermek istersek <kbd>ESC</kbd> tuşuna bastırktan sonra komutları `:` karakteri başta olacak şekilde vermemiz gerekiyor. Kullanabileceğimiz bazı komutlar aşağıdaki şekildedir.
 
 **:q =** Eğer yapılan değişiklikler kayıt edilmişse Vim editörünü kapatır. Aksi durumda uyarı verecektir.
 
-**:q! =** Editörü kaydetemeden kapatır.
+**:q! =** Editörü kaydetmeden direk olarak kapatır.
 
 **:w =** Yapılan değişiklikleri kaydeder.
 
@@ -100,7 +100,7 @@ Komutumuzu verdikten sonra <kbd>dosya_1</kbd> vim editöründe açılacaktır. G
 
 Eğer geçiş yaptığımız dosyadan bir öncekine dönmek istersek `:previous` komutunu kullanmamız yeterli olacaktır.
 
-Ayrıca kaç dosyanın vim editöründe çalıştığını pencere ekranının üst bilgi kısmından öğrenebiliriz. Örneğin ben 3 dosya ile çalıştığım için üst kısımda bulunduğum dosya bilgisi ile beraber dosya_1 (~) (1 of 3) - VIM şeklinde bir üst bilgi yazısı bulunuyor.
+Ayrıca kaç dosyanın vim editöründe çalıştığını pencere ekranının üst bilgi kısmından öğrenebiliriz. Örneğin ben 3 dosya ile çalıştığım için üst kısımda bulunduğum dosya bilgisi ile beraber **dosya1 (~) (1 of 3) - VIM** şeklinde bir üst bilgi yazısı bulunuyor.
 
 Dosya içerinde bulunan ifadeleri değiştirmek istersek `:satır_sayısı s/eski_ifade/yeni_ifade/g` şeklinde bir komut bütünümüz bulunuyor. Bu gösterim ile anlamamış olabilirsiniz o yüzden hemen birkaç örnek ile konuyu açıklayalım.
 
@@ -127,7 +127,7 @@ Biz yine de birkaç kısa kullanım şeklini daha görelim.
 
 Eğer direk olarak konsol üzerinden veri girişi yapmak istersek konsola `vim -` komutunu girmeliyiz.
 
-Böylelikle konsol bize Vim: Reading from stdin... çıktısını verecek ve bizden veri girişi bekleyecektir.
+Böylelikle konsol bize **Vim: Reading from stdin...** çıktısını verecek ve bizden veri girişi bekleyecektir.
 
 Ben örnek olması açısından konsoldan birkaç ifade ekliyorum.
 
@@ -147,7 +147,7 @@ Dosyamızın özelliklerini `file vim_metni` komutu ile öğrenip, dosyanın iç
 
 İstediğimiz bilgilere kolayca ulaşabildik. Bu durumu birde dosyamızı şifreleyerek test edelim. Bunun için konsola `vim -x vim_metni` şeklinde komut veriyoruz ve konsol bizden şifre belirlememizi istiyor.
 
-Dosyamıza birkaç veri daha ekledikten sonra dosyamızı `:w` komutu ile kaydettik. Ve sonuç olarak vim editörü alt bilgi çubuğunda bize dosyanın şifrelendiğini aşağıdaki çıktıda yer alan "vim_metni" [crypted] şekilde ifade ederek belirtti.
+Dosyamıza birkaç veri daha ekledikten sonra dosyamızı `:w` komutu ile kaydettik. Ve sonuç olarak vim editörü alt bilgi çubuğunda bize dosyanın şifrelendiğini aşağıdaki çıktıda yer alan **"vim_metni" [crypted]** şekilde ifade ederek belirtti.
 
 ![enter image description here](https://i.hizliresim.com/jyL2Pj.png)
 
@@ -158,17 +158,17 @@ Daha sonra dosyamızı tekrar `file` ve `cat` komutları ile sınadık.
 
 Konsol çıktısında da görüldüğü gibi bizden bir parola isteniyor. Eğer parolayı doğru girersek dosyamız açılacaktır.
 
-Ancak sizlere önemli bir uyarı;
+**Ancak sizlere önemli bir uyarı;**
 
 Bu dosya şifreleme olayı iyi hoş ancak çok çok önemli bir nokta var o da belirlediğiniz şifre. Eğer uzun, karmaşık yazarsanız bu şifreyi unutma riskiniz yüksek olacağından daha sonra bulmanız veya bir şekide kırmanız da bir o kadar zor olacaktır. Ayrıca kısa ve kolay şifreler de kolayca kırılabileceğinden pek güvenli bir yol sayılmaz. Yani anlayacağınız ne unutacağınız kadar uzun veya karmaşık ne de kolay kırlabilecek kadar kısa olsun. Şimdiden sizleri uyarıyorum sonradan bu durum yüzünden aman başınız ağrımasın.
 
 Konumuza yavaş yavaş bitirmek üzere devam edecek olursak.
 
-Örneğin vim editöründe kod yazıyordunuz ve kod 101. satırda hata verdi. Bu durumda 101. satırı aramak yerine editöre `:101` şeklinde hatalı kodun bulunduğu satır girerek ilgili satıra ulaşmış olabiliyoruz. Yani direk olarak atlamak istediğimiz satırı vim editörüne `:satır_numarası` şeklinde girerek bu işlemi gerçekleştirebiliriz.
+Örneğin vim editöründe kod yazıyordunuz ve kod 101. satırda hata verdi. Bu durumda 101. satırı aramak yerine editöre `:101` şeklinde yazarak hatalı kodun bulunduğu satıra ulaşabiliyoruz. Yani direk olarak atlamak istediğimiz satırı vim editörüne `:satır_numarası` şeklinde girerek bu işlemi gerçekleştirebiliriz.
 
 ![enter image description here](https://i.hizliresim.com/rOjVL1.gif)
 
-Eğer yazdığınız ifadeler içerinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu kullanılırken bir önceki aynı ifadeye dönmek için ise `:?` komutlarını kullanıyoruz.
+Eğer yazdığınız ifadeler içerinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu, bir önceki aynı ifadeye dönmek için ise `:?` komutunu kullanıyoruz.
 
 ![enter image description here](https://i.hizliresim.com/G9Ekbv.gif)
 
@@ -177,4 +177,4 @@ Eğer aradığımız ifadede büyük küçük harf duyarlılığı olmadan hedef
 
 Vim editörü anlatımının burada sonuna geliyoruz. Ancak dediğim gibi zaten vim editörü başlı başına bir dokümantasyon konusu ki bu bilgileri burada izah etsek bile fazlaca gereksiz ayrıntıya değinmiş, sizlere boş yere yormuş olurduk. Vim editörü ancak baştan beri bahsi geçen kendi kendine öğrenme, deneme, alıştırma yapma ve özümseme ile öğrenilecek bir konudur. Kullanmanız şart değil kimisi çok sever kullanır kimisi ayrıntılarından nefret eder bırakır.
 
-Neticede internette yer alan tüm zengin kaynaklar ile birlikte man kılavuz sayfasından, vim editörü içerisinde iken `:help` komutundan ve daha önce verdiğim vim editörü [wiki kaynağından](http://vim.wikia.com/wiki/Vim_Tips_Wiki) diğer tüm bilgilere ulaşabilirsiniz.(Benim önerim vim editörü içerisindeki `:help` komutu ile ulaşabileceğiniz dokümantasyonu takip etmenizdir.) Ve unutmayın bu araç ancak ve ancak kendi kendine kurcalayacak öğrenilebilir.
+Neticede internette yer alan tüm zengin kaynaklar ile birlikte man kılavuz sayfasından, vim editörü içerisinde iken `:help` komutundan ve daha önce verdiğim vim editörü [wiki kaynağından](http://vim.wikia.com/wiki/Vim_Tips_Wiki) diğer tüm bilgilere ulaşabilirsiniz.(Benim önerim vim editörü içerisindeki `:help` komutu ile ulaşabileceğiniz dokümantasyonu takip etmenizdir.) Ve unutmayın bu araç ancak ve ancak öğrenmek isteyen kişinin kendi kendine kurcalaması ve bolca alıştırmalar yapmasıyla öğrenilebilir.
