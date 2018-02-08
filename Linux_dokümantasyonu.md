@@ -1807,21 +1807,21 @@ Kullanıcıların ait olduğu grupları görmek istersek komut satırına `id ku
 
 ![enter image description here](https://i.hizliresim.com/JQd5Vq.png)
 
-Burada yeri gelmişken daha önce değindiğimiz uid(user id) ve gid(group) kavramlarına değinelim. Bu numaralar kullanıcı çeşidine göre şu şekildedir;
+Burada yeri gelmişken daha önce değindiğimiz uid(user id/kullanıcı numarası) ve gid(group id/grup numarası) kavramlarına değinelim. Bu numaralar kullanıcı çeşidine göre şu şekildedir;
 
 - **root kullanıcısı :** UID=0, GID=0
-- **sistem kullanıcısı :** UID=1-499, GID=1-499
-- **normal kullanıcı :** UID=500<, GID<
+- **sistem kullanıcısı :** UID=1 -499, GID=1 -499
+- **normal kullanıcı :** UID=500<, GID=500<
 
 Ayrıca `id` komutunun da birçok parametresi vardır bazıları şimdi göreceğiniz grup oluşturma kısmındaki parametrelerden oluşuyor. Detaylı bilgi için man sayfasına bakabilirsiniz. Ben yine de örnek olması açısından `g` parametresini gösteriyorum ve daha sonra grup oluşturma ile konumuza devam ediyoruz.
 
-`id -g grup_adı` belirtilen grubun grup id(GİD)'sini verecektir.
+`id -g grup_adı` belirtilen grubun grup numarasını(gid) verecektir.
 
 ![enter image description here](https://i.hizliresim.com/OoJWr0.png)
 
 Yeni bir grup oluşturmak istersek `groupadd grup_adı` şeklinde komutumuzu kullanırız.
 
-Ve oluşturduğumuz grubu sorgulamak için grub bilgilerinin tutulduğu dosyaya bakmak üzere `cat /etc/group | grep grup_adı` komutunu ya da `tail -n 1 /etc/group` kullanabiliriz.
+Ve oluşturduğumuz grubu sorgulamak için grup bilgilerinin tutulduğu dosyaya bakmak üzere `cat /etc/group | grep grup_adı` komutunu ya da `tail -n 1 /etc/group` kullanabiliriz.
 
 
 ![enter image description here](https://i.hizliresim.com/z0QWGB.png)
@@ -1911,9 +1911,9 @@ Hemen root kullanıcısı için bilgileri listeleyelim.
 
 ### Aktif-Pasif Hesap Ayarlama
 
-Varolan bir kullanıcı hesabını kilitlemek için `usermod -L kullanıcı_adı` komutunu kullanırız. Buradaki kilitlemekten kasıt kullanıcı parolasını kilitlenir. Parolayı devre dışı bırakmak için, şifreli parolanın önüne '!' işareti koyulur. Ve kullanıcı hesabına giriş yapamaz. 
+Varolan bir kullanıcı hesabını kilitlemek için `usermod -L kullanıcı_adı` komutunu kullanırız. Buradaki kilitlemekten kasıt kullanıcının sisteme giriş yapmasını engellemek için parolasının kilitlenmesidir. Parolayı devre dışı bırakmak için, sistem otomatik olarak şifreli parolanın önüne '!' işareti koyar ve kullanıcı hesabına giriş yapamaz. 
 
-Pasif durumdaki hesabı aktif hale getirmek için ise `usermod -U kullanıcı_adı` komutu kullanılır. Aynı şekilde hesabın tekrar aktif hale getirilmesi de devre dışı bırakılmış bir kullanıcı parolasını  önündeki '!' işaretini kaldırılmasıyla olur.
+Pasif durumdaki hesabı aktif hale getirmek için ise `usermod -U kullanıcı_adı` komutu kullanılır. Aynı şekilde hesabın tekrar aktif hale getirilmesi de devre dışı bırakılmış olan kullanıcı parolasının  önündeki '!' işaretinin kaldırılmasıyla gerçekleşir.
 
 Bu durumu .gif ile anlattım dikkatlice takip ederseniz gayet net anlaşılacaktır.
 
@@ -1921,24 +1921,24 @@ Bu durumu .gif ile anlattım dikkatlice takip ederseniz gayet net anlaşılacakt
 
 ### Kimlik Değişimi
 
-Örneğin ben "taylan" kullanıcısıyken, yapmak istediğim işlem ancak "root" kullanıcısının yetki alanında ise "root" hesabının parolasını biliyorsam "root" hesabının kimliğine bürünerek o işlemi gerçekleştirebilirim.
+Örneğin ben "taylan" kullanıcısıyken, yapmak istediğim işlem ancak "root" kullanıcısının yetki alanındaysa ve ben "root" hesabının parolasını biliyorsam, "root" hesabının kimliğine bürünerek o işlemi gerçekleştirebilirim.
 
-Geçiş işlemleri için `su`komutunu kullanıyoruz. Komutun kullanımı ile ilgili iki farklı durum var bunlar:
+Geçiş işlemleri için `su` komutunu kullanıyoruz. Komutun kullanımı ile ilgili iki farklı durum var bunlar:
 
 - **su kullanıcı_adı :** diğer kullanıcı kimliğine geçiş yapar.
 - **su - kullanıcı_adı :** diğer kullanıcı kimliğine geçiş yapar ve direk olarak geçiş yapılan kullanıcının kabuğunda çalışmaya başlar.
 
-Bu durum en iyi örnekler ile açıklanabilir. İlk önce root kullanıcısıyken "taylan" isimli kullanıcı hesabına giriş yapacağım daha sonra "taylan" isimli kullanıcıdan root hesabına giriş işlemini gerçekleştireceğim. Adımları sırasıyla takip edin lütfen.
+Bu durum en iyi örnekler ile açıklanabilir. İlk önce "root" kullanıcısıyken "taylan" isimli kullanıcı hesabına giriş yapacağım daha sonra "taylan" isimli kullanıcıdan "root" hesabına giriş işlemini gerçekleştireceğim. Adımları sırasıyla takip edin lütfen.
 
 Hemen mevcut kullanıcı oturumunu daha önce öğrenmiş olduğumuz `whoami` komutu ile sorgulayalım.
 
 ![enter image description here](https://i.hizliresim.com/NZb6XP.png)
 
-root kullanıcı iken "kullanici" hesabına geçiş yapmak için `su kullanici` komutunu kullanıyoruz. Ve `whoami`komutu ile geçiş durumunu kontrol ediyoruz.
+"root" kullanıcısıyken "kullanici" hesabına geçiş yapmak için `su kullanici` komutunu kullanıyoruz. Ve `whoami` komutu ile geçiş durumunu kontrol ediyoruz.
 
 ![enter image description here](https://i.hizliresim.com/Yg52yz.png)
 
-Geçiş yaptığımız "kullanici" hesabından root hesabına dönmek için `exit` komutunu kullanmamız yeterli.
+Geçiş yaptığımız "kullanici" hesabından "root" hesabına dönmek için `exit` komutunu kullanmamız yeterli.
 
 ![enter image description here](https://i.hizliresim.com/8YE0OV.png)
 
@@ -1946,13 +1946,16 @@ Geçiş yaptığımız "kullanici" hesabından root hesabına dönmek için `exi
 
 ![enter image description here](https://i.hizliresim.com/D7kV1z.png)
 
-Fark etmiş olacaksınız ki başta geçiş yapabilmemiz için geçeceğimiz hesabın parolasını bilmemiz gerektiğini söylemiştim ancak "kullanici" hesabına yaptığımız geçişlerde parola sorulmadı. Bunun sebebi "kullanici" hesabının normal kullanıcı olması. Şimdi bu durumu birde "kullanici" hesabındayken "root" kullanıcısı için iki farklı kullanımda da deneyelim.
+Görsellere dikkatlice bakacak olursanız; `su kullanici` komutunu kullanarak geçiş yaptığımızda `kullanici@taylan:/root$` olan konsol ismi `su - kullanici` komutunu kulladığımızda direk olarak geçiş yaptığımız hesabın kabuğunda çalışmaya başlayarak `kullanici@taylan:~$` şeklinde oldu. Yani `su - kullanici` komutu bize tıpkı o hesap oturumunu açmışız gibi tepki verdi.
+
+Fark etmiş olacaksınız ki başta geçiş yapabilmemiz için geçeceğimiz hesabın parolasını bilmemiz gerektiğini söylemiştim. Ancak "kullanici" hesabına yaptığımız geçişlerde parola sorulmadı. Bunun sebebi "kullanici" hesabının normal kullanıcı olmasıdır. Şimdi bu durumu birde "kullanici" hesabındayken "root" kullanıcısı için iki farklı kullanımda da deneyelim.
 
 ![enter image description here](https://i.hizliresim.com/m28jbV.png)
 
 ![enter image description here](https://i.hizliresim.com/jyYPOJ.png)
 
-Gördüğünüz gibi yönetici hesabına erişmek için bizlerden parola bilgisi istendi. Bu durum da başta açıkladığımız şifre sorma olayını açıklıyor.
+Gördüğünüz gibi yönetici hesabına erişmek için bizlerden parola bilgisi istendi. Bu durum da başta açıkladığımız yetkili hesaplara geçişlerde şifre sorma olayını açıklıyor.
+
 
 
 ----------
