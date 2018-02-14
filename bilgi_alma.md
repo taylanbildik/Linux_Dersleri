@@ -5,13 +5,69 @@ Bilgi alma komutları sistemimizde bulunan herhangi bir şey hakkında(programla
 
 uname
 -
-Tek başına çekirdek adını verse de aldığı parametreler ile farklı bilgiler de sunabilir. Hangi parametrenin ne iş yaptığını <code>man uname</code> komutu ile öğrenebileceğinizi biliyorsunuz. Kısaca bilmemiz gereken; bu komut genel olarak sistemde kullanılan çekirdek hakkında bilgiler verir.
+Tek başına çekirdek adını verse de aldığı parametreler ile farklı bilgiler de sunabilir. Kısaca bilmemiz gereken; bu komut genel olarak sistemde kullanılan çekirdek hakkında bilgiler verir. Hangi parametrenin ne iş yaptığını <code>man uname</code> komutu ile öğrenebileceğinizi biliyorsunuz. Bizde kullanım şekillerini man kılavuz sayfası üzerinden açıklayalım.
 
 ![enter image description here](https://i.hizliresim.com/EPlXDD.png)
 
+Eğer parametresiz kullanıldıysa `-s` parametresi gibi yalnızca çekirdek ismini gösterir. Yani `uname` komutu ile `uname -s` komutu
+       aynıdır.
+Parametreler ve ifade ettikleri;
+
+     -a, --all
+            Bu parametre ile bütün bilgileri aşağıdaki seçenek sırasıyla gösterilir; -p ve -i bilinmiyorsa atlanır.
+
+![enter image description here](https://i.hizliresim.com/9mdADZ.png)
+
+     -s, --
+            çekirdek ismini gösterir.
+              
+![enter image description here](https://i.hizliresim.com/rO2p23.png)
+
+     -n, --nodename
+            ağ düğümü konak ismini diğer bir değişle hostname(host adını) gösterir.
+
+![enter image description here](https://i.hizliresim.com/PlrNrO.jpg)
+
+     -r, --kernel-release
+            çekirdeğin derleniş sürümünü gösterir.
+
+![enter image description here](https://i.hizliresim.com/gOWpWO.jpg)
+
+     -v, --kernel-version
+            çekirdeğin sürümünü gösterir.
+
+![enter image description here](https://i.hizliresim.com/9mdAdN.jpg)
+
+     -m, --machine
+            makine donanım ismini gösterir.
+
+![enter image description here](https://i.hizliresim.com/nOWpWM.jpg)
+
+     -p, --processor
+            işlemci türünü veya "unknown" gösterir.
+
+![enter image description here](https://i.hizliresim.com/vjpVp4.jpg)
+
+     -i, --hardware-platform
+            donanım platformunu veya "unknown" gösterir.
+
+![enter image description here](https://i.hizliresim.com/1JgBgN.jpg)
+
+     -o, --operating-system
+            işletim sistemini gösterir.
+
+![enter image description here](https://i.hizliresim.com/LbnNnZ.jpg)
+
+     --help 
+            Bu yardım iletisini gösterir ve çıkar.
+
+     --version
+            Sürüm bilgilerini gösterir ve çıkar.
+
+
 hostname
 -
-Bilgisayarımızın adını diğer bir adıyla host adını verir. Eğer isterseniz bu adı değiştirebilirsiniz. Örnek veriyorum; komut satırına <code>hostname burak</code> yazarsanız hostname yani bilgisayarınızın adı burak olarak değişmiş olacaktır.
+Bilgisayarımızın adını diğer bir deyişle bilgisayarımızın ağ üzerindeki adını verir. Eğer isterseniz bu adı değiştirebilirsiniz. Örnek veriyorum; komut satırına <code>hostname burak</code> yazarsanız hostname yani bilgisayarınızın adı burak olarak değişmiş olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/5D9Znq.png)
 
