@@ -73,7 +73,9 @@ Bilgisayarımızın adını diğer bir deyişle bilgisayarımızın ağ üzerind
 
 Ancak bu ayar kalıcı değildir. Oturumu kapatıp tekrar açtığınızda değiştirmiş olduğunuz adın tekrar eski haline döndüğünü görebilirsiniz. Kalıcı olmasını ayarlardan kolaylıkla sağlayabiliriz. Sürümden sürüme değişiklik göstersede sırasıyla; ayarlar>sistem>ayrıntılar>genel aygıt adı: kutusuna istediğiniz ismi yazabilirsiniz. Eğer dediğim yoldan ulaşamadıysanız ayarları biraz kurcalayarak bulabilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/azqVAz.gif)
+
+<img src="https://i.hizliresim.com/azqVAz.gif" width="875">
+
 
 Ayrıca tamamen komut satırından da kalıcı bir hostname değişikliği yapmak mümkün. Bunun için <kbd> /etc/hostname</kbd> konumunda yer alan <kbd>hostname</kbd> dosyasını açmamız gerek. Dosyamızı açmak için konsola <code> nano -w /etc/hostname</code> komutunu veriyoruz.
 Komutumuzun ardından açılan dosyamızda ismimizin yerine istediğimiz ismi yazıyoruz. Ve <kbd>Ctrl + X</kbd> tuş kombinasyonu ile dosyamızdaki değişiklikleri kaydederek çıkıyoruz.
