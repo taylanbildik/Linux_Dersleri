@@ -214,7 +214,7 @@ stat
 
 Bu komut dosya veya dizin hakkındaki bilgileri almamıza olanak sağlar. Kullanımı <code>stat dizin</code> şeklindedir. Örneğin root dizinine bakalım. Bunun için komut satırımıza <code>stat /root</code> komutunu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/8YmQvn.png)
+<img src="https://i.hizliresim.com/8YmQvn.png" width="875">
 
 vmstat
 -
