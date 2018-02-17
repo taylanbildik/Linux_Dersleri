@@ -49,7 +49,9 @@ Daha iyi anlamak için benzer bir duruma masaüstü kullanıcıları için örne
 Örneğin sistemde "burak" isimli kullanıcı hesabı var diyelim. Burak kullanıcısının sistemi kullanması için gereken sistem dosyalarını çalıştırma yetkisi var yani sistemi normal bir şekilde kullanabiliyor. Ancak burak kullanıcısının dosyaları değiştirme yetkisi yoksa `/home/burak` dizininden önceki dizinlerde değişiklik(dosyaları silme, üzerine veri yazma vs..) yapamaz. Bu sistem sayesinde bütün kullanıcılar, yetkileri dahilinde işlemlerini güvenli şekilde yerine getirler. Bu sayede yönetim ve güvenlik sağlama işi kolaylaşır.
 Bu duruma örnek olması için çok basit bir test yapalım.
 Root(yetkili ve tüm izinlere sahip kullanıcı) ile burak isimli kullanıcı hesaplarından "Deneme" isimli dosyada değişiklik yapıp, yaptığımız değişikliği kaydetmeye çalışalım.
-<img src="https://i.hizliresim.com/jyBNom.gif" width="875">
+
+<img src="https://i.hizliresim.com/1JGqpN.gif" width="875">
+
 Gördüğünüz gibi "root" kullanıcı hesabındayken kayıt işlemini tamamlayabildim ancak "burak" kullanıcı hesabında yetki iznim olmadığı için dosyada yaptığım değişikliği kayıt edemedim. 
 Bu da demek oluyor ki kullanıcılar sadece sahip oldukları yetkileri dahilinde işlemler gerçekleştirebiliyor. Bu sayede sistem yönetimi ve güvenliği kolaylıkla sağlanabiliyor.
 
