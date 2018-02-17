@@ -89,7 +89,7 @@ lsb_release
 -
 Bu komut kullandığımız dağıtım hakkında farklı bilgiler sunan parametrelere sahiptir. Detaylı bilgi için man kılavuz sayfasını kontrol edebilirsiniz. Ben örnek olası açısından <code>lsb_release -a </code> komutunun çıktısını veriyorum.
 
-![enter image description here](https://i.hizliresim.com/jyJ0LJ.png)
+![enter image description here](https://i.hizliresim.com/3EpGj2.png)
 
 whoami
 -
@@ -97,13 +97,13 @@ Sinemayı takip eden arkadaşların aklına ilk ne geldi biliyorum :)
 
 Bu komut kimlik sorgu işlevi görüyor. Komut satırımıza komutumuzu vererek sonucuna bakalım.
 
-![enter image description here](https://i.hizliresim.com/76m9oW.png)
+![enter image description here](https://i.hizliresim.com/YgOZWl.png)
 
 Komut çıktısı bize mevcut kullanıcının <code>root</code> kimliği ile çalıştığını göstermiş oldu.
 
 Yine <code>whoami</code> komutuna benzer ancak çok ufak farkların olduğu birkaç komutu daha peş peşe komut satırına girerek çıkan sonuçlar üzerinden anlatıma devam edelim.
 
-![enter image description here](https://i.hizliresim.com/gOldA3.png)
+![enter image description here](https://i.hizliresim.com/az1rM5.png)
 
 Sıra sıra bakalım:
 
@@ -113,22 +113,20 @@ Sıra sıra bakalım:
 
 **w:** hangi kullanıcı hangi uygulamayı çalıştırıyor bunun bilgisini gösteriyor.
 
-Bunun dışında bu komutlar da parametre alabiliyorlar. Hangi parametreleri aldıklarını nasıl öğrenebileceğinizi zaten biliyorsunuz. Ben yinede aşağıda birkaçının çıktısını bırakıyorum.
-
-![enter image description here](https://i.hizliresim.com/Pl38P5.png)
+Bunun dışında bu komutlar da parametre alabiliyorlar. Hangi parametreleri aldıklarını nasıl öğrenebileceğinizi zaten biliyorsunuz.
 
 uptime
 -
 <code>uptime</code> komutu sistemimizin ne kadar zamandır açık olduğu bilgisini verir.
 
-![enter image description here](https://i.hizliresim.com/lOYJjJ.png)
+![enter image description here](https://i.hizliresim.com/RnOz96.png)
 
 
 date
 -
 İsminden de anlaşılacağı gibi bu komut bize sistemin o anki tarih ve saat bilgisini veriyor.
 
-![enter image description here](https://i.hizliresim.com/y0dY4k.png)
+![enter image description here](https://i.hizliresim.com/W7G392.png)
 
 cal
 -
@@ -154,13 +152,13 @@ which
 -
 Herhangi bir komutun tam yol bilgisini öğrenmek için kullanılır.
 
-![enter image description here](https://i.hizliresim.com/D7XzBo.png)
+![enter image description here](https://i.hizliresim.com/NZO0g5.png)
 
 whereis
 -
 Bu komutunda özel parametreleri vardır man sayfasından kontrol edin lütfen. Bunun dışında parametresiz hali <code>apropos</code> komutuna benzer şekilde bir çıktı verir. Ancak <code>apropos</code> komutundan farklı olarak ilgili komutun man sayfası konumunun tam dizin adresini belirtir.
 
-![enter image description here](https://i.hizliresim.com/dOjQPp.png)
+![enter image description here](https://i.hizliresim.com/kOXdLA.png)
 
 Ayrıca diğer parametrelerini de kesinlikle man sayfasından inceleyin.
 
