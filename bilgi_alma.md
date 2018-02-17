@@ -126,7 +126,7 @@ date
 -
 İsminden de anlaşılacağı gibi bu komut bize sistemin o anki tarih ve saat bilgisini veriyor.
 
-![enter image description here](https://i.hizliresim.com/W7G392.png)
+![enter image description here](https://i.hizliresim.com/2JEz8j.png)
 
 cal
 -
@@ -142,7 +142,7 @@ Eğer 2002 yılının Ocak ayına gitmek istiyorsam komutumu `cal 1 2002` şekli
 
 ![](https://i.hizliresim.com/Vr3nkj.png)
 
-Eğer ileri bir tarihe yani 3003 yılının Haziran ayına gitmek istersem de komutumu `cal 6 3003`şeklinde kullanırım.
+Eğer ileri bir tarihe yani 3003 yılının Haziran ayına gitmek istersem de komutumu `cal 6 3003` şeklinde kullanırım.
 
 ![](https://i.hizliresim.com/nOJ6XB.png)
 
