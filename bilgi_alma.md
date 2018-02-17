@@ -130,6 +130,26 @@ date
 
 ![enter image description here](https://i.hizliresim.com/y0dY4k.png)
 
+cal
+-
+Komutumuz Türkçe olarak takvim anlamına gelen İnglizce "Calendar" ifadesinin kısaltmasıdır. Komutumuz tek başına kullanıldığında bize konsol ekranı üzerinden bulunduğumuz tarihin takvim bilgisini verir.
+
+![](https://i.hizliresim.com/z0Jkd4.png)
+
+Ancak daha önceki veya sonraki tarihlerde yer alan takvim bilgilerine komutumuzu `cal ay yıl` şeklinde kullanarak ulaşabiliyoruz. 
+
+Örnek üzerinden açıklayalım.
+
+Eğer 2002 yılının Ocak ayına gitmek istiyorsam komutumu `cal 1 2002` şeklinde kullanırım.
+
+![](https://i.hizliresim.com/Vr3nkj.png)
+
+Eğer ileri bir tarihe yani 3003 yılının Haziran ayına gitmek istersem de komutumu `cal 6 3003`şeklinde kullanırım.
+
+![](https://i.hizliresim.com/nOJ6XB.png)
+
+Gördüğünüz gibi ileri geri herhangi bir tarih hakkında takvim bilgisi almak istesek `cal` komutunu kullanabiliyoruz.
+
 which
 -
 Herhangi bir komutun tam yol bilgisini öğrenmek için kullanılır.
