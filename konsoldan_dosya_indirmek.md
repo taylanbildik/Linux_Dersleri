@@ -79,7 +79,7 @@ Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini `ls -l` k
 Çıktıları karşılaştıracak olursanız başta **638681** bayt'ta kalan indirme sonuç itibari ile **4379880** bayt yani dosyanın tamamı şeklinde indirilmiş oldu. Yani dosya indirme işlemi yarıda dahi kesilse en baştan indirmemize gerek kalmadan `wget` komutunun `-c` parametresi sayesinde kaldığı yerden indirme işlemini devam ettirebiliyoruz.
 
 **İndirme Hızını Belirlemek :**
-Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceğini belirleyebiliriz. Bu limitleme işlemi için komutumuzu `wget --limit-rate=indirme_limitiK /indirme_linki` şeklinde kullanıyoruz.
+Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceğini belirleyebiliriz. Bu limitleme işlemi için komutumuzu `wget --limit-rate=indirme_limitiK indirme_linki` şeklinde kullanıyoruz.
 
 Örnek olması açısından ben dosyayı indirirken 300KB/s hızında indirme limiti koyuyorum.
 
