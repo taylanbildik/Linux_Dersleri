@@ -63,18 +63,19 @@ Ayrıca aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayar
 /bin
 -
 
-İşletim sisteminizi kullanmak için gereken birçok komut `/bin` klasörü altındadır. cat, mkdir, cp, ls, mv, rm vb. temel komutların hepsi buradadır. Sistem boot ettiğinde, ilk olarak `/bin` klasörü çalışır hâle getirilir. Sistemde ne kadar ciddi bir sorun olursa olsun `/bin` klasöründeki komutlar çalışmaya devam eder. Sisteminizde bir sorun meydana geldiğinde `/bin` klasörü altındaki komutları kullanarak sistemi onarabiliriz.
+İşletim sisteminizi kullanmak için gereken birçok komut `/bin` klasörü altındadır. cat, mkdir, cp, ls, mv, rm vb. temel komutların hepsi buradadır. Sistem boot ettiğinde, ilk olarak `/bin` klasörü çalışır hâle getirilir. Sistemde ne kadar ciddi bir sorun olursa olsun `/bin` klasöründeki komutlar çalışmaya devam eder. Bu sayede sisteminizde bir sorun meydana geldiğinde `/bin` klasörü altındaki temel komutları kullanarak sistemi onarabiliriz.
 
 /boot
 -
 
-Boot, işletim sisteminin yüklenme evresidir. `/boot` klasörü, boot işlemi için gerekli olan tüm dosyaları içerir (çekirdek görüntüsü, sistem haritası, önyükleyici yapılandırması gibi). Bilgisayarın başlangıç (boot) aşamasında gerekmeyen ayar ve yapılandırma dosyaları burada bulunmaz; başka klasörlerden gerektiği zamanlarda yüklenir.
+Boot, işletim sisteminin yüklenme evresidir. `/boot` klasörü, boot işlemi için gerekli olan tüm dosyaları içerir (çekirdek görüntüsü, sistem haritası, önyükleyici yapılandırması gibi). Bilgisayarın başlangıç (boot) aşamasında gerekmeyen ayar ve yapılandırma dosyaları burada bulunmaz; başka klasörlerden gerektiği zamanlarda yüklenir. 
 
 /dev
 -
 
 Linux'ta her şey bir dosyadır; donanım aygıtları da öyle. USB girişleri, seri ve paralel portlar, depolama ortamları, CD-ROM'lar vb... Bütün aygıtlar `/dev` klasörü altında tutulan dosyalardan ibarettir. Örneğin `/dev` altında bulunan `sda1` dosyası, sabit diskinizi temsil eder. Ya da `/dev/dsp`, ses aygıtınızdır. Bunları programlar vasıtasıyla kullanırız; ancak bu dosyalar üzerinden doğrudan müdahale etmek de mümkündür.
 
+Birkaç aygıt dosyası ve işlevi.
 
 <div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th>Konumu</th><th>Cihaz Açıklaması</th></tr></thead><tbody><tr><td><kbd>/dev/ttyS0</kbd></td><td>Fare, modem gibi aygıtların bağlandığı seri port (COM 1).</td></tr><tr><td><kbd>/dev/psaux</kbd></td><td>PS/2 girişi; fare ve klavyeler içindir.</td></tr><tr><td><kbd>/dev/lp0</kbd></td><td>Paralel port (LPT 1); yazıcı, tarayıcı vs...</td></tr><tr><td><kbd>/dev/dsp</kbd></td><td>Birincil ses aygıtı
 </td></tr><tr><td><kbd>/dev/usb </kbd></td><td>USB aygıtları</td></tr><tr><td><kbd>/dev/sda</kbd></td><td>SCSI aygıtlar, USB bellekler, harici CD-ROM'lar vs...</td></tr><tr><td><kbd>/dev/scd</kbd></td><td>SCSI CD-ROM'lar</td></tr><tr><td><kbd>/dev/js0 </kbd></td><td>Oyun çubuğu (Joystick)</td></tr></tbody></table></div>
@@ -83,14 +84,13 @@ Linux'ta her şey bir dosyadır; donanım aygıtları da öyle. USB girişleri, 
 /etc
 -
 
-İşletim sistemini bir vücuda benzetirsek, `/etc` klasörünü sinir sisteminin merkezi olarak görebiliriz. Sisteme dair bütün ayarları barındırır, bulunduğu bilgisayara özel birçok yapılandırma bilgisini içerir. Durağandır, çalıştırılmak için değildir.
+İşletim sistemini bir vücuda benzetirsek, `/etc` klasörünü sinir sisteminin merkezi olarak görebiliriz. Sisteme dair bütün ayarları ve bilgisayara özel birçok yapılandırma bilgisini içerir.
 
 /home
 -
 
-`home` klasörü kullanıcıların kalesi olarak tabir edilir. `home` klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin /home/ahmet , /home/ayşe gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları tutulmaktadır. Kullanıcının çeşitli programlarda yaptığı ayarları barındıran dosyalar gizli dosya oldukları için görüntülenebilmeleri için gizli dosyaların görünür hale getirilmesi gereklidir. Kullanıcılar `/home` dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. `/home` dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.
+`home` klasörü kullanıcıların kalesi olarak tabir edilir. `home` klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin /home/ahmet , /home/ayşe gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları tutulmaktadır. Ayrıca kullanıcılar `/home` dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. `/home` dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.
 
-`/home` dizini, aynı zamanda kullanıcı ayar dosyalarını barındırıyor olması nedeniyle bu dizinini, Windows'taki `Documents and Settings` ya da `Application` klasörlerine benzetebiliriz.
 
 /initrd
 -
@@ -100,24 +100,28 @@ initrd, "initial ramdisk" kısaltmasıdır. Anlamı, yaklaşık olarak "Başlang
 /lib
 -
 
-Çekirdek modülleri ve paylaşılan kütüphane dosyaları bu klasörde bulunur. Var olan çekirdek modüllerini `/lib/modules/[versiyon_numarası]` içerisinde bulabilirsiniz. Bahsedilen kütüphane dosyalarıysa, sistemi başlatmak ve `/bin` ile `/sbin` içerisindeki komutları çalıştırmak için gereklidir. Paylaşılan kütüphane dosyalarını, Windows'ta DLL ile eş tutabiliriz. Linux'ta kütüphane dosyalarının sonu ".so" ile biter.
+Çekirdek modülleri ve paylaşılan kütüphane dosyaları bu klasörde bulunur. Kütüphane dosyaları, sistemi başlatmak ve `/bin` ile `/sbin` içerisindeki komutları çalıştırmak için gereklidir. Paylaşılan kütüphane dosyalarını, Windows'ta DLL ile eş tutabiliriz. Linux'ta kütüphane dosyalarının sonu ".so" ile biter.
+
+/lib64 /lib32
+-
+Halen 32 bit ve 64 bit sistemler arasında geçiş yapıyoruz. Bu nedenle, kütüphane dosyalarının derleme süresi boyunca kullanılan kayıt boyutunu netleştiren `/lib32` ve `/lib64` adlı dizinlerle karşılaşabilirsiniz. Yani bu sayede 64 bitlik bir bilgisayar, eski uygulamalara uyumluluk için bazı 32 bitlik ikili dosyalara ve kütüphanelere sahip olabilir.
 
 /lost+found
 -
 
-İngilizce bir terim olan “Lost and Found” kayıp eşya bürosu demektir. `/lost+found` klasörü de tam olarak bu işlevi görmektedir. Bazen sisteminizde herhangi bir problem olur; örneğin bilgisayarı resetlerseniz, elektrik gider sonrasında bilgisayarı yeniden başlatırsınız. Bu gibi durumlarda Linux'ta fsck (File System Check) komutu devreye sokulur. Bu komut Windows'taki Scandisk programına benzetilebilir. Düzeltilemeyen bir sorun varsa, bağlantıları kopmuş kayıp dosyalar ortaya çıkmışsa, bunlar `/lost+found` altına atılır. Kısaca özetlersek; kötü bir sistem kapanmasından sonra, olması gereken bazı dosyaları bulamıyorsanız, kayıp eşya bürosuna bakmanızda yarar var. Ancak bu klasöre girmek istediğinizde erişimi engelleyen bir ileti ile karşılaşırsınız, bu klasörün içeriğine ulaşabilmek için dosya yöneticisini tam yetki ile açmanız gereklidir.
+İngilizce bir terim olan “Lost and Found” kayıp eşya bürosu demektir. `/lost+found` klasörü de tam olarak bu işlevi görmektedir. Bazen sisteminizde herhangi bir problem olur; örneğin bilgisayarı resetlerseniz, elektrik gider sonrasında bilgisayarı yeniden başlatırsınız. Bu gibi durumlarda Linux'ta fsck (File System Check) komutu devreye sokulur. Düzeltilemeyen bir sorun varsa, bağlantıları kopmuş kayıp dosyalar ortaya çıkmışsa, bunlar `/lost+found` altına atılır. Kısaca özetlersek; kötü bir sistem kapanmasından sonra, olması gereken bazı dosyaları bulamıyorsanız, kayıp eşya bürosuna bakmanızda yarar var. 
 
 /media
 -
 
-Kaldırılabilir aygıtların (USB bellek, SD kart, CD vb.) ve sistem bağlangıcında bağlanmayan sabit disk bölümlerinin bağlanma noktasıdır. Söz konusu depolama ortamları sisteme bağlanmamış iken dizin içeriği boş görünür.
+Kaldırılabilir aygıtların (USB bellek, SD kart, CD vb.) ve sistem başlangıcında bağlanmayan sabit disk bölümlerinin bağlanma noktasıdır. Söz konusu depolama ortamları sisteme bağlanmamış iken dizin içeriği boş görünür.
 
 /mnt
 -
 
 İşletim sisteminin kurulu olduğu disk bölümü hariç olmak üzere sistem başlangıcında bağlanan sabit disk bölümleri ve donanım aygıtlarının bağlanma noktasıdır. (İşletim sisteminin kurulu olduğu disk bölümünün içeriği ise doğrudan `/` (kök dizin) altında bulunur.)
 
-Bağlama(mount) işlemi, bir disk bölümünün sisteme bağlanarak kullanıma hazır hâle gelmesi demektir. Nereye bağladığınız sizin tercihinizdir, değiştirmeniz mümkündür. Yani bir diski, `/media` veya `/mnt` klasörüne ya da bir başka yere bağlamanız fark etmeyecektir. `/media` ve `/mnt` genel kabul görmüş bağlantı noktalarıdır.
+Bağlama(mount) işlemi, bir disk bölümünün sisteme bağlanarak kullanıma hazır hâle gelmesi demektir. Nereye bağladığınız sizin tercihinizdir, değiştirmeniz mümkündür. Yani bir diski, `/media` veya `/mnt` klasörüne ya da bir başka yere bağlamanız fark etmeyecektir. `/media` ve `/mnt` sadece genel kabul görmüş bağlantı noktalarıdır.
 
 /opt
 -
@@ -131,15 +135,18 @@ Elbette üçüncü parti bir programı kurarken bu kurulum konumunu değiştireb
 
 Süreçler, sistem belleği, bağlı aygıtlar, donanım yapılandırmalarıyla ilgili bilgileri içeren özel bir “sanal” dosya sistemidir. Bildiğimiz anlamda fiziksel dosyalar bulundurmaz; sistem durumuna dair bilgi içeren sanal dosyaları vardır. Bir bilgi alma merkezi olarak görülebilir, birçok uygulama buradaki bilgilerden yararlanmaktadır. Örneğin `cat /proc/swaps` yazarak sisteminizdeki takas dosyalarına dair bilgi alabilir ya da `cat /proc/cpuinfo` komutuyla işlemcinizin özelliklerini görebilirsiniz.
 
-`/proc` klasörü içersindeki dosyalar, sadece sistem durumunu görüntülemek için kullanılmaz, gerektiğinde sistemde ayarlama yapmak için de kullanılabilir. Fakat son kullanıcılara hitap eden bir konu değildir.
+`/proc` klasörü içersindeki dosyalar, sadece sistem durumunu görüntülemek için kullanılmaz, gerektiğinde sistemde ayarlama yapmak için de kullanılabilir.
 
 /root
 -
 
-Linux/Unix sistemlerde, işletim sistemine her türlü müdahalede bulunabilme yetkisine sahip, "root" adıyla tanımlanmış, süper yetkili özel bir kullanıcı hesabı vardır. `/root` dizini, bu özel kullanıcı hesabının ev dizinidir. Root kullanıcısına "kök kullanıcı" da denilir.
+Linux/Unix sistemlerde, işletim sistemine her türlü müdahalede bulunabilme yetkisine sahip, "root" adıyla tanımlanmış, süper yetkili özel bir kullanıcı hesabı vardır. `/root` dizini, bu özel kullanıcı hesabının ev dizinidir. Daha iyi anlamak adına örneğin; "burak" isimli kullanıcı hesabının ev dizini `/home/burak` şeklindeyken "root" kullanıcısının ev dizini `/root` dizini şeklindedir. Root kullanıcısına "kök kullanıcı" da denilir.
 
-Kullanıcıların, sistemi root hesabıyla açma ihtiyacı bulunmaması nedeniyle ve ayrıca sistemi root olarak açmanın güvenlik zaafiyetine yol açabilecek olması nedeniyle pek çok Linux dağıtımında root hesabıyla sisteme giriş yapılması, öntanımlı olarak engellemiştir. Linux dağıtımlarında, yetki gerektiren bir işlemin yapılabilmesi için sistem root olarak açılmaz, bunun yerine geçici olarak root hakları elde edilir. Bunun için, önce bir uçbirim komut satırı penceresi açılır. Sonra kullanmakta olduğunuz Linux dağıtımına bağlı olarak `su`, `su -` , `su root` ya da `sudo` komutlarından biri girilir ve ardından root kullanıcısının (ya da yönetici hesabın) parolası girilir.
+Kullanıcıların, sistemi root hesabıyla açma ihtiyacı bulunmaması nedeniyle ve ayrıca sistemi root olarak açmanın güvenlik zaafiyetine yol açabilecek olması nedeniyle pek çok Linux dağıtımında root hesabıyla sisteme giriş yapılması, öntanımlı olarak engellemiştir. Ancak istisnaya dağil olan "Kali Linux" dağıtımı penetrasyon ve bunun gibi işlemler için oluşturulduğundan kullanıcılar için kolaylık olması için tam yetkili olarak çalışır.
 
+/run
+-
+Son önyüklemeden bu yana çalışan sistemle ilgili bilgileri tutar. Tutulan bilgilere örnek vermek gerekirse şu anda oturum açmış kullanıcılar, sisteme bağlanan aygıtlar, ağ ile bağlantı(network) değişimleri ve bunun gibi bilgileri tutar.
 
 /sbin
 -
@@ -153,7 +160,7 @@ Unix ilk çıktığında, kullanıcılara ait ev klasörleri, `/usr` altında tu
 
 Kurduğunuz pek çok program `/usr` içine kurulur. Her ne kadar Linux'ta kurulan bir programa ait tüm dosyalar `usr` dizini içine atılmıyor olsa da `usr` dizini Windows'taki `Program Files` klasörü ile benzer görev görmektedir. `/opt` adresi işletim sistemi dışında gelen 3.parti programlar içindir. Fakat işletim sistemi aracılığıyla ya da paket yönetim sistemlerini kullanarak yüklediğiniz her şey `/usr` altına aktarılır. Aynı zamanda yüklediğiniz programların çalışmak için ihtiyaç duyacağı kütüphane dosyaları, `/usr/lib` altındadır.
 
-`/usr`, daha geniş bir tanımla; tüm kullanıcılarca paylaşılan verileri (programlar, komutlar, kütüphaneler, dokümanlar gibi) içeren dizindir. `/usr` ile ilgili söylenebilecek bir başka nokta da "local" klasörüdür. Linux, sunucu olarak birçok istemciye hizmet verebilecek bir işletim sistemidir. Bir Linux sunucu (server) kurarsanız, ona bağlanan yüzlerce istemci (client) olabilir. Her istemci bilgisayara, `/usr` altındaki programların ayrı ayrı yüklenmesi gerekmez; bir başka konumdan bu komutları çalıştırabilirsiniz. Ancak `/usr` altında bulunan "local" klasörü sadece kullandığınız makineye özeldir. Örneğin `/usr/local/bin` klasörü içinde bulunan bütün komutlar, direkt olarak kullandığınız makineye yüklenmiştir. `/usr/bin` komutları ise geneldir ve bir ağ üstündeki bütün makinelerden erişilebilir. "local" gördüğünüzde, bunun sadece sizin makinenize özel olduğunu bilin.
+`/usr`, daha geniş bir tanımla; tüm kullanıcılarca paylaşılan verileri (programlar, komutlar, kütüphaneler, dokümanlar gibi) içeren dizindir. `/usr` ile ilgili söylenebilecek bir başka nokta da "local" klasörüdür. Linux, sunucu olarak birçok istemciye hizmet verebilecek bir işletim sistemidir. Bir Linux sunucu (server) kurarsanız, ona bağlanan yüzlerce istemci (client) olabilir. Her istemci bilgisayara, `/usr` altındaki programların ayrı ayrı yüklenmesi gerekmez; bir başka konumdan bu komutları çalıştırabilirsiniz. Ancak `/usr` altında bulunan "local" klasörü sadece kullandığınız makineye özeldir. Örneğin `/usr/local/bin` klasörü içinde bulunan bütün komutlar, direkt olarak kullandığınız makineye yüklenmiştir. `/usr/bin` komutları ise geneldir ve bir ağ üstündeki bütün makinelerden erişilebilir. Yani neticede "local" ifadesini gördüğünüzde, bunun sadece sizin makinenize özel olduğunu bilin.
 
 /var
 -
@@ -163,7 +170,7 @@ Log dosyaları, e-posta ve yazıcı kuyrukları gibi değişken sistem bilgileri
 /tmp
 -
 
-Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olarak kullanır. `/tmp` klasörünün içeriği genellikle KB'lar mertebesinde kalır ve genellikle işletim sistemi yeniden başlarken içindeki dosyalar silinir. Her ne kadar `tmp` klasörü geçici dosyalar için de olsa bu klasör altında bulunan dosyaları, ne yaptığınızdan emin değilseniz, kesinlikle silmemelisiniz! Aksi taktirde sismetinizde ya da bazı programlarda sorun çıkabilir. Örneğin açık bir soket dosyasını sildiğinizde, onu kullanan programa ve kendinize sorun çıkartabilirsiniz.
+Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olarak kullanır. `/tmp` klasörünün içeriği genellikle KB'lar mertebesinde kalır ve genellikle işletim sistemi yeniden başlarken içindeki dosyalar silinir. Her ne kadar `tmp` klasörü geçici dosyalar için de olsa bu klasör altında bulunan dosyaları, ne yaptığınızdan emin değilseniz, kesinlikle silmemelisiniz! Aksi taktirde sismetinizde ya da bazı programlarda sorun çıkabilir. 
 
 ----------
 
