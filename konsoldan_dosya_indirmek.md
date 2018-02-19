@@ -23,7 +23,7 @@ Ve.. bulunduğum dizin içerisine istediğim dosya(aircrack-ng) indirilmiş oldu
 
 **Toplu Dosya İndirmek :**
 
-Bir metin belgesinin içerisine kayıt ettiğimiz linklerde yer alan dosyaları tek seferde `wget` komutu ile beraber `-i`parametresi kullanarak tek seferde indirmemiz mümkün. Hemen örnek üzerinden bu durumu görelim.
+Bir metin belgesinin içerisine kayıt ettiğimiz linklerde yer alan dosyaları tek seferde `wget` komutu ile beraber `-i` parametresi kullanarak indirmemiz mümkün. Hemen örnek üzerinden bu durumu görelim.
 
 Örneğin ben T.C Resmi Gazetesi pdflerinden 5 tanesini aynı anda indirmek istiyorum diyelim. Bunun için bu pdflerin indirme linklerini bir metin belgesine kaydetmem gerekiyor. Ben bu işlemi `leafpad resmi_gazeteler` komutu ile "resmi_gazeteler" isimli bir dosya oluşturarak ve içerisine gerekli linkleri ekleyerek gerçekleştiriyorum.
 
