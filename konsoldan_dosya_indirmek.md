@@ -1,12 +1,12 @@
 Konsol Üzerinden Dosya İndirmek
 =
 
-İndirmek istediğimiz dosyanın direk indirme linkini biliyorsak bu dosyamızı herhangi bir ekstra program kullanmadan veya tarayıcıya ihtiyaç duymadan konsol üzerinden `wget` komutu yardımı ile indirmemiz mümkün. Gelin anlatıma `wget` komutunu ve kullanım şekillerini anlatarak devam edelim.
+İndirmek istediğimiz dosyanın direk indirme linkini biliyorsak bu dosyamızı herhangi bir ekstra program kullanmadan veya tarayıcıya ihtiyaç duymadan konsol üzerinden `wget` komutu yardımı ile indirmemiz mümkün. Gelin anlatıma `wget` komutunu ve kullanım şekillerini açıklayarak devam edelim.
 
 wget
 -
 
-Eğer daha önce linux ile ilgili yönergeler okumuş veya videolar izlediyseniz `wget` komutuna mutlaka denk gelmişsinizdir. Kullanımı oldukça kolaydır ve parametreler alarak çalışır. Birkaç kullanım şekline değinecek olursak:
+Eğer daha önce linux ile ilgili yönergeler okuduysanız veya videolar izlediyseniz `wget` komutuna mutlaka denk gelmişsinizdir. Kullanımı oldukça kolaydır ve parametreler alarak çalışır. Birkaç kullanım şekline değinecek olursak:
 
 **Tekil Dosya İndirmek :**
 
