@@ -175,6 +175,7 @@ Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olar
 ----------
 
 Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik şekilde aşağıdaki görsel ile verdim. Eğer konuyu anlayarak ve özümseyerek okuduysanız bu grafiğe bakarak bir çırpıda hangi dosyanın genel olanarak hangi işlevde olduğunu hatırlayabilirsiniz.
-![](https://i.hizliresim.com/Z9Ylna.png)
+![](https://i.hizliresim.com/y0qlPN.png)
+
 
 **Kaynakça :**[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html)
