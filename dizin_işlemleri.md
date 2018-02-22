@@ -102,17 +102,10 @@ Düğüm numarasını verir. Düğüm(inode) numarası nedir diyecek olursanız 
 
 ![enter image description here](https://i.hizliresim.com/jyz1oL.png)
 
-### ls -r
-
-
-Konsola basılan çıktıyı ters çevirerek basar. Karşılaştırmanız açısından normal liste sırası ve <code>-r</code> parametreli ters liste sırasını aşağıda veriyorum.
-
-![enter image description here](https://i.hizliresim.com/BLo6kM.png)
-
 ### ls -S
 
 
-Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralanacağından komutun daha net anlaşılması için <kbd>/root/run<kbd> dizini altında işlem yaptım.
+Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralanacağından komutun daha net anlaşılması için <kbd>/root/run</kbd> dizini altında işlem yaptım.
 
 ![enter image description here](https://i.hizliresim.com/vjY8q4.png)
 
@@ -122,6 +115,21 @@ Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralan
 Dosyanın değiştirilme tarihine göre sıralar.
 
 ![enter image description here](https://i.hizliresim.com/Lbdgr0.png)
+
+### ls -r
+
+
+Konsola basılan çıktıyı ters çevirerek basar. Karşılaştırmanız açısından normal liste sırası ve <code>-r</code> parametreli ters liste sırasını aşağıda veriyorum.
+
+![enter image description here](https://i.hizliresim.com/BLo6kM.png)
+
+Örneğin `ls -tl` komutu ile dosyları oluşturulma tarihlerine göre en yeniden eskiye doğru sıraldık. Bu sıralayı en eskiden yeniye doğru yapmak istersek komutumuza `r` parametresi ekleyerek kullanmamız gerekir.
+
+<img src="https://i.hizliresim.com/3EzdB5.png" width="875">
+
+Bir başka örnek `ls -Sl` komutu ile dosya ve dizinleri büyükten küçüğe sıralarken eğer komutumuza birde `r` parametresi eklersek bu sefer komutumuzun çıktısı ters şekilde yani küçükten büyüğe doğru sıralanmış olacak.
+
+<img src="https://i.hizliresim.com/oOVJGR.png" width="875">
 
 Yukarıda bahsi geçen <code>ls</code> komutu, açıkladığım parametreleri dışında da oldukça fazla parametreye sahip. Bunları öğrenmek için man kılavuz sayfasını inceleyin lütfen.
 
