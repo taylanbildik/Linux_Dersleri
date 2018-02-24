@@ -19,13 +19,20 @@ Peki bir tane değil de birden fazla dosya oluşturmak istersek. İşte bunun i�
 
 Çıktıda görüldüğü gibi aynı andan 3 dosya oluşturmayı başardık.
 
-Aslında <code>touch</code> komutunun çok farklı kullanım yöntemleri de mevcut ancak ben son olarak ileri bir tarihte otomatik olarak dosya oluşturmayı göstererek bu komutun konu anlatımını burada sonlandıracağım.
+Aslında <code>touch</code> komutunun çok farklı kullanım yöntemleri de mevcut ancak ben son olarak dosyların tarih etiketlerini nasıl değiştirebiliriz bunu görelim.
 
-İleri bir tarihe tıpkı alarm kurarcasına planlanmış bir şekilde dosya oluşturmak mümkün. Bunun için <code>t</code> parametresini kullanacağız. Kullanımı ise <code>touch -t YYYYAAGGSSDD.SS dosya_adı</code> şeklindedir. Ben burada örnek olması açısından tarih olarak 2018.01.09 ve saat 16:35:30  zamanlamasını kullanıyorum. Nasıl kullanıldığını daha net anlamak için örneği inceleyebilirsiniz.
+Dosyamızın tarih etiketini düzenlemek için touch komutunun <code>t</code> parametresini kullanacağız. Kullanımı ise <code>touch -t YYYYAAGGSSDD.SS dosya_adı</code> şeklindedir.
+Öncelikle dosyamızın mevcut tarih etiketine bakalım.
+![](https://i.hizliresim.com/m2MpYV.png)
 
-![enter image description here](https://i.hizliresim.com/3E2AOj.png)
+Şimdi dosyamızın tarih etiketini daha önceki bir tarihe çevirelim.
+Ben burada örnek olması açısından tarih olarak 2015.01.01 ve saat 22:15:32  zamanlamasını kullanıyorum. Nasıl kullanıldığını daha net anlamak için örneği inceleyebilirsiniz.
 
-Neticede "yeni_belge" isimli dosya benim belirtmiş olduğum ileri bir tarihte kendiliğinden oluşmuş oldu.
+![enter image description here](https://i.hizliresim.com/4ajQ64.png)
+
+Gördüğünüz gibi dosyamın tarih etiketi değişmiş oldu. Bu değişme işlemini ileri veya geri tüm tarihler için kullanabilirsiniz.
+
+
 
 cat
 -
@@ -298,21 +305,21 @@ Bende "hasan" ismini bu sefer "isimler" adıyla başlayan belgeler içerisinde a
 Buradaki asıl kullanım amacı; komutu, belirli isimlere sahip olan dosyalar içerisinden anahtar kelimeyi aramak üzerine sınırlandırmak.
 
 Bunların dışında arama sonucunun görüntülenmesini de sınırlandırabiliriz;
-Örnek olması açısından "filazof" isimli dosyadan "jo" ile başlayan isimleri listeliyorum.
+Örnek olması açısından "filozof" isimli dosyadan "jo" ile başlayan isimleri listeliyorum.
 
-![enter image description here](https://i.hizliresim.com/p6va7r.png)
+![enter image description here](https://i.hizliresim.com/vj6VvD.png)
 
 Arama sonucu sonrasında kaç satır gözükeceğini `-A` parametresi sayesinde `grep -A görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
 
-![enter image description here](https://i.hizliresim.com/D7oAVo.png)
+![enter image description here](https://i.hizliresim.com/lOqp6p.png)
 
 Sonucun üzerindeki kaç satırın gözükeceğini `-B` parametresi sayesinde `grep -B görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
 
-![enter image description here](https://i.hizliresim.com/EPQ0nz.png)
+![enter image description here](https://i.hizliresim.com/Vr9N1R.png)
 
 Baştan ve sondan kaç satır görüntüleneceğini ise `-C` parametresi sayesinde `grep -C görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
 
-![enter image description here](https://i.hizliresim.com/kOZa2q.png)
+![enter image description here](https://i.hizliresim.com/nOQp3a.png)
 
 Şimdi ise sıklıkla kullanılan pipe ile `grep` kullanımına bakalım. Pipe nedir diyecek olursanız kabaca iki işlemi(process) birbirine bağlayan `|` görünümündeki yardımcı argüman diyebiliriz. Zaten daha önce de iki işlemin birbirine bağlanması gereken durumlarla karşılaşmış ve pipe kullanmıştık.
 
@@ -389,7 +396,6 @@ Desktop dizinindeyken ls komutu ile bulunduğumuz dizindeki dosyaları listeliyo
 `ls` komutu ile buradaki dosyaları listeliyoruz. Bu dizinde ise yalnızca "yeni" isimli bir klasör mevcut.("filazof" isimli dosyanın bu konumda bulunmadığını teyit etmiş olduk.)
 
 `cd ..` komutu ile bir önceki dizine dönüyoruz.
-
 "filazof" dosyasını <kbd>yeni_dizin</kbd> konumuna taşımak üzere `cp filazof yeni_dizin` şeklinde komutumuzu kullanıyoruz.
 
 Daha sonrasında ise `cd yeni_dizin` komutu ile yeni_dizin konumuna gidip `ls` komutu yazarak "filazof" isimli dosyamızın kopyalandığını teyit etmiş oluyoruz.
@@ -434,7 +440,7 @@ Dosya dizin silme işlevinde kullandığımız komuttur. Kullanımı `rm silinec
 ![enter image description here](https://i.hizliresim.com/vjYDnD.png)
 
 
-Dosyalar tekil olarak silinebileceği gibi çoklu silme işlemi de gerçekleştirilebilir. Hatta daha önce gördüğümüz joker karakterleri de kullanırsak isim, uzantı gibi filtrelere göre sınırlandırarak toplu dosya silme işlemi gerçekleştirebiliriz. Örnek olması açısından masaüstünde yer alan 2 adat <kbd>.py</kbd> uzantılı dosyayı tek seferde `rm *.py` komutu ile siliyorum.
+Dosyalar tekil olarak silinebileceği gibi çoklu silme işlemi de gerçekleştirilebilir. Hatta daha önce gördüğümüz joker karakterleri de kullanırsak isim, uzantı gibi filtrelere göre sınırlandırarak toplu dosya silme işlemi gerçekleştirebiliriz. Örnek olması açısından masaüstünde yer alan 2 adet <kbd>.py</kbd> uzantılı dosyayı tek seferde `rm *.py` komutu ile siliyorum.
 
 ![enter image description here](https://i.hizliresim.com/1JjoMb.png)
 
