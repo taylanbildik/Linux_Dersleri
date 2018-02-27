@@ -1,6 +1,10 @@
-![enter image description here](https://media.giphy.com/media/l2Y7XKVfoEJLxoLIeM/giphy.gif)
+<p align="center">
+  <img src="https://media.giphy.com/media/l2Y7XKVfoEJLxoLIeM/giphy.gif">
+</p>
 
-***Kali linux üzerinden işlenen adım adım linux komut satırı dersleri dokümantasyonu kaynağıdır.***
+<p align="center" style="bold">
+<b>Kali linux üzerinden işlenen adım adım linux komut satırı dersleri dokümantasyonu kaynağıdır.</b><br>
+</p>
 
 Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
 -
