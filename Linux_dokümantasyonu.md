@@ -50,15 +50,22 @@ Linux bir işletim sistemi değil **çekirdektir(kernel)** GNU/Linux bütünü b
 Gerekli Ortamın Kurulması
 =
 
-Linux kurmak veya kurmadan kullanmak için çok fazla metod bulunuyor. Ben sadece içlerinde bilmediğiniz bir alternatif metod olması ihtimaline karşı genel kullanımları aşağıda listeliyorum. Şimdi neden kurulum detaylarını anlatmıyorsun diyecek olursanız, burada izahı dokümantasyonu uzatacak ve resim kullanmadığım için çok da verimli olmayacaktır. Siz en iyisi hem bana destek olmak hemde de kurulumları videolu şekilde takip etmek için [buradan](https://www.udemy.com/) kursumu satın alarak devam edin. Ancak hemen önyargıya kapılıp sinirlenmeyin lütfen sizler bu kursu almadan da internet üzerinden araştırarak çok fazla kaynağa ulaşabilirsiniz. Fakat benim videolarımın artısı buraya bağlantılı ve açıklık getirici şekilde ilerliyor olması. Yani tamamen sizlerin isteğine bağlı bir durum.
+Linux kurmak veya kurmadan kullanmak için çok fazla metod bulunuyor. Ben sadece içlerinde bilmediğiniz bir alternatif metod olması ihtimaline karşı genel kullanımları aşağıda listeliyorum. 
 
 Kurulum ve Kullanım Metodları
 -
  
-Sanal olarak kurulum (Vmware & Virtualbox)
-İkincil işletim sistemi olarak kurmak (Dualboot)
-Live versiyon olarak kullanmak.
-Linux VPS aracılığı ile kullanmak.
+- Sanal olarak kurulum (Vmware & Virtualbox)
+- İkincil işletim sistemi olarak kurmak (Dualboot)
+- Live versiyon olarak kullanmak.
+- Linux VPS aracılığı ile kullanmak.
+
+Şimdi neden kurulum detaylarını anlatmıyorsun diyecek olursanız, burada izahı dokümantasyonu uzatacak ve çok da verimli olmayacaktır. Siz en iyisi hem bana destek olmak hemde de kurulumları ve diğer tüm içerikleri videolu şekilde takip etmek için [buradan](https://www.udemy.com/) kursumu satın alarak devam edin. Ancak bu kursu almadan da internet üzerinden araştırarak çok fazla kaynağa ulaşabilirsiniz. Fakat benim videolarımın artısı buraya bağlantılı ve açıklık getirici şekilde ilerliyor olması. Yani tamamen sizlerin isteğine bağlı bir durum. Ben yine de kursa bir göz atmanızı öneririm.
+
+
+<a href="https://www.udemy.com/">
+  <img src="https://i.hizliresim.com/PlGEAv.png">
+</a>
 
 
 ----------
@@ -401,22 +408,37 @@ Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 
 Yardım Almak
 ===========
 
-
 Bu kısımda bir nevi öğrenmeyi öğreneceğiz. Bunu da Linux sistemlerinin sahip olduğu çok geniş çaplı yardım sistemini kullanarak başaracağız. Linux sistemlerinde yer alan bu geniş çaplı yardım mekanizmasının bulunmasının birçok nedeni var. Ancak genel olarak, çok fazla komutun çok fazla argüman alması veya her bir programın kendine has kurulum ve kullanım komutlarının olmasından kaynaklanıyor. Linux'un kendi sahip olduğu yardım sayfalarının dışında da birçok yardım alma konuları mevcut. Zaten zamanla göreceksiniz ki Linux'a kurmak için edindiğimiz hemen her araç veya program kurulum dosyalarının beraberinde kurulum ve kullanımla ilgili açıklamayı içeren belge(ler) ile geliyor.
 
-Bu bağlamda Linux sistemlerinin temel döküman-bilgi kaynaklarını 3 türe ayırabiliriz.
+Bu bağlamda Linux sistemlerinin temel doküman-bilgi kaynaklarını 3 türe ayırabiliriz.
 
-Bunlar; **bilgi sayfaları(info)**, **kılavuz sayfaları(manuel)** ve **uygulamalar ile gelen <kbd>/usr/share/doc</kbd> konumunda bulunan dökümanlar**dır. Bizler de zaman zaman unuttuğumuz için veya bilmediğimizden dolayı bu yardım sayfalarına ve dökümanlarına danışacağız. Bu girizgahtan sonra artık yavaş yavaş yardım alma komutlarımıza geçelim.
+Bunlar; **bilgi sayfaları(info)**, **kılavuz sayfaları(manuel)** ve **uygulamalar ile gelen <kbd>/usr/share/doc</kbd> konumunda bulunan dokümanlar**dır. Bizler de zaman zaman unuttuğumuz için veya bilmediğimizden dolayı bu yardım sayfalarına ve dokümanlarına danışacağız. Bu girizgahtan sonra artık yavaş yavaş yardım alma komutlarımıza geçelim.
 
 help Komutu
 ------------------
-Hiç ingilizce bilmiyorum diyen birinin bile "help" ifadesinin "yardım" anlamında olduğunu bildiğini düşünüyorum. Yani bu sebepten <code>help</code> komutu akılda kalması en kolay komutlardandır. Komutun kullanımına geçecek olursak örneğin daha önce kullandığımız yetki verme işini gören <code>chmod</code> komutu ile ilgili yardım(bilgi) almak isteyelim. Bunun için komut satırına <code>chmod --help</code> şeklinde komutumuzu yazıyoruz. Ve aşağıda görüldüğü gibi gerekli bilgileri içeren yardım sayfası bizi karşılıyor.
+Hiç ingilizce bilmiyorum diyen birinin bile "**help**" ifadesinin "**yardım**" anlamında olduğunu bildiğini düşünüyorum. Yani bu sebepten <code>help</code> komutu akılda kalması en kolay komutlardandır. Komutun kullanımına geçecek olursak örneğin daha önce kullandığımız yetki verme işini gören <code>chmod</code> komutu ile ilgili yardım(bilgi) almak isteyelim. Bunun için komut satırına <code>chmod --help</code> şeklinde komutumuzu yazıyoruz. Ve aşağıda görüldüğü gibi gerekli bilgileri içeren yardım sayfası bizi karşılıyor.
 
 ![enter image description here](https://i.hizliresim.com/Vrp96Z.png)
 
 Bu kullanımın dışında <code>help</code> komutunun birde <code>help komut</code> şeklinde kullanımı var ancak bu kullanımda her zaman komut hakkında yardım bilgisi bulunmayabiliyor o yüzden ilk öğrendiğimiz yol önceliğiniz olsun. Örneğin <code>help chmod</code> yazdığımızda komut satırı yardım bilgisi bulunmadığını belirtti.
 
 ![enter image description here](https://i.hizliresim.com/nOPQmV.png)
+
+Peki neden ikinci kullanım yöntemi var diyecek olursanız. Bazı istisnai komutlarda `komut --help` şeklinde yazıldığında komutun kullanım şekli nedeniyle çıktı alınamıyor. Buna bir örnek verelim ancak örnekte kullancağım komutu ileride ayrıntılı ele alacağım şimdilik sadece konumuzla ilgili olan kısımına odaklanın lütfen.
+
+Örneğin; `echo` komutu kendisinden sonra yazılan ifadeyi ekrana basıyor. Yani ben `echo Merhaba` yazarsam konsol ekranı da çıktı olarak "Merhaba" şeklinde bir ifade basıyor.
+
+<img src="https://i.hizliresim.com/nOyGmV.png">
+
+Eğer ben `help` komutu ile `echo` komutu hakkında yardım bilgisine ulaşmak istersem; komutumu `echo --help` şeklinde kullandığımda ekrana yardım bilgisi değil yalnızca "--help" ifadesi basılıyor. 
+
+![](https://i.hizliresim.com/9mbpq5.png)
+
+İşte bu gibi durumlarda `help` komutunu ikinci kullanım şekliyle kullanmaktan başka çare kalmıyor. Eğer komutumu `help echo` şeklinde yazarsam çıktılara `echo` komutunun yardım bilgileri olacaktır.
+
+![](https://i.hizliresim.com/6JM6qv.png)
+
+Yani sonuç olarak istisnai komutların haricinde `help` komutu `komut --help` şeklinde kullanılıyorken, bazı özel durum oluşturan komutlar mecburen `help komut` yapısıyla kullanılmak durumunda kalıyor. Bu istisnaları kesinlikle bilmek zorunda değilsiniz. Sadece `help` komutu ile yardım bilgisine ulaşmak istediğinizde ilk olarak `komut --help` yapısını kullanın eğer yardım bilgisine bir şekilde ulaşamazsanız bu sefer komutunuzu `help komut` şeklinde kullanın.
 
 man(Manuel Sayfası) Komutu
 -----------------------------------------
@@ -432,11 +454,12 @@ man(manuel) sayfaları temel yardım alma dosyalarıdır. Ve kılavuz sayfaları
 - **EXAMPLES:** Komutun kullanımı ile ilgili örnekler ve açıklamalar.
 - **SEE ALSO:** Diğer ilgili başlıklar.
 
-<code>man</code> kılavuzunun komutlarla ilgili tuttuğu bilgi sayfaları <kbd>/usr/share/man</kbd> konumu altında tutulur. Görmek için konsola <code>cd /usr/share/man && ls</code> komutunu girdiğimizde çıktılar aşağıdaki şekildedir.
+<code>man</code> kılavuzunun komutlarla ilgili tuttuğu bilgi sayfaları <kbd>/usr/share/man</kbd> konumu altında tutulur. 
+Yani konsol ekranına basılan yardım(klavuz) bilgileri bu konum içerisinde yer alan dosyalardan alınarak basılır. `man` klavuz sayflarının kaynağı burasıdır ve bu dosyalar belirli bir düzene göre sıralanmıştır.
 
-![enter image description here](https://i.hizliresim.com/kOr90r.png)
+![enter image description here](https://i.hizliresim.com/JQWEnQ.png)
 
-Komutu açıklayacak olursak <code>cd</code> komutu <kbd> /usr/share/man </kbd> dizinine gitmemizi sağlıyor <kbd>&&</kbd> ise daha önce gördüğümüz gibi iki komutu aynı anda çalıştırma imkanı tanıyor. <code>ls</code> komutu ise ileride de göreceğimiz gibi klasörde bulunan bütün ögeleri listeliyor. Şimdilik bu açıklama yeterli olacaktır. Biraz da bu çıktıdaki sonuçlara bakalım örneğin <code>man</code> sayfasının yapılanması nasıl oluyor yani yukarıdaki komut çıktısında yer alan dil dosyaları dışındaki dosyalar yani <kbd>man1,man2,man3,man4,man5,man6,man7,man8</kbd> ne ifade ediyor kısaca ona değinelim.
+İlgili dizin içerisindeyken bakalım örneğin; <code>man</code> sayfasının yapılanması nasıl oluyor yani <kbd>/usr/share/man</kbd> konumunda yer alan dil dosyaları dışındaki diğer dosyalar olan <kbd>man1,man2,man3,man4,man5,man6,man7,man8</kbd> dosyaları ne ifade ediyor kısaca ona değinelim.
 
 - **man1:** genel kullanıcı programlarını ifade eder.
 - **man2:** sistem programlarını ifade eder.
@@ -446,6 +469,7 @@ Komutu açıklayacak olursak <code>cd</code> komutu <kbd> /usr/share/man </kbd> 
 - **man6:** ekran koruyucuları ve oyunları ifade eder.
 - **man7:** diğer katagorilere girmeyen çeşitli komutları ifade eder.
 - **man8:**  sistem yönetimini ve bakımını ifade eder.
+
 
 whatis Komutu
 ---------------------
@@ -457,11 +481,11 @@ Hazır yeri gelmişken yukarıda gördüğümüz <code>man</code> sayfası yapı
 
 ![enter image description here](https://i.hizliresim.com/YgPQAZ.png)
 
-Bu çıktıların doğruluğu man sayfalarının tutulduğu <kbd>/usr/share/man </kbd>dizinine gidilerek kontrol edilebilir. Örneğin ben <kbd>/usr/share/man/man1</kbd> konumuna gittiğimde <code>whatis</code> komutunun yardım sayfalarının burada olduğunu görebiliyorum. Sizler çıktıları de bu şekilde teyit edebilirsiniz.
+Bu çıktıların doğruluğu `man` sayfalarının tutulduğu <kbd>/usr/share/man</kbd> dizinine gidilerek kontrol edilebilir. Örneğin ben <kbd>/usr/share/man/man1</kbd> konumuna gittiğimde <code>whatis</code> komutunun yardım sayfalarının burada olduğunu görebiliyorum. Sizler de çıktıları bu şekilde teyit edebilirsiniz.
 
 ![enter image description here](https://i.hizliresim.com/vj47n6.png)
 
-<code>whatis</code> komutunun kullanımı bu kadar ile sınırlı değil ancak ben geri kalanını burada vermiyorum. Dileyen arkadaşlar <code>man</code>komutu yardımı ile gerekli bilgilere ulaşabilirler.
+<code>whatis</code> komutunun kullanımı bu kadar ile sınırlı değil ancak ben geri kalanını burada vermiyorum. Dileyen arkadaşlar <code>man</code> komutu yardımı ile gerekli bilgilere ulaşabilirler.
 
 apropos Komutu
 -----------------------
@@ -470,18 +494,32 @@ Yardım alma komutlarını noktalamadan önce; Sizlere <code>man</code> sayfası
 
 ![enter image description here](https://i.hizliresim.com/p6450a.png)
 
-Gördüğünüz gibi belirtmiş olduğumuz chmod komutunun geçtiği uygulamalar listelenmiş oldu. İşte <code>apropos</code> komutu da tam olarak bu işin aynını yapıyor. Örneğin Terminale <code>apropos chmod</code> komutunu girersek çıktısı aşağıdaki şekilde olacaktır.
+Gördüğünüz gibi belirtmiş olduğumuz `chmod` komutunun geçtiği uygulamalar listelenmiş oldu. İşte <code>apropos</code> komutu da tam olarak bu işin aynını yapıyor. Örneğin Terminale <code>apropos chmod</code> komutunu girersek çıktısı aşağıdaki şekilde olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/G9nZ0Z.png)
 
 Çıktılar karşlaştırıldığında görülüyor ki aralarında bir fark yok.
+
+Daha iyi anlamak için örneğin komutun ismini tam olarak hatırlamıyorsunz ancak işlevini hatırlıyorsunuz diyelim işte bu noktada `apropos`komutu sayesinde man klavuz sayfaları içinde anahtar kelime araştırması yaparak ilgili komuta ulaşabilirsiniz.
+
+**Örneğin**
+
+Bir komut vardı.. silme işlevindeydi.. neydi.. neydi diye düşündüğünüzde; konsol ekranına `apropos sil` şeklinde yazdığımızda, karşımıza man klavuz sayfalarında aradığımız anahtar kelimeye uygun gelen ifadeler listelenir. Bu sayede komutu buradaki çıktılara bakarak hatırlayabilirsiniz.
+
+<img src="https://i.hizliresim.com/A1GYg0.png" width="875" >
+
+Bir örnek daha yapalım. Mesela ben komutun bir kısmını hatırlıyorum diyelim. İşte bu gibi bir durumda da yine `apropos` komutumu ya da `man -k` komutumu kullanarak ilgili komutu bulabilirim.
+
+<img src="https://i.hizliresim.com/5DqR2R.png" width="875" >
+
+Yani `apropos` ve `man -k` komutları man klavuz sayfaları içerisinde bizim sorguladığımız her türlü ifadeyi arayarak bulup getiriyor.
+Bu yüzden mümkün oldukça aramalarınızı İngilizce üzerinden yaparsanız sonuca ulaşmanız daha kolay olacaktır. 
 
 Bu konudaki noktayı da man kılavuz sayfaları güncelleme işlemi ile yapalım. Nedir bu işlem diyecek olursanız. Aradığımız yardımı man sayfasında bulamıyorsak güncelleyerek tekrar sorgulayabiliriz. Ara ara güncellemek yeni bilgilere de ulaşmamıza olanak sağlar. Güncelleme için konsola <code>mandb</code> komutunu girmemiz yeterli olacaktır. Komut satırı, güncelleme işleminden sonra yapılan değişiklikleri de son satırda bizlere bildirir.
 
 ![enter image description here](https://i.hizliresim.com/6JnGq7.png)
 
 Yardım alma komutlarını bilmek bir zorunluluk değil ihtiyaç meselesidir. Zaten zamanla bu komutlara ve kullanımlarına alışacaksınız. Açıklamaların İngilizce olmasını da dert etmeyin, ne yaparsak yapalım eninde sonunda bu işlerin yolu ingilizceden geçiyor artık bu duruma alışmamız gerek. Bu noktada kendimizi biraz zorlamalı ve kesinlikle pes etmemeliyiz. Kendimizi biraz zorlayarak çaba harcayarak öğrenirsek, öğrenilenler kesinlikle daha da kalıcı oluyor. Sakın pes etmeyin çok iyi gidiyoruz...
-
 
 ----------
 
