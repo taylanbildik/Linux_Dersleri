@@ -116,4 +116,4 @@ Eğer `zip` komutu ile sıkıştırdığımız dosyayı açmak istersek <kbd>.zi
 
 ![enter image description here](https://i.hizliresim.com/4aY5WJ.png)
 
-Eğer <kbd>.rar</kbd> dosyasını açmak istiyorsak `unrar` komutumuzu `unrar x dosya_adı.rar` şeklinde konsola girerek bu işlemi gerçekleştirebiliriz. Burada yer alan `x` ifadesi dışarı aktarma işlevindedir. Ayrıca başka parametreler de mevcut ancak bu kısım için bu kadarı yeterli.
+Konsolun bize sorduğu soru "bulunduğumuz dizinde aynı dosyadan bir tane daha var ne yapmak istersiniz?" gibi bir sorudur. 
