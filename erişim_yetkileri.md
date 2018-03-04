@@ -19,7 +19,7 @@ Aslında bu eylemler sizlere yabancı gelmemeli. Zira daha önce `chmod` komutu 
 
 Şimdi listemizi inceleyerek bulunan izinleri ele alalım.
 
-<kbd>drwxr-xr-x</kbd> ve <kbd>-rw-r--r-- </kbd>şeklinde gördüğümüz kısımlar dosya izinlerini ifade ediyor.
+<kbd>drwxr-xr-x</kbd> ve <kbd>-rw-r--r-- </kbd> şeklinde gördüğümüz kısımlar dosya izinlerini ifade ediyor.
 
 Bazı ifadelerin başında olan <kbd>d</kbd> harfi o ifadenin dizin olduğunu belirtiyor.
 
@@ -43,7 +43,7 @@ Buna göre yukarıdaki dosyalarda bulunan izinleri açıklayacak olursak;
 
 **rwx :** dosyanın sahibi olan kullanıcı okuyabilir, yazabilir, çalıştırabilir.
 
-**r-x :** dosya sahibi grup ile aynı gruba kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
+**r-x :** dosya sahibi kullanıcı grubu ile aynı gruba dahil kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
 
 **r-x :** diğer kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
 
@@ -88,7 +88,7 @@ Aynı grupta bulunan kullanıclar için yine konumumuzda bulunan tüm dosyaları
 
 Gruptaki kullanıcılara(g), okuma-yazma-çalıştırma yetkisi (rwx), kullanıcıya(u) yazma yetkisi(r), diğer kullanıcılara ise yalnızca çalıştırma yetkisi(x) verdik.
 
-![enter image description here](https://i.hizliresim.com/lOBJ8r.png)
+![enter image description here](https://i.hizliresim.com/MdBMAN.png)
 
 Ve en son yine bulunduğumuz konumdaki tüm dosyaların yetkilerini kaldırdık.
 
@@ -118,9 +118,21 @@ Diğer kullanıcılar için vereceğimiz yalnız okuma yetkisi için ise okuma(r
 
 Çıktıdan da anlaşılacağı üzere sayısal karşılıklar istediğimiz yetkilendirme işlemini gerçekleştirdi.
 
-Son bir ayrıntı daha verelim. Eğer verdiğimiz izinlerin o dizinle beraber alt klasörlerinde de etkili olmasını istersek komutumuzu `-r` parametresi ile birlikte kullanmalıyız.
+Son bir ayrıntı daha verelim. Eğer verdiğimiz izinlerin o dizinle beraber alt klasörlerinde de etkili olmasını istersek komutumuzu `-R` parametresi ile birlikte kullanmalıyız.
 
-![enter image description here](https://i.hizliresim.com/qG9gqD.png)
+Örneğin bulunduğum konumdaki "metin" isimli klasörün erişim yetkilerini listedim. Sonuç olarak hiç bir yetkinin bulunmadığını belirten <kbd>--------- </kbd> şeklinde bir çıktı geldi. 
+
+![](https://i.hizliresim.com/9mrjGk.png)
+
+Daha sonra "metin" isimli klasörün içerisine girerek oradaki dosya ve dizinlerin erişim izinlerini sorguladım. Sonuç olarak <kbd>rwxrwxrwx</kbd> şeklinde bütün yetkilere sahip dosya ve dizinlerin olduğunu gördüm. 
+
+![](https://i.hizliresim.com/qGNzE5.png)
+
+Daha sonra bir üst dizine dönerek ekleyeceğim erişim izinlerinin tüm alt dosyalarda da dahil geçerli olması için komutuma ek olarak `-R` parametresini kulladım ve komutumu `chmod -R 422 metin` şeklinde yazdım. 
+
+![](https://i.hizliresim.com/MdBjkN.png)
+
+Sonuç olarak bütün dosya ve dizinlerde ve alt klasörlede dahil olmak üzere tüm dosyaların vermiş olduğum yetki erişim izinleri **422** ifadesine karşılık gelen; dosya sahibi için okuma(**r**) , dosya sahibi ile aynı gruptaki kullanıcılar için yazma(**w**) ve diğer kullanıclar için de yazma(**w**) yetkisi şeklinde yetkilendirildiğini görmüş oldum.
 
 Eğer örneklere ve açıklamalara rağmen yine de anlamadıysanız ister konuyu tekrar okuyup kendiniz de alıştırmalar yapın isterseniz de bu konuyu şimdilik geçin ihtiyacınız olduğunda burada olduğunu bilerek tekrar göz atın. Seçim sizlere kalmış.
 
