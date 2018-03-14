@@ -93,23 +93,23 @@ Gördüğünüz gibi belirtmiş olduğumuz `chmod` komutunun geçtiği uygulamal
 
 Çıktılar karşlaştırıldığında görülüyor ki aralarında bir fark yok.
 
-Daha iyi anlamak için örneğin komutun ismini tam olarak hatırlamıyorsunz ancak işlevini hatırlıyorsunuz diyelim işte bu noktada `apropos`komutu sayesinde man klavuz sayfaları içinde anahtar kelime araştırması yaparak ilgili komuta ulaşabilirsiniz.
+Komutun kullanım amacını daha iyi anlamak için örneğin komutun ismini tam olarak hatırlamıyorsunz ancak işlevini hatırlıyorsunuz diyelim işte bu noktada `apropos` komutu sayesinde man klavuz sayfaları içinde anahtar kelime araştırması yaparak ilgili komuta ulaşabilirsiniz. Yani aslında biz apropos komutuyla sadece man kılavuz sayfalarında detaylı bir araştırma yapmış oluyoruz.
 
 **Örneğin**
 
-Bir komut vardı.. silme işlevindeydi.. neydi.. neydi diye düşündüğünüzde; konsol ekranına `apropos sil` şeklinde yazdığımızda, karşımıza man klavuz sayfalarında aradığımız anahtar kelimeye uygun gelen ifadeler listelenir. Bu sayede komutu buradaki çıktılara bakarak hatırlayabilirsiniz.
+Bir komut vardı.. silme işlevindeydi.. neydi.. neydi diye düşündüğünüzde; konsola `apropos sil` şeklinde yazarsak, karşımıza man klavuz sayfalarında aradığımız anahtar kelimeye uygun gelen ifadeler listelenir. Komutumuzun işlevini silmek olduğunu bildiğimizden "sil" ifadesini `apropos` komutu ile sorgulayarak man sayfalarında "sil" ifadesinin geçtiği kısımları listelemiş olduk. Yani man sayfalarında yer alan açıklamalar sayesinde hatırlayamadığımız kısımları buradaki çıktılara bakarak hatırlayabiliriz.
 
 <img src="https://i.hizliresim.com/A1GYg0.png" width="875" >
 
-Bir örnek daha yapalım. Mesela ben komutun bir kısmını hatırlıyorum diyelim. İşte bu gibi bir durumda da yine `apropos` komutumu ya da `man -k` komutumu kullanarak ilgili komutu bulabilirim.
+Bir örnek daha yapalım. Mesela ben komutun bir kısmını hatırlıyorum diyelim. İşte bu gibi bir durumda da yine `apropos` komutumu ya da `man -k` komutumu kullanarak tamamını hatırlayamadığım ilgili komutu bulabilirim.
 
 <img src="https://i.hizliresim.com/5DqR2R.png" width="875" >
 
 Yani `apropos` ve `man -k` komutları man klavuz sayfaları içerisinde bizim sorguladığımız her türlü ifadeyi arayarak bulup getiriyor.
-Bu yüzden mümkün oldukça aramalarınızı İngilizce üzerinden yaparsanız sonuca ulaşmanız daha kolay olacaktır. 
+Ayrıca kılavuz(man/manuel) sayfa içeriklerinin büyük çoğunluğunun İngilizce olduğunu da ele alarak mümkün oldukça aramalarınızı İngilizce üzerinden yaparsanız sonuca ulaşmanız daha kolay olacaktır. 
 
 Bu konudaki noktayı da man kılavuz sayfaları güncelleme işlemi ile yapalım. Nedir bu işlem diyecek olursanız. Aradığımız yardımı man sayfasında bulamıyorsak güncelleyerek tekrar sorgulayabiliriz. Ara ara güncellemek yeni bilgilere de ulaşmamıza olanak sağlar. Güncelleme için konsola <code>mandb</code> komutunu girmemiz yeterli olacaktır. Komut satırı, güncelleme işleminden sonra yapılan değişiklikleri de son satırda bizlere bildirir.
 
 ![enter image description here](https://i.hizliresim.com/6JnGq7.png)
 
-Yardım alma komutlarını bilmek bir zorunluluk değil ihtiyaç meselesidir. Zaten zamanla bu komutlara ve kullanımlarına alışacaksınız. Açıklamaların İngilizce olmasını da dert etmeyin, ne yaparsak yapalım eninde sonunda bu işlerin yolu ingilizceden geçiyor artık bu duruma alışmamız gerek. Bu noktada kendimizi biraz zorlamalı ve kesinlikle pes etmemeliyiz. Kendimizi biraz zorlayarak çaba harcayarak öğrenirsek, öğrenilenler kesinlikle daha da kalıcı oluyor. Sakın pes etmeyin çok iyi gidiyoruz...
+Yardım alma komutlarını bilmek bir zorunluluk değil ihtiyaç meselesidir. Zaten zamanla bu komutlara ve kullanımlarına alışacaksınız. Açıklamaların İngilizce olmasını da dert etmeyin, ne yaparsak yapalım eninde sonunda bu işlerin yolu İngilizce'den geçiyor artık bu duruma alışmamız gerek. Bu noktada kendimizi biraz zorlamalı ve kesinlikle pes etmemeliyiz. Kendimizi biraz zorlayarak çaba harcayarak öğrenirsek, öğrenilenler kesinlikle daha da kalıcı oluyor. Sakın pes etmeyin çok iyi gidiyoruz...
