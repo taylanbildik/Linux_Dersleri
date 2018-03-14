@@ -141,7 +141,7 @@ Komutu biraz açıklayacak olursak <code>cd</code>  dizinler arası geçiş yapm
 
 Temel ve sık kullanılan değişkellerden birkaçını da kısaca açıklayacak olursak:
 
-**SHELL:** Çalışmakta olan kabuk programının adını ve yeri.
+**SHELL:** Çalışmakta olan kabuk programının adını ve yerini verir.
 
 **PATH:** Konsola komut girildiğinde, komut için gereken ilgili dosyaların aranacağı dizinler diğer bir adıyla yol.
 
@@ -149,7 +149,7 @@ Temel ve sık kullanılan değişkellerden birkaçını da kısaca açıklayacak
 
 **TERM:** Komut satırı uygulamalarının hangi terminalde çalışacağını belirtir. Birçok çeşidi vardır ancak xterm yaygın şekilde karşımıza çıkmaktadır.
 
-Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <code>echo $ORTAM_DEĞİŞKENİ</code> şeklinde komut vererek ilgili bilgilere ulaşabiliriz. Örneğin TERM değişkeninie bir bakalım.
+Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <code>echo $ORTAM_DEĞİŞKENİ</code> şeklinde komut vererek ilgili bilgilere ulaşabiliriz. Örneğin TERM değişkenine bir bakalım.
 
 ![enter image description here](https://i.hizliresim.com/rOL2mB.png)
 
@@ -173,7 +173,7 @@ Terminali açtım ve komut satırına "<code>asdf</code> "(anlamsız karşılı�
 
 ![enter image description here](https://i.hizliresim.com/z0RBA6.png)
 
-Görüldüğü gibi konsol çıktısı Türkçe oldu ancak ben bu çıktıları İngilizceye çevirmek istiyorum diyelim. Bunun için konsola<code> export LANG=C </code> komutunu veriyorum. Ve sonrasında tekrar komut satırına <code>asdf</code> yazıp dilin değişip değişmediğini kontrol ediyorum.
+Görüldüğü gibi konsol çıktısı Türkçe oldu ancak ben bu çıktıları İngilizceye çevirmek istiyorum diyelim. Bunun için konsola <code> export LANG=C </code> komutunu veriyorum. Ve sonrasında tekrar komut satırına <code>asdf</code> yazıp dilin değişip değişmediğini kontrol ediyorum.
 
 ![enter image description here](https://i.hizliresim.com/6JRX8P.png)
 
