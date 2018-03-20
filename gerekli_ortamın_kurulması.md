@@ -15,5 +15,5 @@ Kurulum ve Kullanım Metodları
 
 
 <a href="https://www.udemy.com/">
-  <img src="https://i.hizliresim.com/PlGEAv.png">
+  <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/0-%20Gerekli%20Ortam%C4%B1n%20Kurulmas%C4%B1/1.png">
 </a>
