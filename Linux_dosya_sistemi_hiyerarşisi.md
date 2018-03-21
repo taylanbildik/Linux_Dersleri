@@ -179,6 +179,5 @@ Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik 
 
 **Kaynakça :**
 
-[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html)
-
+[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html) ||
 [ubuntu-tr](https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi)
