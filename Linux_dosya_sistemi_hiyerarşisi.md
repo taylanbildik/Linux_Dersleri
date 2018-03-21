@@ -57,8 +57,7 @@ Bu da demek oluyor ki kullanıcılar sadece sahip oldukları yetkileri dahilinde
 
 Artık kısaca Linux dosya sisteminin neden bu şekilde olduğunu ve sağladığı avantajları anladıysak gelin bu hiyerarşik yapıdaki dosyalara ve işlevlerine daha da yakından bakalım.
 
-Aşağıda verilen bilgiler tamamiyle [bu kaynaktan](https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi) alınmıştır.
-Ayrıca aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.
+Aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.
 
 /bin
 -
@@ -178,4 +177,8 @@ Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik 
 ![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/6.png)
 
 
-**Kaynakça :**[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html)
+**Kaynakça :**
+
+[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html)
+
+[ubuntu-tr](https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi)
