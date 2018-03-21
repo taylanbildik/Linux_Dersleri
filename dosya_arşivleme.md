@@ -10,7 +10,7 @@ tar
 
 Masaüstünde yer alan ismi "metin" ile başlayan her şeyi <kbd>metinler.tar</kbd> şeklinde arşivlemek isteyelim. Bunun için komut satırına `tar -cf metinler.tar metin*` yazmalıyız.
 
-![enter image description here](https://i.hizliresim.com/9mvOa8.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/1.png)
 
 Kullandığımız komut bütününü tek tek izah edelim;
 
@@ -22,23 +22,23 @@ Kullandığımız `-f` parametresi de hangi dosyaya yazılacağını belirtir.
 
 Dosyaları tekrar açmak için `tar -xf metinler.tar` komutunu kullanabiliriz. Veya açılan dosyaları konsol üzerinden takip etmek için `v` parametresi kullanarak aynı işlemi gerçekleştirebiliriz.
 
-![enter image description here](https://i.hizliresim.com/qG9rdq.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/2.png)
 
 Eğer arşivi başka bir klasöre çıkarmak istersek komutumuzu `tar -xf metinler.tar -C hedef_klasör` şeklinde kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/Md9rV9.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/3.png)
 
 Görüldüğü gibi arşivin içerisindekiler öncekilerden farklı olarak direk çalıştığımız dizine değil, belirtmiş olduğumuz hedef klasöre çıkarılmış oldu.
 
 Arşivi çıkarmadan içerisindekileri görmek istersek `tar -tf metinler.tar` komutunu kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/XP25MD.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/4.png)
 
 Oluşturmuş olduğumuz arşive sonradan ekleme yapmak için `-r` parametresini kullanabiliriz.
 
 Hemen <kbd>metinler.tar</kbd> arşivine aynı dosya konumunda  yer alan <kbd>yeni</kbd> isimli klasörü eklemeye çalışalım.
 
-![enter image description here](https://i.hizliresim.com/bBQWVj.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/5.png)
 
 Başta ve sondaki arşivin durumunu karşılaştırdığımızda <kbd>yeni</kbd> isimli klasörün arşive eklenmiş olduğunu gördük.
 
@@ -53,11 +53,11 @@ Sıkıştırma işleminde iki temel araç kullanılıyor. Bunlar `gzip` ve `bzip
 
 Masaüstünde yer alan dosyalardan örnek yapalım hemen. Ben "metin" adıyla başlayan dosyaları `gzip` arşivine almak için daha önceden de defalarca kullanmış olduğumuz `*` joker karakterinin yardımıyla `gzip metin*` komutunu veriyorum. Daha sonra aynı işlemi "isim" adı ile başlayan belgeler için bu defa `bzip2` yardımıyla `bzip2 isim*` şeklinde arşivleyerek gerçekleştiriyorum.
 
-![enter image description here](https://i.hizliresim.com/dO4Rvn.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/6.png)
 
 Sıkıştırdığımız dosyayı tekrar dışarı çıkarmak istersek komutu `-d` parametresi ile birlikte kullanmamız gerekiyor.
 
-![enter image description here](https://i.hizliresim.com/5DpBad.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/7.png)
 
 Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her ikisini de birlikte kullanma vakti geldi.
 
@@ -67,18 +67,18 @@ Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her i
 
 Her iki şekilde de "metin" isimli belgeleri bir arşiv içine almaya çalışalım. Sırasıyla bunu ilk olarak `gzip` ile daha sonra ise `bzip2` ile yapalım. Dosya adı verirken kullanılan <kbd>tar.gz</kbd> ve <kbd>tar.bz2</kbd> uzantılarına dikkat edin aksi halde işlem hata verecektir.
 
-![](http://www.imgim.com/targzipbzip.png)
-<img src="http://www.imgim.com/sıkıştırılmıştararşivi.png" width="875">
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/8.png)
+<img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/9.png" width="875">
 
 Gördüğünüz gibi `gzip` kullanırken parametre olarak `czvf` verdik ve oluşturduğumuz dosyanın uzantısını da <kbd>tar.gz</kbd>  şeklinde yaptık. Aynı şekilde `bzip2` için ise `cjvf` parametrelerini kullandık ve dosya adımızın uzantısı <kbd>tar.bz2</kbd>  şeklinde oldu. Daha önce de söylediğim gibi bu ayrıntılara dikkat etmezseniz işlem kaçınılmaz olarak başarısız olacaktır.
 
 Sıkıştırmış olduğumuz arşivleri tekrar açmak için ise `gzip` için `xzvf` parametresi `bzip2` için ise `xjvf` parametresini kullanacağız. 
 
-![enter image description here](https://i.hizliresim.com/NZGozX.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/10.png)
 
 Arşivler açılmış oldu. Eğer arşivi belirli bir konuma çıkarmak istersek daha önce de öğrenmiş olduğumuz şekilde `-C` parametresi ile bu işlemi gerçekleştirebiliriz. Eğer `-C` parametresi kullanmazsak arşiv içindekiler doğrudan belirttiğimiz konuma açılır. `-C` parametresi hedef konuma arşivin ismi ile bir dosya oluşturur ve o dosya içerisine çıkarma işlemini yapar. 
 
-<img src="https://i.hizliresim.com/4a9A2A.png" width="875">
+<img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/11.png" width="875">
 
 Daha önceden öğrendiğimiz işlemleri de aynı şekilde sıkıştırılmış arşiv dosyalarında da yapabiliyoruz. O yüzden aynı şeyleri burada tekrardan vermemiz anlamsız olur.
 
@@ -90,11 +90,11 @@ Daha önce dosya içeriklerini terminal üzerinden `cat` komutu yardımı ile ok
 
 `gzip` ile sıkıştırılmış arşiv dosya içeriklerini `zcat` ile okuruz. Aynı işlemi eğer `bzip2` ile sıkıştırılmış dosyalar varsa `bzcat` şeklinde gerçekleştirebiliriz.
 
-![enter image description here](https://i.hizliresim.com/JQdvZn.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/12.png)
 
 Sıra geldi sıkıştırılmış dosyalar içerisinde arama yapmaya. `gzip` ile sıkıştırılmış dosyalar için `zgrep` kullanılırken `bzip2` ile sıkıştırılmış dosyalar için `bzgrep` komutunu kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/JQdv8j.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/13.png)
 
 
 zip-unzip
@@ -106,7 +106,7 @@ Anlatıma <kbd>.zip</kbd> dosyası oluşturarak başlayalım.
 
 Bunun için komutumuzu konsola `zip dosya_adı.zip eklenecek_dosya` şeklinde giriyoruz.
 
-![enter image description here](https://i.hizliresim.com/p62AYo.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/14.png)
 
 Çıktıda yer alan "deflated" ifadesi dosyanın ne kadarının sıkıştırıldığını yüzdelik olarak bize veriyor.
 Ayrıca sarı alan ile işaretlenmiş kısımda sıkıştırmış olduğumuz dosyanın boyutu ile dosyanın sıkıştırılmamış hali olan orjinal dosyanın boyutu arasında oldukça fazla boyut farkı bulunduğunu gözlemleyebiliyoruz.
@@ -114,6 +114,6 @@ Ayrıca sarı alan ile işaretlenmiş kısımda sıkıştırmış olduğumuz dos
 
 Eğer `zip` komutu ile sıkıştırdığımız dosyayı açmak istersek <kbd>.zip</kbd> dosyalarını açma işlevindeki `unzip` komutunu `unzip dosya_adı.zip` şeklinde kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/4aY5WJ.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/15.png)
 
 Konsolun bize sorduğu soru "bulunduğumuz dizinde aynı dosyadan bir tane daha var ne yapmak istersiniz?" gibi bir sorudur. 
