@@ -13,22 +13,22 @@ Genellikle bütün dağıtımlarda aynı hiyerarşik düzen vardır.(Genellikle 
 
 Linux **"Tekil Hiyerarşik Klasör Yapısı"**'nı benimsemiştir. Yani bu da şu demek oluyor; her şey <kbd>/</kbd> (slash) simgesiyle ifade edilen <code>root</code> klasöründen başlar, aşağıya doğru iner. Merak edenler için  de söyleyelim “Root” kelimesinin karşılığı da Türkçe olarak “kök” anlamına geliyor. Bu sayede “root” kelimesinin de nereden geldiği ve neden kullanıldığı da az çok açıklığa kavuşuyor sanırım. 
 
-![enter image description here](https://i.hizliresim.com/OoEvq3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/1.png)
 
 Linux, `/` (root) klasöründen başlayarak, boot işlemindeki önem sırasına göre klasörleri ilgili konumlara yerleştirir. Bu yerleştirme işleminde yani klasörler arası geçişlerde klasörler arasını ayırmak için <kbd>/</kbd>(slash) işareti kullanılır. Herhangi bir dizin ya da dosyanın sistemdeki adresi önce kök dizinden başlar sonra o dosya ya da dizine ulaşmak için geçilmesi gereken dizinler arasına yine <kbd>/</kbd> yazılarak elde edilir. Örneğin `/home/burak` yolu, kök dizininde(/), home isimli dizin içindeki burak dizininin konumunu belirtir. Bu ifadede en baştaki `/` işareti kök dizini belirtmektedir.
 
-<img src="https://i.hizliresim.com/azXYRR.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/2.gif" width="875">
 
 Ayrıca belirtmekte fayda var, Linux küçük büyük harf duyarlılığına sahiptir. Yani Linux'ta `DOSYA_ADI`,`Dosya_Adı`,`dosya_adı`,`DoSyA_aDı`..vb. gibi ismlendirilmiş dosyaların hepsi **ayrı/farklı** bir dosya olarak tanınır. Windows'ta ise aynı isimli dosyalar, küçük büyük harf ayrımı gözetilmeksizin aynı olarak tanınır. Hemen bu durumu teyit etmek için Windows ve Linux sistemlerinde dosya oluşturma işlemi gerçekleştirelim.
 
 **#Windows**
-<img src="https://i.hizliresim.com/XPd6mk.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/3.gif" width="875">
 Gördüğünüz gibi Windows işletim sisteminde büyük küçük harf duyarlılığı bulunmuyor. 
 
 Gelin bu durumu birde Linux sisteminde test edelim.
 
 **#Linux**
-<img src="https://i.hizliresim.com/QVQLXv.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/4.gif" width="875">
 Test sonucundan da anlaşılacağı gibi Linux işletim sisteminde küçük büyük harf duyarlılığı bulunuyor. 
 O yüzden işlemlerimizi yaparken özellikle de ileride konsol(terminal/komut penceresi) ekranından işlem yaparken bu küçük büyük harf duyarlılığı son derece önem kazanacak. Bu önemli detayı da öğrendikten sonra gelin anlatıma devam edelim.
 
@@ -41,7 +41,7 @@ Daha iyi anlaşılması adına anlatımları Windows ile karşılaştırma yapar
 Bu sayede fiziksel olarak pek çok bilgisayara dağılmış olan bir sunucu tek bir kök dosya sisteminden sanki tek bir bilgisayarmış gibi yönetilerek kullanılabilir. Bu sayede hem iş yükü dağılımı yapılarak sistem performansı arttırılmış olur hem de yetkilendirme ve yönetim kısıtlamaları dahilinde sistemin ayrı ayrı parçalara dağılımı ile sisteme ekstra güvenlik önlemi katılmış olunur.
 Biraz daha net anlamak adına aşağıdaki görseli inceleyebilirsiniz.
 
-![](https://i.hizliresim.com/VrEB1B.png)
+![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/5.png)
 Siz şimdi "*ben sadece masaüstü bilgisayardan kullanıcam bu dosya sistemi benim için gereksiz.*" diyebilirsiniz. Ancak bu dosya sistemi tekil kullancılar için de sağladığı güvenlik özellikleri nedeniyle gerekli bir sistemdir.
 
 Daha iyi anlamak için benzer bir duruma masaüstü kullanıcıları için örnek verelim.
@@ -50,15 +50,14 @@ Daha iyi anlamak için benzer bir duruma masaüstü kullanıcıları için örne
 Bu duruma örnek olması için çok basit bir test yapalım.
 Root(yetkili ve tüm izinlere sahip kullanıcı) ile burak isimli kullanıcı hesaplarından "Deneme" isimli dosyada değişiklik yapıp, yaptığımız değişikliği kaydetmeye çalışalım.
 
-<img src="https://i.hizliresim.com/1JGqpN.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/7.gif" width="875">
 
 Gördüğünüz gibi "root" kullanıcı hesabındayken kayıt işlemini tamamlayabildim ancak "burak" kullanıcı hesabında yetki iznim olmadığı için dosyada yaptığım değişikliği kayıt edemedim. 
 Bu da demek oluyor ki kullanıcılar sadece sahip oldukları yetkileri dahilinde işlemler gerçekleştirebiliyor. Bu sayede sistem yönetimi ve güvenliği kolaylıkla sağlanabiliyor.
 
 Artık kısaca Linux dosya sisteminin neden bu şekilde olduğunu ve sağladığı avantajları anladıysak gelin bu hiyerarşik yapıdaki dosyalara ve işlevlerine daha da yakından bakalım.
 
-Aşağıda verilen bilgiler tamamiyle [bu kaynaktan](https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi) alınmıştır.
-Ayrıca aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.
+Aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.
 
 /bin
 -
@@ -175,7 +174,9 @@ Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olar
 ----------
 
 Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik şekilde aşağıdaki görsel ile verdim. Eğer konuyu anlayarak ve özümseyerek okuduysanız bu grafiğe bakarak bir çırpıda hangi dosyanın genel olanarak hangi işlevde olduğunu hatırlayabilirsiniz.
-![](https://i.hizliresim.com/y0qlPN.png)
+![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/6.png)
 
 
-**Kaynakça :**[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html)
+**Kaynakça :**
+[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html) ||
+[ubuntu-tr](https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi)
