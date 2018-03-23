@@ -13,7 +13,7 @@ inode(düğüm)
 -
 Inode(düğüm), dosyanın sahibi, oluşturulma tarihi, boyutu, tipi, erişim hakları, en son erişim tarihi ve en son değişikliklerin yapıldığı tarih gibi birçok meta verileri içeren yapıdır. Yani biz herhangi bir dosya oluşturduğumuzda disk üzerinde 1 inode yer kaplamaktadır. Bununla ilgili olarak inode tablosunu görmek için konsola `df -i` komutumuzu verelim.
 
-![enter image description here](https://i.hizliresim.com/NZbDWa.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/1.png)
 
 Hemen çıkıtları ele alarak açıklamamıza devam edelim.
 
@@ -25,7 +25,7 @@ Bunun anlamı her bir dosya 1 inode yer kapladığı için <kbd>/dev/sda1</kbd> 
 
 Her bir inode(düğüm) numarasının benzersiz olduğunu söylemiştik. Bu durumu teyit etmek için bulunduğumuz konumdaki dosyaların inode numaralarını görebilmek adına komut satırımıza `ls -li` komutumuzu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/azBY04.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/2.png)
 
 Çıktıda yer alan soldaki numaralar, ilgili dosyanın inode numarasını temsil ediyor.
 
@@ -40,17 +40,17 @@ Sembolik link oluşturmak için `ln -s` komutu kullanılır. Komutun kullanım �
 
 Music dosya konumundayken `touch` komutu yardımı ile "klasik" isimli bir dosya oluşturduk.
 
-![enter image description here](https://i.hizliresim.com/Yg56W2.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/3.png)
 
 Oluşturduğumuz "klasik" isimli dosyanın kısayolunu, komutumuzu `ln -s dosya_adı kısayol_adı` şeklinde kullanarak oluşturduk.
 
-![enter image description here](https://i.hizliresim.com/Z913d3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/4.png)
 
 Son olarak `ls -i` komutunu vererek orijinal dosyanın ve sembolik link yardımı ile oluşturulan kısayol dosyasının inode değerlerini karşılaştırdık. Çıktıda da görüldüğü üzere değerler farklı olarak karşımıza çıkmış oldu.
 
 Ayrıca dosyaları `file` isimli bir komut yardımı ile inceleyerek de bilgi alabiliriz.
 
-![enter image description here](https://i.hizliresim.com/8YEz2n.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/5.png)
 
 Sembolik link komutu ile oluşturduğumuz dosyanın kısayol olduğunu çıktıda görebiliyoruz. Ancak son olarak kısayol dosyamızın çalışma durumunu da test edelim.
 
@@ -58,11 +58,11 @@ Bunun için ilk başta dosyamızın içeriğini okuyalım daha sonra orijinal do
 
  Orijinal dosyamın içerisine "Dosya İçeriğinin İlk Sayfası" şeklinde bir yazı ekledim. Biz orijinal dosyada yer alan bu yazıyı silip yeni bir ifade yazdıktan sonra kısayoldaki değişimi gözlemleyeceğiz.
 
-![enter image description here](https://i.hizliresim.com/D7kD6o.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/6.png)
 
 Eğer orijinal dosyayı silersek kısayol dosyası da açılmayacak ve bizlere hata mesajı bildirilecektir.
 
-![enter image description here](https://i.hizliresim.com/m28o78.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/7.png)
 
 Görüldüğü gibi kısayol dosyası orijinal kaynağı silindiği için okunamadı.
 
@@ -75,20 +75,20 @@ Sıra geldi katı link bağlantısının kullanımına. Katı link bağlantısı
 
 Örnek olması açısından <kbd>Music</kbd> klasörü altında "caz" adında bir dosya oluşturuyorum. Daha sonra oluşturduğum "caz" isimli klasörün katı linkini `ln caz caz_kati` komutu ile oluşturuyorum.
 
-![enter image description here](https://i.hizliresim.com/lOzq3r.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/8.png)
 
 Çıktıda dikkat edilmesi gereken nokta orijinal "caz" dosyası ile katı bağlantı "caz" dosyasının inode değerlerinin aynı olmasıdır. Bu da demek oluyor ki her iki dosya da her yönüyle birbirlerinin aynı durumda.
 
 Ayrıca orijinal ya da katı link ile oluşturulmuş dosyaların birinde yapacağımız değişiklik tıpkı sembolik linkte olduğu gibi diğer dosyada da geçerli olacaktır. Yani bu orijinal dosya ile katı link dosyası halihazırda bağlantılı dosyalar.
 
-![enter image description here](https://i.hizliresim.com/EPED6z.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/9.png)
 
 Hemen daha önce yaptığımız gibi `file` komutu ile orijinal dosya ve link ile oluşturulmuş dosyalarımızı karşılaştıralım.
 
-![enter image description here](https://i.hizliresim.com/2JQaN2.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/10.png)
 
 Komutun sonucunda her ikisininde ayrı ayrı dosyalar olduğunu görmüş olduk. Bu da demek oluyor ki biz eğer orijinal dosyayı silersek sembolik linkte olduğu gibi katı link ile oluşturulmuş dosya kullanılmaz hale gelmeyecektir. Bunu da hemen test edelim.
 
-![enter image description here](https://i.hizliresim.com/jyY61L.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/11.png)
 
 Gördüğünüz gibi orijinal dosyayı silmeme rağmen katı link ile oluşturmuş olduğum dosya hala okunabilir durumda.

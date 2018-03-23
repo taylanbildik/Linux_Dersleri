@@ -29,7 +29,7 @@ Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
 - [Vim Editörü](https://github.com/taylanbildik/Linux_Dersleri/blob/master/vim_edit%C3%B6r%C3%BC.md)
 - [Dosya İndirmek](https://github.com/taylanbildik/Linux_Dersleri/blob/master/konsoldan_dosya_indirmek.md)
 - [Zamanlanmış Görevler](https://github.com/taylanbildik/Linux_Dersleri/blob/master/zamanlam%C4%B1%C5%9F_g%C3%B6revler.md)
-- [Log Yönetimi](https://github.com/taylanbildik/Linux_Dersleri/blob/master/log_kay%C4%B1tlar%C4%B1.md)
+- [Log Dosyaları](https://github.com/taylanbildik/Linux_Dersleri/blob/master/log_kay%C4%B1tlar%C4%B1.md)
 
 
 ### Tek parça ve sıralı Linux Dokümantasyonu için [buraya](https://github.com/taylanbildik/Linux_Dersleri/blob/master/Linux_dok%C3%BCmantasyonu.md) tıklayın.

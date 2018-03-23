@@ -67,14 +67,14 @@ Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her i
 
 Her iki şekilde de "metin" isimli belgeleri bir arşiv içine almaya çalışalım. Sırasıyla bunu ilk olarak `gzip` ile daha sonra ise `bzip2` ile yapalım. Dosya adı verirken kullanılan <kbd>tar.gz</kbd> ve <kbd>tar.bz2</kbd> uzantılarına dikkat edin aksi halde işlem hata verecektir.
 
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/8.png)
+<img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/8.png" width="875">
 <img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/9.png" width="875">
 
 Gördüğünüz gibi `gzip` kullanırken parametre olarak `czvf` verdik ve oluşturduğumuz dosyanın uzantısını da <kbd>tar.gz</kbd>  şeklinde yaptık. Aynı şekilde `bzip2` için ise `cjvf` parametrelerini kullandık ve dosya adımızın uzantısı <kbd>tar.bz2</kbd>  şeklinde oldu. Daha önce de söylediğim gibi bu ayrıntılara dikkat etmezseniz işlem kaçınılmaz olarak başarısız olacaktır.
 
 Sıkıştırmış olduğumuz arşivleri tekrar açmak için ise `gzip` için `xzvf` parametresi `bzip2` için ise `xjvf` parametresini kullanacağız. 
 
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/10.png)
+<img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/10.png" width="875">
 
 Arşivler açılmış oldu. Eğer arşivi belirli bir konuma çıkarmak istersek daha önce de öğrenmiş olduğumuz şekilde `-C` parametresi ile bu işlemi gerçekleştirebiliriz. Eğer `-C` parametresi kullanmazsak arşiv içindekiler doğrudan belirttiğimiz konuma açılır. `-C` parametresi hedef konuma arşivin ismi ile bir dosya oluşturur ve o dosya içerisine çıkarma işlemini yapar. 
 

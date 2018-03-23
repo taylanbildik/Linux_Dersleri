@@ -17,7 +17,7 @@ Kullanımı: `wget indirilecek_dosya_linki dosya_yolu`
 Örnek olarak aircrack-ng aracını indirdim. Ve indirme işlemini `ls -l`
 komutu ile teyit ettim.
 
-![enter image description here](https://i.hizliresim.com/PlY6r8.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/1.gif)
 
 Ve.. bulunduğum dizin içerisine istediğim dosya(aircrack-ng) indirilmiş oldu. 
 
@@ -27,11 +27,11 @@ Bir metin belgesinin içerisine kayıt ettiğimiz linklerde yer alan dosyaları 
 
 Örneğin ben T.C Resmi Gazetesi pdflerinden 5 tanesini aynı anda indirmek istiyorum diyelim. Bunun için bu pdflerin indirme linklerini bir metin belgesine kaydetmem gerekiyor. Ben bu işlemi `leafpad resmi_gazeteler` komutu ile "resmi_gazeteler" isimli bir dosya oluşturarak ve içerisine gerekli linkleri ekleyerek gerçekleştiriyorum.
 
-![enter image description here](https://i.hizliresim.com/LbYgnV.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/2.png)
 
 Artık sıra geldi toplu indirmelere. Bu işlem için konsola `wget -i resmi_gazeteler` komutumu giriyorum.
 
-![enter image description here](https://i.hizliresim.com/MdPga9.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/3.gif)
 
 PDF belgelerimiz toplu şekilde indirilmiş oldu şimdi de bu dosyaların varlığını teyit etmek için konsola `ls -l` komutunu verdim.
 
@@ -39,7 +39,7 @@ PDF belgelerimiz toplu şekilde indirilmiş oldu şimdi de bu dosyaların varlı
 **Özel Konum Belirterek İndirmek :**
 Eğer dosyanın konsolun üzerinde çalıştığı konuma değil de bizim istediğimiz özel bir konuma indirilmesini istersek bunun için `wget -P kaydedilecek_dizin_yolu dosya_linki` şeklinde komut vermemiz gerekiyor.
 
-![enter image description here](https://i.hizliresim.com/jyv1yD.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/4.gif)
 
 Dosyamızı istediğimiz konuma indirmek için indireceğimiz dizin adresinin tam yolunu belirtmemiz gerekiyordu bu nedenle buradaki `~/Desktop` kullanımı sizi şaşırtmasın <kbd>~</kbd> işareti ana dizini temsil ediyor.
 
@@ -48,7 +48,7 @@ Ve sonuç olarak indirdiğimiz konuma gelerek dosyanın varlığını teyit etmi
 **Özel Konum Ve İsim Belirterek İndirmek :**
 İndirilecek dosyanın adını değiştirerek istediğimiz konuma indirmesini istersek `wget` komutumuzu `-O` parametresi ile birlikte `wget -O kaydedilecek_dizin_yolu/dosyanın_yeni_adı indirme_linki` şeklinde kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/XPDqED.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/5.gif)
 
 Dosyamızı "aircrack" ismi ile indirip <kbd>/Desktop</kbd> dizinine kaydettik bu durumu da `ls -l` komutu ile teyit ettik.
 
@@ -60,19 +60,19 @@ Adım adım yaptığım işlemleri inceleyelim.
 
 İlk olarak içi tamamen boş olan <kbd>/Documents</kbd> dizinine `cd /Documents` komutu ile ulaştım. Bu dizinin içerisinin boş olduğunu `ls -l` komutu ile teyit ettim.
 
-![enter image description here](https://i.hizliresim.com/rOm82P.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/6.png)
 
 <kbd>/Documents</kbd> dizini içerisinde iken `wget` komutu ile dosyamı indirmeye başladım. Daha sonra indirme işlemini <kbd>Ctrl + Z</kbd> tuş kombinasyonu ile durdurdum. Durdurmamdaki amaç daha sonra devam ettirebilme özelliğini test etmekti.
 
-![enter image description here](https://i.hizliresim.com/9m9qD8.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/7.gif)
 
 İndirme işlemi durdurduktan sonra <kbd>/Documents</kbd> dizinini kontrol etmek için `ls -l` komutunu kullandım. Ve dosyamın **638681** bayt kadarının inmiş olduğunu gördüm.
 
-![enter image description here](https://i.hizliresim.com/76VXNl.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/8.png)
 
 Durdurmuş olduğum indirme işlemine devam etmek üzere `wget` komutu ile beraber `-c` parametresini de kullanarak dosya indirme işlemini kaldığı yerden devam ettirdim.
 
-![enter image description here](https://i.hizliresim.com/qGm8Jq.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/9.gif)
 
 Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini `ls -l` komutu ile teyit ettim.
 
@@ -83,13 +83,13 @@ Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceği
 
 Örnek olması açısından ben dosyayı indirirken 300KB/s hızında indirme limiti koyuyorum.
 
-![enter image description here](https://i.hizliresim.com/QV4Ypg.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/10.gif)
 
 Zaten üst kısımda yer alan çıktının sonucunda da bu hız sınırlamasının sonucu olarak ortalama indirme hızı (300 KB/s) olarak gözüküyor.
 
 **Arkaplanda İndirmek :**
 İndirmek istediğimiz dosyanın arkaplanda inmesini `-b` parametresi ile sağlarız. İndirme işleminin sonuçlarını öğrenmek istersek indirilen dosya ile aynı konumda yer alan <kbd>wget-log</kbd> dosyasını incelememiz yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/gO4VWN.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/11.gif)
 
 Dosyamızı arkaplanda indiriyoruz ve konsol çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` komutu ile kayıt dosyasına bakabiliriz.

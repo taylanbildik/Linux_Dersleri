@@ -15,7 +15,7 @@ Aslında bu eylemler sizlere yabancı gelmemeli. Zira daha önce `chmod` komutu 
 
 Şimdi mevcut dosyalarımızın ne tür izinleri barındırdığına göz atalım. Bunun için komut satırına ayrıntılı liste yazdırmak üzere `ls -l` komutumuzu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/nOYzaM.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/1.png)
 
 Şimdi listemizi inceleyerek bulunan izinleri ele alalım.
 
@@ -31,7 +31,7 @@ Geriye kalan kısımları ayrı ayrı açıklayacak olursak <kbd>-</kbd> işaret
 
 Sırayla birinci harf kümesi dosya sahibinin izinlerini, ikinci harf kümesi grup izinleri ve son küme de diğer kullanıcıların izinlerini belirtir. 
 
-![enter image description here](https://i.hizliresim.com/2JvLR2.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/2.png)
 
 Buna göre yukarıdaki dosyalarda bulunan izinleri açıklayacak olursak;
 
@@ -75,24 +75,24 @@ Genel parametreleri gördüğümüze göre gelin birkaç örnek yapalım.
 
 İlk olarak klasörde yer alan dosyaların herhangi bir yetkiye sahip olmadıklarını teyit etmek için ayrıntılı çıktı almak üzere `ls -l` komutunu kullandık.
 
-![enter image description here](https://i.hizliresim.com/BLoJ1M.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/3.png)
 
 
 Daha sonra klasörde yer alan tüm dosyalara `*` joker karakteri ile ulaştık ve `chmod +w *` komutumuzu kullanarak herkese açık olacak şekilde yazma(w) yetkisi verdik.
 
-![enter image description here](https://i.hizliresim.com/jyz0aL.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/4.png)
 
 Aynı grupta bulunan kullanıclar için yine konumumuzda bulunan tüm dosyaları `*` sayesinde kapsayacak şekilde `g+rx *` komutumuzu verdik.
 
-![enter image description here](https://i.hizliresim.com/oOnGa9.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/5.png)
 
 Gruptaki kullanıcılara(g), okuma-yazma-çalıştırma yetkisi (rwx), kullanıcıya(u) yazma yetkisi(r), diğer kullanıcılara ise yalnızca çalıştırma yetkisi(x) verdik.
 
-![enter image description here](https://i.hizliresim.com/MdBMAN.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/6.png)
 
 Ve en son yine bulunduğumuz konumdaki tüm dosyaların yetkilerini kaldırdık.
 
-![enter image description here](https://i.hizliresim.com/Vr2oGv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/7.png)
 
 Bu kullanımların dışında yetkilendirme işlemleri daha önceden de rastladığımız ve fark etmeden de olsa kullanmış olduğumuz sayısal şekilde de ifade edilebiliyor.
 
@@ -104,7 +104,7 @@ Yetkilerin sayısal değerlerini kullanarak bir örnek yapalım.
 
 Örneğin biz sadece dosyanın sahibine bütün yetkileri vermek istiyoruz diyelim. Bunun için ilk başta yetki kalıplarının numara karşılıklarını toplamalıyız. Yani bütün yetkileri vereceğimiz için <kbd>r=4 </kbd>+<kbd> w=2</kbd> +<kbd> x=1</kbd>=<kbd>toplam sayı 7</kbd> etti. Bizler de sadece dosya sahibine bu yetkiyi vermek istediğimizden normalde vereceğimiz `chmod rwx- -----` komutumuzu diğer kullanıcılara yetki vermek istemediğimiz için o alanları 0 bırakarak komutu `chmod 700 dosya` şeklinde veriyoruz. Böylelikle sadece dosyanın sahibi tüm yetkilere sahip olmuş oluyor.
 
-![enter image description here](https://i.hizliresim.com/gOjNlR.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/8.png)
 
 Daha net anlaşılması adına bir örnek daha yapalım. Şimdi de; dosyanın sahibine tüm yetkileri, ortak gruptakilere yalnızca yazma yetkisini, diğer kullanıcılara da sadece okuma yetkisini verelim.
 
@@ -114,7 +114,7 @@ Dosya sahibi ile ortak gruptaki kullanıcılar için vereceğimiz yazma yetkisi 
 
 Diğer kullanıcılar için vereceğimiz yalnız okuma yetkisi için ise okuma(r) karakterinin sayısal karşılığı olan `4` sayısını kullanacağız.
 
-![enter image description here](https://i.hizliresim.com/9mv6X3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/9.png)
 
 Çıktıdan da anlaşılacağı üzere sayısal karşılıklar istediğimiz yetkilendirme işlemini gerçekleştirdi.
 
@@ -122,15 +122,15 @@ Son bir ayrıntı daha verelim. Eğer verdiğimiz izinlerin o dizinle beraber al
 
 Örneğin bulunduğum konumdaki "metin" isimli klasörün erişim yetkilerini listedim. Sonuç olarak hiç bir yetkinin bulunmadığını belirten <kbd>--------- </kbd> şeklinde bir çıktı geldi. 
 
-![](https://i.hizliresim.com/9mrjGk.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/10.png)
 
 Daha sonra "metin" isimli klasörün içerisine girerek oradaki dosya ve dizinlerin erişim izinlerini sorguladım. Sonuç olarak <kbd>rwxrwxrwx</kbd> şeklinde bütün yetkilere sahip dosya ve dizinlerin olduğunu gördüm. 
 
-![](https://i.hizliresim.com/qGNzE5.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/11.png)
 
 Daha sonra bir üst dizine dönerek ekleyeceğim erişim izinlerinin tüm alt dosyalarda da dahil geçerli olması için komutuma ek olarak `-R` parametresini kulladım ve komutumu `chmod -R 422 metin` şeklinde yazdım. 
 
-![](https://i.hizliresim.com/MdBjkN.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/12.png)
 
 Sonuç olarak bütün dosya ve dizinlerde ve alt klasörlede dahil olmak üzere tüm dosyaların vermiş olduğum yetki erişim izinleri **422** ifadesine karşılık gelen; dosya sahibi için okuma(**r**) , dosya sahibi ile aynı gruptaki kullanıcılar için yazma(**w**) ve diğer kullanıclar için de yazma(**w**) yetkisi şeklinde yetkilendirildiğini görmüş oldum.
 
@@ -142,8 +142,7 @@ Hepimizin başına mutlaka gelen ve çok can sıkıcı bir durum var. Bu durum y
 
 Komutun kullanımı `chattr +i dosya_adı` şeklindedir. Hemen bir örnek yapalım.
 
-![enter image description here](https://i.hizliresim.com/Md9zYQ.png)
-
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/13.png)
 Bu tür dosyaları listelemek için `lsattr` komutu kullanılıyor. Bizde dosyaların durumunu daha sonradan karşılaştırabilmek adına ilk olarak konsola `lsattr` komutunu verdik.
 
 <kbd>test.txt </kbd> isimli dosyamızı `chattr +i test.txt` komutu ile koruma altına aldık.
@@ -154,6 +153,6 @@ Komutumuzun çıktısında görüldüğü gibi dosyamızın sol tarafında izinl
 
 Eğer bu işlemi geri almak ve dosyamızı üzerinde değişiklikler yapılabilir hale getirmek istersek `chattr -i test.txt` komutumuzu kullanmamız yeterli olacaktır. Örneği aşağıda inceleyebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/QV1kX3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/14.png)
 
 Çıktıda da görüldüğü gibi hedef dosyamızın solundaki `-i` işareti yok olmuş. Dolayısıyla <kbd>test.txt</kbd> isimli dosyamızın artık eski halinde dönerek düzenlenebilir forma girmiş olduğunu gördük. Ve dosyamızı silerek bu durumu teyit ettik.

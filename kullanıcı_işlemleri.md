@@ -203,14 +203,14 @@ Eğer anlamadığınız bir nokta varsa bu durumu .gif ile anlattım, dikkatlice
 
 ### Kimlik Değişimi
 
-Örneğin ben "taylan" kullanıcısıyken, yapmak istediğim işlem ancak "root" kullanıcısının yetki alanındaysa ve ben "root" hesabının parolasını biliyorsam, "root" hesabının kimliğine bürünerek o işlemi gerçekleştirebilirim.
+Örneğin ben "burak" kullanıcısıyken, yapmak istediğim işlem ancak "root" kullanıcısının yetki alanındaysa ve ben "root" hesabının parolasını biliyorsam, "root" hesabının kimliğine bürünerek o işlemi gerçekleştirebilirim.
 
 Geçiş işlemleri için `su` komutunu kullanıyoruz. Komutun kullanımı ile ilgili iki farklı durum var, bunlar:
 
 - **su kullanıcı_adı :** diğer kullanıcı kimliğine geçiş yapar.
 - **su - kullanıcı_adı :** diğer kullanıcı kimliğine geçiş yapar ve direk olarak geçiş yapılan kullanıcının kabuğunda çalışmaya başlar.
 
-Bu durum en iyi örnekler ile açıklanabilir. İlk önce "root" kullanıcısıyken "taylan" isimli kullanıcı hesabına giriş yapacağım daha sonra "taylan" isimli kullanıcıdan "root" hesabına giriş işlemini gerçekleştireceğim. Adımları sırasıyla takip edin lütfen.
+Bu durum en iyi örnekler ile açıklanabilir. İlk önce "root" kullanıcısıyken "burak" isimli kullanıcı hesabına giriş yapacağım daha sonra "burak" isimli kullanıcıdan "root" hesabına giriş işlemini gerçekleştireceğim. Adımları sırasıyla takip edin lütfen.
 
 Hemen mevcut kullanıcı oturumunu daha önce öğrenmiş olduğumuz `whoami` komutu ile sorgulayalım.
 
