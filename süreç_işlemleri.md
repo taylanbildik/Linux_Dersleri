@@ -9,40 +9,28 @@ ps
 
 Bu komutumuz çalışan süreçleri görüntülememizi sağlıyor.
 
-Komut tek başına `ps` şeklinde kullanıldığında o anda çalışmakta olan süreçleri veriyor.
+Komut tek başına `ps` şeklinde kullanıldığında mevcut konsol üzerinden çalıştırılmış süreçleri verir.
 
-![enter image description here](https://i.hizliresim.com/Z91NV0.png)
+![enter image description here](https://i.hizliresim.com/rOdLRB.png)
 
-Gerektiği zaman doğru çıktıları almak adına `ps` komutunun parametrelerine bakalım.
+Genellikle sistemdeki tüm işlemleri görmek için `ps -aux` komut bütünü kullanıyor. 
+Komut `aux` parametreleri ile `ps -aux` şeklinde kullanıldığında sistemde ve terminallerde çalışan tüm süreçleri ve süreç sahiplerini gösterir.
+
+Çıktı çok uzun olacağından aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.
+
+![enter image description here](https://i.hizliresim.com/rOdLRB.png)
+
+
+Ancak gerektiği zaman doğru çıktıları almak adına `ps` komutunun parametrelerine bakalım.
 
 Genel Liste
 
-**a :** Tüm terminallerde çalışan süreçler.
+**e :** Sistemde çalışan tüm süreçleri listeler.
 
 **u :** Hedef kullanıcıya göre süreçleri listeler.
 
-**x :** tty’lerde çalışanlar hariç tüm süreçleri verir.
+**p :** süreç numarası (PID) ile listeler.
 
-**e :** Komutlar ve parametrelerini göstermektedir.
-
-**f :** Tam çıkış şeklinde listeler.
-
-**l :** Çıkış listesini uzunca verir.
-
-**c :** Süreçlerin yalnız komut isimlerini verir.
-
-**v :** Kullanılan hafızalara göre gösterir.
-
-Şimdi bazı parametrelerimizi çıktıları ile birlikte inceleyelim.
-
-
-<kbd>a</kbd> , <kbd>u</kbd> ve <kbd>x</kbd> parametrelerini genellikle kullanıldığı gibi yani bir bütün olarak `-aux` şeklinde ele alalım.
-
-Komut `aux` parametreleri ile `ps -aux` şeklinde kullanıldığında sistemde ve terminallerde çalışan tüm süreçleri ve süreç sahiplerini gösterir.
-
-Çıktı çok uzun olacağından  aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.
-
-![enter image description here](https://i.hizliresim.com/rOdLRB.png)
 
 **e :** Sistemde çalışan her süreç.(every)
 
@@ -50,15 +38,8 @@ Komut `aux` parametreleri ile `ps -aux` şeklinde kullanıldığında sistemde v
 
 ![enter image description here](https://i.hizliresim.com/vjozLO.png)
 
-**f :** Tam çıkış biçimi.(full)
 
-![enter image description here](https://i.hizliresim.com/oOzQZo.png)
-
-**l :** Uzun çıkış biçimi.(long)
-
-![enter image description here](https://i.hizliresim.com/lOzYyl.png)
-
-**u :** Kullanıcı ile ilgili süreçler.
+**u :** Kullanıcı adına göre süreç bilgileri.
 
 Parametrenin komut ile kullanımı `ps -u kullanıcı` şeklindedir.
 
@@ -66,13 +47,9 @@ Parametrenin komut ile kullanımı `ps -u kullanıcı` şeklindedir.
 
 ![enter image description here](https://i.hizliresim.com/1JnPk1.png)
 
-**c :** Süreçlerin komut ismini verir.
+**c :** Süreç numarasına(PID) göre süreç bilgisi.
 
 ![enter image description here](https://i.hizliresim.com/VrypLq.png)
-
-**v :** Süreçleri kullandıkları bellek ile birlikte gösterir.
-
-![enter image description here](https://i.hizliresim.com/LboP4J.png)
 
 Eğer aradığımız özel bir süreç varsa daha önce görmüş olduğumuz `grep` komutu yardımı ile o süreç hakkında doğrudan bilgi alabiliriz.
 
@@ -80,7 +57,7 @@ Eğer aradığımız özel bir süreç varsa daha önce görmüş olduğumuz `gr
 
 ![enter image description here](https://i.hizliresim.com/nOGPg1.png)
 
-Çıktıda görüldüğü gibi yalnızca ulaşmak istediğim bash süreci hakkında çıktı almış oldum.
+Çıktıda görüldüğü gibi yalnızca ulaşmak istediğim "bash" süreci hakkında çıktı almış oldum.
 
 pstree
 -
@@ -97,7 +74,7 @@ Bu komut da tıpkı `ps` komutunda olduğu gibi süreçler hakkında bilgi verir
 
 ![enter image description here](https://i.hizliresim.com/oOzzVo.png)
 
-Eğer varsayılan olarak kullanılan 3 saniyede bir güncelleme tekrarında bir değişiklik yapmak istersek komut `d` parametresiyle birlikte yani `top -d saniye` şeklinde yazarak istediğimiz saniye aralığında süreç bilgilerinin çıktılarının güncellenmesini sağlayabiliriz. Eğer bu ekranı kapatmak istesek ise sadece <kbd>q</kbd> tuşuna basmamız yeterli.
+Eğer varsayılan olarak kullanılan 3 saniyede bir güncelleme tekrarında bir değişiklik yapmak istersek komutumuzu `d` parametresiyle birlikte yani `top -d saniye` şeklinde yazarak istediğimiz saniye aralığında süreç bilgilerinin çıktılarının güncellenmesini sağlayabiliriz. Eğer bu ekranı kapatmak istesek ise sadece <kbd>q</kbd> tuşuna basmamız yeterli.
 
 pgrep
 -
