@@ -5,6 +5,7 @@ Disk ile ilgili yapabileceğimiz bölümleme, formatlama, yedekleme ve diğer i�
 > **Komutlara geçmeden önce disk üzerinde yapacağımız işlemlerde son derece dikkatli olmamız gerektiğini aklınızdan çıkarmayın lütfen.**
 
 > **Yapacağımız yanlışlar dosyalarımızın kalıcı olarak silinmesine ve daha farklı sorunlara yol açabilir.**
+
 > **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
 
 gparted
@@ -26,8 +27,9 @@ Komutun aldığı temel parametreleri ele alarak konumuza devam edelim.
 **fdisk -l :** disk bölümlerini listeler.
 
 ![enter image description here](https://i.hizliresim.com/vjgAjD.png)
+Gördüğünüz gibi disk bölümleri listelenmiş oldu.
 
-Komutumuzu `fdisk /dev/sda` şeklinde parametresiz olarak vermemiz durumunda konsol bizden komut bekler.
+Komutumuzu `fdisk /dev/sda` şeklinde parametresiz olarak vermemiz durumunda konsol bizden komut bekler. Buradaki <kbd>/dev/sda</kbd> genel disk alanını temsil ediyor. Bizde disk üzerinden işlem yapacağımız için komutumuzu bu şekilde girdik.
 
 ![enter image description here](https://i.hizliresim.com/1JYaJb.png)
 
@@ -63,7 +65,7 @@ Ben `p` parametresi ile listelediğim disk bölüm tablosundan 3. bölümü yani
 
 **Primary Partition** denilen kısım işletim sistemlerini kurduğumuz sabit disk bölümüdür. Bir sabit diskte maksimum 4 tane primary partition olabiliyor ve bunlardan bir tanesinin mutlaka aktif partition olması gerekiyor ki işletim sisteminiz boot işlemi sırasında çalıştırılabilsin.
 
-**Extended Partition** ise aktif primary partition çıkarıldığında geriye kalan tüm sabit disk alanınızdır, bunun içine pasif primary partitionlar da dahildir.
+**Extended Partition** ise aktif primary partition çıkarıldığında geriye kalan tüm sabit disk alanımızdır, bu alanın içine pasif primary partitionlar da dahildir.
 
 Bu açıklama yeterli gelmemiş dolayısı ile anlamamış olabilirsiniz ancak kafa karışıklığına sebep olmamak için ayrıntıya girmiyorum. Merak eden arkadaşlar kısa bir araştırma sonucu istediklerinden de fazla bilgiye ulaşabilirler. Şimdi konumuza devam edelim.
 
@@ -85,14 +87,15 @@ Gerekli ayarlamaları ve işlemleri gerçekleştirdikten sonra `fdisk` aracını
 
 ![enter image description here](https://i.hizliresim.com/Vrl8rR.gif)
 
+
 cfdisk
 -
 `fdisk` aracının görsel arayüze sahip versiyonudur. Açmak için `cfdisk` komutu yeterli olacaktır.
 
 ![enter image description here](https://i.hizliresim.com/Z9LRB0.png)
 
-Ayrıca benden bir tavsiye, `fdisk`'in kullanımı `cfdisk`'e oranla biraz zordur, dolayısıyla kolayca hata yapabilir ve istenmeyen durumlarla karşı karşıya kalabilirsiniz. Etkileşimli bir arayüzü olan `cfdisk`'in kullanımı daha kolay olduğundan hata yapmak daha zordur. Hele birde Linux'unuzu Türkçe kullanıyorsanız, `cfdisk`'in de Türkçe arayüze sahip olmasından dolayı çok rahat şekilde işlemlerinizi gerçekleştirebilirsiniz.
-Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Çok kolay şekile kendiniz keşfedebilirsiniz.
+Ayrıca benden bir tavsiye, `fdisk`'in kullanımı `cfdisk`'e oranla biraz zordur, dolayısıyla kolayca hata yapabilir ve istenmeyen durumlarla karşı karşıya kalabilirsiniz. Etkileşimli bir arayüzü olan `cfdisk`'in kullanımı daha kolay olduğundan hata yapmak daha zordur.
+Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Çok kolay şekile kendiniz keşfedebilirsiniz.(*Keşiflerinizde ana makina haricindeki sanal ortamlarda gerçekleştirmenizi şiddetle tavsiye ederim.*)
 
 badblocks
 -
@@ -100,7 +103,7 @@ badblocks
 
 Sırasıyla kullanım parametrelerine göz atalım:
 
-**b :** blok uzunluğu bayt cinsinden gösterir.(aşağıdaki kullanımda yer alan `s` ve `v` parametreleri ileride açıklanmıştır)
+**b :** blok uzunluğu bayt cinsinden gösterir.(Aşağıdaki kullanımda yer alan `s` ve `v` parametreleri ileride açıklanmıştır.)
 
 ![enter image description here](https://i.hizliresim.com/YgvayE.png)
 
@@ -124,7 +127,7 @@ Sırasıyla kullanım parametrelerine göz atalım:
 
 ![enter image description here](https://i.hizliresim.com/azoavg.gif)
 
-Bu parametreler dışında da başka parametreler mecvut konsola `man badblocks` yazarsanız zaten diğer parametreler hakkında da kısaca bilgi sahibi olabilirsiniz.
+Bu parametreler dışında da başka parametreler mecvut. Konsola `man badblocks` yazarsanız diğer parametreler hakkında da kısaca bilgi sahibi olabilirsiniz.
 
 Neticede `badblocks` komutu ve parametreleri yardımı ile hatalı blok tespiti yapabiliyoruz. Şimdi de bu hatalı blokları düzeltme kısmına gelelim.
 
