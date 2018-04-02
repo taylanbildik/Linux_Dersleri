@@ -52,11 +52,11 @@ Kali 2016.1 ve sonrası için:**`deb http://http.kali.org/kali kali-rolling main
 
 Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/1.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/1.png" width="875">
 
 Sıra gelidi güncelleme işlemine, bunun için `apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y` komut bütününü kullanabiliriz.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/2.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/2.png" width="875">
 
 Güncelleme işlemi boyunca kullandığımız `-y` parametresi sayesinde herhangi bir soru sorulmadan bütün işlemler otomatik olarak tamamlanacak ve güncelleme işlemi tamamlanacaktır.
 
@@ -71,26 +71,26 @@ Unutmayın depodan(repository) kurulum yaparken sisteminizin güncel olması ön
 
 Örnek olması açısından filezilla isimli bir programın depodan kurulumunu yapmak için konsola `apt-get install filezilla` komutunu girdim.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/3.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/3.gif" width="875">
 
 Ve program kurulmuş oldu. Konsola `filezilla` yazarak da bu durumu teyit ettim.
 
 Şayet kurduğunuz programı kaldırmanız(silmeniz) gerekirse konsola `apt-get remove program_adı` şeklinde girdiğinizde ilgili program otomatik olarak sistemden kaldırılacaktır.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/4.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/4.gif" width="875">
 
 Sadece programı kaldırmakla yetinmeyip bir de programın yapılandırma dosyalarını da sistemden kaldırmak isteyebilirsiniz. 
 Yapılandırma dosyaları ile birlikte programı kaldırmak için komutu 
 
 `apt-get --purge remove program_adı` 
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/5.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/5.gif" width="875">
 
 veya 
 
 `apt-get purge program_adı` 
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/6.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/6.gif" width="875">
 
 şeklinde kullanabilirsiniz.
 
@@ -108,17 +108,17 @@ Bu işlem için kullandığımız dağıtıma uygun derleyiciyi kullanmalıyız.
 
 Şimdi programı kurmak için `dpkg -i paket_adı.deb` şeklinde komutumu giriyorum.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/7.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/7.gif" width="875">
 
 Ve progamım kurulmuş oldu.
 
 Kurduğumuz programı kaldırmak istersek komutumuzu `dpkg -r program_adı` şeklinde yani `-r` parametresini ekleyerek kullanıyoruz.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/8.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/8.gif" width="875">
 
 Program otomatik olarak kaldırılmış oldu. Ancak <kbd>/etc</kbd> dizini altındaki konfigürasyon dosyaları silinmedi. Eğer bu dosyaları da kaldırmak istersek `-P` parametresini kullanabiliriz.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/9.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/9.gif" width="875">
 
 Bu sayede programa ait konfigürasyon dosyaları da tamamen kaldırılmış oldu.
 
@@ -126,7 +126,7 @@ Konfigürasyondan bahsetmişken aklınızda bulunsun eğer yüklediğimiz paketi
 
 Kurulu olan tüm paketler hakkında bilgi almak için `-l` parametresi kullanılabilir.(Çıktı uzun olduğundan kısa kesilmiştir.)
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/10.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/10.png" width="875">
 
 Çıktıda yer alan paketlerin sol tarafındaki ifadelerin anlamı:
 
@@ -138,23 +138,23 @@ Kurulu olan tüm paketler hakkında bilgi almak için `-l` parametresi kullanıl
 
 Kurulu paketin durumunu öğrenmek için `-s` parametresini kullanabiliriz. Ben örnek olması açısında leafpad programı hakkında bilgi almak için komut satırına `dpkg -s leafpad` komutunu giriyorum.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/11.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/11.png" width="875">
 
 Kurulu paketin içeriğini öğrenmek istersek `-L` parametresini kullanırız.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/12.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/12.png" width="875">
 
 Eğer indirmiş olduğumuz <kbd>.deb</kbd> uzantılı dosyanın içeriğini henüz kurmadan görmek istersek `-c` parametresini kullanabiliriz.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/13.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/13.png" width="875">
 
 Sistemde kurulmuş ve kaldırılmış tüm paketleri görmek istersek `dpkg --get-selections` komutunu kullanabiliriz.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/14.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/14.png" width="875">
 
 Bu paket listesini daha sonra kullanmak üzere bir dosya içerisine yedeklemek istersek komutumuzu `dpkg --get-selections >dosya_adı.txt` şeklinde kullanmamız yeterli olacaktır.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/15.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/15.png" width="875">
 
 Yedeklediğimiz bu program listeleri sayesinde başka bir sisteme aynı paketleri tek seferde yüklememiz mümkün. Bunun için komutlar aşağıdaki şekildedir.
 
@@ -169,11 +169,11 @@ Ayrıca bu işlemin uzun süreceğini unutmayın. Yani çok fazla spesifik progr
 
 Şimdi sıra geldi ikinci yol olan yardımcı paket yöneticisi programı aracılığı ile program kurma-kaldırma-güncelleme işlemlerin yapmaya. Bunun için ilk olarak paket yönetim programı olan **synaptic** programını kurmamız gerek. Komut satırına `apt-get install synaptic` yazarak yardımcı programı indiriyoruz.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/16.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/16.gif" width="875">
 
 Evet "<kbd>y</kbd>" diyerek kuruluma onay veriyoruz ve programımız kurulmuş oluyor. Programı açmak için komut satırına `synaptic` komutunu vermemiz yeterli. Bu program(synaptic) sayesinde depolarda yer alan programları çok kolay şekilde kurup kaldırabilir ve programlar için diğer gerekli işlemleri yerine getirebiliriz. Programın kullanımı oldukça kolay olduğundan keşfini sizlere bırakarak anlatıma devam ediyorum.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/17.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/17.png" width="875">
 
 Kaynak Koddan Derleyerek Kurulum
 -
