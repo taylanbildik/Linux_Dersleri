@@ -17,7 +17,7 @@ Güncelleme işleminde kullanılan komutlarımızı tanıyarak devam edelim.
 
     apt-get update
 
-Paket listesini(<kbd>/etc/apt/sources.list</kbd>) günceller.
+Paket listesini (<kbd>/etc/apt/sources.list</kbd>) günceller.
 
     apt-get upgrade
 
@@ -51,6 +51,7 @@ Kali 2016.1 ve sonrası için:**`deb http://http.kali.org/kali kali-rolling main
 
 
 Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
+
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/1.png" width="875">
 
 Sıra gelidi güncelleme işlemine, bunun için `apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y` komut bütününü kullanabiliriz.
@@ -82,10 +83,15 @@ Sadece programı kaldırmakla yetinmeyip bir de programın yapılandırma dosyal
 Yapılandırma dosyaları ile birlikte programı kaldırmak için komutu 
 
 `apt-get --purge remove program_adı` 
+
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/5.gif" width="875">
+
 veya 
+
 `apt-get purge program_adı` 
+
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/6.gif" width="875">
+
 şeklinde kullanabilirsiniz.
 
 Bu sayede program yapılandırma dosyaları ile birlikte tamamen silinmiş oluyor.
@@ -183,11 +189,13 @@ Programı derlemeden önce gerekli kütüphaneler ve bağımlılıkları kontrol
 Eksik çıkarsa bunları kurmamız gerekicek.
 
 Eğer bu aşamada;
-`bash: ./configure: No such file or directory`
-`bash: ./configure: Böyle bir dosya ya da dizin yok`
-gibi bir hata çıktısı alıyorsanız:
 
-O program için ./configure aşamasına gerek yoktur, farklı bir şekilde kuruluyor anlamlarına gelebilir. Bunun için programla birlikte gelen kurulum bilgisini içeren dosyalara("install", "readme", "configure" vb..) iyice göz atmanızı öneririm.
+`bash: ./configure: No such file or directory`
+
+`bash: ./configure: Böyle bir dosya ya da dizin yok`
+
+gibi bir hata çıktısı alıyorsanız:
+O program için `./configure` aşamasına gerek yoktur, farklı bir şekilde kuruluyor anlamlarına gelebilir. Bunun için programla birlikte gelen kurulum bilgisini içeren dosyalara("install", "readme", "configure" vb..) iyice göz atmanızı öneririm.
 
 Make aşaması için derleme yapacak paketleri `apt-get install build-essential` komutu ile kuruyoruz.
 
