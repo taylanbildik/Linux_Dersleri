@@ -3,17 +3,9 @@ Disk İşlemleri
 
 Disk ile ilgili yapabileceğimiz bölümleme, formatlama, yedekleme ve diğer işlemleri gerçekleştirebileceğimiz çeşitli komutlar var. Bu bölümde bu komutları ve işlevsel yanlarını ele alacağız. Konumuza ilk olarak daha önce de kullanmış olduğumuz `fdisk` komutu ile başlayalım.
 > **Komutlara geçmeden önce disk üzerinde yapacağımız işlemlerde son derece dikkatli olmamız gerektiğini aklınızdan çıkarmayın lütfen.**
-
 > **Yapacağımız yanlışlar dosyalarımızın kalıcı olarak silinmesine ve daha farklı sorunlara yol açabilir.**
 
 > **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
-
-gparted
--
-Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk aracı denilebilir. Grafiksel arayüze sahip olduğu için açıklamasını burada vermem resimler ile verimsiz ve yetersiz olur. Ancak hazırladığım eğtim kursunda anlatımı videolu şekilde gerçekleştirdim eğer isterseniz [kursumu satın alarak](https://www.udemy.com/) hem bana destek olabilir hem de bu kaynağın açıklamalı anlatımını edinmiş olursunuz. Kursumu satın almak istemezseniz internetteki Türkçe-İngilizce kaynaklarda kullanımı hakkında bolca bilgiye ulaşabilirsiniz. Açmak için konsola `gparted` yazmanız yeterli olacaktır.
-
-![enter image description here](https://i.hizliresim.com/nOA9Oa.png)
-
 
 
 fdisk
@@ -26,36 +18,36 @@ Komutun aldığı temel parametreleri ele alarak konumuza devam edelim.
 
 **fdisk -l :** disk bölümlerini listeler.
 
-![enter image description here](https://i.hizliresim.com/vjgAjD.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/1.png)
 Gördüğünüz gibi disk bölümleri listelenmiş oldu.
 
 Komutumuzu `fdisk /dev/sda` şeklinde parametresiz olarak vermemiz durumunda konsol bizden komut bekler. Buradaki <kbd>/dev/sda</kbd> genel disk alanını temsil ediyor. Bizde disk üzerinden işlem yapacağımız için komutumuzu bu şekilde girdik.
 
-![enter image description here](https://i.hizliresim.com/1JYaJb.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/2.png)
 
 Hazır komutumuzu parametresiz kullanmışken bizden komut bekleyen konsola girebileceğimiz parametreleri ele alalım.
 
 **m :** yardım menüsünü açar. Burada `fdisk` komutu ile kullanabileceğimiz parametreler listelenir.
 
-![enter image description here](https://i.hizliresim.com/Lbp8bz.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/3.png)
 
 Çıktıda görüldüğü üzere `fdisk` komutu disk konusunda çok fazla işleve sahip. Ancak biz sadece birkaç temel işlevini göreceğiz.
 
 **p :** disk bölümleme tablosunu gösterir.
 
-![enter image description here](https://i.hizliresim.com/rOgXOz.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/4.png)
 
 Çıktımız tıpkı komutu `fdisk -l` şeklinde kullandığımızdaki gibi oldu.
 
 **l :** disk bölümlerini listeler.
 
-![enter image description here](https://i.hizliresim.com/76oW6r.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/5.png)
 
 **d :** bölüm silmek için kullanılır.
 
 Ben `p` parametresi ile listelediğim disk bölüm tablosundan 3. bölümü yani <kbd>/dev/sda3</kbd> bölümünü silmek üzere `d` parametresini vererek Partition number kısmını 3 olarak belirttim.
 
-![enter image description here](https://i.hizliresim.com/Pl52lb.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/6.png)
 
 Çıktıda da görüldüğü gibi seçili alan silinmiş oldu. Artık diskte alan açıldığına göre yeni bir disk bölümü oluşturabiliriz.
 
@@ -69,7 +61,7 @@ Ben `p` parametresi ile listelediğim disk bölüm tablosundan 3. bölümü yani
 
 Bu açıklama yeterli gelmemiş dolayısı ile anlamamış olabilirsiniz ancak kafa karışıklığına sebep olmamak için ayrıntıya girmiyorum. Merak eden arkadaşlar kısa bir araştırma sonucu istediklerinden de fazla bilgiye ulaşabilirler. Şimdi konumuza devam edelim.
 
-![enter image description here](https://i.hizliresim.com/gOkvOQ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/7.png)
 
 First sector alanını <kbd>enter</kbd> ile geçip, Last sector alanına  `+1G` olarak girdim ve 1GB boyutunda bir bölüm oluşturmuş olduk. Bunu teyit etmek için `p` parametresini kullandık.
 
@@ -79,23 +71,23 @@ First sector alanını <kbd>enter</kbd> ile geçip, Last sector alanına  `+1G` 
 
 Gerekli ayarlamaları ve işlemleri gerçekleştirdikten sonra `fdisk` aracını kaydederek kapatmak istersek `w` parametresini kullanmamız yeterli.
 
-![enter image description here](https://i.hizliresim.com/Z9Lj90.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/8.png)
 
 **q :** çıkış yapar
 
 `q` parametresi direk olarak yapılan değişiklikleri kaydetmeden `fdisk` aracı konsolundan çıkış yapar.
 
-![enter image description here](https://i.hizliresim.com/Vrl8rR.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/9.gif)
 
 
 cfdisk
 -
 `fdisk` aracının görsel arayüze sahip versiyonudur. Açmak için `cfdisk` komutu yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/Z9LRB0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/10.png)
 
 Ayrıca benden bir tavsiye, `fdisk`'in kullanımı `cfdisk`'e oranla biraz zordur, dolayısıyla kolayca hata yapabilir ve istenmeyen durumlarla karşı karşıya kalabilirsiniz. Etkileşimli bir arayüzü olan `cfdisk`'in kullanımı daha kolay olduğundan hata yapmak daha zordur.
-Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Çok kolay şekile kendiniz keşfedebilirsiniz.(*Keşiflerinizde ana makina haricindeki sanal ortamlarda gerçekleştirmenizi şiddetle tavsiye ederim.*)
+Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Çok kolay şekile kendiniz keşfedebilirsiniz.(*Disk ile ilgili büyük sorunlara yol açmamak adına keşiflerinizi ana makina haricindeki sanal ortamlarda gerçekleştirmenizi şiddetle tavsiye ederim.*)
 
 badblocks
 -
@@ -103,29 +95,30 @@ badblocks
 
 Sırasıyla kullanım parametrelerine göz atalım:
 
-**b :** blok uzunluğu bayt cinsinden gösterir.(Aşağıdaki kullanımda yer alan `s` ve `v` parametreleri ileride açıklanmıştır.)
-
-![enter image description here](https://i.hizliresim.com/YgvayE.png)
-
-**c :** bir seferde sınanacak blok sayısı belirtilir ve bu sayı öntanımlı olarak tek seferde 16 blok okuyacak şekildedir. Bu sayının arttırılması bu işlemin verimini yani hatalı blokların bulunma ihtimalini artırır ancak arttırıldığı sayıya bağlı olarak bellek kullanımı da artacağı için bu sayının yüksek tutulması durumunda sistem "tamponları ayırmada bellek yetersizliği" hatasını verecek ve işlemi sonlandıracaktır. Tersi durumda yani bu sayının çok düşük tutulması da hatalı blokların gizli kalmasına neden olarak yapılan işin verimini düşürecektir. Yani dengeli kullanım çok önemlidir.
-
-![enter image description here](https://i.hizliresim.com/8Yl3OW.png)
-
-**f :** dosya sisteminin zarar görüp sistemin çökebileceği durumlarda `badblocks` tarama yapmayı reddeder. Ancak siz çoğu durumda önerilmese de yinede tarama yapmaya zorlamak isterseniz `f` parametresini kullanabilirsiniz.
-
-![enter image description here](https://i.hizliresim.com/D7lr1m.png)
-
-**p :** diskin kaç defa taranacağını belirtir öntanımlı olarak bu değer sıfırdır yani ekstra değer belirtilmezse disk yalnızca 1 kez taranır.
-
-![enter image description here](https://i.hizliresim.com/m2GabZ.png)
-
 **s :** taranan blokların numaralarını çıktı olarak vererek sürecin gelişimini gösterir.
 
-![enter image description here](https://i.hizliresim.com/NZ5dXL.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/11.gif)
 
 **v :** süreçle ilgili ayrıntılı bilgi verir.
 
-![enter image description here](https://i.hizliresim.com/azoavg.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/12.gif)
+
+**b :** bir blok boyutunu bayt cinsinden belirtebiliyoruz.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/13.png)
+
+**c :** bir seferde sınanacak blok sayısı belirtilir ve bu sayı öntanımlı olarak tek seferde 16 blok okuyacak şekildedir. Bu sayının arttırılması bu işlemin verimini yani hatalı blokların bulunma ihtimalini artırır ancak arttırıldığı sayıya bağlı olarak bellek kullanımı da artacağı için bu sayının yüksek tutulması durumunda sistem "tamponları ayırmada bellek yetersizliği" hatasını verecek ve işlemi sonlandıracaktır. Tersi durumda yani bu sayının çok düşük tutulması da hatalı blokların gizli kalmasına neden olarak yapılan işin verimini düşürecektir. Yani dengeli kullanım çok önemlidir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/14.png)
+
+**f :** dosya sisteminin zarar görüp sistemin çökebileceği durumlarda `badblocks` tarama yapmayı reddeder. Ancak siz çoğu durumda önerilmese de yinede tarama yapmaya zorlamak isterseniz `f` parametresini kullanabilirsiniz.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/15.png)
+
+**p :** diskin kaç defa taranacağını belirtir öntanımlı olarak bu değer sıfırdır yani ekstra değer belirtilmezse disk yalnızca 1 kez taranır.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/16.png)
+
 
 Bu parametreler dışında da başka parametreler mecvut. Konsola `man badblocks` yazarsanız diğer parametreler hakkında da kısaca bilgi sahibi olabilirsiniz.
 
@@ -138,11 +131,11 @@ Komutun işlevi diskteki hatalı blokları düzeltmeye çalışmaktır. Aslında
 
 USB belleğimizin disk adını öğrenmek için sistemimizdeki diskleri `fdisk -l` komutu ile listeleyelim.
 
-![enter image description here](https://i.hizliresim.com/oOAlWo.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/17.png)
 
 Çıktının alt kısımında yer alan <kbd>/dev/sdb1</kbd> USB belleğimizin diskteki adı. Şimdi belleğimizin adını öğrendiğimize göre onarma işlemini deneyebiliriz. Bunun için komut satırına `fsck -p /dev/sdb1` komutunu giriyoruz.
 
-![enter image description here](https://i.hizliresim.com/lOkRGl.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/18.png)
 
 Ve USB diskteki hatalı bloklar düzeltilerek işlemimiz başarılı bir şekilde gerçekleşmiş oldu.
 
@@ -150,12 +143,17 @@ df Komutu
 -
 `df` komutu bizlere disklerin; dosya sistemini, boyutunu, doluluk oranını, bağlandığı yeri(mount) gibi bilgileri kısa bir liste halinde verir. Komut ile birlikte `h` parametresini kullanırsak hakkındaki geniş bilgi içeriği bizlere sunulur. Çıktılar aşağıdaki gibidir.
 
-![enter image description here](https://i.hizliresim.com/VrlRnq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/19.png)
 
 Diskler hakkında genel bilgi edinmek için sık kullanılan bir komuttur. Ayrıca komutla birlikte kullanacağımız `m` parametresi çıktıları MB cinsinden verirken, `k` parametresi ile kullanımlarda çıktılar KB cinsinden olacaktır. Bunlar haricinde daha fazla detay almak için man sayfasına bakabilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/nOAo61.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/20.png)
 
+gparted
+-
+Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk aracı denilebilir. Grafiksel arayüze sahip olduğu için açıklamasını burada vermem resimler ile verimsiz ve yetersiz olur. Ancak hazırladığım eğtim kursunda anlatımı videolu şekilde gerçekleştirdim eğer isterseniz [kursumu satın alarak](https://www.udemy.com/) hem bana destek olabilir hem de bu kaynağın açıklamalı anlatımını edinmiş olursunuz. Kursumu satın almak istemezseniz internetteki Türkçe-İngilizce kaynaklarda kullanımı hakkında bolca bilgiye ulaşabilirsiniz. Açmak için konsola `gparted` yazmanız yeterli olacaktır.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/21.png)
 
 umount (Diski Ayırmak)
 -
@@ -164,11 +162,11 @@ Diski ayırmak gibi bir başlık aklınızda diski bölümlemek gibi bir anlam i
 
 Bu işlem için öncelikle diskimiz hakkında genel bilgi sahibi olmak adına konsola `df -h` komutunu verelim.
 
-![enter image description here](https://i.hizliresim.com/VrlRnq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/22.png)
 
 USB diskimin adının <kbd>/dev/sdb1</kbd> ve diskin sisteme bağlandığı konumun da <kbd>/media/root/GPARTED-LIV</kbd> dizini olduğunu öğrenmiş oldum. Artık gerekli bilgileri öğrendiğimize göre diski sistemden çıkarmak için konsola `umount /dev/sdb1` şeklinde komut verebiliriz.
 
-![enter image description here](https://i.hizliresim.com/vjg72O.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/23.png)
 
 Diski çıkarma işlemi sonrasında bu işlemi teyit etmek için birde `df -h` komutunu kullandık. Sonuçta diskimiz sistemden bağını koparmış oldu.
 
@@ -176,12 +174,12 @@ Diski çıkarma işlemi sonrasında bu işlemi teyit etmek için birde `df -h` k
 mount (Diski Bağlamak)
 -
 
-Sistemden ayırdığımız diski tekrar bağlamak için `mount` komutunu kullanırız. Kullanım şekli `mount -t dosya_sistemi aygıt_adı bağlanacak_konum` şeklindedir.
+Sistemden ayırdığımız diski tekrar bağlamak için `mount` komutunu kullanırız. Kullanım şekli `mount -t aygıt_adı bağlanacak_konum` şeklindedir.
 
 Diski sisteme bağlamadan önce yapmamız gereken şey diskin bağlanacağı konumu oluşturmaktır. Bunun için ben masaüstüne `mkdir USB` komutu ile <kbd>USB</kbd> adında bir klasör oluşturdum.
 
-USB nin açılacağı hedef klasör oluştuğuna göre artık USB diskimizi buraya bağlayabiliriz. Bunun için konsola `mount /dev/sdb1 /Desktop/USB` komutunu veriyorum ve daha sonra diskin durumunu `df- h` komutu ile sorguluyorum.
+USB nin bağlanabileceği hedef klasör oluştuğuna göre artık USB diskimizi buraya bağlayabiliriz. Bunun için konsola `mount /dev/sdb1 /Desktop/USB` komutunu veriyorum ve daha sonra diskin durumunu `df- h` komutu ile sorguluyorum.
 
-![enter image description here](https://i.hizliresim.com/1JY0W1.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/24.png)
 
 Görüldüğü gibi USB disk <kbd>Desktop/USB</kbd> konumuna bağlanmış bulunuyor.
