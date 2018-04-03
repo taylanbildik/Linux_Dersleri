@@ -7,8 +7,7 @@ Disk ile ilgili yapabileceğimiz bölümleme, formatlama, yedekleme ve diğer i�
 
 > **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
 
-Ayrıca bir hatırlatma daha; Disk üzerinde işlem yapabilmeniz için o diskin siz işlem yaparken sistem tarafından kullanılmıyor olması gerekiyor. Yani eğer linux sisteminin kurulu olduğu bir disk üzerinde değişiklik yapacaksanız o sistemin çalışmıyor olması gerek. 
-Bunun için işletim sistemi tarafından kullanılan disk alanlarında değişiklik yapmak üzere kurulum videolarında da anlattığım şekilde sistemi live olarak başlatarak ilgili işlemleri yerine getirebilirsiniz. Aksi takdirde disk alanı sistem tarafından kullanımda olacağı için disk ile ilgili işlem gerçekleştiremezsiniz. 
+**Ayrıca bir hatırlatma daha;** Disk üzerinde işlem yapabilmeniz için o diskin biz işlem yapıyorken sistem tarafından kullanılmıyor olması gerekiyor. Çünkü biz işlem yapmaya çalışıyorken disk sistem tarafından kullanıldığı için doğal olarak bizim disk üzerinde işlem yapmamız mümkün olmuyor. Bunun için eğer yapacağımız disk işlemeleri linux işletim sistemimizin kurulu olduğu disk alanı içinse, diskte kurulu olan sistemi kullanmadan işlemleri diskten bağımsız şekilde yapmamız gerekiyor. Bunu da kurulum aşamasında göstermiş olduğum linux işletim sisteminin USB üzerinden live olarak çalıştırılması ile gerçekleştirebiliriz.
 
 Yani bu kısımda öğreneceğimiz bilgileri linux işletim sisteminin kurulu olduğu disk alanında uygulamak için sistemi başlatmadan linux live seçeneği ile çalışın.
 
@@ -91,7 +90,7 @@ cfdisk
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/10.png)
 
 Ayrıca benden bir tavsiye, `fdisk`'in kullanımı `cfdisk`'e oranla biraz zordur, dolayısıyla kolayca hata yapabilir ve istenmeyen durumlarla karşı karşıya kalabilirsiniz. Etkileşimli bir arayüzü olan `cfdisk`'in kullanımı daha kolay olduğundan hata yapmak daha zordur.
-Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Çok kolay şekile kendiniz keşfedebilirsiniz.(*Disk ile ilgili büyük sorunlara yol açmamak adına keşiflerinizi ana makina haricindeki sanal ortamlarda gerçekleştirmenizi şiddetle tavsiye ederim.*)
+Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Sadece disk işlemleri ile ilgili olduğu için bu kısımda değinmek istedim. Yani artık disk işlemlerinde böyle bir aracın varlığından haberdarsınız ve merak ettiğiniz takdirde çok kolay şekile kendiniz keşfedebilirsiniz.(*Disk ile ilgili büyük sorunlara yol açmamak adına keşiflerinizi ana makina haricindeki sanal ortamlarda gerçekleştirmenizi şiddetle tavsiye ederim.*)
 
 badblocks
 -
