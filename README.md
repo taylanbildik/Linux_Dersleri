@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://media.giphy.com/media/l2Y7XKVfoEJLxoLIeM/giphy.gif">
+  <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/linux_komut_sat%C4%B1r%C4%B1_logo.gif">
 </p>
 
 <p align="center" style="bold">
