@@ -452,4 +452,4 @@ Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. `shred` 
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/57.png" width="875">
 
-![enter image description here](https://i.hizliresim.com/Lbd61z.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/58.png" width="875">
