@@ -7,6 +7,10 @@ Disk ile ilgili yapabileceğimiz bölümleme, formatlama, yedekleme ve diğer i�
 
 > **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
 
+Ayrıca bir hatırlatma daha; Disk üzerinde işlem yapabilmeniz için o diskin siz işlem yaparken sistem tarafından kullanılmıyor olması gerekiyor. Yani eğer linux sisteminin kurulu olduğu bir disk üzerinde değişiklik yapacaksanız o sistemin çalışmıyor olması gerek. 
+Bunun için işletim sistemi tarafından kullanılan disk alanlarında değişiklik yapmak üzere kurulum videolarında da anlattığım şekilde sistemi live olarak başlatarak ilgili işlemleri yerine getirebilirsiniz. Aksi takdirde disk alanı sistem tarafından kullanımda olacağı için disk ile ilgili işlem gerçekleştiremezsiniz. 
+
+Yani bu kısımda öğreneceğimiz bilgileri linux işletim sisteminin kurulu olduğu disk alanında uygulamak için sistemi başlatmadan linux live seçeneği ile çalışın.
 
 fdisk
 -
