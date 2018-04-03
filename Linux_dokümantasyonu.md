@@ -64,7 +64,7 @@ Kurulum ve Kullanım Metodları
 
 
 <a href="https://www.udemy.com/">
-  <img src="https://i.hizliresim.com/PlGEAv.png">
+  <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/0-%20Gerekli%20Ortam%C4%B1n%20Kurulmas%C4%B1/1.png">
 </a>
 
 
@@ -86,7 +86,7 @@ Shell (kabuk) programını açıklayacak olursak:
 
 Shell
 -------------
-Mantığını oturtmanız ve kavramların daha kolay yerleşmesi açısından bir fıstık düşünün. Bu fıstığın dış katmanı Kabuk (Shell) iç kısmı ise Çekirdek (Kernel)'olacaktır. Bu benzetme sayesinde isimlerin de nereden geldiği az çok açıklığa kavuşmuş oldu. Shell'in görevi bir üst kısımda belirttiğimiz gibi kullanıcı ile kernel arasında aracı bir katman olarak kullanıcıdan gelen girdileri kernele uygun şekilde iletmektir. Sistemde yapmak istediklerimiz ve yapabileceklerimiz Shell'in esnek ve kullanışlı yapısına yani yeteneklerine bağlı olarak değişmektedir. Bu bağlamda Shell'in sisteme hükmetmekteki anahtarlardan olduğunu söyleyebiliriz. Shell hakkındaki biraz önceki açıklamalara("yeteneklerine bağlı olarak değişmektedir") bakarak birden fazla Shell programının olduğunu tahmin etmiş olabilirsiniz. Tebrik ederim çok doğru, Linux sistemlerinde BASH dışında (ksh,tcsh,zsh,fish...) gibi birçok Shell (kabuk) programı mevcuttur. Ancak yetenekleri dolayısıyla olsa gerek en çok tercih edilen kabuk programı BASH kabuk programıdır. İnanmıyorsanız bir test edelim sizin sisteminizde hangi kabuk programı kullanılıyor.
+Mantığını oturtmanız ve kavramların daha kolay yerleşmesi açısından bir fıstık düşünün. Bu fıstığın dış katmanı Kabuk (Shell) iç kısmı ise Çekirdek (Kernel) olacaktır. Bu benzetme sayesinde isimlerin de nereden geldiği az çok açıklığa kavuşmuş oldu. Shell'in görevi bir üst kısımda belirttiğimiz gibi kullanıcı ile kernel arasında aracı bir katman olarak kullanıcıdan gelen girdileri kernele uygun şekilde iletmektir. Sistemde yapmak istediklerimiz ve yapabileceklerimiz Shell'in esnek ve kullanışlı yapısına yani yeteneklerine bağlı olarak değişmektedir. Bu bağlamda Shell'in sisteme hükmetmekteki anahtarlardan olduğunu söyleyebiliriz. Shell hakkındaki biraz önceki açıklamalara("yeteneklerine bağlı olarak değişmektedir") bakarak birden fazla Shell programının olduğunu tahmin etmiş olabilirsiniz. Tebrik ederim çok doğru, Linux sistemlerinde BASH dışında (ksh,tcsh,zsh,fish...) gibi birçok Shell (kabuk) programı mevcuttur. Ancak yetenekleri dolayısıyla olsa gerek en çok tercih edilen kabuk programı BASH kabuk programıdır. İnanmıyorsanız bir test edelim sizin sisteminizde hangi kabuk programı kullanılıyor.
 
 Bunun için konsolunuzu açın ve aşağıdaki komutu girin diyecektim ki... "Hayda.. daha konsol nedir açıklamadın ki !" diyeceksiniz haklısınız temeli oturtmak adına buralara kadar geldik ama direk konsol şudur demedik. Ancak zaten bu kısıma kadar Konsol'un ne olduğunu dolaylı olarak da olsa açıklamış olduk.
 
@@ -94,16 +94,16 @@ Konsol, kullanıcı ile Shell arasından yer alarak kullanıcının komut girmes
 
 Konsolu daha yakından incelemek adına bir konsol ekranı açalım. Yeni bir konsol ekranı açmak için kısayol tuşları olduğu gibi grafik arayüz aracılığı ile de açmak mümkün. Linux bize çok sayıda konsol açma imkanı tanır. Aynı anda 6 ayrı konsol açıp hepsinde ayrı işlem yapabiliriz. Bunu kanıtlamak istersek..(Anlatımlar Kali linux işletim sistemi üzerinden gerçekleştirilmektedir. Dolayısıyla anlatım sırasında anlatılanların uygulanması noktasına gelindiğinde sizlerden kali linux işletim sistemini halihazırda açık ve kullanıma hazır şekilde bekletiyor olmanız beklenmektir.) Grafiksel arayüzden komut satırına geçmek için <kbd>Crtl + Alt + (f1,f2,f3,f4,f5,f6)</kbd> tuş kombinasyonunu kullanabiliriz. Demiştim ya 6 farklı konsol açılabiliyor işte açtığınız konsolun numarası da <kbd>tty1,tty2,tty3,tty4,tty5,tty6</kbd> gibi "tty_konsol_numarası" şeklinde konsolda görülüyor. Örneğin ben <kbd>Ctrl + Alt + f3</kbd> tuş kombinasyonunu yaptığımda karşıma aşağıdakine benzer bir komut satırı geliyor ve benden login olmamı yani kullanıcı adımı ve sonrasında şifremi yazarak giriş yapmamı bekliyor.
 
-![enter image description here](https://i.hizliresim.com/76mqWv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/2.png)
 Eğer bu komut satırından çıkıp tekrar kullanıcı arayüzüne yani grafiksel arayüze geçmek isterseniz <kbd>Ctrl + Alt + (f7,f8,f9,f10,f11,f12) </kbd> kombinasyonlarından herhangi birini kullanarak bunu başarabilirsiniz. Ancak kimi Kali Linux sürümlerinde durum böyle olamayabiliyor yani eğer <kbd>Ctrl + Alt + f7</kbd> ve sonrası tuş kombinasyonu grafik arayüze dönmenizi sağlamaz ise bu sefer <kbd>Ctrl+Alt+f1</kbd> veya <kbd>Ctrl + Alt + f2 </kbd> şeklinde dönmeye çalışın. Grafik arayüzden Terminal(konsol) ile çalışmak isterseniz masaüstünde bulunan Terminal simgesine tıklamanız yeterli olacaktır.(Genelde görev çubuğunda sabit şekilde yer alır.) Eğer masaüstünde yok bulamıyorum diyorsanız arama çubuğu ve benzeri yardımcılar aracılığı ile lütfen "konsol" veya "terminal" şeklinde aratarak kendiniz bulun. Konsol(terminal) açma işlemi hemen aşağıda .gif resmi ile gösterilmiştir.
 
-![konsol(terminal) ekranı açma işlemi](https://i.hizliresim.com/rO6a7z.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/3.gif)
 
 Ayrıca kısayollardan bahsetmiştim örneğin bazı dağıtımlarda <kbd>Ctrl + Alt + T</kbd> tuş kombinasyonu direk olarak terminal ekranını açıyor. Ancak bu kısayollar ayarlar aracılığı ile ve ayrıca da dağıtımdan dağıtıma farklılık gösterdiği için bu kısayolları sizin kendi kullandığınız dağıtıma göre araştırmanız gerek. Korkmayın inanılmaz kolay bir işlem, hem böylelikle yavaş yavaş Linux öğrenmenin aslında araştırmak ve kendi kendine öğrenmek olduğunu öğreniyoruz. Zaten ileride Kali Linux için <a href="#k%C4%B1sayollar">kısayollar</a> konularına ayrıca değineceğim.
       Şimdilik konumuza dönecek olursak Shell'in ne olduğunu açıklamıştık ve en çok tercih edilen kabuk programının BASH kabuk programı olduğunu söylemiştik. Bunu teyit etmek için komut satırına <code>echo $SHELL</code> komutumuzu giriyoruz.
       Girdiğimiz komutu açıklayacak olursak ' <kbd>echo</kbd> ' komut satırında ekrana yazdırma işlevini görür örneğin ben komut satırına <code>echo "Merhabalar"</code> yazarsam komut satırı ' Merhabalar ' çıktısını verecektir.' <kbd>$</kbd> ' işareti bir parametre ve tanımlanan değişkene normal bir kullanıcı olarak erişebilmeyi sağlıyor. Şimdilik bu komut bütünü hakkında bu kadar bilgi yeter. Eğer komutun açıklamasını anlamadıysanız sorun yok. Okumaya devam ettikçe parçalar yerine oturmaya başlayacak. Zaten ileride bu konuların her birine tek tek değineceğiz ve sizler de anlamış olacaksınız. Şimdi devam edecek olursak:
 
-![enter image description here](https://i.hizliresim.com/Pl302Q.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/4.png)
 
 <p>Konsola girmiş olduğumuz komut yorumlandı ve neticesinde bize <kbd>/bin/bash</kbd> şeklinde bir çıktı verdi. Bu çıktı bize mevcut sistemde kullanılan ana kabuk programının BASH olduğunu bildirmiş oldu. Burada komut yorumlandı dedik ancak neye göre oldu bu iş ? İşte bu noktada devreye ortam değişkenleri(çevre değişkenleri) giriyor. Bu kısımları fazlaca incelediğimi düşünenler olabilir ancak emin olun öğrendiğiniz her şey birbiri ile bağlı ve bütünü anlamak için bilmek gerekli. İleride yeri geldikçe bunları daha net kavrayacağız zaten.</p><p>Anlatımları mümkün oldukça teknik dilden uzak sade anlaşılır ve sizlerin de sürekli etkileşimde olacağı şekilde aktarmaya çalışıyorum. Yani burada yazanları kuru kuruya ezberlemeyecek, ilerleyiş sırasında uygulamalar yaparak konuları anlamış olacağız.</p>
 <p>Tamda bu noktada uygulama yaparak öğrenmenin önemini belirten Konfüçyüs'ün bir sözünü hatırlatmak istiyorum:</p>
@@ -118,7 +118,7 @@ Ayrıca kısayollardan bahsetmiştim örneğin bazı dağıtımlarda <kbd>Ctrl +
 <p>Fark ettiyseniz bu komutu yazarken programın bulunduğu konumu belirtmeme gerek kalmadı. Yalnızca programın ismini Terminale girmemiz sonucu leafpad programı açılmış oldu. Bunun nedeni programın dosya dizinlerinin PATH(yol) ortam değişkeni üzerinde ekli olmasıdır. Sonuç olarak konsoldan girilen <code>leafpad</code> komutu bu yol üzerinde arandı ve yol üzerinde var olan leafpad uygulaması çalıştırıldı.</p>
 <p>Daha iyi anlayabilmek adına bize PATH(yol) bilgisini veren komutumuzu kullanalım ve terminalin bize vereceği tepkiye göre açıklamaya devam edelim. Komut satırımıza <code>echo $PATH</code> komutunu verelim:</p>
 
-![enter image description here](https://i.hizliresim.com/gOlqv2.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/5.png)
 
 <p>Çıktının bize gösterdiği yani konsolun demek istediği şu:</p> 
 <p>Konsoldan girilen komutu çalıştırabilmem için sırasıyla bu <kbd>/usr/local/sbin: /usr/local/bin: /usr/sbin: /usr/bin: /sbin: /bin</kbd> dizinlere bakmam gerek. Eğer verilen komutun çalıştırılabilir dosyası bu dizinlerin içerisinde ise çalıştırırım, yoksa çalıştıramam. </p>
@@ -127,14 +127,14 @@ Ayrıca kısayollardan bahsetmiştim örneğin bazı dağıtımlarda <kbd>Ctrl +
 <p>Ben masaüstünde "yeni_dizin" adında bir klasör oluşturdum daha sonra içerisine "yeni" diye başka bir klasör daha oluşturdum son olarak bu klasörün de içerisine "en_yeni" şeklinde bir klasör daha oluşturdum. Yani oluşturduğum dizinin tam adresi <kbd>yeni_dizin /yeni /en_yeni</kbd> şeklinde oluşmuş oldu.</p>
 <p>Şimdi oluşturduğum dizinin en alt klasörünün(en_yeni) içine girerek leafpad programı aracılığı ile metin belgesi oluşturuyorum ve belgenin içine  <code>echo "Program Çalıştı"</code> yazarak oluşturmuş olduğum dosya dizininin en alt dosyaya yani "en_yeni" ismindeki klasöre dosyamı "komut.sh" ismiyle kaydediyorum. Dosya sonuna eklediğimiz <kbd>.sh</kbd> eki ile bir betik dosyası halini aldı. Betik dosyası genel tanımı ile konsol komutlarını içerisine kaydettikten sonra tek seferde bir bütün halinde komutları çalıştırabildiğimiz dosya türüdür. Zaten fark ettiyseniz dosyamızın içerisine daha önce de konsolda verdiğimiz komutlardan birini olan <code>echo</code> komutunu ekledik. Yani bu oluşturmuş olduğumuz betik dosyası Terminal üzerinden çalıştığında komut satırına "Program Çalıştı" şeklinde bir çıktı vericek. Betik dosyasının dizin içerisindeki tam konumu aşağıdaki şekildedir.</p>
 
-![enter image description here](https://i.hizliresim.com/Z9NZjZ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/6.png)
 
 <p>Programımızın dizin adresi belli olduğuna göre artık bu dizini PATH ortam değişkenine ekleyip istediğimiz zaman, istediğimiz yerden programımızı(komut.sh) çalıştırabiliriz.
 
 <h2 id="dizin_ekle"> PATH(yola)Dizin Ekleme</h2>
 <p>PATH(yola) yeni dizin eklemek için öncelikle her defasında oturum başlatılırken okunan <kbd>profile</kbd> isimli dosyada değişiklik yapmalıyız ki eklediğimiz dizin her daim biz silene kadar geçerli olsun. <kbd>profile</kbd> dosyasında değişiklik yapmak için komut satırına dosyamızın bulunduğu tam konumu belirtmek üzere <code>nano -w /etc/profile</code> komutunu giriyoruz.</p>
 
-![enter image description here](https://i.hizliresim.com/2J7rqj.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.png)
 
 <p>Ve komut satırında karşımıza yukarıdaki gibi <kbd>profile</kbd> dosyasının içeriği geliyor. Şimdi yapmamız gereken programımızın ( komut.sh ) bulunduğu tam dizin konumunu bu dosyaya uygun şekilde eklemek.</p>
 
@@ -142,36 +142,36 @@ Ayrıca kısayollardan bahsetmiştim örneğin bazı dağıtımlarda <kbd>Ctrl +
 
      PATH="/root/Desktop/yeni_dizin/yeni/en_yeni":$PATH
 
-![enter image description here](https://i.hizliresim.com/3E87n0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/8.png)
 
 <p>Yazma işlemi bittikten sonra dosyada yaptığımız değişiklikleri kaydedip dosyayı kapatmak için <kbd>Ctrl + X</kbd> tuş kombinasyonu uyguluyoruz. Bana, "Değiştirilen tampon kaydedilsin mi?  ("Hayır" demek değişiklikleri SİLECEK.) "  şeklinde bir uyarı veriyor. Dosyada yaptığım değişikliği kaydetmek için <kbd>e</kbd> tuşuna basarak devam ediyorum.
 
-![enter image description here](https://i.hizliresim.com/z0R3L6.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/9.png)
 
 Son olarak bana, "Yazılacak Dosya Adı: <kdb>/etc/profile</kdb>" diye belirtiyor, buradaki ismi değiştirmeden kaydediyoruz. Eğer ismi değiştirirsek sistem bu dosyayı okuyamacağı için problem çıkacaktır.</p>
 
-![enter image description here](https://i.hizliresim.com/G9nBN6.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/10.png)
 
 <p>Bu adımları geçtikten sonra istediğimiz dizin PATH(yol) ortam değişkenine eklenmiş oldu. Ancak işlemin geçerli olması için oturumun kapatılıp tekrar açılması gerekiyor çünkü <kbd>profile</kbd> dosyası oturum açılırken okunuyor.</p>
 		
 <p>Oturumu kapatıp tekrar giriş yaptım. Şimdi sırada eklediğimiz dizinin PATH yolunda ekli olup olmadığını kontrol etmek var bunun için konsola <code>echo $PATH</code> komutunu veriyoruz.</p>
 
-![enter image description here](https://i.hizliresim.com/m2l304.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/11.png" width="875">
 	
 <p>Gördüğünüz gibi dizin yola(PATH) eklenmiş bulunuyor.</p>
 <p>Artık dosyayı çalıştırmadan önce son bir ayar daha yapmamız gerek. Daha sonra "komut.sh" dosyamızı aynı leafpad programında olduğu gibi istediğimiz zaman komut satırından ismi ile çalıştırabiliyor olacağız. Son işlemimiz yetkilendirme işlemi. Bu neden gerekli diyecek olursanız işlemin gerekliliğini kendi gözlerinizle görmek için bu kısmı atlayarak dosyayı çalıştırmaya çalışın. Bunun için komut satırına <code>komut.sh</code> yazalım.</p>
 
-![enter image description here](https://i.hizliresim.com/A12LjB.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/12.png)
 
 <p>Gördüğünüz gibi konsol bize "Erişim engellendi" diye bildirdi ve dosyayı bulmasına rağmen çalıştırmadı. İşte bu durumu yaşamamak için "komut.sh" dosyamızın bulunduğu konuma giderek (<code>cd Desktop/yeni_dizin/yeni/en_yeni/</code>) <code>chmod +rwx komut.sh</code> komutunu vermemiz gerekiyor. Böylelikle dosyayı çalıştırma izni de elde etmiş olacağız. Yani artık konsola <code>komut.sh</code> yazdığımız anda bizim oluşturmuş olduğumuz "komut.sh" betik dosyası çalışarak "Program Çalıştı" yazısını konsola basacak.</p>
 
-![enter image description here](https://i.hizliresim.com/JQLlrE.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/13.png)
 
 <p>Sizler de bu yolla sıklıkla kullandığınız dosyaları kolay erişilebilir kılabilirsiniz. Burada vermiş olduğum komutları ayrıntılı şekilde ileride açıklayacağım siz şimdilik konunun temeline ve ne neden oluyor ona hakim olsanız yeter. Ancak kafalarda soru işareti ile devam etmemek adına ben yinede tek tek izah edeyim hangi komutu neden kullandık.</p>
 		
 <p><code>nano -w /etc/profile</code> bu komutta; <code>nano</code> komutu, konsol üzerinden dosya içeriğini okumamıza olanak sağlayan bir araç ve <code>nano</code> komutunun yanındaki <code>-w</code> karakteri ise dosyada değişiklik yapmamıza olanak sağlayan parametredir. Biz bu parametre sayesinde nano aracı ile belgeyi yazma(write) kipinde açmış oluyoruz. Geri kalan <code>/etc/profile</code> kısmı ise <kbd>profile</kbd> dosyasının bulunduğu konumu belirtiyor. Bu sayede nano aracı ile yazma kipinde <kbd>/etc/profile</kbd> konumundaki <kbd>profile</kbd> dosyasını komut satırı üzerinden görebiliyor ve değişiklik yapabiliyoruz.</p>
 
-<p><code>PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH"</code>ifadesi ise mevcut PATH(yola) yeni dizin eklememize olanak sağlayan bir bütündür. Burada açıklanacak özel bir durum yok kullanım şekli itibari ile PATH yoluna dizin ekleme işlemi için gereken ifade bütünüdür.</p>
+<p><code>PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH"</code> ifadesi ise mevcut PATH(yola) yeni dizin eklememize olanak sağlayan bir bütündür. Burada açıklanacak özel bir durum yok kullanım şekli itibari ile PATH yoluna dizin ekleme işlemi için gereken ifade bütünüdür.</p>
 
 <p><code>echo $PATH</code> komutunu daha önce de görmüştük buradki <code>echo</code> komutu PATH ortam değişkeninde bulunan dizinleri görmemizi sağlıyor.</p>
 <p><code>chmod +rwx komut.sh</code> komutunda, <code>chmod</code> yetkilendirme ayarlamaları yapmamıza olanak sağlıyor. <code>+rwx</code> parametrelerinden " + "işareti ekleme," r "işareti okuma, " w "işareti yazma, " x "işareti ise çalıştırma yetkisi olmak üzere bizlere bir bütün olarak dosyayı çalıştırabilmemiz için gereken yetkilendirmeyi sağlıyor. Geri kalan <code>komut.sh</code> kısım ise zaten yetkilendirme vermek istediğimiz dosyanın adı.</p>	
@@ -189,7 +189,7 @@ Son olarak bana, "Yazılacak Dosya Adı: <kdb>/etc/profile</kdb>" diye belirtiyo
 
 Ben aşağıda sadece <code>printenv</code> komutunun çıktısını veriyorum. Sizler diğer komutları da mutlaka uygulayarak aralarındaki farkları kendi gözlerinizle görün.
 
-![enter image description here](https://i.hizliresim.com/azqLO7.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/14.png)
 
 <p>Evet bize burada pek çok ortam değişkeni sıralandı. Ben her birini açıklamayacağım. Neden diye soracak olursanız mevcut dökümantasyonda temel anlatım içerisinde olduğumuz için sizlere mümkün olduğunca ilk adım için gerekli olanları vermeye çalışıyorum. Yani ben burada size konuyu açıklamak ve konuyu iyi şekilde kavramanız için gerekenleri aktarmaya çalışıyorum. Ancak buradan açıkladıklarım haricindekiler gereksiz gibi bir anlam çıkmasın lütfen. Zaten temeli yani asıl işlevlerini kavradıktan sonra yeri geldikçe diğer değişkenleri de biliyor ve kullanıyor olacaksınız. Ancak ben yinede şimdi diğer bir değişken olan HOME değişkenini de kısaca açıklayarak örneklendirmiş olacağım. Merak eden arkadaşlar şimdiden diğer ortam değişkenlerini de araştırıp kurcalayabilir.</p>
 	  
@@ -197,23 +197,22 @@ HOME değişkenini örnekleyerek açıklayacak olursak:
 
 Şöyle bir durum düşünün bir programcı, yazmış olduğu programının kurulduğu zaman masaüstüne bir kısayol oluşturmasını istiyor olsun. Ancak böyle bir şey yapabilmek için, kullanıcıların masaüstüne giden yolunun tespit edilebilmesi lazım. Ama şöyle bir problem var; Bildiğiniz gibi herkesin masaüstüne giden yol aynı değil. Bir bilgisayardaki masaüstü dizinini bulabilmek için, o bilgisayarı kullanan kişinin kullanıcı adını da biliyor olmanız lazım. Çünkü masaüstünün bulunduğu dizin kullanıcı adına bağlı olarak değişiklik gösterecektir.
 
-Mesela bende <kbd>/home/taylan/Desktop</kbd> olan masaüstü dizini sizde<kbd> /home/burak/Desktop </kbd> şeklinde olabilir. Hatta işletim sisteminin dilinin Türkçe veya İngilizce (diğer tüm diller de dahil..) olmasına göre de masaüstünün yolu farklı olabilir. Yani demem o ki bu kadar basit bir işlem için bile tahmin edilemez bu yolun bilinmesi veya bulunması gerek. Ama masaüstüne kısayol oluşturma çok olağan bir durum bir imkansız değil. İşte tam bu noktada neden ortam değişkenlerinin var olduğunu biraz daha net kavrıyoruz. Ortam değişkenleri, kullandığımız işletim sisteminde belli değerlere daha sonra kolaylıkla ve kararlılıkla ulaşabilmemiz ve işleyebilmemiz için oluşturulan ifadelerdir. Bahsettiğimiz konuda örneğin masaüstüne herhangi bir yerden ulaşmak istersek, komut satırına ev dizini yolunu tutan değişken olan HOME değişkenini <code>cd $HOME </code> şeklide girmemiz gerekiyor. Bu sayede ev dizini içerisinde yer alan Desktop konumuna da ulaşabiliyor olacağız.
+Mesela bende <kbd>/home/taylan/Desktop</kbd> olan masaüstü dizini sizde <kbd> /home/burak/Desktop </kbd> şeklinde olabilir. Hatta işletim sisteminin dilinin Türkçe veya İngilizce (diğer tüm diller de dahil..) olmasına göre de masaüstünün yolu farklı olabilir. Yani demem o ki bu kadar basit bir işlem için bile tahmin edilemez bu yolun bilinmesi veya bulunması gerek. Ama masaüstüne kısayol oluşturma çok olağan bir durum bir imkansız değil. İşte tam bu noktada neden ortam değişkenlerinin var olduğunu biraz daha net kavrıyoruz. Ortam değişkenleri, kullandığımız işletim sisteminde belli değerlere daha sonra kolaylıkla ve kararlılıkla ulaşabilmemiz ve işleyebilmemiz için oluşturulan ifadelerdir. Bahsettiğimiz konuda örneğin masaüstüne herhangi bir yerden ulaşmak istersek, komut satırına ev dizini yolunu tutan değişken olan HOME değişkenini <code>cd $HOME</code> şeklide girmemiz gerekiyor. Bu sayede ev dizini içerisinde yer alan Desktop konumuna da ulaşabiliyor olacağız.
 
-![enter image description here](https://i.hizliresim.com/6JR9g3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/15.png)
 
 Ayrıca burada ekstra bir bilgi olsun diye belirtmek isterim ki ev dizinine gitmek için iki farklı yol daha bulunmaktadır. Bunlardan ilki yalnızca <code>cd</code> komutunu kullanmak diğeri ise <code>cd ~</code> komutunu kullanmaktır. ( Burada yer alan <kbd> ~</kbd> işareti Türkçe klavyede <kbd>Alt Gr + </kbd> tuş kombinaysonu ile oluşturuluyor. )
 
-![enter image description here](https://i.hizliresim.com/W720BN.png)
-![enter image description here](https://i.hizliresim.com/3E87rr.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/16.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/17.png)
 
-
-Komutumuzu girdikten sonra ulaştığımız konumda hangi dosyaların olduğunu görmek için konsola <code>ls</code> komutunu verdik. Konsol bize Desktop(masaüstü) ve ev dizininde bulunan diğer dosyalarında çıktılarını verdi. Yani bu demek oluyor ki ev dizinine kullanıcı ismini bilmemize gerek olmadan kolayca ulaştık. Örnek durumda açıkladığımız program kısayolu oluşturma işlemi ana dizini tutan HOME ortam değişkeni sayesinde kolayca gerçekleştirilebilir oluyor.
+Komutumuzu girdikten sonra ulaştığımız konumda hangi dosyaların olduğunu görmek için konsola <code>ls</code> komutunu verdik. Konsol bize Desktop(masaüstü) ve ev dizininde bulunan diğer dosyalarında çıktılarını verdi. Yani bu demek oluyor ki ev dizinine, kullanıcı ismini bilmemize gerek olmadan kolayca ulaştık. Örnek durumda açıkladığımız program kısayolu oluşturma işlemi ana dizini tutan HOME ortam değişkeni sayesinde kolayca gerçekleştirilebilir oluyor.
 
 Komutu biraz açıklayacak olursak <code>cd</code>  dizinler arası geçiş yapmamızı sağlayan bir komut <code>$</code>  (dolar işareti) tanımlanmış olan değişkene erişme işlemini yapan parametremiz, HOME ise ev dizinini tutan ortam değişkeni. Son olarak <code>ls</code>  komutu bulunduğumuz konumdaki dosyaları listeliyor. Burada bahsi geçen tüm komutları ileride ele alacağız şimdilik bu açıklama yeterli.
 
 Temel ve sık kullanılan değişkellerden birkaçını da kısaca açıklayacak olursak:
 
-**SHELL:** Çalışmakta olan kabuk programının adını ve yeri.
+**SHELL:** Çalışmakta olan kabuk programının adını ve yerini verir.
 
 **PATH:** Konsola komut girildiğinde, komut için gereken ilgili dosyaların aranacağı dizinler diğer bir adıyla yol.
 
@@ -221,13 +220,13 @@ Temel ve sık kullanılan değişkellerden birkaçını da kısaca açıklayacak
 
 **TERM:** Komut satırı uygulamalarının hangi terminalde çalışacağını belirtir. Birçok çeşidi vardır ancak xterm yaygın şekilde karşımıza çıkmaktadır.
 
-Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <code>echo $ORTAM_DEĞİŞKENİ</code> şeklinde komut vererek ilgili bilgilere ulaşabiliriz. Örneğin TERM değişkeninie bir bakalım.
+Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <code>echo $ORTAM_DEĞİŞKENİ</code> şeklinde komut vererek ilgili bilgilere ulaşabiliriz. Örneğin TERM değişkenine bir bakalım.
 
-![enter image description here](https://i.hizliresim.com/rOL2mB.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/18.png)
 
 Gördüğünüz üzere konsol TERM değişkeninin değerini xterm olduğunu göstermiş oldu. Zaten daha önce yaygın olarak kullanıldığından söz ettiğimiz için bu çıktı bizi şaşırtmadı. Eğer bu çıktıyı teyit etmek istersek konsola <code>xterm</code> komutunu verdiğimizde xterm açılacak ve çıktı teyit edilmiş olacaktır.
 
-![enter image description here](https://i.hizliresim.com/D7Xd8z.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/19.png)
 
 İstersek diğer ortam değişkenleri için de aynı şekilde tek tek bilgi alabiliriz. Ancak ortam değişkenleri sabit ve sınırlı değildir. Sistemde var olanların haricinde bizde kendimiz ortam değişkenleri tanımlayabiliriz. Tanımlamaları üç farklı kategoriye ayırabiliriz;
 
@@ -243,13 +242,13 @@ Sadece o an kullanmakta olduğumuz terminale(konsol) özel olan ve terminali kap
 
 Terminali açtım ve komut satırına "<code>asdf</code> "(anlamsız karşılığı olmayan bir ifade/komut) yazdım. Konsol yanıt olarak " <code>bash: asdf: komut yok</code> " yazısını ekrana bastı.
 
-![enter image description here](https://i.hizliresim.com/z0RBA6.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/20.png)
 
-Görüldüğü gibi konsol çıktısı Türkçe oldu ancak ben bu çıktıları İngilizceye çevirmek istiyorum diyelim. Bunun için konsola<code> export LANG=C </code>komutunu veriyorum. Ve sonrasında tekrar komut satırına <code>asdf</code> yazıp dilin değişip değişmediğini kontrol ediyorum.
+Görüldüğü gibi konsol çıktısı Türkçe oldu ancak ben bu çıktıları İngilizceye çevirmek istiyorum diyelim. Bunun için konsola <code> export LANG=C </code> komutunu veriyorum. Ve sonrasında tekrar komut satırına <code>asdf</code> yazıp dilin değişip değişmediğini kontrol ediyorum.
 
-![enter image description here](https://i.hizliresim.com/6JRX8P.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/21.png)
 
-Çıktıda da görüldüğü gibi dil değişmiş ve yazdığımız <code>asdf</code> komutunun neticesinde konsol, ekrana "bash: asdf: command not found" yazısını basmış oldu. Sonuç olarak geçerli terminal için dil ingilizceye çevrilmiş oldu.
+Çıktıda da görüldüğü gibi dil değişmiş ve yazdığımız <code>asdf</code> komutunun neticesinde konsol, ekrana `bash: asdf: command not found` yazısını basmış oldu. Sonuç olarak geçerli terminal için dil ingilizceye çevrilmiş oldu.
 
 Bütün bu işlemler sadece bu komut penceresi için sınırlı. Yani açmış olduğumuz terminal ekranını(konsol/komut penceresi) kapatırsak yeni bir tane açtığımızda başlangıçta olduğu gibi konsol bize Türkçe yanıt verecektir. Yani bu şekilde yapılan tüm değişiklikler sadece yapıldığı konsol için geçerli. Bunu kendiniz de deneyerek görebilirsiniz.
 
@@ -264,7 +263,7 @@ Kodu kısaca açıklayacak olursak <code>leafpad</code> sistemde mevcut bulunan 
 
 <code>leafpad ~/.bashrc</code> komutunu verdikten sonra karşınıza <kbd>.bashrc</kbd> dosyasının açılmış olması gerek. 
 
-![enter image description here](https://i.hizliresim.com/6JRXPv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/22.png)
 
 Şimdi yapmak istediğimiz değişikliği dosyanın en alt satırına yani dosyanın sonuna eklemeliyiz. Bu eklemeyi <code>export DEĞİŞKEN_ADI=değeri</code> şeklinde yapıyoruz. Ben örnek olması açısından dil değişikliğini ele aldım. Bu sebepten dil değişimi(Türkçe olan dili ingilizceye çevirmek) için gerekli olan yazı dizisini <code>export LANG=C</code> şeklinde dosyanın sonuna ekledim ve dosyayı kaydederek kapattım.
 
@@ -273,12 +272,12 @@ Geldik diğer yöntem olan yalnızca konsol ekranını kullanarak değişiklik y
 Bunun için konsola <code>nano -w ~/.bashrc</code> komutumuzu veriyoruz.
 Komutumuzu girdikten sonra karşımıza konsol ekranı içerisinde <kbd>.bashrc</kbd> dosyasının içeriği geliyor. Klavyedeki yön tuşlarını kullanarak en alt satıra iniyoruz ve oraya yapmak istediğimiz değişkliği giriyoruz. Ben dilde değişiklik yapacağım için satırın sonuna <code>export LANG=C</code> şeklinde ekleme yaptım .
 
-![enter image description here](https://i.hizliresim.com/A12kGr.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/23.png)
 
 Ve <kbd>Ctrl + X</kbd> tuş kombinasyonunu uyguladım. Daha sonra konsol bana çıkmadan önce dosyada yaptığım değişikliği kaydetmek isteyip istemediğimi sordu bende "e" diyerek dosyanın adını herhangi bir değişime uğratmadan kaydettim ve işte bu kadar işlem tamamdır.
 
-![enter image description here](https://i.hizliresim.com/8YndWd.png)
-![enter image description here](https://i.hizliresim.com/D7XdWy.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/24.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/25.png)
 
 Yalnızca komut satırından işlem yapmak sanki daha uzun ve zor gibi gelmiş olabilir ancak kesinlikle grafiksel olarak yapmaktan bir farkı yok sadece belki izahı biraz uzun sürmüş olabilir.
 
@@ -286,20 +285,20 @@ Artık böylelikle değişiklik yaptığımız bu kullanıcı oturumunu ne zaman
 
 ### Sistem Genelinde
 
-Eğer yaptığımız değişiklik bütün kullanıcı oturumlarında aynı şekilde geçerli olsun istiyorsak değişkenin sistemde her oturum açıldığında okunan bir dosyada bulunması gerekmektedir. İşte bizim de yapacağımız değişiklikler tüm kullanıcılar için geçerli olsun istiyorsak, yapacağımız değişikliği <kbd> bash.bashrc</kbd> dosyasına eklemeliyiz. Dosyamızın tam konumu <kbd>/etc/bash.bashrc </kbd> dizininde yer alıyor. Bu dosyada ilgili değişikliği nano aracı ile yapmak için konsola <code>nano -w /etc/bash.bashrc</code>komutunu veriyoruz.
+Eğer yaptığımız değişiklik bütün kullanıcı oturumlarında aynı şekilde geçerli olsun istiyorsak değişkenin sistemde her oturum açıldığında okunan bir dosyada bulunması gerekmektedir. İşte bizim de yapacağımız değişiklikler tüm kullanıcılar için geçerli olsun istiyorsak, yapacağımız değişikliği <kbd> bash.bashrc</kbd> dosyasına eklemeliyiz. Dosyamızın tam konumu <kbd>/etc/bash.bashrc </kbd> dizininde yer alıyor. Bu dosyada ilgili değişikliği nano aracı ile yapmak için konsola <code>nano -w /etc/bash.bashrc</code> komutunu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/JQLlgY.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/26.png)
 
-Örnek olması açısından dosyamızın en son satırına dil değişikliği işlevindeki "<code>export LANG=C </code>" ifadesini ekliyorum. Bu sayede terminal dili bütün sistemdeki kullanıcılar için ingilizce olacaktır.
+Örnek olması açısından dosyamızın en son satırına dil değişikliği işlevindeki "<code>export LANG=C</code>" ifadesini ekliyorum. Bu sayede terminal dili bütün sistemdeki kullanıcılar için ingilizce olacaktır.
 
 İlgili ifadeyi <kbd>bash.bashrc</kbd> dosyamıza ekleyip dosyamızı kaydediyoruz .
 
-![enter image description here](https://i.hizliresim.com/D7Xy4z.png)
-![enter image description here](https://i.hizliresim.com/m2lJ1V.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/27.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/28.png)
 
 Sıra geldi değişikliklerin sistem tarafından tanınmasına. Yapılan değişikliğin sistem bütününde geçerli olabilmesi için daha önce de bahsi geçen <code>source</code> komutunu <kbd>bash.bashrc</kbd> dosyası için <code>source /etc/bash.bashrc</code> şeklinde kullanıyoruz. Ve değişikliklerin geçerli olup olmadığını denemek için konsola olmayan geçersiz bir komut verelim, örneğin konsola <code>asdf</code> yazalım bakalım konsolun tepkisi hangi dilde olacak.
 
-![enter image description here](https://i.hizliresim.com/4amGl4.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/29.png)
 
 Çıktımız ingilizce olduğuna göre başarmışız demektir. Yaptığımız bu değişiklik bütün kullanıcılar için yani sistem geneli için geçerlidir. Bu durumu başka bir hesap oluşturarak kendiniz de gözlemleyebilirsiniz.
 
@@ -313,9 +312,9 @@ Bu bölümde sistem üzerinde gerekli hakimiyeti sağlamak için bize kolaylıkl
 
 ### Terminal Kısayolları
 
-Genelde başka bir işletim sisteminden geçiş yapan arkadaşlar konsoldan bir komutu kopyalamak üzere, alıştıkları gibi <kbd>Ctlr + C</kbd> ve kopyalanan komutu yapıştırmak için ise <kbd>Ctrl + V</kbd> tuş kombinasyonunu denerler. Ancak komut satırında görürler ki kopyalamak için bastıkları <kbd>Ctrl + V</kbd> tuş kombinasyonu <kbd>^C</kbd> yapıştırmak için bastıkları <kbd>Ctrl + V </kbd> tuş kombinasyonu ise <kbd>^V</kbd> şeklinde konsola çıktı basmış. Tabi yanlış basmış olma ihtimaline karşı aynı işlemi genellikle tekrar deneyen arkadaşlar olur ancak yine aynı çıktıları alınca anlaşılır ki o işler öyle olmuyormuş :) İşin şakası bir yana insanın zamanla edindiği alışkanlıklarını değiştirmesi zor olabiliyor. O yüzden Terminalde <kbd>Ctrl + Shift + C </kbd> ve <kbd>Ctrl + Shift + V </kbd> olan kopyala-yapıştır kısayolunu daha önceden alışmış olduğumuz gibi değiştirmek bizim en doğal hakkımız. Bunun için eğer isterseniz yalnızca kopyala-yapıştır kısayolunu değiştirebilir ya da diğer mevcut tüm kısayolları istediğiniz ve alıştığınız şekilde düzenleyebilirsiniz. Düzenlemek için, yeni Kali Linux versiyonlarında Terminal'in üst kısmında yer alan sekmelerden sırasıyla Düzenle > Tercihler > Kısayollar sekmelerini takip ederek açılan pencerede yer alan kısayolları dilediğiniz şekilde değiştirebilirsiniz.
+Genelde başka bir işletim sisteminden geçiş yapan arkadaşlar konsoldan bir komutu kopyalamak üzere, alıştıkları gibi <kbd>Ctrl + C</kbd> ve kopyalanan komutu yapıştırmak için ise <kbd>Ctrl + V</kbd> tuş kombinasyonunu denerler. Ancak komut satırında görürler ki kopyalamak için bastıkları <kbd>Ctrl + C</kbd> tuş kombinasyonu <kbd>^C</kbd> yapıştırmak için bastıkları <kbd>Ctrl + V </kbd> tuş kombinasyonu ise <kbd>^V</kbd> şeklinde konsola çıktı basmış. Tabi yanlış basmış olma ihtimaline karşı aynı işlemi genellikle tekrar deneyen arkadaşlar olur ancak yine aynı çıktıları alınca anlaşılır ki o işler öyle olmuyormuş :) İşin şakası bir yana insanın zamanla edindiği alışkanlıklarını değiştirmesi zor olabiliyor. O yüzden Terminalde <kbd>Ctrl + Shift + C </kbd> ve <kbd>Ctrl + Shift + V </kbd> olan kopyala-yapıştır kısayolunu daha önceden alışmış olduğumuz gibi değiştirmek bizim en doğal hakkımız. Bunun için eğer isterseniz yalnızca kopyala-yapıştır kısayolunu değiştirebilir ya da diğer mevcut tüm kısayolları istediğiniz ve alıştığınız şekilde düzenleyebilirsiniz. Düzenlemek için, yeni Kali Linux versiyonlarında Terminal'in üst kısmında yer alan sekmelerden sırasıyla *Düzenle > Tercihler > Kısayollar* sekmelerini takip ederek açılan pencerede yer alan kısayolları dilediğiniz şekilde değiştirebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/nOPJq1.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/30.gif" width="875">
 
 Eğer eski bir versiyon kullanıyorsanız dediğim adımlarla Terminal kısayollarına ulaşamamış olabilirisiniz. Ancak Terminal'in üst kısmında yer alan sekmelere göz atarak "kısayollar" penceresine ulaşabilirsiniz. Sonuçta sürekli yenilikler olduğu için her versiyona özel bu tarz şeyleri yazmak gereksiz olacaktır. Kendiniz de biraz kurcalama ile çok rahat keşfedebilirsiniz.
 
@@ -339,9 +338,9 @@ Daha sonra bir alt kutucuğa istediğimiz kısayol tuş kombinasyonunu giriyoruz
 
 Ben Ctrl + Shift + T şekilinde ayarladım. Elbette siz kısayol tuş kombinasyonunu dilediğiniz gibi ayarlayabilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/A121Qv.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/31.gif)
 
-Son olarak "Ekle" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu(ctrl+shift+T) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
+Son olarak "Ekle" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu(<kbd>Ctrl+Shift+T</kbd>) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
 
 ### Bash Shell Kısayolları
 
@@ -369,27 +368,29 @@ Burada belirttiklerim dışında pek çok kısayol mevcut ancak ben hepsine değ
 
 Hazır konu kısayollardan ve pratiklikten açılmışken aynı anda birden fazla komut kullanımını da anlatmadan geçmek olmaz. Bunun için üç farklı yol izleyebiliriz. Birincisi yan yana olacak şekilde <kbd>&&</kbd> operatörünü kullanmak. Hemen bu yolu deneyelim. Ancak henüz tam olarak komutları öğrenmediğimiz için önceden kullandığımız komutlardan kullanalım. Bunun için PATH ve TERM ortam değişkenlerini kullanarak aynı anda çıktı almak üzere <code> echo $PATH && echo $TERM</code> komutunu konsola yazalım.
 
-![enter image description here](https://i.hizliresim.com/qGqGYB.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/32.png)
 
 Çıktıda görüldüğü gibi PATH ve TERM ortam değişkenlerinin değerleri yazdığımız birleşik komut sayesinde iki farklı komut aynı anda basıldı. Gelin şimdi de diğer bir yol olan noktalı virgül " <kbd>;</kbd> " kullanarak aynı işlemi tekrar edelim.
 
-![enter image description here](https://i.hizliresim.com/3E8Ea5.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/33.png)
 
 Ve sonuç bizleri şaşırtmayarak yine birleşik komut içerisinde yazdığımız ortam değişkenlerinin değerlerini aynı anda ekrana bastırdı. Ve son olarak <kbd> || </kbd> operatörü var. Bu operatör diğerlerinden farklı olarak, kullandığımızda eğer verilen komutlardan birincisi başarısız olursa diğerini basar. Bu operatörü de kısaca şu örnek ile inceleyelim.
 
-![enter image description here](https://i.hizliresim.com/A1216r.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/34.png)
 
-Burada 1. komut başarısız olduğu için 2. komut ekrana basılmış oldu. Yani bir nevi önlem amaçlı bir kullanımdır. Biz konsola bu kullanım ile diyoruz ki; "Eğer verdiğim ilk komut başarısız olursa ikinci komutu çalıştır." yani bu durumda eğer ilk komut başarızı olursa hemen devreye ikinci komut girecektir ancak ilk komut başarılı olursa ikinci komut çalışmayacaktır.
+Burada 1. komut başarısız olduğu için 2. komut ekrana basılmış oldu. Yani bir nevi önlem amaçlı bir kullanımdır. Biz konsola bu kullanım ile diyoruz ki; *"Eğer verdiğim ilk komut başarısız olursa ikinci komutu çalıştır."* yani bu durumda eğer ilk komut başarısız olursa hemen devreye ikinci komut girecektir ancak ilk komut başarılı olursa ikinci komut çalışmayacaktır.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/35.png" width="895">
 
 ### Kısayol Koruması
 
-Buraya gelene kadar bir çok kısayoldan ve bu kısayolların avantajlarından bahsettik ancak kısayollar bazen istemediğimiz sonuçlar doğurabiliyor. Biz de böyle durumlarla karşılaşmamak adına şimdiden ufak önlemler alsak iyi olur. Önceki kısımlarda <kbd>Ctrl+D</kbd> kısayolunun mevcut konsolu kapattığını öğrenmiştik. Bu çok kullanışlı bir kısayol olsa da bazen istemeden de olsa konsolun ansızın kapanmasına neden olabiliyor. Yani bir kontrol mekanizması oluşturmamız sonradan üzülmemek için şart. Bu kontrol sağlama imkanını bize ignoreeof verir. ignoreeof tanımını kullanmanın 2 farklı yolu vardır. Bunlardan birisi sadece mecvut Terminal için geçerli diğeri ise sürekli ve oturumdaki tüm terminallerde geçerli olmak üzere kullanılmasıdır. Sürekli ve tüm Terminal ekranlarında geçerli olsun istiyorsak. Gerekli ayarlamaları yapmak üzere komut satırımıza <code> nano -w ~/.bashrc</code> komutunu veriyoruz ve <kbd> .bashrc</kbd> dosyasının en alt satırına <code>export IGNOREEOF=2</code> yazıp <kbd>Ctrl + X </kbd> kombinasyonunu kullanarak dosyanın ismini değiştirmeden kaydederek çıkıyoruz.(Bütün kullanıcılarda bu korumayı sağlamak için değişikliği <kbd>bash.bashrc</kbd> dosyasında yapmamız gerektiğini biliyorsunuz.)
+Buraya gelene kadar bir çok kısayoldan ve bu kısayolların avantajlarından bahsettik ancak kısayollar bazen istemediğimiz sonuçlar doğurabiliyor. Biz de böyle durumlarla karşılaşmamak adına şimdiden ufak önlemler alsak iyi olur. Önceki kısımlarda <kbd>Ctrl+D</kbd> kısayolunun mevcut konsolu kapattığını öğrenmiştik. Bu çok kullanışlı bir kısayol olsa da bazen istemeden de olsa konsolun ansızın kapanmasına neden olabiliyor. Yani bir kontrol mekanizması oluşturmamız sonradan üzülmemek için şart. Bu kontrol sağlama imkanını bize **ignoreeof** verir. **ignoreeof** tanımını kullanmanın 2 farklı yolu vardır. Bunlardan birisi sadece mecvut Terminal için geçerli diğeri ise sürekli ve oturumdaki tüm Terminallerde geçerli olmak üzere kullanılmasıdır. Sürekli ve tüm Terminal ekranlarında geçerli olsun istiyorsak. Gerekli ayarlamaları yapmak üzere komut satırımıza <code> nano -w ~/.bashrc</code> komutunu veriyoruz ve <kbd> .bashrc</kbd> dosyasının en alt satırına <code>export IGNOREEOF=2</code> yazıp <kbd>Ctrl + X </kbd> kombinasyonunu kullanarak dosyanın ismini değiştirmeden kaydederek çıkıyoruz.(Bütün kullanıcılarda bu korumayı sağlamak için değişikliği <kbd>bash.bashrc</kbd> dosyasında yapmamız gerektiğini biliyorsunuz.)
 
 Böylece koruma sistemi kuruldu ve artık test etmeye hazır. Komut satırındayken iki kez <kbd>Ctrl + D </kbd> tuş kombinasyonunu uygularsak konsol bize iki defa uyarıda bulunacaktır ve çıkmak için ancak 3. defa bastığımızda ya da komut satırına <code>exit</code> yazdığımızda konsol kapanacaktır.
 
-![enter image description here](https://i.hizliresim.com/rO9vjB.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/36.gif)
 
-Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 kez <kbd>Ctrl + D </kbd> kapatma kombinasyonundan korudu. Ancak sizler bu bana yetmez ya da 2 kez fazla olur diyorsanız tanımı istediğiniz değerlerde ayarlayabilirsiniz. Örneğin <code> IGNOREEOF=4 </code> olabilir ya da <code>IGNOREEOF=1</code> olabilir, bu değer tamamen size kalmış. Ayrıca ufak bir hatırlatma, yaptığınız değişiklikler ancak Terminali kapatıp açtığınızda geçerli olur.
+Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 kez <kbd>Ctrl + D </kbd> kapatma kombinasyonundan korudu. Ancak sizler bu bana yetmez ya da 2 kez fazla olur diyorsanız tanımı istediğiniz değerlerde ayarlayabilirsiniz. Örneğin <code>IGNOREEOF=4</code>  olabilir ya da <code>IGNOREEOF=1</code> olabilir, bu değer tamamen size kalmış. Ayrıca ufak bir hatırlatma, yaptığınız değişiklikler ancak Terminali kapatıp açtığınızda geçerli olur.
 
 Şimdi de yalnızca mevcut Terminal için geçici koruma nasıl sağlarız ona değinelim. Koruma katmanı ne kadar hayat kurtarıcı olsa da sürekli olması bazen rahatsız edici olabilir. İşte bu noktada sadece önemli ve gerekli gördüğümüz zaman bu özelliği açıp kapatma seçeneğine sahibiz. Bunu da iki farklı yolla yapabiliriz.
 
@@ -397,10 +398,10 @@ Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 
 
 İkinci yöntem ise komut satırına <code>set -o ignoreeof</code> yazmak. Bu komut ile de mevcut komut satırımız ancak 11.kez <kbd>Ctrl + D </kbd>yapmamız sonucunda kapanacaktır. Bunun haricinde birde <code>exit</code> komutunu verirsek konsol ekranı anında sonlanır. Bu özelliği devre dışı bırakmak isterseniz de komut satırına <code> set +o ignoreeof</code> yazmalısınız.
 
-![enter image description here](https://i.hizliresim.com/3EoJNO.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/37.gif)
 
   [1]: https://ss64.com/bash/syntax-keyboard.html
-
+  
 ----------
 
 
@@ -418,25 +419,25 @@ help Komutu
 ------------------
 Hiç ingilizce bilmiyorum diyen birinin bile "**help**" ifadesinin "**yardım**" anlamında olduğunu bildiğini düşünüyorum. Yani bu sebepten <code>help</code> komutu akılda kalması en kolay komutlardandır. Komutun kullanımına geçecek olursak örneğin daha önce kullandığımız yetki verme işini gören <code>chmod</code> komutu ile ilgili yardım(bilgi) almak isteyelim. Bunun için komut satırına <code>chmod --help</code> şeklinde komutumuzu yazıyoruz. Ve aşağıda görüldüğü gibi gerekli bilgileri içeren yardım sayfası bizi karşılıyor.
 
-![enter image description here](https://i.hizliresim.com/Vrp96Z.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/1.png)
 
 Bu kullanımın dışında <code>help</code> komutunun birde <code>help komut</code> şeklinde kullanımı var ancak bu kullanımda her zaman komut hakkında yardım bilgisi bulunmayabiliyor o yüzden ilk öğrendiğimiz yol önceliğiniz olsun. Örneğin <code>help chmod</code> yazdığımızda komut satırı yardım bilgisi bulunmadığını belirtti.
 
-![enter image description here](https://i.hizliresim.com/nOPQmV.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/2.png)
 
 Peki neden ikinci kullanım yöntemi var diyecek olursanız. Bazı istisnai komutlarda `komut --help` şeklinde yazıldığında komutun kullanım şekli nedeniyle çıktı alınamıyor. Buna bir örnek verelim ancak örnekte kullancağım komutu ileride ayrıntılı ele alacağım şimdilik sadece konumuzla ilgili olan kısımına odaklanın lütfen.
 
 Örneğin; `echo` komutu kendisinden sonra yazılan ifadeyi ekrana basıyor. Yani ben `echo Merhaba` yazarsam konsol ekranı da çıktı olarak "Merhaba" şeklinde bir ifade basıyor.
 
-<img src="https://i.hizliresim.com/nOyGmV.png">
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/3.png)
 
 Eğer ben `help` komutu ile `echo` komutu hakkında yardım bilgisine ulaşmak istersem; komutumu `echo --help` şeklinde kullandığımda ekrana yardım bilgisi değil yalnızca "--help" ifadesi basılıyor. 
 
-![](https://i.hizliresim.com/9mbpq5.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/4.png)
 
 İşte bu gibi durumlarda `help` komutunu ikinci kullanım şekliyle kullanmaktan başka çare kalmıyor. Eğer komutumu `help echo` şeklinde yazarsam çıktılara `echo` komutunun yardım bilgileri olacaktır.
 
-![](https://i.hizliresim.com/6JM6qv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/5.png)
 
 Yani sonuç olarak istisnai komutların haricinde `help` komutu `komut --help` şeklinde kullanılıyorken, bazı özel durum oluşturan komutlar mecburen `help komut` yapısıyla kullanılmak durumunda kalıyor. Bu istisnaları kesinlikle bilmek zorunda değilsiniz. Sadece `help` komutu ile yardım bilgisine ulaşmak istediğinizde ilk olarak `komut --help` yapısını kullanın eğer yardım bilgisine bir şekilde ulaşamazsanız bu sefer komutunuzu `help komut` şeklinde kullanın.
 
@@ -457,7 +458,7 @@ man(manuel) sayfaları temel yardım alma dosyalarıdır. Ve kılavuz sayfaları
 <code>man</code> kılavuzunun komutlarla ilgili tuttuğu bilgi sayfaları <kbd>/usr/share/man</kbd> konumu altında tutulur. 
 Yani konsol ekranına basılan yardım(klavuz) bilgileri bu konum içerisinde yer alan dosyalardan alınarak basılır. `man` klavuz sayflarının kaynağı burasıdır ve bu dosyalar belirli bir düzene göre sıralanmıştır.
 
-![enter image description here](https://i.hizliresim.com/JQWEnQ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/6.png)
 
 İlgili dizin içerisindeyken bakalım örneğin; <code>man</code> sayfasının yapılanması nasıl oluyor yani <kbd>/usr/share/man</kbd> konumunda yer alan dil dosyaları dışındaki diğer dosyalar olan <kbd>man1,man2,man3,man4,man5,man6,man7,man8</kbd> dosyaları ne ifade ediyor kısaca ona değinelim.
 
@@ -475,15 +476,15 @@ whatis Komutu
 ---------------------
 Hazır yeri gelmişken yukarıda gördüğümüz <code>man</code> sayfası yapılanmasıyla ilgili olarak <code>whatis</code> komutundan da söz edelim. Bu komut sayesinde hangi komutun hangi <code>man</code> sayfasında olduğunu öğrenebiliyoruz. Daha iyi anlamak için örnekler yapalım. Komutun kullanımı <code>whatis komut</code> şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/JQLZyY.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/7.png)
 
 <code>whatis</code> komutuna, <code>chmod</code> komutunun <code>man</code> sayfasındaki açıklamalarının yukarıdaki açıkladığımız (man1,man2..3..4..5..6..7..8) dosyalarından hangi dosyada olduğunu sorduk. Konsol yanıt olarak hem 1 hemde 2 de bulunduğunu bizlere bildirdi. Siz bunu istediğiniz komut için sorgulayabilirsiniz hatta <code>whatis</code> komutu için bile sorgulayabiliriz.
 
-![enter image description here](https://i.hizliresim.com/YgPQAZ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/8.png)
 
 Bu çıktıların doğruluğu `man` sayfalarının tutulduğu <kbd>/usr/share/man</kbd> dizinine gidilerek kontrol edilebilir. Örneğin ben <kbd>/usr/share/man/man1</kbd> konumuna gittiğimde <code>whatis</code> komutunun yardım sayfalarının burada olduğunu görebiliyorum. Sizler de çıktıları bu şekilde teyit edebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/vj47n6.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/9.png)
 
 <code>whatis</code> komutunun kullanımı bu kadar ile sınırlı değil ancak ben geri kalanını burada vermiyorum. Dileyen arkadaşlar <code>man</code> komutu yardımı ile gerekli bilgilere ulaşabilirler.
 
@@ -492,34 +493,34 @@ apropos Komutu
 
 Yardım alma komutlarını noktalamadan önce; Sizlere <code>man</code> sayfasındayken <kbd>h</kbd> tuşuna basarsak <code>man</code> sayfasının kullanımı hakkında detaylı bilgiye ulaşabileceğimizi belirtmiştim. O sayfaya bakarsanız <code>man -k</code> şeklinde parametre alan komutun işlevinin, sorguladığımız komutun geçtiği uygulamaları listelemek olduğunu görebilirsiniz. Yani örnek vermek gerekirse komut satırına <code>man -k chmod</code> yazdığımızda çıktısı aşağıdaki şekilde olacaktır.
 
-![enter image description here](https://i.hizliresim.com/p6450a.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/10.png)
 
 Gördüğünüz gibi belirtmiş olduğumuz `chmod` komutunun geçtiği uygulamalar listelenmiş oldu. İşte <code>apropos</code> komutu da tam olarak bu işin aynını yapıyor. Örneğin Terminale <code>apropos chmod</code> komutunu girersek çıktısı aşağıdaki şekilde olacaktır.
 
-![enter image description here](https://i.hizliresim.com/G9nZ0Z.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/11.png)
 
 Çıktılar karşlaştırıldığında görülüyor ki aralarında bir fark yok.
 
-Daha iyi anlamak için örneğin komutun ismini tam olarak hatırlamıyorsunz ancak işlevini hatırlıyorsunuz diyelim işte bu noktada `apropos`komutu sayesinde man klavuz sayfaları içinde anahtar kelime araştırması yaparak ilgili komuta ulaşabilirsiniz.
+Komutun kullanım amacını daha iyi anlamak için örneğin komutun ismini tam olarak hatırlamıyorsunz ancak işlevini hatırlıyorsunuz diyelim işte bu noktada `apropos` komutu sayesinde man klavuz sayfaları içinde anahtar kelime araştırması yaparak ilgili komuta ulaşabilirsiniz. Yani aslında biz apropos komutuyla sadece man kılavuz sayfalarında detaylı bir araştırma yapmış oluyoruz.
 
 **Örneğin**
 
-Bir komut vardı.. silme işlevindeydi.. neydi.. neydi diye düşündüğünüzde; konsol ekranına `apropos sil` şeklinde yazdığımızda, karşımıza man klavuz sayfalarında aradığımız anahtar kelimeye uygun gelen ifadeler listelenir. Bu sayede komutu buradaki çıktılara bakarak hatırlayabilirsiniz.
+Bir komut vardı.. silme işlevindeydi.. neydi.. neydi diye düşündüğünüzde; konsola `apropos sil` şeklinde yazarsak, karşımıza man klavuz sayfalarında aradığımız anahtar kelimeye uygun gelen ifadeler listelenir. Komutumuzun işlevini silmek olduğunu bildiğimizden "sil" ifadesini `apropos` komutu ile sorgulayarak man sayfalarında "sil" ifadesinin geçtiği kısımları listelemiş olduk. Yani man sayfalarında yer alan açıklamalar sayesinde hatırlayamadığımız kısımları buradaki çıktılara bakarak hatırlayabiliriz.
 
-<img src="https://i.hizliresim.com/A1GYg0.png" width="875" >
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/12.png" width="875" >
 
-Bir örnek daha yapalım. Mesela ben komutun bir kısmını hatırlıyorum diyelim. İşte bu gibi bir durumda da yine `apropos` komutumu ya da `man -k` komutumu kullanarak ilgili komutu bulabilirim.
+Bir örnek daha yapalım. Mesela ben komutun bir kısmını hatırlıyorum diyelim. İşte bu gibi bir durumda da yine `apropos` komutumu ya da `man -k` komutumu kullanarak tamamını hatırlayamadığım ilgili komutu bulabilirim.
 
-<img src="https://i.hizliresim.com/5DqR2R.png" width="875" >
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/13.png" width="875" >
 
 Yani `apropos` ve `man -k` komutları man klavuz sayfaları içerisinde bizim sorguladığımız her türlü ifadeyi arayarak bulup getiriyor.
-Bu yüzden mümkün oldukça aramalarınızı İngilizce üzerinden yaparsanız sonuca ulaşmanız daha kolay olacaktır. 
+Ayrıca kılavuz(man/manuel) sayfa içeriklerinin büyük çoğunluğunun İngilizce olduğunu da ele alarak mümkün oldukça aramalarınızı İngilizce üzerinden yaparsanız sonuca ulaşmanız daha kolay olacaktır. 
 
 Bu konudaki noktayı da man kılavuz sayfaları güncelleme işlemi ile yapalım. Nedir bu işlem diyecek olursanız. Aradığımız yardımı man sayfasında bulamıyorsak güncelleyerek tekrar sorgulayabiliriz. Ara ara güncellemek yeni bilgilere de ulaşmamıza olanak sağlar. Güncelleme için konsola <code>mandb</code> komutunu girmemiz yeterli olacaktır. Komut satırı, güncelleme işleminden sonra yapılan değişiklikleri de son satırda bizlere bildirir.
 
-![enter image description here](https://i.hizliresim.com/6JnGq7.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/2-%20Yard%C4%B1m%20Alma%20Komutlar%C4%B1/14.png)
 
-Yardım alma komutlarını bilmek bir zorunluluk değil ihtiyaç meselesidir. Zaten zamanla bu komutlara ve kullanımlarına alışacaksınız. Açıklamaların İngilizce olmasını da dert etmeyin, ne yaparsak yapalım eninde sonunda bu işlerin yolu ingilizceden geçiyor artık bu duruma alışmamız gerek. Bu noktada kendimizi biraz zorlamalı ve kesinlikle pes etmemeliyiz. Kendimizi biraz zorlayarak çaba harcayarak öğrenirsek, öğrenilenler kesinlikle daha da kalıcı oluyor. Sakın pes etmeyin çok iyi gidiyoruz...
+Yardım alma komutlarını bilmek bir zorunluluk değil ihtiyaç meselesidir. Zaten zamanla bu komutlara ve kullanımlarına alışacaksınız. Açıklamaların İngilizce olmasını da dert etmeyin, ne yaparsak yapalım eninde sonunda bu işlerin yolu İngilizce'den geçiyor artık bu duruma alışmamız gerek. Bu noktada kendimizi biraz zorlamalı ve kesinlikle pes etmemeliyiz. Kendimizi biraz zorlayarak çaba harcayarak öğrenirsek, öğrenilenler kesinlikle daha da kalıcı oluyor. Sakın pes etmeyin çok iyi gidiyoruz...
 
 ----------
 
@@ -530,24 +531,82 @@ Bilgi alma komutları sistemimizde bulunan herhangi bir şey hakkında(programla
 
 uname
 -
-Tek başına çekirdek adını verse de aldığı parametreler ile farklı bilgiler de sunabilir. Hangi parametrenin ne iş yaptığını <code>man uname</code> komutu ile öğrenebileceğinizi biliyorsunuz. Kısaca bilmemiz gereken; bu komut genel olarak sistemde kullanılan çekirdek hakkında bilgiler verir.
+Tek başına çekirdek adını verse de aldığı parametreler ile farklı bilgiler de sunabilir. Kısaca bilmemiz gereken; bu komut genel olarak sistemde kullanılan çekirdek hakkında bilgiler verir. Hangi parametrenin ne iş yaptığını <code>man uname</code> komutu ile öğrenebileceğinizi biliyorsunuz. Bizde kullanım şekillerini man kılavuz sayfası üzerinden açıklayalım.
 
-![enter image description here](https://i.hizliresim.com/EPlXDD.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/0.png)
+
+Eğer parametresiz kullanıldıysa `-s` parametresi gibi yalnızca çekirdek ismini gösterir. Yani `uname` komutu ile `uname -s` komutu
+       aynıdır.
+Parametreler ve ifade ettikleri;
+
+     -a, --all
+            Bu parametre ile bütün bilgileri aşağıdaki seçenek sırasıyla gösterilir; -p ve -i bilinmiyorsa atlanır.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/1.png)
+
+     -s, --
+            çekirdek ismini gösterir.
+              
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/2.png)
+
+     -n, --nodename
+            ağ düğümü konak ismini diğer bir değişle hostname(host adını) gösterir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/3.jpg)
+
+     -r, --kernel-release
+            çekirdeğin derleniş sürümünü gösterir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/4.jpg)
+
+     -v, --kernel-version
+            çekirdeğin sürümünü gösterir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/5.jpg)
+
+     -m, --machine
+            makine donanım ismini gösterir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/6.jpg)
+
+     -p, --processor
+            işlemci türünü veya "unknown" gösterir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/7.jpg)
+
+     -i, --hardware-platform
+            donanım platformunu veya "unknown" gösterir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/8.jpg)
+
+     -o, --operating-system
+            işletim sistemini gösterir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/9.jpg)
+
+     --help 
+            Bu yardım iletisini gösterir ve çıkar.
+
+     --version
+            Sürüm bilgilerini gösterir ve çıkar.
+
 
 hostname
 -
-Bilgisayarımızın adını diğer bir adıyla host adını verir. Eğer isterseniz bu adı değiştirebilirsiniz. Örnek veriyorum; komut satırına <code>hostname burak</code> yazarsanız hostname yani bilgisayarınızın adı burak olarak değişmiş olacaktır.
+Bilgisayarımızın adını diğer bir deyişle bilgisayarımızın ağ üzerindeki adını verir. Eğer isterseniz bu adı değiştirebilirsiniz. Örnek veriyorum; komut satırına <code>hostname burak</code> yazarsanız hostname yani bilgisayarınızın adı burak olarak değişmiş olacaktır.
 
-![enter image description here](https://i.hizliresim.com/5D9Znq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/10.png)
 
 Ancak bu ayar kalıcı değildir. Oturumu kapatıp tekrar açtığınızda değiştirmiş olduğunuz adın tekrar eski haline döndüğünü görebilirsiniz. Kalıcı olmasını ayarlardan kolaylıkla sağlayabiliriz. Sürümden sürüme değişiklik göstersede sırasıyla; ayarlar>sistem>ayrıntılar>genel aygıt adı: kutusuna istediğiniz ismi yazabilirsiniz. Eğer dediğim yoldan ulaşamadıysanız ayarları biraz kurcalayarak bulabilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/azqVAz.gif)
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/11.gif" width="875">
+
 
 Ayrıca tamamen komut satırından da kalıcı bir hostname değişikliği yapmak mümkün. Bunun için <kbd> /etc/hostname</kbd> konumunda yer alan <kbd>hostname</kbd> dosyasını açmamız gerek. Dosyamızı açmak için konsola <code> nano -w /etc/hostname</code> komutunu veriyoruz.
 Komutumuzun ardından açılan dosyamızda ismimizin yerine istediğimiz ismi yazıyoruz. Ve <kbd>Ctrl + X</kbd> tuş kombinasyonu ile dosyamızdaki değişiklikleri kaydederek çıkıyoruz.
 
-![enter image description here](https://i.hizliresim.com/6JRoL0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/12.png)
 
 
 Değişikliğin geçerli olması için oturumun kapatılıp tekrar açılması gerek daha sonra hostname yani bilgisayarınızın ismi değişmiş olacaktır.
@@ -556,7 +615,7 @@ lsb_release
 -
 Bu komut kullandığımız dağıtım hakkında farklı bilgiler sunan parametrelere sahiptir. Detaylı bilgi için man kılavuz sayfasını kontrol edebilirsiniz. Ben örnek olası açısından <code>lsb_release -a </code> komutunun çıktısını veriyorum.
 
-![enter image description here](https://i.hizliresim.com/jyJ0LJ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/13.png)
 
 whoami
 -
@@ -564,13 +623,13 @@ Sinemayı takip eden arkadaşların aklına ilk ne geldi biliyorum :)
 
 Bu komut kimlik sorgu işlevi görüyor. Komut satırımıza komutumuzu vererek sonucuna bakalım.
 
-![enter image description here](https://i.hizliresim.com/76m9oW.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/14.png)
 
 Komut çıktısı bize mevcut kullanıcının <code>root</code> kimliği ile çalıştığını göstermiş oldu.
 
 Yine <code>whoami</code> komutuna benzer ancak çok ufak farkların olduğu birkaç komutu daha peş peşe komut satırına girerek çıkan sonuçlar üzerinden anlatıma devam edelim.
 
-![enter image description here](https://i.hizliresim.com/gOldA3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/15.png)
 
 Sıra sıra bakalım:
 
@@ -580,34 +639,52 @@ Sıra sıra bakalım:
 
 **w:** hangi kullanıcı hangi uygulamayı çalıştırıyor bunun bilgisini gösteriyor.
 
-Bunun dışında bu komutlar da parametre alabiliyorlar. Hangi parametreleri aldıklarını nasıl öğrenebileceğinizi zaten biliyorsunuz. Ben yinede aşağıda birkaçının çıktısını bırakıyorum.
-
-![enter image description here](https://i.hizliresim.com/Pl38P5.png)
+Bunun dışında bu komutlar da parametre alabiliyorlar. Hangi parametreleri aldıklarını nasıl öğrenebileceğinizi zaten biliyorsunuz.
 
 uptime
 -
 <code>uptime</code> komutu sistemimizin ne kadar zamandır açık olduğu bilgisini verir.
 
-![enter image description here](https://i.hizliresim.com/lOYJjJ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/16.png)
 
 
 date
 -
 İsminden de anlaşılacağı gibi bu komut bize sistemin o anki tarih ve saat bilgisini veriyor.
 
-![enter image description here](https://i.hizliresim.com/y0dY4k.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/17.png)
+
+cal
+-
+Komutumuz Türkçe olarak takvim anlamına gelen İnglizce "Calendar" ifadesinin kısaltmasıdır. Komutumuz tek başına kullanıldığında bize konsol ekranı üzerinden bulunduğumuz tarihin takvim bilgisini verir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/18.png)
+
+Ancak daha önceki veya sonraki tarihlerde yer alan takvim bilgilerine komutumuzu `cal ay yıl` şeklinde kullanarak ulaşabiliyoruz. 
+
+Örnek üzerinden açıklayalım.
+
+Eğer 2002 yılının Ocak ayına gitmek istiyorsam komutumu `cal 1 2002` şeklinde kullanırım.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/19.png)
+
+Eğer ileri bir tarihe yani 3003 yılının Haziran ayına gitmek istersem de komutumu `cal 6 3003` şeklinde kullanırım.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/20.png)
+
+Gördüğünüz gibi ileri geri herhangi bir tarih hakkında takvim bilgisi almak istesek `cal` komutunu kullanabiliyoruz.
 
 which
 -
 Herhangi bir komutun tam yol bilgisini öğrenmek için kullanılır.
 
-![enter image description here](https://i.hizliresim.com/D7XzBo.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/21.png)
 
 whereis
 -
 Bu komutunda özel parametreleri vardır man sayfasından kontrol edin lütfen. Bunun dışında parametresiz hali <code>apropos</code> komutuna benzer şekilde bir çıktı verir. Ancak <code>apropos</code> komutundan farklı olarak ilgili komutun man sayfası konumunun tam dizin adresini belirtir.
 
-![enter image description here](https://i.hizliresim.com/dOjQPp.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/22.png)
 
 Ayrıca diğer parametrelerini de kesinlikle man sayfasından inceleyin.
 
@@ -615,11 +692,11 @@ locate
 -
 Bu komut ile aradığımız bir dosyanın nerede olduğunu öğrenebiliriz. Komutun çıktısı bize dosyanın bulunduğu dizin veya dizinleri veriyor. Örneğin daha önce PATH yoluna eklediğim <kbd>komut.sh</kbd> dosyasını <code>locate</code> komutu ile aratıyorum. Sonuç aşağıdaki şekilde:
 
-![enter image description here](https://i.hizliresim.com/Z92Jja.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/23.png)
 
 Bu komutun ne kadar kıymetli olduğunu işiniz düştükçe ve kullandıkça anlayacaksınız. Genelde bir dosyayı arama çubuğu yardımı ile aramak sonuç vermez ve bu arama işlemi oldukça hantal çalışır. Ancak örneğin ben dosya konumunu bilmediğim bir dosyaya ulaşmak istiyorum. İşte burada kahramanız <code>locate</code> komutu çıkageliyor ve bize saniyeler içerisinde sonucu veriyor. Komutu denemek amacıyla kali linux içerisinde yer alan bir araç olan armitage aracını aratıyorum. Bunun için komut satırına <code>locate armitage</code> yazmalıyım.
 
-![enter image description here](https://i.hizliresim.com/oOn9qm.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/24.png)
 
 
 Çıktıda da görüldüğü gibi aradığımız ifadeyi içerin tüm dosyaların nerede olduğunu bir çırpıda buluverdik. Sanırım bu komut sayesinde yavaş yavaş da olsa komut satırının gücünü fark etmeye başlıyoruz.
@@ -636,23 +713,23 @@ Bahsi geçen tablo sıralı şekilde ve Numara-Türkçe karşılığı olacak ş
 
 Başta belirttiğim gibi <code>dmidecode</code> kendi içinde parametre alan bir komut olduğu için istediğimiz spesifik bilgiye doğrudan da ulaşmamız mümkün. Detaylı bilgi için man kılavuz sayfasına bakın lütfen. Ancak küçük bir örnek vermem gerekirse bios hakkında bilgi edinmek istediğimizde <code>dmidecode -t bios</code> şeklinde komut satırına girmemiz yeterli. 
 
-![enter image description here](https://i.hizliresim.com/Vr268n.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/25.png)
 
 Burada ayrıca <code>dmidecode -t bios</code> yerine sıralamada bulunan numarasını yani <code>dmidecode -t 0</code> yazarak da aynı işlemi gerçekleştirebilirdik.
 
-![enter image description here](https://i.hizliresim.com/nOY290.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/26.png)
 
 fdisk-l
 -
 Başlıkta da yer aldığı gibi bu bölümde <code>fdisk</code> komutunun yalnızca <code>l</code> parametresinin işlevini göreceğiz. Bu komutu burada vermemin sebebi sistem hakkında bilgi alırken diskin de sistem dahilinde olmasıdır. Zaten ileride tekrar ele alacağımızdan şimdilik bu kadarı da yeterli olacaktır. Bu komutu diskler üzerinde işlem gerçekleştirirken kullanıyoruz. Eğer komut satırımıza <code>fdisk -l</code> şeklinde komut verirsek karşımıza sistemimizdeki disk bölümleri gelir.
 
-![enter image description here](https://i.hizliresim.com/vjYRAv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/27.png)
 
 df
 -
 Bu komut ile disk kullanımı hakkında ayrıntılı bilgiye ulaşabiliriz.
 
-![enter image description here](https://i.hizliresim.com/1JjraA.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/28.png)
 
 Bu komutumuz da parametre alabiliyor. Dileyen arkadaşlar konsolda <code>man df</code> şeklinde komut girerek gerekli bilgilere ulaşabilirler.
 
@@ -660,36 +737,38 @@ du
 -
 Bir dizinin içerdiği tüm dosyalar ile birlikte diskte kapladığı toplam alanı verir. Ayrıca boyutla ilgili düzgün bir çıktı almak istersek <code>h</code>  parametresini de kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/LbdE8j.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/29.png)
 
 free
 -
 Bu komut ile kullanılan bellek miktarını KB cinsinden öğrenebiliriz. Ancak çıktımızın MB cinsinden olmasını istersek <code>-m</code> parametresini <code>free</code> komutumuza ekleyerek kullanmamız yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/rOYRX7.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/30.png)
 
 modinfo
 -
 Bu komut sayesinde Linux kernel modüllerinin bilgisi alınabilir. Bu modülleri ekran bastırmak isterseniz komut satırına <code>lsmod</code> yazarak modülleri listeleyebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/762PW5.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/31.png)
 
 Örneğin modüller içinden battery modülü hakkında bilgi almak istersek komut satırına <code>modinfo battery</code> şeklinde yazmamız yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/Z92JBV.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/32.png)
 
 stat
 -
 
 Bu komut dosya veya dizin hakkındaki bilgileri almamıza olanak sağlar. Kullanımı <code>stat dizin</code> şeklindedir. Örneğin root dizinine bakalım. Bunun için komut satırımıza <code>stat /root</code> komutunu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/8YmQvn.png)
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/33.png" width="875">
+
 
 vmstat
 -
 Bu komut sayesinde sistemimizin o anlık genel durumunu görebiliriz. Ancak komutu verdikten sonra sistem durumu listelenip sonlanacaktır. Eğer sistemin durumunu bir süre izlemek istersek <code>vmstat gecikme_hızı yenilenme_sayısı</code> şeklinde komut vermeliyiz. Ben her 2 saniyede bir yenilenmesini ve bunu 3 defa yapmasını istiyorum. Bunun için komut satırına <code>vmstat 2 3 </code> komutunu veriyorum.
 
-![enter image description here](https://i.hizliresim.com/D7o9bo.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/34.png)
 
 history
 -
@@ -698,11 +777,13 @@ Bu kısıma gelene kadar konsola bir çok komut yazdık. Peki o yazılan komutla
 
 Evet girilen her komut <kbd>.bash_history </kbd> dosyasında tutuluyor. Biz bu dosyanın içeriğini yani daha önceki yazdığımız kodları görmek istersek komut satırına <code>history</code> yazmalıyız. Çıktı çok uzun olacağından çıktının tamamını aşağıda vermedim.
 
-![enter image description here](https://i.hizliresim.com/2Jv532.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/35.png)
+
 
 Hazır liste uzun demişken eğer bu listenin limitini öğrenmek istersek komut satırına <code>echo $HISTSIZE</code> yazarak bu değeri tutan ortam değişkeninin ne kadar komutu <kbd>history</kbd> dosyasında tutulabileceğini görebiliriz.
 
-![enter image description here](https://i.hizliresim.com/m2q5y8.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/36.png)
+
 
 Bu çıktı bize komutların tutulduğu dosyada en son 1000 komuta kadar kayıt yapıldığını belirtiyor. Eğer tutulan komutların 1000 'den daha fazla olmasını isterseniz <kbd>.bashrc</kbd> dosyasında <code>HISTSIZE=1000</code> yazan değeri istediğiniz doğrultuda düzenleyebilirsiniz.
 
@@ -710,21 +791,23 @@ Komutun kullanımına geçmeden önce bu komutu sadece basit ve kısa komutları
 
 Komutun kullanımına gelecek olursak örnek üzerinden açıklayalım. Benim kayıt dosyamın bir kısmı aşağıdaki şekilde, ben burada yer alan 600. komutu yani <code> vmstat</code> komutunu kullanmak istiyorum. Bunun için komut satırına <code>!600</code> yazmam yeterli olacaktır. Komutun kullanımı <code>!komut_numarası</code> şeklinde. Örnek için çıktıyı inceleyebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/BLo4QM.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/37.png)
+
 
 Daha önceden kullandığımız bir komutu aynı şekilde tekrar kullanmak için ise komut satırına <code>!komut</code> şeklinde komut girmeliyiz. Örnek vermek gerekirse daha önceki kısımlarda <code>stat</code> komutu ile <kbd>root</kbd> dizini hakkında bilgi edinmiştik. Ve bu bilgiye ulaşmak için <code>stat /root</code> komutunu kullanmıştık. Ben şimdi tekrar aynı komuta ulaşmak için komut satırına <code>!stat</code> yazıyorum ve çıktısı tıpkı <code>stat /root</code> yazdığımda olduğu gibi oluyor. Yani bu sayede komutun geri kalanını uzun uzun yazmak gibi bir dert kalmıyor.
 
-![enter image description here](https://i.hizliresim.com/EPQpdz.png)
+<img src="(https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/38.png" width="875">
 
 Eğer son kullandığımız komutu tekrar kullanmak istersek komut satırına <code>!!</code> yazmamız yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/jyzjOL.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/39.png)
+
 
 Bunlar dışında da çok farklı kullanım şekilleri de mevcut. Bu bilgilere <code>man</code> komutu yardımı ile nasıl ulaşacağınızı biliyorsunuz.
 
 Ayrıca son yazılan komutlara ulaşmak için klavyede yer alan yön tuşlarından <kbd>↑</kbd>(yukarı) ve <kbd>↓</kbd>(aşağı) tuşlarını kullanarak önceki ve sonraki komutlarınıza ulaşabilirsiniz. Genellikle yön tuşlarını kullanmak bize anlık işlemlerimizde hız katmaktadır. Sizler de bu pratiklikleri mutlaka yeri geldikçe sıklıkla kullanacaksınız.
 
-![enter image description here](https://i.hizliresim.com/oO7a6m.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/40.gif)
 
 
 
@@ -746,22 +829,22 @@ Genellikle bütün dağıtımlarda aynı hiyerarşik düzen vardır.(Genellikle 
 
 Linux **"Tekil Hiyerarşik Klasör Yapısı"**'nı benimsemiştir. Yani bu da şu demek oluyor; her şey <kbd>/</kbd> (slash) simgesiyle ifade edilen <code>root</code> klasöründen başlar, aşağıya doğru iner. Merak edenler için  de söyleyelim “Root” kelimesinin karşılığı da Türkçe olarak “kök” anlamına geliyor. Bu sayede “root” kelimesinin de nereden geldiği ve neden kullanıldığı da az çok açıklığa kavuşuyor sanırım. 
 
-![enter image description here](https://i.hizliresim.com/OoEvq3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/1.png)
 
 Linux, `/` (root) klasöründen başlayarak, boot işlemindeki önem sırasına göre klasörleri ilgili konumlara yerleştirir. Bu yerleştirme işleminde yani klasörler arası geçişlerde klasörler arasını ayırmak için <kbd>/</kbd>(slash) işareti kullanılır. Herhangi bir dizin ya da dosyanın sistemdeki adresi önce kök dizinden başlar sonra o dosya ya da dizine ulaşmak için geçilmesi gereken dizinler arasına yine <kbd>/</kbd> yazılarak elde edilir. Örneğin `/home/burak` yolu, kök dizininde(/), home isimli dizin içindeki burak dizininin konumunu belirtir. Bu ifadede en baştaki `/` işareti kök dizini belirtmektedir.
 
-<img src="https://i.hizliresim.com/azXYRR.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/2.gif" width="875">
 
 Ayrıca belirtmekte fayda var, Linux küçük büyük harf duyarlılığına sahiptir. Yani Linux'ta `DOSYA_ADI`,`Dosya_Adı`,`dosya_adı`,`DoSyA_aDı`..vb. gibi ismlendirilmiş dosyaların hepsi **ayrı/farklı** bir dosya olarak tanınır. Windows'ta ise aynı isimli dosyalar, küçük büyük harf ayrımı gözetilmeksizin aynı olarak tanınır. Hemen bu durumu teyit etmek için Windows ve Linux sistemlerinde dosya oluşturma işlemi gerçekleştirelim.
 
 **#Windows**
-<img src="https://i.hizliresim.com/XPd6mk.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/3.gif" width="875">
 Gördüğünüz gibi Windows işletim sisteminde büyük küçük harf duyarlılığı bulunmuyor. 
 
 Gelin bu durumu birde Linux sisteminde test edelim.
 
 **#Linux**
-<img src="https://i.hizliresim.com/QVQLXv.gif" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/4.gif" width="875">
 Test sonucundan da anlaşılacağı gibi Linux işletim sisteminde küçük büyük harf duyarlılığı bulunuyor. 
 O yüzden işlemlerimizi yaparken özellikle de ileride konsol(terminal/komut penceresi) ekranından işlem yaparken bu küçük büyük harf duyarlılığı son derece önem kazanacak. Bu önemli detayı da öğrendikten sonra gelin anlatıma devam edelim.
 
@@ -774,7 +857,7 @@ Daha iyi anlaşılması adına anlatımları Windows ile karşılaştırma yapar
 Bu sayede fiziksel olarak pek çok bilgisayara dağılmış olan bir sunucu tek bir kök dosya sisteminden sanki tek bir bilgisayarmış gibi yönetilerek kullanılabilir. Bu sayede hem iş yükü dağılımı yapılarak sistem performansı arttırılmış olur hem de yetkilendirme ve yönetim kısıtlamaları dahilinde sistemin ayrı ayrı parçalara dağılımı ile sisteme ekstra güvenlik önlemi katılmış olunur.
 Biraz daha net anlamak adına aşağıdaki görseli inceleyebilirsiniz.
 
-![](https://i.hizliresim.com/VrEB1B.png)
+![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/5.png)
 Siz şimdi "*ben sadece masaüstü bilgisayardan kullanıcam bu dosya sistemi benim için gereksiz.*" diyebilirsiniz. Ancak bu dosya sistemi tekil kullancılar için de sağladığı güvenlik özellikleri nedeniyle gerekli bir sistemdir.
 
 Daha iyi anlamak için benzer bir duruma masaüstü kullanıcıları için örnek verelim.
@@ -782,30 +865,32 @@ Daha iyi anlamak için benzer bir duruma masaüstü kullanıcıları için örne
 Örneğin sistemde "burak" isimli kullanıcı hesabı var diyelim. Burak kullanıcısının sistemi kullanması için gereken sistem dosyalarını çalıştırma yetkisi var yani sistemi normal bir şekilde kullanabiliyor. Ancak burak kullanıcısının dosyaları değiştirme yetkisi yoksa `/home/burak` dizininden önceki dizinlerde değişiklik(dosyaları silme, üzerine veri yazma vs..) yapamaz. Bu sistem sayesinde bütün kullanıcılar, yetkileri dahilinde işlemlerini güvenli şekilde yerine getirler. Bu sayede yönetim ve güvenlik sağlama işi kolaylaşır.
 Bu duruma örnek olması için çok basit bir test yapalım.
 Root(yetkili ve tüm izinlere sahip kullanıcı) ile burak isimli kullanıcı hesaplarından "Deneme" isimli dosyada değişiklik yapıp, yaptığımız değişikliği kaydetmeye çalışalım.
-<img src="https://i.hizliresim.com/jyBNom.gif" width="875">
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/7.gif" width="875">
+
 Gördüğünüz gibi "root" kullanıcı hesabındayken kayıt işlemini tamamlayabildim ancak "burak" kullanıcı hesabında yetki iznim olmadığı için dosyada yaptığım değişikliği kayıt edemedim. 
 Bu da demek oluyor ki kullanıcılar sadece sahip oldukları yetkileri dahilinde işlemler gerçekleştirebiliyor. Bu sayede sistem yönetimi ve güvenliği kolaylıkla sağlanabiliyor.
 
 Artık kısaca Linux dosya sisteminin neden bu şekilde olduğunu ve sağladığı avantajları anladıysak gelin bu hiyerarşik yapıdaki dosyalara ve işlevlerine daha da yakından bakalım.
 
-Aşağıda verilen bilgiler tamamiyle [bu kaynaktan](https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi) alınmıştır.
-Ayrıca aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.
+Aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.
 
 /bin
 -
 
-İşletim sisteminizi kullanmak için gereken birçok komut `/bin` klasörü altındadır. cat, mkdir, cp, ls, mv, rm vb. temel komutların hepsi buradadır. Sistem boot ettiğinde, ilk olarak `/bin` klasörü çalışır hâle getirilir. Sistemde ne kadar ciddi bir sorun olursa olsun `/bin` klasöründeki komutlar çalışmaya devam eder. Sisteminizde bir sorun meydana geldiğinde `/bin` klasörü altındaki komutları kullanarak sistemi onarabiliriz.
+İşletim sisteminizi kullanmak için gereken birçok komut `/bin` klasörü altındadır. cat, mkdir, cp, ls, mv, rm vb. temel komutların hepsi buradadır. Sistem boot ettiğinde, ilk olarak `/bin` klasörü çalışır hâle getirilir. Sistemde ne kadar ciddi bir sorun olursa olsun `/bin` klasöründeki komutlar çalışmaya devam eder. Bu sayede sisteminizde bir sorun meydana geldiğinde `/bin` klasörü altındaki temel komutları kullanarak sistemi onarabiliriz.
 
 /boot
 -
 
-Boot, işletim sisteminin yüklenme evresidir. `/boot` klasörü, boot işlemi için gerekli olan tüm dosyaları içerir (çekirdek görüntüsü, sistem haritası, önyükleyici yapılandırması gibi). Bilgisayarın başlangıç (boot) aşamasında gerekmeyen ayar ve yapılandırma dosyaları burada bulunmaz; başka klasörlerden gerektiği zamanlarda yüklenir.
+Boot, işletim sisteminin yüklenme evresidir. `/boot` klasörü, boot işlemi için gerekli olan tüm dosyaları içerir (çekirdek görüntüsü, sistem haritası, önyükleyici yapılandırması gibi). Bilgisayarın başlangıç (boot) aşamasında gerekmeyen ayar ve yapılandırma dosyaları burada bulunmaz; başka klasörlerden gerektiği zamanlarda yüklenir. 
 
 /dev
 -
 
 Linux'ta her şey bir dosyadır; donanım aygıtları da öyle. USB girişleri, seri ve paralel portlar, depolama ortamları, CD-ROM'lar vb... Bütün aygıtlar `/dev` klasörü altında tutulan dosyalardan ibarettir. Örneğin `/dev` altında bulunan `sda1` dosyası, sabit diskinizi temsil eder. Ya da `/dev/dsp`, ses aygıtınızdır. Bunları programlar vasıtasıyla kullanırız; ancak bu dosyalar üzerinden doğrudan müdahale etmek de mümkündür.
 
+Birkaç aygıt dosyası ve işlevi.
 
 <div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th>Konumu</th><th>Cihaz Açıklaması</th></tr></thead><tbody><tr><td><kbd>/dev/ttyS0</kbd></td><td>Fare, modem gibi aygıtların bağlandığı seri port (COM 1).</td></tr><tr><td><kbd>/dev/psaux</kbd></td><td>PS/2 girişi; fare ve klavyeler içindir.</td></tr><tr><td><kbd>/dev/lp0</kbd></td><td>Paralel port (LPT 1); yazıcı, tarayıcı vs...</td></tr><tr><td><kbd>/dev/dsp</kbd></td><td>Birincil ses aygıtı
 </td></tr><tr><td><kbd>/dev/usb </kbd></td><td>USB aygıtları</td></tr><tr><td><kbd>/dev/sda</kbd></td><td>SCSI aygıtlar, USB bellekler, harici CD-ROM'lar vs...</td></tr><tr><td><kbd>/dev/scd</kbd></td><td>SCSI CD-ROM'lar</td></tr><tr><td><kbd>/dev/js0 </kbd></td><td>Oyun çubuğu (Joystick)</td></tr></tbody></table></div>
@@ -814,14 +899,13 @@ Linux'ta her şey bir dosyadır; donanım aygıtları da öyle. USB girişleri, 
 /etc
 -
 
-İşletim sistemini bir vücuda benzetirsek, `/etc` klasörünü sinir sisteminin merkezi olarak görebiliriz. Sisteme dair bütün ayarları barındırır, bulunduğu bilgisayara özel birçok yapılandırma bilgisini içerir. Durağandır, çalıştırılmak için değildir.
+İşletim sistemini bir vücuda benzetirsek, `/etc` klasörünü sinir sisteminin merkezi olarak görebiliriz. Sisteme dair bütün ayarları ve bilgisayara özel birçok yapılandırma bilgisini içerir.
 
 /home
 -
 
-`home` klasörü kullanıcıların kalesi olarak tabir edilir. `home` klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin /home/ahmet , /home/ayşe gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları tutulmaktadır. Kullanıcının çeşitli programlarda yaptığı ayarları barındıran dosyalar gizli dosya oldukları için görüntülenebilmeleri için gizli dosyaların görünür hale getirilmesi gereklidir. Kullanıcılar `/home` dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. `/home` dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.
+`home` klasörü kullanıcıların kalesi olarak tabir edilir. `home` klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin /home/ahmet , /home/ayşe gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları tutulmaktadır. Ayrıca kullanıcılar `/home` dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. `/home` dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.
 
-`/home` dizini, aynı zamanda kullanıcı ayar dosyalarını barındırıyor olması nedeniyle bu dizinini, Windows'taki `Documents and Settings` ya da `Application` klasörlerine benzetebiliriz.
 
 /initrd
 -
@@ -831,24 +915,28 @@ initrd, "initial ramdisk" kısaltmasıdır. Anlamı, yaklaşık olarak "Başlang
 /lib
 -
 
-Çekirdek modülleri ve paylaşılan kütüphane dosyaları bu klasörde bulunur. Var olan çekirdek modüllerini `/lib/modules/[versiyon_numarası]` içerisinde bulabilirsiniz. Bahsedilen kütüphane dosyalarıysa, sistemi başlatmak ve `/bin` ile `/sbin` içerisindeki komutları çalıştırmak için gereklidir. Paylaşılan kütüphane dosyalarını, Windows'ta DLL ile eş tutabiliriz. Linux'ta kütüphane dosyalarının sonu ".so" ile biter.
+Çekirdek modülleri ve paylaşılan kütüphane dosyaları bu klasörde bulunur. Kütüphane dosyaları, sistemi başlatmak ve `/bin` ile `/sbin` içerisindeki komutları çalıştırmak için gereklidir. Paylaşılan kütüphane dosyalarını, Windows'ta DLL ile eş tutabiliriz. Linux'ta kütüphane dosyalarının sonu ".so" ile biter.
+
+/lib64 /lib32
+-
+Halen 32 bit ve 64 bit sistemler arasında geçiş yapıyoruz. Bu nedenle, kütüphane dosyalarının derleme süresi boyunca kullanılan kayıt boyutunu netleştiren `/lib32` ve `/lib64` adlı dizinlerle karşılaşabilirsiniz. Yani bu sayede 64 bitlik bir bilgisayar, eski uygulamalara uyumluluk için bazı 32 bitlik ikili dosyalara ve kütüphanelere sahip olabilir.
 
 /lost+found
 -
 
-İngilizce bir terim olan “Lost and Found” kayıp eşya bürosu demektir. `/lost+found` klasörü de tam olarak bu işlevi görmektedir. Bazen sisteminizde herhangi bir problem olur; örneğin bilgisayarı resetlerseniz, elektrik gider sonrasında bilgisayarı yeniden başlatırsınız. Bu gibi durumlarda Linux'ta fsck (File System Check) komutu devreye sokulur. Bu komut Windows'taki Scandisk programına benzetilebilir. Düzeltilemeyen bir sorun varsa, bağlantıları kopmuş kayıp dosyalar ortaya çıkmışsa, bunlar `/lost+found` altına atılır. Kısaca özetlersek; kötü bir sistem kapanmasından sonra, olması gereken bazı dosyaları bulamıyorsanız, kayıp eşya bürosuna bakmanızda yarar var. Ancak bu klasöre girmek istediğinizde erişimi engelleyen bir ileti ile karşılaşırsınız, bu klasörün içeriğine ulaşabilmek için dosya yöneticisini tam yetki ile açmanız gereklidir.
+İngilizce bir terim olan “Lost and Found” kayıp eşya bürosu demektir. `/lost+found` klasörü de tam olarak bu işlevi görmektedir. Bazen sisteminizde herhangi bir problem olur; örneğin bilgisayarı resetlerseniz, elektrik gider sonrasında bilgisayarı yeniden başlatırsınız. Bu gibi durumlarda Linux'ta fsck (File System Check) komutu devreye sokulur. Düzeltilemeyen bir sorun varsa, bağlantıları kopmuş kayıp dosyalar ortaya çıkmışsa, bunlar `/lost+found` altına atılır. Kısaca özetlersek; kötü bir sistem kapanmasından sonra, olması gereken bazı dosyaları bulamıyorsanız, kayıp eşya bürosuna bakmanızda yarar var. 
 
 /media
 -
 
-Kaldırılabilir aygıtların (USB bellek, SD kart, CD vb.) ve sistem bağlangıcında bağlanmayan sabit disk bölümlerinin bağlanma noktasıdır. Söz konusu depolama ortamları sisteme bağlanmamış iken dizin içeriği boş görünür.
+Kaldırılabilir aygıtların (USB bellek, SD kart, CD vb.) ve sistem başlangıcında bağlanmayan sabit disk bölümlerinin bağlanma noktasıdır. Söz konusu depolama ortamları sisteme bağlanmamış iken dizin içeriği boş görünür.
 
 /mnt
 -
 
 İşletim sisteminin kurulu olduğu disk bölümü hariç olmak üzere sistem başlangıcında bağlanan sabit disk bölümleri ve donanım aygıtlarının bağlanma noktasıdır. (İşletim sisteminin kurulu olduğu disk bölümünün içeriği ise doğrudan `/` (kök dizin) altında bulunur.)
 
-Bağlama(mount) işlemi, bir disk bölümünün sisteme bağlanarak kullanıma hazır hâle gelmesi demektir. Nereye bağladığınız sizin tercihinizdir, değiştirmeniz mümkündür. Yani bir diski, `/media` veya `/mnt` klasörüne ya da bir başka yere bağlamanız fark etmeyecektir. `/media` ve `/mnt` genel kabul görmüş bağlantı noktalarıdır.
+Bağlama(mount) işlemi, bir disk bölümünün sisteme bağlanarak kullanıma hazır hâle gelmesi demektir. Nereye bağladığınız sizin tercihinizdir, değiştirmeniz mümkündür. Yani bir diski, `/media` veya `/mnt` klasörüne ya da bir başka yere bağlamanız fark etmeyecektir. `/media` ve `/mnt` sadece genel kabul görmüş bağlantı noktalarıdır.
 
 /opt
 -
@@ -862,15 +950,18 @@ Elbette üçüncü parti bir programı kurarken bu kurulum konumunu değiştireb
 
 Süreçler, sistem belleği, bağlı aygıtlar, donanım yapılandırmalarıyla ilgili bilgileri içeren özel bir “sanal” dosya sistemidir. Bildiğimiz anlamda fiziksel dosyalar bulundurmaz; sistem durumuna dair bilgi içeren sanal dosyaları vardır. Bir bilgi alma merkezi olarak görülebilir, birçok uygulama buradaki bilgilerden yararlanmaktadır. Örneğin `cat /proc/swaps` yazarak sisteminizdeki takas dosyalarına dair bilgi alabilir ya da `cat /proc/cpuinfo` komutuyla işlemcinizin özelliklerini görebilirsiniz.
 
-`/proc` klasörü içersindeki dosyalar, sadece sistem durumunu görüntülemek için kullanılmaz, gerektiğinde sistemde ayarlama yapmak için de kullanılabilir. Fakat son kullanıcılara hitap eden bir konu değildir.
+`/proc` klasörü içersindeki dosyalar, sadece sistem durumunu görüntülemek için kullanılmaz, gerektiğinde sistemde ayarlama yapmak için de kullanılabilir.
 
 /root
 -
 
-Linux/Unix sistemlerde, işletim sistemine her türlü müdahalede bulunabilme yetkisine sahip, "root" adıyla tanımlanmış, süper yetkili özel bir kullanıcı hesabı vardır. `/root` dizini, bu özel kullanıcı hesabının ev dizinidir. Root kullanıcısına "kök kullanıcı" da denilir.
+Linux/Unix sistemlerde, işletim sistemine her türlü müdahalede bulunabilme yetkisine sahip, "root" adıyla tanımlanmış, süper yetkili özel bir kullanıcı hesabı vardır. `/root` dizini, bu özel kullanıcı hesabının ev dizinidir. Daha iyi anlamak adına örneğin; "burak" isimli kullanıcı hesabının ev dizini `/home/burak` şeklindeyken "root" kullanıcısının ev dizini `/root` dizini şeklindedir. Root kullanıcısına "kök kullanıcı" da denilir.
 
-Kullanıcıların, sistemi root hesabıyla açma ihtiyacı bulunmaması nedeniyle ve ayrıca sistemi root olarak açmanın güvenlik zaafiyetine yol açabilecek olması nedeniyle pek çok Linux dağıtımında root hesabıyla sisteme giriş yapılması, öntanımlı olarak engellemiştir. Linux dağıtımlarında, yetki gerektiren bir işlemin yapılabilmesi için sistem root olarak açılmaz, bunun yerine geçici olarak root hakları elde edilir. Bunun için, önce bir uçbirim komut satırı penceresi açılır. Sonra kullanmakta olduğunuz Linux dağıtımına bağlı olarak `su`, `su -` , `su root` ya da `sudo` komutlarından biri girilir ve ardından root kullanıcısının (ya da yönetici hesabın) parolası girilir.
+Kullanıcıların, sistemi root hesabıyla açma ihtiyacı bulunmaması nedeniyle ve ayrıca sistemi root olarak açmanın güvenlik zaafiyetine yol açabilecek olması nedeniyle pek çok Linux dağıtımında root hesabıyla sisteme giriş yapılması, öntanımlı olarak engellemiştir. Ancak istisnaya dağil olan "Kali Linux" dağıtımı penetrasyon ve bunun gibi işlemler için oluşturulduğundan kullanıcılar için kolaylık olması için tam yetkili olarak çalışır.
 
+/run
+-
+Son önyüklemeden bu yana çalışan sistemle ilgili bilgileri tutar. Tutulan bilgilere örnek vermek gerekirse şu anda oturum açmış kullanıcılar, sisteme bağlanan aygıtlar, ağ ile bağlantı(network) değişimleri ve bunun gibi bilgileri tutar.
 
 /sbin
 -
@@ -884,7 +975,7 @@ Unix ilk çıktığında, kullanıcılara ait ev klasörleri, `/usr` altında tu
 
 Kurduğunuz pek çok program `/usr` içine kurulur. Her ne kadar Linux'ta kurulan bir programa ait tüm dosyalar `usr` dizini içine atılmıyor olsa da `usr` dizini Windows'taki `Program Files` klasörü ile benzer görev görmektedir. `/opt` adresi işletim sistemi dışında gelen 3.parti programlar içindir. Fakat işletim sistemi aracılığıyla ya da paket yönetim sistemlerini kullanarak yüklediğiniz her şey `/usr` altına aktarılır. Aynı zamanda yüklediğiniz programların çalışmak için ihtiyaç duyacağı kütüphane dosyaları, `/usr/lib` altındadır.
 
-`/usr`, daha geniş bir tanımla; tüm kullanıcılarca paylaşılan verileri (programlar, komutlar, kütüphaneler, dokümanlar gibi) içeren dizindir. `/usr` ile ilgili söylenebilecek bir başka nokta da "local" klasörüdür. Linux, sunucu olarak birçok istemciye hizmet verebilecek bir işletim sistemidir. Bir Linux sunucu (server) kurarsanız, ona bağlanan yüzlerce istemci (client) olabilir. Her istemci bilgisayara, `/usr` altındaki programların ayrı ayrı yüklenmesi gerekmez; bir başka konumdan bu komutları çalıştırabilirsiniz. Ancak `/usr` altında bulunan "local" klasörü sadece kullandığınız makineye özeldir. Örneğin `/usr/local/bin` klasörü içinde bulunan bütün komutlar, direkt olarak kullandığınız makineye yüklenmiştir. `/usr/bin` komutları ise geneldir ve bir ağ üstündeki bütün makinelerden erişilebilir. "local" gördüğünüzde, bunun sadece sizin makinenize özel olduğunu bilin.
+`/usr`, daha geniş bir tanımla; tüm kullanıcılarca paylaşılan verileri (programlar, komutlar, kütüphaneler, dokümanlar gibi) içeren dizindir. `/usr` ile ilgili söylenebilecek bir başka nokta da "local" klasörüdür. Linux, sunucu olarak birçok istemciye hizmet verebilecek bir işletim sistemidir. Bir Linux sunucu (server) kurarsanız, ona bağlanan yüzlerce istemci (client) olabilir. Her istemci bilgisayara, `/usr` altındaki programların ayrı ayrı yüklenmesi gerekmez; bir başka konumdan bu komutları çalıştırabilirsiniz. Ancak `/usr` altında bulunan "local" klasörü sadece kullandığınız makineye özeldir. Örneğin `/usr/local/bin` klasörü içinde bulunan bütün komutlar, direkt olarak kullandığınız makineye yüklenmiştir. `/usr/bin` komutları ise geneldir ve bir ağ üstündeki bütün makinelerden erişilebilir. Yani neticede "local" ifadesini gördüğünüzde, bunun sadece sizin makinenize özel olduğunu bilin.
 
 /var
 -
@@ -894,7 +985,17 @@ Log dosyaları, e-posta ve yazıcı kuyrukları gibi değişken sistem bilgileri
 /tmp
 -
 
-Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olarak kullanır. `/tmp` klasörünün içeriği genellikle KB'lar mertebesinde kalır ve genellikle işletim sistemi yeniden başlarken içindeki dosyalar silinir. Her ne kadar `tmp` klasörü geçici dosyalar için de olsa bu klasör altında bulunan dosyaları, ne yaptığınızdan emin değilseniz, kesinlikle silmemelisiniz! Aksi taktirde sismetinizde ya da bazı programlarda sorun çıkabilir. Örneğin açık bir soket dosyasını sildiğinizde, onu kullanan programa ve kendinize sorun çıkartabilirsiniz.
+Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olarak kullanır. `/tmp` klasörünün içeriği genellikle KB'lar mertebesinde kalır ve genellikle işletim sistemi yeniden başlarken içindeki dosyalar silinir. Her ne kadar `tmp` klasörü geçici dosyalar için de olsa bu klasör altında bulunan dosyaları, ne yaptığınızdan emin değilseniz, kesinlikle silmemelisiniz! Aksi taktirde sismetinizde ya da bazı programlarda sorun çıkabilir. 
+
+----------
+
+Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik şekilde aşağıdaki görsel ile verdim. Eğer konuyu anlayarak ve özümseyerek okuduysanız bu grafiğe bakarak bir çırpıda hangi dosyanın genel olanarak hangi işlevde olduğunu hatırlayabilirsiniz.
+![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/6.png)
+
+
+**Kaynakça :**
+[Çağatay Çebi](http://www.cagataycebi.com/linux/file_system/file_system.html) ||
+[ubuntu-tr](https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi)
 
 ----------
 
@@ -908,10 +1009,6 @@ Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik 
 ----------
 
 
-
-
-
-
 Dizinler Hakkında
 =
 Linux işletim sisteminde bütün programlar, aygıtlar, dosyalar ve genel olarak sistem, hiyerarşik bir düzen içersindedir. Yani komut satırını kullanacaksak her şeyi oluşturan bu hiyerarşik düzen içerisinde rahat şekilde geziyor olabilmemiz gerek. Bu bölümde bu hiyerarşide gezinme ve görüntüleme için gerekli komutlara değineceğiz.
@@ -923,13 +1020,13 @@ Bu komut sayesinde o an bulunduğumuz dizinin adını öğrenebiliriz. Genellikl
 
 Örnek vermek gerekirse Linux'ta hiyerarşik bir düzen var dedik. Bu hiyerarşik düzen kök dizinine(root) bağlıdır her kullanıcı buna root da dahil kendi ev dizinine(home) sahiptir. Böylece neden root(kök) isminin kullanıldığını da tekrar anlamış oluyoruz. Konsol çalışmaya varsayılan olarak kendi ev dizininde başlar. Root kullanıcısının ev dizini <kbd>/root</kbd> dizinidir. Bunu teyit etmek istersek <code>pwd</code> komutunu kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/azPMZQ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/1.png)
 
 Root kullanıcısının dışında da sistemde başka kullanıcılar olabilir. Bu kullanıcıların ev dizini(home) ise <kbd>/home/kullanıcı_adı </kbd> şeklindedir.
 
 Bu durumu test etmek için "kullanici" adında yeni bir kullanıcı oturumu oluşturdum ve oluşturduğum bu oturum içerisinde komut satırına <code>pwd</code> komutunu verdim. Çıktısı aşağıdaki şekilde oldu.
 
-![enter image description here](https://i.hizliresim.com/Yg3WGZ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/2.png)
 
 cd (Change Directory)
 -
@@ -938,28 +1035,28 @@ Bu komut sayesinde dizinler arası geçiş yapabiliyoruz. Zaten daha önceki kı
 
 Komutumuzu kullanırken gitmek istediğimiz dizinin adresini vermeliyiz. Ben önceki bölümlerde oluşturduğum dizinin en alt klasörüne gitmek istiyorum. Bunun için komut satırına <code>cd Desktop/yeni_dizin/yeni/en_yeni</code> şeklinde bir komut veriyorum.
 
-![enter image description here](https://i.hizliresim.com/8Ym2y7.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/3.png)
 
 Artık gitmek istediğim dizinin içerisindeyiz. Eğer bir önceki dizine (bir dizin geriye) dönmek istersek komut satırına <code>cd ..</code> yazmamız yeterli.
 
-![enter image description here](https://i.hizliresim.com/D7o6vv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/4.png)
 
 Eğer direk olarak ana dizine dönmek istersek <code>cd</code> 
 komutunu kullanmalıyız.
 
-![enter image description here](https://i.hizliresim.com/m2q790.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/5.png)
 
 Örneğin bir alt dizine geçip orada yer alan başka bir klasöre girmek istiyoruz diyelim. Bunun için komutumuzu <code>cd ../klasör_adı </code> şeklinde bir kullanabiliriz. Ben örnek olması açısından <kbd>/etc</kbd> dizini içerisindeyken bir geri dizine dönüp daha sonra home konumuna gelmek için <code>cd ../home</code> komutunu kullanıyorum. 
 
-![enter image description here](https://i.hizliresim.com/gOXBJ5.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/6.png)
 
 Ancak dikkat etmeniz gereken nokta komutu yazarken iki noktadan (..)hemen sonra boşluk bırakmadan gitmek istediğimiz dizini belirtiyoruz. Eğer boşluk bırakarak yazarsak aşağıdaki şekilde bir uyarı alırız.
 
-![enter image description here](https://i.hizliresim.com/9mGOP5.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/7.png)
 
 Eğer sürekli iki dosya arasında gidip geliyorsak bir önceki dosyaya <code>cd -</code> komutu ile dönebiliriz.
 
-![enter image description here](https://i.hizliresim.com/NZYgQX.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/8.gif)
 
 Çıktıda da görüldüğü gibi <code>cd -</code> komutu ile iki konum arasında pratik şekilde gidip gelebiliyoruz.
 
@@ -970,7 +1067,7 @@ Listeleme ve görüntüleme işini yapan bu komutumuzu anlatmadan önce defalarc
 
 En temel kullanımı ile başlayacak olursak, <code>ls</code> komutu içinde bulunduğumuz dizinde yer alanları bizlere gösterir. Örneğimize ana dizindeyken <code>ls</code> komutunu vererek başlayalım.
 
-![enter image description here](https://i.hizliresim.com/2JvN0A.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/9.png)
 
 Görüldüğü üzere <code>ls</code> komutumuzu kullanmamız ardından bulunduğumuz ana konumda yer alan tüm dosyalar konsola basılmış oldu.
 
@@ -979,7 +1076,7 @@ Görüldüğü üzere <code>ls</code> komutumuzu kullanmamız ardından bulundu�
 
 Eğer çıktımız ayrıntılı olsun istiyorsak komut satırına komutu parametresi ile beraber <code>ls -l</code> şeklinde yazmamız gerekiyor.
 
-![enter image description here](https://i.hizliresim.com/BLo6Bp.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/10.png)
 
 Çıktımızda dosya izinleri, dosya boyutu, oluşturulma tarihi gibi bilgiler sıralanmış oldu. Tabii ki <code>ls</code> komutu kullanımı bununla sınırlı değil, parametreler ile devam edelim .
 
@@ -988,51 +1085,59 @@ Eğer çıktımız ayrıntılı olsun istiyorsak komut satırına komutu paramet
 
 Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli dosyaları da aynı şekilde listeleyebiliriz. Bunun için <code>ls</code> komutunun <code>a</code> parametresini kullanıyoruz. Çıktımızın düzenli ve listeli olması adına <code>a</code> parametresinin yanına bir de <code>l</code> parametresi kullanmak istiyorum. Bunun için komut satırına <code>ls -la</code> şeklinde veya <code>ls -al</code> şeklinde komutu girmemiz gerekiyor. Ayrıca bu komutu <code>ls -a -l</code> şeklinde ayrı ayrı olarak da girebiliriz. Sonuçta bu komutun parametresi hem birleşik hemde ayrı ayrı şekilde yazılabilir. Kullanım tercihi size kalmış.
 
-![enter image description here](https://i.hizliresim.com/oOn819.png)
-![enter image description here](https://i.hizliresim.com/lOBrVr.png)
-![enter image description here](https://i.hizliresim.com/Vr2Xbv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/11.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/12.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/13.png)
 
 ### ls -A
 
 
 <kbd>.</kbd> ve <kbd>..</kbd> dizinleri hariç gizli dosyalar da dahil bütün dosyaları görmek istersek <code>ls</code> komutumuzu <code>ls -A</code> şeklinde kullanabiliriz. Ayrıca çıktıları düzgün şekilde listelemek adına <code>l</code> parametresi de dahil edebileceğimizi biliyorsunuz.
 
-![enter image description here](https://i.hizliresim.com/nOYmBM.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/14.png)
 
 ### ls -h
 
 
 Listelenen dizinlerin boyutunu okunaklı(human readable) şekilde verir. Okunaklıdan kasıt dosya boyutunu KB, MB, GB türünden büyüklük olarak vermesidir. Karşılaştırmanız acısından bir normal şekilde birde daha okunaklı şekilde olanın çıktılarını aşağıda veriyorum. (Ayrıca komutumuza <code>-l</code> parametresini eklemiş olmamızın sebebi dizin ayrıntılarını dolayısıyla da dosya boyutunu görebilmektir.)
 
-![enter image description here](https://i.hizliresim.com/Z92Q0V.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/15.png)
 
 ### ls -i
 
 
 Düğüm numarasını verir. Düğüm(inode) numarası nedir diyecek olursanız bu konuya ileride değineceğiz şimdiilik bu parametrenin bu görevi yerine getirdiğini bilsek yeter.
 
-![enter image description here](https://i.hizliresim.com/jyz1oL.png)
-
-### ls -r
-
-
-Konsola basılan çıktıyı ters çevirerek basar. Karşılaştırmanız açısından normal liste sırası ve <code>-r</code> parametreli ters liste sırasını aşağıda veriyorum.
-
-![enter image description here](https://i.hizliresim.com/BLo6kM.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/16.png)
 
 ### ls -S
 
 
-Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralanacağından komutun daha net anlaşılması için <kbd>/root/run<kbd> dizini altında işlem yaptım.
+Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralanacağından komutun daha net anlaşılması için <kbd>/root/run</kbd> dizini altında işlem yaptım.
 
-![enter image description here](https://i.hizliresim.com/vjY8q4.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/17.png)
 
 ### ls -t
 
 
 Dosyanın değiştirilme tarihine göre sıralar.
 
-![enter image description here](https://i.hizliresim.com/Lbdgr0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/18.png)
+
+### ls -r
+
+
+Konsola basılan çıktıyı ters çevirerek basar. Karşılaştırmanız açısından normal liste sırası ve <code>-r</code> parametreli ters liste sırasını aşağıda veriyorum.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/19.png)
+
+Örneğin `ls -tl` komutu ile dosyları oluşturulma tarihlerine göre en yeniden eskiye doğru sıraldık. Bu sıralayı en eskiden yeniye doğru yapmak istersek komutumuza `r` parametresi ekleyerek kullanmamız gerekir.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/20.png" width="875">
+
+Bir başka örnek `ls -Sl` komutu ile dosya ve dizinleri büyükten küçüğe sıralarken eğer komutumuza birde `r` parametresi eklersek bu sefer komutumuzun çıktısı ters şekilde yani küçükten büyüğe doğru sıralanmış olacak.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/21.png" width="875">
 
 Yukarıda bahsi geçen <code>ls</code> komutu, açıkladığım parametreleri dışında da oldukça fazla parametreye sahip. Bunları öğrenmek için man kılavuz sayfasını inceleyin lütfen.
 
@@ -1046,15 +1151,15 @@ mkdir
 
 Dosya oluşturmamıza olanak sağlayan komuttur. En temel kullanımı <code>mkdir dosya_adı</code> şeklindedir. Örneğin bulunduğumuz konuma dosyalar adında bir dizin oluşturalım. Bunun için komut satırına <code>mkdir dosyalar</code> yazmamız yeterli. Ayrıca dosyamızın oluşup oluşmadığını da <code>ls</code> komutu ile teyit ediyoruz.
 
-![enter image description here](https://i.hizliresim.com/oOn8vX.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/22.png)
 
 Eğer çoklu şekilde dosya oluşturmak istersek dosya isimlerini peş peşe yazarak bu işlemi gerçekleştirebiliriz. Komutun kullanımı <code>mkdir dizin1 dizin2 dizin3</code> şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/lOBrlQ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/23.png)
 
 Ayrıca dosyayı oluştururken izin ayarlarını da dilediğimiz şekilde ayarlayabiliriz. Bu imkanı bize <code>-m</code> parametresi sağlıyor. Kullanımı <code>mkdir -m izin_kodu dosya_adı </code> şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/3E2jr5.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/24.png)
 
 Burada yer alan izin kavramı hakkında endişelenmeyin ileride "Erişim Yetkileri" kısmında ele alacağız. Kafası karışan arkadaşlar isterse şimdilik bu kısmı geçebilir yada "Erişim Yetkileri" konusuna göz atarak devam edebilir. 
 
@@ -1065,23 +1170,23 @@ Komutumuzu ileride dosya işlemleri bölümünde tekrardan ele alacağız. Ancak
 
 Dizin dediğimiz şey iç içe sırlanmış dosya ve belgelerden oluşan bir yol. Yani bu yolu silmek istediğimizde içerisindeki her şeyi de silmeliyiz. Bu yüzden komutumuzu <code>-r</code> parametresi ile birlikte kullanarak dizinin içerisindeki dosyalar da dahil her şeyi silmesini söylemiş oluruz. Yani komutun dizin silme işlemi için kullanım <code>rm -r silinecek_dizin</code> şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/1JjD5B.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/25.png)
 
 Ve dizin, içerisinde bulunanlar ile birlikte silinmiş oldu. Eğer komutumuzu parametresiz olarak yani <code>-r</code> olmadan <code>rm secure</code> şeklinde verseydik komut satırı bu işlemi dizinin içerisinde dosya ve belgelerin bulunması nedeniyle gerçekleştiremezdi.(Klasör içerisinde hiçbir şey bulunmasa dahi aynı uyarıyı verecektir.) Bu durumu denemek için daha önceden oluşturmuş olduğumuz <kbd>dosyalar</kbd> isimli klasörümüzü <code>-r</code> parametresi olmadan silmeye çalışalım.
 
-![enter image description here](https://i.hizliresim.com/Vr2XdB.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/26.png)
 
 Konsol bize "'dosyalar' silinemedi: Bu bir dizin" şeklinde uyarı verdi.
 
 Eğer silmeden(işlem yapılmadan) önce bize sorulsun yani bizi uyarsın istiyorsak komuta <code>-i</code> parametresi de ekleyebiliriz.
 
-![enter image description here](https://i.hizliresim.com/nOYmnN.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/27.png)
 
 Gördüğünüz gibi konsol işlem yapmadan önce her işi bize sordu ve "y" yanıtını aldığı için silme işlemine devam etti. Bu sayede dizinleri kontrollü şekilde silmiş olduk.(Kullandığınız sistemin diline göre onaylama yanıtı değişmektedir. Örneğin kullandığınız dil Türkçe ise onay vermek için kullanılan yanıt "e"{burdaki "e" den kasıt "evet" onayının kısaltması olan "e" karakteridir.} olacaktır.)
 
 Ayrıca dizin silme işlemlerini <code>rm -ri dizin1 dizin2 dizin3</code> şeklinde kullanarak toplu şekilde silme işlemi de gerçekleştirebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/Z92Q43.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/28.png)
 
 
 ----------
@@ -1098,23 +1203,30 @@ touch
 
 Kendimize <code>touch</code> komutunu kullanarak boş bir dosya oluşturmak için komut satırına <code>touch dosya_ismi</code> şeklinde yazmamız gerekiyor. Burada fark ettiyseniz herhangi bir uzantı girmeme gerek kalmadı. Çünkü Linux sisteminde uzantı belirtme zorunluluğu bulunmuyor. Bu durumu gözlemlemek için konsola <code>touch yeni</code> komutunu vererek "yeni" adından bir dosya oluşturalım. 
 
-![enter image description here](https://i.hizliresim.com/6JYmDk.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/1.png)
 
 Görüldüğü üzere dosyamız bulunduğumuz ana dizinde oluşmuş oldu. Bunu teyit etmek için de çıktıda görüldüğü gibi daha önce öğrenmiş olduğumuz listeleme görevinde olan <code>ls</code> komutunu kullandık.
 
 Peki bir tane değil de birden fazla dosya oluşturmak istersek. İşte bunun için de komutumuzu <code>touch yeni1 yeni2 yeni3</code> şeklinde yazmamız yeterli.
 
-![enter image description here](https://i.hizliresim.com/W7WbXE.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/2.png)
 
 Çıktıda görüldüğü gibi aynı andan 3 dosya oluşturmayı başardık.
 
-Aslında <code>touch</code> komutunun çok farklı kullanım yöntemleri de mevcut ancak ben son olarak ileri bir tarihte otomatik olarak dosya oluşturmayı göstererek bu komutun konu anlatımını burada sonlandıracağım.
+Aslında <code>touch</code> komutunun çok farklı kullanım yöntemleri de mevcut ancak ben son olarak dosyların tarih etiketlerini nasıl değiştirebiliriz bunu görelim.
 
-İleri bir tarihe tıpkı alarm kurarcasına planlanmış bir şekilde dosya oluşturmak mümkün. Bunun için <code>t</code> parametresini kullanacağız. Kullanımı ise <code>touch -t YYYYAAGGSSDD.SS dosya_adı</code> şeklindedir. Ben burada örnek olması açısından tarih olarak 2018.01.09 ve saat 16:35:30  zamanlamasını kullanıyorum. Nasıl kullanıldığını daha net anlamak için örneği inceleyebilirsiniz.
+Dosyamızın tarih etiketini düzenlemek için touch komutunun <code>t</code> parametresini kullanacağız. Kullanımı ise <code>touch -t YYYYAAGGSSDD.SS dosya_adı</code> şeklindedir.
+Öncelikle dosyamızın mevcut tarih etiketine bakalım.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/3.png)
 
-![enter image description here](https://i.hizliresim.com/3E2AOj.png)
+Şimdi dosyamızın tarih etiketini daha önceki bir tarihe çevirelim.
+Ben burada örnek olması açısından tarih olarak 2015.01.01 ve saat 22:15:32  zamanlamasını kullanıyorum. Nasıl kullanıldığını daha net anlamak için örneği inceleyebilirsiniz.
 
-Neticede "yeni_belge" isimli dosya benim belirtmiş olduğum ileri bir tarihte kendiliğinden oluşmuş oldu.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/4.png)
+
+Gördüğünüz gibi dosyamın tarih etiketi değişmiş oldu. Bu değişme işlemini ileri veya geri tüm tarihler için kullanabilirsiniz.
+
+
 
 cat
 -
@@ -1124,36 +1236,35 @@ cat
 Bunun için konsola açmak istediğimiz dosyanın konumundayken <code>cat açılacak_dosya</code> şeklinde komut vermemiz gerek.
 Ben masaüstü konumunda yer alan "test.txt" isimli dosyanın içeriğini okumak üzere konsola <code>cat test.txt</code> komutunu veriyorum.(Dosyayı grafik arayüzü aracılığı ile de açarak durumu kıyaslamanızı istedim.)
 
-![enter image description here](https://i.hizliresim.com/RnEQgo.png)
-![enter image description here](https://i.hizliresim.com/PlQm37.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/5.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/6.png)
 
 Şimdi ise tıpkı <code>touch</code> komutunda çoklu dosyalar ile ilgili işlem yaptığımız gibi <code>cat</code> komutu ile de çoklu dosya okuma işlemini gerçekleştirelim. Çoklu dosya okuma işlemi için komut satırına <code> cat dosya1 dosya2 dosya3</code> şeklinde okumak istediğimiz dosyaların adlarını yazıyoruz.
 
-![enter image description here](https://i.hizliresim.com/kOZEMv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/7.png)
 
 Dosya içeriğine yazı eklemek istersek <code>cat > dosya_adı</code> şeklinde komut verdiğimizde, komut satırı imleci bir alt satıra geçerek bizden yazmak istediğimiz bilgiyi bekler. Yazma işlemimiz bittikten sonra kaydederek kapatmak için <kbd> Ctrl + D</kbd> tuş kombinasyonunu kullanırız. Ayrıca komutta girdiğimiz isimde bir dosya yoksa o isimde bir dosya oluşur ve girilen veriler içerisine işlenir.
 
-![enter image description here](https://i.hizliresim.com/vjYZyO.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/8.gif)
 
 Ancak var olan bir dosyanın adıyla bu komutu kullandıysanız ve dosya içerisinde yazı bulunuyorsa bu işlemin ardından dosyada bulunan eski veriler silinerek yalnızca girilen yeni veri(ler) dosyaya işlenip kayıt oluyor. 
 
-![enter image description here](https://i.hizliresim.com/nOYEy1.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/9.gif)
 
 Bizler eğer önceki veriler silinmesin ve üzerine yeni veri ekleyebilelim istersek komutumuzu <code>cat >> yeni3.txt</code> şeklinde kullanarak; yeni gireceğimiz verileri girdikten sonra <kbd>Ctrl + D</kbd> tuş kombinasyonu ile dosyamızı yeni eklenmiş verileriyle birlikte kaydedip kapatabiliriz.
 
-![enter image description here](https://i.hizliresim.com/1JjN71.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/10.gif)
 
 Gördüğünüz gibi yeni eklediğimiz veri dosyamızın içine işlenmiş oldu üstelik eski veriler de yok olmadan.
 
 Ayrıca yeri gelmişken kullanmış olduğumuz <kbd>></kbd> yönlendirme operatörü ile ilgili bir örnek daha yapalım ki kullanım alanının biraz daha farkına varmış olalım. Örneğin <code>ls -ls</code> çıktısının içeriğini "liste" adında bir dosya oluşturarak içerisine aktaralım. Bunun için <code> ls -ls > liste</code> komutunu kullanabiliriz. Şayet yeni dosya oluşturmak istemiyorsak ve var olan dosyaya yazılsın istiyorsak o zaman <kbd>></kbd> operatörü yerine <kbd>>></kbd> operatörünü kullanırsak yeni veriler dosyaya eklenmiş olur.
 
-![enter image description here](https://i.hizliresim.com/NZYkLk.png)
-
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/11.png)
 Komutta açıklanacak bir durum yok zaten hepsi bildiğimiz komutlar. Burada asıl önemli olan <kbd>></kbd>  operatörünün kullanımıydı. Eğer anladıysak ne âlâ.. devam edelim.
 
 <code>cat</code> komutunun işlevlerine devam ediyoruz şimdi ise bir dosyada yer alan verileri başka bir dosyaya kopyalamak var. Bunun için komutumuzu <code>cat veri_alınan_dosya > veri_alan_dosya</code> şeklinde kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/Yg34dD.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/12.png)
 
 Komutumuzun kullanım şekilleri elbette bunlar ile sınırlı değil.
 Belki defalarca söyledim ancak bu komut için de söylemem gerek ki daha fazla detay için lütfen man kılavuz sayfasına göz atın.
@@ -1163,14 +1274,14 @@ tac
 
 İsminden de anlamış olacaksınız ki <code>tac</code> komutu önce gördüğümüz <code>cat</code> komutunun tersi şekilde çıktı veriyor. Bu durumu daha iyi anlamak için karşılaştırmalı olarak verilen çıktıyı inceleyiniz.
 
-![enter image description here](https://i.hizliresim.com/8Ym86d.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/13.png)
 
 rev
 -
 
 Hazır terslikten bahsetmişken <code>rev</code> komutundan da söz etmemek olmaz. Bu komut dizeleri sondan başa doğru çevirerek ters şekilde ekrana basıyor. Bu durum en iyi örnek ile açıklanır. Hatta <code>cat</code> komutu ile de karşılaştırırsak sonuç daha net oraya çıkacaktır.
 
-![enter image description here](https://i.hizliresim.com/D7o3Oy.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/14.png)
 
 
 Çıktılarda görüldüğü gibi dosya içeriğinde yer alan ifadeler <code>rev</code> komutu sayesinde ters şekilde ekrana basılmış oldu.
@@ -1184,11 +1295,11 @@ Bu komutumuzu daha önce defaatle kullanmak durumunda kalmıştık hatırlarsan�
 
 Temel işlevi terminal ekranına istenilen bilgileri çıktı olarak göndermektir. Komutumuzu kullanırsak daha net anlaşılacaktır. Örneğin komut satırına "Merhabalar" yazdırmak isteyelim bunun için komut satırına <code>echo Merhabalar</code> şeklinde komutumuzu girmemiz yeterli.
 
-![enter image description here](https://i.hizliresim.com/5DpYzj.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/15.png)
 
 "Merhabalar" çıktımızı almış olduk. <code>echo</code> komutu sadece ekrana basma işlevine sahip değil. Örneğin bir dosya oluşturup içerisine istediğimiz ifadeyi yazabiliriz. Bunun için komut satırına <code>echo "yazılacak_ifade"> dosya_adı</code> şeklinde komutu giriyoruz.
 
-![enter image description here](https://i.hizliresim.com/A1Z3Pp.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/16.png)
 
 Sırasıyla yaptığım işlemleri açıklayayım.
 
@@ -1206,17 +1317,17 @@ Ancak şöyle bir hatırlatmada bulunayım; eğer var olan bir dosyanın içeri�
 
 Var olan dosya içeriğine yeni bir ifade eklemek için komutu <code>echo "Yeni ifade" >> dosya_adı</code> şeklinde girmemiz gerek.
 
-![enter image description here](https://i.hizliresim.com/0EbyA9.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/17.png)
 
 Şimdi <code>echo</code> komutunun <code>ls</code> komutu görevi gördüğü bir kullanıma değineceğiz.
 
 Örneğin bulunduğumuz dizinde yer alan dosyaları görmek istersek komut satırına <code>echo *</code> şeklinde yazmamız halinde çıktı bizlere bulunduğumuz konumda yer alan dosyaları verir. Bu komut kullanımını <code>ls</code> komutu ile karşılaştırdığımızda daha net anlaşılacaktır.
 
-![enter image description here](https://i.hizliresim.com/4aY0O4.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/18.png)
 
 <kbd> * </kbd> (yıldız işareti) joker karakteridir ve herhangi dosya dizin isimlerinin yerini tutar. Yani <code>echo</code> komutuna <kbd> * </kbd> karakteri eklediğimizde mevcut dizinde yer alan tüm dosya dizinler  <kbd>* </kbd> parametresi ile kapsanacağı için ne var ne yok listeleniyor. Bu duruma örnek olması açısından bulunduğumuz dizinde yer alan dosyalarda örneğin "list" adı ile başlayanları çıktı olarak almak istersek komut satırına <code>echo liste*</code> şeklinde komut vermemiz yeterlidir. (Joker karakter/wildcard konusundan bu karakterler açıklanmıştır.)
 
-![enter image description here](https://i.hizliresim.com/JQd3Bo.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/19.png)
 
 Son olarak <code>echo</code> komutunun kullanım şekillerinden olan, bir komutun çıktılarının <code>echo</code> komutu ile ekrana basılması var. Ancak doğrudan <code>echo komut</code> şeklinde yazılan komutlar istenmeyen bir sonuç çıkaracaktır. Verdiğimiz komutun çıktılarını alma işlemini gerçekleştirebilmek için <code>echo</code> komutunun bu iş için kullanım özelliklerinden olan iki farklı seçenek bulunuyor. Bunlardan biri ters tırnak <kbd>'</kbd> işaretini diğeri ise <code>$(komut)</code> parametre bütünüdür. Bunları sırayla görelim.
 
@@ -1226,15 +1337,15 @@ Ters tırnak işaretini oluşturmak için Türkçe klavyede <kbd>AltGr + ,</kbd>
 
 Hemen bu kullanım ile ilgili bir örnek yapalım ve <code>ls</code> komutunun çıkıtlarını <code>echo</code> komutu yardımı ile basalım.
 
-![enter image description here](https://i.hizliresim.com/OoJEOQ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/20.png)
 
 Ve ikinci yol olan `$(komut)` parametre bütünü; yine <code>ls</code> komutu için örneklendirilecek olursa, kullanımı `echo $(ls) ` şeklinde komut parantez içine gelecek şekilde olmalıdır.
 
-![enter image description here](https://i.hizliresim.com/z0Qnq6.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/21.png)
 
 Sonuç itibari ile ilk <code>echo ls</code> komutunun çıktısı olan "ls" ifadesi bizim almak istediğimiz çıktıyı bizlere vermedi. Yani bu kullanım bizim yapmak istediğimiz iş olan komutun çıktılarının ekrana bastırılması için doğru bir kullanım değildi. Doğru kullanım şekli ise ikinci ve üçüncü komut olan <code>echo 'ls'</code>, `echo $(ls)` şeklindedir. Bu komutların çıktısı istediğimiz şekilde, yani `ls` komutunun çıktısını(bulunduğumuz dizinde yer alan dosyaların bilgisi) ekrana basacak şekilde bizlere verdi. Sözü edilen durumu aşağıdaki çıktıyı inceleyerek bir bütün halinde kavrayabilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/G9b3X6.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/22.png)
 
 
 more
@@ -1247,7 +1358,7 @@ more
 Bunun için <kbd>/etc/profile</kbd> konumunda bulunan dosyamı <code>more</code> komutu ile açmak üzere konsola <code>more /etc/profile</code> şeklinde komutu girerek <kbd>profile</kbd> dosya içeriğini okumaya teşebbüs ediyorum.
 Komutumuzun ardından terminal ekranında karşımıza <kbd>profile</kbd> dosyasının içeriği aşağıdaki gibi geldi.
 
-![enter image description here](https://i.hizliresim.com/8YmP6A.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/23.png)
 
 Çıktıda görüldüğü gibi dosyanın içeriği ancak terminal ekranına sığacak şekilde görüntüleniyor. Hatta alt kısımda --More--(77%) şeklinde yazan yazı bizlere içeriğin devamı olduğunu belirtiyor. Eğer devamını okumak istersek <kbd>enter</kbd> tuşuna basarak adım adım alt satırlara bakabiliriz. Ayrıca <kbd>space</kbd> tuşu ile de sayfa sayfa atlayarak içeriğe göz atabiliriz. Eğer atladığınız sayfadan bir önceki sayfaya geri dönmek istersek <kbd>b</kbd> tuşunu, şayet dosya içeriğini görüntüleyen bu ekranı kapatmak istersek ise <kbd>q</kbd> tuşunu kullanmamız yeterli.
 
@@ -1258,7 +1369,7 @@ Bu komutumuz da üst kısımda açıkladığımız more komutu ile aynı işlevd
 
 Ben yine de <code>less</code> komutu ile profile dosyasının içeriğinin okunduğu şeklini aşağıya bırakıyorum. Eğer <code>more</code> komutunda bir problem yaşamadıysanız bu komut kullanımında da kesinlikle yaşamazsınız.
 
-![enter image description here](https://i.hizliresim.com/D7oBOZ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/24.png)
 
 
 head-tail
@@ -1268,30 +1379,29 @@ Aslında komutların isimleri yani head(kafa/baş) ve tail(kuyruk) bizlere komut
 
 Dosya içeriğinin ilk 10 satırını görüntülemek için <code>head dosya_adı</code> şeklinde komutumuzu kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/RnE1gZ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/25.png)
 
 Şimdi burada 10 satır içerik yok gibi gelebilir ancak dosya içerisindeki boş satırlar da bu 10 satıra dahil olduğundan çıktıyı boş satırlar ile saydığınızda tam olarak 10 satırın görüntülendiğini göreceksiniz.
 
 Dosya içeriğinin son 10 satırını görüntülemek için <code>tail dosya_adı</code> şeklinde komutumuzu kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/p6vX5J.png)
-
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/26.png)
 Şimdi istediğimiz sayıda baştan veya sondan dizinleri görüntüleyelim. Ben örnek olması açısından baştan 6 sondan 2 satırı görüntülemek üzere komutumu veriyorum. Komutun kullanımı <code>head -n 6</code> ve <code>tail -n 2</code> şeklinde.
 
 Baştan 6 satırın çıktıları.
 
-![enter image description here](https://i.hizliresim.com/kOZGMy.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/27.png)
 
 Sondan 2 satırın çıktıları.
 
-![enter image description here](https://i.hizliresim.com/NZYlLQ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/28.png)
 
 nl
 -
 
 Bu komutun işlevi satırları numaralandırarak çıktı vermektir. Hemen görelim.
 
-![enter image description here](https://i.hizliresim.com/EPQrOv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/29.png)
 
 Çıktıda da görüldüğü üzere dosya içeriğinde yer alan ifadeler satır satır numaralandırılarak ekrana basılmış oldu.
 
@@ -1303,11 +1413,11 @@ sort
 Dosya çıktılarının alfabetik olarak düzenlenmesini sağlar. Örnek üzerinden devam edelim. Ben <kbd>isimler.txt</kbd> adında bir dosya oluşturdum ve içerisine karışık olarak isimler ekledim.
 Ve bu isimleri alfabetik sıraya dizmek için <code>sort isimler.txt</code> komutunu kullandım.
 
-![enter image description here](https://i.hizliresim.com/azPdn7.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/30.png)
 
 Eğer ters alfabetik şekilde yani z den a ya doğru sıralamak istersek <code>-r</code> parametresi kullanılır.
 
-![enter image description here](https://i.hizliresim.com/Yg3qdA.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/31.png)
 
 
 paste
@@ -1317,7 +1427,7 @@ paste
 
 Ben <kbd>yaşlar.txt</kbd> ve <kbd>isimler.txt</kbd> adlı dosyaları aynı anda yana yana görüntülemek adına komut satırına <code>paste isimler.txt yaşlar.txt</code> komutunu verdim.
 
-![enter image description here](https://i.hizliresim.com/m2q4XY.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/32.png)
 
 
 tee
@@ -1329,7 +1439,7 @@ Yazmak istediğimiz ifadeleri hem komut satırına yansıtıp hem de bu ifadeler
 
 <code>tee metin</code> komutu ile "metin" isminde bir dosya açıyorum ve içerisine birtakım ifadeler ekliyorum daha sonra ekleme işlemim bittiğinde dosyayı kaydederek kapatmak üzere <kbd>Ctrl + D</kbd> tuş kombinasyonunu uyguluyorum. En son oluşturmuş olduğum dosya içeriğine bakmak üzere <code>cat</code> komutunu kullanıyorum.
 
-![enter image description here](https://i.hizliresim.com/Z92Mpz.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/33.png)
 
 Çıktıda da görüldüğü üzere terminal ekranında yazdığımız her bir satır tekrar ederek konsola basıldı ve sonuçta oluşturmuş olduğumuz "metin" isimli dosyanın içeriği de yazmış olduğumuz ifadeler ile dolmuş oldu.
 
@@ -1340,7 +1450,7 @@ Bu komut sayesinde dosyalar arasından karşılaştırma yapmamız mümkün.
 
 Örneğin ben <kbd>isimler.txt </kbd> dosyasını kopyaladım ve 5. satırındaki ismi değiştirdim. Ve bu iki dosyayı <code>cmp</code> komutu ile kıyasladım.
 
-![enter image description here](https://i.hizliresim.com/oOn0pq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/34.png)
 
 İki dosyanın da içeriğini <code>cat</code> komutu ile yazdırdık görüldüğü üzere iki dosya arasındaki fark, bir dosyada mehmet ismi yerine enes isminin yer almasıdır. <code>cmp</code> komutunun çıktısında da bu durum farklı olan satır ve bayt bilgisi verilerek ifade edeliyor.
 
@@ -1352,23 +1462,23 @@ Bu komut en çok kullanılan terminal komutları içerisinde bulunuyor. Bu komut
 
 Eğer bir dosya içerisindeki herhangi bir kelimeyi sorgulamak istersek komutumuzu `grep "aranacak_ifade" dosya_adı` şeklinde komut satırına giriyoruz. Ben basit bir örnek olması açısından <kbd>isimler.txt</kbd> dosyası içerisinde "hasan" ismi varmı diye kontrol etmek üzere konsola `grep "hasan" isimler.txt` komutunu veriyorum.
 
-![enter image description here](https://i.hizliresim.com/6JYE40.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/35.png)
 
 Arama işleminde, linux sistemi gereği büyük küçük harf duyarlılığına sahip olduğundan(Hatırlarsanız daha önce bu durumu test etmiştik.) "hasan" şeklinde arama yaptığımızda diğer büyük küçük haldeki anahtar kelimeler çıktıda basılmayacaktır. Eğer bu küçük büyük harf duyarlılığı dışında arama yapmak istersek `-i` parametresini kullanabiliriz.  Bu durumu gözlemlemek için büyük küçük harflerden oluşan kelimelerin olduğu bir dosya üzerinde `grep` komutunu kullanalım.
 
-![enter image description here](https://i.hizliresim.com/W7Wylm.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/36.png)
 
 Eğer arama işlemini tek dosya yerine bulunduğumuz dizin içerisindeki tüm dosyaları kapsayacak şekilde gerçekleştirmek istersek wildcard yani genel kapsama işlevinde olan joker `*` karakteri yardımıyla bu işlemi gerçekleştirebiliriz.
 
 Hemen örneklere geçelim. Hasan ismini masaüstü konumundayken aratıyorum. Bunun için `grep "hasan" *` komutunu konsola verdim. 
 
-![enter image description here](https://i.hizliresim.com/3E23X0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/37.png)
 
 Gördüğünüz gibi çıktı bize içerisinde "hasan" ifadesi geçen tüm dosyaları verdi. 
 
 Çıktıda aradığımız ifadenin hangi dosyada yer aldığını bulmuş olduk. Ayrıca yukarıdaki komutu `grep -r "hasan" *` şeklinde de yazabilirdik. Genellikle de bu 2. komut kullanılıyor ancak hangi şekilde kullanacağınızı seçmek size kalmış dilediğiniz kullanabilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/RnE4a7.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/38.png)
 
 İkinci kullanım şeklinde ilkinden farklı olarak "grep: yeni_dizin: Bir dizin" gibi bir çıktı almadık.
 
@@ -1376,32 +1486,32 @@ Wildcardlardan söz etmişken dosya içerisinde arama işleminin başka bir kull
 
 Kullanımı `grep "aranacak_ifade" dosya_adı_başlangıcı*` şeklindedir. Ben ilk önce masaüstünde yer alan dosyaları listeledim daha sonra "hasan" ifadesini aramaya koyuldum. İlk önce "metin" ismi ile başlayan belgelerde `grep "hasan" metin*` komutunu kullanarak aradım. 
 
-![enter image description here](https://i.hizliresim.com/JQdGpW.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/39.png)
 
 Ancak çıktıda da görüleceği gibi "hasan" ifadesi "metin" ismi ile başlayan belgeler içerisinde yer almıyormuş ki komut çıktısı bize hiç bir sonuç vermedi. 
 
 Bende "hasan" ismini bu sefer "isimler" adıyla başlayan belgeler içerisinde aramak için `grep "hasan" isimler*` komutunu kullandım. Bunun neticesinde komut satırı bize "hasan" isminin geçtiği belgelerin yerini vermiş oldu. 
 
-![enter image description here](https://i.hizliresim.com/D7oA9l.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/40.png)
 
 Buradaki asıl kullanım amacı; komutu, belirli isimlere sahip olan dosyalar içerisinden anahtar kelimeyi aramak üzerine sınırlandırmak.
 
 Bunların dışında arama sonucunun görüntülenmesini de sınırlandırabiliriz;
-Örnek olması açısından "filazof" isimli dosyadan "jo" ile başlayan isimleri listeliyorum.
+Örnek olması açısından "filozof" isimli dosyadan "jo" ile başlayan isimleri listeliyorum.
 
-![enter image description here](https://i.hizliresim.com/p6va7r.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/41.png)
 
 Arama sonucu sonrasında kaç satır gözükeceğini `-A` parametresi sayesinde `grep -A görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
 
-![enter image description here](https://i.hizliresim.com/D7oAVo.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/42.png)
 
 Sonucun üzerindeki kaç satırın gözükeceğini `-B` parametresi sayesinde `grep -B görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
 
-![enter image description here](https://i.hizliresim.com/EPQ0nz.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/43.png)
 
 Baştan ve sondan kaç satır görüntüleneceğini ise `-C` parametresi sayesinde `grep -C görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
 
-![enter image description here](https://i.hizliresim.com/kOZa2q.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/44.png)
 
 Şimdi ise sıklıkla kullanılan pipe ile `grep` kullanımına bakalım. Pipe nedir diyecek olursanız kabaca iki işlemi(process) birbirine bağlayan `|` görünümündeki yardımcı argüman diyebiliriz. Zaten daha önce de iki işlemin birbirine bağlanması gereken durumlarla karşılaşmış ve pipe kullanmıştık.
 
@@ -1409,7 +1519,7 @@ Baştan ve sondan kaç satır görüntüleneceğini ise `-C` parametresi sayesin
 
 Bu işlemi gerçekleştirmek için `ls | grep "metin"` komut bütününü kullanıyorum.
 
-![enter image description here](https://i.hizliresim.com/D7oA4y.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/45.png)
 
 `grep` komutunun kullanım şekli ve alanı elbette bu kadar ile sınırlı değil ancak sizler daha fazla bilgiye nasıl ulaşacağınızı biliyorsunuz.
 
@@ -1421,7 +1531,7 @@ find
 
 Komut kullanım kalıbı `find dosya_yolu -name aranacak_ifade` şeklindedir. Tam kullanım şekli için aşağıdaki örneği inceleyebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/oOnmrq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/46.png)
 
 Çıktıda <kbd>etc</kbd> konumda yer alan içerisinde "local" ifadesi geçen dosyalar komutumuz sayesinde listelenmiş oldu. Ancak aradığımız şeyi bulmak adına değiştirilme tarihi, boyut, dosya-dizin gibi ayrıntıları belirterek çıktıları daha spesifik şekilde sınırlandırabiliriz. Bazı özel arama parametreleri açıklayalım hemen.
 
@@ -1435,16 +1545,16 @@ Komut kullanım kalıbı `find dosya_yolu -name aranacak_ifade` şeklindedir. Ta
 - **perm 755 :** Yalnızca erişim izni 755 olan dosya/dizinler.
 Örnek olması açısından yukarıdaki arama parametrelerinin ilk ikisinin çıktılarını aşağıya ekliyorum.
 
-![enter image description here](https://i.hizliresim.com/lOBDvp.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/47.png)
 
 
 xargs
 -
-`xargs` komutu kabaca kendisinden önce verilen girdi verilerini kendisinden sonrakine tek tek aktarmaktır. Biliyorum böyle denilince hiçbir şey anlaşılmıyor. O yüzden `xargs` komutunu `find` komutuyla birlikte kullanarak örnek üzerinden komutumuzu ve kullanım mantığını açıklamış olalım.
+`xargs` komutunun görevi kabaca kendisinden önce verilen girdi verilerini kendisinden sonrakine tek tek aktarmaktır. Biliyorum böyle denilince hiçbir şey anlaşılmıyor. O yüzden `xargs` komutunu `find` komutuyla birlikte kullanarak örnek üzerinden komutumuzu ve kullanım mantığını açıklamış olalım.
 
 Örneğin <kbd>.jpg</kbd> uzantılı bir resim dosyasını araştırıp daha sonra bulduğumuz bu dosyayı silelim. Ben duvar kağıdı için daha önce internetten bir <kbd>.jpg</kbd> uzantılı bir resim indirmiştim. Bu resim hem indirilenler(downloads) hem de resimler konumunda yer alıyor, söylediğim gibi aslında dosyanın konumunu biliyorum ancak komutun kullanımını denemek üzere dosyanın konumunu bilmiyormuşçasına bir test edelim. Testimizde <kbd>root</kbd> dizinindeki <kbd>.jpg</kbd> uzantılı dosyaları araştıralım ve silelim.
 
-![enter image description here](https://i.hizliresim.com/m2qD12.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/48.png)
 
 Çıktıda da görüldüğü gibi <kbd>.jpg</kbd> uzantılı resim dosyalarını tek tek bulup silmeden önce çıktıda belirtilen konumlarda bulunuyorlardı. Ancak arama ve tek tek otomatik olarak silme işlemini gerçekleştirmemiz ile birlikte dosyalar silindi. Silinme durumunu da tekrar arama işlevindeki `find` komutunu vererek teyit etmiş olduk.
 
@@ -1466,7 +1576,7 @@ Bu kısımda dosyaları kopyalama taşıma ve silme gibi işlemleri ele alacağ�
 
 `cp` komutu kopyalama işlevindedir. Kullanımı `cp kaynak hedef` şeklindedir. Örnek üzerinden açıklayalım.
 
-![enter image description here](https://i.hizliresim.com/EPQ05D.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/49.png)
 
 
 Komutumuzu açıklayacak olursak;
@@ -1478,7 +1588,6 @@ Desktop dizinindeyken ls komutu ile bulunduğumuz dizindeki dosyaları listeliyo
 `ls` komutu ile buradaki dosyaları listeliyoruz. Bu dizinde ise yalnızca "yeni" isimli bir klasör mevcut.("filazof" isimli dosyanın bu konumda bulunmadığını teyit etmiş olduk.)
 
 `cd ..` komutu ile bir önceki dizine dönüyoruz.
-
 "filazof" dosyasını <kbd>yeni_dizin</kbd> konumuna taşımak üzere `cp filazof yeni_dizin` şeklinde komutumuzu kullanıyoruz.
 
 Daha sonrasında ise `cd yeni_dizin` komutu ile yeni_dizin konumuna gidip `ls` komutu yazarak "filazof" isimli dosyamızın kopyalandığını teyit etmiş oluyoruz.
@@ -1487,25 +1596,25 @@ Eğer bir dosyayı A dizininden B dizinine taşırsak ve B dizini içerisinde A 
 
 Anlatılanları daha iyi anlamak adına hemen bir örnek yapalım. Daha önceden <kbd>yeni_dizin</kbd> konumuna taşımış olduğumuz "filazof" dosyasını `-i` parametresini kullanarak tekrar `cp` komutu ile taşımaya çalışalım.
 
-![enter image description here](https://i.hizliresim.com/jyzDVg.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/50.png)
 
 Çıktıda da görüldüğü gibi `-i` parametresini kullanarak yazdığımız kopyalama komutu bize "cp: 'Desktop/merhaba''ın üzerine yazılsın mı? " şeklinde bir uyarıda bulundu ve bizden onay bekledi.
 
 Elbette bu işlemleri çoklu dosya taşıma için de kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/2Jvl8O.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/51.png)
 
 Hangi komutu neden kullandık zaten bir önceki örneğe benzer olduğu için tekrar açıklamıyorum. Çıktıları inceleyerek çok rahat şekilde anlayabilirsiniz.
 
 Eğer o anda çalıştığımız dizine başka bir konumdan dosya kopyalamak istersek komutumuzu `cp kopyalanacak_dosya_konumu .` şeklinde kullanabiliriz. Nokta( . ) bizim o anda bulunduğumuz çalışma konumunu ifade ediyor. Örneği incelediğinizde her şey daha net anlaşılacaktır.
 
-<img src="https://i.hizliresim.com/BLodDG.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/52.png" width="875">
 
 Görüldüğü üzere kopyalanacak olan dosyanın konumunu belirttik ancak bulunduğumuz konuma yani kopyalamak istediğimiz konumun direk adresini belirtmemize gerek kalmadı. Bunun yerine bulunduğumuz konumu temsil eden `.`(nokta) kullanmamız dosyanın kopyalanmasını sağladı.
 
 Eğer bulunduğumuz konumdan bir üst konuma kopyalamak istersek komutu `cp dosya_adresi ..` şeklinde kullanmamız yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/Vr27vR.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/53.png)
 
 Çıktıları karşılaştırarak dosyayı bir önceki dizine kopyalamayı (iki nokta) `..` ile kolaylıkla yapabildiğimizi görebilirsiniz.
 (Eğer "deneme" isimli dosyayı kopyalarken kullandığımız komutta yer alan, dosyanın konumunu belirtme kısmı kafanızı karıştırdıysa belirteyim; çıktıda kopyalanan konumda yer alan <kbd>~</kbd> işareti ana dizin adresini yani root kullanıcısı için `/root`konumunu belirtiyor. "deneme" isimli dosya bu konumda olduğu için direk bu şekilde bir kullanımı tercih ettim. Bunun yerine `cp /root/deneme ..` komutunu da kullanabilirdim.)
@@ -1514,18 +1623,20 @@ Eğer bulunduğumuz konumdan bir üst konuma kopyalamak istersek komutu `cp dosy
 ### mv
 Bu komut dosya taşıma ve uzantı değiştirme gibi işlevlere sahiptir. Dosya taşıma işlevi tıpkı `cp` komutunda olduğu gibidir. Yani komutun kullanımı `mv dosya_konumu taşınacak_konum` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/Z92q7z.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/54.png)
 
 ### rm
 
 Dosya dizin silme işlevinde kullandığımız komuttur. Kullanımı `rm silinecek_dosya_dizin` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/vjYDnD.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/55.png)
 
 
-Dosyalar tekil olarak silinebileceği gibi çoklu silme işlemi de gerçekleştirilebilir. Hatta daha önce gördüğümüz joker karakterleri de kullanırsak isim, uzantı gibi filtrelere göre sınırlandırarak toplu dosya silme işlemi gerçekleştirebiliriz. Örnek olması açısından masaüstünde yer alan 2 adat <kbd>.py</kbd> uzantılı dosyayı tek seferde `rm *.py` komutu ile siliyorum.
 
-![enter image description here](https://i.hizliresim.com/1JjoMb.png)
+Dosyalar tekil olarak silinebileceği gibi çoklu silme işlemi de gerçekleştirilebilir. Hatta daha önce gördüğümüz joker karakterleri de kullanırsak isim, uzantı gibi filtrelere göre sınırlandırarak toplu dosya silme işlemi gerçekleştirebiliriz. Örnek olması açısından masaüstünde yer alan 2 adet <kbd>.py</kbd> uzantılı dosyayı tek seferde `rm *.py` komutu ile siliyorum.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/56.png)
+
 
 Joker karakterlerin kullanım alanları oldukça geniştir. Sizler de ihtiyacınıza göre filtreleme yaparak bu işlemleri istediğiniz doğrultuda gerçekleştirebilirsiniz.(Bu konuyu detaylıca ileride [Joker Karakterler](https://github.com/taylanbildik/Linux_Dersleri/blob/master/joker_karakterler%28wildcards%29.md) kısmında ele alacağız.)
 
@@ -1533,9 +1644,9 @@ Joker karakterlerin kullanım alanları oldukça geniştir. Sizler de ihtiyacın
 
 Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. `shred` komutu dosyanın içerisine rastgele bitler yazarak dosyanın okunmaz hale gelmesini sağlıyor. Parametresiz kullanımda dosyaya 3 kez rastgele bit eklerken `n` parametresini kullanarak bu eklenecek olan rastgele bit sayısını istediğimiz doğrultuda düzenleyebiliyoruz. Eğer yapılan işlemi komut satırından takip etmek istersek `v` parametresini de kullanabiliriz. Ayrıca `u` parametresini kullanmamız halinde dosya işlem sonrasında silinir.
 
-<img src="https://i.hizliresim.com/rOYDZz.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/57.png" width="875">
 
-![enter image description here](https://i.hizliresim.com/Lbd61z.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/58.png" width="875">
 
 
 ----------
@@ -1552,7 +1663,7 @@ tar
 
 Masaüstünde yer alan ismi "metin" ile başlayan her şeyi <kbd>metinler.tar</kbd> şeklinde arşivlemek isteyelim. Bunun için komut satırına `tar -cf metinler.tar metin*` yazmalıyız.
 
-![enter image description here](https://i.hizliresim.com/9mvOa8.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/1.png)
 
 Kullandığımız komut bütününü tek tek izah edelim;
 
@@ -1564,42 +1675,42 @@ Kullandığımız `-f` parametresi de hangi dosyaya yazılacağını belirtir.
 
 Dosyaları tekrar açmak için `tar -xf metinler.tar` komutunu kullanabiliriz. Veya açılan dosyaları konsol üzerinden takip etmek için `v` parametresi kullanarak aynı işlemi gerçekleştirebiliriz.
 
-![enter image description here](https://i.hizliresim.com/qG9rdq.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/2.png)
 
 Eğer arşivi başka bir klasöre çıkarmak istersek komutumuzu `tar -xf metinler.tar -C hedef_klasör` şeklinde kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/Md9rV9.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/3.png)
 
 Görüldüğü gibi arşivin içerisindekiler öncekilerden farklı olarak direk çalıştığımız dizine değil, belirtmiş olduğumuz hedef klasöre çıkarılmış oldu.
 
 Arşivi çıkarmadan içerisindekileri görmek istersek `tar -tf metinler.tar` komutunu kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/XP25MD.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/4.png)
 
 Oluşturmuş olduğumuz arşive sonradan ekleme yapmak için `-r` parametresini kullanabiliriz.
 
 Hemen <kbd>metinler.tar</kbd> arşivine aynı dosya konumunda  yer alan <kbd>yeni</kbd> isimli klasörü eklemeye çalışalım.
 
-![enter image description here](https://i.hizliresim.com/bBQWVj.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/5.png)
 
 Başta ve sondaki arşivin durumunu karşılaştırdığımızda <kbd>yeni</kbd> isimli klasörün arşive eklenmiş olduğunu gördük.
 
 `tar` komutunun kullanım şekilleri elbetteki yukarıdaki anlatılanlar ile sınırlı değil. Ancak biz genel olarak sıklıkla karşılaşılan kullanım şekillerini ele almış olduk. Daha fazla bilgiye nasıl ulaşacağınızı biliyorsunuz.
 
-gzip-gunzip-bzip2-bunzip2
+gzip-bzip2
 -
 
 Biz daha önceki kısımlarda `tar` komutu ile dosyaları sadece arşivlemiş ancak sıkıştırma işlemi yapmamıştık. Şimdi ise gerektiğinde dosyaları sıkıştırmayı ve bu dosyaları açmayı göreceğiz.
 
-Sıkıştırma işleminde iki temel araç kullanılıyor. Bunlar `gzip` ve `bzip2` araçları. Sıkıştırılmış olan dosyaları açma işleminde ise `gzip` ile sıkıştırılan dosyalar için `gunzip`, `bzip2` ile sıkıştırılan dosyalar için ise `bunzip2` kullanılıyor.
+Sıkıştırma işleminde iki temel araç kullanılıyor. Bunlar `gzip` ve `bzip2` araçları.
 
 Masaüstünde yer alan dosyalardan örnek yapalım hemen. Ben "metin" adıyla başlayan dosyaları `gzip` arşivine almak için daha önceden de defalarca kullanmış olduğumuz `*` joker karakterinin yardımıyla `gzip metin*` komutunu veriyorum. Daha sonra aynı işlemi "isim" adı ile başlayan belgeler için bu defa `bzip2` yardımıyla `bzip2 isim*` şeklinde arşivleyerek gerçekleştiriyorum.
 
-![enter image description here](https://i.hizliresim.com/dO4Rvn.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/6.png)
 
 Sıkıştırdığımız dosyayı tekrar dışarı çıkarmak istersek komutu `-d` parametresi ile birlikte kullanmamız gerekiyor.
 
-![enter image description here](https://i.hizliresim.com/5DpBad.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/7.png)
 
 Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her ikisini de birlikte kullanma vakti geldi.
 
@@ -1609,15 +1720,18 @@ Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her i
 
 Her iki şekilde de "metin" isimli belgeleri bir arşiv içine almaya çalışalım. Sırasıyla bunu ilk olarak `gzip` ile daha sonra ise `bzip2` ile yapalım. Dosya adı verirken kullanılan <kbd>tar.gz</kbd> ve <kbd>tar.bz2</kbd> uzantılarına dikkat edin aksi halde işlem hata verecektir.
 
-![enter image description here](https://i.hizliresim.com/A1ZpDq.png)
+<img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/8.png" width="875">
+<img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/9.png" width="875">
 
 Gördüğünüz gibi `gzip` kullanırken parametre olarak `czvf` verdik ve oluşturduğumuz dosyanın uzantısını da <kbd>tar.gz</kbd>  şeklinde yaptık. Aynı şekilde `bzip2` için ise `cjvf` parametrelerini kullandık ve dosya adımızın uzantısı <kbd>tar.bz2</kbd>  şeklinde oldu. Daha önce de söylediğim gibi bu ayrıntılara dikkat etmezseniz işlem kaçınılmaz olarak başarısız olacaktır.
 
 Sıkıştırmış olduğumuz arşivleri tekrar açmak için ise `gzip` için `xzvf` parametresi `bzip2` için ise `xjvf` parametresini kullanacağız. 
 
-![enter image description here](https://i.hizliresim.com/4aY5jq.png)
+<img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/10.png" width="875">
 
 Arşivler açılmış oldu. Eğer arşivi belirli bir konuma çıkarmak istersek daha önce de öğrenmiş olduğumuz şekilde `-C` parametresi ile bu işlemi gerçekleştirebiliriz. Eğer `-C` parametresi kullanmazsak arşiv içindekiler doğrudan belirttiğimiz konuma açılır. `-C` parametresi hedef konuma arşivin ismi ile bir dosya oluşturur ve o dosya içerisine çıkarma işlemini yapar. 
+
+<img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/11.png" width="875">
 
 Daha önceden öğrendiğimiz işlemleri de aynı şekilde sıkıştırılmış arşiv dosyalarında da yapabiliyoruz. O yüzden aynı şeyleri burada tekrardan vermemiz anlamsız olur.
 
@@ -1629,29 +1743,33 @@ Daha önce dosya içeriklerini terminal üzerinden `cat` komutu yardımı ile ok
 
 `gzip` ile sıkıştırılmış arşiv dosya içeriklerini `zcat` ile okuruz. Aynı işlemi eğer `bzip2` ile sıkıştırılmış dosyalar varsa `bzcat` şeklinde gerçekleştirebiliriz.
 
-![enter image description here](https://i.hizliresim.com/JQdvZn.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/12.png)
 
 Sıra geldi sıkıştırılmış dosyalar içerisinde arama yapmaya. `gzip` ile sıkıştırılmış dosyalar için `zgrep` kullanılırken `bzip2` ile sıkıştırılmış dosyalar için `bzgrep` komutunu kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/JQdv8j.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/13.png)
 
 
-unzip-unrar
+zip-unzip
 -
 
-Son olarak da <kbd>.zip</kbd> ve <kbd>.rar</kbd> uzantılı dosyaları nasıl oluşturabileceğimizi ve daha sonra nasıl açabileceğimizi görelim.
+Son olarak da <kbd>.zip</kbd> uzantılı dosyaları nasıl oluşturabileceğimizi ve daha sonra nasıl açabileceğimizi görelim.
 
 Anlatıma <kbd>.zip</kbd> dosyası oluşturarak başlayalım.
 
 Bunun için komutumuzu konsola `zip dosya_adı.zip eklenecek_dosya` şeklinde giriyoruz.
 
-![enter image description here](https://i.hizliresim.com/OoJP8P.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/14.png)
+
+Çıktıda yer alan "deflated" ifadesi dosyanın ne kadarının sıkıştırıldığını yüzdelik olarak bize veriyor.
+Ayrıca sarı alan ile işaretlenmiş kısımda sıkıştırmış olduğumuz dosyanın boyutu ile dosyanın sıkıştırılmamış hali olan orjinal dosyanın boyutu arasında oldukça fazla boyut farkı bulunduğunu gözlemleyebiliyoruz.
+
 
 Eğer `zip` komutu ile sıkıştırdığımız dosyayı açmak istersek <kbd>.zip</kbd> dosyalarını açma işlevindeki `unzip` komutunu `unzip dosya_adı.zip` şeklinde kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/4aY5WJ.png)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/15.png)
 
-Eğer <kbd>.rar</kbd> dosyasını açmak istiyorsak `unrar` komutumuzu `unrar x dosya_adı.rar` şeklinde konsola girerek bu işlemi gerçekleştirebiliriz. Burada yer alan `x` ifadesi dışarı aktarma işlevindedir. Ayrıca başka parametreler de mevcut ancak bu kısım için bu kadarı yeterli.
+Konsolun bize sorduğu soru "bulunduğumuz dizinde aynı dosyadan bir tane daha var ne yapmak istersiniz?" gibi bir sorudur. 
 
 
 ----------
@@ -1659,7 +1777,7 @@ Eğer <kbd>.rar</kbd> dosyasını açmak istiyorsak `unrar` komutumuzu `unrar x 
 Erişim Yetkileri
 =
 
-Linux sistemlerinin yapısı gereği güvenlik açısından dosya ve dizinlere ait birçok kısıtlama ve yetkilendirme ayarları vardır. Bu yetkilerin hepsine sahip olan tek kullanıcı ise root kullanıcısıdır. Bu yüzden sistemi kullanırken eğer root kullanıcısı isek önümüzde uyarıcı bizi kısıtlayıcı bir mekanizma olmayacağından kimi durumlarda yapacağımız değişiklikler olumsuz sorunlara yol açabilir. Bu yüzden root kullanıcısıyken yapılan işlemlere dikkat etmek gerekir.(Hatta kimi dağıtımlarda root kullanıcı hesabı varsayılan olarak engellenmiştir, ancak istenildiği takdirde ve gereken ayarlar yapıldığında kullanılabilir olur.)
+Linux sistemlerinin yapısı gereği güvenlik açısından dosya ve dizinlere ait birçok kısıtlama ve yetkilendirme ayarları vardır. Bu yetkilerin hepsine sahip olan tek kullanıcı ise root kullanıcısıdır. Bu yüzden sistemi kullanırken eğer root kullanıcısı isek önümüzde uyarıcı bizi kısıtlayıcı bir mekanizma olmayacağından kimi durumlarda yapacağımız değişiklikler sorunlara yol açabilir. Bu yüzden root kullanıcısıyken yapılan işlemlere dikkat etmek gerekir.(Hatta kimi dağıtımlarda root kullanıcı hesabı varsayılan olarak engellenmiştir, ancak istenildiği takdirde ve gereken ayarlar yapıldığında kullanılabilir olur.)
 
 Bu girizgahtan sonra her kullanıcının kendine verilen yetkiler çerçevesince hareket edebildiğini öğrenmiş olduk. Kullanıcıların dosya veya dizinler ile ilgili yapabileceği üç eylem bulunmaktadır. Bunlar;
 
@@ -1673,11 +1791,11 @@ Aslında bu eylemler sizlere yabancı gelmemeli. Zira daha önce `chmod` komutu 
 
 Şimdi mevcut dosyalarımızın ne tür izinleri barındırdığına göz atalım. Bunun için komut satırına ayrıntılı liste yazdırmak üzere `ls -l` komutumuzu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/nOYzaM.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/1.png)
 
 Şimdi listemizi inceleyerek bulunan izinleri ele alalım.
 
-<kbd>drwxr-xr-x</kbd> ve <kbd>-rw-r--r-- </kbd>şeklinde gördüğümüz kısımlar dosya izinlerini ifade ediyor.
+<kbd>drwxr-xr-x</kbd> ve <kbd>-rw-r--r-- </kbd> şeklinde gördüğümüz kısımlar dosya izinlerini ifade ediyor.
 
 Bazı ifadelerin başında olan <kbd>d</kbd> harfi o ifadenin dizin olduğunu belirtiyor.
 
@@ -1689,7 +1807,7 @@ Geriye kalan kısımları ayrı ayrı açıklayacak olursak <kbd>-</kbd> işaret
 
 Sırayla birinci harf kümesi dosya sahibinin izinlerini, ikinci harf kümesi grup izinleri ve son küme de diğer kullanıcıların izinlerini belirtir. 
 
-![enter image description here](https://i.hizliresim.com/2JvLR2.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/2.png)
 
 Buna göre yukarıdaki dosyalarda bulunan izinleri açıklayacak olursak;
 
@@ -1701,7 +1819,7 @@ Buna göre yukarıdaki dosyalarda bulunan izinleri açıklayacak olursak;
 
 **rwx :** dosyanın sahibi olan kullanıcı okuyabilir, yazabilir, çalıştırabilir.
 
-**r-x :** dosya sahibi grup ile aynı gruba kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
+**r-x :** dosya sahibi kullanıcı grubu ile aynı gruba dahil kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
 
 **r-x :** diğer kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
 
@@ -1733,24 +1851,24 @@ Genel parametreleri gördüğümüze göre gelin birkaç örnek yapalım.
 
 İlk olarak klasörde yer alan dosyaların herhangi bir yetkiye sahip olmadıklarını teyit etmek için ayrıntılı çıktı almak üzere `ls -l` komutunu kullandık.
 
-![enter image description here](https://i.hizliresim.com/BLoJ1M.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/3.png)
 
 
 Daha sonra klasörde yer alan tüm dosyalara `*` joker karakteri ile ulaştık ve `chmod +w *` komutumuzu kullanarak herkese açık olacak şekilde yazma(w) yetkisi verdik.
 
-![enter image description here](https://i.hizliresim.com/jyz0aL.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/4.png)
 
 Aynı grupta bulunan kullanıclar için yine konumumuzda bulunan tüm dosyaları `*` sayesinde kapsayacak şekilde `g+rx *` komutumuzu verdik.
 
-![enter image description here](https://i.hizliresim.com/oOnGa9.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/5.png)
 
 Gruptaki kullanıcılara(g), okuma-yazma-çalıştırma yetkisi (rwx), kullanıcıya(u) yazma yetkisi(r), diğer kullanıcılara ise yalnızca çalıştırma yetkisi(x) verdik.
 
-![enter image description here](https://i.hizliresim.com/lOBJ8r.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/6.png)
 
 Ve en son yine bulunduğumuz konumdaki tüm dosyaların yetkilerini kaldırdık.
 
-![enter image description here](https://i.hizliresim.com/Vr2oGv.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/7.png)
 
 Bu kullanımların dışında yetkilendirme işlemleri daha önceden de rastladığımız ve fark etmeden de olsa kullanmış olduğumuz sayısal şekilde de ifade edilebiliyor.
 
@@ -1762,7 +1880,7 @@ Yetkilerin sayısal değerlerini kullanarak bir örnek yapalım.
 
 Örneğin biz sadece dosyanın sahibine bütün yetkileri vermek istiyoruz diyelim. Bunun için ilk başta yetki kalıplarının numara karşılıklarını toplamalıyız. Yani bütün yetkileri vereceğimiz için <kbd>r=4 </kbd>+<kbd> w=2</kbd> +<kbd> x=1</kbd>=<kbd>toplam sayı 7</kbd> etti. Bizler de sadece dosya sahibine bu yetkiyi vermek istediğimizden normalde vereceğimiz `chmod rwx- -----` komutumuzu diğer kullanıcılara yetki vermek istemediğimiz için o alanları 0 bırakarak komutu `chmod 700 dosya` şeklinde veriyoruz. Böylelikle sadece dosyanın sahibi tüm yetkilere sahip olmuş oluyor.
 
-![enter image description here](https://i.hizliresim.com/gOjNlR.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/8.png)
 
 Daha net anlaşılması adına bir örnek daha yapalım. Şimdi de; dosyanın sahibine tüm yetkileri, ortak gruptakilere yalnızca yazma yetkisini, diğer kullanıcılara da sadece okuma yetkisini verelim.
 
@@ -1772,13 +1890,25 @@ Dosya sahibi ile ortak gruptaki kullanıcılar için vereceğimiz yazma yetkisi 
 
 Diğer kullanıcılar için vereceğimiz yalnız okuma yetkisi için ise okuma(r) karakterinin sayısal karşılığı olan `4` sayısını kullanacağız.
 
-![enter image description here](https://i.hizliresim.com/9mv6X3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/9.png)
 
 Çıktıdan da anlaşılacağı üzere sayısal karşılıklar istediğimiz yetkilendirme işlemini gerçekleştirdi.
 
-Son bir ayrıntı daha verelim. Eğer verdiğimiz izinlerin o dizinle beraber alt klasörlerinde de etkili olmasını istersek komutumuzu `-r` parametresi ile birlikte kullanmalıyız.
+Son bir ayrıntı daha verelim. Eğer verdiğimiz izinlerin o dizinle beraber alt klasörlerinde de etkili olmasını istersek komutumuzu `-R` parametresi ile birlikte kullanmalıyız.
 
-![enter image description here](https://i.hizliresim.com/qG9gqD.png)
+Örneğin bulunduğum konumdaki "metin" isimli klasörün erişim yetkilerini listedim. Sonuç olarak hiç bir yetkinin bulunmadığını belirten <kbd>--------- </kbd> şeklinde bir çıktı geldi. 
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/10.png)
+
+Daha sonra "metin" isimli klasörün içerisine girerek oradaki dosya ve dizinlerin erişim izinlerini sorguladım. Sonuç olarak <kbd>rwxrwxrwx</kbd> şeklinde bütün yetkilere sahip dosya ve dizinlerin olduğunu gördüm. 
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/11.png)
+
+Daha sonra bir üst dizine dönerek ekleyeceğim erişim izinlerinin tüm alt dosyalarda da dahil geçerli olması için komutuma ek olarak `-R` parametresini kulladım ve komutumu `chmod -R 422 metin` şeklinde yazdım. 
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/12.png)
+
+Sonuç olarak bütün dosya ve dizinlerde ve alt klasörlede dahil olmak üzere tüm dosyaların vermiş olduğum yetki erişim izinleri **422** ifadesine karşılık gelen; dosya sahibi için okuma(**r**) , dosya sahibi ile aynı gruptaki kullanıcılar için yazma(**w**) ve diğer kullanıclar için de yazma(**w**) yetkisi şeklinde yetkilendirildiğini görmüş oldum.
 
 Eğer örneklere ve açıklamalara rağmen yine de anlamadıysanız ister konuyu tekrar okuyup kendiniz de alıştırmalar yapın isterseniz de bu konuyu şimdilik geçin ihtiyacınız olduğunda burada olduğunu bilerek tekrar göz atın. Seçim sizlere kalmış.
 
@@ -1788,8 +1918,7 @@ Hepimizin başına mutlaka gelen ve çok can sıkıcı bir durum var. Bu durum y
 
 Komutun kullanımı `chattr +i dosya_adı` şeklindedir. Hemen bir örnek yapalım.
 
-![enter image description here](https://i.hizliresim.com/Md9zYQ.png)
-
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/13.png)
 Bu tür dosyaları listelemek için `lsattr` komutu kullanılıyor. Bizde dosyaların durumunu daha sonradan karşılaştırabilmek adına ilk olarak konsola `lsattr` komutunu verdik.
 
 <kbd>test.txt </kbd> isimli dosyamızı `chattr +i test.txt` komutu ile koruma altına aldık.
@@ -1800,7 +1929,7 @@ Komutumuzun çıktısında görüldüğü gibi dosyamızın sol tarafında izinl
 
 Eğer bu işlemi geri almak ve dosyamızı üzerinde değişiklikler yapılabilir hale getirmek istersek `chattr -i test.txt` komutumuzu kullanmamız yeterli olacaktır. Örneği aşağıda inceleyebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/QV1kX3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/14.png)
 
 Çıktıda da görüldüğü gibi hedef dosyamızın solundaki `-i` işareti yok olmuş. Dolayısıyla <kbd>test.txt</kbd> isimli dosyamızın artık eski halinde dönerek düzenlenebilir forma girmiş olduğunu gördük. Ve dosyamızı silerek bu durumu teyit ettik.
 
@@ -1809,7 +1938,7 @@ Eğer bu işlemi geri almak ve dosyamızı üzerinde değişiklikler yapılabili
 
 Kullanıcı İşlemleri
 =
-Linux'ta birçok kullanıcı olduğunu ve bunlar içinde en yetkilinin root kullanıcısı olduğunu önceki derslerimizde tecrübe etmiştik. Ancak sistemde root kullanıcısı olmadan da root kullanıcısının yetkilerine sahip olmamız mümkün. Bu imkanı bize linux grup sistemi veriyor.
+Linux'ta birçok kullanıcı olduğunu ve bunlar içinde en yetkilinin root kullanıcısı olduğunu önceki derslerimizde tecrübe etmiştik. Ancak sistemde root kullanıcısı olmadan da root kullanıcısının yetkilerine sahip olmamız mümkün. Bu imkanı bize Linux Grup Yönetimi veriyor.
 
 Grup Yönetimi
 -
@@ -1818,74 +1947,95 @@ Aynı grupta yer alan kullanıcılar bizim tanımlamamızla aynı haklara sahip 
 
 Biraz daha ayrıntılı vermek gerekirse Linux ve UNIX sistemlerindeki kullanıcılar bir veya daha fazla gruba aşağıdaki nedenlerle atanır:
 
-- Dosyaları veya diğer kaynakları az sayıda kullanıcıyla paylaşmak için yani sınırlama mekanizması gibi düşünülebilir.
-- Kullanıcı yönetim ve denetim kolaylığı sağlar.
-- Grup üyeliği büyük Linux sistem kurulumu yerine kullanılan mükemmel bir çözümdür.
+- Dosyaları veya diğer kaynakları Grup yönetimi sayesinde ilgili kullanıcılarla paylaşarak, sistemde erişim sınırlamalarıyla güvenlik sağlaması.
+- Kullanıcı yönetim ve denetiminde  kolaylık sağlıyor olması.
 - Grup üyeliği, bu gruba izin verilen dosyalara, dizinlere veya cihazlara özel erişim sağlar. Bu madde baştaki madde ile benzer amaca hizmet ederek tamamen kontrolü elde tutmayı sağlamak için kullanılır.
 
-Mevcut grupları görüntülemek istersek `less /etc/group` `more /etc/group` `cat /etc/group` komutlarından herhangi birini kullanabiliriz. Çıktıları aşağıdaki şekilde olacaktır.(Çıktıyı uzun olması nedeni ile kısa şekilde verdim.)
+Yani genel olarak Grup sistemini bir çeşit kontrol mekanizması gibi düşünebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/6JY4DN.png)
+Bu kısa bilgilendirmeden sonra gelin grup yönetimi ile ilgili işlemlere geçelim.
 
-Hemen bu çıktıda yer alan kısımlara bir açıklık getirelim. Bunun için çıktıda yer alan bir grubu bölüm bölüm numaralandırarak açıklayalım. Ben bu durum için örnek bir grup belirtiyorum.
+Bir grup oluşturulduğunda bu grubun bilgisi <kbd>/etc</kbd> dizini içerisinde yer alan <kbd>group</kbd> isimli dosyada tutuluyor.
+Yani mevcut grupları görüntülemek istersek <kbd>/etc</kbd> dizini içerisinde yer alan <kbd>group</kbd> dosyasına bakmamız gerekir.
+Bunun için `less /etc/group` , `more /etc/group` , `cat /etc/group` komutlarından herhangi birini kullanabiliriz. Çıktıları aşağıdaki şekilde olacaktır.(Çıktıyı uzun olması nedeni ile kısa şekilde verdim.)
 
-![enter image description here](https://i.hizliresim.com/4aYdp0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/0.png)
+
+Hemen bu çıktıda yer alan kısımlara bir açıklık getirelim. Bunun için bir grubu bölüm bölüm numaralandırarak açıklayalım. Ben bu durum için örnek bir grup belirtiyorum.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/1.png)
 
 Belirtilen numaralı kısımların açıklamaları:
 
 **1. Grup_ismi :** Gruba verilen isimdir.
 
-**2. Parola :** Genelde parola kullanılmaz ancak kimi durumlarda kullanıldığı oluyor, bizim çıktımızda da x ile belirtilen alan parola kısmının boş olduğunu belirtiyor. Bu parola belirleme işlemi çok sık kullanılmasa da, ayrıcalıklı gruplarda uygulamak için yararlıdır.
+**2. Parola :** Parola alanını belirtiyor. Genelde parola kullanılmaz ancak kimi durumlarda kullanıldığı oluyor, bizim çıktımızda da **x** ile belirtilen alan parola kısmının boş olduğunu belirtiyor. Bu parola belirleme işlemi çok sık kullanılmasa da, ayrıcalıklı gruplarda uygulamak için yararlıdır.
 
-**3. Grup Kimliği (GID) :** Atanan grup kimliğini(numarası) belirtiyor.
+**3. Grup Kimliği (GID) :** Atanan grup kimliğini(grup numarasını) belirtiyor.
 
-**4. Grup Listesi :** Grubun üyesi olan kullanıcıların kullanıcı adlarının bir listesidir. Kullanıcı adları, virgülle ayrılmış olmalıdır.
+**4. Grup Listesi :** Grubun üyesi olan kullanıcıların kullanıcı adlarının bir listesidir. Kullanıcı adları, virgülle ayrılmış şekilde belirtiliyor.
+
+Bu alanların neleri ifade ettiğini öğrendiğimize göre gelin hangi kullanıcının hangi gruba dahil olduğunu nasıl öğrenebiliriz onu görelim.
+
 
 Kullanıcıların ait olduğu grupları görmek istersek komut satırına `id kullanıcı_adı` şeklinde komut vermemiz yeterli olacaktır.
+Ben "burak" kullanıcı hesabı için sorgulama yapmak üzere konsola `id burak` şeklinde komutumu veriyorum.
 
-![enter image description here](https://i.hizliresim.com/JQd5Vq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/2.png)
 
-Burada yeri gelmişken daha önce değindiğimiz uid(user id/kullanıcı numarası) ve gid(group id/grup numarası) kavramlarına değinelim. Bu numaralar kullanıcı çeşidine göre şu şekildedir;
+Gördüğünüz gibi "burak" kullanıcı hesabı için burada; **uid**(user id/kullanıcı numarası), **gid**(group id/grup numarası) ve dahil olduğu **gruplar** listelenmiş oldu. 
+
+Burada yeri gelmişken çıktıda da görülen **uid**(user id/kullanıcı numarası) ve **gid**(group id/grup numarası) kavramlarına değinelim. Bu numara aralıkları kullanıcı hesabına göre değişiklik gösteriyor. Yani kullanıcı çeşidine göre numaraları üç temel gruba ayırabiliriz. O da şu şekide ;
 
 - **root kullanıcısı :** UID=0, GID=0
-- **sistem kullanıcısı :** UID=1 -499, GID=1 -499
-- **normal kullanıcı :** UID=500<, GID=500<
+- **sistem kullanıcısı :** UID=1 - 499, GID=1 - 499
+- **normal kullanıcı :** UID=500 < X, GID=500 < X (Buradaki X ifadeleri 500'den büyük tüm sayıları temsil etmektedir.)
 
-Ayrıca `id` komutunun da birçok parametresi vardır bazıları şimdi göreceğiniz grup oluşturma kısmındaki parametrelerden oluşuyor. Detaylı bilgi için man sayfasına bakabilirsiniz. Ben yine de örnek olması açısından `g` parametresini gösteriyorum ve daha sonra grup oluşturma ile konumuza devam ediyoruz.
+Ayrıca `id` komutunun birçok parametresi vardır bazıları birazdan göreceğimiz grup oluşturma kısmındaki parametrelerden oluşuyor. Detaylı bilgi için man sayfasına bakabilirsiniz. Ben yine de örnek olması açısından birkaç parametresini gösteriyorum ve daha sonra grup oluşturma ile konumuza devam ediyoruz.
 
-`id -g grup_adı` belirtilen grubun grup numarasını(gid) verecektir.
+**g** : `id -g grup_adı` belirtilen grubun **grup numarasını**(**gid**) verecektir.
 
-![enter image description here](https://i.hizliresim.com/OoJWr0.png)
+**u** : `id -u grup_adı` belirtilen grubun **kullanıcı numarasını**(**uid**) verecektir.
 
-Yeni bir grup oluşturmak istersek `groupadd grup_adı` şeklinde komutumuzu kullanırız.
+**G** : `ìd -G grup_adı` belirtilen grubun **dahil olduğu tüm grupları**(**groups**) verecektir.
+
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/3.png)
+
+Yukarıdaki parametreler haricindekiler için man kılavuz sayfasına bakın lütfen.
+
+
+**Sıra geldi yeni grup oluşturmaya..**
+
+Yeni bir grup oluşturmak istersek `groupadd yeni_grup_adı` şeklinde komutumuzu kullanırız.
+
+Ben örnek olması açısından "yeni" isimli bir grup oluşturmak için komut satırına `groupadd yeni` şeklinde komutumu veriyorum.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/5.png)
 
 Ve oluşturduğumuz grubu sorgulamak için grup bilgilerinin tutulduğu dosyaya bakmak üzere `cat /etc/group | grep grup_adı` komutunu ya da `tail -n 1 /etc/group` kullanabiliriz.
 
 
-![enter image description here](https://i.hizliresim.com/z0QWGB.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/6.png" width="875">
 
 
 Ayrıca grup oluşturulurken kullanılabilecek bazı parametreler var. Bunlar;
 
-**g :**  Grup id belirleme. İstediğiniz numarayı başka bir gruba ait numara ile aynı olamayacak şekilde verebilirsiniz.
+**g :**  Grup id belirleme. İstediğiniz numarayı başka bir gruba ait numara ile aynı olmayacak şekilde verebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/G9bqZy.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/7.png)
 
-Eğer aynı grup id ile başka bir grup eklemek istersek konsol bize bu id ye sahip başka bir grubun halihazırda bulunduğu uyarısını verecektir. Dolayısı ile grup ekleme işlemi başarısız olacaktır.
+Eğer aynı grup id ile başka bir grup eklemek istersek konsol bize "bu id ye sahip başka bir grubun halihazırda bulunduğu" uyarısını verecektir. Dolayısı ile grup ekleme işlemi başarısız olacaktır.
 
-![enter image description here](https://i.hizliresim.com/y02yG0.png)
-
-**o :** id olmadan grup oluşturma
-
-**r :** sistem grubu oluşturma.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/8.png)
 
 **f :** işlemi hatalar olsa bile zorlayarak tamamlar. Genelde bu kullanım sorunlar çıkardığı için pek tavsiye edilmez.
 
-Parametreler bunlar ile sınırlı değil ancak sizler `man groupadd` ve `groupadd --help` komutları yardımı ile diğer parametrelere ulaşabilirsiniz.
+Parametreler bunlar ile sınırlı değil ancak sizler `man groupadd` ve `groupadd --help` komutları yardımı ile diğer parametreleri de keşfedebilirsiniz.
 
-Ayrıca oluşturduğunuz grupları silmek isterseniz konsola `groupdel grup_adı` şeklinde komut yazmalısınız.
+Ayrıca oluşturduğunuz grupları silmek isterseniz konsola `groupdel grup_adı` şeklinde komut yazmanız yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/W7WlXq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/9.png)
 
 
 Kullanıcı Yönetimi
@@ -1896,109 +2046,141 @@ Sistemimize yeni bir kullanıcı eklemek için kullanabileceğimiz iki farklı k
 ### adduser
 
 Yeni kullanıcı eklemek için komutumuzu `adduser kullanıcı_adı` şeklinde veriyoruz. Böylelikle oluşturduğumuz kullanıcıya ait ev dizini `home/kullanıcı_adı` şeklinde otomatik olarak oluşmuş oluyor.
+Ben örnek olaması açısından "hasan" isimli bir kullanıcı hesabı eklemek üzere konsola `adduser hasan` komutunu veriyorum.
 
-![enter image description here](https://i.hizliresim.com/p6v7A0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/10.png)
 
-Çıktıları inceleyecek olursak ev dizini otomatik olarak oluşturulmuş ve kullanıcı "taylan" grubuna dahil edilmiş. Bunu da tekrar ev dizini sorgusu için <kbd>home</kbd> dizinine bakarak ve `id taylan` komutunu kullanarak teyit edelim.
+Çıktıları inceleyecek olursak ev dizini otomatik olarak oluşturulmuş ve "hasan" isimli kullanıcı "hasan" grubuna dahil edilmiş.
+Yeni eklemiş olduğumuz "hasan" isimli kullanıcı hesabını teyit etmek için; Sistemde kullanıcı hesapları ile ilgili bilgilerin tutulduğu <kbd>etc</kbd> dizini içerisindeki <kbd>passwd</kbd> dosyaya bakalım.
 
-![enter image description here](https://i.hizliresim.com/kOZ2QW.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/11.png)
 
-Çıktıda görüldüğü gibi <kbd>home</kbd> dizininde oluşturmuş olduğum "taylan" isminde kullanıcı dosyası bulunuyor.
+Dosyanın en alt satırına baktığımızda yeni eklemiş olduğumuz "hasan" isimli kullanıcı hesabının eklenmiş olduğunu görüyoruz.
+Son olarak da <kbd>home</kbd> dizinine "hasan" kullanıcı hesabı için dosya oluşturulmuş mu buna bakalım.
 
-![enter image description here](https://i.hizliresim.com/NZYyXO.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/12.png)
 
-Yukarıdaki çıktıda oluşturulan "taylan" isimli kullanıcının grubu da "taylan" olarak gözükmekte.
+Çıktıda görüldüğü gibi <kbd>home</kbd> dizininde oluşturmuş olduğum "hasan" isminde kullanıcı dosyası bulunuyor.
+
 
 ### useradd
 
 Kullanıcı oluşturmak için bahsettiğimiz 2. komut olan `useradd` komutu kullanımı `useradd -m kullanıcı_adı` şeklindedir. Burada komutumuz ile birlikte kullanmış olduğumuz `m` parametresi ile oluşturduğumuz kullanıcıya ait ev dizininin otomatik oluşmasını sağladık. Birde son olarak kullanıcıya ait bir parola belirlemek üzere `passwd kullanıcı_adı` şeklinde komutumuzu vererek parolamızı oluşturuyoruz.
 
-Ayrıca bu `passwd kullanıcı_adı` komut kullanımı bütün hesaplar için şifre güncelleme işleminde de kullanılıyor. Eğer herhangi bir hesabınızın parolanızı güncellemek isterseniz `passwd` komutu aklınızda bulunsun.
+Parola oluşturma işleminde kullandığımız `passwd kullanıcı_adı` şeklindeki komut bütün hesaplar için şifre güncelleme işleminde de kullanılıyor. Ve bir bilgi daha; bu parola bilgileri <kbd>/etc</kbd> dizini altındaki <kbd>shadow</kbd> isimli dosyada şifreli şekilde tutuluyor.
 
-![enter image description here](https://i.hizliresim.com/azP4vz.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/4.png)
 
-Görüldüğü gibi "taylan_2" isimli kullanıcı hesabımız başarılı şekilde oluşturulmuş oldu. Şimdi <kbd>home</kbd> dizinini ve oluşturduğumuz kullanıcının grubunu kontrol edelim.
 
-![enter image description here](https://i.hizliresim.com/Yg31y6.png)
+Ben örnek olması açısından "ali" isimli bir kullanıcı hesabı oluşturmak üzere komutumu `useradd -m ali` şeklinde verdikten sonra "ali" isimli kullanıcı hesabı için şifre belirlemek üzere `passwd ali` komutunu kullandım.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/13.png)
+
+Görüldüğü gibi "ali" isimli kullanıcı hesabımız başarılı şekilde oluşturulmuş oldu. Şimdi <kbd>home</kbd> dizinini ve <kbd>passwd</kbd> dosyasına bakarak bu durumu teyit edelim.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/14.png)
 
 Çıktı sonuçlarında bir problem olmadığına göre konumuza, kullanıcı silme işlemi ile devam edebiliriz.
 
 ### Kullanıcı Silmek
 
-Eğer kullanıcıyı `adduser` komutu ile oluşturduysak, oluşturulan ev dizini ile birlikte kullanıcıyı silmek için `deluser --remove-home kullanıcı_adı` komutunu kullanmamız gerek.
+Oluşturulan kullanıcı hesabını ev dizini ile birlikte silmek için `deluser --remove-home kullanıcı_adı` komutunu kullanmamız yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/NZb63P.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/15.png)
 
-Ancak kullanıcıyı `useradd` komutu ile oluşturduysak, oluşturulan ev dizini ile birlikte kullanıcıyı silmek için `userdel -r kullanıcı_adı` komutunu kullanmamız gerek.
 
-![enter image description here](https://i.hizliresim.com/azBJjO.png)
+Kullanıcı silme işlemlerini kontrol etmek adına <kbd>home</kbd> dizinini kontrol edelim.
 
-Kullanıcı silme işlemlerini kontrol etmek adına home dizinini kontrol edelim.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/16.png)
 
-![enter image description here](https://i.hizliresim.com/Yg52Mz.png)
+Çıktıda "hasan" ya da "ali" bulunmadığına göre kullanıcı silme işlemimiz başarılı şekilde tamamlanmış oldu.
 
-Çıktıda "taylan" ya da "taylan_2" bulunmadığına göre kullanıcı silme işlemimiz başarılı şekilde tamamlanmış oldu.
 
-### Kullanıcı Bilgileri Listelemek(chage)
+### Gruplara Kullanıcı Ekleme-Çıkarma İşlemi
 
-Kullanıcı bilgileri listeme işleminde `chage` komutu `chage -l kullanıcı_adı` şeklinde kullanılıyor.
+Yeni grup ve yeni kullanıcı hesabı nasıl oluşturulur bunları gördük.
+Şimdi sıra geldi gruba yeni kullanıcı ekleme ve gruptan kullanıcı çıkarma işlemlerine. 
 
-Hemen root kullanıcısı için bilgileri listeleyelim.
+**Gruba Kullanıcı Eklemek**
+Var olan bir gruba yeni bir kullanıcı eklemek için `gpasswd` komutunun `a` parametresini kullanarak, komutumuzu `gpasswd -a kullanıcı_adı ekleneceği_grup_adı` şeklinde kullanmamız yeterlidir.
 
-![enter image description here](https://i.hizliresim.com/kOY3Qm.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/17.png)
+
+**Gruptan Kullanıcı Çıkarmak**
+
+Eğer gruba dahil olan bir kullanıcıyı gruptan çıkarmak istersek de `gpasswd` komutunun `d` parametresini kullanarak, komutu `gpasswd -d kullanıcı_adı çıkarılacağı_grup_adı` şeklinde kullanmamız gerekmektedir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/18.png)
+
 
 ### Aktif-Pasif Hesap Ayarlama
 
 Varolan bir kullanıcı hesabını kilitlemek için `usermod -L kullanıcı_adı` komutunu kullanırız. Buradaki kilitlemekten kasıt kullanıcının sisteme giriş yapmasını engellemek için parolasının kilitlenmesidir. Parolayı devre dışı bırakmak için, sistem otomatik olarak şifreli parolanın önüne '!' işareti koyar ve kullanıcı hesabına giriş yapamaz. 
 
+Bu durumu denemek için öncelikle kullanıcı hesaplarının parolalarının şifreli bir şekilde tutulduğu dosya olan <kbd>shadow</kbd> dosyasına bakalım.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/20.png)
+
+"burak" isimli kullanıcının parolasını yukarıdaki şekildedir. Daha sonra karşılaştırma yaparken tekrar ele alıcaz.
+
+Konsol ekranına `usermod -L burak` yazarsam "burak" kullanıcısının hesabını kilitlemiş olurum. Bu kilitleme işlemini; kullanıcının hesaba girişte kullandığı parolanın önüne sistem tarafından otomatik olarak getirilen `!`(ünlem işareti) sayesinde gerçekleşmektedir.
+Bu durumu teyit etmek için tekrar <kbd>shadow</kbd> dosyasına bakalım ve önceki hali ile sonraki halini kıyaslayarak görelim.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/19.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/20.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/21.png)
+
+Gördüğünüz gibi hesabı kilitleme işleminde; hesaba girişte kullanılan parolanın önüne otomatik olarak gelen `!` (ünlem işareti) hesaba girmeyi engelleyerek hesabı kilitlemiş oluyor.
+
 Pasif durumdaki hesabı aktif hale getirmek için ise `usermod -U kullanıcı_adı` komutu kullanılır. Aynı şekilde hesabın tekrar aktif hale getirilmesi de devre dışı bırakılmış olan kullanıcı parolasının  önündeki '!' işaretinin kaldırılmasıyla gerçekleşir.
 
-Bu durumu .gif ile anlattım dikkatlice takip ederseniz gayet net anlaşılacaktır.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/22.png)
 
-![enter image description here](https://i.hizliresim.com/9mp81Q.gif)
+Eğer anlamadığınız bir nokta varsa bu durumu .gif ile anlattım, dikkatlice takip ederseniz gayet net anlaşılacaktır.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/23.gif)
 
 ### Kimlik Değişimi
 
-Örneğin ben "taylan" kullanıcısıyken, yapmak istediğim işlem ancak "root" kullanıcısının yetki alanındaysa ve ben "root" hesabının parolasını biliyorsam, "root" hesabının kimliğine bürünerek o işlemi gerçekleştirebilirim.
+Örneğin ben "burak" kullanıcısıyken, yapmak istediğim işlem ancak "root" kullanıcısının yetki alanındaysa ve ben "root" hesabının parolasını biliyorsam, "root" hesabının kimliğine bürünerek o işlemi gerçekleştirebilirim.
 
-Geçiş işlemleri için `su` komutunu kullanıyoruz. Komutun kullanımı ile ilgili iki farklı durum var bunlar:
+Geçiş işlemleri için `su` komutunu kullanıyoruz. Komutun kullanımı ile ilgili iki farklı durum var, bunlar:
 
 - **su kullanıcı_adı :** diğer kullanıcı kimliğine geçiş yapar.
 - **su - kullanıcı_adı :** diğer kullanıcı kimliğine geçiş yapar ve direk olarak geçiş yapılan kullanıcının kabuğunda çalışmaya başlar.
 
-Bu durum en iyi örnekler ile açıklanabilir. İlk önce "root" kullanıcısıyken "taylan" isimli kullanıcı hesabına giriş yapacağım daha sonra "taylan" isimli kullanıcıdan "root" hesabına giriş işlemini gerçekleştireceğim. Adımları sırasıyla takip edin lütfen.
+Bu durum en iyi örnekler ile açıklanabilir. İlk önce "root" kullanıcısıyken "burak" isimli kullanıcı hesabına giriş yapacağım daha sonra "burak" isimli kullanıcıdan "root" hesabına giriş işlemini gerçekleştireceğim. Adımları sırasıyla takip edin lütfen.
 
 Hemen mevcut kullanıcı oturumunu daha önce öğrenmiş olduğumuz `whoami` komutu ile sorgulayalım.
 
-![enter image description here](https://i.hizliresim.com/NZb6XP.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/24.png)
 
-"root" kullanıcısıyken "kullanici" hesabına geçiş yapmak için `su kullanici` komutunu kullanıyoruz. Ve `whoami` komutu ile geçiş durumunu kontrol ediyoruz.
+"root" kullanıcısıyken "burak" hesabına geçiş yapmak için `su burak` komutunu kullanıyoruz. Ve `whoami` komutu ile geçiş durumunu kontrol ediyoruz.
 
-![enter image description here](https://i.hizliresim.com/Yg52yz.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/25.png)
 
-Geçiş yaptığımız "kullanici" hesabından "root" hesabına dönmek için `exit` komutunu kullanmamız yeterli.
+Geçiş yaptığımız "burak" hesabından "root" hesabına dönmek için `exit` komutunu kullanmamız yeterli.
 
-![enter image description here](https://i.hizliresim.com/8YE0OV.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/26.png)
 
-Şimdi `su - kullanici` komutu kullanarak geçiş yapacağımız kullanıcı kabuğunda çalışalım.
+Şimdi `su - burak` komutu kullanarak geçiş yapacağımız kullanıcı kabuğunda çalışalım.
 
-![enter image description here](https://i.hizliresim.com/D7kV1z.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/27.png)
 
-Görsellere dikkatlice bakacak olursanız; `su kullanici` komutunu kullanarak geçiş yaptığımızda `kullanici@taylan:/root$` olan konsol ismi `su - kullanici` komutunu kulladığımızda direk olarak geçiş yaptığımız hesabın kabuğunda çalışmaya başlayarak `kullanici@taylan:~$` şeklinde oldu. Yani `su - kullanici` komutu bize tıpkı o hesap oturumunu açmışız gibi tepki verdi.
+Görsellere dikkatlice bakacak olursanız; `su burak` komutunu kullanarak geçiş yaptığımızda `burak@taylan:/root$` olan konsol ismi `su - burak` komutunu kulladığımızda direk olarak geçiş yaptığımız hesabın kabuğunda çalışmaya başlayarak `burak@taylan:~$` şeklinde oldu. Yani `su - burak` komutu bize tıpkı o hesap oturumunu açmışız gibi tepki verdi.
+Aşağıda çıktılara tekrar bakarsanız aradaki farkı daha net anlayabilirsiniz.
 
-Fark etmiş olacaksınız ki başta geçiş yapabilmemiz için geçeceğimiz hesabın parolasını bilmemiz gerektiğini söylemiştim. Ancak "kullanici" hesabına yaptığımız geçişlerde parola sorulmadı. Bunun sebebi "kullanici" hesabının normal kullanıcı olmasıdır. Şimdi bu durumu birde "kullanici" hesabındayken "root" kullanıcısı için iki farklı kullanımda da deneyelim.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/28.png)
 
-![enter image description here](https://i.hizliresim.com/m28jbV.png)
+Fark etmiş olacaksınız ki başta geçiş yapabilmemiz için geçeceğimiz hesabın parolasını bilmemiz gerektiğini söylemiştim. Ancak "burak" hesabına yaptığımız geçişlerde parola sorulmadı. Bunun sebebi "burak" hesabının normal kullanıcı olmasıdır. Şimdi bu durumu birde "burak" hesabındayken "root" kullanıcısı için iki farklı kullanımda da deneyelim.
 
-![enter image description here](https://i.hizliresim.com/jyYPOJ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/29.png)
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/30.png)
 
 Gördüğünüz gibi yönetici hesabına erişmek için bizlerden parola bilgisi istendi. Bu durum da başta açıkladığımız yetkili hesaplara geçişlerde şifre sorma olayını açıklıyor.
 
 
-
 ----------
-
-
 
 
 
@@ -2012,118 +2194,92 @@ ps
 
 Bu komutumuz çalışan süreçleri görüntülememizi sağlıyor.
 
-Komut tek başına `ps` şeklinde kullanıldığında o anda çalışmakta olan süreçleri veriyor.
+Komut tek başına `ps` şeklinde kullanıldığında mevcut konsol üzerinden çalıştırılmış süreçleri verir.
 
-![enter image description here](https://i.hizliresim.com/Z91NV0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/1.png)
 
-Gerektiği zaman doğru çıktıları almak adına `ps` komutunun parametrelerine bakalım.
+Genellikle sistemdeki tüm işlemleri görmek için `ps -aux` komut bütünü kullanıyor. 
+Komut `aux` parametreleri ile `ps -aux` şeklinde kullanıldığında sistemde ve terminallerde çalışan tüm süreçleri ve süreç sahiplerini gösteriyor.(Çıktı çok uzun olacağından aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.)
 
-Genel Liste
-
-**a :** Tüm terminallerde çalışan süreçler.
-
-**u :** Hedef kullanıcıya göre süreçleri listeler.
-
-**x :** tty’lerde çalışanlar hariç tüm süreçleri verir.
-
-**e :** Komutlar ve parametrelerini göstermektedir.
-
-**f :** Tam çıkış şeklinde listeler.
-
-**l :** Çıkış listesini uzunca verir.
-
-**c :** Süreçlerin yalnız komut isimlerini verir.
-
-**v :** Kullanılan hafızalara göre gösterir.
-
-Şimdi bazı parametrelerimizi çıktıları ile birlikte inceleyelim.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/2.png)
 
 
-<kbd>a</kbd> , <kbd>u</kbd> ve <kbd>x</kbd> parametrelerini genellikle kullanıldığı gibi yani bir bütün olarak `-aux` şeklinde ele alalım.
+Ancak gerektiği zaman doğru çıktıları almak adına `ps` komutunun parametrelerine bakalım.
 
-Komut `aux` parametreleri ile `ps -aux` şeklinde kullanıldığında sistemde ve terminallerde çalışan tüm süreçleri ve süreç sahiplerini gösterir.
+**e :** Sistemde çalışan her süreç.(Çıktı çok uzun olacağından aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.)
 
-Çıktı çok uzun olacağından  aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/3.png)
 
-![enter image description here](https://i.hizliresim.com/rOdLRB.png)
 
-**e :** Sistemde çalışan her süreç.(every)
-
-Çıktı çok uzun olacağından  aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.
-
-![enter image description here](https://i.hizliresim.com/vjozLO.png)
-
-**f :** Tam çıkış biçimi.(full)
-
-![enter image description here](https://i.hizliresim.com/oOzQZo.png)
-
-**l :** Uzun çıkış biçimi.(long)
-
-![enter image description here](https://i.hizliresim.com/lOzYyl.png)
-
-**u :** Kullanıcı ile ilgili süreçler.
+**u :** Kullanıcı adına göre süreç bilgileri verir.
 
 Parametrenin komut ile kullanımı `ps -u kullanıcı` şeklindedir.
 
-Çıktı çok uzun olacağından  aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/4.png)
 
-![enter image description here](https://i.hizliresim.com/1JnPk1.png)
 
-**c :** Süreçlerin komut ismini verir.
+**p :** Süreç numarasına(PID) göre süreç bilgisi verir.
 
-![enter image description here](https://i.hizliresim.com/VrypLq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/5.png)
 
-**v :** Süreçleri kullandıkları bellek ile birlikte gösterir.
-
-![enter image description here](https://i.hizliresim.com/LboP4J.png)
 
 Eğer aradığımız özel bir süreç varsa daha önce görmüş olduğumuz `grep` komutu yardımı ile o süreç hakkında doğrudan bilgi alabiliriz.
-
 Şöyleki eğer ben "bash" süreci hakkında bilgi almak istiyorsam konsola `ps -aux | grep "bash"` yazmam yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/nOGPg1.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/6.png)
 
-Çıktıda görüldüğü gibi yalnızca ulaşmak istediğim bash süreci hakkında çıktı almış oldum.
+Çıktıda görüldüğü gibi yalnızca ulaşmak istediğim "bash" süreci hakkında çıktı almış oldum.
 
 pstree
 -
 Süreçleri hiyerarşik bir biçimde görüntülemek istersek `pstree` komutumuzu da kullanabiliriz. Bu komut Windows işletim sisteminde de `tree` olarak kullanılabiliyor. Neyden bahsettiğimizi anlamak için hemen konsola `pstree` komutumuzu verelim.
 
-![enter image description here](https://i.hizliresim.com/Z91130.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/7.png)
 
-Fark etmiş olacaksınız ki yukarıdaki çıktıyı keserek verdim. Çünkü komut isminde(pstree) de yer aldığı gibi, süreçler tıpkı bir ağaç gibi dallanıp budaklanarak hiyerarşik şekilde listelenmiş oldu.
+Komutumuz isminde(`pstree`) de yer aldığı gibi, süreçleri tıpkı bir ağaç gibi dallanıp budaklanarak hiyerarşik şekilde karşımıza getiriyor.
 
 
 top
 -
 Bu komut da tıpkı `ps` komutunda olduğu gibi süreçler hakkında bilgi verir ancak bu işlemi `ps` komutundan farklı olarak 3 saniyede bir yenilenecek şekilde anlık değişimleri verecek şekilde yapar. Temel kullanımı `top` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/oOzzVo.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/8.png)
 
-Eğer varsayılan olarak kullanılan 3 saniyede bir güncelleme tekrarında bir değişiklik yapmak istersek komut `d` parametresiyle birlikte yani `top -d saniye` şeklinde yazarak istediğimiz saniye aralığında süreç bilgilerinin çıktılarının güncellenmesini sağlayabiliriz. Eğer bu ekranı kapatmak istesek ise sadece <kbd>q</kbd> tuşuna basmamız yeterli.
+Eğer varsayılan olarak kullanılan 3 saniyede bir güncelleme tekrarında bir değişiklik yapmak istersek komutumuzu `d` parametresiyle birlikte yani `top -d saniye` şeklinde yazarak istediğimiz saniye aralığında süreç bilgilerinin çıktılarının güncellenmesini sağlayabiliriz. 
+Ben örnek olması açısından bu yenileme hızını 1 saniye olarak ayarlamak için komutumu `top -d 1` şeklinde yazıyorum.
+Ve ayrıca bu ekranı kapatmak istesek ise sadece <kbd>q</kbd> tuşuna basmamız yeterli.
+Gif resminde de görüldüğü gibi `top -d 1` komutu ile her saniye yenilenen süreçler bilgi tablosu <kbd>q</kbd> tuşuna basmamızla sonlanmış oldu.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/9.gif)
+
 
 pgrep
 -
 
-Çalışan süreçlerin belirli kriterlere göre sıralanmasını sağlayan komuttur. Süreç işlemlerinde çalışan süreç üzerinde değişiklik yapabilmemiz için ilk önce değişiklik yapacağımız süreci bulmamız gerekiyor. `pgrep` komutu da çalışan süreç numaralarını(pid) bize veriyor. Süreç numarası sistemde süreçlerin haberleşmesini sağlayan numaradır. Buraya takılmadan devam edelim.
+Çalışan süreçlerin belirli kriterlere göre sıralanmasını sağlayan komuttur. 
+
+Süreç işlemlerinde çalışan süreç üzerinde değişiklik yapabilmemiz için ilk önce değişiklik yapacağımız süreci bulmamız gerekiyor. İşte `pgrep` komutu da bizlere lazım olan çalışan süreç numaralarını(pid) veriyor. Süreç numarası sistemde süreçlerin haberleşmesini sağlayan numaradır ve tüm süreçler için benzersiz olacak şekilde atanır. Buraya takılmadan devam edelim.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/10.png)
 
 Örnek vererek komutumuzun kullanımını görmüş olalım.
 
 Örnek göstermek adına armitage aracını çalıştırıyorum. Çalışmakta olan armitage aracının süreci üzerinden örneğimizi yapalım.
+Çalıştırmış olduğumuz amitage aracının süreç numaralarını(procces id(pid)) sorgulamak üzere `pgrep armitage` komutumuzu giriyoruz.
 
-![enter image description here](https://i.hizliresim.com/VryyDq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/11.png)
 
-`pgrep armitage` komutu ile armitage aracının süreç numaralarını(pid) görmüş olduk.
+Ve çıktı da görüldüğü gibi `pgrep armitage` komutu sayesinde armitage aracının süreç numaralarını(pid) görmüş olduk.
 
 Şimdi de `pgrep` komutunun birkaç işlevsel parametresini görelim.
 
 **l :** Süreçlerin numaraları ile beraber süreç isimlerini de görmek için kullanılır.
 
-![enter image description here](https://i.hizliresim.com/nOGGl1.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/12.png)
 
 **lu :** Belirtilen kullanıcıdaki, süreçlerin numaraları ile beraber süreç isimlerini de görmek için kullanılır. Burada `u` parametresi hedef kullanıcı belirtmemizi sağlar `l` parametresini zaten bir önceki kısımda açıklamıştık.  
 
-![enter image description here](https://i.hizliresim.com/vjooPO.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/13.png)
 
 İleride bu bilgiler bize lazım olacak şimdi süreçleri sonlandırma komutları ile devam edelim.
 
@@ -2135,35 +2291,37 @@ Komutlarımız isimlerinden de anlaşılabileceği gibi süreçleri sonlandırma
 
 **`kill süreç_numarası(pid)`** : Süreçleri pid(süreç numarası) ile sonlandırmak.
 
-![enter image description here](https://i.hizliresim.com/1JnnE1.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/14.png)
 
 **`kill -9 süreç_numarası(pid)`** : Kapanmaya karşı direnen süreçleri pid(süreç numarası) ile sonlandırmak.
 
-![enter image description here](https://i.hizliresim.com/LbooDJ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/15.png)
 
 **`killall süreç_ismi`** : Süreçleri isimleri ile sonlandırmak.
 
-![enter image description here](https://i.hizliresim.com/rOdd5B.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/16.png)
 
 **`killall -9 süreç_ismi`** : Kapanmaya karşı direnen süreçleri isimleri ile sonlandırmak.
 
-![enter image description here](https://i.hizliresim.com/7688am.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/17.png)
 
 
 **`killall -i süreç_ismi`** : Süreçleri isimlerini kullanarak ve onay alarak sonlandırmak.
 
-![enter image description here](https://i.hizliresim.com/PlEE1v.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/18.png)
+
 
 xkill
 -
 
 Bu komutumuz yanıt vermeyen bir programı grafiksel arayüzden kapatmamızı sağlayan ilginç bir komuttur.
 
-Diyelim ki leafpad aracımızı açtık ve her ne nedenle olursa olsun yanıt vermeyi kesti bu noktada eğer leafpad aracını anında kapatmak istersek konsola `xkill` yazıyoruz ve fare imleci çarpı işaretine dönüşüyor. Bu çarpı işareti ile tıkladığımız araç otomatik olarak kapanıyor.
+Diyelim ki leafpad aracımızı açtık ve her ne sebeple olursa olsun yanıt vermeyi kesti, bu noktada eğer leafpad aracını anında kapatmak istersek konsola `xkill` yazıyoruz ve fare imleci çarpı işaretine dönüşüyor. Bu çarpı işareti ile tıkladığımız araç otomatik olarak kapanıyor.
 
-![enter image description here](https://i.hizliresim.com/qG22NW.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/19.gif)
 
 Anlatım havada kalmış olabilir o yüzden `xkill` komutunun kullanımını kesinlikle sizler de hemen deneyin akılda kalması kolay bir komut zaten.
+
 
 fg-bg-jobs
 -
@@ -2176,25 +2334,31 @@ Konsoldan leafpad uygulamasını açalım. Bunun için konsola `leafpad` yazmam�
 
 Yazdıktan sonra ekrana leafpad uygulaması geldi.
 
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/20.png)
+
 Programı çalıştırdığımız konsol şu anda leafpad uygulamasını çalıştırmakla meşgul. Yani bu demek oluyor ki eğer biz bu konsol üzerinden yeni bir komut girmek istersek bu mümkün olmayacak. İşte bu yüzden halihazırda çalışan leafpad uygulamasının çalışmasını durdurup arkaplana atmalıyız ki yeni komutlar girdiğimizde konsol leafpad uygulaması ile meşgul olmasın.
 
 Konsolda çalışan leafpad uygulamamızı arkaplana atmak yani duraklatmak için <kbd>Ctrl + Z </kbd> tuş kombinasyonunu kullanıyoruz. Bu işlemin ardından konsol bize aşağıdaki gibi bir çıktı basarak leafpad uygulamasının durduğunu haber veriyor.
 
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/21.png)
+
 Konsolun bize leafpad programının durduğunu haber verdiğini söylemiştik. Ayırca bu gibi durumlarda sürecin durumunu sorgulama yapmak için `jobs` komutunu da kullanabiliyoruz.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/22.png)
 
 Artık leafpad programımızın durdurulduğundan kesin eminiz. Hatta leafpad uygulamasına grafiksel arayüzden bir şeyler yazmaya çalıştığımızda uygulama durdurulduğu için hiç bir tepki vermiyor. Yani konsolumuz artık leafpad uygulamasının sürecini işlemiyor. Bunu teyit etmek için önceden konsola komut veremediğimizi ele alırsak denemek için konsola `ls` komutumuzu giriyoruz. 
 Adımların her birini genel olarak .gif olarak verdiğim resimde görebilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/PlEE2N.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/23.gif)
 
-`ls` komutunun çıktısını alabildik bu da demek oluyor ki konsol ekranımız önceden olduğu gibi leafpad uygulaması ile meşgul değil. Böylelikle yeni komutlar alabiliyor. 
+`ls` komutunun çıktısını alabildik bu da demek oluyor ki konsol ekranımız önceden olduğu gibi leafpad uygulaması ile meşgul değil, böylelikle yeni komutlar alabiliyor. 
 
 
 Leafpad programı durduruldu ancak biz hem leafpad programını kullanmak hem de aynı konsol ekranından yeni komutlar girebilmek istiyoruz. İşte bu noktada durdurulan leafpad süreçlerinin arkaplana alınarak çalıştırılmasına devam edilmesi gerekiyor. Bu işlevi de `bg` komutu sağlıyor. Komut satırımıza `bg` komutumuzu girdiğimizde artık leafpad programı süreçleri arkaplanda çalışır duruma geçiyor ve biz hem konsol ekranından yeni komutlar girebiliyoruz hem de leafpad uygulamamızı kullanabiliyoruz. Leafpad uygulamasının çalışır olduğunu `jobs` komutu ile de aşağıdaki şekilde teyit edebiliriz.
 
-![enter image description here](https://i.hizliresim.com/7688WW.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/24.gif)
 
-Eğer arkaplana attığımız program sürecini tekrar eskisi gibi çalışır hale getirmek istersek `fg` komutumuzu kullanabiliriz. Bu komutumuzu kullandığımızda konsol artık yeni komut almayacak ve tekrar sadece leafpad uygulaması ile meşgul olacak.
+Eğer arkaplana attığımız program sürecini tekrar eskisi gibi konsol üzerinden(ön planda) çalışır hale getirmek istersek `fg` komutumuzu kullanabiliriz. Bu komutumuzu kullandığımızda konsol artık yeni komut almayacak ve tekrar sadece leafpad uygulaması ile meşgul olacak.
 
 Yukarıda verilen .gif ile bu durumlar ele alınmıştır.
 
@@ -2206,16 +2370,9 @@ Disk İşlemleri
 
 Disk ile ilgili yapabileceğimiz bölümleme, formatlama, yedekleme ve diğer işlemleri gerçekleştirebileceğimiz çeşitli komutlar var. Bu bölümde bu komutları ve işlevsel yanlarını ele alacağız. Konumuza ilk olarak daha önce de kullanmış olduğumuz `fdisk` komutu ile başlayalım.
 > **Komutlara geçmeden önce disk üzerinde yapacağımız işlemlerde son derece dikkatli olmamız gerektiğini aklınızdan çıkarmayın lütfen.**
-
 > **Yapacağımız yanlışlar dosyalarımızın kalıcı olarak silinmesine ve daha farklı sorunlara yol açabilir.**
+
 > **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
-
-gparted
--
-Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk aracı denilebilir. Grafiksel arayüze sahip olduğu için açıklamasını burada vermem resimler ile verimsiz ve yetersiz olur. Ancak hazırladığım eğtim kursunda anlatımı videolu şekilde gerçekleştirdim eğer isterseniz [kursumu satın alarak](https://www.udemy.com/) hem bana destek olabilir hem de bu kaynağın açıklamalı anlatımını edinmiş olursunuz. Kursumu satın almak istemezseniz internetteki Türkçe-İngilizce kaynaklarda kullanımı hakkında bolca bilgiye ulaşabilirsiniz. Açmak için konsola `gparted` yazmanız yeterli olacaktır.
-
-![enter image description here](https://i.hizliresim.com/nOA9Oa.png)
-
 
 
 fdisk
@@ -2228,35 +2385,36 @@ Komutun aldığı temel parametreleri ele alarak konumuza devam edelim.
 
 **fdisk -l :** disk bölümlerini listeler.
 
-![enter image description here](https://i.hizliresim.com/vjgAjD.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/1.png)
+Gördüğünüz gibi disk bölümleri listelenmiş oldu.
 
-Komutumuzu `fdisk /dev/sda` şeklinde parametresiz olarak vermemiz durumunda konsol bizden komut bekler.
+Komutumuzu `fdisk /dev/sda` şeklinde parametresiz olarak vermemiz durumunda konsol bizden komut bekler. Buradaki <kbd>/dev/sda</kbd> genel disk alanını temsil ediyor. Bizde disk üzerinden işlem yapacağımız için komutumuzu bu şekilde girdik.
 
-![enter image description here](https://i.hizliresim.com/1JYaJb.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/2.png)
 
 Hazır komutumuzu parametresiz kullanmışken bizden komut bekleyen konsola girebileceğimiz parametreleri ele alalım.
 
 **m :** yardım menüsünü açar. Burada `fdisk` komutu ile kullanabileceğimiz parametreler listelenir.
 
-![enter image description here](https://i.hizliresim.com/Lbp8bz.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/3.png)
 
 Çıktıda görüldüğü üzere `fdisk` komutu disk konusunda çok fazla işleve sahip. Ancak biz sadece birkaç temel işlevini göreceğiz.
 
 **p :** disk bölümleme tablosunu gösterir.
 
-![enter image description here](https://i.hizliresim.com/rOgXOz.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/4.png)
 
 Çıktımız tıpkı komutu `fdisk -l` şeklinde kullandığımızdaki gibi oldu.
 
 **l :** disk bölümlerini listeler.
 
-![enter image description here](https://i.hizliresim.com/76oW6r.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/5.png)
 
 **d :** bölüm silmek için kullanılır.
 
 Ben `p` parametresi ile listelediğim disk bölüm tablosundan 3. bölümü yani <kbd>/dev/sda3</kbd> bölümünü silmek üzere `d` parametresini vererek Partition number kısmını 3 olarak belirttim.
 
-![enter image description here](https://i.hizliresim.com/Pl52lb.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/6.png)
 
 Çıktıda da görüldüğü gibi seçili alan silinmiş oldu. Artık diskte alan açıldığına göre yeni bir disk bölümü oluşturabiliriz.
 
@@ -2266,11 +2424,11 @@ Ben `p` parametresi ile listelediğim disk bölüm tablosundan 3. bölümü yani
 
 **Primary Partition** denilen kısım işletim sistemlerini kurduğumuz sabit disk bölümüdür. Bir sabit diskte maksimum 4 tane primary partition olabiliyor ve bunlardan bir tanesinin mutlaka aktif partition olması gerekiyor ki işletim sisteminiz boot işlemi sırasında çalıştırılabilsin.
 
-**Extended Partition** ise aktif primary partition çıkarıldığında geriye kalan tüm sabit disk alanınızdır, bunun içine pasif primary partitionlar da dahildir.
+**Extended Partition** ise aktif primary partition çıkarıldığında geriye kalan tüm sabit disk alanımızdır, bu alanın içine pasif primary partitionlar da dahildir.
 
 Bu açıklama yeterli gelmemiş dolayısı ile anlamamış olabilirsiniz ancak kafa karışıklığına sebep olmamak için ayrıntıya girmiyorum. Merak eden arkadaşlar kısa bir araştırma sonucu istediklerinden de fazla bilgiye ulaşabilirler. Şimdi konumuza devam edelim.
 
-![enter image description here](https://i.hizliresim.com/gOkvOQ.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/7.png)
 
 First sector alanını <kbd>enter</kbd> ile geçip, Last sector alanına  `+1G` olarak girdim ve 1GB boyutunda bir bölüm oluşturmuş olduk. Bunu teyit etmek için `p` parametresini kullandık.
 
@@ -2280,22 +2438,23 @@ First sector alanını <kbd>enter</kbd> ile geçip, Last sector alanına  `+1G` 
 
 Gerekli ayarlamaları ve işlemleri gerçekleştirdikten sonra `fdisk` aracını kaydederek kapatmak istersek `w` parametresini kullanmamız yeterli.
 
-![enter image description here](https://i.hizliresim.com/Z9Lj90.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/8.png)
 
 **q :** çıkış yapar
 
 `q` parametresi direk olarak yapılan değişiklikleri kaydetmeden `fdisk` aracı konsolundan çıkış yapar.
 
-![enter image description here](https://i.hizliresim.com/Vrl8rR.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/9.gif)
+
 
 cfdisk
 -
 `fdisk` aracının görsel arayüze sahip versiyonudur. Açmak için `cfdisk` komutu yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/Z9LRB0.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/10.png)
 
-Ayrıca benden bir tavsiye, `fdisk`'in kullanımı `cfdisk`'e oranla biraz zordur, dolayısıyla kolayca hata yapabilir ve istenmeyen durumlarla karşı karşıya kalabilirsiniz. Etkileşimli bir arayüzü olan `cfdisk`'in kullanımı daha kolay olduğundan hata yapmak daha zordur. Hele birde Linux'unuzu Türkçe kullanıyorsanız, `cfdisk`'in de Türkçe arayüze sahip olmasından dolayı çok rahat şekilde işlemlerinizi gerçekleştirebilirsiniz.
-Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Çok kolay şekile kendiniz keşfedebilirsiniz.
+Ayrıca benden bir tavsiye, `fdisk`'in kullanımı `cfdisk`'e oranla biraz zordur, dolayısıyla kolayca hata yapabilir ve istenmeyen durumlarla karşı karşıya kalabilirsiniz. Etkileşimli bir arayüzü olan `cfdisk`'in kullanımı daha kolay olduğundan hata yapmak daha zordur.
+Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Çok kolay şekile kendiniz keşfedebilirsiniz.(*Disk ile ilgili büyük sorunlara yol açmamak adına keşiflerinizi ana makina haricindeki sanal ortamlarda gerçekleştirmenizi şiddetle tavsiye ederim.*)
 
 badblocks
 -
@@ -2303,31 +2462,32 @@ badblocks
 
 Sırasıyla kullanım parametrelerine göz atalım:
 
-**b :** blok uzunluğu bayt cinsinden gösterir.(aşağıdaki kullanımda yer alan `s` ve `v` parametreleri ileride açıklanmıştır)
-
-![enter image description here](https://i.hizliresim.com/YgvayE.png)
-
-**c :** bir seferde sınanacak blok sayısı belirtilir ve bu sayı öntanımlı olarak tek seferde 16 blok okuyacak şekildedir. Bu sayının arttırılması bu işlemin verimini yani hatalı blokların bulunma ihtimalini artırır ancak arttırıldığı sayıya bağlı olarak bellek kullanımı da artacağı için bu sayının yüksek tutulması durumunda sistem "tamponları ayırmada bellek yetersizliği" hatasını verecek ve işlemi sonlandıracaktır. Tersi durumda yani bu sayının çok düşük tutulması da hatalı blokların gizli kalmasına neden olarak yapılan işin verimini düşürecektir. Yani dengeli kullanım çok önemlidir.
-
-![enter image description here](https://i.hizliresim.com/8Yl3OW.png)
-
-**f :** dosya sisteminin zarar görüp sistemin çökebileceği durumlarda `badblocks` tarama yapmayı reddeder. Ancak siz çoğu durumda önerilmese de yinede tarama yapmaya zorlamak isterseniz `f` parametresini kullanabilirsiniz.
-
-![enter image description here](https://i.hizliresim.com/D7lr1m.png)
-
-**p :** diskin kaç defa taranacağını belirtir öntanımlı olarak bu değer sıfırdır yani ekstra değer belirtilmezse disk yalnızca 1 kez taranır.
-
-![enter image description here](https://i.hizliresim.com/m2GabZ.png)
-
 **s :** taranan blokların numaralarını çıktı olarak vererek sürecin gelişimini gösterir.
 
-![enter image description here](https://i.hizliresim.com/NZ5dXL.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/11.gif)
 
 **v :** süreçle ilgili ayrıntılı bilgi verir.
 
-![enter image description here](https://i.hizliresim.com/azoavg.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/12.gif)
 
-Bu parametreler dışında da başka parametreler mecvut konsola `man badblocks` yazarsanız zaten diğer parametreler hakkında da kısaca bilgi sahibi olabilirsiniz.
+**b :** bir blok boyutunu bayt cinsinden belirtebiliyoruz.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/13.png)
+
+**c :** bir seferde sınanacak blok sayısı belirtilir ve bu sayı öntanımlı olarak tek seferde 16 blok okuyacak şekildedir. Bu sayının arttırılması bu işlemin verimini yani hatalı blokların bulunma ihtimalini artırır ancak arttırıldığı sayıya bağlı olarak bellek kullanımı da artacağı için bu sayının yüksek tutulması durumunda sistem "tamponları ayırmada bellek yetersizliği" hatasını verecek ve işlemi sonlandıracaktır. Tersi durumda yani bu sayının çok düşük tutulması da hatalı blokların gizli kalmasına neden olarak yapılan işin verimini düşürecektir. Yani dengeli kullanım çok önemlidir.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/14.png)
+
+**f :** dosya sisteminin zarar görüp sistemin çökebileceği durumlarda `badblocks` tarama yapmayı reddeder. Ancak siz çoğu durumda önerilmese de yinede tarama yapmaya zorlamak isterseniz `f` parametresini kullanabilirsiniz.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/15.png)
+
+**p :** diskin kaç defa taranacağını belirtir öntanımlı olarak bu değer sıfırdır yani ekstra değer belirtilmezse disk yalnızca 1 kez taranır.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/16.png)
+
+
+Bu parametreler dışında da başka parametreler mecvut. Konsola `man badblocks` yazarsanız diğer parametreler hakkında da kısaca bilgi sahibi olabilirsiniz.
 
 Neticede `badblocks` komutu ve parametreleri yardımı ile hatalı blok tespiti yapabiliyoruz. Şimdi de bu hatalı blokları düzeltme kısmına gelelim.
 
@@ -2338,11 +2498,11 @@ Komutun işlevi diskteki hatalı blokları düzeltmeye çalışmaktır. Aslında
 
 USB belleğimizin disk adını öğrenmek için sistemimizdeki diskleri `fdisk -l` komutu ile listeleyelim.
 
-![enter image description here](https://i.hizliresim.com/oOAlWo.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/17.png)
 
 Çıktının alt kısımında yer alan <kbd>/dev/sdb1</kbd> USB belleğimizin diskteki adı. Şimdi belleğimizin adını öğrendiğimize göre onarma işlemini deneyebiliriz. Bunun için komut satırına `fsck -p /dev/sdb1` komutunu giriyoruz.
 
-![enter image description here](https://i.hizliresim.com/lOkRGl.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/18.png)
 
 Ve USB diskteki hatalı bloklar düzeltilerek işlemimiz başarılı bir şekilde gerçekleşmiş oldu.
 
@@ -2350,12 +2510,17 @@ df Komutu
 -
 `df` komutu bizlere disklerin; dosya sistemini, boyutunu, doluluk oranını, bağlandığı yeri(mount) gibi bilgileri kısa bir liste halinde verir. Komut ile birlikte `h` parametresini kullanırsak hakkındaki geniş bilgi içeriği bizlere sunulur. Çıktılar aşağıdaki gibidir.
 
-![enter image description here](https://i.hizliresim.com/VrlRnq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/19.png)
 
 Diskler hakkında genel bilgi edinmek için sık kullanılan bir komuttur. Ayrıca komutla birlikte kullanacağımız `m` parametresi çıktıları MB cinsinden verirken, `k` parametresi ile kullanımlarda çıktılar KB cinsinden olacaktır. Bunlar haricinde daha fazla detay almak için man sayfasına bakabilirsiniz.
 
-![enter image description here](https://i.hizliresim.com/nOAo61.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/20.png)
 
+gparted
+-
+Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk aracı denilebilir. Grafiksel arayüze sahip olduğu için açıklamasını burada vermem resimler ile verimsiz ve yetersiz olur. Ancak hazırladığım eğtim kursunda anlatımı videolu şekilde gerçekleştirdim eğer isterseniz [kursumu satın alarak](https://www.udemy.com/) hem bana destek olabilir hem de bu kaynağın açıklamalı anlatımını edinmiş olursunuz. Kursumu satın almak istemezseniz internetteki Türkçe-İngilizce kaynaklarda kullanımı hakkında bolca bilgiye ulaşabilirsiniz. Açmak için konsola `gparted` yazmanız yeterli olacaktır.
+
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/21.png)
 
 umount (Diski Ayırmak)
 -
@@ -2364,11 +2529,11 @@ Diski ayırmak gibi bir başlık aklınızda diski bölümlemek gibi bir anlam i
 
 Bu işlem için öncelikle diskimiz hakkında genel bilgi sahibi olmak adına konsola `df -h` komutunu verelim.
 
-![enter image description here](https://i.hizliresim.com/VrlRnq.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/22.png)
 
 USB diskimin adının <kbd>/dev/sdb1</kbd> ve diskin sisteme bağlandığı konumun da <kbd>/media/root/GPARTED-LIV</kbd> dizini olduğunu öğrenmiş oldum. Artık gerekli bilgileri öğrendiğimize göre diski sistemden çıkarmak için konsola `umount /dev/sdb1` şeklinde komut verebiliriz.
 
-![enter image description here](https://i.hizliresim.com/vjg72O.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/23.png)
 
 Diski çıkarma işlemi sonrasında bu işlemi teyit etmek için birde `df -h` komutunu kullandık. Sonuçta diskimiz sistemden bağını koparmış oldu.
 
@@ -2376,13 +2541,13 @@ Diski çıkarma işlemi sonrasında bu işlemi teyit etmek için birde `df -h` k
 mount (Diski Bağlamak)
 -
 
-Sistemden ayırdığımız diski tekrar bağlamak için `mount` komutunu kullanırız. Kullanım şekli `mount -t dosya_sistemi aygıt_adı bağlanacak_konum` şeklindedir.
+Sistemden ayırdığımız diski tekrar bağlamak için `mount` komutunu kullanırız. Kullanım şekli `mount -t aygıt_adı bağlanacak_konum` şeklindedir.
 
 Diski sisteme bağlamadan önce yapmamız gereken şey diskin bağlanacağı konumu oluşturmaktır. Bunun için ben masaüstüne `mkdir USB` komutu ile <kbd>USB</kbd> adında bir klasör oluşturdum.
 
-USB nin açılacağı hedef klasör oluştuğuna göre artık USB diskimizi buraya bağlayabiliriz. Bunun için konsola `mount /dev/sdb1 /Desktop/USB` komutunu veriyorum ve daha sonra diskin durumunu `df- h` komutu ile sorguluyorum.
+USB nin bağlanabileceği hedef klasör oluştuğuna göre artık USB diskimizi buraya bağlayabiliriz. Bunun için konsola `mount /dev/sdb1 /Desktop/USB` komutunu veriyorum ve daha sonra diskin durumunu `df- h` komutu ile sorguluyorum.
 
-![enter image description here](https://i.hizliresim.com/1JY0W1.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/24.png)
 
 Görüldüğü gibi USB disk <kbd>Desktop/USB</kbd> konumuna bağlanmış bulunuyor.
 
@@ -2399,7 +2564,7 @@ Seviyeler ve ifade ettikleri aşağıdaki tabloda verilmiştir.
 
 O anda hangi seviyede çalıştığımızı öğrenmek istersek komut satırına `runlevel` komutunu vermemiz yeterli.
 
-![enter image description here](https://i.hizliresim.com/y0nmA7.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/1.png)
 
 Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de daha önce de söylediğimiz gibi linux, sistemi varsayılan olarak 5. seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu `init çalışma_seviyesi` şeklinde yapabiliriz.
 
@@ -2425,31 +2590,36 @@ service
 
 Servisimizin durumunu sorgulamak için komut satırımıza `service ssh status` yazıyoruz.
 
-![enter image description here](https://i.hizliresim.com/6J6Ql3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/2.png)
+
 
 Komut satırı çıktı olarak bize ssh servisinin kapalı olduğunu bildirdi.
 
 Şimdi servisimizi başlatmak üzere komut satırına `service ssh start` komutumuzu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/W7r46N.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/3.png)
+
 
 Servisimizi başlattıktan sonra durumu kontrol etmek için tekrar `service ssh status` komutumuzu verdik ve görüldüğü gibi ssh servisimiz artık çalışır durumda.
 
 Şimdi ise çalışan servisimizi kapatmak için komut satırına `service ssh stop` komutumuzu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/3ERN1r.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/4.png)
+
 
 Çıktıda da görüldüğü gibi ssh servisimiz kapatılmış oldu. Bunu da `service ssh status` komutu ile teyit etmiş olduk.
 
 Komutumuzun diğer bir kullanım şeklide de servisi yeniden başlatmak. Bunun için `service ssh restart` komutumuzu kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/Rn6Xba.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/5.png)
+
 
 Servisimizin durumunu `service ssh status` komutu ile kontrol ettik ve servisimizin yeniden başladığını görmüş olduk.
 
 Son olarak ise sistemde bulunan tüm servislerin sıralanmasını sağlayan `service --status-all` komutunu görelim.
 
-![enter image description here](https://i.hizliresim.com/p6Yjjq.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/6.gif)
+
 
 Çıktıdaki servislerin sol tarafında yer alan <kbd>[ - ]</kbd> işareti servisin çalışmadığını, <kbd>[ + ]</kbd> işareti servisin çalıştığını ve <kbd>[ ? ]</kbd> işareti ise servisin durumunun belirsiz olduğunu ifade ediyor.
 
@@ -2473,7 +2643,7 @@ inode(düğüm)
 -
 Inode(düğüm), dosyanın sahibi, oluşturulma tarihi, boyutu, tipi, erişim hakları, en son erişim tarihi ve en son değişikliklerin yapıldığı tarih gibi birçok meta verileri içeren yapıdır. Yani biz herhangi bir dosya oluşturduğumuzda disk üzerinde 1 inode yer kaplamaktadır. Bununla ilgili olarak inode tablosunu görmek için konsola `df -i` komutumuzu verelim.
 
-![enter image description here](https://i.hizliresim.com/NZbDWa.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/1.png)
 
 Hemen çıkıtları ele alarak açıklamamıza devam edelim.
 
@@ -2485,7 +2655,7 @@ Bunun anlamı her bir dosya 1 inode yer kapladığı için <kbd>/dev/sda1</kbd> 
 
 Her bir inode(düğüm) numarasının benzersiz olduğunu söylemiştik. Bu durumu teyit etmek için bulunduğumuz konumdaki dosyaların inode numaralarını görebilmek adına komut satırımıza `ls -li` komutumuzu veriyoruz.
 
-![enter image description here](https://i.hizliresim.com/azBY04.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/2.png)
 
 Çıktıda yer alan soldaki numaralar, ilgili dosyanın inode numarasını temsil ediyor.
 
@@ -2500,17 +2670,17 @@ Sembolik link oluşturmak için `ln -s` komutu kullanılır. Komutun kullanım �
 
 Music dosya konumundayken `touch` komutu yardımı ile "klasik" isimli bir dosya oluşturduk.
 
-![enter image description here](https://i.hizliresim.com/Yg56W2.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/3.png)
 
 Oluşturduğumuz "klasik" isimli dosyanın kısayolunu, komutumuzu `ln -s dosya_adı kısayol_adı` şeklinde kullanarak oluşturduk.
 
-![enter image description here](https://i.hizliresim.com/Z913d3.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/4.png)
 
 Son olarak `ls -i` komutunu vererek orijinal dosyanın ve sembolik link yardımı ile oluşturulan kısayol dosyasının inode değerlerini karşılaştırdık. Çıktıda da görüldüğü üzere değerler farklı olarak karşımıza çıkmış oldu.
 
 Ayrıca dosyaları `file` isimli bir komut yardımı ile inceleyerek de bilgi alabiliriz.
 
-![enter image description here](https://i.hizliresim.com/8YEz2n.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/5.png)
 
 Sembolik link komutu ile oluşturduğumuz dosyanın kısayol olduğunu çıktıda görebiliyoruz. Ancak son olarak kısayol dosyamızın çalışma durumunu da test edelim.
 
@@ -2518,11 +2688,11 @@ Bunun için ilk başta dosyamızın içeriğini okuyalım daha sonra orijinal do
 
  Orijinal dosyamın içerisine "Dosya İçeriğinin İlk Sayfası" şeklinde bir yazı ekledim. Biz orijinal dosyada yer alan bu yazıyı silip yeni bir ifade yazdıktan sonra kısayoldaki değişimi gözlemleyeceğiz.
 
-![enter image description here](https://i.hizliresim.com/D7kD6o.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/6.png)
 
 Eğer orijinal dosyayı silersek kısayol dosyası da açılmayacak ve bizlere hata mesajı bildirilecektir.
 
-![enter image description here](https://i.hizliresim.com/m28o78.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/7.png)
 
 Görüldüğü gibi kısayol dosyası orijinal kaynağı silindiği için okunamadı.
 
@@ -2535,21 +2705,21 @@ Sıra geldi katı link bağlantısının kullanımına. Katı link bağlantısı
 
 Örnek olması açısından <kbd>Music</kbd> klasörü altında "caz" adında bir dosya oluşturuyorum. Daha sonra oluşturduğum "caz" isimli klasörün katı linkini `ln caz caz_kati` komutu ile oluşturuyorum.
 
-![enter image description here](https://i.hizliresim.com/lOzq3r.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/8.png)
 
 Çıktıda dikkat edilmesi gereken nokta orijinal "caz" dosyası ile katı bağlantı "caz" dosyasının inode değerlerinin aynı olmasıdır. Bu da demek oluyor ki her iki dosya da her yönüyle birbirlerinin aynı durumda.
 
 Ayrıca orijinal ya da katı link ile oluşturulmuş dosyaların birinde yapacağımız değişiklik tıpkı sembolik linkte olduğu gibi diğer dosyada da geçerli olacaktır. Yani bu orijinal dosya ile katı link dosyası halihazırda bağlantılı dosyalar.
 
-![enter image description here](https://i.hizliresim.com/EPED6z.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/9.png)
 
 Hemen daha önce yaptığımız gibi `file` komutu ile orijinal dosya ve link ile oluşturulmuş dosyalarımızı karşılaştıralım.
 
-![enter image description here](https://i.hizliresim.com/2JQaN2.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/10.png)
 
 Komutun sonucunda her ikisininde ayrı ayrı dosyalar olduğunu görmüş olduk. Bu da demek oluyor ki biz eğer orijinal dosyayı silersek sembolik linkte olduğu gibi katı link ile oluşturulmuş dosya kullanılmaz hale gelmeyecektir. Bunu da hemen test edelim.
 
-![enter image description here](https://i.hizliresim.com/jyY61L.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/11.png)
 
 Gördüğünüz gibi orijinal dosyayı silmeme rağmen katı link ile oluşturmuş olduğum dosya hala okunabilir durumda.
 
@@ -2560,11 +2730,11 @@ Gördüğünüz gibi orijinal dosyayı silmeme rağmen katı link ile oluşturmu
 Kurma-Kaldırma-Güncelleme İşlemleri
 =
 
-Linux kullanacaksak mutlaka bilmemiz gerekenler arasında sistemi güncelleme, program kurma ve kaldırma gibi işlemleri yerine getirmek var. Bu işlemleri nasıl yerine getirebileceğimizi bu konunun devamında öğreneceğiz. İlk olarak sistemi güncelleme işlemi yapalım.
+Linux kullanacaksak mutlaka bilmemiz gerekenler arasında sistemi güncelleme, program kurma ve kaldırma gibi işlemleri yerine getirmek var. Bu işlemleri nasıl yerine getirebileceğimizi bu konunun devamında öğreneceğiz. Anlatıma ilk olarak sistemi güncelleme işlemi ile başlayalım.
 
 Sistemi Güncelleme
 -
-Linux sistemleri kullanıcının ihtiyacı olduğunda programa kolayca ulaşabilmesini sağlayacak program paketlerini içinde bulunduran kendi paket depolarına(repository) sahiptirler. Farklı linux dağıtımları için bu paketler de farklılık gösterebiliyor. Bu yüzden farklı linux dağıtımlarının da kendi paketleri üzerinde işlem yapabilmek için farklı komutları vardır.
+Linux sistemleri, kullanıcının ihtiyacı olduğunda programa kolayca ulaşabilmesini sağlayacak program paketlerini içinde bulunduran kendi paket depolarına(repository) sahiptirler. Farklı linux dağıtımları için bu paketler de farklılık gösterebiliyor. Bu yüzden farklı linux dağıtımlarının da kendi paketleri üzerinde işlem yapabilmek için farklı komutları vardır.
 
 Dağıtımlar ve kullanılan paketlere göre komutları aşağıdaki tabloda verilmiştir.
 
@@ -2572,9 +2742,11 @@ Dağıtımlar ve kullanılan paketlere göre komutları aşağıdaki tabloda ver
 
 Debian paketlerinin <kbd>.deb</kbd> uzantılı olduğunu yukarıdaki tabloda gördük. Kullandığımız dağıtım olan Kali'de Debian tabanlı olduğu için anlatıma bu doğrultuda devam edeceğiz.
 
+Güncelleme işleminde kullanılan komutlarımızı tanıyarak devam edelim.
+
     apt-get update
 
-Paket listesini(/etc/apt/sources.list) günceller.
+Paket listesini (<kbd>/etc/apt/sources.list</kbd>) günceller.
 
     apt-get upgrade
 
@@ -2594,7 +2766,7 @@ Kurulu olan tüm paketleri siler.
 
 Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>soruces.list</kbd> dosyasına kullanıdığımız versiyona uygun depoları eklemeliyiz.
 
-Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>soruces.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3)versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>soruces.list</kbd> dosyasına ekliyorum.
+Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>soruces.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3) versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>soruces.list</kbd> dosyasına ekliyorum.
 
 `deb http://http.kali.org/kali kali-rolling main contrib non-free`
 
@@ -2608,9 +2780,12 @@ Kali 2016.1 ve sonrası için:**`deb http://http.kali.org/kali kali-rolling main
 
 
 Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
-![](https://camo.githubusercontent.com/59ce93a434143705c35a81775f6d74724c7469b6/68747470733a2f2f692e68697a6c69726573696d2e636f6d2f324a5130324f2e706e67)
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/1.png" width="875">
 
 Sıra gelidi güncelleme işlemine, bunun için `apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y` komut bütününü kullanabiliriz.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/2.png" width="875">
 
 Güncelleme işlemi boyunca kullandığımız `-y` parametresi sayesinde herhangi bir soru sorulmadan bütün işlemler otomatik olarak tamamlanacak ve güncelleme işlemi tamamlanacaktır.
 
@@ -2621,33 +2796,58 @@ Linux'ta program kurmak için birden fazla yöntem bulunuyor. Bunlardan bir tane
 Depodan Kurulum
 -
 Depoda bulunan programların kurulumlarını yaparken `apt-get install program_adı` komut bütünü kullanılıyor.
+Unutmayın depodan(repository) kurulum yaparken sisteminizin güncel olması önemlidir. Şayet sisteminizi güncel tutmuyorsanız yani repolarınız güncel değilse **depodan program yükleme** çabalarınız hüsranla sonuçlanabilir.
 
 Örnek olması açısından filezilla isimli bir programın depodan kurulumunu yapmak için konsola `apt-get install filezilla` komutunu girdim.
 
-![enter image description here](https://i.hizliresim.com/1JnAYb.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/3.gif" width="875">
 
-Ve program kurulmuş oldu konsola `filezilla` yazarak da bu durumu teyit ettim.
+Ve program kurulmuş oldu. Konsola `filezilla` yazarak da bu durumu teyit ettim.
+
+Şayet kurduğunuz programı kaldırmanız(silmeniz) gerekirse konsola `apt-get remove program_adı` şeklinde girdiğinizde ilgili program otomatik olarak sistemden kaldırılacaktır.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/4.gif" width="875">
+
+Sadece programı kaldırmakla yetinmeyip bir de programın yapılandırma dosyalarını da sistemden kaldırmak isteyebilirsiniz. 
+Yapılandırma dosyaları ile birlikte programı kaldırmak için komutu 
+
+`apt-get --purge remove program_adı` 
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/5.gif" width="875">
+
+veya 
+
+`apt-get purge program_adı` 
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/6.gif" width="875">
+
+şeklinde kullanabilirsiniz.
+
+Bu sayede program yapılandırma dosyaları ile birlikte tamamen silinmiş oluyor.
+
+Sizler bu şekilde depolarda yer alan programları oldukça kolay şekilde kurup kaldırabilirsiniz.
+
 
 Paket Yönetim Sistemi İle Kurulum
 -
-Bu işlem için kullandığımız dağıtıma uygun derleyiciyi kullanmalıyız. Daha önce Kali'nin <kbd>.deb</kbd> uzantılı paketleme sistemi olduğunu öğrenmiştik. Bu yüzden biz <kbd>.deb</kbd> uzantılı kurulum paketlerini açmak için `dpkg` komutunu kullanıyoruz. Sanırım kodun kısaltmasının nereden geldiğini bilirsek daha kolay akılda kalabilir. Kodun kısaltması "debian package(debian paketi)" kısaltmasından gelmektedir. Ayrıca `dpkg` komutunu kullanmada yardımcı bir paket yöneticisi programı(synaptic) kullanarak da kurulum işlemlerini yerine getirebiliriz. Konumuza ilk olarak `dpkg` komutu ve kullanımı ile devam edelim.
+Bu işlem için kullandığımız dağıtıma uygun derleyiciyi kullanmalıyız. Daha önce Kali'nin <kbd>.deb</kbd> uzantılı paketleme sistemi olduğunu öğrenmiştik. Bu yüzden biz <kbd>.deb</kbd> uzantılı kurulum paketlerini açmak için `dpkg` komutunu kullanıyoruz. Sanırım kodun kısaltmasının nereden geldiğini bilirsek daha kolay akılda kalabilir. Kodun kısaltması "debian package(debian paketi)" kısaltmasından gelmektedir. Ayrıca `dpkg` komutunu kullanmadan yardımcı bir paket yöneticisi programı(synaptic) kullanarak da kurulum işlemlerini yerine getirebiliriz. Konumuza ilk olarak `dpkg` komutu ve kullanımı ile devam edelim.
 
 
 Örnek olması açısından ben "master pdf" adında bir programın kurulumunu ele aldım. Bunun için öncelikle programın <kbd>.deb</kbd> uzantılı dosyasını sitesinden indirdim.
 
 Şimdi programı kurmak için `dpkg -i paket_adı.deb` şeklinde komutumu giriyorum.
 
-![enter image description here](https://i.hizliresim.com/XPYzvo.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/7.gif" width="875">
 
 Ve progamım kurulmuş oldu.
 
 Kurduğumuz programı kaldırmak istersek komutumuzu `dpkg -r program_adı` şeklinde yani `-r` parametresini ekleyerek kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/y0nOM0.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/8.gif" width="875">
 
 Program otomatik olarak kaldırılmış oldu. Ancak <kbd>/etc</kbd> dizini altındaki konfigürasyon dosyaları silinmedi. Eğer bu dosyaları da kaldırmak istersek `-P` parametresini kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/Rn65YG.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/9.gif" width="875">
 
 Bu sayede programa ait konfigürasyon dosyaları da tamamen kaldırılmış oldu.
 
@@ -2655,7 +2855,7 @@ Konfigürasyondan bahsetmişken aklınızda bulunsun eğer yüklediğimiz paketi
 
 Kurulu olan tüm paketler hakkında bilgi almak için `-l` parametresi kullanılabilir.(Çıktı uzun olduğundan kısa kesilmiştir.)
 
-![enter image description here](https://i.hizliresim.com/5DROkM.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/10.png" width="875">
 
 Çıktıda yer alan paketlerin sol tarafındaki ifadelerin anlamı:
 
@@ -2667,22 +2867,23 @@ Kurulu olan tüm paketler hakkında bilgi almak için `-l` parametresi kullanıl
 
 Kurulu paketin durumunu öğrenmek için `-s` parametresini kullanabiliriz. Ben örnek olması açısında leafpad programı hakkında bilgi almak için komut satırına `dpkg -s leafpad` komutunu giriyorum.
 
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/11.png" width="875">
 
 Kurulu paketin içeriğini öğrenmek istersek `-L` parametresini kullanırız.
 
-![enter image description here](https://i.hizliresim.com/lOzg7l.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/12.png" width="875">
 
 Eğer indirmiş olduğumuz <kbd>.deb</kbd> uzantılı dosyanın içeriğini henüz kurmadan görmek istersek `-c` parametresini kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/Z91yJA.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/13.png" width="875">
 
 Sistemde kurulmuş ve kaldırılmış tüm paketleri görmek istersek `dpkg --get-selections` komutunu kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/1JnArD.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/14.png" width="875">
 
 Bu paket listesini daha sonra kullanmak üzere bir dosya içerisine yedeklemek istersek komutumuzu `dpkg --get-selections >dosya_adı.txt` şeklinde kullanmamız yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/4aRJ8Q.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/15.png" width="875">
 
 Yedeklediğimiz bu program listeleri sayesinde başka bir sisteme aynı paketleri tek seferde yüklememiz mümkün. Bunun için komutlar aşağıdaki şekildedir.
 
@@ -2693,19 +2894,20 @@ Daha sonra tanıma işlemi bittikten sonra eksik olanların yüklenmesi için ko
 
     apt-get deselect-upgrade
     
-Ayrıca bu işlemin uzun süreceğini unutmayın.
+Ayrıca bu işlemin uzun süreceğini unutmayın. Yani çok fazla spesifik programlarınız yoksa bu yönetemi kullanmamaınzı tavsiye ederim. Bunun yerine kendiniz de pekâla elle kurulumları gerçekleştirebilirsiniz.
 
 Şimdi sıra geldi ikinci yol olan yardımcı paket yöneticisi programı aracılığı ile program kurma-kaldırma-güncelleme işlemlerin yapmaya. Bunun için ilk olarak paket yönetim programı olan **synaptic** programını kurmamız gerek. Komut satırına `apt-get install synaptic` yazarak yardımcı programı indiriyoruz.
 
-![enter image description here](https://i.hizliresim.com/m2895V.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/16.gif" width="875">
 
-Evet "<kbd>y</kbd>" diyerek kuruluma onay veriyoruz ve programımız kurulmuş oluyor. Programı açmak için komut satırına `synaptic` komutunu vermemiz yeterli. Bu program sayesinde program kurup kaldırabilir ve programlar için diğer gerekli işlemleri yerine getirebiliriz. Programın kullanımı oldukça kolay olduğundan keşfini sizlere bırakarak anlatıma devam ediyorum.
+Evet "<kbd>y</kbd>" diyerek kuruluma onay veriyoruz ve programımız kurulmuş oluyor. Programı açmak için komut satırına `synaptic` komutunu vermemiz yeterli. Bu program(synaptic) sayesinde depolarda yer alan programları çok kolay şekilde kurup kaldırabilir ve programlar için diğer gerekli işlemleri yerine getirebiliriz. Programın kullanımı oldukça kolay olduğundan keşfini sizlere bırakarak anlatıma devam ediyorum.
 
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/17.png" width="875">
 
 Kaynak Koddan Derleyerek Kurulum
 -
 
-Linux'a uyumlu sürümü bulunan açık kaynak kodlu yazılımların kaynak kod paketleri bu yazılımların internet sitelerinde, genellikle <kbd>tar.gz </kbd> biçiminde arşivlenmiş olarak indirilmeye sunulurlar. Bu arşivlenmiş olan kaynak kod paketi daha önce gördüğümüz <kbd>.deb</kbd> uzantılı paketlerin aksine ham şekilde yani derlenmemiş kuruluma hazır olmayan şekilde gelirler. Bu derleme işlemini bizim yaparak kurulumu gerçekleştirmemiz gerekir. Ancak her kurulum aynı olmayabilir. <kbd>tar.gz</kbd> veya <kbd>tar.bz2</kbd> benzeri uzantılı paketlerde genellikle programın nasıl kurulacağına dair "install", "readme", "configure" ve benzeri isimlerde yönergeler bulunur. Bu dosyalar okunarak yükleme işlemi gerçekleştirilmelidir. Ancak biz şimdi burada genel kurulum hakkında bilgi edinelim. Kaynak koddan derleyerek kurulum işleme genel olarak aşağıdaki şekildedir:
+Linux'a uyumlu sürümü bulunan açık kaynak kodlu yazılımların kaynak kod paketleri bu yazılımların internet sitelerinde, genellikle <kbd>tar.gz </kbd> biçiminde arşivlenmiş olarak indirilmeye sunulurlar. Bu arşivlenmiş olan kaynak kod paketi daha önce gördüğümüz <kbd>.deb</kbd> uzantılı paketlerin aksine ham şekilde yani derlenmemiş (kuruluma hazır olmayan) şekilde gelirler. Bu derleme işlemini bizim yaparak kurulumu gerçekleştirmemiz gerekir. Ancak her kurulum aynı olmayabilir. <kbd>tar.gz</kbd> veya <kbd>tar.bz2</kbd> benzeri uzantılı paketlerde genellikle programın nasıl kurulacağına dair "install", "readme", "configure" ve benzeri isimlerde yönergeler bulunur. Bu dosyalar okunarak yükleme işlemi gerçekleştirilmelidir. Ancak biz şimdi burada genel kurulum hakkında bilgi edinelim. Kaynak koddan derleyerek kurulum işleme genel olarak aşağıdaki şekildedir:
 
 İndirdiğimiz program arşivini klasöre çıkartırız.
 
@@ -2715,12 +2917,22 @@ Programı derlemeden önce gerekli kütüphaneler ve bağımlılıkları kontrol
 
 Eksik çıkarsa bunları kurmamız gerekicek.
 
+Eğer bu aşamada;
+
+`bash: ./configure: No such file or directory`
+
+`bash: ./configure: Böyle bir dosya ya da dizin yok`
+
+gibi bir hata çıktısı alıyorsanız:
+O program için `./configure` aşamasına gerek yoktur, farklı bir şekilde kuruluyor anlamlarına gelebilir. Bunun için programla birlikte gelen kurulum bilgisini içeren dosyalara("install", "readme", "configure" vb..) iyice göz atmanızı öneririm.
+
 Make aşaması için derleme yapacak paketleri `apt-get install build-essential` komutu ile kuruyoruz.
 
 `make` diyerek programımızı derlemiş oluyoruz.
 
 Son olarak `make install` komutu ile programı sistemimize kuruyoruz.
 
+Silme işlemleri için de programa göre farklı durumlar ve dosyalar oluşabildiği için; kurulum yaparken olduğu gibi silme işlemi için de aynı şekilde programla birlikte gelen yönergeleri okumanız en doğru silme yönetimini size gösterecektir.
 
 
 ----------
@@ -2735,9 +2947,10 @@ joker (wildcard)
 -
 Linux kullanımında işimizi konsoldan yürüteceğimiz zaman bir komutun tek seferde birden fazla nesneyi etkilemesini yani kapsamasını isteyebiliriz. Örneğin bir dizindeki dosyaların tamamını silmek istiyoruz bu iş için aşağıdaki gibi tüm dosya adlarını komut satırına yazmak çok zahmetli ve gereksiz olacaktır.
 
-![enter image description here](https://i.hizliresim.com/bBgYg8.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/1.png" width="875">
 
-Yukarıdaki kullanımın yerine joker karakter(wildcard)desteğini kullanmak bizlere çok fazla avantaj sağlar. Ayrıca gördüğünüzde şaşırmayın, joker karakterler(wildcards) "globbing" olarak da adlandırılmakatadır.
+
+Yukarıdaki kullanımın yerine joker karakter(wildcard) desteğini kullanmak bizlere çok fazla avantaj sağlar. Ayrıca gördüğünüzde şaşırmayın, joker karakterler(wildcards) "globbing" olarak da adlandırılmakatadır.
 
 Bahsi geçen joker karakterler ve kullanım alanları aşağıdaki gibidir;
 
@@ -2745,65 +2958,69 @@ Bahsi geçen joker karakterler ve kullanım alanları aşağıdaki gibidir;
 
 Örneğin "dosya" ismiyle başlayan tüm belgeleri tek seferde silmek için komutu `rm  dosya*` şeklinde kullanabilirim.
 
-![enter image description here](https://i.hizliresim.com/dOW0W4.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/2.png" width="875">
 
 Ayrıca bu yıldız (asterix)<kbd>*</kbd> işaretinin farklı kullanım şekilleri de var. Farklı kullanımların açıklaması ile devam edelim.
 
 Herhangi bir komutu, örneğin listeleme işlevinde olan `ls` komutunu `ls dosya*` şeklinde kullanırsak komut yıldız (asterix) `*` işaretinden önce yazmış olduğumuz "dosya" ismi ile başlayanları kapsar.
 
-![enter image description here](https://i.hizliresim.com/5Do2oR.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/3.png" width="875">
 
 Aynı şekilde yıldız (asterix) * işaretinden sonra bir ifade belirtirsek de komut o ifade ile bitenleri kapsayacak şekilde çalışır.
 
-![enter image description here](https://i.hizliresim.com/A10g00.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/4.png" width="875">
 
-**? :** Herhangi bir tek karakterle eşleşir
+**? :** Herhangi bir tek karakterle eşleşir.
 
 Karakterin kullanımına örnek olarak. Diyelim ki dizin içerisinde hem "index_page" hem de "index-page" şeklinde isimlere sahip dosyalarınız var. Yani başlangıç ve bitiş isimleri aynı ancak aradaki işaretler farklı. İşte böyle bir durumda hem <kbd> _ </kbd> işaretini hem de <kbd> - </kbd> işaretini karşılayacak olan soru işareti <kbd>?</kbd> joker karakterini kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/0E4L48.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/5.png" width="875">
 
-Çıktılarda da görüldüğü gibi <kbd>?</kbd> karakteri dosya isimlerinin arasında yer alan <kbd>-</kbd> ve <kbd>_</kbd> işaretini de karşılayarak `ls -l index?page` şeklindeki komut ile çıktıya her ikisini de bastı.
+Çıktılarda da görüldüğü gibi <kbd>?</kbd> karakteri dosya isimlerinin arasında yer alan <kbd>-</kbd> ve <kbd>_</kbd> işaretini de karşılayarak `ls -l index?page` şeklindeki komut ile çıktıya her ikisini de basmış oldu.
 
 **[] :** <kbd>?</kbd> karakterine benzer olmakla birlikte daha çok hedefe odaklı çalışır.
 
-<kbd>[]</kbd> karakterinin kullanımı, iki köşeli parantez arasına ulaşmak istediğiniz hedefteki ayırıcı karakterli yazmak üzerinedir.
+<kbd>[]</kbd> karakterinin kullanımı, iki köşeli parantez arasına ulaşmak istediğiniz hedefteki ayırt edici karakterli yazmak üzerinedir.
 
 Örnek olaması açısında "dosya" isimli belgelerden sadece sonunda 2,3,4 olanları kapsayacak bir komut olması için konsola `ls -l [234]` komutunu verdim.
 
-![enter image description here](https://i.hizliresim.com/4aZ8ZL.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/6.png" width="875">
 
 Bir örnek daha verelim.
 
 [Dd]osya[Aa]dı şeklinde bir belirtme; DosyaAdı, Dosyaadı, dosyaAdı, dosyaadı şeklindeki bütün isimleri kapsayacaktır. Bu sayede ilgili dosya için küçük büyük harf kombinasyonu yakalanmış olur.
 
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/7.png" width="875">
+
 Ayrıca kullanım şekillerine çok fazla örnek verilebilir ancak burada birkaç örnek daha vererek keşfi size bırakıyorum.
 
-Burada belirtilen **x y z** temsili değerleri ifade etmektedir !
+**Not** : Burada belirtilen **x y z** temsili değerleri ifade etmektedir !
 
 **[0-9] :** 0'dan 9'a kadar olan rakamları kapsar.
 
-![enter image description here](https://i.hizliresim.com/JQ767Y.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/8.png" width="875">
 
 **[x,y,z] :** belirtilen değerlerle eşleşenleri basar.
 
-![enter image description here](https://i.hizliresim.com/Oo3B3Z.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/9.png" width="875">
 
 **[x-z] :** x ile z değerleri arasındaki karakterlerle eşleşir.
 
-![enter image description here](https://i.hizliresim.com/z02Y2Y.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/10.png" width="875">
 
 **[xyz] :** belirtilen değerlerle eşleşenleri basar.
 
-![enter image description here](https://i.hizliresim.com/G9p5p2.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/11.png" width="875">
 
 **[!xyz] :** Belirtilen karakterlerin dışındakileri ile eşlenir.
 
-![enter image description here](https://i.hizliresim.com/LbYE2o.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/12.png" width="875">
 
 **[!x-z] :** Verilen x ile z değeri arasındakiler haricindeki karakterler ile eşlenir.
 
-![enter image description here](https://i.hizliresim.com/rOmRjm.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/15-%20Joker%20Karakterler/13.png" width="875">
+
+Temel ve en çok başvurulan joker karakterler bu şekildedir. Sizler de joker karaketerler sayesinde konsoldan çalışırken oldukça pratik şekilde işlemlerinizi yerine getirebilirsiniz. Konuyu daha iyi anlamak adına mutlaka ve mutlaka kendiniz de örnek denemeler yapın.
 
 
 ----------
@@ -2820,19 +3037,19 @@ Sistemde bulunan ağ bağlantı ve IP yapılandırması ayarlarını inceleyip d
 
 Ağ bağlantı kartlarını listelemek için `ifconfig` komutu kullanılır.(Bu çıktıda ip, mac ve broadcats adresi gibi bilgiler yer alıyor.)
 
-![enter image description here](https://i.hizliresim.com/6JZPVl.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/1.png)
 
-Çıktıda yer alan **eth0** ethernet kartımızı ifade ediyor. Başka ethernet kartları olması durumunda diğer kartlar da **eth1** .. **eth2** şeklinde belirtilir.
+Çıktıda yer alan **eth0** ethernet kartımızı ifade ediyor. Başka ethernet kartları olması durumunda diğer kartlar da **eth1** ..**eth2** şeklinde belirtilir.
 
 **lo** bilgisayarın kendisini yani localhost'u ifade ediyor.
 
-**wlan0** ise kablosuz ağ kartını ifade eder. Yine başka kartlar olması durumunda **wlan1** .. **wlan2** şeklide belirtilir.
+**wlan0** ise kablosuz ağ kartını ifade eder. Yine başka kartlar olması durumunda **wlan1** ..**wlan2** şeklide belirtilir.
 
 Ayrıca bütün kart bilgilerini listelemek yerine teker teker de listelemek mümkün. Bunun için komutumuzu `ifconfig kart_adı` şeklinde girmemiz yeterli.
 
 Örneğin yalnızca kablosuz kart bilgilerini listelemek istersem `ifconfig wlan0` komutunu vermem yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/W7Vkv4.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/2.png" width="875" >
 
 Yukarıdaki çıktıda yer alan ayarlarda değişiklik yapmamız mümkün. Örneğin kablosuz ağ bağlantısının yerel ip adresini değiştirmek istersek komutumuzu `ifconfig wlan0 yeni_ip_adresi` şeklinde kullanabiliriz.
 
@@ -2840,14 +3057,14 @@ Ben kablosuz bağlantımın **192.168.1.9** olan adresi **192.168.1.10** olarak 
 
 Gelin bu durumu çıktıları karşılaştırarak test edelim.
 
-![enter image description here](https://i.hizliresim.com/3E9LZ9.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/3.png" width="875" >
 
 Ve son duruma bakarak ip adresimizin istediğimiz şekilde değiştiğini görmüş olduk. Aynı şekilde ağ maskesini(netmask) ve broadcat adreslerini dilediğimiz gibi düzenleyebiliriz. Hatta bu işlemi hepsi birlikte olacak şekilde bile yapabiliriz. Bunun için komutumuzu `ifconfig wlan0 yeni_ip_adresi netmask yeni_ağ_maskesi broadcast yeni_broadcast_adresi`  şeklinde kullanmamız yeterli olacaktır.
 
 Bu durumu bir örnek ile açıklayalım.
 Değişiklik yapmak üzere konsola `ifconfig wlan0 192.168.1.15 netmask 255.255.255.255 broadcast 192.168.2.255` komutunu girerek bir önceki durumu ile karşılaştıralım.
 
-![enter image description here](https://i.hizliresim.com/RnJkZY.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/4.png" width="875" >
 
 Çıktıları incelediğimizde istediğimiz doğrultuda değişikliklerin yapılmış olduğunu gördük.
 
@@ -2857,59 +3074,61 @@ Değişiklik yapmak üzere konsola `ifconfig wlan0 192.168.1.15 netmask 255.255.
 
 Kablosuz kartı kapatmak istersek `ifconfig wlan0 down` komutunu kullanırız.
 
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/5.png" width="875" >
+
 Kapalı kablosuz kartı açmak istersek ise `ifconfig wlan0 up` komutunu kullanırız.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/6.png" width="875" >
 
 Ayrıca diğer kartlar için de açama-kapama işleminde aynı şekilde komutumuzu `ifconfig kart_adı down` ve `ifconfig kart_adı up` şeklinde kullanabiliriz.
 
 
 ping
 -
-Hedef ile bizim sistemimiz arasında iletişimin sağlanıp sağlanmadığını kontrol etmeye yarar. Sonuç olarak hedef sunucunun çalışıp çalışmadığını veya aktarım hızının ne kadar olduğunu öğrenmemizi sağlar. Bir tür kontrol mekanizması da diyebiliriz. Komutun kullanımı `ping hedef_adresi` şeklindedir.
+Hedef ile bizim sistemimiz arasında iletişimin sağlanıp sağlanmadığını kontrol ederek hedef sunucunun çalışıp çalışmadığını veya aktarım hızının ne kadar olduğunu öğrenmemizi sağlar. Bir tür kontrol mekanizması da diyebiliriz. Komutun kullanımı `ping hedef_adresi` şeklindedir.
 
 Örneğin biz www.google.com adresi ile aramızdaki iletişimin hızını sorgulayalım. Bunun için komut satırına `ping www.google.com` yazıyorum. Ancak burada önemli bir nokta var o da bu işlemin biz <kbd>Ctrl + C</kbd> tuş kombinasyonu ile durdurana kadar devam edecek olmasıdır. 
 
-![enter image description here](https://i.hizliresim.com/p6Rz3o.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/7.gif" width="875" >
 
 Eğer direk olarak sınırlama getirmek isterseniz komutu `ping -c 4 www.google.com` şeklinde kullanabilirsiniz. Bu sayede www.google.com adresine yalnızca 4 sorgu paketi gönderilir. Elbette buradaki sayı sizin belirlemeniz ile değişebilir.
 
-![enter image description here](https://i.hizliresim.com/kOjBzJ.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/8.png" width="875" >
 
 
 route
 -
 Sistemimizde bulunan yönlendirmeleri görmek için kullanabiliriz. En temel kullanımı `route` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/NZ5ABg.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/9.png" width="875" >
 
 Burada yer alan gateway(ağ geçidi adresi) yerel ağdan internet ağına geçerken kullanılan yönlendirme adresidir.
-
 
 
 traceroute
 -
 Bir önceki kısımda `route` komutu ile gördüğümüz yerel ağda geçerli olan yönlendirme takibini, belirli bir hedef adrese yapabilmemize olanak sağlayan komut `traceroute` komutudur. Yani komutumuz belirli bir hedefe gönderilen paketin hangi host'lardan geçtiğini bizlere gösterir. Bir nevi izlediği yolu yani adımlarını takip etmemizi sağlar. Komutun kullanımı `traceroute hedef_adresi` şeklindedir. Bu sefer hedef adres olarak www.offensive-security.com adresini örnek verelim. Bunun için konsola `traceroute www.offensive-security.com` yazıyorum.
 
-![enter image description here](https://i.hizliresim.com/azo3Q2.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/10.png" width="875" >
 
 Çıktı ile birlikte adresin yönlendirme rotasını görmüş olduk.
 
 whois
 -
-Whois kavramını bilmeyenler için whois, genel olarak domain bilgilerini içeren bir mekanizmadır. Yani whois domain ne zaman kurulmuş, ne zamana kadar geçerli, kimin üzerine ve bunun gibi diğer tüm bilgileri tutar. Bizler de bu bilgileri konsol ekranından `whois hedef_adresi` şeklinde kullandığımız komut bütünü ile sorgulayabiliriz.
+Whois kavramını bilmeyenler için whois, genel olarak domain bilgilerini içeren bir mekanizmadır. Yani whois; domain ne zaman kurulmuş, ne zamana kadar geçerli, kimin üzerine kayıtlı ve bunun gibi diğer tüm bilgileri tutar. Bizler de bu bilgileri konsol ekranından `whois hedef_adresi` şeklinde kullandığımız komut bütünü ile sorgulayabiliriz.
 
-Whois sorgusuna örnek olarak yine offensive-security adresini hedef alalım.
+Whois sorgusuna örnek olarak yine www.offensive-security.com adresini hedef alalım.
 
-![enter image description here](https://i.hizliresim.com/BLZPkV.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/11.png" width="875" >
 
 
 host
 -
-Hedef adres hakkında bilgi almanızı sağlar.`host` komutu ile IP adresinden alan adı(domain name) ve alan adın(domain name)’dan IP adresine ulaşabiliriz. Bu komutun alabildiği farklı parametreleri bulunmaktadır. Ancak ben bu kısımda bunlara değinmeden yalnızca temel kullanımına örnek veriyorum. Kullanımı `host adres_adı` şeklindedir.
+Hedef adres hakkında bilgi almanızı sağlar.`host` komutu ile IP adresinden alan adı(domain name) ve alan adından(domain name) IP adresine ulaşabiliriz. Bu komutun alabildiği farklı parametreleri bulunmaktadır. Ancak ben bu kısımda bunlara değinmeden yalnızca temel kullanımına örnek veriyorum. Kullanımı `host adres_adı` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/vjXR9A.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/12.png" width="875" >
 
 Bu komut hakkında ufak bir araştırma ile çok fazla Türkçe de dahil olmak üzere kaynağa ulaşabilirsiniz.
-
 
 
 dig
@@ -2917,29 +3136,29 @@ dig
 
 dig(domain information groper/domain bilgi çukuru) DNS kayıtlarına bakmak için kullamımı oldukça kolay olduğundan yaygın olarak kullanılmaktadır.
 
-Bu komutumuz da parametreler alabilmektedir ancak ben burada sizlere yine temel işevinden bahsederek geriye kalan parametrelerini araştırmayı sizlere bırakıyorum. DNS sorgulaması yapmak istediğimiz adresi konsoldan `dig hedef_adresi` şeklinde belirtiyoruz.
+Bu komutumuz da parametreler alabilmektedir ancak ben burada sizlere yine temel işlevinden bahsederek geriye kalan parametrelerini araştırmayı sizlere bırakıyorum. DNS sorgulaması yapmak istediğimiz adresi konsoldan `dig hedef_adresi` şeklinde belirtiyoruz.
 
-Örnek olması açısından ben tekrar offensive-security adresini hedef alıyorum.
+Örnek olması açısından ben tekrar www.offensive-security.com adresini hedef alıyorum.
 
-![enter image description here](https://i.hizliresim.com/8YlZv1.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/13.png" width="875" >
 
 
 arp
 -
 IP-MAC Adresi eşleştirmelerinin tutulduğu tablolardır. Kullanımı `arp` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/Md6pM9.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/14.png" width="875" >
 
 
 tcpdump
 -
 Sistemimizin yaptığı bağlantıları ve sistemimize yapılan bağlantıları anlık olarak görüntülememize olanak sağlar. Kullanımı `tcpdump` şeklindedir.
 
-![enter image description here](https://i.hizliresim.com/QVRBdg.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/15.png" width="875" >
 
 Ayrıca adres çözümlemesi yapmadan direk olarak bağlantıları takip etmek istersek `tcpdump -n` komutunu kullanabiliriz.
 
-![enter image description here](https://i.hizliresim.com/XPBkzD.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/16.png" width="875" >
 
 
 DNS Ayarları
@@ -2948,12 +3167,12 @@ Komut satırından DNS ayarlarımızı değiştirmek istersek DNS bilgilerinin t
 
 İlk olarak DNS ayarlarının bulunduğu dosya içeriğine göz atıyorum. Çünkü daha sonra değişiklik yaptığımızda ilk hali ile kıyaslamamız gerekecek. Bu işlemi `cat` komutu yardımı ile gerçekleştireceğiz.
 
-![enter image description here](https://i.hizliresim.com/bBlDoj.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/17.png" width="875" >
 
 
 Şimdi eski DNS(nameserver) yerine bizim eklemek istediğimiz adresleri `echo` komutu yardımı ile girelim.
 
-![enter image description here](https://i.hizliresim.com/dOn3Vn.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/18.png" width="875" >
 
 Komutları kısaca açıklayacak olursak ilk olarak `echo "nameserver 8.8.8.8" > resolv.conf` komut bütününde `>` karakteri ile birlikte dosya içerisinde var olan ifadeleri sildik ve dosya içerisine `nameserver 8.8.8.8` ifadesini ekledik.
 
@@ -2961,17 +3180,17 @@ Daha sonra `echo "nameserver 8.8.4.4" >> resolv.conf` komut bütünü ile de dah
 
 Son olarak da eklediğimiz yeni DNS adreslerinin belgeye eklenme durumunu `cat /etc/resolv.conf` komutu ile teyit ettik.
 
-Ayrıca yapılan ayarların kalıcı olmasını istiyorsak konsola `update-rc.d networking deffaults` komutunu girmemiz gerekiyor.
-
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/19.png" width="875" >
 
 hosts Dosyası
 -
 Yerel bir alan adı sunucusu işlevindedir. Sistemde alan adı çözümlemesi yapılırken bu dosyaya bakılır. Dosyanın konumu <kbd>/etc/hosts</kbd> şeklindedir. Hemen dosya içeriğine `cat` komutu yardımı ile bir göz atalım.
 
-![enter image description here](https://i.hizliresim.com/5D87Od.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/20.png" width="875" >
 
 
 ----------
+
 
 
 
@@ -2987,13 +3206,13 @@ Editörü konsoldan açmak istersek `vim` komutu yeterli olacaktır. Ayrıca gö
 
 Konsola `vim` komutunu vererek editörümüzü açalım.
 
-![enter image description here](https://i.hizliresim.com/kOAkdD.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/1.png" width="875" >
 
 Editörle çalışmak için <kbd>i</kbd> tuşuna basıyoruz ve editör sol alt köşede <kbd>--INSERT--</kbd> yazısı ile içerik almaya hazır olduğunu belirtiyor.
 
 Örnek olması açısından editöre aşağıdaki şekilde birkaç dize yazı ekledim.
 
-![enter image description here](https://i.hizliresim.com/nOk73V.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/2.png" width="875" >
 
 
 Gerekli ifadeleri girdikten sonra komut vermek istersek <kbd>ESC</kbd> tuşuna bastırktan sonra komutları `:` karakteri başta olacak şekilde vermemiz gerekiyor. Kullanabileceğimiz bazı komutlar aşağıdaki şekildedir.
@@ -3010,7 +3229,7 @@ Dosya oluşturmak üzere vi editöründe <kbd>ESC</kbd> tuşuna basıp `:wq vi_d
 
 Dosyamız oluştu, hemen bu durumu teyit etmek için `ls -l` komutunu kullanalım.
 
-![enter image description here](https://i.hizliresim.com/p6jgpa.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/3.gif" width="875" >
 
 <kbd>vi_dosyasi </kbd> isimli dosyanın oluşturulduğunu teyit ettikten sonra tekrar `vim` editörü ile açmak için `vim vi_dosyasi` şeklinde komutumuzu kullanıyoruz.
 
@@ -3030,24 +3249,24 @@ Adım adım açıklayalım:
 
 İfadelerini ekliyorum daha sonra dosya içeriklerini `cat` komutu yardımı ile inceleyerek teyit ediyorum.
 
-![enter image description here](https://i.hizliresim.com/vjmLoD.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/4.png" width="875" >
 
 Sıra geldi vim editörü ile oluşturulan bu dosyalardan birini diğerine eklemeye. Ben <kbd>x_dosyasi</kbd>'na <kbd>y_dosyasi</kbd> içeriğini eklemek üzere, <kbd>x_dosyasi</kbd>'nı `vim x_dosyasi` komutu ile açıyorum.
 
 Vim editörü içerisinde açılan <kbd>x_dosyası</kbd>'ndayken `:r y_dosyasi` komutunu veriyorum.
 
-![enter image description here](https://i.hizliresim.com/XPyvz3.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/5.gif" width="875" >
 
-Böylelikle <kbd>y_dosyasi</kbd> içerisinde yer alan ifadeler <kbd>x_dosyasi</kbd>içerisine eklenmiş oldu.
+Böylelikle <kbd>y_dosyasi</kbd> içerisinde yer alan ifadeler <kbd>x_dosyasi</kbd> içerisine eklenmiş oldu.
 
-![enter image description here](https://i.hizliresim.com/6JQkQN.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/6.png" width="875" >
 
 Bu durumu hemen `cat` komutu yardımı ile teyit ettik zaten.
 
 
 Konsol komutlarını vim editörü içerisinde kullanabileceğimizden bahsetmiştik. Bunu yapabilmemiz için komuttan önce iki nokta üst üste ve ünlem karakterlerini kullanmalıyız yani örnek kullanımı `:!komut` şeklindedir. Hemen bu durumu `ls` komutu için deneyelim.
 
-![enter image description here](https://i.hizliresim.com/9mR4jN.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/7.gif" width="875" >
 
 Vim editörü içerisinde `:!ls` komutunu verdiğimizde sistem otomatik olarak vim editöründen çıkarak konsolda bize `ls` komutunun çıktılarını bastı. Eğer bu durumda tekrar vim editörüne dönmek istersek <kbd>enter</kbd> tuşuna basmamız yeterli olacaktır.
 
@@ -3061,7 +3280,7 @@ Bunu için vim editörü ile bir dosya oluşturuyorum.
 
 Komut sonucunda oluşturmuş olduğum <kbd>dizinler</kbd> dosyası içeriği aşağıdaki şekilde oluyor.
 
-![enter image description here](https://i.hizliresim.com/3ENDk0.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/8.gif" width="875" >
 
 Kullandığımız komut bütününü açıklayacak olursak(aslında bunları zaten biliyorsunuz yine de açıklama gereksinimi duydum)`:r` komutu içerik aktarma işlevinde `!ls` komutu ise dizin altındaki dosya-klasörleri listelemekle görevli.
 
@@ -3072,7 +3291,7 @@ Vim editörü ile birden fazla dosya ile işlem yapmamız mümkün bunun için k
 
 Komutumuzu verdikten sonra <kbd>dosya_1</kbd> vim editöründe açılacaktır. Gerekli değişiklikleri yaptıktan sonra eğer diğer dosyalara geçiş yapmak istersek çalıştığımız dosyayı kaydettikten sonra `:next` komutu ile <kbd>dosya_2</kbd>'ye geçiş sağlanacaktır. Aynı şekilde <kbd>dosya_3</kbd> dosyasına da geçmek mümkün olacaktır.
 
-![enter image description here](https://i.hizliresim.com/vjmE9A.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/9.gif" width="875" >
 
 Eğer geçiş yaptığımız dosyadan bir öncekine dönmek istersek `:previous` komutunu kullanmamız yeterli olacaktır.
 
@@ -3082,12 +3301,12 @@ Dosya içerinde bulunan ifadeleri değiştirmek istersek `:satır_sayısı s/esk
 
 <kbd>linux</kbd> isimli bir dosya oluşturuyorum ve içerisine aşağıdaki ifadeleri ekliyorum.
 
-![enter image description here](https://i.hizliresim.com/RnXY7n.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/10.gif" width="875" >
 
 İlk önce burada yer alan 1. ve 2. satırdaki **linux** ifadelerini **LİNUX** ile değiştirmek üzere vim editörü içerisinde iken `:1,2s/linux/LİNUX/g` komutunu veriyorum. Daha sonra `:x` komutu ile dosyayı kaydederek vim editörünü kapatıyorum.
 Ve dosya içeriğini `cat` komutu ile sorguladık.
 
-![enter image description here](https://i.hizliresim.com/XPyvV0.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/11.gif" width="875" >
 
 Görüldüğü gibi 1. ve 2. satırdaki **linux** ifadeleri **LİNUX** şeklinde değişmiş oldu.
 
@@ -3107,7 +3326,7 @@ Böylelikle konsol bize **Vim: Reading from stdin...** çıktısını verecek ve
 
 Ben örnek olması açısından konsoldan birkaç ifade ekliyorum.
 
-![enter image description here](https://i.hizliresim.com/kOAkqy.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/12.gif" width="875" >
 
 İfade giriş işlemim tamamlandığında <kbd>Ctrl + D</kbd> tuş kombinasyonu basarak, vim editörü ekranına yazdığım ifadeler ile birlikte dönmüş oluyorum.
 
@@ -3119,18 +3338,18 @@ Ayrıca oluşturduğumuz dosyaları şifreleyerek koruma imkanımız da var. Bu 
 
 Dosyamızın özelliklerini `file vim_metni` komutu ile öğrenip, dosyanın içeriğini ise `cat vim_metni` komutu ile okuyalım.
 
-![enter image description here](https://i.hizliresim.com/RnXYaa.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/13.gif" width="875" >
 
 İstediğimiz bilgilere kolayca ulaşabildik. Bu durumu birde dosyamızı şifreleyerek test edelim. Bunun için konsola `vim -x vim_metni` şeklinde komut veriyoruz ve konsol bizden şifre belirlememizi istiyor.
 
 Dosyamıza birkaç veri daha ekledikten sonra dosyamızı `:w` komutu ile kaydettik. Ve sonuç olarak vim editörü alt bilgi çubuğunda bize dosyanın şifrelendiğini aşağıdaki çıktıda yer alan **"vim_metni" [crypted]** şekilde ifade ederek belirtti.
 
-![enter image description here](https://i.hizliresim.com/jyL2Pj.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/14.png" width="875" >
 
 Daha sonra dosyamızı tekrar `file` ve `cat` komutları ile sınadık.
 Çıktı da görüldüğü üzere dosyamız artık şifrelenmiş durumda. Yani dosyayı tekrar okunaklı şekilde açabilmemiz için şifresini girmemiz gerekecek. Bu durumu hemen <kbd>vim_metni</kbd> isimli dosyamızı açmaya çalışarak test edelim. Bunun için konsola `vim vim_metni` komutunu giriyoruz. Ve konsol bize aşağıdaki çıktıyı veriyor.
 
-![enter image description here](https://i.hizliresim.com/m2dzlP.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/15.png" width="875" >
 
 Konsol çıktısında da görüldüğü gibi bizden bir parola isteniyor. Eğer parolayı doğru girersek dosyamız açılacaktır.
 
@@ -3142,11 +3361,11 @@ Konumuza yavaş yavaş bitirmek üzere devam edecek olursak.
 
 Örneğin vim editöründe kod yazıyordunuz ve kod 101. satırda hata verdi. Bu durumda 101. satırı aramak yerine editöre `:101` şeklinde yazarak hatalı kodun bulunduğu satıra ulaşabiliyoruz. Yani direk olarak atlamak istediğimiz satırı vim editörüne `:satır_numarası` şeklinde girerek bu işlemi gerçekleştirebiliriz.
 
-![enter image description here](https://i.hizliresim.com/rOjVL1.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/16.gif" width="875" >
 
 Eğer yazdığınız ifadeler içerinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu, bir önceki aynı ifadeye dönmek için ise `:?` komutunu kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/G9Ekbv.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/17.gif" width="875" >
 
 Eğer aradığımız ifadede büyük küçük harf duyarlılığı olmadan hedefteki aranan ifadenin aynısı olan bütün ifadeleri bulmak istersek `:set ic` komutunu verdikten sonra ifademizi `/ARNACAK_İFADE` şeklinde ya da `/aranacak_ifade` hatta `ArAnAcAk_İfAdE` şeklinde dahi belirtebiliriz. Sonuçta aynı karakter bütününü içeren ifadeler karşımıza gelecektir.
 
@@ -3155,19 +3374,18 @@ Vim editörü anlatımının burada sonuna geliyoruz. Ancak dediğim gibi zaten 
 
 Neticede internette yer alan tüm zengin kaynaklar ile birlikte man kılavuz sayfasından, vim editörü içerisinde iken `:help` komutundan ve daha önce verdiğim vim editörü [wiki kaynağından](http://vim.wikia.com/wiki/Vim_Tips_Wiki) diğer tüm bilgilere ulaşabilirsiniz.(Benim önerim vim editörü içerisindeki `:help` komutu ile ulaşabileceğiniz dokümantasyonu takip etmenizdir.) Ve unutmayın bu araç ancak ve ancak öğrenmek isteyen kişinin kendi kendine kurcalaması ve bolca alıştırmalar yapmasıyla öğrenilebilir.
 
-
 ----------
 
 
 Konsol Üzerinden Dosya İndirmek
 =
 
-İndirmek istediğimiz dosyanın direk indirme linkini biliyorsak bu dosyamızı herhangi bir ekstra program kullanmadan veya tarayıcıya ihtiyaç duymadan konsol üzerinden `wget` komutu yardımı ile indirmemiz mümkün. Gelin anlatıma `wget` komutunu ve kullanım şekillerini anlatarak devam edelim.
+İndirmek istediğimiz dosyanın direk indirme linkini biliyorsak bu dosyamızı herhangi bir ekstra program kullanmadan veya tarayıcıya ihtiyaç duymadan konsol üzerinden `wget` komutu yardımı ile indirmemiz mümkün. Gelin anlatıma `wget` komutunu ve kullanım şekillerini açıklayarak devam edelim.
 
 wget
 -
 
-Eğer daha önce linux ile ilgili yönergeler okumuş veya videolar izlediyseniz `wget` komutuna mutlaka denk gelmişsinizdir. Kullanımı oldukça kolaydır ve parametreler alarak çalışır. Birkaç kullanım şekline değinecek olursak:
+Eğer daha önce linux ile ilgili yönergeler okuduysanız veya videolar izlediyseniz `wget` komutuna mutlaka denk gelmişsinizdir. Kullanımı oldukça kolaydır ve parametreler alarak çalışır. Birkaç kullanım şekline değinecek olursak:
 
 **Tekil Dosya İndirmek :**
 
@@ -3178,21 +3396,21 @@ Kullanımı: `wget indirilecek_dosya_linki dosya_yolu`
 Örnek olarak aircrack-ng aracını indirdim. Ve indirme işlemini `ls -l`
 komutu ile teyit ettim.
 
-![enter image description here](https://i.hizliresim.com/PlY6r8.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/1.gif)
 
 Ve.. bulunduğum dizin içerisine istediğim dosya(aircrack-ng) indirilmiş oldu. 
 
 **Toplu Dosya İndirmek :**
 
-Bir metin belgesinin içerisine kayıt ettiğimiz linklerde yer alan dosyaları tek seferde `-i` karakteri sayesinde indirmemiz mümkün. Hemen örnek üzerinden bu durumu görelim.
+Bir metin belgesinin içerisine kayıt ettiğimiz linklerde yer alan dosyaları tek seferde `wget` komutu ile beraber `-i` parametresi kullanarak indirmemiz mümkün. Hemen örnek üzerinden bu durumu görelim.
 
 Örneğin ben T.C Resmi Gazetesi pdflerinden 5 tanesini aynı anda indirmek istiyorum diyelim. Bunun için bu pdflerin indirme linklerini bir metin belgesine kaydetmem gerekiyor. Ben bu işlemi `leafpad resmi_gazeteler` komutu ile "resmi_gazeteler" isimli bir dosya oluşturarak ve içerisine gerekli linkleri ekleyerek gerçekleştiriyorum.
 
-![enter image description here](https://i.hizliresim.com/LbYgnV.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/2.png)
 
 Artık sıra geldi toplu indirmelere. Bu işlem için konsola `wget -i resmi_gazeteler` komutumu giriyorum.
 
-![enter image description here](https://i.hizliresim.com/MdPga9.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/3.gif)
 
 PDF belgelerimiz toplu şekilde indirilmiş oldu şimdi de bu dosyaların varlığını teyit etmek için konsola `ls -l` komutunu verdim.
 
@@ -3200,7 +3418,7 @@ PDF belgelerimiz toplu şekilde indirilmiş oldu şimdi de bu dosyaların varlı
 **Özel Konum Belirterek İndirmek :**
 Eğer dosyanın konsolun üzerinde çalıştığı konuma değil de bizim istediğimiz özel bir konuma indirilmesini istersek bunun için `wget -P kaydedilecek_dizin_yolu dosya_linki` şeklinde komut vermemiz gerekiyor.
 
-![enter image description here](https://i.hizliresim.com/jyv1yD.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/4.gif)
 
 Dosyamızı istediğimiz konuma indirmek için indireceğimiz dizin adresinin tam yolunu belirtmemiz gerekiyordu bu nedenle buradaki `~/Desktop` kullanımı sizi şaşırtmasın <kbd>~</kbd> işareti ana dizini temsil ediyor.
 
@@ -3209,7 +3427,7 @@ Ve sonuç olarak indirdiğimiz konuma gelerek dosyanın varlığını teyit etmi
 **Özel Konum Ve İsim Belirterek İndirmek :**
 İndirilecek dosyanın adını değiştirerek istediğimiz konuma indirmesini istersek `wget` komutumuzu `-O` parametresi ile birlikte `wget -O kaydedilecek_dizin_yolu/dosyanın_yeni_adı indirme_linki` şeklinde kullanıyoruz.
 
-![enter image description here](https://i.hizliresim.com/XPDqED.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/5.gif)
 
 Dosyamızı "aircrack" ismi ile indirip <kbd>/Desktop</kbd> dizinine kaydettik bu durumu da `ls -l` komutu ile teyit ettik.
 
@@ -3221,37 +3439,37 @@ Adım adım yaptığım işlemleri inceleyelim.
 
 İlk olarak içi tamamen boş olan <kbd>/Documents</kbd> dizinine `cd /Documents` komutu ile ulaştım. Bu dizinin içerisinin boş olduğunu `ls -l` komutu ile teyit ettim.
 
-![enter image description here](https://i.hizliresim.com/rOm82P.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/6.png)
 
 <kbd>/Documents</kbd> dizini içerisinde iken `wget` komutu ile dosyamı indirmeye başladım. Daha sonra indirme işlemini <kbd>Ctrl + Z</kbd> tuş kombinasyonu ile durdurdum. Durdurmamdaki amaç daha sonra devam ettirebilme özelliğini test etmekti.
 
-![enter image description here](https://i.hizliresim.com/9m9qD8.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/7.gif)
 
 İndirme işlemi durdurduktan sonra <kbd>/Documents</kbd> dizinini kontrol etmek için `ls -l` komutunu kullandım. Ve dosyamın **638681** bayt kadarının inmiş olduğunu gördüm.
 
-![enter image description here](https://i.hizliresim.com/76VXNl.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/8.png)
 
 Durdurmuş olduğum indirme işlemine devam etmek üzere `wget` komutu ile beraber `-c` parametresini de kullanarak dosya indirme işlemini kaldığı yerden devam ettirdim.
 
-![enter image description here](https://i.hizliresim.com/qGm8Jq.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/9.gif)
 
 Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini `ls -l` komutu ile teyit ettim.
 
 Çıktıları karşılaştıracak olursanız başta **638681** bayt'ta kalan indirme sonuç itibari ile **4379880** bayt yani dosyanın tamamı şeklinde indirilmiş oldu. Yani dosya indirme işlemi yarıda dahi kesilse en baştan indirmemize gerek kalmadan `wget` komutunun `-c` parametresi sayesinde kaldığı yerden indirme işlemini devam ettirebiliyoruz.
 
 **İndirme Hızını Belirlemek :**
-Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceğini belirleyebiliriz. Bu limitleme işlemi için komutumuzu `wget --limit-rate=indirme_limitiK /indirme_linki` şeklinde kullanıyoruz.
+Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceğini belirleyebiliriz. Bu limitleme işlemi için komutumuzu `wget --limit-rate=indirme_limitiK indirme_linki` şeklinde kullanıyoruz.
 
 Örnek olması açısından ben dosyayı indirirken 300KB/s hızında indirme limiti koyuyorum.
 
-![enter image description here](https://i.hizliresim.com/QV4Ypg.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/10.gif)
 
 Zaten üst kısımda yer alan çıktının sonucunda da bu hız sınırlamasının sonucu olarak ortalama indirme hızı (300 KB/s) olarak gözüküyor.
 
 **Arkaplanda İndirmek :**
 İndirmek istediğimiz dosyanın arkaplanda inmesini `-b` parametresi ile sağlarız. İndirme işleminin sonuçlarını öğrenmek istersek indirilen dosya ile aynı konumda yer alan <kbd>wget-log</kbd> dosyasını incelememiz yeterli olacaktır.
 
-![enter image description here](https://i.hizliresim.com/gO4VWN.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/11.gif)
 
 Dosyamızı arkaplanda indiriyoruz ve konsol çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` komutu ile kayıt dosyasına bakabiliriz.
 
@@ -3262,7 +3480,7 @@ Dosyamızı arkaplanda indiriyoruz ve konsol çıktıda bize indirme detayların
 Zamanlanmış Görevler
 =
 
-Sistemde yapılması gereken rutin işlerin zamanı geldiğinde otomatik olarak yapılması işine zamanlanmış görevler deniyor. Bu rutin işlere örnek söylemek gerekirse; benim her pazartesi sistemi yedeklemem gerekiyor diyelim, bunu her pazartesi elle yapmak yerine bu işi zamanlanmış görevlere ekleyerek otomatiğe bağlayabilirim.
+Sistemde yapılması gereken rutin işlerin zamanı geldiğinde otomatik olarak yapılması işine zamanlanmış görevler deniyor. Bu rutin işlere örnek söylemek gerekirse; benim her pazartesi sistemi yedeklemem gerekiyor diyelim, bunu her pazartesi elle yapmak yerine bu işi zamanlanmış görevlere ekleyerek otomatiğe bağlayabilirim. İşte zamanlanmış görevler bu ve bunun gibi durumlarda sıkça kullanılıyor.
 
 cron
 -
@@ -3270,47 +3488,50 @@ Rutin tekrarları sağlayan zamanlanmış görevleri yerine getirmemizi sağlaya
 
 Anlatıma `cron` servisinin çalışma durumunu kontrol ederek başlayalım. Bunun için konsola `service cron status` komutunu verelim.
 
-![enter image description here](https://i.hizliresim.com/vjgoRp.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/1.png" width="875">
 
 
 Cron servisimizin çalıştığını teyit etmiş olduk. Cron servisinin yapılandırma dosyası <kbd>/etc/crontab</kbd> konumunda yer alıyor göz atmak için konsola `cat /etc/crontab` komutunu verebiliriz.
 
-![enter image description here](https://i.hizliresim.com/6JZ62E.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/2.png" width="875">
 
 Şimdi de düzenleme yapmak adına konsola `crontab -e` komutunu verelim. Burada yer alan `-e` parametresi "edit" kelimesini yani "düzenleme" ifadesini temsil ediyor.
 
-![enter image description here](https://i.hizliresim.com/y0PnM9.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/3.png" width="875">
 
 Konsol bize düzenleme yaparken hangi aracı kullanmak istediğimizi soruyor. Ben nano aracını seçiyorum yani konsola 2 rakamını giriyorum.
 
-![enter image description here](https://i.hizliresim.com/W7VrnP.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/4.png" width="875">
 
 Çıktıda bize bir örnek kullanım gösterilmiş biz bu kullanımı ele alarak servisin kullanım şeklini görelim.
 
-![enter image description here](https://i.hizliresim.com/3E9RD5.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/5.png" width="875">
 
 Yukarıdaki şema yeterince açıklayıcı olmadıysa endişelenmenize gerek yok. Örnekler üzerinden yapacağımız anlatım ile **cron** servisimizin kullanımını rahat şekilde anlamış olacağınıza inanıyorum.
 
 Zamanlanmış görevleri yerine getiren servis **cron** ve bu servisin yerine getirdiği işlere de **cron job** deniliyor. Bu tanımın çok da önemi yok ancak bunu böyle bilseniz daha iyi olur. Bizler de kendi zamanlanmış görevlerimizi (cron jobs) atamak istersek `crontab -e` komutu ile açtığımız dosyanın son satırına yapmak istediğimiz işi ve tam tarih düzenini girmemiz gerekiyor. Bu görevleri nasıl oluşturacağımızı konunun devamında örnekler üzerinden öğreniyor olacağız.
 
-**#Örnekler**
+# *Örnekler*
 
 Kullanımın anlaşılması amacıyla örnekleri olabildiğince basit tuttum.
 
-O anın tarihi detaylarını <kbd>zamanlar.txt</kbd> isimli klasöre kaydetmek için `echo date zamanlar.txt` komutunu kullanacağım.
+Sizlere vereceğim örnekler ne kadar gereksiz gelse de örneği konuyu anlamak adına kullandığımızı unutmayın ve asıl anlatılmak istenen noktaya odaklanın lütfen.
+
+O anın tarihi detaylarını bir dosyaya kaydetmek istiyorum diyelim.
+Tarihi detayları <kbd>zamanlar.txt</kbd> isimli klasöre kaydetmek için `echo date zamanlar.txt` komutunu kullanacağım.
 
 Bütün yıl boyunca her dakikanın çıktılarını kaydetmesini istersem aşağıdaki şekilde bir kullanım işimizi görür.
 
-![enter image description here](https://i.hizliresim.com/Z9L1kz.png)
-<img src="https://i.hizliresim.com/RnJ6YZ.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/6.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/7.png" width="875">
 
 Yıldız işareti (<kbd>*</kbd>) olan kısımlar hepsini kapsamaktadır yani haftanın bütün günleri, ayın bütün günleri ve saatin bütün dakikaları.. gibi.
 
-Komutun düzenli hali `* * * * * echo date >> ~/Desktop/zamanlar.txt` şeklindedir.
+Komutun düzenli hali ```bash * * * * * echo date >> ~/Desktop/zamanlar.txt ``` şeklindedir.
 
 Bir süre geçtikten sonra masaüstünde(Desktop dizininde) yer alan <kbd>zamanlar.txt</kbd> dosyasını `cat zamanlar.txt` komutu ile kontrol ediyorum.
 
-![enter image description here](https://i.hizliresim.com/p6RYgJ.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/8.png" width="875">
 
 Görev istediğimiz şekilde yani her dakikada yazılacak şekilde otomatik olarak gerçekleşmiş oldu.
 
@@ -3318,44 +3539,52 @@ Görev istediğimiz şekilde yani her dakikada yazılacak şekilde otomatik olar
 
 Her gün 10:25 da otomatik olarak <kbd>test.txt</kbd> isimli belgeye "test yazısı" yazdırmak için kalıbı **crontab** dosyasına aşağıdaki şekilde yazmalıyız.(Ayrıca başta hangi ifadenin neyin karşılığı olduğunu belirttiğim için tekrar tekrar üzerlerine yazmıyorum. Eğer şaşırırsanız yukarıdaki kısımları tekrar gözden geçirebilirsiniz.)
 
-    15 14 * * * echo "test yazısı" >> ~/Desktop/test.txt
-
-![](https://i.hizliresim.com/azoB57.png)
+```bash
+10 25 * * * cat "test yazısı" >> ~/Desktop/test.txt
+```
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/9.png" width="875">
 
 
 `ls -l` komutu ile de dosyamızın üretildiği tarihi sorguladık ve çıktıdan da anladığımız üzere verdiğimiz görev zamanında yerine getirilmiş.
 
-![enter image description here](https://i.hizliresim.com/Ygv5BA.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/10.png" width="875">
 
 
 Eğer belirli bir saat-tarih arasında belirli kere tekrar eden görev atamak istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
 
 Örneğin 5 dk bir çalışmasını istediğiniz komutu aşağıdaki şekilde **crontab** dosyasına ekleyebilirsiniz.
 
-    */5 * * * * komut
-
+```bash
+*/5 * * * * komut
+```
+    
 Her saatin ilk 5 dk 2 kere çalışmasını istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
 
-    0-5/2 * * * * komut
-
+```bash
+0-5/2 * * * * komut
+```
+    
 Örneğin **cron job** yani verdiğimiz görev komutu günün ilk 5 saatinde 10 defa çalışmasını istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
 
-    * 0-5/10 * * * komut
-
+```bash
+* 0-5/10 * * * komut
+```
+    
 Örneğin cuma günleri 12:30 ve 17 arasında 5 kez çalışsın istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
 
-    30,0 12-17/5 * * 5 komut
-
+```bash
+30,0 12-17/5 * * 5 komut
+```
+    
 Elbette örnekleri çoğaltmak mümkün ancak daha fazlası gereksiz olacaktır. Yani bu konu sizlerin de biraz kurcaladıktan sonra anlayacağı kolay bir konudur.
 
 Eğer belirlenen zamanlanmış görevleri listelemek istersek `crontab -l` komutunu kullanabiliriz. Buradaki `-l` parametresi list kelimesini yani listeleme işlevini temsil ediyor.
 
-![enter image description here](https://i.hizliresim.com/4aLRl0.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/11.png" width="875">
 
 Şayet oluşturduğumuz tüm zamanlanmış görevleri silmek istersek `crontab -r` komutunu kullanmalıyız. Buradaki `-r` parametresi "remove" kelimesini yani "silme" işlevini temsil ediyor.
 
-![enter image description here](https://i.hizliresim.com/oOAz7o.png)
-
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/12.png" width="875">
 
 
 ----------
@@ -3363,34 +3592,64 @@ Eğer belirlenen zamanlanmış görevleri listelemek istersek `crontab -l` komut
 
 Log Kayıtları
 -
-Sistemde olan sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere **log** deniyor. Neden **log** tutulmak zorunda diye soracak olursanız kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır. Yani sistem bütünü için çok önemli yer tutmaktadır.
+Sistemde olan sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere **log** deniyor. Neden **log**(kayıt) tutulmak zorunda diye soracak olursanız; kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır **log** dosyaları. Anlayacağınız **log**(kayıt) dosyaları sistem bütünü için çok önemli yer tutmaktadır.
 
 Log Dosyaları
 -
-Linux sisteminde **log** dosyalarının çok büyük kısmı <kbd>/var/log </kbd> dizini altında tutuluyor. Ayrıca **log** dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına `cd /var/log` yazarak **log** dosyalarının tutulduğu dizine gidip dizin içerisinde iken `ls` komutu ile dizin içeriğini listeleyelim.
+Linux sisteminde **log** dosyalarının çok büyük kısmı <kbd>/var</kbd> dizini altında <kbd>log</kbd> klasörü içerisinde tutuluyor. Ayrıca log dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına `cd /var/log` yazarak **log** dosyalarının tutulduğu dizine gidip dizin içerisinde iken `ls` komutu ile dizin içeriğini listeleyelim.
 
-![enter image description here](https://i.hizliresim.com/OoRdaD.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/1.png" width="875" >
 
-Örneğin <kbd>user.log</kbd> dosyasını `cat user.log` şeklinde açarak sistemde yapılmış olan oturum açma işlemlerini ve detaylarını inceleyebilirim. Ancak bu noktada bir kısa bilgi Linux sistemi **log** dosyalarının çok fazla yer kaplamasını önlemek için üzerine yazma metodunu kullanıyor. Bu noktada **cron** servisi ile **log** kayıtları her hafta eklenerek maksimum 1 ay kadar eskiyi yani 4 haftayı kayıt altında tutuyor.
+Bir çok kayıt dosyası listelenmiş oldu.
+Örneğin ben buradan, oturum açma işlemlerini ve detaylarını tutan <kbd>auth.log</kbd> dosyasını açarak sistemde yapılmış olan oturum açma işlemlerini ve detaylarını inceleyebilirim. Ancak bu noktada bir kısa bilgi Linux sistemi **log** dosyalarının çok fazla yer kaplamasını önlemek için üzerine yazma metodunu kullanıyor. Bu noktada **cron** servisi ile **log** kayıtları her hafta eklenerek maksimum 1 ay kadar eskiyi yani 4 haftayı kayıt altında tutuyor. Bu tutulan kayıtlar 4 hafta sonunda; "*log_dosyası.1.gz*", "*log_dosyası.2.gz*", "*log_dosyası.3.gz*" şeklinde arşivlenerek saklanıyor. Yani örneğin siz eğer <kbd>auth.log</kbd> dosyasının bu ay değil de geçmişteki aylardaki kayıtlarına bakmak isterseniz. Arşivlenmiş olan "*auth.log.1.gz*", "*auth.log.2.gz*", "*auth.log.3.gz"* şeklindeki dosyalara bakmanız gerekir.
 
-**Log** dosyalarını incelerken kolaylık olması açısından daha önce de kullanmış olduğumu ve dosyanın alt(tail/kuyruk) kısımlarını listeleyen `tail` komutundan yararlanacağız.
+**Log** dosyalarını incelerken kolaylık olması açısından daha önce de kullanmış olduğumuz ve dosyanın alt(tail/kuyruk) kısımlarını listeleyen `tail` komutundan yararlanacağız. Bu sayede uzun uzadıya dosyanın tamamına bakmak yerine son eklenen bilgileri inceleyebileceğiz.
 
-![enter image description here](https://i.hizliresim.com/z0mEyj.png)
+Hemen örnek olması açısından oturum açma işlemlerini ve detaylarını tutan <kbd>auth.log</kbd> kayıt dosyasını açalım. Bu açma işlemini de yalnızca dosyada en son yapılmış 5 değişikliği gösterecek şekilde yapalım. Bunun için konsola `tail -n 5 auth.log` komutumuzu giriyoruz.
 
-Bu sayede uzun uzadıya dosyanın tamamına bakmak yerine son eklenen bilgileri inceleyebileceğiz.
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/2.png" width="875" >
 
+Komutumuzu girmemizle birlikte konsol bize son 5 oturum açma işlemlerini ve detaylarını listelemiş oldu.
 
+Hazır yeri gelmişken `tail` komutuyla sistemdeki olayların anlık olarak takibini yapalım. Bunun için sistemdeki olayların kaydını tutan <kbd>messages</kbd> dosyasını okumalıyız. Bu okuma işlemini sistemdeki anlık hareketleri takip etmek için yaptığımızdan, okuduğumuz dosyaya yeni eklenen her veriyi anlık görmek için `tail -f messages` komutunu kullanıyoruz. Buradaki `tail -f` komutunu açıklayacak olursam; biliyorsunuz `tail` komutu dosyanının alt kısımlarını görüntülememize olanak tanıyan bir komut. Ve bu komutun `-f ` parametreside bu görüntülenecek kısım için dosyayı sürekli yeniden tarayarak dosyaya en son eklenen verileri bize göstermekle mükellef. Yani `tail` komutunun `f` parametresi bize yalnızca dosyaya en son eklenen ifadeleri güncel şekilde listeliyor.
+ 
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/3.png" width="875" > 
+ 
 dmesg
 -
-Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler ve kernel hakkındaki kayıtlar <kbd>/proc/kmsg</kbd> dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını `dmesg` komutu ile görüntüleyebiliriz. Yani `dmesg` komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur. Yani genelde sorun yaşadığınızda forum ve benzeri topluluklarda sizden bu komut istenirse komutun hangi amaca hizmet ettiğini bilmeniz için ve aynı zamanda komutun **log** konusu ile bağlantılı olduğu için sizlere açıkladım.
+Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler ve kernel hakkındaki kayıtlar <kbd>/proc/kmsg</kbd> dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını `dmesg` komutu ile görüntüleyebiliriz. Yani `dmesg` komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur. 
 
-![enter image description here](https://i.hizliresim.com/G9v1GZ.png)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/4.png" width="875" >
 
-Elbetteki çıktı çok daha uzun ancak ben örnek olması açısından çıktıları kısaca verdim.
+Elbetteki çıktı çok daha uzun ancak ben örnek olması açısından çıktıları kısaca verdim. Eğer siz bu çıktıları filtrelemek isterseniz `grep` komutunu kullanarak ilgili çıktılara rahatlıkla ulaşabileceğinizi biliyorsunuz. Örneğin yalnızca hataları görüntülemek istersek konsola `dmesg | grep "fail" ` şeklinde yazdığımızda, konsol bize yalnızca sistem açılışında belirtilen hataları basacaktır.
+ 
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/5.png" width="875" >
+
+Gördüğünüz gibi "fail" ifadesinin geçtiği yani hataların belirtildiği tüm iletiler karşımıza gelmiş oldu.
 
 
 last
 -
-Sistemde oturum açan kullanıcıları listelemek için `last` komutunu kullanabiliriz.
+Komutumuzun isminden de az çok anlaşılacağı gibi; en son oturum açan kullanıcıları listelemek için `last` komutunu kullanabiliriz.
 
-<img src="https://i.hizliresim.com/JQpEWQ.png" width="875">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/6.png" width="875" >
+
+`last` komutuyla en son oturum açan kullanıcılar uzunca listelenmiş oldu.
+
+Eğer uzunca liste almak istemezsek komutumuzu en son listelemek istediğimiz satır sayısını belirterek `last -satır_sayısı` şeklinde belirterek istediğimiz uzunlukta çıktı elde edebiliriz.
+
+Örneğin ben sadece son 2 oturum hareketini görüntülemek istersem komutumu `last -2` şeklinde belirtmem yeterli.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/7.png" width="875" >
+
+Veya sondan 4 oturuma bakmak istersem komutumuzu `last -4` şeklinde kullanırım.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/8.png" width="875" >
+
+Ayrıca kullanıcı adına göre oturum açma bilgisi sorgulayabiliriz. Örneğin ben yalnızca "burak" isimli kullanıcı hesabının oturum hareketlerini görmek istersem, konsola `last burak` şeklinde yazdığımda karşıma yalnızca "burak" kullanıcı hesabının oturum hareketleri gelir.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/9.png" width="875" >
+
+Gördüğünüz gibi yalnızca "burak" kullanıcı hesabının oturum açma bilgileri listelenmiş oldu. Yani kullanıcıya göre oturum bilgilerini öğrenmek için, komutu `last kullanıcı_adı` şeklinde kullanabilirsiniz.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/10.png" width="875" >
