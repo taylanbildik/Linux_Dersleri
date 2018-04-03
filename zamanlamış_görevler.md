@@ -61,7 +61,7 @@ Görev istediğimiz şekilde yani her dakikada yazılacak şekilde otomatik olar
 Her gün 10:25 da otomatik olarak <kbd>test.txt</kbd> isimli belgeye "test yazısı" yazdırmak için kalıbı **crontab** dosyasına aşağıdaki şekilde yazmalıyız.(Ayrıca başta hangi ifadenin neyin karşılığı olduğunu belirttiğim için tekrar tekrar üzerlerine yazmıyorum. Eğer şaşırırsanız yukarıdaki kısımları tekrar gözden geçirebilirsiniz.)
 
 ```bash
-10 25 * * * echo "test yazısı" >> ~/Desktop/test.txt
+10 25 * * * cat "test yazısı" >> ~/Desktop/test.txt
 ```
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/9.png" width="875">
 
