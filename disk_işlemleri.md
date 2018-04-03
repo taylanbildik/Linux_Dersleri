@@ -144,11 +144,13 @@ Ve USB diskteki hatalı bloklar düzeltilerek işlemimiz başarılı bir şekild
 
 df Komutu
 -
-`df` komutu bizlere disklerin; dosya sistemini, boyutunu, doluluk oranını, bağlandığı yeri(mount) gibi bilgileri kısa bir liste halinde verir. Komut ile birlikte `h` parametresini kullanırsak hakkındaki geniş bilgi içeriği bizlere sunulur. Çıktılar aşağıdaki gibidir.
+`df` komutu bizlere disklerin; dosya sistemini, boyutunu, doluluk oranını, bağlandığı yeri(mount) gibi bilgileri kısa bir liste halinde verir. 
+
+Eğer çıktılar daha okunaklı olsun yani bilgileri MB,GB cinsinden görelim istersek komutumuza ek olarak `h` parametresini de kullanırız. Komutumu `df -h` şeklinde yazıyorum. Ve gördüğünüz gibi çıktılar daha okunaklı yani MB,GB cinsinden bana sunulmuş oldu.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/19.png)
 
-Diskler hakkında genel bilgi edinmek için sık kullanılan bir komuttur. Ayrıca komutla birlikte kullanacağımız `m` parametresi çıktıları MB cinsinden verirken, `k` parametresi ile kullanımlarda çıktılar KB cinsinden olacaktır. Bunlar haricinde daha fazla detay almak için man sayfasına bakabilirsiniz.
+df komutu diskler hakkında genel bilgi edinmek için sık kullanılan bir komuttur. Ayrıca komutla birlikte kullanacağımız `m` parametresi çıktıları MB cinsinden verirken, `k` parametresi ile kullanımlarda çıktılar KB cinsinden olacaktır. Bunlar haricinde daha fazla detay almak için man sayfasına bakabilirsiniz.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/20.png)
 
