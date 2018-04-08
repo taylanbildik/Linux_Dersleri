@@ -258,11 +258,11 @@ Sol tarafta yer alan ayarlar menüsünden "**Aygıtlar**" sekmesine tıklayalım
 
 Aygıtlar sekmesinde yer alan "**Klavye**" ayarını seçelim. Sağ tarafta "***Klavye Kısayolları***" şeklinde bir pencere açılacaktır.
 
-Buradan en alta inerek altta yer alan " + " işaretine tıklayalım.
+Buradan en alta inerek altta yer alan " **+** " işaretine tıklayalım.
 
 Karşımıza küçük bir "***Özel Kısayol***" penceresi açılacaktır.
 
-Burada yer alan **İsim** kısmına herhangi bir ad verebilirsiniz ben daha sonrasında değiştirmek istediğimde hatırlamada kolaylık olsun diye "Terminal" adını verdim.
+Burada yer alan **İsim** kısmına herhangi bir ad verebilirsiniz ben daha sonrasında değiştirmek istediğimde hatırlamada kolaylık olsun diye "**Terminal**" adını verdim.
 
 Komut kısmına terminalin açılması için gerekli olan komutu girmeliyiz ben terminali açmak istediğimden terminali açma komutu olan `gnome-terminal` komutunu yazdım.
 
@@ -272,7 +272,7 @@ Ben <kbd>Ctrl + Shift + T</kbd> şekilinde ayarladım. Elbette siz kısayol tuş
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/31.gif" width="875">
 
-Son olarak "**Ekle**" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu(<kbd>Ctrl+Shift+T</kbd>) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
+Son olarak "**Ekle**" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu (<kbd>Ctrl+Shift+T</kbd>) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
 
 ### Bash Shell Kısayolları
 
