@@ -34,7 +34,7 @@ Ayrıca kısayollardan bahsetmiştim örneğin bazı dağıtımlarda <kbd>Ctrl +
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/4.png)
 
 <p>Konsola girmiş olduğumuz komut yorumlandı ve neticesinde bize <kbd>/bin/bash</kbd> şeklinde bir çıktı verdi. Bu çıktı bize mevcut sistemde kullanılan ana kabuk programının BASH olduğunu bildirmiş oldu. Burada komut yorumlandı dedik ancak neye göre oldu bu iş ? İşte bu noktada devreye ortam değişkenleri(çevre değişkenleri) giriyor. Bu kısımları fazlaca incelediğimi düşünenler olabilir ancak emin olun öğrendiğiniz her şey birbiri ile bağlı ve bütünü anlamak için bilmek gerekli. İleride yeri geldikçe bunları daha net kavrayacağız zaten.</p><p>Anlatımları mümkün oldukça teknik dilden uzak sade anlaşılır ve sizlerin de sürekli etkileşimde olacağı şekilde aktarmaya çalışıyorum. Yani burada yazanları kuru kuruya ezberlemeyecek, ilerleyiş sırasında uygulamalar yaparak konuları anlamış olacağız.</p>
-<p>Tamda bu noktada uygulama yaparak öğrenmenin önemini belirten Konfüçyüs'ün bir sözünü hatırlatmak istiyorum:</p>
+<p>Tam da bu noktada uygulama yaparak öğrenmenin önemini belirten Konfüçyüs'ün bir sözünü hatırlatmak istiyorum:</p>
 
 > ### "Bana anlat unuturum, bana göster hatırlarım, beni dahil et, anlarım."  **Konfüçyüs**
 
@@ -252,23 +252,27 @@ Terminalin kısayollar penceresine ulaştığımıza göre artık istediğimiz �
 
 Şimdi ise sistem üzerindeki kısayollara göz atalım. Ben sürekli Terminali kullandığımız için Terminali açmak üzere bir kısayol oluşturmak istiyorum. Bunun için adım adım yapmamız gerekenlere bakalım. Başlamadan önce, kullandığınız sürüme göre değişiklik göstereceğinden yönerge tam olarak sizi yönlendiremeyebilir. Ancak bunlar biraz kurcalayarak kendi kendinize bulamayacağınız şeyler değil. Ben yine de kullandığım sürüm üzerinden sizlere adımları aktarıyorum:
 
-Öncelikle sistem ayarları(Ayarlar) menüsüne gidelim oradan klavyeyi seçelim karşımıza "klavye kısayolları" şeklinde bir pencere açılacaktır.
+Öncelikle sistem ayarlarını(**Ayarlar**) açalım. 
+
+Sol tarafta yer alan ayarlar menüsünden "**Aygıtlar**" sekmesine tıklayalım. 
+
+Aygıtlar sekmesinde yer alan "**Klavye**" ayarını seçelim. Sağ tarafta "***Klavye Kısayolları***" şeklinde bir pencere açılacaktır.
 
 Buradan en alta inerek altta yer alan " + " işaretine tıklayalım.
 
-Karşımıza küçük bir "Özel Kısayol" penceresi açılacaktır.
+Karşımıza küçük bir "***Özel Kısayol***" penceresi açılacaktır.
 
-Burada yer alan İsim kısmına herhangi bir ad verebilirsiniz ben daha sonrasında değiştirmek istediğimde hatırlamada kolaylık olsun diye Terminal adını verdim.
+Burada yer alan **İsim** kısmına herhangi bir ad verebilirsiniz ben daha sonrasında değiştirmek istediğimde hatırlamada kolaylık olsun diye "Terminal" adını verdim.
 
-Komut kısmına terminalin açılması için gerekli olan komutu girmeliyiz ben Terminali açmak istediğimden Terminali açma komutu olan gnome-terminal komutunu yazdım.
+Komut kısmına terminalin açılması için gerekli olan komutu girmeliyiz ben terminali açmak istediğimden terminali açma komutu olan `gnome-terminal` komutunu yazdım.
 
 Daha sonra bir alt kutucuğa istediğimiz kısayol tuş kombinasyonunu giriyoruz.
 
-Ben Ctrl + Shift + T şekilinde ayarladım. Elbette siz kısayol tuş kombinasyonunu dilediğiniz gibi ayarlayabilirsiniz.
+Ben <kbd>Ctrl + Shift + T</kbd> şekilinde ayarladım. Elbette siz kısayol tuş kombinasyonunu dilediğiniz gibi ayarlayabilirsiniz.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/31.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/31.gif" width="875">
 
-Son olarak "Ekle" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu(<kbd>Ctrl+Shift+T</kbd>) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
+Son olarak "**Ekle**" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu(<kbd>Ctrl+Shift+T</kbd>) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
 
 ### Bash Shell Kısayolları
 
@@ -308,7 +312,7 @@ Ve sonuç bizleri şaşırtmayarak yine birleşik komut içerisinde yazdığım�
 
 Burada 1. komut başarısız olduğu için 2. komut ekrana basılmış oldu. Yani bir nevi önlem amaçlı bir kullanımdır. Biz konsola bu kullanım ile diyoruz ki; *"Eğer verdiğim ilk komut başarısız olursa ikinci komutu çalıştır."* yani bu durumda eğer ilk komut başarısız olursa hemen devreye ikinci komut girecektir ancak ilk komut başarılı olursa ikinci komut çalışmayacaktır.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/35.png" width="895">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/35.png" width="875">
 
 ### Kısayol Koruması
 
