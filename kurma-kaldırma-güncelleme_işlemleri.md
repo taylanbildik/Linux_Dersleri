@@ -59,15 +59,15 @@ Kali 2.0 ve sonrası için: **`deb http://old.kali.org/kali sana main non-free c
 Kali 2016.1 ve sonrası için:**`deb http://http.kali.org/kali kali-rolling main contrib non-free`**
 
 
-Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>sources.list</kbd> dosyasına ekledim.
+Repoları, `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>sources.list</kbd> dosyasına ekledim.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/1.png" width="875">
 
-Sıra gelidi güncelleme işlemine, bunun için `apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y` komut bütününü kullanabiliriz.
+Sıra geldi güncelleme işlemine, bunun için ilk olarak paket bilgilerini güncellemek üzere `apt-get update` daha sonra güncel paket bilgileri alınan uygulamaları güncellemek için de `apt-get upgrade -y` komutunu verelim. Ayrıca bu komutları `apt-get update && apt-get upgrade -y ` şeklinde birleşik olarak da kullanabiliriz. Özellikle sistemimizi kurulum sonrası ilk defa güncellediğimizde bu güncelleme işlemi internetimizin de hızına bağlı olarak oldukça uzun sürebiliyor. Bunun dışında zaten üst kısımlarda hangi komutun hangi işlevde olduğunu öğrendiğimiz için tek tek kullanımlarına örnek vermiyorum sizler yerine göre ilgili komutları kullanabilirsiniz.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/2.png" width="875">
 
-Güncelleme işlemi boyunca kullandığımız `-y` parametresi sayesinde herhangi bir soru sorulmadan bütün işlemler otomatik olarak tamamlanacak ve güncelleme işlemi tamamlanacaktır.
+Güncelleme işlemi boyunca, kullandığımız `-y` parametresi sayesinde herhangi bir soru sorulmadan bütün işlemler otomatik olarak gerçekleşecek ve güncelleme işlemi hızlı bir biçimde tamamlanacaktr.
 
 Program Kurmak
 -
