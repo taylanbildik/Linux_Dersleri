@@ -39,6 +39,8 @@ Belirtilen numaralı kısımların açıklamaları:
 
 Bu alanların neleri ifade ettiğini öğrendiğimize göre gelin hangi kullanıcının hangi gruba dahil olduğunu nasıl öğrenebiliriz onu görelim.
 
+Kullanıcı Gruplarını Sorgulamak
+-
 
 Kullanıcıların ait olduğu grupları görmek istersek komut satırına `id kullanıcı_adı` şeklinde komut vermemiz yeterli olacaktır.
 Ben "burak" kullanıcı hesabı için sorgulama yapmak üzere konsola `id burak` şeklinde komutumu veriyorum.
@@ -67,7 +69,8 @@ Ayrıca `id` komutunun birçok parametresi vardır bazıları birazdan göreceğ
 Yukarıdaki parametreler haricindekiler için man kılavuz sayfasına bakın lütfen.
 
 
-**Sıra geldi yeni grup oluşturmaya..**
+Sıra geldi yeni grup oluşturmaya..
+-
 
 Yeni bir grup oluşturmak istersek `groupadd yeni_grup_adı` şeklinde komutumuzu kullanırız.
 

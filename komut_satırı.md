@@ -20,6 +20,9 @@ Bunun için konsolunuzu açın ve aşağıdaki komutu girin diyecektim ki... "Ha
 
 Konsol, kullanıcı ile Shell arasından yer alarak kullanıcının komut girmesini sağlayan grafiksel ve komut satırı arayüzüne sahip bir araçtır. Biz komutlarımızı bu araç aracılığı ile Shell'e ulaştırırız Shell ise kullanıcıdan gelen girdileri yorumlayarak Kernel'e aktarır.
 
+Konsol Ekranı Açmak (Terminal/Komut Satırı)
+-
+
 Konsolu daha yakından incelemek adına bir konsol ekranı açalım. Yeni bir konsol ekranı açmak için kısayol tuşları olduğu gibi grafik arayüz aracılığı ile de açmak mümkün. Linux bize çok sayıda konsol açma imkanı tanır. Aynı anda 6 ayrı konsol açıp hepsinde ayrı işlem yapabiliriz. Bunu kanıtlamak istersek..(Anlatımlar Kali linux işletim sistemi üzerinden gerçekleştirilmektedir. Dolayısıyla anlatım sırasında anlatılanların uygulanması noktasına gelindiğinde sizlerden kali linux işletim sistemini halihazırda açık ve kullanıma hazır şekilde bekletiyor olmanız beklenmektir.) Grafiksel arayüzden komut satırına geçmek için <kbd>Crtl + Alt + (f1,f2,f3,f4,f5,f6)</kbd> tuş kombinasyonunu kullanabiliriz. Demiştim ya 6 farklı konsol açılabiliyor işte açtığınız konsolun numarası da <kbd>tty1,tty2,tty3,tty4,tty5,tty6</kbd> gibi "tty_konsol_numarası" şeklinde konsolda görülüyor. Örneğin ben <kbd>Ctrl + Alt + f3</kbd> tuş kombinasyonunu yaptığımda karşıma aşağıdakine benzer bir komut satırı geliyor ve benden login olmamı yani kullanıcı adımı ve sonrasında şifremi yazarak giriş yapmamı bekliyor.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/2.png)
@@ -34,7 +37,7 @@ Ayrıca kısayollardan bahsetmiştim örneğin bazı dağıtımlarda <kbd>Ctrl +
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/4.png)
 
 <p>Konsola girmiş olduğumuz komut yorumlandı ve neticesinde bize <kbd>/bin/bash</kbd> şeklinde bir çıktı verdi. Bu çıktı bize mevcut sistemde kullanılan ana kabuk programının BASH olduğunu bildirmiş oldu. Burada komut yorumlandı dedik ancak neye göre oldu bu iş ? İşte bu noktada devreye ortam değişkenleri(çevre değişkenleri) giriyor. Bu kısımları fazlaca incelediğimi düşünenler olabilir ancak emin olun öğrendiğiniz her şey birbiri ile bağlı ve bütünü anlamak için bilmek gerekli. İleride yeri geldikçe bunları daha net kavrayacağız zaten.</p><p>Anlatımları mümkün oldukça teknik dilden uzak sade anlaşılır ve sizlerin de sürekli etkileşimde olacağı şekilde aktarmaya çalışıyorum. Yani burada yazanları kuru kuruya ezberlemeyecek, ilerleyiş sırasında uygulamalar yaparak konuları anlamış olacağız.</p>
-<p>Tamda bu noktada uygulama yaparak öğrenmenin önemini belirten Konfüçyüs'ün bir sözünü hatırlatmak istiyorum:</p>
+<p>Tam da bu noktada uygulama yaparak öğrenmenin önemini belirten Konfüçyüs'ün bir sözünü hatırlatmak istiyorum:</p>
 
 > ### "Bana anlat unuturum, bana göster hatırlarım, beni dahil et, anlarım."  **Konfüçyüs**
 
@@ -106,6 +109,9 @@ Son olarak bana, "Yazılacak Dosya Adı: <kdb>/etc/profile</kdb>" diye belirtiyo
 
 			
 <p>Şimdi bu kısımlar sizlere çok fazla detaya girilmiş belki de gereksiz yere eklenmiş gibi gelebilir ancak bu dokümanı bir bütün olarak kabul etmelisiniz. Dokümantasyon bir sefer okudum bitti değil ihtiyacınız oldukça tekrar tekrar bakasınız diye var. Yani buraları okuyup uygulayıp kavradıktan sonra böyle bir ihtiyacınız olduğunda bu konunun burada olduğunu bilin. Burada yer alan anlatımlar temeli oluşturma üzerine sıralı ve bağlantılı şekilde ilerliyor. Burada bunları ezberlemenize gerek yok zaten öğrenmenin temelinde de ezber yok.(Aman M.E.B. duymasın*!) O yüzden rahat olun her şey kullandıkça gelişecek ancak dediğim gibi artık böyle bir şeyin varlığından haberdarsınız yeri geldiğinde ihtiyacınız olan bilgiler burada olacak. </p>
+
+Ortam Değişkenlerini Görüntülemek
+-
 
 <p>Ortam değişkenleri dedik ancak şu ana kadar sadece PATH değişkeninden bahsettik. Tabii ki sistemde sadece PATH değişkeni bulunmuyor bu değişken dışında da pek çok ortam değişkeni mevcut. Bunları görmek istersek komut satırına <code>set</code> , <code>env</code> ya da <code>printenv</code> komutlarından birini ihtiyacımıza göre kullanabiliriz. Bu üç komut arasındaki farklar aşağıdaki şekildedir.</p>
 
@@ -236,7 +242,7 @@ Kısayollar
 -------------
 
 
-Bu bölümde sistem üzerinde gerekli hakimiyeti sağlamak için bize kolaylıklar sağlayan bazı kısayolları ve bazı önemli bilgileri öğrenip uygulayacağız. Kısayolları şimdi öğrenmemizin sebebi ileride komutları uygularken bizlere kolaylıklar sağlayarak bize hız katacak olmalarıdır. Hem şimdi öğrenirsek eğitim boyunca da sürekli pratik yapma imkanı bulmuş oluruz. Benim tecrübeme göre eğitim asla ezber üzerine kurulamaz.(Daha önce de söylemiştik M.E.B'in haberi olmasın lütfen*!) Öğrenme denilen olgu uygulama yani sürekli olarak yapılan pratik ile gerçekleşir. Bu bölümde öğreneceğiniz bilgiler belki başlangıç için fazlaca gözükebilir. Ancak her kısayolu ve bilgiyi direk ve sürekli olarak kullanmasak bile burada olduğunu bilmeli ve gerektiğinde dönüp tekrar bakabilmeliyiz. O yüzden gözünüze fazla gözükürse endişe etmenize gerek yok. Zaten bunlar hayati olarak sayılmazlar ancak zamanla göreceksiniz ki işlerimizi kolaylaştırarak Linux sistemini verimli şekilde kullanmamızı sağlıyor olacaklar. Neyse bu kadar açıklama yeter gelin konumuza Terminal için kısayol atama işlemleri ile başlayalım.
+Bu bölümde sistem üzerinde gerekli hakimiyeti sağlamak için bize kolaylıklar sağlayan bazı kısayolları ve bazı önemli bilgileri öğrenip uygulayacağız. Kısayolları şimdi öğrenmemizin sebebi ileride komutları uygularken bizlere kolaylıklar sağlayarak bize hız katacak olmalarıdır. Hem şimdi öğrenirsek eğitim boyunca da sürekli pratik yapma imkanı bulmuş oluruz. Benim tecrübeme göre eğitim asla ezber üzerine kurulamaz. Öğrenme denilen olgu uygulama yani sürekli olarak yapılan pratik ile gerçekleşir. Bu bölümde öğreneceğiniz bilgiler belki başlangıç için fazlaca gözükebilir. Ancak her kısayolu ve bilgiyi direk ve sürekli olarak kullanmasak bile burada olduğunu bilmeli ve gerektiğinde dönüp tekrar bakabilmeliyiz. O yüzden gözünüze fazla gözükürse endişe etmenize gerek yok. Zaten bunlar hayati olarak sayılmazlar ancak zamanla göreceksiniz ki işlerimizi kolaylaştırarak Linux sistemini verimli şekilde kullanmamızı sağlıyor olacaklar. Neyse bu kadar açıklama yeter gelin konumuza Terminal için kısayol atama işlemleri ile başlayalım.
 
 ### Terminal Kısayolları
 
@@ -252,23 +258,27 @@ Terminalin kısayollar penceresine ulaştığımıza göre artık istediğimiz �
 
 Şimdi ise sistem üzerindeki kısayollara göz atalım. Ben sürekli Terminali kullandığımız için Terminali açmak üzere bir kısayol oluşturmak istiyorum. Bunun için adım adım yapmamız gerekenlere bakalım. Başlamadan önce, kullandığınız sürüme göre değişiklik göstereceğinden yönerge tam olarak sizi yönlendiremeyebilir. Ancak bunlar biraz kurcalayarak kendi kendinize bulamayacağınız şeyler değil. Ben yine de kullandığım sürüm üzerinden sizlere adımları aktarıyorum:
 
-Öncelikle sistem ayarları(Ayarlar) menüsüne gidelim oradan klavyeyi seçelim karşımıza "klavye kısayolları" şeklinde bir pencere açılacaktır.
+Öncelikle sistem ayarlarını(**Ayarlar**) açalım. 
 
-Buradan en alta inerek altta yer alan " + " işaretine tıklayalım.
+Sol tarafta yer alan ayarlar menüsünden "**Aygıtlar**" sekmesine tıklayalım. 
 
-Karşımıza küçük bir "Özel Kısayol" penceresi açılacaktır.
+Aygıtlar sekmesinde yer alan "**Klavye**" ayarını seçelim. Sağ tarafta "***Klavye Kısayolları***" şeklinde bir pencere açılacaktır.
 
-Burada yer alan İsim kısmına herhangi bir ad verebilirsiniz ben daha sonrasında değiştirmek istediğimde hatırlamada kolaylık olsun diye Terminal adını verdim.
+Buradan en alta inerek altta yer alan " **+** " işaretine tıklayalım.
 
-Komut kısmına terminalin açılması için gerekli olan komutu girmeliyiz ben Terminali açmak istediğimden Terminali açma komutu olan gnome-terminal komutunu yazdım.
+Karşımıza küçük bir "***Özel Kısayol***" penceresi açılacaktır.
+
+Burada yer alan **İsim** kısmına herhangi bir ad verebilirsiniz ben daha sonrasında değiştirmek istediğimde hatırlamada kolaylık olsun diye "**Terminal**" adını verdim.
+
+Komut kısmına terminalin açılması için gerekli olan komutu girmeliyiz ben terminali açmak istediğimden terminali açma komutu olan `gnome-terminal` komutunu yazdım.
 
 Daha sonra bir alt kutucuğa istediğimiz kısayol tuş kombinasyonunu giriyoruz.
 
-Ben Ctrl + Shift + T şekilinde ayarladım. Elbette siz kısayol tuş kombinasyonunu dilediğiniz gibi ayarlayabilirsiniz.
+Ben <kbd>Ctrl + Shift + T</kbd> şekilinde ayarladım. Elbette siz kısayol tuş kombinasyonunu dilediğiniz gibi ayarlayabilirsiniz.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/31.gif)
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/31.gif" width="875">
 
-Son olarak "Ekle" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu(<kbd>Ctrl+Shift+T</kbd>) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
+Son olarak "**Ekle**" butonuna tıklayarak kısayolumu atamış oluyorum. Artık ne zaman atadığım kısayol tuş kombinasyonunu (<kbd>Ctrl+Shift+T</kbd>) uygularsam yeni bir Terminal ekranı açılıyor olacak. Ben burada Terminal üzerinden örnek verdim ancak herhangi başka şeyler de olabilir o sizlere kalmış. Ayrıca bu kısayollar menüsünde yer alan kısayollara da göz atıp eğer isterseniz dilediğiniz şekilde değiştirebilirsiniz.
 
 ### Bash Shell Kısayolları
 
@@ -298,7 +308,7 @@ Hazır konu kısayollardan ve pratiklikten açılmışken aynı anda birden fazl
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/32.png)
 
-Çıktıda görüldüğü gibi PATH ve TERM ortam değişkenlerinin değerleri yazdığımız birleşik komut sayesinde iki farklı komut aynı anda basıldı. Gelin şimdi de diğer bir yol olan noktalı virgül " <kbd>;</kbd> " kullanarak aynı işlemi tekrar edelim.
+Çıktıda görüldüğü gibi PATH ve TERM ortam değişkenlerinin değerleri yazdığımız iki komutun arasına koymuş olduğumuz <kbd>&&</kbd> operatörü sayesinde aynı anda basılmış oldu. Gelin şimdi de diğer bir yol olan noktalı virgül " <kbd>;</kbd> " kullanarak aynı işlemi tekrar edelim.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/33.png)
 
@@ -308,17 +318,17 @@ Ve sonuç bizleri şaşırtmayarak yine birleşik komut içerisinde yazdığım�
 
 Burada 1. komut başarısız olduğu için 2. komut ekrana basılmış oldu. Yani bir nevi önlem amaçlı bir kullanımdır. Biz konsola bu kullanım ile diyoruz ki; *"Eğer verdiğim ilk komut başarısız olursa ikinci komutu çalıştır."* yani bu durumda eğer ilk komut başarısız olursa hemen devreye ikinci komut girecektir ancak ilk komut başarılı olursa ikinci komut çalışmayacaktır.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/35.png" width="895">
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/35.png" width="875">
 
 ### Kısayol Koruması
 
-Buraya gelene kadar bir çok kısayoldan ve bu kısayolların avantajlarından bahsettik ancak kısayollar bazen istemediğimiz sonuçlar doğurabiliyor. Biz de böyle durumlarla karşılaşmamak adına şimdiden ufak önlemler alsak iyi olur. Önceki kısımlarda <kbd>Ctrl+D</kbd> kısayolunun mevcut konsolu kapattığını öğrenmiştik. Bu çok kullanışlı bir kısayol olsa da bazen istemeden de olsa konsolun ansızın kapanmasına neden olabiliyor. Yani bir kontrol mekanizması oluşturmamız sonradan üzülmemek için şart. Bu kontrol sağlama imkanını bize **ignoreeof** verir. **ignoreeof** tanımını kullanmanın 2 farklı yolu vardır. Bunlardan birisi sadece mecvut Terminal için geçerli diğeri ise sürekli ve oturumdaki tüm Terminallerde geçerli olmak üzere kullanılmasıdır. Sürekli ve tüm Terminal ekranlarında geçerli olsun istiyorsak. Gerekli ayarlamaları yapmak üzere komut satırımıza <code> nano -w ~/.bashrc</code> komutunu veriyoruz ve <kbd> .bashrc</kbd> dosyasının en alt satırına <code>export IGNOREEOF=2</code> yazıp <kbd>Ctrl + X </kbd> kombinasyonunu kullanarak dosyanın ismini değiştirmeden kaydederek çıkıyoruz.(Bütün kullanıcılarda bu korumayı sağlamak için değişikliği <kbd>bash.bashrc</kbd> dosyasında yapmamız gerektiğini biliyorsunuz.)
+Buraya gelene kadar bir çok kısayoldan ve bu kısayolların avantajlarından bahsettik ancak kısayollar bazen istemediğimiz sonuçlar doğurabiliyor. Biz de böyle durumlarla karşılaşmamak adına şimdiden ufak önlemler alsak iyi olur. Önceki kısımlarda <kbd>Ctrl+D</kbd> kısayolunun mevcut konsolu kapattığını öğrenmiştik. Bu çok kullanışlı bir kısayol olsa da bazen istemeden de olsa konsolun ansızın kapanmasına neden olabiliyor. Yani bir kontrol mekanizması oluşturmamız sonradan üzülmemek için şart. Bu kontrol sağlama imkanını bize **ignoreeof** verir. **ignoreeof** tanımını kullanmanın 2 farklı yolu vardır. Bunlardan birisi sadece mecvut Terminal için geçerli diğeri ise sürekli ve oturumdaki tüm Terminallerde geçerli olan kullanımlardır. Sürekli ve tüm Terminal ekranlarında geçerli olsun istiyorsak. Gerekli ayarlamaları yapmak üzere komut satırımıza <code> nano -w ~/.bashrc</code> komutunu veriyoruz ve <kbd> .bashrc</kbd> dosyasının en alt satırına <code>export IGNOREEOF=2</code> yazıp <kbd>Ctrl + X </kbd> kombinasyonunu kullanarak dosyanın ismini değiştirmeden kaydederek çıkıyoruz.(Bütün kullanıcılarda bu korumayı sağlamak için değişikliği <kbd>bash.bashrc</kbd> dosyasında yapmamız gerektiğini biliyorsunuz.)
 
 Böylece koruma sistemi kuruldu ve artık test etmeye hazır. Komut satırındayken iki kez <kbd>Ctrl + D </kbd> tuş kombinasyonunu uygularsak konsol bize iki defa uyarıda bulunacaktır ve çıkmak için ancak 3. defa bastığımızda ya da komut satırına <code>exit</code> yazdığımızda konsol kapanacaktır.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/36.gif)
 
-Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 kez <kbd>Ctrl + D </kbd> kapatma kombinasyonundan korudu. Ancak sizler bu bana yetmez ya da 2 kez fazla olur diyorsanız tanımı istediğiniz değerlerde ayarlayabilirsiniz. Örneğin <code>IGNOREEOF=4</code>  olabilir ya da <code>IGNOREEOF=1</code> olabilir, bu değer tamamen size kalmış. Ayrıca ufak bir hatırlatma, yaptığınız değişiklikler ancak Terminali kapatıp açtığınızda geçerli olur.
+Burada biz <code>IGNOREEOF=2</code> şeklinde belirttik ve bu tanımlama bizi 2 kez <kbd>Ctrl + D </kbd> kapatma kombinasyonundan korudu. Ancak sizler bu bana yetmez ya da 2 kez fazla olur diyorsanız tanımı istediğiniz değerlerde ayarlayabilirsiniz. Örneğin <code>IGNOREEOF=4</code> olabilir ya da <code>IGNOREEOF=1</code> olabilir, bu değer tamamen size kalmış. Ayrıca bu kapanmaya karşı koruma özelliğini kapatmak isterseniz eklemiş olduğunuz ifadeyi dosyadan silerek dosyayı kaydetmeniz yeterli olacaktır.
 
 Şimdi de yalnızca mevcut Terminal için geçici koruma nasıl sağlarız ona değinelim. Koruma katmanı ne kadar hayat kurtarıcı olsa da sürekli olması bazen rahatsız edici olabilir. İşte bu noktada sadece önemli ve gerekli gördüğümüz zaman bu özelliği açıp kapatma seçeneğine sahibiz. Bunu da iki farklı yolla yapabiliriz.
 

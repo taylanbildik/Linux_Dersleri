@@ -17,27 +17,36 @@ Güncelleme işleminde kullanılan komutlarımızı tanıyarak devam edelim.
 
     apt-get update
 
-Paket listesini (<kbd>/etc/apt/sources.list</kbd>) günceller.
+Komutu <kbd>sources.list</kbd> dosyasına eklemiş olduğumuz repolara bakarak paket listelerini kontrol edip pakerlerin son sürümleri ve bağımlılıkları hakkında bilgi almak için bunları "günceller". Yani bu komutumuz güncelleme işleminden önce nelerin güncellenmesi gerektiğine bakarak sistemimizdeki sürümünden yüksek sürümleri bulunan yani güncellenmesi gereken doğru paketlerin güncellenmesini sağlıyor. Kısaca bu komutumuzun amacı sadece yenilikleri kontrol etmektir.
 
     apt-get upgrade
 
-Kurulu olan paketleri <kbd>/etc/apt/sources.list</kbd> dosyasındaki paket listesine bakarak en son versiyonlarına günceller.
+Komutu da `apt-get update` komutunun depolardan kontrol edip bildirmiş olduğu güncellenemesi gereken paketleri en son versiyonlarına günceller.
 
     apt-get dist-upgrade
+    
+Komutu ise `apt-get upgrade` komutundan farklı olarak sadece güncelleme yapmakla kalmaz sistemimizdeki gereksiz paketleri de siler.
 
-Gerekli gördüğü paketleri siler veya günceller.
 
     apt-get clean
 
-Kurulu olan tüm paketleri siler.
+Komutuyla kurmak üzere indirmiş olduğumuz paketlerin hepsini silebiliyoruz. Depodan indirmiş olduğumuz tüm paketler ve uygulamanın çalışması için gereken bağımlılıklar <kbd>.deb</kbd> uzantısı ile arşivlenerek <kbd>/var/cache/apt/archives</kbd> dizini içerinde daha sonra tekrar kullanılma ihtimaline karşı tutuluyorlar. İşte bizler de `apt-get clean` komutu yardımıyla eğer internet bağlantımızda sorun yoksa yani bu paketleri tekrar indiriken sorun yaşamayacaksak bu paketleri silerek sistemimizde yer işgal etmelerini önlemiş oluyoruz.
+
+    apt-get autoclean
+
+Komutu da `apt-get clean` komutuyla benzer şekilde arşivlenmiş paketleri silme işlemini yapar. Fakat burada silinen arşivler bütün arşiv paketleri değil sadece eski sürüm olup artık kullanımda olmayan ve depolardan kaldırılmış paketlerdir.
+
+    apt-get autoremove
+
+Komutu ise silmiş olduğumuz uygulamardan geriye kalan ve artık ihtiyaç duyulmayan bağımlılıkları kaldırmamızı sağlıyor.
 
     -y
 
-<kbd>-y</kbd> parametresinin görevi çıkacak olan onay sorularına evet(yes) cevabını otomatik olarak vermektir. Bu sayede gerekli işlemler de otomatik olarak zaman kaybetmeden yapılmış olur.
+<kbd>-y</kbd> parametresinin göreviyse çıkacak olan onay sorularına evet(yes) cevabını otomatik olarak vermektir. Bu sayede gerekli işlemler bizden onay beklemeden otomatik olarak zaman kaybedilmeden yapılmış olur.
 
-Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>soruces.list</kbd> dosyasına kullanıdığımız versiyona uygun depoları eklemeliyiz.
+Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>soruces.list</kbd> dosyasına kullandığımız versiyona uygun depoları ekliyoruz.
 
-Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>soruces.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3) versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>soruces.list</kbd> dosyasına ekliyorum.
+Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>sources.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3) versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>sources.list</kbd> dosyasına ekliyorum.
 
 `deb http://http.kali.org/kali kali-rolling main contrib non-free`
 
@@ -50,15 +59,15 @@ Kali 2.0 ve sonrası için: **`deb http://old.kali.org/kali sana main non-free c
 Kali 2016.1 ve sonrası için:**`deb http://http.kali.org/kali kali-rolling main contrib non-free`**
 
 
-Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
+Repoları, `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>sources.list</kbd> dosyasına ekledim.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/1.png" width="875">
 
-Sıra gelidi güncelleme işlemine, bunun için `apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y` komut bütününü kullanabiliriz.
+Sıra geldi güncelleme işlemine, bunun için ilk olarak paket bilgilerini güncellemek üzere `apt-get update` daha sonra güncel paket bilgileri alınan uygulamaları güncellemek için de `apt-get upgrade -y` komutunu verelim. Ayrıca bu komutları `apt-get update && apt-get upgrade -y ` şeklinde birleşik olarak da kullanabiliriz. Özellikle sistemimizi kurulum sonrası ilk defa güncellediğimizde bu güncelleme işlemi internetimizin de hızına bağlı olarak oldukça uzun sürebiliyor. Bunun dışında zaten üst kısımlarda hangi komutun hangi işlevde olduğunu öğrendiğimiz için tek tek kullanımlarına örnek vermiyorum sizler yerine göre ilgili komutları kullanabilirsiniz.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/2.png" width="875">
 
-Güncelleme işlemi boyunca kullandığımız `-y` parametresi sayesinde herhangi bir soru sorulmadan bütün işlemler otomatik olarak tamamlanacak ve güncelleme işlemi tamamlanacaktır.
+Güncelleme işlemi boyunca, kullandığımız `-y` parametresi sayesinde herhangi bir soru sorulmadan bütün işlemler otomatik olarak gerçekleşecek ve güncelleme işlemi hızlı bir biçimde tamamlanacaktr.
 
 Program Kurmak
 -

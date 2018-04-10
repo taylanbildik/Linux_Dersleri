@@ -2368,12 +2368,18 @@ Yukarıda verilen .gif ile bu durumlar ele alınmıştır.
 Disk İşlemleri
 =
 
-Disk ile ilgili yapabileceğimiz bölümleme, formatlama, yedekleme ve diğer işlemleri gerçekleştirebileceğimiz çeşitli komutlar var. Bu bölümde bu komutları ve işlevsel yanlarını ele alacağız. Konumuza ilk olarak daha önce de kullanmış olduğumuz `fdisk` komutu ile başlayalım.
+Disk ile ilgili yapabileceğimiz bölümleme, formatlama, oluşturma, tarama, düzeltme ve benzeri diğer işlemleri gerçekleştirebileceğimiz çeşitli komutlar var. Bu bölümde bu komutları ve işlevsel yanlarını ele alacağız. 
+Konumuza ilk olarak daha önce de kullanmış olduğumuz `fdisk` komutu ile başlayalım.
+
+
 > **Komutlara geçmeden önce disk üzerinde yapacağımız işlemlerde son derece dikkatli olmamız gerektiğini aklınızdan çıkarmayın lütfen.**
 > **Yapacağımız yanlışlar dosyalarımızın kalıcı olarak silinmesine ve daha farklı sorunlara yol açabilir.**
 
 > **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
 
+**Ayrıca bir hatırlatma daha;** Disk üzerinde işlem yapabilmeniz için o diskin biz işlem yapıyorken sistem tarafından kullanılmıyor olması gerekiyor. Çünkü biz işlem yapmaya çalışıyorken disk sistem tarafından kullanıldığı için doğal olarak bizim disk üzerinde işlem yapmamız mümkün olmuyor. Bunun için eğer yapacağımız disk işlemeleri linux işletim sistemimizin kurulu olduğu disk alanı içinse, diskte kurulu olan sistemi kullanmadan işlemleri diskten bağımsız şekilde yapmamız gerekiyor. Bunu da kurulum aşamasında göstermiş olduğum linux işletim sisteminin USB üzerinden live olarak çalıştırılması ile gerçekleştirebiliriz.
+
+Yani bu kısımda öğreneceğimiz bilgileri linux işletim sisteminin kurulu olduğu disk alanında uygulamak için sistemi başlatmadan linux live seçeneği ile çalışın.
 
 fdisk
 -
@@ -2454,7 +2460,7 @@ cfdisk
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/10.png)
 
 Ayrıca benden bir tavsiye, `fdisk`'in kullanımı `cfdisk`'e oranla biraz zordur, dolayısıyla kolayca hata yapabilir ve istenmeyen durumlarla karşı karşıya kalabilirsiniz. Etkileşimli bir arayüzü olan `cfdisk`'in kullanımı daha kolay olduğundan hata yapmak daha zordur.
-Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Çok kolay şekile kendiniz keşfedebilirsiniz.(*Disk ile ilgili büyük sorunlara yol açmamak adına keşiflerinizi ana makina haricindeki sanal ortamlarda gerçekleştirmenizi şiddetle tavsiye ederim.*)
+Kullanımı oldukça kolay olduğundan detaylı anlatımda bulunmuyorum. Sadece disk işlemleri ile ilgili olduğu için bu kısımda değinmek istedim. Yani artık disk işlemlerinde böyle bir aracın varlığından haberdarsınız ve merak ettiğiniz takdirde çok kolay şekile kendiniz keşfedebilirsiniz.(*Disk ile ilgili büyük sorunlara yol açmamak adına keşiflerinizi ana makina haricindeki sanal ortamlarda gerçekleştirmenizi şiddetle tavsiye ederim.*)
 
 badblocks
 -
@@ -2508,11 +2514,13 @@ Ve USB diskteki hatalı bloklar düzeltilerek işlemimiz başarılı bir şekild
 
 df Komutu
 -
-`df` komutu bizlere disklerin; dosya sistemini, boyutunu, doluluk oranını, bağlandığı yeri(mount) gibi bilgileri kısa bir liste halinde verir. Komut ile birlikte `h` parametresini kullanırsak hakkındaki geniş bilgi içeriği bizlere sunulur. Çıktılar aşağıdaki gibidir.
+`df` komutu bizlere disklerin; **dosya sistemini**, **boyutunu**, **doluluk oranını**, **bağlandığı yeri(mount)** gibi bilgileri kısa bir liste halinde verir. 
+
+Eğer çıktılar daha okunaklı olsun yani bilgileri **MB**,**GB** cinsinden görelim istersek komutumuza ek olarak `h` parametresini de kullanırız. Komutumu `df -h` şeklinde yazıyorum. Ve gördüğünüz gibi çıktılar daha okunaklı yani **MB**,**GB** cinsinden bana sunulmuş oldu.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/19.png)
 
-Diskler hakkında genel bilgi edinmek için sık kullanılan bir komuttur. Ayrıca komutla birlikte kullanacağımız `m` parametresi çıktıları MB cinsinden verirken, `k` parametresi ile kullanımlarda çıktılar KB cinsinden olacaktır. Bunlar haricinde daha fazla detay almak için man sayfasına bakabilirsiniz.
+`df` komutu diskler hakkında genel bilgi edinmek için sık kullanılan bir komuttur. Ayrıca komutla birlikte kullanacağımız `m` parametresi çıktıları **MB** cinsinden verirken, `k` parametresi ile kullanımlarda çıktılar **KB** cinsinden olacaktır. Bunlar haricinde daha fazla detay almak için man sayfasına bakabilirsiniz.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/20.png)
 
@@ -2525,7 +2533,13 @@ Grafiksel basit bir arayüze sahip olmasından dolayı kullanımı en kolay disk
 umount (Diski Ayırmak)
 -
 
-Diski ayırmak gibi bir başlık aklınızda diski bölümlemek gibi bir anlam ifade etmiş olabilir. Ancak burdaki ayırmadan kasıt diskin bağlantısının sistemden koparılması. Yani şöyleki komutumuz daha önce muhtemelen kullanmış olduğunuz, diskin üzerine sağ tıklayarak "Diski Çıkar" işlemi ile aynı görevdedir. Hatta bu durumu hemen teyit etmek için USB diskimizi `umount` komutu ile sistemden ayıralım.
+Diski ayırmak gibi bir başlık aklınızda diski bölümlemek gibi bir anlam ifade etmiş olabilir. Ancak burdaki ayırmadan kasıt diskin bağlantısının sistemden koparılması. Yani şöyleki komutumuz daha önce muhtemelen kullanmış olduğunuz, diskin üzerine sağ tıklayarak "Diski Çıkar" işlemi ile aynı görevdedir. 
+
+Aşağıdaki linux ve windows sistemlerinde grafiksel arayüz ile disk çıkarma işlemi kolay anımsamanız için görsel olarak verilmiştir.
+
+<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/21-1.png" width="875">
+
+Hatta bu durumu hemen teyit etmek için USB diskimizi `umount` komutu ile sistemden ayıralım.
 
 Bu işlem için öncelikle diskimiz hakkında genel bilgi sahibi olmak adına konsola `df -h` komutunu verelim.
 
@@ -2541,7 +2555,7 @@ Diski çıkarma işlemi sonrasında bu işlemi teyit etmek için birde `df -h` k
 mount (Diski Bağlamak)
 -
 
-Sistemden ayırdığımız diski tekrar bağlamak için `mount` komutunu kullanırız. Kullanım şekli `mount -t aygıt_adı bağlanacak_konum` şeklindedir.
+Sistemden ayırdığımız diski tekrar bağlamak için `mount` komutunu kullanırız. Kullanım şekli `mount aygıt_adı bağlanacak_konum` şeklindedir.
 
 Diski sisteme bağlamadan önce yapmamız gereken şey diskin bağlanacağı konumu oluşturmaktır. Bunun için ben masaüstüne `mkdir USB` komutu ile <kbd>USB</kbd> adında bir klasör oluşturdum.
 
