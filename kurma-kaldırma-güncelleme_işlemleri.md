@@ -78,7 +78,13 @@ Depodan Kurulum
 Depoda bulunan programların kurulumlarını yaparken `apt-get install program_adı` komut bütünü kullanılıyor.
 Unutmayın depodan(repository) kurulum yaparken sisteminizin güncel olması önemlidir. Şayet sisteminizi güncel tutmuyorsanız yani repolarınız güncel değilse **depodan program yükleme** çabalarınız hüsranla sonuçlanabilir.
 
-Örnek olması açısından filezilla isimli bir programın depodan kurulumunu yapmak için konsola `apt-get install filezilla` komutunu girdim.
+Ancak programın yüklenmeme sebebi bir tek güncelleme işlemi ile ilgili değil. Şayet yüklemek istediğimiz program depolarda yer almıyorsa depodan yükleme işlemimiz de haliyle başarısız olacaktır.
+
+Bu yüzden öncelikle kurmak istediğimiz program depolarda yer alıyor mu ona bakalım. Ben örnek olması açısından depolarda *filezilla* aracını araştırıyorum eğer depolarda varsa kurulum yapabiliriz. Depoları kontrol etmek üzere konsola `apt-cache search filezilla` şeklinde komutumu vererek *filezilla* aracını depolarda var mı diye kontrol ediyorum.
+
+Ve gördüğünüz gibi *filezilla* aracı depolarda mevcutmuş. Sizler de bu şekilde depolarda yer alan programları `apt-cache search program_adı` şeklinde aratarak sorgulayabilirsiniz.
+
+Örnek olması açısından *filezilla* isimli bir programın depodan kurulumunu yapmak için konsola `apt-get install filezilla` komutunu girdim.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/3.gif" width="875">
 
@@ -105,7 +111,7 @@ veya
 
 Bu sayede program yapılandırma dosyaları ile birlikte tamamen silinmiş oluyor.
 
-Sizler bu şekilde depolarda yer alan programları oldukça kolay şekilde kurup kaldırabilirsiniz.
+İşte sisler de bu şekilde depolarda yer alan programları oldukça kolay şekilde kurup kaldırabilirsiniz.
 
 
 Paket Yönetim Sistemi İle Kurulum
