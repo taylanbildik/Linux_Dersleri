@@ -35,9 +35,9 @@ Kurulu olan tüm paketleri siler.
 
 <kbd>-y</kbd> parametresinin görevi çıkacak olan onay sorularına evet(yes) cevabını otomatik olarak vermektir. Bu sayede gerekli işlemler de otomatik olarak zaman kaybetmeden yapılmış olur.
 
-Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>soruces.list</kbd> dosyasına kullanıdığımız versiyona uygun depoları eklemeliyiz.
+Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>sources.list</kbd> dosyasına kullanıdığımız versiyona uygun depoları eklemeliyiz.
 
-Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>soruces.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3) versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>soruces.list</kbd> dosyasına ekliyorum.
+Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>sources.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3) versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>sources.list</kbd> dosyasına ekliyorum.
 
 `deb http://http.kali.org/kali kali-rolling main contrib non-free`
 
@@ -50,7 +50,7 @@ Kali 2.0 ve sonrası için: **`deb http://old.kali.org/kali sana main non-free c
 Kali 2016.1 ve sonrası için:**`deb http://http.kali.org/kali kali-rolling main contrib non-free`**
 
 
-Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>soruces.list</kbd> dosyasına ekledim.
+Repoları `leafpad /etc/apt/sources.list` komutu ile açarak <kbd>sources.list</kbd> dosyasına ekledim.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/14-%20G%C3%BCncelleme%20Kurma%20Kald%C4%B1rma%20%C4%B0%C5%9Flemleri/1.png" width="875">
 
