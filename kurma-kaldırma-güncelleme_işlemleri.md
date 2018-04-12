@@ -197,7 +197,10 @@ Linux'a uyumlu sürümü bulunan açık kaynak kodlu yazılımların kaynak kod 
 
 İndirdiğimiz program arşivini klasöre çıkartırız.
 
-Programı derlemeden önce gerekli kütüphaneler ve bağımlılıkları kontrol ediyoruz.
+Ve arşiv içeriğini çıkarmış olduğumuz klasörden komut satırımızı çalıştırırız.
+İlgli konumda olduğumuzdan emin olduktan sonra;
+
+Programı derlemeden önce gerekli kütüphaneler ve bağımlılıkları kontrol ederiz.
 
 `./configure`
 
@@ -205,14 +208,13 @@ Eksik çıkarsa bunları kurmamız gerekicek.
 
 Eğer bu aşamada;
 
-`bash: ./configure: No such file or directory`
-
 `bash: ./configure: Böyle bir dosya ya da dizin yok`
 
 gibi bir hata çıktısı alıyorsanız:
-O program için `./configure` aşamasına gerek yoktur, farklı bir şekilde kuruluyor anlamlarına gelebilir. Bunun için programla birlikte gelen kurulum bilgisini içeren dosyalara("install", "readme", "configure" vb..) iyice göz atmanızı öneririm.
 
-Make aşaması için derleme yapacak paketleri `apt-get install build-essential` komutu ile kuruyoruz.
+O program <kbd>configure</kbd> dosyası içermiyordur yani o program için `./configure` aşamasına gerek yoktur. Böyle bir durumla karşılaştığınızda bu aşamayı atlayarak direk `make` aşamasına geçin. Ancak <kbd>configure</kbd> dosyası varsa mutlaka `./configure` diyerek progamın ihtiyacı olan bağımlılıkları kontrol edip eksik olanları yükleyin. Aksi halde program kurulum işlemi başarısız olacaktır. Şimdi devam edelim.
+
+Gerekli kütüphaneler ve bağımlılıkları kontrol ettikten sonra `make` aşaması için derleme yapacak paketleri `apt-get install build-essential` komutu ile kuruyoruz.
 
 `make` diyerek programımızı derlemiş oluyoruz.
 
