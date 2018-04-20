@@ -11,6 +11,7 @@ Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
 - [Linux Nedir ?](https://github.com/taylanbildik/Linux_Dersleri/blob/master/linux_nedir.md)
 - [Gerekli Ortamın Kurulması](https://github.com/taylanbildik/Linux_Dersleri/blob/master/gerekli_ortam%C4%B1n_kurulmas%C4%B1.md)
 - [Komut Satırı](https://github.com/taylanbildik/Linux_Dersleri/blob/master/komut_sat%C4%B1r%C4%B1.md)
+- [Kısayollar](https://github.com/taylanbildik/Linux_Dersleri/blob/master/k%C4%B1sayollar.md#k%C4%B1sayollar)
 - [Yardım Alma Komutları](https://github.com/taylanbildik/Linux_Dersleri/blob/master/yard%C4%B1m_alma_komutlar%C4%B1.md)
 - [Bilgi Alma Komutları](https://github.com/taylanbildik/Linux_Dersleri/blob/master/bilgi_alma.md)
 - [Linux Dosya Sistemi Hiyerarşisi](https://github.com/taylanbildik/Linux_Dersleri/blob/master/Linux_dosya_sistemi_hiyerar%C5%9Fisi.md)
