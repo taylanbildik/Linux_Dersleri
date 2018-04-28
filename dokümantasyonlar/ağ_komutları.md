@@ -70,7 +70,7 @@ Eğer direk olarak sınırlama getirmek isterseniz komutu `ping -c 4 www.google.
 
 route
 -
-Sistemimizde bulunan yönlendirmeleri görmek için kullanabiliriz. En temel kullanımı `route` şeklindedir.
+Sistemimizdeki IP yönlendirme tablosunun içeriğini görmemizi sağlar. IP yönlendirme tablosunun içeriğini görmek için konsola `route -n` komutunu yazalım.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/9.png" width="875" >
 
