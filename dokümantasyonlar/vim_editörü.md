@@ -13,7 +13,6 @@ Konsola `vim` komutunu vererek editörümüzü açalım.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/1.png" width="875" >
 
-Editörümüz açıldı gördüğünüz gibi.
 Editörle çalışmak için <kbd>i</kbd> tuşuna basıyoruz ve editör sol alt köşede <kbd>--INSERT--</kbd> yazısı ile içerik almaya hazır olduğunu belirtiyor.
 
 Örnek olması açısından editöre aşağıdaki şekilde birkaç dize yazı ekledim.
