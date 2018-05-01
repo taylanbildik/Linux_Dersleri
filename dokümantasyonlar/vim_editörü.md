@@ -79,7 +79,7 @@ Vim editörü içerisinde `:!ls` komutunu verdiğimizde sistem otomatik olarak v
 
 Örnek olması açısından `ls` komutunun çıktılarını bir dosyaya kaydetmek isteyelim.
 
-Bunu için vim editörü ile bir dosya oluşturuyorum.
+Bunun için vim editörü ile bir dosya oluşturuyorum.
 
 `vim dizinler` komutu ile vim editörü içerisinde boş bir dosya açıyorum ve bu dosya içerisindeyken `:r !ls` komutunu veriyorum.
 
@@ -92,9 +92,9 @@ Kullandığımız komut bütününü açıklayacak olursak(aslında bunları zat
 Dosyayı `:x` komutu ile kaydettik ve ayrıca teyit etmek için `cat dizinler` komutunu kullandık.
 
 
-Vim editörü ile birden fazla dosya ile işlem yapmamız mümkün bunun için komutu `vim dosya_1 dosya_2 dosya3` şeklinde kullanabiliriz.
+Vim editörü ile birden fazla dosya ile işlem yapmamız mümkün bunun için komutu `vim dosya1 dosya2 dosya3` şeklinde kullanabiliriz.
 
-Komutumuzu verdikten sonra <kbd>dosya_1</kbd> vim editöründe açılacaktır. Gerekli değişiklikleri yaptıktan sonra eğer diğer dosyalara geçiş yapmak istersek çalıştığımız dosyayı kaydettikten sonra `:next` komutu ile <kbd>dosya_2</kbd>'ye geçiş sağlanacaktır. Aynı şekilde <kbd>dosya_3</kbd> dosyasına da geçmek mümkün olacaktır.
+Komutumuzu verdikten sonra <kbd>dosya1</kbd> vim editöründe açılacaktır. Gerekli değişiklikleri yaptıktan sonra eğer diğer dosyalara geçiş yapmak istersek çalıştığımız dosyayı kaydettikten sonra `:next` komutu ile <kbd>dosya2</kbd>'ye geçiş sağlanacaktır. Aynı şekilde <kbd>dosya3</kbd> dosyasına da geçmek mümkün olacaktır.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/9.gif" width="875" >
 
@@ -102,7 +102,7 @@ Eğer geçiş yaptığımız dosyadan bir öncekine dönmek istersek `:previous`
 
 Ayrıca kaç dosyanın vim editöründe çalıştığını pencere ekranının üst bilgi kısmından öğrenebiliriz. Örneğin ben 3 dosya ile çalıştığım için üst kısımda bulunduğum dosya bilgisi ile beraber **dosya1 (~) (1 of 3) - VIM** şeklinde bir üst bilgi yazısı bulunuyor.
 
-Dosya içerinde bulunan ifadeleri değiştirmek istersek `:satır_sayısı s/eski_ifade/yeni_ifade/g` şeklinde bir komut bütünümüz bulunuyor. Bu gösterim ile anlamamış olabilirsiniz o yüzden hemen birkaç örnek ile konuyu açıklayalım.
+Dosyada bulunan ifadeleri değiştirmek istersek `:satır_sayısı s/eski_ifade/yeni_ifade/g` şeklinde bir komut bütünümüz bulunuyor. Bu gösterim ile anlamamış olabilirsiniz o yüzden hemen birkaç örnek ile konuyu açıklayalım.
 
 <kbd>linux</kbd> isimli bir dosya oluşturuyorum ve içerisine aşağıdaki ifadeleri ekliyorum.
 
@@ -133,7 +133,7 @@ Ben örnek olması açısından konsoldan birkaç ifade ekliyorum.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/12.gif" width="875" >
 
-İfade giriş işlemim tamamlandığında <kbd>Ctrl + D</kbd> tuş kombinasyonu basarak, vim editörü ekranına yazdığım ifadeler ile birlikte dönmüş oluyorum.
+İfade giriş işlemim tamamlandığında <kbd>Ctrl + D</kbd> tuş kombinasyonunu uygulayarak, vim editörü ekranına yazdığım ifadeler ile birlikte dönmüş oluyorum.
 
 
 
