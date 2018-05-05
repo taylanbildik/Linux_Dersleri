@@ -7,11 +7,11 @@ pwd
 
 Bu komut sayesinde o an bulunduğumuz dizinin adını öğrenebiliriz. Genellikle sistem yöneticilerinin sık kullandığı bir komuttur.
 
-Örnek vermek gerekirse Linux'ta hiyerarşik bir düzen var dedik. Bu hiyerarşik düzen kök dizinine(root) bağlıdır her kullanıcı buna root da dahil kendi ev dizinine(home) sahiptir. Böylece neden root(kök) isminin kullanıldığını da tekrar anlamış oluyoruz. Konsol çalışmaya varsayılan olarak kendi ev dizininde başlar. Root kullanıcısının ev dizini <kbd>/root</kbd> dizinidir. Bunu teyit etmek istersek <code>pwd</code> komutunu kullanabiliriz.
+Örnek vermek gerekirse Linux'ta hiyerarşik bir düzen var dedik. Bu hiyerarşik düzen **kök dizinine**(**root**) bağlıdır her kullanıcı buna **root** da dahil kendi **ev dizinine**(**home**) sahiptir. Böylece neden **root**(**kök**) isminin kullanıldığını da tekrar anlamış oluyoruz. Konsol çalışmaya varsayılan olarak kendi ev dizininde başlar. Root kullanıcısının ev dizini <kbd>/root</kbd> dizinidir. Bunu teyit etmek istersek <code>pwd</code> komutunu kullanabiliriz.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/1.png)
 
-Root kullanıcısının dışında da sistemde başka kullanıcılar olabilir. Bu kullanıcıların ev dizini(home) ise <kbd>/home/kullanıcı_adı</kbd> şeklindedir.
+Root kullanıcısının dışında da sistemde başka kullanıcılar olabilir. Bu kullanıcıların **ev dizini**(**home**) ise <kbd>/home/kullanıcı_adı</kbd> şeklindedir.
 
 Bu durumu test etmek için "kullanici" adında yeni bir kullanıcı oturumu oluşturdum ve oluşturduğum bu oturum içerisinde komut satırına <code>pwd</code> komutunu verdim. Çıktısı aşağıdaki şekilde oldu.
 
@@ -165,7 +165,7 @@ Ve dizin, içerisinde bulunanlar ile birlikte silinmiş oldu. Eğer komutumuzu p
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/26.png)
 
-Konsol bize "***'dosyalar' silinemedi: Bu bir dizin***" şeklinde uyarı verdi.
+Konsol bize " ***'dosyalar' silinemedi: Bu bir dizin*** " şeklinde uyarı verdi.
 
 Eğer silmeden(işlem yapılmadan) önce bize sorulsun yani bizi uyarsın istiyorsak komuta <code>-i</code> parametresi de ekleyebiliriz.
 
