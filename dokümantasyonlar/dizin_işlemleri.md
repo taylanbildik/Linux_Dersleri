@@ -138,30 +138,30 @@ Dizin oluşturmak için <code>mkdir</code> , silmek için ise ileride tekrar dos
 mkdir
 -
 
-Dosya oluşturmamıza olanak sağlayan komuttur. En temel kullanımı <code>mkdir dosya_adı</code> şeklindedir. Örneğin bulunduğumuz konuma dosyalar adında bir dizin oluşturalım. Bunun için komut satırına <code>mkdir dosyalar</code> yazmamız yeterli. Ayrıca dosyamızın oluşup oluşmadığını da <code>ls</code> komutu ile teyit ediyoruz.
+Klasör oluşturmamıza olanak sağlayan komuttur. En temel kullanımı <code>mkdir klasör_adı</code> şeklindedir. Örneğin bulunduğumuz konuma dosyalar adında bir dizin oluşturalım. Bunun için komut satırına <code>mkdir dosyalar</code> yazmamız yeterli. Ayrıca klasörümüzün oluşup oluşmadığını da <code>ls</code> komutu ile teyit ediyoruz.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/22.png)
 
-Eğer çoklu şekilde dosya oluşturmak istersek dosya isimlerini peş peşe yazarak bu işlemi gerçekleştirebiliriz. Komutun kullanımı <code>mkdir dizin1 dizin2 dizin3</code> şeklindedir.
+Eğer çoklu şekilde klasör oluşturmak istersek klasör isimlerini peş peşe yazarak bu işlemi gerçekleştirebiliriz. Komutun kullanımı <code>mkdir dizin1 dizin2 dizin3</code> şeklindedir.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/23.png)
 
-Ayrıca dosyayı oluştururken izin ayarlarını da dilediğimiz şekilde ayarlayabiliriz. Bu imkanı bize <code>-m</code> parametresi sağlıyor. Kullanımı <code>mkdir -m izin_kodu dosya_adı </code> şeklindedir.
+Ayrıca klasör oluştururken izin ayarlarını da dilediğimiz şekilde ayarlayabiliriz. Bu imkanı bize <code>-m</code> parametresi sağlıyor. Kullanımı <code>mkdir -m izin_kodu klasör_adı </code> şeklindedir.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/24.png)
 
-Burada yer alan izin kavramı hakkında endişelenmeyin ileride "Erişim Yetkileri" kısmında ele alacağız. Kafası karışan arkadaşlar isterse şimdilik bu kısmı geçebilir yada "Erişim Yetkileri" konusuna göz atarak devam edebilir. 
+Burada yer alan izin kavramı hakkında endişelenmeyin ileride "Erişim Yetkileri" kısmında ele alacağız. Kafası karışan arkadaşlar isterse şimdilik bu kısmı geçebilir yada "[Erişim Yetkileri](https://github.com/taylanbildik/Linux_Dersleri/blob/master/dok%C3%BCmantasyonlar/eri%C5%9Fim_yetkileri.md#eri%C5%9Fim-yetkileri)" konusuna göz atarak devam edebilir. 
 
 rm
 -
 
 Komutumuzu ileride dosya işlemleri bölümünde tekrardan ele alacağız. Ancak şimdi <code>rm</code> yani silme komutunun dizinler üzerinde kullanımı öğrenmeliyiz.
 
-Dizin dediğimiz şey iç içe sırlanmış dosya ve belgelerden oluşan bir yol. Yani bu yolu silmek istediğimizde içerisindeki her şeyi de silmeliyiz. Bu yüzden komutumuzu <code>-r</code> parametresi ile birlikte kullanarak dizinin içerisindeki dosyalar da dahil her şeyi silmesini söylemiş oluruz. Yani komutun dizin silme işlemi için kullanım <code>rm -r silinecek_dizin</code> şeklindedir.
+Dizin dediğimiz şey iç içe sırlanmış klasör ve dosyalardan oluşan bir yol. Yani bu yolu silmek istediğimizde içerisindeki her şeyi de silmeliyiz. Bu yüzden komutumuzu <code>-r</code> parametresi ile birlikte kullanarak dizinin içerisindeki dosyalar da dahil her şeyi silmesini söylemiş oluruz. Yani komutun dizin silme işlemi için kullanım <code>rm -r silinecek_dizin</code> şeklindedir.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/25.png)
 
-Ve dizin, içerisinde bulunanlar ile birlikte silinmiş oldu. Eğer komutumuzu parametresiz olarak yani <code>-r</code> olmadan <code>rm secure</code> şeklinde verseydik komut satırı bu işlemi dizinin içerisinde dosya ve belgelerin bulunması nedeniyle gerçekleştiremezdi.(Klasör içerisinde hiçbir şey bulunmasa dahi aynı uyarıyı verecektir.) Bu durumu denemek için daha önceden oluşturmuş olduğumuz <kbd>dosyalar</kbd> isimli klasörümüzü <code>-r</code> parametresi olmadan silmeye çalışalım.
+Ve dizin, içerisinde bulunanlar ile birlikte silinmiş oldu. Eğer komutumuzu parametresiz olarak yani <code>-r</code> olmadan <code>rm secure</code> şeklinde verseydik, komut satırı bu işlemi dizinin içerisinde klasör ve dosya bulunması nedeniyle gerçekleştiremezdi.(Klasör içerisinde hiçbir şey bulunmasa dahi aynı uyarıyı verecektir.) Bu durumu denemek için daha önceden oluşturmuş olduğumuz <kbd>dosyalar</kbd> isimli klasörümüzü <code>-r</code> parametresi olmadan silmeye çalışalım.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/26.png)
 
