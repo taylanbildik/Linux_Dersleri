@@ -39,7 +39,8 @@ Kullanımın anlaşılması amacıyla örnekleri olabildiğince basit tuttum.
 Sizlere vereceğim örnekler ne kadar gereksiz gelse de örneği konuyu anlamak adına kullandığımızı unutmayın ve asıl anlatılmak istenen noktaya odaklanın lütfen.
 
 O anın tarihi detaylarını bir dosyaya kaydetmek istiyorum diyelim.
-Tarihi detayları <kbd>zamanlar.txt</kbd> isimli klasöre kaydetmek için ```bash * * * * * echo `date` >> ~/Desktop/zamanlar.txt ``` komutunu kullanacağım.
+Tarihi detayları <kbd>zamanlar.txt</kbd> isimli klasöre kaydetmek için 
+``` * * * * * echo `date` >> ~/Desktop/zamanlar.txt ``` komutunu kullanacağım.
 
 Bütün yıl boyunca her dakikanın çıktılarını kaydetmesini istersem aşağıdaki şekilde bir kullanım işimizi görür.
 
@@ -48,7 +49,7 @@ Bütün yıl boyunca her dakikanın çıktılarını kaydetmesini istersem aşa�
 
 Yıldız işareti (<kbd>*</kbd>) olan kısımlar hepsini kapsamaktadır yani haftanın bütün günleri, ayın bütün günleri ve saatin bütün dakikaları.. gibi.
 
-Komutun düzenli hali ```bash * * * * * echo `date` >> ~/Desktop/zamanlar.txt ``` şeklindedir.
+Komutun düzenli hali ```* * * * * echo `date` >> ~/Desktop/zamanlar.txt ``` şeklindedir.
 
 Bir süre geçtikten sonra masaüstünde(Desktop dizininde) yer alan <kbd>zamanlar.txt</kbd> dosyasını `cat zamanlar.txt` komutu ile kontrol ediyorum.
 
@@ -61,7 +62,7 @@ Görev istediğimiz şekilde yani her dakikada yazılacak şekilde otomatik olar
 Her gün 10:25 da otomatik olarak <kbd>test.txt</kbd> isimli belgeye "test yazısı" yazdırmak için kalıbı **crontab** dosyasına aşağıdaki şekilde yazmalıyız.(Ayrıca başta hangi ifadenin neyin karşılığı olduğunu belirttiğim için tekrar tekrar üzerlerine yazmıyorum. Eğer şaşırırsanız yukarıdaki kısımları tekrar gözden geçirebilirsiniz.)
 
 ```bash
-10 25 * * * cat "test yazısı" >> ~/Desktop/test.txt
+25 10 * * * echo "test yazısı" >> ~/Desktop/test.txt
 ```
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/9.png" width="875">
 
