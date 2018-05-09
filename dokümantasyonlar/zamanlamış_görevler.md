@@ -39,7 +39,7 @@ Kullanımın anlaşılması amacıyla örnekleri olabildiğince basit tuttum.
 Sizlere vereceğim örnekler ne kadar gereksiz gelse de örneği konuyu anlamak adına kullandığımızı unutmayın ve asıl anlatılmak istenen noktaya odaklanın lütfen.
 
 O anın tarihi detaylarını bir dosyaya kaydetmek istiyorum diyelim.
-Tarihi detayları <kbd>zamanlar.txt</kbd> isimli klasöre kaydetmek için `echo date zamanlar.txt` komutunu kullanacağım.
+Tarihi detayları <kbd>zamanlar.txt</kbd> isimli klasöre kaydetmek için ```bash * * * * * echo `date` >> ~/Desktop/zamanlar.txt ``` komutunu kullanacağım.
 
 Bütün yıl boyunca her dakikanın çıktılarını kaydetmesini istersem aşağıdaki şekilde bir kullanım işimizi görür.
 
@@ -48,7 +48,7 @@ Bütün yıl boyunca her dakikanın çıktılarını kaydetmesini istersem aşa�
 
 Yıldız işareti (<kbd>*</kbd>) olan kısımlar hepsini kapsamaktadır yani haftanın bütün günleri, ayın bütün günleri ve saatin bütün dakikaları.. gibi.
 
-Komutun düzenli hali ```bash * * * * * echo date >> ~/Desktop/zamanlar.txt ``` şeklindedir.
+Komutun düzenli hali ```bash * * * * * echo `date` >> ~/Desktop/zamanlar.txt ``` şeklindedir.
 
 Bir süre geçtikten sonra masaüstünde(Desktop dizininde) yer alan <kbd>zamanlar.txt</kbd> dosyasını `cat zamanlar.txt` komutu ile kontrol ediyorum.
 
