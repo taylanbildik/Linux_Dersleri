@@ -119,7 +119,7 @@ Eğer tüm satırlardaki **linux** ifadelerini **LİNUX** olarak değiştirmek i
 
 Komutumuzu verdikten sonraki çıktı ile bu durumu teyit ettik.
 
-
+## 
 
 Vim editörü çok güçlü bir araç ve gerçekten çok farklı kullanım şekilleri-özellikleri var. Yani bu editörün kendisini anlatmak zaten başlı başına koca bir kaynak oluşturmakla eşdeğer. Hatta bu durumu vim editörünün kendi [wiki kaynağından](http://vim.wikia.com/wiki/Vim_Tips_Wiki) da teyit edebilirsiniz.
 
