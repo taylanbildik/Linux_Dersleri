@@ -72,38 +72,75 @@ Her gün 10:25 da otomatik olarak <kbd>test.txt</kbd> isimli belgeye "test yazı
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/10.png" width="875">
 
 
-Eğer belirli bir saat-tarih arasında belirli kere tekrar eden görev atamak istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
+### Eğer belirli bir saat-tarih arasında belirli kere tekrar eden görev atamak istersek kullanım şekilleri aşağıdaki örneklerdeki gibi olacaktır.
 
-Örneğin 5 dk bir çalışmasını istediğiniz komutu aşağıdaki şekilde **crontab** dosyasına ekleyebilirsiniz.
+Belirli aralıklar ile olacaksa aralıkları **-**(**kısa çizgi**) işareti ile ayırarak belirtmemiz gerekiyor. Yani örneğin;
+
+Her saatin ilk 5 ile 20 dakikası arasında komutum çalışsın istersem:
+
+```bash
+5-20 * * * * komut
+```
+
+Her gün saat 3 ile 5 arasında komutum çalışsın istersem:
+
+```bash
+* 3-5 * * * komut
+```
+
+Her ayın 5 ile 15. günleri arasında saat 16 ile 22 arasındaki her saatin ilk 20 dakikası komutum çalışsın istersem.
+
+```bash
+0-20 16-22 5-15 * * komut
+```
+
+Haziran ayında ilk 20 gününün her cuma günü saat 12 ile 15 arasındaki 35 ile 55 dakikaları arasında komutum çalışsın istersem:
+
+```bash
+35-55 12-15 0-20 6 5 komut 
+```
+_______
+Belirli gün ve tarihlerde olacaksa o tarihleri **,**(**virgül**) işareti ile ayırarak tek tek belirtmemiz gerekiyor. Yani örneğin;
+
+Her saatin 5 10 15 ve 20. dakikalarında komutum çalışsın istersem:
+
+```bash
+5,10,15,20 * * * * komut
+```
+
+Her gün saat 3 5 ve 7 de komutum çalışsın istesem:
+
+```bash
+0 3,5,7 * * * komut
+```
+
+Her ayın 20 22 24 ve 26. günleri 2 4 6 ve 8 saatlerinin 5. ve 10. dakikalarında komutum çalışsın istersem:
+
+```bash
+5,10 2,4,6,8 20,22,24,26 * * komut
+```
+_______
+
+Belirli süre içinde belirli kez çalışmasını istersek **/**(**taksim**) işareti ile kaç kez olacağını belirtebiliyoruz. Yani örneğin;
+
+5 dakikada bir çalışmasını istersem:
 
 ```bash
 */5 * * * * komut
 ```
     
-Her saatin ilk 5 dk 2 kere çalışmasını istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
+10 saatte bir komutumun çalışmasını istersem:
 
 ```bash
-0-5/2 * * * * komut
-```
-    
-Örneğin **cron job** yani verdiğimiz görev komutu günün ilk 5 saatinde 10 defa çalışmasını istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
-
-```bash
-* 0-5/10 * * * komut
-```
-    
-Örneğin cuma günleri 12:30 ve 17 arasında 5 kez çalışsın istersek kullanım şekli aşağıdaki örnekteki gibi olacaktır.
-
-```bash
-30,0 12-17/5 * * 5 komut
-```
+* */10 * * * komut
+```    
     
 Elbette örnekleri çoğaltmak mümkün ancak daha fazlası gereksiz olacaktır. Yani bu konu sizlerin de biraz kurcaladıktan sonra anlayacağı kolay bir konudur.
 
-Eğer belirlenen zamanlanmış görevleri listelemek istersek `crontab -l` komutunu kullanabiliriz. Buradaki `-l` parametresi list kelimesini yani listeleme işlevini temsil ediyor.
+Eğer belirlenen zamanlanmış görevleri listelemek istersek `crontab -l` komutunu kullanabiliriz. Buradaki `-l` parametresi "**list**" kelimesini yani "**listeleme**" işlevini temsil ediyor.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/11.png" width="875">
 
-Şayet oluşturduğumuz tüm zamanlanmış görevleri silmek istersek `crontab -r` komutunu kullanmalıyız. Buradaki `-r` parametresi "remove" kelimesini yani "silme" işlevini temsil ediyor.
+Şayet oluşturduğumuz tüm zamanlanmış görevleri silmek istersek `crontab -r` komutunu kullanmalıyız. Buradaki `-r` parametresi "**remove**" kelimesini yani "**silme**" işlevini temsil ediyor.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/12.png" width="875">
