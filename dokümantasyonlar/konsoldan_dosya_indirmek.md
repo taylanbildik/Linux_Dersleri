@@ -12,7 +12,7 @@ Eğer daha önce linux ile ilgili yönergeler okuduysanız veya videolar izlediy
 
 `wget` komutunun en temel kullanım şeklidir. Hedef link aracılığı ile tekil dosya indirme işlevinde kullanılır.
 
-Kullanımı: `wget indirilecek_dosya_linki dosya_yolu`
+Kullanımı: `wget indirilecek_dosya_linki`
 
 Örnek olarak aircrack-ng aracını indirdim. Ve indirme işlemini `ls -l`
 komutu ile teyit ettim.
