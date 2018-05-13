@@ -87,9 +87,9 @@ Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceği
 
 Zaten üst kısımda yer alan çıktının sonucunda da bu hız sınırlamasının sonucu olarak ortalama indirme hızı (300 KB/s) olarak gözüküyor.
 
-**Arkaplanda İndirmek :**
-İndirmek istediğimiz dosyanın arkaplanda inmesini `-b` parametresi ile sağlarız. İndirme işleminin sonuçlarını öğrenmek istersek indirilen dosya ile aynı konumda yer alan <kbd>wget-log</kbd> dosyasını incelememiz yeterli olacaktır.
+**Arka Planda İndirmek :**
+İndirmek istediğimiz dosyanın arka planda inmesini `-b` parametresi ile sağlarız. İndirme işleminin sonuçlarını öğrenmek istersek indirilen dosya ile aynı konumda yer alan <kbd>wget-log</kbd> dosyasını incelememiz yeterli olacaktır.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/11.gif)
 
-Dosyamızı arkaplanda indiriyoruz ve konsol çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` komutu ile kayıt dosyasına bakabiliriz.
+Dosyamızı arka planda indiriyoruz ve konsol çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` komutu ile kayıt dosyasına bakabiliriz.
