@@ -57,11 +57,11 @@ Burada yeri gelmişken çıktıda da görülen **uid**(user id/kullanıcı numar
 
 Ayrıca `id` komutunun birçok parametresi vardır bazıları birazdan göreceğimiz grup oluşturma kısmındaki parametrelerden oluşuyor. Detaylı bilgi için man sayfasına bakabilirsiniz. Ben yine de örnek olması açısından birkaç parametresini gösteriyorum ve daha sonra grup oluşturma ile konumuza devam ediyoruz.
 
-**g** : `id -g grup_adı` belirtilen grubun **grup numarasını**(**gid**) verecektir.
+**g** : `id -g kullanıcı_adı` belirtilen kullanıcının **grup numarasını**(**gid**) verecektir.
 
-**u** : `id -u grup_adı` belirtilen grubun **kullanıcı numarasını**(**uid**) verecektir.
+**u** : `id -u kullanıcı_adı` belirtilen kullanıcının **kullanıcı numarasını**(**uid**) verecektir.
 
-**G** : `ìd -G grup_adı` belirtilen grubun **dahil olduğu tüm grupları**(**groups**) verecektir.
+**G** : `ìd -G kullanıcı_adı` belirtilen kullanıcının **dahil olduğu tüm grupları**(**groups**) verecektir.
 
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/3.png)
