@@ -51,7 +51,7 @@ Biz daha önceki kısımlarda `tar` komutu ile dosyaları sadece arşivlemiş an
 
 Sıkıştırma işleminde iki temel araç kullanılıyor. Bunlar `gzip` ve `bzip2` araçları.
 
-Masaüstünde yer alan dosyalardan örnek yapalım hemen. Ben "metin" adıyla başlayan dosyaları `gzip` arşivine almak için daha önceden de defalarca kullanmış olduğumuz `*` joker karakterinin yardımıyla `gzip metin*` komutunu veriyorum. Daha sonra aynı işlemi "isim" adı ile başlayan belgeler için bu defa `bzip2` yardımıyla `bzip2 isim*` şeklinde arşivleyerek gerçekleştiriyorum.
+Masaüstünde yer alan dosyalardan örnek yapalım hemen. Ben "metin" adıyla başlayan dosyaları `gzip` aracı ile sıkıştırmak için daha önceden de defalarca kullanmış olduğumuz `*` joker karakterinin yardımıyla `gzip metin*` komutunu veriyorum. Daha sonra aynı işlemi "isim" adı ile başlayan belgeler için bu defa `bzip2` aracı yardımıyla `bzip2 isim*` şeklinde sıkıştırarak gerçekleştiriyorum.
 
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/6.png)
 
@@ -59,7 +59,7 @@ Sıkıştırdığımız dosyayı tekrar dışarı çıkarmak istersek komutu `-d
 
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/7.png)
 
-Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her ikisini de birlikte kullanma vakti geldi.
+Artık hem arşivleme hem de sıkıştırma işlemlerini ayrı ayrı gördükten sonra her ikisini de birlikte kullanma vakti geldi.
 
 `gzip` ile `bzip2` arasında `tar` komutu yardımı ile arşivleme işlemi yaparken ufak bir fark var. Bu fark `gzip` ile arşivleme yaparken komutun `czvf` şeklinde parametre almasıyla, `bzip2` ile arşivleme işlemi yaparken aldığı parametrenin `cjvf` olmasıdır. Bunun dışında kullanım şekilleri aynıdır.
 
@@ -86,7 +86,7 @@ Daha önceden öğrendiğimiz işlemleri de aynı şekilde sıkıştırılmış 
 
 zcat-zgrep-bzcat-bzgrep
 -
-Daha önce dosya içeriklerini terminal üzerinden `cat` komutu yardımı ile okumayı ve `grep` komutu ile de arama yapmayı öğrenmiştik. Şimdiki göreceğimiz komutlar ise aynı işlemleri sıkıştırılmış dosyalar için yerine getiriyorlar. Zaten isimlerinden de bu işlevde oldukları anlaşılabiliyor.
+Daha önce dosya içeriklerini terminal üzerinden `cat` komutu yardımı ile okumayı ve `grep` komutu ile de arama yapmayı öğrenmiştik. Şimdi ki göreceğimiz komutlar ise aynı işlemleri sıkıştırılmış dosyalar için yerine getiriyorlar. Zaten isimlerinden de bu işlevde oldukları anlaşılabiliyor.
 
 `gzip` ile sıkıştırılmış arşiv dosya içeriklerini `zcat` ile okuruz. Aynı işlemi eğer `bzip2` ile sıkıştırılmış dosyalar varsa `bzcat` şeklinde gerçekleştirebiliriz.
 
