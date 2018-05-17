@@ -17,11 +17,11 @@ Güncelleme işleminde kullanılan komutlarımızı tanıyarak devam edelim.
 
     apt-get update
 
-Komutu <kbd>sources.list</kbd> dosyasına eklemiş olduğumuz repolara bakarak paket listelerini kontrol edip pakerlerin son sürümleri ve bağımlılıkları hakkında bilgi almak için bunları "günceller". Yani bu komutumuz güncelleme işleminden önce nelerin güncellenmesi gerektiğine bakarak sistemimizdeki sürümünden yüksek sürümleri bulunan yani güncellenmesi gereken doğru paketlerin güncellenmesini sağlıyor. Kısaca bu komutumuzun amacı sadece yenilikleri kontrol etmektir.
+Komutu <kbd>sources.list</kbd> dosyasına eklemiş olduğumuz repolara bakarak paket listelerini kontrol edip paketlerin son sürümleri ve bağımlılıkları hakkında bilgi almak için bunları "günceller". Yani bu komutumuz güncelleme işleminden önce nelerin güncellenmesi gerektiğine bakarak sistemimizdeki sürümünden yüksek sürümleri bulunan yani güncellenmesi gereken doğru paketlerin güncellenmesini sağlıyor. Kısaca bu komutumuzun amacı sadece yenilikleri kontrol etmektir.
 
     apt-get upgrade
 
-Komutu da `apt-get update` komutunun depolardan kontrol edip bildirmiş olduğu güncellenemesi gereken paketleri en son versiyonlarına günceller.
+Komutu da `apt-get update` komutunun depolardan kontrol edip bildirmiş olduğu güncellenmesi gereken paketleri en son versiyonlarına günceller.
 
     apt-get dist-upgrade
     
@@ -30,7 +30,7 @@ Komutu ise `apt-get upgrade` komutundan farklı olarak sadece güncelleme yapmak
 
     apt-get clean
 
-Komutuyla kurmak üzere indirmiş olduğumuz paketlerin hepsini silebiliyoruz. Depodan indirmiş olduğumuz tüm paketler ve uygulamanın çalışması için gereken bağımlılıklar <kbd>.deb</kbd> uzantısı ile arşivlenerek <kbd>/var/cache/apt/archives</kbd> dizini içerinde daha sonra tekrar kullanılma ihtimaline karşı tutuluyorlar. İşte bizler de `apt-get clean` komutu yardımıyla eğer internet bağlantımızda sorun yoksa yani bu paketleri tekrar indiriken sorun yaşamayacaksak bu paketleri silerek sistemimizde yer işgal etmelerini önlemiş oluyoruz.
+Komutuyla kurmak üzere indirmiş olduğumuz paketlerin hepsini silebiliyoruz. Depodan indirmiş olduğumuz tüm paketler ve uygulamanın çalışması için gereken bağımlılıklar <kbd>.deb</kbd> uzantısı ile arşivlenerek <kbd>/var/cache/apt/archives</kbd> dizini içerinde daha sonra tekrar kullanılma ihtimaline karşı tutuluyorlar. İşte bizler de `apt-get clean` komutu yardımıyla eğer internet bağlantımızda sorun yoksa yani bu paketleri tekrar indirirken sorun yaşamayacaksak bu paketleri silerek sistemimizde yer işgal etmelerini önlemiş oluyoruz.
 
     apt-get autoclean
 
