@@ -106,7 +106,7 @@ Bu komut hakkında ufak bir araştırma ile çok fazla Türkçe de dahil olmak �
 dig
 -
 
-dig(domain information groper/domain bilgi çukuru) DNS kayıtlarına bakmak için kullamımı oldukça kolay olduğundan yaygın olarak kullanılmaktadır.
+dig(domain information groper/domain bilgi çukuru) DNS kayıtlarına bakmak için kullanımı oldukça kolay olduğundan yaygın olarak kullanılmaktadır.
 
 Bu komutumuz da parametreler alabilmektedir ancak ben burada sizlere yine temel işlevinden bahsederek geriye kalan parametrelerini araştırmayı sizlere bırakıyorum. DNS sorgulaması yapmak istediğimiz adresi konsoldan `dig hedef_adresi` şeklinde belirtiyoruz.
 
