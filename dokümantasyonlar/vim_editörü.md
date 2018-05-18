@@ -168,7 +168,7 @@ Konumuza yavaş yavaş bitirmek üzere devam edecek olursak.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/16.gif" width="875" >
 
-Eğer yazdığınız ifadeler içerinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu, bir önceki aynı ifadeye dönmek için ise `:?` komutunu kullanıyoruz.
+Eğer yazdığınız ifadeler içerisinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu, bir önceki aynı ifadeye dönmek için ise `:?` komutunu kullanıyoruz.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/17.gif" width="875" >
 
