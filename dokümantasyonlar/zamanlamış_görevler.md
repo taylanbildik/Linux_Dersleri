@@ -135,7 +135,9 @@ Belirli süre içinde belirli kez çalışmasını istersek **/**(**taksim**) i�
 * */10 * * * komut
 ```    
     
-Elbette örnekleri çoğaltmak mümkün ancak daha fazlası gereksiz olacaktır. Yani bu konu sizlerin de biraz kurcaladıktan sonra anlayacağı kolay bir konudur.
+Elbette örnekleri çoğaltmak mümkün ancak daha fazlası gereksiz olacaktır. Ayrıca atadığınız zamanlanmış görevlerin doğruluğunu kontrol etmek isterseniz [bu adresten](https://crontab.guru) verdiğiniz zaman aralığının karşılığını görebilir ve hata yapmaktan kaçınabilirsiniz. 
+
+Yani bu konu sizlerin de biraz kurcaladıktan sonra anlayacağı kolay bir konudur.
 
 Eğer belirlenen zamanlanmış görevleri listelemek istersek `crontab -l` komutunu kullanabiliriz. Buradaki `-l` parametresi "**list**" kelimesini yani "**listeleme**" işlevini temsil ediyor.
 
