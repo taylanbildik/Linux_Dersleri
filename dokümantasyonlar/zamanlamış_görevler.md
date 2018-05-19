@@ -16,11 +16,11 @@ Cron servisimizin çalıştığını teyit etmiş olduk. Cron servisinin yapıla
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/2.png" width="875">
 
-Şimdi de düzenleme yapmak adına konsola `crontab -e` komutunu verelim. Burada yer alan `-e` parametresi "edit" kelimesini yani "düzenleme" ifadesini temsil ediyor.
+Şimdi de düzenleme yapmak adına konsola `crontab -e` komutunu verelim. Burada yer alan `-e` parametresi "**edit**" kelimesini yani "**düzenleme**" ifadesini temsil ediyor.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/3.png" width="875">
 
-Konsol bize düzenleme yaparken hangi aracı kullanmak istediğimizi soruyor. Ben nano aracını seçiyorum yani konsola 2 rakamını giriyorum.
+Konsol bize düzenleme yaparken hangi aracı kullanmak istediğimizi soruyor. Ben **nano** aracını seçiyorum yani konsola **2** rakamını giriyorum.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/4.png" width="875">
 
@@ -82,7 +82,7 @@ Her saatin ilk 5 ile 20 dakikası arasında komutum çalışsın istersem:
 5-20 * * * * komut
 ```
 
-Her gün saat 3 ile 5 arasında komutum çalışsın istersem:
+Her gün saat 3 ile 5 arasında her dakika komutum çalışsın istersem:
 
 ```bash
 * 3-5 * * * komut
@@ -97,7 +97,7 @@ Her ayın 5 ile 15. günleri arasında saat 16 ile 22 arasındaki her saatin ilk
 Haziran ayında ilk 20 gününün her cuma günü saat 12 ile 15 arasındaki 35 ile 55 dakikaları arasında komutum çalışsın istersem:
 
 ```bash
-35-55 12-15 0-20 6 5 komut 
+35-55 12-15 1-20 6 5 komut 
 ```
 _______
 Belirli gün ve tarihlerde olacaksa o tarihleri **,**(**virgül**) işareti ile ayırarak tek tek belirtmemiz gerekiyor. Yani örneğin;
