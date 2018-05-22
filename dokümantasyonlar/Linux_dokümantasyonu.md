@@ -60,12 +60,13 @@ Kurulum ve Kullanım Metodları
 - Live versiyon olarak kullanmak.
 - Linux VPS aracılığı ile kullanmak.
 
-Şimdi neden kurulum detaylarını anlatmıyorsun diyecek olursanız, burada izahı dokümantasyonu uzatacak ve çok da verimli olmayacaktır. Siz en iyisi hem bana destek olmak hemde de kurulumları ve diğer tüm içerikleri videolu şekilde takip etmek için [buradan](https://www.udemy.com/) kursumu satın alarak devam edin. Ancak bu kursu almadan da internet üzerinden araştırarak çok fazla kaynağa ulaşabilirsiniz. Fakat benim videolarımın artısı buraya bağlantılı ve açıklık getirici şekilde ilerliyor olması. Yani tamamen sizlerin isteğine bağlı bir durum. Ben yine de kursa bir göz atmanızı öneririm.
+Şimdi neden kurulum detaylarını anlatmıyorsun diyecek olursanız, burada izahı dokümantasyonu uzatacak ve çok da verimli olmayacaktır. Siz en iyisi hem bana destek olmak hemde de kurulumları ve diğer tüm içerikleri videolu şekilde takip etmek için [buradan](https://www.udemy.com/kali-linux-ile-sifirdan-temel-linux-egitimi/) kursumu satın alarak devam edin. Ancak bu kursu almadan da internet üzerinden araştırarak çok fazla kaynağa ulaşabilirsiniz. Fakat benim videolarımın artısı buraya bağlantılı ve açıklık getirici şekilde ilerliyor olması. Yani tamamen sizlerin isteğine bağlı bir durum. Ben yine de kursa bir göz atmanızı öneririm.
 
 
-<a href="https://www.udemy.com/">
+<a href="https://www.udemy.com/kali-linux-ile-sifirdan-temel-linux-egitimi/">
   <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/0-%20Gerekli%20Ortam%C4%B1n%20Kurulmas%C4%B1/1.png">
 </a>
+
 
 ----------
 
@@ -1704,7 +1705,7 @@ Biz daha önceki kısımlarda `tar` komutu ile dosyaları sadece arşivlemiş an
 
 Sıkıştırma işleminde iki temel araç kullanılıyor. Bunlar `gzip` ve `bzip2` araçları.
 
-Masaüstünde yer alan dosyalardan örnek yapalım hemen. Ben "metin" adıyla başlayan dosyaları `gzip` arşivine almak için daha önceden de defalarca kullanmış olduğumuz `*` joker karakterinin yardımıyla `gzip metin*` komutunu veriyorum. Daha sonra aynı işlemi "isim" adı ile başlayan belgeler için bu defa `bzip2` yardımıyla `bzip2 isim*` şeklinde arşivleyerek gerçekleştiriyorum.
+Masaüstünde yer alan dosyalardan örnek yapalım hemen. Ben "metin" adıyla başlayan dosyaları `gzip` aracı ile sıkıştırmak için daha önceden de defalarca kullanmış olduğumuz `*` joker karakterinin yardımıyla `gzip metin*` komutunu veriyorum. Daha sonra aynı işlemi "isim" adı ile başlayan belgeler için bu defa `bzip2` aracı yardımıyla `bzip2 isim*` şeklinde sıkıştırarak gerçekleştiriyorum.
 
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/6.png)
 
@@ -1712,7 +1713,7 @@ Sıkıştırdığımız dosyayı tekrar dışarı çıkarmak istersek komutu `-d
 
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/7.png)
 
-Artık hem arşivleme hem de sıkıştırma işlemlerini gördükten sonra her ikisini de birlikte kullanma vakti geldi.
+Artık hem arşivleme hem de sıkıştırma işlemlerini ayrı ayrı gördükten sonra her ikisini de birlikte kullanma vakti geldi.
 
 `gzip` ile `bzip2` arasında `tar` komutu yardımı ile arşivleme işlemi yaparken ufak bir fark var. Bu fark `gzip` ile arşivleme yaparken komutun `czvf` şeklinde parametre almasıyla, `bzip2` ile arşivleme işlemi yaparken aldığı parametrenin `cjvf` olmasıdır. Bunun dışında kullanım şekilleri aynıdır.
 
@@ -1739,7 +1740,7 @@ Daha önceden öğrendiğimiz işlemleri de aynı şekilde sıkıştırılmış 
 
 zcat-zgrep-bzcat-bzgrep
 -
-Daha önce dosya içeriklerini terminal üzerinden `cat` komutu yardımı ile okumayı ve `grep` komutu ile de arama yapmayı öğrenmiştik. Şimdiki göreceğimiz komutlar ise aynı işlemleri sıkıştırılmış dosyalar için yerine getiriyorlar. Zaten isimlerinden de bu işlevde oldukları anlaşılabiliyor.
+Daha önce dosya içeriklerini terminal üzerinden `cat` komutu yardımı ile okumayı ve `grep` komutu ile de arama yapmayı öğrenmiştik. Şimdi ki göreceğimiz komutlar ise aynı işlemleri sıkıştırılmış dosyalar için yerine getiriyorlar. Zaten isimlerinden de bu işlevde oldukları anlaşılabiliyor.
 
 `gzip` ile sıkıştırılmış arşiv dosya içeriklerini `zcat` ile okuruz. Aynı işlemi eğer `bzip2` ile sıkıştırılmış dosyalar varsa `bzcat` şeklinde gerçekleştirebiliriz.
 
@@ -1937,6 +1938,7 @@ Eğer bu işlemi geri almak ve dosyamızı üzerinde değişiklikler yapılabili
 
 ----------
 
+
 Kullanıcı İşlemleri
 =
 Linux'ta birçok kullanıcı olduğunu ve bunlar içinde en yetkilinin root kullanıcısı olduğunu önceki derslerimizde tecrübe etmiştik. Ancak sistemde root kullanıcısı olmadan da root kullanıcısının yetkilerine sahip olmamız mümkün. Bu imkanı bize Linux Grup Yönetimi veriyor.
@@ -1996,11 +1998,11 @@ Burada yeri gelmişken çıktıda da görülen **uid**(user id/kullanıcı numar
 
 Ayrıca `id` komutunun birçok parametresi vardır bazıları birazdan göreceğimiz grup oluşturma kısmındaki parametrelerden oluşuyor. Detaylı bilgi için man sayfasına bakabilirsiniz. Ben yine de örnek olması açısından birkaç parametresini gösteriyorum ve daha sonra grup oluşturma ile konumuza devam ediyoruz.
 
-**g** : `id -g grup_adı` belirtilen grubun **grup numarasını**(**gid**) verecektir.
+**g** : `id -g kullanıcı_adı` belirtilen kullanıcının **grup numarasını**(**gid**) verecektir.
 
-**u** : `id -u grup_adı` belirtilen grubun **kullanıcı numarasını**(**uid**) verecektir.
+**u** : `id -u kullanıcı_adı` belirtilen kullanıcının **kullanıcı numarasını**(**uid**) verecektir.
 
-**G** : `ìd -G grup_adı` belirtilen grubun **dahil olduğu tüm grupları**(**groups**) verecektir.
+**G** : `ìd -G kullanıcı_adı` belirtilen kullanıcının **dahil olduğu tüm grupları**(**groups**) verecektir.
 
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/3.png)
@@ -2188,6 +2190,7 @@ Gördüğünüz gibi yönetici hesabına erişmek için bizlerden parola bilgisi
 
 
 
+
 Süreçler(process)
 =
 
@@ -2330,7 +2333,7 @@ Anlatım havada kalmış olabilir o yüzden `xkill` komutunun kullanımını kes
 fg-bg-jobs
 -
 
-Son olarak gayet kullanışlı komutlar olan `fg` ve `bg` komutlarına değinerek süreçler konumuzu bitirelim. Konsoldan komut verildiğinde, verdiğimiz komut doğrultusunda gerçekleşen işlem süreci bitmeden konsoldan tekrar başka bir komut vermemiz mümkün olmuyor. Bu gibi durumlarda eğer yeni bir komut girişi yapmak istersek, süreci arkaplana alıp yeni komutumuzu ancak öyle çalıştırabiliriz. İşte bu komutlarımız da konsoldan çalıştırdığımız süreçleri arkaplana taşıma gibi işleve sahiptirler. Ayrıca `jobs` komutu da bu süreçlerin durumunu takip etmemizi sağlar. Bu durum örnekler ile daha iyi anlaşılacaktır.
+Son olarak gayet kullanışlı komutlar olan `fg` ve `bg` komutlarına değinerek süreçler konumuzu bitirelim. Konsoldan komut verildiğinde, verdiğimiz komut doğrultusunda gerçekleşen işlem süreci bitmeden konsoldan tekrar başka bir komut vermemiz mümkün olmuyor. Bu gibi durumlarda eğer yeni bir komut girişi yapmak istersek, süreci arka plana alıp yeni komutumuzu ancak öyle çalıştırabiliriz. İşte bu komutlarımız da konsoldan çalıştırdığımız süreçleri arka plana taşıma gibi işleve sahiptirler. Ayrıca `jobs` komutu da bu süreçlerin durumunu takip etmemizi sağlar. Bu durum örnekler ile daha iyi anlaşılacaktır.
 
 Kullanımın rahat şekilde anlaşılması için adım adım gidelim.
 
@@ -2340,9 +2343,9 @@ Yazdıktan sonra ekrana leafpad uygulaması geldi.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/20.png)
 
-Programı çalıştırdığımız konsol şu anda leafpad uygulamasını çalıştırmakla meşgul. Yani bu demek oluyor ki eğer biz bu konsol üzerinden yeni bir komut girmek istersek bu mümkün olmayacak. İşte bu yüzden halihazırda çalışan leafpad uygulamasının çalışmasını durdurup arkaplana atmalıyız ki yeni komutlar girdiğimizde konsol leafpad uygulaması ile meşgul olmasın.
+Programı çalıştırdığımız konsol şu anda leafpad uygulamasını çalıştırmakla meşgul. Yani bu demek oluyor ki eğer biz bu konsol üzerinden yeni bir komut girmek istersek bu mümkün olmayacak. İşte bu yüzden halihazırda çalışan leafpad uygulamasının çalışmasını durdurup arka plana atmalıyız ki yeni komutlar girdiğimizde konsol leafpad uygulaması ile meşgul olmasın.
 
-Konsolda çalışan leafpad uygulamamızı arkaplana atmak yani duraklatmak için <kbd>Ctrl + Z </kbd> tuş kombinasyonunu kullanıyoruz. Bu işlemin ardından konsol bize aşağıdaki gibi bir çıktı basarak leafpad uygulamasının durduğunu haber veriyor.
+Konsolda çalışan leafpad uygulamamızı arka plana atmak yani duraklatmak için <kbd>Ctrl + Z </kbd> tuş kombinasyonunu kullanıyoruz. Bu işlemin ardından konsol bize aşağıdaki gibi bir çıktı basarak leafpad uygulamasının durduğunu haber veriyor.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/21.png)
 
@@ -2358,11 +2361,11 @@ Adımların her birini genel olarak .gif olarak verdiğim resimde görebilirsini
 `ls` komutunun çıktısını alabildik bu da demek oluyor ki konsol ekranımız önceden olduğu gibi leafpad uygulaması ile meşgul değil, böylelikle yeni komutlar alabiliyor. 
 
 
-Leafpad programı durduruldu ancak biz hem leafpad programını kullanmak hem de aynı konsol ekranından yeni komutlar girebilmek istiyoruz. İşte bu noktada durdurulan leafpad süreçlerinin arkaplana alınarak çalıştırılmasına devam edilmesi gerekiyor. Bu işlevi de `bg` komutu sağlıyor. Komut satırımıza `bg` komutumuzu girdiğimizde artık leafpad programı süreçleri arkaplanda çalışır duruma geçiyor ve biz hem konsol ekranından yeni komutlar girebiliyoruz hem de leafpad uygulamamızı kullanabiliyoruz. Leafpad uygulamasının çalışır olduğunu `jobs` komutu ile de aşağıdaki şekilde teyit edebiliriz.
+Leafpad programı durduruldu ancak biz hem leafpad programını kullanmak hem de aynı konsol ekranından yeni komutlar girebilmek istiyoruz. İşte bu noktada durdurulan leafpad süreçlerinin arka plana alınarak çalıştırılmasına devam edilmesi gerekiyor. Bu işlevi de `bg` komutu sağlıyor. Komut satırımıza `bg` komutumuzu girdiğimizde artık leafpad programı süreçleri arka planda çalışır duruma geçiyor ve biz hem konsol ekranından yeni komutlar girebiliyoruz hem de leafpad uygulamamızı kullanabiliyoruz. Leafpad uygulamasının çalışır olduğunu `jobs` komutu ile de aşağıdaki şekilde teyit edebiliriz.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/24.gif)
 
-Eğer arkaplana attığımız program sürecini tekrar eskisi gibi konsol üzerinden(ön planda) çalışır hale getirmek istersek `fg` komutumuzu kullanabiliriz. Bu komutumuzu kullandığımızda konsol artık yeni komut almayacak ve tekrar sadece leafpad uygulaması ile meşgul olacak.
+Eğer arka plana attığımız program sürecini tekrar eskisi gibi konsol üzerinden(ön planda) çalışır hale getirmek istersek `fg` komutumuzu kullanabiliriz. Bu komutumuzu kullandığımızda konsol artık yeni komut almayacak ve tekrar sadece leafpad uygulaması ile meşgul olacak.
 
 Yukarıda verilen .gif ile bu durumlar ele alınmıştır.
 
@@ -2383,7 +2386,7 @@ Konumuza ilk olarak daha önce de kullanmış olduğumuz `fdisk` komutu ile baş
 
 > **Eğer mümkünse özellikle bu konuda sanal makina üzerinden çalışmanız ve buradaki komutları denemeden önce sanal makina üzerinden sistem yedeğini(snapshot-clone) almanızı tavsiye ederim.**
 
-**Ayrıca bir hatırlatma daha;** Disk üzerinde işlem yapabilmeniz için o diskin biz işlem yapıyorken sistem tarafından kullanılmıyor olması gerekiyor. Çünkü biz işlem yapmaya çalışıyorken disk sistem tarafından kullanıldığı için doğal olarak bizim disk üzerinde işlem yapmamız mümkün olmuyor. Bunun için eğer yapacağımız disk işlemeleri linux işletim sistemimizin kurulu olduğu disk alanı içinse, diskte kurulu olan sistemi kullanmadan işlemleri diskten bağımsız şekilde yapmamız gerekiyor. Bunu da kurulum aşamasında göstermiş olduğum linux işletim sisteminin USB üzerinden live olarak çalıştırılması ile gerçekleştirebiliriz.
+**Ayrıca bir hatırlatma daha;** Disk üzerinde işlem yapabilmeniz için o diskin biz işlem yapıyorken sistem tarafından kullanılmıyor olması gerekiyor. Çünkü biz işlem yapmaya çalışıyorken disk sistem tarafından kullanıldığı için doğal olarak bizim disk üzerinde işlem yapmamız mümkün olmuyor. Bunun için eğer yapacağımız disk işlemleri linux işletim sistemimizin kurulu olduğu disk alanı içinse, diskte kurulu olan sistemi kullanmadan işlemleri diskten bağımsız şekilde yapmamız gerekiyor. Bunu da kurulum aşamasında göstermiş olduğum linux işletim sisteminin USB üzerinden live olarak çalıştırılması ile gerçekleştirebiliriz.
 
 Yani bu kısımda öğreneceğimiz bilgileri linux işletim sisteminin kurulu olduğu disk alanında uygulamak için sistemi başlatmadan linux live seçeneği ile çalışın.
 
@@ -2570,7 +2573,6 @@ USB nin bağlanabileceği hedef klasör oluştuğuna göre artık USB diskimizi 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/11-Disk%20%C4%B0%C5%9Flemleri/24.png)
 
 Görüldüğü gibi USB disk <kbd>Desktop/USB</kbd> konumuna bağlanmış bulunuyor.
-
 
 
 ----------
@@ -2768,11 +2770,11 @@ Güncelleme işleminde kullanılan komutlarımızı tanıyarak devam edelim.
 
     apt-get update
 
-Komutu <kbd>sources.list</kbd> dosyasına eklemiş olduğumuz repolara bakarak paket listelerini kontrol edip pakerlerin son sürümleri ve bağımlılıkları hakkında bilgi almak için bunları "günceller". Yani bu komutumuz güncelleme işleminden önce nelerin güncellenmesi gerektiğine bakarak sistemimizdeki sürümünden yüksek sürümleri bulunan yani güncellenmesi gereken doğru paketlerin güncellenmesini sağlıyor. Kısaca bu komutumuzun amacı sadece yenilikleri kontrol etmektir.
+Komutu <kbd>sources.list</kbd> dosyasına eklemiş olduğumuz repolara bakarak paket listelerini kontrol edip paketlerin son sürümleri ve bağımlılıkları hakkında bilgi almak için bunları "günceller". Yani bu komutumuz güncelleme işleminden önce nelerin güncellenmesi gerektiğine bakarak sistemimizdeki sürümünden yüksek sürümleri bulunan yani güncellenmesi gereken doğru paketlerin güncellenmesini sağlıyor. Kısaca bu komutumuzun amacı sadece yenilikleri kontrol etmektir.
 
     apt-get upgrade
 
-Komutu da `apt-get update` komutunun depolardan kontrol edip bildirmiş olduğu güncellenemesi gereken paketleri en son versiyonlarına günceller.
+Komutu da `apt-get update` komutunun depolardan kontrol edip bildirmiş olduğu güncellenmesi gereken paketleri en son versiyonlarına günceller.
 
     apt-get dist-upgrade
     
@@ -2781,7 +2783,7 @@ Komutu ise `apt-get upgrade` komutundan farklı olarak sadece güncelleme yapmak
 
     apt-get clean
 
-Komutuyla kurmak üzere indirmiş olduğumuz paketlerin hepsini silebiliyoruz. Depodan indirmiş olduğumuz tüm paketler ve uygulamanın çalışması için gereken bağımlılıklar <kbd>.deb</kbd> uzantısı ile arşivlenerek <kbd>/var/cache/apt/archives</kbd> dizini içerinde daha sonra tekrar kullanılma ihtimaline karşı tutuluyorlar. İşte bizler de `apt-get clean` komutu yardımıyla eğer internet bağlantımızda sorun yoksa yani bu paketleri tekrar indiriken sorun yaşamayacaksak bu paketleri silerek sistemimizde yer işgal etmelerini önlemiş oluyoruz.
+Komutuyla kurmak üzere indirmiş olduğumuz paketlerin hepsini silebiliyoruz. Depodan indirmiş olduğumuz tüm paketler ve uygulamanın çalışması için gereken bağımlılıklar <kbd>.deb</kbd> uzantısı ile arşivlenerek <kbd>/var/cache/apt/archives</kbd> dizini içerinde daha sonra tekrar kullanılma ihtimaline karşı tutuluyorlar. İşte bizler de `apt-get clean` komutu yardımıyla eğer internet bağlantımızda sorun yoksa yani bu paketleri tekrar indirirken sorun yaşamayacaksak bu paketleri silerek sistemimizde yer işgal etmelerini önlemiş oluyoruz.
 
     apt-get autoclean
 
@@ -2974,7 +2976,6 @@ Son olarak `make install` komutu ile programı sistemimize kuruyoruz.
 Silme işlemleri için de programa göre farklı durumlar ve dosyalar oluşabildiği için; kurulum yaparken olduğu gibi silme işlemi için de aynı şekilde programla birlikte gelen yönergeleri okumanız en doğru silme yönetimini size gösterecektir.
 
 
-
 ----------
 
 
@@ -3063,7 +3064,6 @@ Ayrıca kullanım şekillerine çok fazla örnek verilebilir ancak burada birka�
 Temel ve en çok başvurulan joker karakterler bu şekildedir. Sizler de joker karaketerler sayesinde konsoldan çalışırken oldukça pratik şekilde işlemlerinizi yerine getirebilirsiniz. Konuyu daha iyi anlamak adına mutlaka ve mutlaka kendiniz de örnek denemeler yapın.
 
 
-
 ----------
 
 
@@ -3100,7 +3100,7 @@ Gelin bu durumu çıktıları karşılaştırarak test edelim.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/16-%20A%C4%9F%20Komutlar%C4%B1/3.png" width="875" >
 
-Ve son duruma bakarak ip adresimizin istediğimiz şekilde değiştiğini görmüş olduk. Aynı şekilde ağ maskesini(netmask) ve broadcat adreslerini dilediğimiz gibi düzenleyebiliriz. Hatta bu işlemi hepsi birlikte olacak şekilde bile yapabiliriz. Bunun için komutumuzu `ifconfig wlan0 yeni_ip_adresi netmask yeni_ağ_maskesi broadcast yeni_broadcast_adresi`  şeklinde kullanmamız yeterli olacaktır.
+Ve son duruma bakarak ip adresimizin istediğimiz şekilde değiştiğini görmüş olduk. Aynı şekilde ağ maskesini(netmask) ve broadcast adreslerini dilediğimiz gibi düzenleyebiliriz. Hatta bu işlemi hepsi birlikte olacak şekilde bile yapabiliriz. Bunun için komutumuzu `ifconfig wlan0 yeni_ip_adresi netmask yeni_ağ_maskesi broadcast yeni_broadcast_adresi`  şeklinde kullanmamız yeterli olacaktır.
 
 Bu durumu bir örnek ile açıklayalım.
 Değişiklik yapmak üzere konsola `ifconfig wlan0 192.168.1.15 netmask 255.255.255.255 broadcast 192.168.2.255` komutunu girerek bir önceki durumu ile karşılaştıralım.
@@ -3175,7 +3175,7 @@ Bu komut hakkında ufak bir araştırma ile çok fazla Türkçe de dahil olmak �
 dig
 -
 
-dig(domain information groper/domain bilgi çukuru) DNS kayıtlarına bakmak için kullamımı oldukça kolay olduğundan yaygın olarak kullanılmaktadır.
+dig(domain information groper/domain bilgi çukuru) DNS kayıtlarına bakmak için kullanımı oldukça kolay olduğundan yaygın olarak kullanılmaktadır.
 
 Bu komutumuz da parametreler alabilmektedir ancak ben burada sizlere yine temel işlevinden bahsederek geriye kalan parametrelerini araştırmayı sizlere bırakıyorum. DNS sorgulaması yapmak istediğimiz adresi konsoldan `dig hedef_adresi` şeklinde belirtiyoruz.
 
@@ -3405,7 +3405,7 @@ Konumuza yavaş yavaş bitirmek üzere devam edecek olursak.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/16.gif" width="875" >
 
-Eğer yazdığınız ifadeler içerinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu, bir önceki aynı ifadeye dönmek için ise `:?` komutunu kullanıyoruz.
+Eğer yazdığınız ifadeler içerisinden herhangi bir ifadeyi bulmak isterseniz `/aranacak_ifade` şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için `:/` komutu, bir önceki aynı ifadeye dönmek için ise `:?` komutunu kullanıyoruz.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/17.gif" width="875" >
 
@@ -3436,7 +3436,7 @@ Eğer daha önce linux ile ilgili yönergeler okuduysanız veya videolar izlediy
 
 `wget` komutunun en temel kullanım şeklidir. Hedef link aracılığı ile tekil dosya indirme işlevinde kullanılır.
 
-Kullanımı: `wget indirilecek_dosya_linki dosya_yolu`
+Kullanımı: `wget indirilecek_dosya_linki`
 
 Örnek olarak aircrack-ng aracını indirdim. Ve indirme işlemini `ls -l`
 komutu ile teyit ettim.
@@ -3511,12 +3511,12 @@ Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceği
 
 Zaten üst kısımda yer alan çıktının sonucunda da bu hız sınırlamasının sonucu olarak ortalama indirme hızı (300 KB/s) olarak gözüküyor.
 
-**Arkaplanda İndirmek :**
-İndirmek istediğimiz dosyanın arkaplanda inmesini `-b` parametresi ile sağlarız. İndirme işleminin sonuçlarını öğrenmek istersek indirilen dosya ile aynı konumda yer alan <kbd>wget-log</kbd> dosyasını incelememiz yeterli olacaktır.
+**Arka Planda İndirmek :**
+İndirmek istediğimiz dosyanın arka planda inmesini `-b` parametresi ile sağlarız. İndirme işleminin sonuçlarını öğrenmek istersek indirilen dosya ile aynı konumda yer alan <kbd>wget-log</kbd> dosyasını incelememiz yeterli olacaktır.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/11.gif)
 
-Dosyamızı arkaplanda indiriyoruz ve konsol çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` komutu ile kayıt dosyasına bakabiliriz.
+Dosyamızı arka planda indiriyoruz ve konsol çıktıda bize indirme detaylarının <kbd>wget-log</kbd> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek `cat wget-log` komutu ile kayıt dosyasına bakabiliriz.
 
 
 ----------
@@ -3540,11 +3540,11 @@ Cron servisimizin çalıştığını teyit etmiş olduk. Cron servisinin yapıla
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/2.png" width="875">
 
-Şimdi de düzenleme yapmak adına konsola `crontab -e` komutunu verelim. Burada yer alan `-e` parametresi "edit" kelimesini yani "düzenleme" ifadesini temsil ediyor.
+Şimdi de düzenleme yapmak adına konsola `crontab -e` komutunu verelim. Burada yer alan `-e` parametresi "**edit**" kelimesini yani "**düzenleme**" ifadesini temsil ediyor.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/3.png" width="875">
 
-Konsol bize düzenleme yaparken hangi aracı kullanmak istediğimizi soruyor. Ben nano aracını seçiyorum yani konsola 2 rakamını giriyorum.
+Konsol bize düzenleme yaparken hangi aracı kullanmak istediğimizi soruyor. Ben **nano** aracını seçiyorum yani konsola **2** rakamını giriyorum.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/4.png" width="875">
 
@@ -3606,7 +3606,7 @@ Her saatin ilk 5 ile 20 dakikası arasında komutum çalışsın istersem:
 5-20 * * * * komut
 ```
 
-Her gün saat 3 ile 5 arasında komutum çalışsın istersem:
+Her gün saat 3 ile 5 arasında her dakika komutum çalışsın istersem:
 
 ```bash
 * 3-5 * * * komut
@@ -3621,7 +3621,7 @@ Her ayın 5 ile 15. günleri arasında saat 16 ile 22 arasındaki her saatin ilk
 Haziran ayında ilk 20 gününün her cuma günü saat 12 ile 15 arasındaki 35 ile 55 dakikaları arasında komutum çalışsın istersem:
 
 ```bash
-35-55 12-15 0-20 6 5 komut 
+35-55 12-15 1-20 6 5 komut 
 ```
 _______
 Belirli gün ve tarihlerde olacaksa o tarihleri **,**(**virgül**) işareti ile ayırarak tek tek belirtmemiz gerekiyor. Yani örneğin;
@@ -3659,7 +3659,9 @@ Belirli süre içinde belirli kez çalışmasını istersek **/**(**taksim**) i�
 * */10 * * * komut
 ```    
     
-Elbette örnekleri çoğaltmak mümkün ancak daha fazlası gereksiz olacaktır. Yani bu konu sizlerin de biraz kurcaladıktan sonra anlayacağı kolay bir konudur.
+Elbette örnekleri çoğaltmak mümkün ancak daha fazlası gereksiz olacaktır. Ayrıca atadığınız zamanlanmış görevlerin doğruluğunu kontrol etmek isterseniz [bu adresten](https://crontab.guru) verdiğiniz zaman aralığının karşılığını görebilir ve hata yapmaktan kaçınabilirsiniz. 
+
+Yani bu konu sizlerin de biraz kurcaladıktan sonra anlayacağı kolay bir konudur.
 
 Eğer belirlenen zamanlanmış görevleri listelemek istersek `crontab -l` komutunu kullanabiliriz. Buradaki `-l` parametresi "**list**" kelimesini yani "**listeleme**" işlevini temsil ediyor.
 
