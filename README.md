@@ -34,3 +34,5 @@ Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
 
 
 ### Tek parça ve sıralı Linux Dokümantasyonu için [buraya](https://github.com/taylanbildik/Linux_Dersleri/tree/master/dok%C3%BCmantasyonlar/Linux_dok%C3%BCmantasyonu.md) tıklayın.
+
+Her türlü görüş, öneri ve hata bildirimi için bana ***derslinux@gmail.com*** adresinden geri bildirimde bulunabilirsiniz.
