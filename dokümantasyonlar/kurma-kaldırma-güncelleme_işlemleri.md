@@ -38,7 +38,7 @@ Komutu da `apt-get clean` komutuyla benzer şekilde arşivlenmiş paketleri silm
 
     apt-get autoremove
 
-Komutu ise silmiş olduğumuz uygulamardan geriye kalan ve artık ihtiyaç duyulmayan bağımlılıkları kaldırmamızı sağlıyor.
+Komutu ise silmiş olduğumuz uygulamadan geriye kalan ve artık ihtiyaç duyulmayan bağımlılıkları kaldırmamızı sağlıyor.
 
     -y
 
@@ -111,7 +111,7 @@ veya
 
 Bu sayede program yapılandırma dosyaları ile birlikte tamamen silinmiş oluyor.
 
-İşte sisler de bu şekilde depolarda yer alan programları oldukça kolay şekilde kurup kaldırabilirsiniz.
+İşte sizler de bu şekilde depolarda yer alan programları oldukça kolay şekilde kurup kaldırabilirsiniz.
 
 
 Paket Yönetim Sistemi İle Kurulum
