@@ -1916,7 +1916,7 @@ Eğer örneklere ve açıklamalara rağmen yine de anlamadıysanız ister konuyu
 
 chattr
 -
-Hepimizin başına mutlaka gelen ve çok can sıkıcı bir durum var. Bu durum yanlışlıkla silinen dosyalar. Her nasıl ve neden olursa olsun eğer önemli gördüğümüz dosyalar varsa bir şekilde silinmeden onları koruma altına almamız mümkün. Bizlere bu koruma imkanını veren komut `chattr` komutudur. Öyle ki herhangi bir yanlış durumda dosyanın kaybolmasına engel olmak adına root kullanıcısının bile değişiklik yapmasına imkan tanımıyor.
+Hepimizin başına mutlaka gelen ve çok can sıkıcı bir durum var. Bu durum yanlışlıkla silinen dosyalar. Her nasıl ve neden olursa olsun eğer önemli gördüğümüz dosyalar varsa bir şekilde silinmeden onları koruma altına almamız mümkün. Bizlere bu koruma imkanını veren komut `chattr` komutudur. Aslında `chattr` komutu bir tek silinmeye karşı korumuyor, genel olarak dosyanın değiştirilmesine(silme, değiştirme vs.) engel olmak amacıyla kullanılıyor. Yani bu komutumuz bir nevi ilgili dosyayı dokunulamaz kılıyor. Öyle ki herhangi bir yanlış durumda dosyanın kaybolmasına engel olmak adına root kullanıcısının bile değişiklik yapmasına imkan tanımıyor. Komutun kullanım alanına bir örnek daha vererek daha iyi anlamış olalım. Örneğin sistemde bir konfigürasyon dosyasını düzenlediniz ve sistemi yeniden başlattınız fakat bir bakıyorsunuz ki düzenlediğiniz(değiştirdiğiniz) ayarlar kaybolmuş ve dosya eski haline dönmüş. İşte bu gibi durumlarda sistemin bile ilgili dosyaya müdahale etmesini engellemek için oldukça kullanışlı olan `chattr` komutunu kullanabiliyoruz.
 
 Komutun kullanımı `chattr +i dosya_adı` şeklindedir. Hemen bir örnek yapalım.
 
@@ -2791,13 +2791,13 @@ Komutu da `apt-get clean` komutuyla benzer şekilde arşivlenmiş paketleri silm
 
     apt-get autoremove
 
-Komutu ise silmiş olduğumuz uygulamardan geriye kalan ve artık ihtiyaç duyulmayan bağımlılıkları kaldırmamızı sağlıyor.
+Komutu ise silmiş olduğumuz uygulamadan geriye kalan ve artık ihtiyaç duyulmayan bağımlılıkları kaldırmamızı sağlıyor.
 
     -y
 
 <kbd>-y</kbd> parametresinin göreviyse çıkacak olan onay sorularına evet(yes) cevabını otomatik olarak vermektir. Bu sayede gerekli işlemler bizden onay beklemeden otomatik olarak zaman kaybedilmeden yapılmış olur.
 
-Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>soruces.list</kbd> dosyasına kullandığımız versiyona uygun depoları ekliyoruz.
+Yani bir bütün olarak eğer sistemimizi güncellemek istersek ilk başta <kbd>/etc/apt/sources.list</kbd> konumunda yer alan <kbd>sources.list</kbd> dosyasına kullandığımız versiyona uygun depoları ekliyoruz.
 
 Bunun için [buradaki kaynaktan](https://docs.kali.org/general-use/kali-linux-sources-list-repositories) kullandığınız versiyona uygun olan repository kopyalayarak <kbd>sources.list</kbd> dosyasına eklemeniz gerekiyor. Ben Kali 2016.1 sonrası (kullandığım versiyon 2017.3) versiyonunu kullandığım için aşağıdaki repoları(repository) <kbd>sources.list</kbd> dosyasına ekliyorum.
 
@@ -2864,7 +2864,7 @@ veya
 
 Bu sayede program yapılandırma dosyaları ile birlikte tamamen silinmiş oluyor.
 
-İşte sisler de bu şekilde depolarda yer alan programları oldukça kolay şekilde kurup kaldırabilirsiniz.
+İşte sizler de bu şekilde depolarda yer alan programları oldukça kolay şekilde kurup kaldırabilirsiniz.
 
 
 Paket Yönetim Sistemi İle Kurulum
