@@ -17,7 +17,7 @@ Burada yer alan dosyaları indirip bir dizine kaydedin.
   <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/%C3%87evrimd%C4%B1%C5%9F%C4%B1%20Linux%20Dok%C3%BCmantasyonu/img/Ana%20Sayfa/1.png">
 </p>
 
-Daha sonra istediğiniz içeriğe kolayca ulaşabilmek için dosya içerisinde yer alan "İçindekiler" isimli html dosyasını açın.(Dosyayı herhangi bir web tarayıcı programı ile açabilirisiniz.)
+Daha sonra istediğiniz içeriğe kolayca ulaşabilmek için dosya içerisinde yer alan "***İçindekiler***" isimli html dosyasını açın.(Dosyayı herhangi bir web tarayıcı programı ile açabilirisiniz.)
 <p>
   <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/%C3%87evrimd%C4%B1%C5%9F%C4%B1%20Linux%20Dok%C3%BCmantasyonu/img/Ana%20Sayfa/local.gif">
 </p>
