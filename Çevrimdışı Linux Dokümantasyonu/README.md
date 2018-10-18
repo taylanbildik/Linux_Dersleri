@@ -7,7 +7,7 @@ Dokümantasyon içerisinde yer alan hareketli resimler(.gif) nedeniyle çevrimd�
 
 Dosyaları indirmek için aşağıdaki butona tıklayın.
 
-<a href="https://mega.nz/#F!Ag5wha7C!pgvAL3jwWpgRBSNs2M8uUQ" target="_blank">
+<a href="https://drive.google.com/file/d/1OV3yjK9L3-3RhrCatO9swj0Jm1FtLung/view?usp=sharing">
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/button.png">
 </a>
 
@@ -22,7 +22,7 @@ Daha sonra istediğiniz içeriğe kolayca ulaşabilmek için dosya içerisinde y
   <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/local.gif">
 </p>
 
-Ayrıca doğrudan ilgili konunun başlığı bulunan html dosyasını açarak da ilgli konuya ulaşabilirsiniz. 
+Ayrıca doğrudan ilgili konunun başlığı bulunan html dosyasını açarak da ilgili konuya ulaşabilirsiniz. 
 Örneğin "***Dizin İşlemleri***" konusunda bilgi almak için klasör içerisinde yer alan "***8-Dizin İşlemleri.html***" dosyasını açmanız yeterli olacaktır.
 <p>
   <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/2.png">
