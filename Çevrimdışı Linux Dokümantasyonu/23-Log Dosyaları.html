@@ -1,0 +1,249 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-FCg44VGg5ax/5MpZ8otwiPE+/tG1/Sq67mKkl6agbqgoScZtJyXhQSFQMIJfOHMZZ+yXDINb8nEiws60SiLohg==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-5aa6d9885579bb2359f66266aee26f3b.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-+/hqp+gOyKak+oOrmncIDqvw8rgk69e9HtwA/O+2PG25IJgS6L+sciem4Dqu4L77m8UaEYWxYhXeRhxzzaDk3Q==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-2bf9c5ab90af2104656120603fa7ae6a.css" />
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Linux_Dersleri/log_kayıtları.md at master · taylanbildik/Linux_Dersleri</title>
+    <meta name="description" content="Kali Linux Üzerinden İşlenen Adım Adım Linux Komut Satırı Dersleri Dokümantasyonu. - taylanbildik/Linux_Dersleri">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/34001728?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="taylanbildik/Linux_Dersleri" /><meta property="og:url" content="https://github.com/taylanbildik/Linux_Dersleri" /><meta property="og:description" content="Kali Linux Üzerinden İşlenen Adım Adım Linux Komut Satırı Dersleri Dokümantasyonu. - taylanbildik/Linux_Dersleri" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzA5MDQ1MDMwOjA3YjMzMjMwY2ZmNGJlNTZjYmU4NWU1ZDNhYmY5OGI2OTQyM2M5OWYzODM4ZGNhNDRmOTQzMjUyZjFiM2M2MTg=--664bb12be3d1142ab4e99a898baabd6f5ac9b82b">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="D9BA:2A9D:46345D:810BC9:5BC1A9D2" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D9BA:2A9D:46345D:810BC9:5BC1A9D2" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="34001728" /><meta name="octolytics-actor-login" content="taylanbildik" /><meta name="octolytics-actor-hash" content="04d3b00d447f2e3776370117332a60b043a8cc0cdcfdd9e3fa97660302b303df" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta class="js-ga-set" name="userId" content="9d489883dbaef9377fdb5a52da7e9766" %>
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="taylanbildik">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="ZjIzMzI5OTg4Yjc0MzgwYzI3NTlkYjc4ZTc1YmExM2IxZjNkNjNiZDA5MTMwMDk0NTM4YTU2OWVkZmQwZmMyNXx7InJlbW90ZV9hZGRyZXNzIjoiMjEyLjE1NC42OC4yMDYiLCJyZXF1ZXN0X2lkIjoiRDlCQToyQTlEOjQ2MzQ1RDo4MTBCQzk6NUJDMUE5RDIiLCJ0aW1lc3RhbXAiOjE1Mzk0MTg1NzgsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT,DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,NOTIFY_ON_BLOCK,COLLAPSE_REPEATED_COMMENTS,ISSUE_AND_PR_HOVERCARDS">
+
+  <meta name="html-safe-nonce" content="cc9756fd2f378e205f49de6ca1621a7291973d1d">
+
+  <meta http-equiv="x-pjax-version" content="2445a9d8f1e3921e095f7142cee041b8">
+  
+
+      <link href="https://github.com/taylanbildik/Linux_Dersleri/commits/master.atom" rel="alternate" title="Recent Commits to Linux_Dersleri:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/taylanbildik/Linux_Dersleri git https://github.com/taylanbildik/Linux_Dersleri.git">
+
+  <meta name="octolytics-dimension-user_id" content="34001728" /><meta name="octolytics-dimension-user_login" content="taylanbildik" /><meta name="octolytics-dimension-repository_id" content="112081649" /><meta name="octolytics-dimension-repository_nwo" content="taylanbildik/Linux_Dersleri" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="112081649" /><meta name="octolytics-dimension-repository_network_root_nwo" content="taylanbildik/Linux_Dersleri" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/taylanbildik/Linux_Dersleri/blob/master/dok%C3%BCmantasyonlar/log_kay%C4%B1tlar%C4%B1.md" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-in env-production page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+</div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/taylanbildik/Linux_Dersleri/blob/aafff87d4a759ddcd42874961d3fa9df7076dd84/dok%C3%BCmantasyonlar/log_kay%C4%B1tlar%C4%B1.md">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:23bfc229dbd2554173ab57b72e9df0b5 -->
+
+    
+
+    
+<div class="file ">
+<div id="readme" class="readme blob instapaper_body">
+  <article class="markdown-body entry-content" itemprop="text"><h2><a id="user-content-log-kayıtları" class="anchor" aria-hidden="true" href="#log-kayıtları"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Log Kayıtları</h2>
+<p>Sistemde olan sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere <strong>log</strong> deniyor. Neden <strong>log</strong>(kayıt) tutulmak zorunda diye soracak olursanız; kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır <strong>log</strong> dosyaları. Anlayacağınız <strong>log</strong>(kayıt) dosyaları sistem bütünü için çok önemli yer tutmaktadır.</p>
+<h2><a id="user-content-log-dosyaları" class="anchor" aria-hidden="true" href="#log-dosyaları"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Log Dosyaları</h2>
+<p>Linux sisteminde <strong>log</strong> dosyalarının çok büyük kısmı <kbd>/var</kbd> dizini altında <kbd>log</kbd> klasörü içerisinde tutuluyor. Ayrıca log dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına <code>cd /var/log</code> yazarak <strong>log</strong> dosyalarının tutulduğu dizine gidip dizin içerisinde iken <code>ls</code> komutu ile dizin içeriğini listeleyelim.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/1.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/1.png" width="875" style="max-width:100%;"></a></p>
+<p>Bir çok kayıt dosyası listelenmiş oldu.
+Örneğin ben buradan, oturum açma işlemlerini ve detaylarını tutan <kbd>auth.log</kbd> dosyasını açarak sistemde yapılmış olan oturum açma işlemlerini ve detaylarını inceleyebilirim. Ancak bu noktada bir kısa bilgi Linux sistemi <strong>log</strong> dosyalarının çok fazla yer kaplamasını önlemek için üzerine yazma metodunu kullanıyor. Bu noktada <strong>cron</strong> servisi ile <strong>log</strong> kayıtları her hafta eklenerek maksimum 1 ay kadar eskiyi yani 4 haftayı kayıt altında tutuyor. Bu tutulan kayıtlar 4 hafta sonunda; "<em>log_dosyası.1.gz</em>", "<em>log_dosyası.2.gz</em>", "<em>log_dosyası.3.gz</em>" şeklinde arşivlenerek saklanıyor. Yani örneğin siz eğer <kbd>auth.log</kbd> dosyasının bu ay değil de geçmişteki aylardaki kayıtlarına bakmak isterseniz. Arşivlenmiş olan "<em>auth.log.1.gz</em>", "<em>auth.log.2.gz</em>", "<em>auth.log.3.gz"</em> şeklindeki dosyalara bakmanız gerekir.</p>
+<p><strong>Log</strong> dosyalarını incelerken kolaylık olması açısından daha önce de kullanmış olduğumuz ve dosyanın alt(tail/kuyruk) kısımlarını listeleyen <code>tail</code> komutundan yararlanacağız. Bu sayede uzun uzadıya dosyanın tamamına bakmak yerine son eklenen bilgileri inceleyebileceğiz.</p>
+<p>Hemen örnek olması açısından oturum açma işlemlerini ve detaylarını tutan <kbd>auth.log</kbd> kayıt dosyasını açalım. Bu açma işlemini de yalnızca dosyada en son yapılmış 5 değişikliği gösterecek şekilde yapalım. Bunun için konsola <code>tail -n 5 auth.log</code> komutumuzu giriyoruz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/2.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/2.png" width="875" style="max-width:100%;"></a></p>
+<p>Komutumuzu girmemizle birlikte konsol bize son 5 oturum açma işlemlerini ve detaylarını listelemiş oldu.</p>
+<p>Hazır yeri gelmişken <code>tail</code> komutuyla sistemdeki olayların anlık olarak takibini yapalım. Bunun için sistemdeki olayların kaydını tutan <kbd>messages</kbd> dosyasını okumalıyız. Bu okuma işlemini sistemdeki anlık hareketleri takip etmek için yaptığımızdan, okuduğumuz dosyaya yeni eklenen her veriyi anlık görmek için <code>tail -f messages</code> komutunu kullanıyoruz. Buradaki <code>tail -f</code> komutunu açıklayacak olursam; biliyorsunuz <code>tail</code> komutu dosyanının alt kısımlarını görüntülememize olanak tanıyan bir komut. Ve bu komutun <code>-f</code> parametreside bu görüntülenecek kısım için dosyayı sürekli yeniden tarayarak dosyaya en son eklenen verileri bize göstermekle mükellef. Yani <code>tail</code> komutunun <code>f</code> parametresi bize yalnızca dosyaya en son eklenen ifadeleri güncel şekilde listeliyor.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/3.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/3.png" width="875" style="max-width:100%;"></a></p> 
+<h2><a id="user-content-dmesg" class="anchor" aria-hidden="true" href="#dmesg"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>dmesg</h2>
+<p>Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler ve kernel hakkındaki kayıtlar <kbd>/proc/kmsg</kbd> dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını <code>dmesg</code> komutu ile görüntüleyebiliriz. Yani <code>dmesg</code> komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/4.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/4.png" width="875" style="max-width:100%;"></a></p>
+<p>Elbetteki çıktı çok daha uzun ancak ben örnek olması açısından çıktıları kısaca verdim. Eğer siz bu çıktıları filtrelemek isterseniz <code>grep</code> komutunu kullanarak ilgili çıktılara rahatlıkla ulaşabileceğinizi biliyorsunuz. Örneğin yalnızca hataları görüntülemek istersek konsola <code>dmesg | grep "fail"</code> şeklinde yazdığımızda, konsol bize yalnızca sistem açılışında belirtilen hataları basacaktır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/5.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/5.png" width="875" style="max-width:100%;"></a></p>
+<p>Gördüğünüz gibi "fail" ifadesinin geçtiği yani hataların belirtildiği tüm iletiler karşımıza gelmiş oldu.</p>
+<h2><a id="user-content-last" class="anchor" aria-hidden="true" href="#last"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>last</h2>
+<p>Komutumuzun isminden de az çok anlaşılacağı gibi; en son oturum açan kullanıcıları listelemek için <code>last</code> komutunu kullanabiliriz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/6.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/6.png" width="875" style="max-width:100%;"></a></p>
+<p><code>last</code> komutuyla en son oturum açan kullanıcılar uzunca listelenmiş oldu.</p>
+<p>Eğer uzunca liste almak istemezsek komutumuzu en son listelemek istediğimiz satır sayısını belirterek <code>last -satır_sayısı</code> şeklinde belirterek istediğimiz uzunlukta çıktı elde edebiliriz.</p>
+<p>Örneğin ben sadece son 2 oturum hareketini görüntülemek istersem komutumu <code>last -2</code> şeklinde belirtmem yeterli.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/7.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/7.png" width="875" style="max-width:100%;"></a></p>
+<p>Veya sondan 4 oturuma bakmak istersem komutumuzu <code>last -4</code> şeklinde kullanırım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/8.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/8.png" width="875" style="max-width:100%;"></a></p>
+<p>Ayrıca kullanıcı adına göre oturum açma bilgisi sorgulayabiliriz. Örneğin ben yalnızca "burak" isimli kullanıcı hesabının oturum hareketlerini görmek istersem, konsola <code>last burak</code> şeklinde yazdığımda karşıma yalnızca "burak" kullanıcı hesabının oturum hareketleri gelir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/9.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/9.png" width="875" style="max-width:100%;"></a></p>
+<p>Gördüğünüz gibi yalnızca "burak" kullanıcı hesabının oturum açma bilgileri listelenmiş oldu. Yani kullanıcıya göre oturum bilgilerini öğrenmek için, komutu <code>last kullanıcı_adı</code> şeklinde kullanabilirsiniz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/20-%20Log%20Dosyalar%C4%B1/10.png"><img src="img/20-%20Log%20Dosyalar%C4%B1/10.png" width="875" style="max-width:100%;"></a></p>
+</article>
+</div>
+
+</div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+        <button type="submit" class="btn" data-close-dialog>Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-MvNlmXbTAwL0N0zMxw8W6vtjWLf0QFvwVzvN8rZIJNdzFy9OJp2d4LQD9WA2rDNcHewz0PB9x/0G0Z9FOuUWgw==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-a2f69f341e3df821fdcb56e335ef9920.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-ixxvBZF3eRHUBFtQhqjNyIJRouOkAqo1Glgy607wMwbpAT1Gu/1tGo5impwGiQi9DBWBeaXnVFEXmNTyPZjT3g==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-1f0ca6fc0ad418e21430c85ad0f2544d.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  </body>
+</html>
+

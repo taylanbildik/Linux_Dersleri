@@ -1,0 +1,444 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-FCg44VGg5ax/5MpZ8otwiPE+/tG1/Sq67mKkl6agbqgoScZtJyXhQSFQMIJfOHMZZ+yXDINb8nEiws60SiLohg==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-5aa6d9885579bb2359f66266aee26f3b.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-+/hqp+gOyKak+oOrmncIDqvw8rgk69e9HtwA/O+2PG25IJgS6L+sciem4Dqu4L77m8UaEYWxYhXeRhxzzaDk3Q==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-2bf9c5ab90af2104656120603fa7ae6a.css" />
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Linux_Dersleri/dosya_işlemleri.md at master · taylanbildik/Linux_Dersleri</title>
+    <meta name="description" content="Kali Linux Üzerinden İşlenen Adım Adım Linux Komut Satırı Dersleri Dokümantasyonu. - taylanbildik/Linux_Dersleri">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/34001728?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="taylanbildik/Linux_Dersleri" /><meta property="og:url" content="https://github.com/taylanbildik/Linux_Dersleri" /><meta property="og:description" content="Kali Linux Üzerinden İşlenen Adım Adım Linux Komut Satırı Dersleri Dokümantasyonu. - taylanbildik/Linux_Dersleri" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzA5MDQ1MDMwOmRiNDIzZGZhYzg3ZTQ5Y2Q5NzkxNDRjMjUwMTIzZWM5Y2YwMDI4M2MxYTQwNTc3M2I4ZTA0M2FjMzU2MTM3NzY=--2fe5846af9726f3c3fb6cb09c0d67ab52b044fcd">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="D9B9:2A9E:52AEDA:9780ED:5BC1A953" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D9B9:2A9E:52AEDA:9780ED:5BC1A953" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="34001728" /><meta name="octolytics-actor-login" content="taylanbildik" /><meta name="octolytics-actor-hash" content="04d3b00d447f2e3776370117332a60b043a8cc0cdcfdd9e3fa97660302b303df" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta class="js-ga-set" name="userId" content="9d489883dbaef9377fdb5a52da7e9766" %>
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="taylanbildik">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="ODYyYjE0NGJjZjI3YjIyNzA0MmFlYzlhZTdlMTVlYTAzM2QyMWZjYTEzODUxYzkzZmRmZTk1Y2NlZTk0ZmE4Mnx7InJlbW90ZV9hZGRyZXNzIjoiMjEyLjE1NC42OC4yMDYiLCJyZXF1ZXN0X2lkIjoiRDlCOToyQTlFOjUyQUVEQTo5NzgwRUQ6NUJDMUE5NTMiLCJ0aW1lc3RhbXAiOjE1Mzk0MTg0NTEsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT,DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,NOTIFY_ON_BLOCK,COLLAPSE_REPEATED_COMMENTS,ISSUE_AND_PR_HOVERCARDS">
+
+  <meta name="html-safe-nonce" content="cc9756fd2f378e205f49de6ca1621a7291973d1d">
+
+  <meta http-equiv="x-pjax-version" content="2445a9d8f1e3921e095f7142cee041b8">
+  
+
+      <link href="https://github.com/taylanbildik/Linux_Dersleri/commits/master.atom" rel="alternate" title="Recent Commits to Linux_Dersleri:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/taylanbildik/Linux_Dersleri git https://github.com/taylanbildik/Linux_Dersleri.git">
+
+  <meta name="octolytics-dimension-user_id" content="34001728" /><meta name="octolytics-dimension-user_login" content="taylanbildik" /><meta name="octolytics-dimension-repository_id" content="112081649" /><meta name="octolytics-dimension-repository_nwo" content="taylanbildik/Linux_Dersleri" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="112081649" /><meta name="octolytics-dimension-repository_network_root_nwo" content="taylanbildik/Linux_Dersleri" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/taylanbildik/Linux_Dersleri/blob/master/dok%C3%BCmantasyonlar/dosya_i%C5%9Flemleri.md" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-in env-production page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+</div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/taylanbildik/Linux_Dersleri/blob/aafff87d4a759ddcd42874961d3fa9df7076dd84/dok%C3%BCmantasyonlar/dosya_i%C5%9Flemleri.md">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:dfcd4798a7ebcfa994f94706449f00ff -->
+
+    
+
+    
+  
+    <div class="file ">
+<div id="readme" class="readme blob instapaper_body">
+  <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-dosya-İşlemleri" class="anchor" aria-hidden="true" href="#dosya-İşlemleri"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dosya İşlemleri</h1>
+<p>Konumuz itibari ile dosyalarla epeyce haşır neşir olacağız. Yapacağımız işlemleri kısaca tanımlamak gerekirse; dosya kopyalama, taşıma, değiştirme, görüntüleme, düzenleme, vb. gibi işlemelerle dosyalar üzerinde hakimiyet kuracağız.</p>
+<h2><a id="user-content-touch" class="anchor" aria-hidden="true" href="#touch"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>touch</h2>
+<p><code>touch</code> komutu bize kolaylıkla metin dosyası oluşturma imkanı tanıyor. İşte bu yüzden dosya işlemleri konumuza <code>touch</code> komutu ile başlamak gayet doğru bir karar olacaktır.</p>
+<p>Kendimize <code>touch</code> komutunu kullanarak boş bir dosya oluşturmak için komut satırına <code>touch dosya_ismi</code> şeklinde yazmamız gerekiyor. Burada fark ettiyseniz herhangi bir uzantı girmeme gerek kalmadı. Çünkü Linux sisteminde uzantı belirtme zorunluluğu bulunmuyor. Bu durumu gözlemlemek için konsola <code>touch yeni</code> komutunu vererek "yeni" adından bir dosya oluşturalım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/1.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/1.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Görüldüğü üzere dosyamız bulunduğumuz ana dizinde oluşmuş oldu. Bunu teyit etmek için de çıktıda görüldüğü gibi daha önce öğrenmiş olduğumuz listeleme görevinde olan <code>ls</code> komutunu kullandık.</p>
+<p>Peki bir tane değil de birden fazla dosya oluşturmak istersek. İşte bunun için de komutumuzu <code>touch yeni1 yeni2 yeni3</code> şeklinde yazmamız yeterli.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/2.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/2.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıda görüldüğü gibi aynı andan 3 dosya oluşturmayı başardık.</p>
+<p>Aslında <code>touch</code> komutunun çok farklı kullanım yöntemleri de mevcut ancak ben son olarak dosyların tarih etiketlerini nasıl değiştirebiliriz bunu görelim.</p>
+<p>Dosyamızın tarih etiketini düzenlemek için touch komutunun <code>t</code> parametresini kullanacağız. Kullanımı ise <code>touch -t YYYYAAGGSSDD.SS dosya_adı</code> şeklindedir.
+Öncelikle dosyamızın mevcut tarih etiketine bakalım.
+<a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/3.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/3.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Şimdi dosyamızın tarih etiketini daha önceki bir tarihe çevirelim.
+Ben burada örnek olması açısından tarih olarak 2015.01.01 ve saat 22:15:32  zamanlamasını kullanıyorum. Nasıl kullanıldığını daha net anlamak için örneği inceleyebilirsiniz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/4.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/4.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Gördüğünüz gibi dosyamın tarih etiketi değişmiş oldu. Bu değişme işlemini ileri veya geri tüm tarihler için kullanabilirsiniz.</p>
+<h2><a id="user-content-cat" class="anchor" aria-hidden="true" href="#cat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cat</h2>
+<p><code>cat</code> komutu temelde dosya içeriğini terminal ekranından okumamıza olanak sağlayan komuttur. Ancak bu komut bizlere temel işlevinin dışında da dosyalar ile ilgili pek çok işlem yapma imkanı sağlıyor. Sırasıyla bunların bazılarına göz atacağız. Ama ilk olarak temel işlevi olan terminal üzerinden dosya okuma işlevini görelim.</p>
+<p>Bunun için konsola açmak istediğimiz dosyanın konumundayken <code>cat açılacak_dosya</code> şeklinde komut vermemiz gerek.
+Ben masaüstü konumunda yer alan "test.txt" isimli dosyanın içeriğini okumak üzere konsola <code>cat test.txt</code> komutunu veriyorum.(Dosyayı grafik arayüzü aracılığı ile de açarak durumu kıyaslamanızı istedim.)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/5.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/5.png" alt="enter image description here" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/6.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/6.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Şimdi ise tıpkı <code>touch</code> komutunda çoklu dosyalar ile ilgili işlem yaptığımız gibi <code>cat</code> komutu ile de çoklu dosya okuma işlemini gerçekleştirelim. Çoklu dosya okuma işlemi için komut satırına <code> cat dosya1 dosya2 dosya3</code> şeklinde okumak istediğimiz dosyaların adlarını yazıyoruz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/7.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/7.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Dosya içeriğine yazı eklemek istersek <code>cat &gt; dosya_adı</code> şeklinde komut verdiğimizde, komut satırı imleci bir alt satıra geçerek bizden yazmak istediğimiz bilgiyi bekler. Yazma işlemimiz bittikten sonra kaydederek kapatmak için <kbd> Ctrl + D</kbd> tuş kombinasyonunu kullanırız. Ayrıca komutta girdiğimiz isimde bir dosya yoksa o isimde bir dosya oluşur ve girilen veriler içerisine işlenir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/8.gif"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/8.gif" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Ancak var olan bir dosyanın adıyla bu komutu kullandıysanız ve dosya içerisinde yazı bulunuyorsa bu işlemin ardından dosyada bulunan eski veriler silinerek yalnızca girilen yeni veri(ler) dosyaya işlenip kayıt oluyor.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/9.gif"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/9.gif" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Bizler eğer önceki veriler silinmesin ve üzerine yeni veri ekleyebilelim istersek komutumuzu <code>cat &gt;&gt; yeni3.txt</code> şeklinde kullanarak; yeni gireceğimiz verileri girdikten sonra <kbd>Ctrl + D</kbd> tuş kombinasyonu ile dosyamızı yeni eklenmiş verileriyle birlikte kaydedip kapatabiliriz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/10.gif"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/10.gif" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Gördüğünüz gibi yeni eklediğimiz veri dosyamızın içine işlenmiş oldu üstelik eski veriler de yok olmadan.</p>
+<p>Ayrıca yeri gelmişken kullanmış olduğumuz <kbd>&gt;</kbd> yönlendirme operatörü ile ilgili bir örnek daha yapalım ki kullanım alanının biraz daha farkına varmış olalım. Örneğin <code>ls -ls</code> çıktısının içeriğini "liste" adında bir dosya oluşturarak içerisine aktaralım. Bunun için <code> ls -ls &gt; liste</code> komutunu kullanabiliriz. Şayet yeni dosya oluşturmak istemiyorsak ve var olan dosyaya yazılsın istiyorsak o zaman <kbd>&gt;</kbd> operatörü yerine <kbd>&gt;&gt;</kbd> operatörünü kullanırsak yeni veriler dosyaya eklenmiş olur.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/11.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/11.png" alt="enter image description here" style="max-width:100%;"></a>
+Komutta açıklanacak bir durum yok zaten hepsi bildiğimiz komutlar. Burada asıl önemli olan <kbd>&gt;</kbd>  operatörünün kullanımıydı. Eğer anladıysak ne âlâ.. devam edelim.</p>
+<p><code>cat</code> komutunun işlevlerine devam ediyoruz şimdi ise bir dosyada yer alan verileri başka bir dosyaya kopyalamak var. Bunun için komutumuzu <code>cat veri_alınan_dosya &gt; veri_alan_dosya</code> şeklinde kullanıyoruz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/12.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/12.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Komutumuzun kullanım şekilleri elbette bunlar ile sınırlı değil.
+Belki defalarca söyledim ancak bu komut için de söylemem gerek ki daha fazla detay için lütfen man kılavuz sayfasına göz atın.</p>
+<h2><a id="user-content-tac" class="anchor" aria-hidden="true" href="#tac"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tac</h2>
+<p>İsminden de anlamış olacaksınız ki <code>tac</code> komutu önce gördüğümüz <code>cat</code> komutunun tersi şekilde çıktı veriyor. Bu durumu daha iyi anlamak için karşılaştırmalı olarak verilen çıktıyı inceleyiniz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/13.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/13.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-rev" class="anchor" aria-hidden="true" href="#rev"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>rev</h2>
+<p>Hazır terslikten bahsetmişken <code>rev</code> komutundan da söz etmemek olmaz. Bu komut dizeleri sondan başa doğru çevirerek ters şekilde ekrana basıyor. Bu durum en iyi örnek ile açıklanır. Hatta <code>cat</code> komutu ile de karşılaştırırsak sonuç daha net oraya çıkacaktır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/14.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/14.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktılarda görüldüğü gibi dosya içeriğinde yer alan ifadeler <code>rev</code> komutu sayesinde ters şekilde ekrana basılmış oldu.</p>
+<p>Şimdi ben bu komutu nerede kullanacağım neden öğrendim demeyin. Bu konuya daha önce de değinmiştim, şimdi tekrar söylüyorum; burada öğrendiğimiz her komutu her zaman doğrudan  kullanmayabilirsiniz ancak yeri geldiğinde böyle bir komutun varlığından haberdar olarak gerektiğinde dokümantasyona bakmak suretiyle komutun kullanımına en kısa sürede ulaşabilirsiniz. Yani bu komutun varlığından haberdarsınız eğer gerekirse burada olacak..</p>
+<h2><a id="user-content-echo" class="anchor" aria-hidden="true" href="#echo"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>echo</h2>
+<p>Bu komutumuzu daha önce defaatle kullanmak durumunda kalmıştık hatırlarsanız. Kullandıkça da işlevinden bahsetmiştik ancak şimdi komutumuzu ele alarak biraz daha yakından bakmaya başlıyoruz.</p>
+<p>Temel işlevi terminal ekranına istenilen bilgileri çıktı olarak göndermektir. Komutumuzu kullanırsak daha net anlaşılacaktır. Örneğin komut satırına "Merhabalar" yazdırmak isteyelim bunun için komut satırına <code>echo Merhabalar</code> şeklinde komutumuzu girmemiz yeterli.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/15.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/15.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>"Merhabalar" çıktımızı almış olduk. <code>echo</code> komutu sadece ekrana basma işlevine sahip değil. Örneğin bir dosya oluşturup içerisine istediğimiz ifadeyi yazabiliriz. Bunun için komut satırına <code>echo "yazılacak_ifade"&gt; dosya_adı</code> şeklinde komutu giriyoruz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/16.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/16.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Sırasıyla yaptığım işlemleri açıklayayım.</p>
+<p>İlk önce <code>cd Desktop</code> komutu ile masaüstü konumuna geldim.</p>
+<p>Daha sonra <code>echo "Deneme Metni" &gt; deneme</code> komutunu vererek masaüstü konumuna <kbd>deneme</kbd> isimli bir dosya oluşturarak içerisine "Deneme Metni" ifadesini yazmış oldum.</p>
+<p><code>ls</code> komutu ile de bulunduğum konumdaki dosyaları listeleyerek içerisinde oluşturduğum "deneme" adlı dosyanın bulunup bulunmadığını teyit ettim.</p>
+<p><code>cat deneme</code> ile de <code>cat</code>komutunun en temel kullanım işlevi olan içeriği ekran basma işlevini kullanarak oluşturduğum dosyanın içeriğine baktım.</p>
+<p>Sonuç itibari ile her şey sorunsuz ilerledi ve finalde yeni oluşturmuş olduğum <kbd>deneme</kbd> isimli dosyanın içerisine "Deneme Metni" ifadesini yazmış oldum.</p>
+<p>Ancak şöyle bir hatırlatmada bulunayım; eğer var olan bir dosyanın içeriğine yeni içerikler eklemek isterseniz daha önce de kullandığımız şekilde <kbd> &gt;&gt; </kbd> parametresini kullanın. Aksi halde dosya içeriğindeki her şey silinir ve yalnızca sizin son yazdığınız ifade kalır.</p>
+<p>Var olan dosya içeriğine yeni bir ifade eklemek için komutu <code>echo "Yeni ifade" &gt;&gt; dosya_adı</code> şeklinde girmemiz gerek.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/17.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/17.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Şimdi <code>echo</code> komutunun <code>ls</code> komutu görevi gördüğü bir kullanıma değineceğiz.</p>
+<p>Örneğin bulunduğumuz dizinde yer alan dosyaları görmek istersek komut satırına <code>echo *</code> şeklinde yazmamız halinde çıktı bizlere bulunduğumuz konumda yer alan dosyaları verir. Bu komut kullanımını <code>ls</code> komutu ile karşılaştırdığımızda daha net anlaşılacaktır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/18.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/18.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><kbd> * </kbd> (yıldız işareti) joker karakteridir ve herhangi dosya dizin isimlerinin yerini tutar. Yani <code>echo</code> komutuna <kbd> * </kbd> karakteri eklediğimizde mevcut dizinde yer alan tüm dosya dizinler  <kbd>* </kbd> parametresi ile kapsanacağı için ne var ne yok listeleniyor. Bu duruma örnek olması açısından bulunduğumuz dizinde yer alan dosyalarda örneğin "list" adı ile başlayanları çıktı olarak almak istersek komut satırına <code>echo liste*</code> şeklinde komut vermemiz yeterlidir. (Joker karakter/wildcard konusundan bu karakterler açıklanmıştır.)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/19.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/19.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Son olarak <code>echo</code> komutunun kullanım şekillerinden olan, bir komutun çıktılarının <code>echo</code> komutu ile ekrana basılması var. Ancak doğrudan <code>echo komut</code> şeklinde yazılan komutlar istenmeyen bir sonuç çıkaracaktır. Verdiğimiz komutun çıktılarını alma işlemini gerçekleştirebilmek için <code>echo</code> komutunun bu iş için kullanım özelliklerinden olan iki farklı seçenek bulunuyor. Bunlardan biri ters tırnak <kbd>'</kbd> işaretini diğeri ise <code>$(komut)</code> parametre bütünüdür. Bunları sırayla görelim.</p>
+<p>İlk olarak ters tırnak işaretli olan kullanımı ele alalım.</p>
+<p>Ters tırnak işaretini oluşturmak için Türkçe klavyede <kbd>AltGr + ,</kbd> tuş kombinasyonunu kullanabiliriz. Komutun kullanımını için ise istediğimiz komutu tırnak içerisinde <code>echo</code> komutunun yanında kullanmak üzere  <code>echo 'komut'</code>şeklinde yazıyoruz.</p>
+<p>Hemen bu kullanım ile ilgili bir örnek yapalım ve <code>ls</code> komutunun çıkıtlarını <code>echo</code> komutu yardımı ile basalım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/20.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/20.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Ve ikinci yol olan <code>$(komut)</code> parametre bütünü; yine <code>ls</code> komutu için örneklendirilecek olursa, kullanımı <code>echo $(ls)</code> şeklinde komut parantez içine gelecek şekilde olmalıdır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/21.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/21.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Sonuç itibari ile ilk <code>echo ls</code> komutunun çıktısı olan "ls" ifadesi bizim almak istediğimiz çıktıyı bizlere vermedi. Yani bu kullanım bizim yapmak istediğimiz iş olan komutun çıktılarının ekrana bastırılması için doğru bir kullanım değildi. Doğru kullanım şekli ise ikinci ve üçüncü komut olan <code>echo 'ls'</code>, <code>echo $(ls)</code> şeklindedir. Bu komutların çıktısı istediğimiz şekilde, yani <code>ls</code> komutunun çıktısını(bulunduğumuz dizinde yer alan dosyaların bilgisi) ekrana basacak şekilde bizlere verdi. Sözü edilen durumu aşağıdaki çıktıyı inceleyerek bir bütün halinde kavrayabilirsiniz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/22.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/22.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-more" class="anchor" aria-hidden="true" href="#more"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>more</h2>
+<p>Şimdiye kadar öyle ya da böyle terminal üzerinden dosya okuma işlemi yapmamıza yardımcı olan komutlar gördük. Bu komutumuzda aynı şekilde metin dosyalarını terminal üzerinden okumamıza olanak sağlayan bir komuttur.</p>
+<p>Örneğin daha önce de içeriğini okuyup değişiklik yapmış olduğumuz dosya olan <kbd>profile</kbd> dosyasının içeriğini <code>more</code> komutu yardımı ile okuyalım.</p>
+<p>Bunun için <kbd>/etc/profile</kbd> konumunda bulunan dosyamı <code>more</code> komutu ile açmak üzere konsola <code>more /etc/profile</code> şeklinde komutu girerek <kbd>profile</kbd> dosya içeriğini okumaya teşebbüs ediyorum.
+Komutumuzun ardından terminal ekranında karşımıza <kbd>profile</kbd> dosyasının içeriği aşağıdaki gibi geldi.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/23.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/23.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıda görüldüğü gibi dosyanın içeriği ancak terminal ekranına sığacak şekilde görüntüleniyor. Hatta alt kısımda --More--(77%) şeklinde yazan yazı bizlere içeriğin devamı olduğunu belirtiyor. Eğer devamını okumak istersek <kbd>enter</kbd> tuşuna basarak adım adım alt satırlara bakabiliriz. Ayrıca <kbd>space</kbd> tuşu ile de sayfa sayfa atlayarak içeriğe göz atabiliriz. Eğer atladığınız sayfadan bir önceki sayfaya geri dönmek istersek <kbd>b</kbd> tuşunu, şayet dosya içeriğini görüntüleyen bu ekranı kapatmak istersek ise <kbd>q</kbd> tuşunu kullanmamız yeterli.</p>
+<h2><a id="user-content-less" class="anchor" aria-hidden="true" href="#less"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>less</h2>
+<p>Bu komutumuz da üst kısımda açıkladığımız more komutu ile aynı işlevdedir. Ayrıntısını merak ederseniz man sayfasına göz atmanız yeterli olacaktır.</p>
+<p>Ben yine de <code>less</code> komutu ile profile dosyasının içeriğinin okunduğu şeklini aşağıya bırakıyorum. Eğer <code>more</code> komutunda bir problem yaşamadıysanız bu komut kullanımında da kesinlikle yaşamazsınız.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/24.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/24.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-head-tail" class="anchor" aria-hidden="true" href="#head-tail"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>head-tail</h2>
+<p>Aslında komutların isimleri yani head(kafa/baş) ve tail(kuyruk) bizlere komut hakkında az çok bilgi veriyor. Şöyleki bir dosyanın sadece baş kısmında ilk 10 satırı görüntülemek istersek <code>head</code> şayet son 10 satırı görüntülemek istersek ise <code>tail</code> komutunu kullanırız. Ayrıca bu komutlar özel parametre alarak istenildiği sayıda baştan veya sondan olmak üzere istenilen satırların görüntülenmesine olanak sağlar. Daha iyi anlamak adına hemen kullanımlarına geçelim.</p>
+<p>Dosya içeriğinin ilk 10 satırını görüntülemek için <code>head dosya_adı</code> şeklinde komutumuzu kullanıyoruz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/25.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/25.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Şimdi burada 10 satır içerik yok gibi gelebilir ancak dosya içerisindeki boş satırlar da bu 10 satıra dahil olduğundan çıktıyı boş satırlar ile saydığınızda tam olarak 10 satırın görüntülendiğini göreceksiniz.</p>
+<p>Dosya içeriğinin son 10 satırını görüntülemek için <code>tail dosya_adı</code> şeklinde komutumuzu kullanıyoruz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/26.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/26.png" alt="enter image description here" style="max-width:100%;"></a>
+Şimdi istediğimiz sayıda baştan veya sondan dizinleri görüntüleyelim. Ben örnek olması açısından baştan 6 sondan 2 satırı görüntülemek üzere komutumu veriyorum. Komutun kullanımı <code>head -n 6</code> ve <code>tail -n 2</code> şeklinde.</p>
+<p>Baştan 6 satırın çıktıları.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/27.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/27.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Sondan 2 satırın çıktıları.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/28.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/28.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-nl" class="anchor" aria-hidden="true" href="#nl"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nl</h2>
+<p>Bu komutun işlevi satırları numaralandırarak çıktı vermektir. Hemen görelim.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/29.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/29.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıda da görüldüğü üzere dosya içeriğinde yer alan ifadeler satır satır numaralandırılarak ekrana basılmış oldu.</p>
+<p>Ayrıca eğer listelenen içerik uzunsa bir önceki öğrendiğimiz <code>head-tail</code> komutları yardımı ile bu alanı düzenli şekilde sınırlandırabiliriz.</p>
+<h2><a id="user-content-sort" class="anchor" aria-hidden="true" href="#sort"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sort</h2>
+<p>Dosya çıktılarının alfabetik olarak düzenlenmesini sağlar. Örnek üzerinden devam edelim. Ben <kbd>isimler.txt</kbd> adında bir dosya oluşturdum ve içerisine karışık olarak isimler ekledim.
+Ve bu isimleri alfabetik sıraya dizmek için <code>sort isimler.txt</code> komutunu kullandım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/30.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/30.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Eğer ters alfabetik şekilde yani z den a ya doğru sıralamak istersek <code>-r</code> parametresi kullanılır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/31.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/31.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-paste" class="anchor" aria-hidden="true" href="#paste"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>paste</h2>
+<p>Örneğin iki dosyanın içeriğini aynı anda yan yana olacak şekilde komut satırında listelemek istersek bu işi yapmamızı <code>paste </code> komutu sağlıyor. Kullanımı <code>paste dosya1 dosya2</code> şeklindedir.</p>
+<p>Ben <kbd>yaşlar.txt</kbd> ve <kbd>isimler.txt</kbd> adlı dosyaları aynı anda yana yana görüntülemek adına komut satırına <code>paste isimler.txt yaşlar.txt</code> komutunu verdim.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/32.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/32.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-tee" class="anchor" aria-hidden="true" href="#tee"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tee</h2>
+<p>Yazmak istediğimiz ifadeleri hem komut satırına yansıtıp hem de bu ifadelerim bir dosya içerisine kayıt olmasını isterseniz kullanacağınız komut <code>tee</code> komutu olacaktır.</p>
+<p>Örnek üzerinden devam edelim.</p>
+<p><code>tee metin</code> komutu ile "metin" isminde bir dosya açıyorum ve içerisine birtakım ifadeler ekliyorum daha sonra ekleme işlemim bittiğinde dosyayı kaydederek kapatmak üzere <kbd>Ctrl + D</kbd> tuş kombinasyonunu uyguluyorum. En son oluşturmuş olduğum dosya içeriğine bakmak üzere <code>cat</code> komutunu kullanıyorum.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/33.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/33.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıda da görüldüğü üzere terminal ekranında yazdığımız her bir satır tekrar ederek konsola basıldı ve sonuçta oluşturmuş olduğumuz "metin" isimli dosyanın içeriği de yazmış olduğumuz ifadeler ile dolmuş oldu.</p>
+<h2><a id="user-content-cmp" class="anchor" aria-hidden="true" href="#cmp"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cmp</h2>
+<p>Bu komut sayesinde dosyalar arasından karşılaştırma yapmamız mümkün.</p>
+<p>Örneğin ben <kbd>isimler.txt </kbd> dosyasını kopyaladım ve 5. satırındaki ismi değiştirdim. Ve bu iki dosyayı <code>cmp</code> komutu ile kıyasladım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/34.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/34.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>İki dosyanın da içeriğini <code>cat</code> komutu ile yazdırdık görüldüğü üzere iki dosya arasındaki fark, bir dosyada mehmet ismi yerine enes isminin yer almasıdır. <code>cmp</code> komutunun çıktısında da bu durum farklı olan satır ve bayt bilgisi verilerek ifade edeliyor.</p>
+<h2><a id="user-content-grep" class="anchor" aria-hidden="true" href="#grep"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>grep</h2>
+<p>Bu komut en çok kullanılan terminal komutları içerisinde bulunuyor. Bu komutumuzu bizler de oldukça sık kullanıyor olacağız. Dosya ya da komut çıktısında bir ifade aramak için yani bir nevi filtreleme işlemi için <code>grep</code> komutunu kullanabiliriz. Komutun kullanım şekillerini örnekler ile açıklamaya devam edelim.</p>
+<p>Eğer bir dosya içerisindeki herhangi bir kelimeyi sorgulamak istersek komutumuzu <code>grep "aranacak_ifade" dosya_adı</code> şeklinde komut satırına giriyoruz. Ben basit bir örnek olması açısından <kbd>isimler.txt</kbd> dosyası içerisinde "hasan" ismi varmı diye kontrol etmek üzere konsola <code>grep "hasan" isimler.txt</code> komutunu veriyorum.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/35.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/35.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Arama işleminde, linux sistemi gereği büyük küçük harf duyarlılığına sahip olduğundan(Hatırlarsanız daha önce bu durumu test etmiştik.) "hasan" şeklinde arama yaptığımızda diğer büyük küçük haldeki anahtar kelimeler çıktıda basılmayacaktır. Eğer bu küçük büyük harf duyarlılığı dışında arama yapmak istersek <code>-i</code> parametresini kullanabiliriz.  Bu durumu gözlemlemek için büyük küçük harflerden oluşan kelimelerin olduğu bir dosya üzerinde <code>grep</code> komutunu kullanalım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/36.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/36.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Eğer arama işlemini tek dosya yerine bulunduğumuz dizin içerisindeki tüm dosyaları kapsayacak şekilde gerçekleştirmek istersek wildcard yani genel kapsama işlevinde olan joker <code>*</code> karakteri yardımıyla bu işlemi gerçekleştirebiliriz.</p>
+<p>Hemen örneklere geçelim. Hasan ismini masaüstü konumundayken aratıyorum. Bunun için <code>grep "hasan" *</code> komutunu konsola verdim.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/37.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/37.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Gördüğünüz gibi çıktı bize içerisinde "hasan" ifadesi geçen tüm dosyaları verdi.</p>
+<p>Çıktıda aradığımız ifadenin hangi dosyada yer aldığını bulmuş olduk. Ayrıca yukarıdaki komutu <code>grep -r "hasan" *</code> şeklinde de yazabilirdik. Genellikle de bu 2. komut kullanılıyor ancak hangi şekilde kullanacağınızı seçmek size kalmış dilediğiniz kullanabilirsiniz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/38.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/38.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>İkinci kullanım şeklinde ilkinden farklı olarak "grep: yeni_dizin: Bir dizin" gibi bir çıktı almadık.</p>
+<p>Wildcardlardan söz etmişken dosya içerisinde arama işleminin başka bir kullanım şekline de değinelim isterim. Eğer aranacak kelime belirli bir isim ile başlayan dosyalar içerisinde aranacaksa bunu wildcard(joker) yardımıyla özellikle belirtebiliriz.</p>
+<p>Kullanımı <code>grep "aranacak_ifade" dosya_adı_başlangıcı*</code> şeklindedir. Ben ilk önce masaüstünde yer alan dosyaları listeledim daha sonra "hasan" ifadesini aramaya koyuldum. İlk önce "metin" ismi ile başlayan belgelerde <code>grep "hasan" metin*</code> komutunu kullanarak aradım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/39.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/39.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Ancak çıktıda da görüleceği gibi "hasan" ifadesi "metin" ismi ile başlayan belgeler içerisinde yer almıyormuş ki komut çıktısı bize hiç bir sonuç vermedi.</p>
+<p>Bende "hasan" ismini bu sefer "isimler" adıyla başlayan belgeler içerisinde aramak için <code>grep "hasan" isimler*</code> komutunu kullandım. Bunun neticesinde komut satırı bize "hasan" isminin geçtiği belgelerin yerini vermiş oldu.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/40.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/40.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Buradaki asıl kullanım amacı; komutu, belirli isimlere sahip olan dosyalar içerisinden anahtar kelimeyi aramak üzerine sınırlandırmak.</p>
+<p>Bunların dışında arama sonucunun görüntülenmesini de sınırlandırabiliriz;
+Örnek olması açısından "filozof" isimli dosyadan "jo" ile başlayan isimleri listeliyorum.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/41.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/41.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Arama sonucu sonrasında kaç satır gözükeceğini <code>-A</code> parametresi sayesinde <code>grep -A görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı</code> şeklinde komut girerek sağlarız.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/42.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/42.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Sonucun üzerindeki kaç satırın gözükeceğini <code>-B</code> parametresi sayesinde <code>grep -B görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı</code> şeklinde komut girerek sağlarız.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/43.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/43.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Baştan ve sondan kaç satır görüntüleneceğini ise <code>-C</code> parametresi sayesinde <code>grep -C görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı</code> şeklinde komut girerek sağlarız.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/44.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/44.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Şimdi ise sıklıkla kullanılan pipe ile <code>grep</code> kullanımına bakalım. Pipe nedir diyecek olursanız kabaca iki işlemi(process) birbirine bağlayan <code>|</code> görünümündeki yardımcı argüman diyebiliriz. Zaten daha önce de iki işlemin birbirine bağlanması gereken durumlarla karşılaşmış ve pipe kullanmıştık.</p>
+<p><code>grep</code> ile kullanımına geçecek olursak örneğin masaüstünde yer alan dosyalardan yalnızca "metin" isimli olanları listelemek isteyelim. Bunun için ilk olarak masüstünde yer alan dosyalarımızı listelemek üzere komut satırına <code>ls</code> daha sonra ise <code>ls</code> komutundan gelecek olan çıktıları pipe yardımı ile <code>grep</code> komutuna bağlayarak listelenen bütün bu dosyalar içerisinden sadece "metin" adı geçenleri filtreleyebilelim..</p>
+<p>Bu işlemi gerçekleştirmek için <code>ls | grep "metin"</code> komut bütününü kullanıyorum.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/45.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/45.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><code>grep</code> komutunun kullanım şekli ve alanı elbette bu kadar ile sınırlı değil ancak sizler daha fazla bilgiye nasıl ulaşacağınızı biliyorsunuz.</p>
+<h2><a id="user-content-find" class="anchor" aria-hidden="true" href="#find"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>find</h2>
+<p><code>find</code> komutu da hemen hemen daha önce görmüş olduğumuz <code>locate</code> komutu ile aynı görevi görüyor. Örneğin, isminin birazını bildiğimiz ama dosya dizinini tam olarak hatırlamadığımız dosyaları bulmamıza yardımcı oluyor.</p>
+<p>Komut kullanım kalıbı <code>find dosya_yolu -name aranacak_ifade</code> şeklindedir. Tam kullanım şekli için aşağıdaki örneği inceleyebilirsiniz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/46.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/46.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıda <kbd>etc</kbd> konumda yer alan içerisinde "local" ifadesi geçen dosyalar komutumuz sayesinde listelenmiş oldu. Ancak aradığımız şeyi bulmak adına değiştirilme tarihi, boyut, dosya-dizin gibi ayrıntıları belirterek çıktıları daha spesifik şekilde sınırlandırabiliriz. Bazı özel arama parametreleri açıklayalım hemen.</p>
+<ul>
+<li><strong>type f :</strong> Yalnızca dosyalar.</li>
+<li><strong>type d :</strong> Yalnızca dizinler.</li>
+<li><strong>size +500k :</strong> 500 Kbyt'dan büyük olan dosyalar.</li>
+<li><strong>size -500k :</strong> 500 Kbyt'dan küçük olan dosyalar.</li>
+<li><strong>ctime 10 :</strong> Tam olarak 10 gün önce değişikliğe uğramış dosya/dizinler.</li>
+<li><strong>ctime -10 :</strong> 10 günden daha kısa bir süre önce değişikliğe uğramış dosya/dizinler.</li>
+<li><strong>ctime +10 :</strong> 10 günden daha uzun bir süre önce değişikliğe uğramış dosya/dizinler.</li>
+<li><strong>perm 755 :</strong> Yalnızca erişim izni 755 olan dosya/dizinler.
+Örnek olması açısından yukarıdaki arama parametrelerinin ilk ikisinin çıktılarını aşağıya ekliyorum.</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/47.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/47.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-xargs" class="anchor" aria-hidden="true" href="#xargs"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>xargs</h2>
+<p><code>xargs</code> komutunun görevi kabaca kendisinden önce verilen girdi verilerini kendisinden sonrakine tek tek aktarmaktır. Biliyorum böyle denilince hiçbir şey anlaşılmıyor. O yüzden <code>xargs</code> komutunu <code>find</code> komutuyla birlikte kullanarak örnek üzerinden komutumuzu ve kullanım mantığını açıklamış olalım.</p>
+<p>Örneğin <kbd>.jpg</kbd> uzantılı bir resim dosyasını araştırıp daha sonra bulduğumuz bu dosyayı silelim. Ben duvar kağıdı için daha önce internetten bir <kbd>.jpg</kbd> uzantılı bir resim indirmiştim. Bu resim hem indirilenler(downloads) hem de resimler konumunda yer alıyor, söylediğim gibi aslında dosyanın konumunu biliyorum ancak komutun kullanımını denemek üzere dosyanın konumunu bilmiyormuşçasına bir test edelim. Testimizde <kbd>root</kbd> dizinindeki <kbd>.jpg</kbd> uzantılı dosyaları araştıralım ve silelim.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/48.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/48.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıda da görüldüğü gibi <kbd>.jpg</kbd> uzantılı resim dosyalarını tek tek bulup silmeden önce çıktıda belirtilen konumlarda bulunuyorlardı. Ancak arama ve tek tek otomatik olarak silme işlemini gerçekleştirmemiz ile birlikte dosyalar silindi. Silinme durumunu da tekrar arama işlevindeki <code>find</code> komutunu vererek teyit etmiş olduk.</p>
+<p>Komutumuzun işleyişi tam olarak şöyle oldu;</p>
+<p><code>find /root -name *.jpg</code> komutu ile <kbd>root</kbd> dizini altındaki tüm <kbd>.jpg</kbd> uzantılı dosyaları listeledik.</p>
+<p>Bu listelenen dosya konum ve varlık bilgilerini <code>xargs</code> komutuna <code>pipe( | )</code> argümanı sayesinde aktardık.</p>
+<p><code>xargs</code> komutu ise eline geçen bu bilgiler sayesinde dosyanın konumunu saptayarak silme işlemini gerçekleştirebildi.</p>
+<p><code>xargs</code> komutu <code>exec</code> isimli başka bir komuta benzer şekilde çalışmaktadır. Merak edip öğrenmek isteyen arkadaşlar ayrıca <code>exec</code> komutuna bakabilirler.</p>
+<h2><a id="user-content-dosya-kopyalama-taşıma-silme-İşlemleri" class="anchor" aria-hidden="true" href="#dosya-kopyalama-taşıma-silme-İşlemleri"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dosya Kopyalama-Taşıma-Silme İşlemleri</h2>
+<p>Bu kısımda dosyaları kopyalama taşıma ve silme gibi işlemleri ele alacağız. Zaten kullanacağımız komutlar kısa oldukları için kullanımı ve akılda kalması çok kolay. İlk olarak dosya kopyalama işlemi ile anlatıma başlayalım.</p>
+<h3><a id="user-content-cp" class="anchor" aria-hidden="true" href="#cp"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cp</h3>
+<p><code>cp</code> komutu kopyalama işlevindedir. Kullanımı <code>cp kaynak hedef</code> şeklindedir. Örnek üzerinden açıklayalım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/49.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/49.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Komutumuzu açıklayacak olursak;</p>
+<p>Desktop dizinindeyken ls komutu ile bulunduğumuz dizindeki dosyaları listeliyoruz. Ve çıktıda da görüldüğü üzere masaüstünde "filazof" isimli bir belge bulunuyor.</p>
+<p><code>cd yeni_dizin</code> komutuyla  <kbd> yeni_dizin </kbd> konumuna gidiyoruz.</p>
+<p><code>ls</code> komutu ile buradaki dosyaları listeliyoruz. Bu dizinde ise yalnızca "yeni" isimli bir klasör mevcut.("filazof" isimli dosyanın bu konumda bulunmadığını teyit etmiş olduk.)</p>
+<p><code>cd ..</code> komutu ile bir önceki dizine dönüyoruz.
+"filazof" dosyasını <kbd>yeni_dizin</kbd> konumuna taşımak üzere <code>cp filazof yeni_dizin</code> şeklinde komutumuzu kullanıyoruz.</p>
+<p>Daha sonrasında ise <code>cd yeni_dizin</code> komutu ile yeni_dizin konumuna gidip <code>ls</code> komutu yazarak "filazof" isimli dosyamızın kopyalandığını teyit etmiş oluyoruz.</p>
+<p>Eğer bir dosyayı A dizininden B dizinine taşırsak ve B dizini içerisinde A dizininden taşıdığımız belge ile aynı isimde dosya varsa taşıdığımız dosya mevcut konumda bulunan aynı isimdeki eski dosyanın üzerine yazılacaktır. Bu da B konumunda var olan eski dosyanın önceki içeriğinin yok olması demek. Böyle talihsiz bir durum yaşamamak için <code>cp</code> komutunu kullanmadan önce <code>-i</code> parametresini de eklememizde fayda var. Bu parametre <code>cp</code> komutunun aynı isimli bir dosya ile karşılaşma durumunda bize onay sormasını sağlayacaktır.</p>
+<p>Anlatılanları daha iyi anlamak adına hemen bir örnek yapalım. Daha önceden <kbd>yeni_dizin</kbd> konumuna taşımış olduğumuz "filazof" dosyasını <code>-i</code> parametresini kullanarak tekrar <code>cp</code> komutu ile taşımaya çalışalım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/50.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/50.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıda da görüldüğü gibi <code>-i</code> parametresini kullanarak yazdığımız kopyalama komutu bize "cp: 'Desktop/merhaba''ın üzerine yazılsın mı? " şeklinde bir uyarıda bulundu ve bizden onay bekledi.</p>
+<p>Elbette bu işlemleri çoklu dosya taşıma için de kullanabiliriz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/51.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/51.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Hangi komutu neden kullandık zaten bir önceki örneğe benzer olduğu için tekrar açıklamıyorum. Çıktıları inceleyerek çok rahat şekilde anlayabilirsiniz.</p>
+<p>Eğer o anda çalıştığımız dizine başka bir konumdan dosya kopyalamak istersek komutumuzu <code>cp kopyalanacak_dosya_konumu .</code> şeklinde kullanabiliriz. Nokta( . ) bizim o anda bulunduğumuz çalışma konumunu ifade ediyor. Örneği incelediğinizde her şey daha net anlaşılacaktır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/52.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/52.png" width="875" style="max-width:100%;"></a></p>
+<p>Görüldüğü üzere kopyalanacak olan dosyanın konumunu belirttik ancak bulunduğumuz konuma yani kopyalamak istediğimiz konumun direk adresini belirtmemize gerek kalmadı. Bunun yerine bulunduğumuz konumu temsil eden <code>.</code>(nokta) kullanmamız dosyanın kopyalanmasını sağladı.</p>
+<p>Eğer bulunduğumuz konumdan bir üst konuma kopyalamak istersek komutu <code>cp dosya_adresi ..</code> şeklinde kullanmamız yeterli olacaktır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/53.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/53.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıları karşılaştırarak dosyayı bir önceki dizine kopyalamayı (iki nokta) <code>..</code> ile kolaylıkla yapabildiğimizi görebilirsiniz.
+(Eğer "deneme" isimli dosyayı kopyalarken kullandığımız komutta yer alan, dosyanın konumunu belirtme kısmı kafanızı karıştırdıysa belirteyim; çıktıda kopyalanan konumda yer alan <kbd>~</kbd> işareti ana dizin adresini yani root kullanıcısı için <code>/root</code>konumunu belirtiyor. "deneme" isimli dosya bu konumda olduğu için direk bu şekilde bir kullanımı tercih ettim. Bunun yerine <code>cp /root/deneme ..</code> komutunu da kullanabilirdim.)</p>
+<h3><a id="user-content-mv" class="anchor" aria-hidden="true" href="#mv"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mv</h3>
+<p>Bu komut dosya taşıma ve uzantı değiştirme gibi işlevlere sahiptir. Dosya taşıma işlevi tıpkı <code>cp</code> komutunda olduğu gibidir. Yani komutun kullanımı <code>mv dosya_konumu taşınacak_konum</code> şeklindedir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/54.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/54.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h3><a id="user-content-rm" class="anchor" aria-hidden="true" href="#rm"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>rm</h3>
+<p>Dosya dizin silme işlevinde kullandığımız komuttur. Kullanımı <code>rm silinecek_dosya_dizin</code> şeklindedir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/55.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/55.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Dosyalar tekil olarak silinebileceği gibi çoklu silme işlemi de gerçekleştirilebilir. Hatta daha önce gördüğümüz joker karakterleri de kullanırsak isim, uzantı gibi filtrelere göre sınırlandırarak toplu dosya silme işlemi gerçekleştirebiliriz. Örnek olması açısından masaüstünde yer alan 2 adet <kbd>.py</kbd> uzantılı dosyayı tek seferde <code>rm *.py</code> komutu ile siliyorum.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/56.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/56.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Joker karakterlerin kullanım alanları oldukça geniştir. Sizler de ihtiyacınıza göre filtreleme yaparak bu işlemleri istediğiniz doğrultuda gerçekleştirebilirsiniz.(Bu konuyu detaylıca ileride <a href="https://github.com/taylanbildik/Linux_Dersleri/blob/master/joker_karakterler%28wildcards%29.md">Joker Karakterler</a> kısmında ele alacağız.)</p>
+<h3><a id="user-content-shred" class="anchor" aria-hidden="true" href="#shred"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>shred</h3>
+<p>Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. <code>shred</code> komutu dosyanın içerisine rastgele bitler yazarak dosyanın okunmaz hale gelmesini sağlıyor. Parametresiz kullanımda dosyaya 3 kez rastgele bit eklerken <code>n</code> parametresini kullanarak bu eklenecek olan rastgele bit sayısını istediğimiz doğrultuda düzenleyebiliyoruz. Eğer yapılan işlemi komut satırından takip etmek istersek <code>v</code> parametresini de kullanabiliriz. Ayrıca <code>u</code> parametresini kullanmamız halinde dosya işlem sonrasında silinir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/57.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/57.png" width="875" style="max-width:100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/58.png"><img src="img/6-%20Dosya%20%C4%B0%C5%9Flemleri/58.png" width="875" style="max-width:100%;"></a></p>
+</article>
+</div>
+
+  </div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+        <button type="submit" class="btn" data-close-dialog>Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-MvNlmXbTAwL0N0zMxw8W6vtjWLf0QFvwVzvN8rZIJNdzFy9OJp2d4LQD9WA2rDNcHewz0PB9x/0G0Z9FOuUWgw==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-a2f69f341e3df821fdcb56e335ef9920.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-ixxvBZF3eRHUBFtQhqjNyIJRouOkAqo1Glgy607wMwbpAT1Gu/1tGo5impwGiQi9DBWBeaXnVFEXmNTyPZjT3g==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-1f0ca6fc0ad418e21430c85ad0f2544d.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  </body>
+</html>
+

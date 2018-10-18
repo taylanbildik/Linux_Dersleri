@@ -1,0 +1,301 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-FCg44VGg5ax/5MpZ8otwiPE+/tG1/Sq67mKkl6agbqgoScZtJyXhQSFQMIJfOHMZZ+yXDINb8nEiws60SiLohg==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-5aa6d9885579bb2359f66266aee26f3b.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-+/hqp+gOyKak+oOrmncIDqvw8rgk69e9HtwA/O+2PG25IJgS6L+sciem4Dqu4L77m8UaEYWxYhXeRhxzzaDk3Q==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-2bf9c5ab90af2104656120603fa7ae6a.css" />
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Linux_Dersleri/süreç_işlemleri.md at master · taylanbildik/Linux_Dersleri</title>
+    <meta name="description" content="Kali Linux Üzerinden İşlenen Adım Adım Linux Komut Satırı Dersleri Dokümantasyonu. - taylanbildik/Linux_Dersleri">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/34001728?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="taylanbildik/Linux_Dersleri" /><meta property="og:url" content="https://github.com/taylanbildik/Linux_Dersleri" /><meta property="og:description" content="Kali Linux Üzerinden İşlenen Adım Adım Linux Komut Satırı Dersleri Dokümantasyonu. - taylanbildik/Linux_Dersleri" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzA5MDQ1MDMwOjIxNDdmNzFjZmQ1NzhjODA3ZmJmMjk1ZWNiZjgwMGI2NWZkYjU3ZDM3YTllM2E0ZjUyYzFmNmYxZDliMWRiYjc=--61ef8be9769ac74303cc63111e2135fb23ed178b">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="D9BA:2A9D:4618E3:80D793:5BC1A971" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D9BA:2A9D:4618E3:80D793:5BC1A971" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="34001728" /><meta name="octolytics-actor-login" content="taylanbildik" /><meta name="octolytics-actor-hash" content="04d3b00d447f2e3776370117332a60b043a8cc0cdcfdd9e3fa97660302b303df" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta class="js-ga-set" name="userId" content="9d489883dbaef9377fdb5a52da7e9766" %>
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="taylanbildik">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="NzYzZmQ0Zjg0NDVmY2RlMjQzNzk1NGEwNTQ1NTQzM2Q1ODU0MWEyNmYwYzlhNzUzYzkzZmEzNGZlYzA3OWViMHx7InJlbW90ZV9hZGRyZXNzIjoiMjEyLjE1NC42OC4yMDYiLCJyZXF1ZXN0X2lkIjoiRDlCQToyQTlEOjQ2MThFMzo4MEQ3OTM6NUJDMUE5NzEiLCJ0aW1lc3RhbXAiOjE1Mzk0MTg0ODEsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT,DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,NOTIFY_ON_BLOCK,COLLAPSE_REPEATED_COMMENTS,ISSUE_AND_PR_HOVERCARDS">
+
+  <meta name="html-safe-nonce" content="cc9756fd2f378e205f49de6ca1621a7291973d1d">
+
+  <meta http-equiv="x-pjax-version" content="2445a9d8f1e3921e095f7142cee041b8">
+  
+
+      <link href="https://github.com/taylanbildik/Linux_Dersleri/commits/master.atom" rel="alternate" title="Recent Commits to Linux_Dersleri:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/taylanbildik/Linux_Dersleri git https://github.com/taylanbildik/Linux_Dersleri.git">
+
+  <meta name="octolytics-dimension-user_id" content="34001728" /><meta name="octolytics-dimension-user_login" content="taylanbildik" /><meta name="octolytics-dimension-repository_id" content="112081649" /><meta name="octolytics-dimension-repository_nwo" content="taylanbildik/Linux_Dersleri" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="112081649" /><meta name="octolytics-dimension-repository_network_root_nwo" content="taylanbildik/Linux_Dersleri" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/taylanbildik/Linux_Dersleri/blob/master/dok%C3%BCmantasyonlar/s%C3%BCre%C3%A7_i%C5%9Flemleri.md" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-in env-production page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+</div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/taylanbildik/Linux_Dersleri/blob/aafff87d4a759ddcd42874961d3fa9df7076dd84/dok%C3%BCmantasyonlar/s%C3%BCre%C3%A7_i%C5%9Flemleri.md">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:95416e822dbc0801149820bbb507086d -->
+
+    
+
+    
+<div class="file ">
+<div id="readme" class="readme blob instapaper_body">
+  <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-süreçlerprocess" class="anchor" aria-hidden="true" href="#süreçlerprocess"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Süreçler(process)</h1>
+<p>Süreç(process) denilen kavram genel olarak bir program çalıştığında programın belleğe yüklenmesine denir. Bizler de bu bölümde süreçler hakkında bilgi almak, işlem yapmak ve gerektiğinde müdahalede bulunmak gibi işlemleri yapabilmek adına ilgili komutları öğreneceğiz.</p>
+<h2><a id="user-content-ps" class="anchor" aria-hidden="true" href="#ps"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ps</h2>
+<p>Bu komutumuz çalışan süreçleri görüntülememizi sağlıyor.</p>
+<p>Komut tek başına <code>ps</code> şeklinde kullanıldığında mevcut konsol üzerinden çalıştırılmış süreçleri verir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/1.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/1.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Genellikle sistemdeki tüm işlemleri görmek için <code>ps -aux</code> komut bütünü kullanıyor.
+Komut <code>aux</code> parametreleri ile <code>ps -aux</code> şeklinde kullanıldığında sistemde ve terminallerde çalışan tüm süreçleri ve süreç sahiplerini gösteriyor.(Çıktı çok uzun olacağından aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/2.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/2.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Ancak gerektiği zaman doğru çıktıları almak adına <code>ps</code> komutunun parametrelerine bakalım.</p>
+<p><strong>e :</strong> Sistemde çalışan her süreç.(Çıktı çok uzun olacağından aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/3.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/3.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><strong>u :</strong> Kullanıcı adına göre süreç bilgileri verir.</p>
+<p>Parametrenin komut ile kullanımı <code>ps -u kullanıcı</code> şeklindedir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/4.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/4.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><strong>p :</strong> Süreç numarasına(PID) göre süreç bilgisi verir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/5.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/5.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Eğer aradığımız özel bir süreç varsa daha önce görmüş olduğumuz <code>grep</code> komutu yardımı ile o süreç hakkında doğrudan bilgi alabiliriz.
+Şöyleki eğer ben "bash" süreci hakkında bilgi almak istiyorsam konsola <code>ps -aux | grep "bash"</code> yazmam yeterli olacaktır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/6.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/6.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Çıktıda görüldüğü gibi yalnızca ulaşmak istediğim "bash" süreci hakkında çıktı almış oldum.</p>
+<h2><a id="user-content-pstree" class="anchor" aria-hidden="true" href="#pstree"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pstree</h2>
+<p>Süreçleri hiyerarşik bir biçimde görüntülemek istersek <code>pstree</code> komutumuzu da kullanabiliriz. Bu komut Windows işletim sisteminde de <code>tree</code> olarak kullanılabiliyor. Neyden bahsettiğimizi anlamak için hemen konsola <code>pstree</code> komutumuzu verelim.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/7.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/7.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Komutumuz isminde(<code>pstree</code>) de yer aldığı gibi, süreçleri tıpkı bir ağaç gibi dallanıp budaklanarak hiyerarşik şekilde karşımıza getiriyor.</p>
+<h2><a id="user-content-top" class="anchor" aria-hidden="true" href="#top"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>top</h2>
+<p>Bu komut da tıpkı <code>ps</code> komutunda olduğu gibi süreçler hakkında bilgi verir ancak bu işlemi <code>ps</code> komutundan farklı olarak 3 saniyede bir yenilenecek şekilde anlık değişimleri verecek şekilde yapar. Temel kullanımı <code>top</code> şeklindedir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/8.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/8.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Eğer varsayılan olarak kullanılan 3 saniyede bir güncelleme tekrarında bir değişiklik yapmak istersek komutumuzu <code>d</code> parametresiyle birlikte yani <code>top -d saniye</code> şeklinde yazarak istediğimiz saniye aralığında süreç bilgilerinin çıktılarının güncellenmesini sağlayabiliriz.
+Ben örnek olması açısından bu yenileme hızını 1 saniye olarak ayarlamak için komutumu <code>top -d 1</code> şeklinde yazıyorum.
+Ve ayrıca bu ekranı kapatmak istesek ise sadece <kbd>q</kbd> tuşuna basmamız yeterli.
+Gif resminde de görüldüğü gibi <code>top -d 1</code> komutu ile her saniye yenilenen süreçler bilgi tablosu <kbd>q</kbd> tuşuna basmamızla sonlanmış oldu.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/9.gif"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/9.gif" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-pgrep" class="anchor" aria-hidden="true" href="#pgrep"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pgrep</h2>
+<p>Çalışan süreçlerin belirli kriterlere göre sıralanmasını sağlayan komuttur.</p>
+<p>Süreç işlemlerinde çalışan süreç üzerinde değişiklik yapabilmemiz için ilk önce değişiklik yapacağımız süreci bulmamız gerekiyor. İşte <code>pgrep</code> komutu da bizlere lazım olan çalışan süreç numaralarını(pid) veriyor. Süreç numarası sistemde süreçlerin haberleşmesini sağlayan numaradır ve tüm süreçler için benzersiz olacak şekilde atanır. Buraya takılmadan devam edelim.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/10.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/10.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Örnek vererek komutumuzun kullanımını görmüş olalım.</p>
+<p>Örnek göstermek adına armitage aracını çalıştırıyorum. Çalışmakta olan armitage aracının süreci üzerinden örneğimizi yapalım.
+Çalıştırmış olduğumuz amitage aracının süreç numaralarını(procces id(pid)) sorgulamak üzere <code>pgrep armitage</code> komutumuzu giriyoruz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/11.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/11.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Ve çıktı da görüldüğü gibi <code>pgrep armitage</code> komutu sayesinde armitage aracının süreç numaralarını(pid) görmüş olduk.</p>
+<p>Şimdi de <code>pgrep</code> komutunun birkaç işlevsel parametresini görelim.</p>
+<p><strong>l :</strong> Süreçlerin numaraları ile beraber süreç isimlerini de görmek için kullanılır.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/12.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/12.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><strong>lu :</strong> Belirtilen kullanıcıdaki, süreçlerin numaraları ile beraber süreç isimlerini de görmek için kullanılır. Burada <code>u</code> parametresi hedef kullanıcı belirtmemizi sağlar <code>l</code> parametresini zaten bir önceki kısımda açıklamıştık.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/13.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/13.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>İleride bu bilgiler bize lazım olacak şimdi süreçleri sonlandırma komutları ile devam edelim.</p>
+<h2><a id="user-content-kill-killall" class="anchor" aria-hidden="true" href="#kill-killall"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kill-killall</h2>
+<p>Komutlarımız isimlerinden de anlaşılabileceği gibi süreçleri sonlandırma(öldürme) işleminde kulllanılıyorlar. Kullanım şekilleri;</p>
+<p><strong><code>kill süreç_numarası(pid)</code></strong> : Süreçleri pid(süreç numarası) ile sonlandırmak.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/14.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/14.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><strong><code>kill -9 süreç_numarası(pid)</code></strong> : Kapanmaya karşı direnen süreçleri pid(süreç numarası) ile sonlandırmak.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/15.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/15.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><strong><code>killall süreç_ismi</code></strong> : Süreçleri isimleri ile sonlandırmak.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/16.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/16.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><strong><code>killall -9 süreç_ismi</code></strong> : Kapanmaya karşı direnen süreçleri isimleri ile sonlandırmak.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/17.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/17.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><strong><code>killall -i süreç_ismi</code></strong> : Süreçleri isimlerini kullanarak ve onay alarak sonlandırmak.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/18.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/18.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<h2><a id="user-content-xkill" class="anchor" aria-hidden="true" href="#xkill"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>xkill</h2>
+<p>Bu komutumuz yanıt vermeyen bir programı grafiksel arayüzden kapatmamızı sağlayan ilginç bir komuttur.</p>
+<p>Diyelim ki leafpad aracımızı açtık ve her ne sebeple olursa olsun yanıt vermeyi kesti, bu noktada eğer leafpad aracını anında kapatmak istersek konsola <code>xkill</code> yazıyoruz ve fare imleci çarpı işaretine dönüşüyor. Bu çarpı işareti ile tıkladığımız araç otomatik olarak kapanıyor.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/19.gif"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/19.gif" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Anlatım havada kalmış olabilir o yüzden <code>xkill</code> komutunun kullanımını kesinlikle sizler de hemen deneyin akılda kalması kolay bir komut zaten.</p>
+<h2><a id="user-content-fg-bg-jobs" class="anchor" aria-hidden="true" href="#fg-bg-jobs"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fg-bg-jobs</h2>
+<p>Son olarak gayet kullanışlı komutlar olan <code>fg</code> ve <code>bg</code> komutlarına değinerek süreçler konumuzu bitirelim. Konsoldan komut verildiğinde, verdiğimiz komut doğrultusunda gerçekleşen işlem süreci bitmeden konsoldan tekrar başka bir komut vermemiz mümkün olmuyor. Bu gibi durumlarda eğer yeni bir komut girişi yapmak istersek, süreci arka plana alıp yeni komutumuzu ancak öyle çalıştırabiliriz. İşte bu komutlarımız da konsoldan çalıştırdığımız süreçleri arka plana taşıma gibi işleve sahiptirler. Ayrıca <code>jobs</code> komutu da bu süreçlerin durumunu takip etmemizi sağlar. Bu durum örnekler ile daha iyi anlaşılacaktır.</p>
+<p>Kullanımın rahat şekilde anlaşılması için adım adım gidelim.</p>
+<p>Konsoldan leafpad uygulamasını açalım. Bunun için konsola <code>leafpad</code> yazmamız yeterli.</p>
+<p>Yazdıktan sonra ekrana leafpad uygulaması geldi.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/20.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/20.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Programı çalıştırdığımız konsol şu anda leafpad uygulamasını çalıştırmakla meşgul. Yani bu demek oluyor ki eğer biz bu konsol üzerinden yeni bir komut girmek istersek bu mümkün olmayacak. İşte bu yüzden halihazırda çalışan leafpad uygulamasının çalışmasını durdurup arka plana atmalıyız ki yeni komutlar girdiğimizde konsol leafpad uygulaması ile meşgul olmasın.</p>
+<p>Konsolda çalışan leafpad uygulamamızı arka plana atmak yani duraklatmak için <kbd>Ctrl + Z </kbd> tuş kombinasyonunu kullanıyoruz. Bu işlemin ardından konsol bize aşağıdaki gibi bir çıktı basarak leafpad uygulamasının durduğunu haber veriyor.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/21.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/21.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Konsolun bize leafpad programının durduğunu haber verdiğini söylemiştik. Ayırca bu gibi durumlarda sürecin durumunu sorgulama yapmak için <code>jobs</code> komutunu da kullanabiliyoruz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/22.png"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/22.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Artık leafpad programımızın durdurulduğundan kesin eminiz. Hatta leafpad uygulamasına grafiksel arayüzden bir şeyler yazmaya çalıştığımızda uygulama durdurulduğu için hiç bir tepki vermiyor. Yani konsolumuz artık leafpad uygulamasının sürecini işlemiyor. Bunu teyit etmek için önceden konsola komut veremediğimizi ele alırsak denemek için konsola <code>ls</code> komutumuzu giriyoruz.
+Adımların her birini genel olarak .gif olarak verdiğim resimde görebilirsiniz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/23.gif"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/23.gif" alt="enter image description here" style="max-width:100%;"></a></p>
+<p><code>ls</code> komutunun çıktısını alabildik bu da demek oluyor ki konsol ekranımız önceden olduğu gibi leafpad uygulaması ile meşgul değil, böylelikle yeni komutlar alabiliyor.</p>
+<p>Leafpad programı durduruldu ancak biz hem leafpad programını kullanmak hem de aynı konsol ekranından yeni komutlar girebilmek istiyoruz. İşte bu noktada durdurulan leafpad süreçlerinin arka plana alınarak çalıştırılmasına devam edilmesi gerekiyor. Bu işlevi de <code>bg</code> komutu sağlıyor. Komut satırımıza <code>bg</code> komutumuzu girdiğimizde artık leafpad programı süreçleri arka planda çalışır duruma geçiyor ve biz hem konsol ekranından yeni komutlar girebiliyoruz hem de leafpad uygulamamızı kullanabiliyoruz. Leafpad uygulamasının çalışır olduğunu <code>jobs</code> komutu ile de aşağıdaki şekilde teyit edebiliriz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/24.gif"><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/24.gif" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Eğer arka plana attığımız program sürecini tekrar eskisi gibi konsol üzerinden(ön planda) çalışır hale getirmek istersek <code>fg</code> komutumuzu kullanabiliriz. Bu komutumuzu kullandığımızda konsol artık yeni komut almayacak ve tekrar sadece leafpad uygulaması ile meşgul olacak.</p>
+<p>Yukarıda verilen .gif ile bu durumlar ele alınmıştır.</p>
+</article>
+</div>
+
+</div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+        <button type="submit" class="btn" data-close-dialog>Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-MvNlmXbTAwL0N0zMxw8W6vtjWLf0QFvwVzvN8rZIJNdzFy9OJp2d4LQD9WA2rDNcHewz0PB9x/0G0Z9FOuUWgw==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-a2f69f341e3df821fdcb56e335ef9920.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-ixxvBZF3eRHUBFtQhqjNyIJRouOkAqo1Glgy607wMwbpAT1Gu/1tGo5impwGiQi9DBWBeaXnVFEXmNTyPZjT3g==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-1f0ca6fc0ad418e21430c85ad0f2544d.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  </body>
+</html>
+

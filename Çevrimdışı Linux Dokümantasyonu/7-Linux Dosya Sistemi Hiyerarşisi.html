@@ -1,0 +1,306 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-FCg44VGg5ax/5MpZ8otwiPE+/tG1/Sq67mKkl6agbqgoScZtJyXhQSFQMIJfOHMZZ+yXDINb8nEiws60SiLohg==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-5aa6d9885579bb2359f66266aee26f3b.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-+/hqp+gOyKak+oOrmncIDqvw8rgk69e9HtwA/O+2PG25IJgS6L+sciem4Dqu4L77m8UaEYWxYhXeRhxzzaDk3Q==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-2bf9c5ab90af2104656120603fa7ae6a.css" />
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Linux_Dersleri/Linux_dosya_sistemi_hiyerarşisi.md at master · taylanbildik/Linux_Dersleri</title>
+    <meta name="description" content="Kali Linux Üzerinden İşlenen Adım Adım Linux Komut Satırı Dersleri Dokümantasyonu. - taylanbildik/Linux_Dersleri">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/34001728?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="taylanbildik/Linux_Dersleri" /><meta property="og:url" content="https://github.com/taylanbildik/Linux_Dersleri" /><meta property="og:description" content="Kali Linux Üzerinden İşlenen Adım Adım Linux Komut Satırı Dersleri Dokümantasyonu. - taylanbildik/Linux_Dersleri" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzA5MDQ1MDMwOjIxZDkxZmVlZTNjNDMzNzY2Mzk5ZTE4ZTEzNGQyMGI4NDRhYjQ3ZjQ5MTgwMDFjZDRhZTU3ZDI5NjE2Y2RhMWE=--98b8b02353d989a4db1c9981d0ec2cbffa933b3e">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="D9B9:2A9E:52A7C4:9773C2:5BC1A941" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D9B9:2A9E:52A7C4:9773C2:5BC1A941" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="34001728" /><meta name="octolytics-actor-login" content="taylanbildik" /><meta name="octolytics-actor-hash" content="04d3b00d447f2e3776370117332a60b043a8cc0cdcfdd9e3fa97660302b303df" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta class="js-ga-set" name="userId" content="9d489883dbaef9377fdb5a52da7e9766" %>
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="taylanbildik">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="OTZlYTQxZDkyMmJiNjRmYWYxMzY5NWMxZGM0ZDExZWJiZjEyNzU2YmJiMTU5YjAxOGJiYjM5N2M3MWRlOWIyY3x7InJlbW90ZV9hZGRyZXNzIjoiMjEyLjE1NC42OC4yMDYiLCJyZXF1ZXN0X2lkIjoiRDlCOToyQTlFOjUyQTdDNDo5NzczQzI6NUJDMUE5NDEiLCJ0aW1lc3RhbXAiOjE1Mzk0MTg0MzMsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT,DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,NOTIFY_ON_BLOCK,COLLAPSE_REPEATED_COMMENTS,ISSUE_AND_PR_HOVERCARDS">
+
+  <meta name="html-safe-nonce" content="cc9756fd2f378e205f49de6ca1621a7291973d1d">
+
+  <meta http-equiv="x-pjax-version" content="2445a9d8f1e3921e095f7142cee041b8">
+  
+
+      <link href="https://github.com/taylanbildik/Linux_Dersleri/commits/master.atom" rel="alternate" title="Recent Commits to Linux_Dersleri:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/taylanbildik/Linux_Dersleri git https://github.com/taylanbildik/Linux_Dersleri.git">
+
+  <meta name="octolytics-dimension-user_id" content="34001728" /><meta name="octolytics-dimension-user_login" content="taylanbildik" /><meta name="octolytics-dimension-repository_id" content="112081649" /><meta name="octolytics-dimension-repository_nwo" content="taylanbildik/Linux_Dersleri" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="112081649" /><meta name="octolytics-dimension-repository_network_root_nwo" content="taylanbildik/Linux_Dersleri" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/taylanbildik/Linux_Dersleri/blob/master/dok%C3%BCmantasyonlar/Linux_dosya_sistemi_hiyerar%C5%9Fisi.md" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-in env-production page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+</div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/taylanbildik/Linux_Dersleri/blob/aafff87d4a759ddcd42874961d3fa9df7076dd84/dok%C3%BCmantasyonlar/Linux_dosya_sistemi_hiyerar%C5%9Fisi.md">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:ee2a70bd6058553c0946addf5946b472 -->
+
+    
+
+    
+<div class="file ">
+<div id="readme" class="readme blob instapaper_body">
+  <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-linux-dosya-sistemi-hiyerarşisi" class="anchor" aria-hidden="true" href="#linux-dosya-sistemi-hiyerarşisi"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Linux Dosya Sistemi Hiyerarşisi</h1>
+<p>Linux’un Windows’dan farklı olan dosya hiyerarşi sistemini kavramak ve ileride ele alacağımız dosya-dizin işlemleri konularında zorluk çekmemek adına bu kısımda “<em><strong>Linux dosya sistemi hiyerarşisi</strong></em>” konusunu ele alacağız.</p>
+<h2><a id="user-content-nedir-bu-hiyerarşi-ve-neden-gerekli" class="anchor" aria-hidden="true" href="#nedir-bu-hiyerarşi-ve-neden-gerekli"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nedir bu hiyerarşi ve neden gerekli?</h2>
+<p>Hiyerarşi kelimesinin sözlükteki genel anlamı; “Yunanca yetki, rütbe veya aşama sırası anlamında kullanılan kelime.” şeklindedir.</p>
+<p>Linux sistemlerinde de aynı şekilde sınıflandırma yapılarak dosyaların sıraya koyulmasına bunun sonucunda tıpkı bir ağaç misali oluşan dosya sistemlerine genel olarak “<strong>Linux dosya sistemi hiyerarşisi</strong>” deniyor.</p>
+<p>Genellikle bütün dağıtımlarda aynı hiyerarşik düzen vardır.(Genellikle diyorum çünkü küçük farkların dışında tüm dağıtımlar aynı hiyerarşik yapıya sahiptir. Zaten eğer her dağıtımın hiyerarşik dosya sistemi tamamen farklı olsaydı o zaman geliştiriciler için ayrı bir uğraş ve içinden çıkılmaz bir karmaşa olurdu. O yüzden buraya çok takılmayın lütfen, istisnalar kaideyi bozmaz diyerek devam ediyoruz. :) )</p>
+<p>Linux <strong>"Tekil Hiyerarşik Klasör Yapısı"</strong>'nı benimsemiştir. Yani bu da şu demek oluyor; her şey <kbd>/</kbd> (slash) simgesiyle ifade edilen <code>root</code> klasöründen başlar, aşağıya doğru iner. Merak edenler için  de söyleyelim “Root” kelimesinin karşılığı da Türkçe olarak “kök” anlamına geliyor. Bu sayede “root” kelimesinin de nereden geldiği ve neden kullanıldığı da az çok açıklığa kavuşuyor sanırım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/1.png"><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/1.png" alt="enter image description here" style="max-width:100%;"></a></p>
+<p>Linux, <code>/</code> (root) klasöründen başlayarak, boot işlemindeki önem sırasına göre klasörleri ilgili konumlara yerleştirir. Bu yerleştirme işleminde yani klasörler arası geçişlerde klasörler arasını ayırmak için <kbd>/</kbd>(slash) işareti kullanılır. Herhangi bir dizin ya da dosyanın sistemdeki adresi önce kök dizinden başlar sonra o dosya ya da dizine ulaşmak için geçilmesi gereken dizinler arasına yine <kbd>/</kbd> yazılarak elde edilir. Örneğin <code>/home/burak</code> yolu, kök dizininde(/), home isimli dizin içindeki burak dizininin konumunu belirtir. Bu ifadede en baştaki <code>/</code> işareti kök dizini belirtmektedir.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/2.gif"><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/2.gif" width="875" style="max-width:100%;"></a></p>
+<p>Ayrıca belirtmekte fayda var, Linux küçük büyük harf duyarlılığına sahiptir. Yani Linux'ta <code>DOSYA_ADI</code>,<code>Dosya_Adı</code>,<code>dosya_adı</code>,<code>DoSyA_aDı</code>..vb. gibi ismlendirilmiş dosyaların hepsi <strong>ayrı/farklı</strong> bir dosya olarak tanınır. Windows'ta ise aynı isimli dosyalar, küçük büyük harf ayrımı gözetilmeksizin aynı olarak tanınır. Hemen bu durumu teyit etmek için Windows ve Linux sistemlerinde dosya oluşturma işlemi gerçekleştirelim.</p>
+<p><strong>#Windows</strong>
+<a target="_blank" rel="noopener noreferrer" href="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/3.gif"><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/3.gif" width="875" style="max-width:100%;"></a>
+Gördüğünüz gibi Windows işletim sisteminde büyük küçük harf duyarlılığı bulunmuyor.</p>
+<p>Gelin bu durumu birde Linux sisteminde test edelim.</p>
+<p><strong>#Linux</strong>
+<a target="_blank" rel="noopener noreferrer" href="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/4.gif"><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/4.gif" width="875" style="max-width:100%;"></a>
+Test sonucundan da anlaşılacağı gibi Linux işletim sisteminde küçük büyük harf duyarlılığı bulunuyor.
+O yüzden işlemlerimizi yaparken özellikle de ileride konsol(terminal/komut penceresi) ekranından işlem yaparken bu küçük büyük harf duyarlılığı son derece önem kazanacak. Bu önemli detayı da öğrendikten sonra gelin anlatıma devam edelim.</p>
+<p>Daha iyi anlaşılması adına anlatımları Windows ile karşılaştırma yaparak gerçekleştiriyorum. Ve yine bir karşılaştırma daha; Windows işletim sistemine bir program eklediğimizde programın dosyaları <code>Program Files</code>(Program Dosyaları) dizini içerisine programın kendi adındaki bir klasöre eklenir.(Örneğin <code>C:\Program Files\program_adı</code> şeklinde.) Programın dosyaları tek bir dosya içerisindedir yani.(Anlatımda kast edilen program dosyalarının tek dosya içerisinde bulunma durumuna harici sistem kayıt dosyaları ve benzeri dosyalar dahil değildir.) Ancak Linux'ta bir program eklenme durumunda programın tüm dosyaları programın isminin yer aldığı bir klasöre gitmez.</p>
+<p>Örneğin; sistem otomatik olarak program dökümanlarını <code>/usr/share/doc/program_ad/</code> altına koyarken, eğer varsa info dosyaları da,<code>/usr/share/info</code> dizini içerisine atar. Yani kısacası programı kurduğunuzda programın dosyaları ilgili konumlara otomatik olarak dağılır. Tek bir klasör içerisinde yer almaz.</p>
+<p>Özetle Linux sisteminde her şey bir dosya(root-kök dosyası(<code>/</code>)) içerisinde yer alır. Ve bu dosya sistemi hiyerarşik bir yapıda bulunur. Tüm bu tek kök dosya sistemi ve hiyerarşik yapılanmanın amacı <strong>çok kullanıcılı ve dağıtık bir sistemi güvenli ve kolay bir şekilde kurup yönetebilmektir</strong>. Buradaki "<strong>dağıtık</strong>" kavramı ne diyecek olursanız; Örneğin birden çok bilgisayarın olduğu bir ağda bilgisayarlardan birisindeki bir ağ dizinine(neden ağ üzerinden bağlanıyor? neden ağ dizini aracılı ile yapılıyor ? gibi sorularınız varsa buradaki ağ kavramı bilgisayarları birbirine bağlayan bağlantı ağı anlamında. Yani buradaki esas önemli nokta bilgisayarların birbirine bağlanmasıdır.) kök dosyası altındaki dosyalar istenildiği gibi dağıtılarak bölünebilir. Örneğin x_bilgisayarı'na <code>/bin</code> dizini bağlanır, bir diğer bilgisayara <code>/var</code> dizini içerisindeki e-posta sunucusunun dosyalarının olduğu dizin, bir diğerine de <code>/home</code> dizini bağlanabilir.</p>
+<p>Bu sayede fiziksel olarak pek çok bilgisayara dağılmış olan bir sunucu tek bir kök dosya sisteminden sanki tek bir bilgisayarmış gibi yönetilerek kullanılabilir. Bu sayede hem iş yükü dağılımı yapılarak sistem performansı arttırılmış olur hem de yetkilendirme ve yönetim kısıtlamaları dahilinde sistemin ayrı ayrı parçalara dağılımı ile sisteme ekstra güvenlik önlemi katılmış olunur.
+Biraz daha net anlamak adına aşağıdaki görseli inceleyebilirsiniz.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/5.png"><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/5.png" alt="" style="max-width:100%;"></a>
+Siz şimdi "<em>ben sadece masaüstü bilgisayardan kullanıcam bu dosya sistemi benim için gereksiz.</em>" diyebilirsiniz. Ancak bu dosya sistemi tekil kullancılar için de sağladığı güvenlik özellikleri nedeniyle gerekli bir sistemdir.</p>
+<p>Daha iyi anlamak için benzer bir duruma masaüstü kullanıcıları için örnek verelim.</p>
+<p>Örneğin sistemde "burak" isimli kullanıcı hesabı var diyelim. Burak kullanıcısının sistemi kullanması için gereken sistem dosyalarını çalıştırma yetkisi var yani sistemi normal bir şekilde kullanabiliyor. Ancak burak kullanıcısının dosyaları değiştirme yetkisi yoksa <code>/home/burak</code> dizininden önceki dizinlerde değişiklik(dosyaları silme, üzerine veri yazma vs..) yapamaz. Bu sistem sayesinde bütün kullanıcılar, yetkileri dahilinde işlemlerini güvenli şekilde yerine getirler. Bu sayede yönetim ve güvenlik sağlama işi kolaylaşır.
+Bu duruma örnek olması için çok basit bir test yapalım.
+Root(yetkili ve tüm izinlere sahip kullanıcı) ile burak isimli kullanıcı hesaplarından "Deneme" isimli dosyada değişiklik yapıp, yaptığımız değişikliği kaydetmeye çalışalım.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/7.gif"><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/7.gif" width="875" style="max-width:100%;"></a></p>
+<p>Gördüğünüz gibi "root" kullanıcı hesabındayken kayıt işlemini tamamlayabildim ancak "burak" kullanıcı hesabında yetki iznim olmadığı için dosyada yaptığım değişikliği kayıt edemedim.
+Bu da demek oluyor ki kullanıcılar sadece sahip oldukları yetkileri dahilinde işlemler gerçekleştirebiliyor. Bu sayede sistem yönetimi ve güvenliği kolaylıkla sağlanabiliyor.</p>
+<p>Artık kısaca Linux dosya sisteminin neden bu şekilde olduğunu ve sağladığı avantajları anladıysak gelin bu hiyerarşik yapıdaki dosyalara ve işlevlerine daha da yakından bakalım.</p>
+<p>Aşağıda verilenler ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.</p>
+<h2><a id="user-content-bin" class="anchor" aria-hidden="true" href="#bin"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/bin</h2>
+<p>İşletim sisteminizi kullanmak için gereken birçok komut <code>/bin</code> klasörü altındadır. cat, mkdir, cp, ls, mv, rm vb. temel komutların hepsi buradadır. Sistem boot ettiğinde, ilk olarak <code>/bin</code> klasörü çalışır hâle getirilir. Sistemde ne kadar ciddi bir sorun olursa olsun <code>/bin</code> klasöründeki komutlar çalışmaya devam eder. Bu sayede sisteminizde bir sorun meydana geldiğinde <code>/bin</code> klasörü altındaki temel komutları kullanarak sistemi onarabiliriz.</p>
+<h2><a id="user-content-boot" class="anchor" aria-hidden="true" href="#boot"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/boot</h2>
+<p>Boot, işletim sisteminin yüklenme evresidir. <code>/boot</code> klasörü, boot işlemi için gerekli olan tüm dosyaları içerir (çekirdek görüntüsü, sistem haritası, önyükleyici yapılandırması gibi). Bilgisayarın başlangıç (boot) aşamasında gerekmeyen ayar ve yapılandırma dosyaları burada bulunmaz; başka klasörlerden gerektiği zamanlarda yüklenir.</p>
+<h2><a id="user-content-dev" class="anchor" aria-hidden="true" href="#dev"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/dev</h2>
+<p>Linux'ta her şey bir dosyadır; donanım aygıtları da öyle. USB girişleri, seri ve paralel portlar, depolama ortamları, CD-ROM'lar vb... Bütün aygıtlar <code>/dev</code> klasörü altında tutulan dosyalardan ibarettir. Örneğin <code>/dev</code> altında bulunan <code>sda1</code> dosyası, sabit diskinizi temsil eder. Ya da <code>/dev/dsp</code>, ses aygıtınızdır. Bunları programlar vasıtasıyla kullanırız; ancak bu dosyalar üzerinden doğrudan müdahale etmek de mümkündür.</p>
+<p>Birkaç aygıt dosyası ve işlevi.</p>
+<div><table><thead><tr><th>Konumu</th><th>Cihaz Açıklaması</th></tr></thead><tbody><tr><td><kbd>/dev/ttyS0</kbd></td><td>Fare, modem gibi aygıtların bağlandığı seri port (COM 1).</td></tr><tr><td><kbd>/dev/psaux</kbd></td><td>PS/2 girişi; fare ve klavyeler içindir.</td></tr><tr><td><kbd>/dev/lp0</kbd></td><td>Paralel port (LPT 1); yazıcı, tarayıcı vs...</td></tr><tr><td><kbd>/dev/dsp</kbd></td><td>Birincil ses aygıtı
+</td></tr><tr><td><kbd>/dev/usb </kbd></td><td>USB aygıtları</td></tr><tr><td><kbd>/dev/sda</kbd></td><td>SCSI aygıtlar, USB bellekler, harici CD-ROM'lar vs...</td></tr><tr><td><kbd>/dev/scd</kbd></td><td>SCSI CD-ROM'lar</td></tr><tr><td><kbd>/dev/js0 </kbd></td><td>Oyun çubuğu (Joystick)</td></tr></tbody></table></div>
+<hr>
+<h2><a id="user-content-etc" class="anchor" aria-hidden="true" href="#etc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/etc</h2>
+<p>İşletim sistemini bir vücuda benzetirsek, <code>/etc</code> klasörünü sinir sisteminin merkezi olarak görebiliriz. Sisteme dair bütün ayarları ve bilgisayara özel birçok yapılandırma bilgisini içerir.</p>
+<h2><a id="user-content-home" class="anchor" aria-hidden="true" href="#home"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/home</h2>
+<p><code>home</code> klasörü kullanıcıların kalesi olarak tabir edilir. <code>home</code> klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin /home/ahmet , /home/ayşe gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları tutulmaktadır. Ayrıca kullanıcılar <code>/home</code> dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. <code>/home</code> dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.</p>
+<h2><a id="user-content-initrd" class="anchor" aria-hidden="true" href="#initrd"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/initrd</h2>
+<p>initrd, "initial ramdisk" kısaltmasıdır. Anlamı, yaklaşık olarak "Başlangıç Bellek Diski" şeklinde ifade edilebilir. Boot aşamasında ilk önce çekirdek (kernel) yüklenir. Bundan sonra bilgisayarınızın belleğinde bir Bellek Diski oluşturulur. Oluşturulan Bellek Disk üzerinde <code>/</code> (root) yansısı açılır ve kök dizin olarak monte edilir. <code>/initrd</code> bu işlemlerin yapılması ve Linux'un yüklenmesi için gereklidir.</p>
+<h2><a id="user-content-lib" class="anchor" aria-hidden="true" href="#lib"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/lib</h2>
+<p>Çekirdek modülleri ve paylaşılan kütüphane dosyaları bu klasörde bulunur. Kütüphane dosyaları, sistemi başlatmak ve <code>/bin</code> ile <code>/sbin</code> içerisindeki komutları çalıştırmak için gereklidir. Paylaşılan kütüphane dosyalarını, Windows'ta DLL ile eş tutabiliriz. Linux'ta kütüphane dosyalarının sonu ".so" ile biter.</p>
+<h2><a id="user-content-lib64-lib32" class="anchor" aria-hidden="true" href="#lib64-lib32"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/lib64 /lib32</h2>
+<p>Halen 32 bit ve 64 bit sistemler arasında geçiş yapıyoruz. Bu nedenle, kütüphane dosyalarının derleme süresi boyunca kullanılan kayıt boyutunu netleştiren <code>/lib32</code> ve <code>/lib64</code> adlı dizinlerle karşılaşabilirsiniz. Yani bu sayede 64 bitlik bir bilgisayar, eski uygulamalara uyumluluk için bazı 32 bitlik ikili dosyalara ve kütüphanelere sahip olabilir.</p>
+<h2><a id="user-content-lostfound" class="anchor" aria-hidden="true" href="#lostfound"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/lost+found</h2>
+<p>İngilizce bir terim olan “Lost and Found” kayıp eşya bürosu demektir. <code>/lost+found</code> klasörü de tam olarak bu işlevi görmektedir. Bazen sisteminizde herhangi bir problem olur; örneğin bilgisayarı resetlerseniz, elektrik gider sonrasında bilgisayarı yeniden başlatırsınız. Bu gibi durumlarda Linux'ta fsck (File System Check) komutu devreye sokulur. Düzeltilemeyen bir sorun varsa, bağlantıları kopmuş kayıp dosyalar ortaya çıkmışsa, bunlar <code>/lost+found</code> altına atılır. Kısaca özetlersek; kötü bir sistem kapanmasından sonra, olması gereken bazı dosyaları bulamıyorsanız, kayıp eşya bürosuna bakmanızda yarar var.</p>
+<h2><a id="user-content-media" class="anchor" aria-hidden="true" href="#media"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/media</h2>
+<p>Kaldırılabilir aygıtların (USB bellek, SD kart, CD vb.) ve sistem başlangıcında bağlanmayan sabit disk bölümlerinin bağlanma noktasıdır. Söz konusu depolama ortamları sisteme bağlanmamış iken dizin içeriği boş görünür.</p>
+<h2><a id="user-content-mnt" class="anchor" aria-hidden="true" href="#mnt"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/mnt</h2>
+<p>İşletim sisteminin kurulu olduğu disk bölümü hariç olmak üzere sistem başlangıcında bağlanan sabit disk bölümleri ve donanım aygıtlarının bağlanma noktasıdır. (İşletim sisteminin kurulu olduğu disk bölümünün içeriği ise doğrudan <code>/</code> (kök dizin) altında bulunur.)</p>
+<p>Bağlama(mount) işlemi, bir disk bölümünün sisteme bağlanarak kullanıma hazır hâle gelmesi demektir. Nereye bağladığınız sizin tercihinizdir, değiştirmeniz mümkündür. Yani bir diski, <code>/media</code> veya <code>/mnt</code> klasörüne ya da bir başka yere bağlamanız fark etmeyecektir. <code>/media</code> ve <code>/mnt</code> sadece genel kabul görmüş bağlantı noktalarıdır.</p>
+<h2><a id="user-content-opt" class="anchor" aria-hidden="true" href="#opt"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/opt</h2>
+<p>İşletim sisteminden bağımsız, sistem için zorunlu olmayan 3. parti kullanıcı programları bu dizinde bulunur. Örneğin; Google Earth programını indirip kurmak istediğinizde, 'default' olarak kurulacağı nokta, <code>/opt/google-earth</code> adresidir.</p>
+<p>Elbette üçüncü parti bir programı kurarken bu kurulum konumunu değiştirebilir, size uygun gelen bir başka konuma yükleyebilirsiniz. Ancak daha önce de bahsettiğimiz gibi bazı şeyler genel kabule dayanır.</p>
+<h2><a id="user-content-proc" class="anchor" aria-hidden="true" href="#proc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/proc</h2>
+<p>Süreçler, sistem belleği, bağlı aygıtlar, donanım yapılandırmalarıyla ilgili bilgileri içeren özel bir “sanal” dosya sistemidir. Bildiğimiz anlamda fiziksel dosyalar bulundurmaz; sistem durumuna dair bilgi içeren sanal dosyaları vardır. Bir bilgi alma merkezi olarak görülebilir, birçok uygulama buradaki bilgilerden yararlanmaktadır. Örneğin <code>cat /proc/swaps</code> yazarak sisteminizdeki takas dosyalarına dair bilgi alabilir ya da <code>cat /proc/cpuinfo</code> komutuyla işlemcinizin özelliklerini görebilirsiniz.</p>
+<p><code>/proc</code> klasörü içersindeki dosyalar, sadece sistem durumunu görüntülemek için kullanılmaz, gerektiğinde sistemde ayarlama yapmak için de kullanılabilir.</p>
+<h2><a id="user-content-root" class="anchor" aria-hidden="true" href="#root"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/root</h2>
+<p>Linux/Unix sistemlerde, işletim sistemine her türlü müdahalede bulunabilme yetkisine sahip, "root" adıyla tanımlanmış, süper yetkili özel bir kullanıcı hesabı vardır. <code>/root</code> dizini, bu özel kullanıcı hesabının ev dizinidir. Daha iyi anlamak adına örneğin; "burak" isimli kullanıcı hesabının ev dizini <code>/home/burak</code> şeklindeyken "root" kullanıcısının ev dizini <code>/root</code> dizini şeklindedir. Root kullanıcısına "kök kullanıcı" da denilir.</p>
+<p>Kullanıcıların, sistemi root hesabıyla açma ihtiyacı bulunmaması nedeniyle ve ayrıca sistemi root olarak açmanın güvenlik zaafiyetine yol açabilecek olması nedeniyle pek çok Linux dağıtımında root hesabıyla sisteme giriş yapılması, öntanımlı olarak engellemiştir. Ancak istisnaya dağil olan "Kali Linux" dağıtımı penetrasyon ve bunun gibi işlemler için oluşturulduğundan kullanıcılar için kolaylık olması için tam yetkili olarak çalışır.</p>
+<h2><a id="user-content-run" class="anchor" aria-hidden="true" href="#run"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/run</h2>
+<p>Son önyüklemeden bu yana çalışan sistemle ilgili bilgileri tutar. Tutulan bilgilere örnek vermek gerekirse şu anda oturum açmış kullanıcılar, sisteme bağlanan aygıtlar, ağ ile bağlantı(network) değişimleri ve bunun gibi bilgileri tutar.</p>
+<h2><a id="user-content-sbin" class="anchor" aria-hidden="true" href="#sbin"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/sbin</h2>
+<p>Linux'ta normal kullanıcının kullanabileceği komutlarla, kök kullanıcının (root) kullanabileceği komutlar ayrılmıştır. root tarafından kullanılacak bakım ve yönetim için kullanılan önemli programlar, <code>/sbin</code> altında tutulur. Daha az öneme sahip yönetim komutlarıysa, <code>/usr/sbin</code> klasöründedir. Eğer yerelde, yani kullandığınız makineye özgü kök kullanıcı (root) komutları bulunuyorsa, bunları da <code>/usr/local/sbin</code> altında bulabilirsiniz.</p>
+<h2><a id="user-content-usr" class="anchor" aria-hidden="true" href="#usr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/usr</h2>
+<p>Unix ilk çıktığında, kullanıcılara ait ev klasörleri, <code>/usr</code> altında tutulurdu. Örneğin; "burak" isimli bir kullanıcının ev klasörü <code>/usr/burak</code> şeklindeydi. Bu yöntem zamanla değişti ve <code>/home</code>klasörü doğmuş oldu. <code>/usr</code> klasörü hâlâ çok önemli bir yapıdır ve işletim sisteminizde kullandığınız her şeyle ilişkisi bulunur.</p>
+<p>Kurduğunuz pek çok program <code>/usr</code> içine kurulur. Her ne kadar Linux'ta kurulan bir programa ait tüm dosyalar <code>usr</code> dizini içine atılmıyor olsa da <code>usr</code> dizini Windows'taki <code>Program Files</code> klasörü ile benzer görev görmektedir. <code>/opt</code> adresi işletim sistemi dışında gelen 3.parti programlar içindir. Fakat işletim sistemi aracılığıyla ya da paket yönetim sistemlerini kullanarak yüklediğiniz her şey <code>/usr</code> altına aktarılır. Aynı zamanda yüklediğiniz programların çalışmak için ihtiyaç duyacağı kütüphane dosyaları, <code>/usr/lib</code> altındadır.</p>
+<p><code>/usr</code>, daha geniş bir tanımla; tüm kullanıcılarca paylaşılan verileri (programlar, komutlar, kütüphaneler, dokümanlar gibi) içeren dizindir. <code>/usr</code> ile ilgili söylenebilecek bir başka nokta da "local" klasörüdür. Linux, sunucu olarak birçok istemciye hizmet verebilecek bir işletim sistemidir. Bir Linux sunucu (server) kurarsanız, ona bağlanan yüzlerce istemci (client) olabilir. Her istemci bilgisayara, <code>/usr</code> altındaki programların ayrı ayrı yüklenmesi gerekmez; bir başka konumdan bu komutları çalıştırabilirsiniz. Ancak <code>/usr</code> altında bulunan "local" klasörü sadece kullandığınız makineye özeldir. Örneğin <code>/usr/local/bin</code> klasörü içinde bulunan bütün komutlar, direkt olarak kullandığınız makineye yüklenmiştir. <code>/usr/bin</code> komutları ise geneldir ve bir ağ üstündeki bütün makinelerden erişilebilir. Yani neticede "local" ifadesini gördüğünüzde, bunun sadece sizin makinenize özel olduğunu bilin.</p>
+<h2><a id="user-content-var" class="anchor" aria-hidden="true" href="#var"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/var</h2>
+<p>Log dosyaları, e-posta ve yazıcı kuyrukları gibi değişken sistem bilgilerini barındırır. Sisteminize dair tutulan log'ları buradan görebilir; güvenlik durumunu buradan kontrol edebilirsiniz.</p>
+<h2><a id="user-content-tmp" class="anchor" aria-hidden="true" href="#tmp"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/tmp</h2>
+<p>Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olarak kullanır. <code>/tmp</code> klasörünün içeriği genellikle KB'lar mertebesinde kalır ve genellikle işletim sistemi yeniden başlarken içindeki dosyalar silinir. Her ne kadar <code>tmp</code> klasörü geçici dosyalar için de olsa bu klasör altında bulunan dosyaları, ne yaptığınızdan emin değilseniz, kesinlikle silmemelisiniz! Aksi taktirde sismetinizde ya da bazı programlarda sorun çıkabilir.</p>
+<hr>
+<p>Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik şekilde aşağıdaki görsel ile verdim. Eğer konuyu anlayarak ve özümseyerek okuduysanız bu grafiğe bakarak bir çırpıda hangi dosyanın genel olanarak hangi işlevde olduğunu hatırlayabilirsiniz.
+<a target="_blank" rel="noopener noreferrer" href="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/6.png"><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/6.png" alt="" style="max-width:100%;"></a></p>
+<p><strong>Kaynakça :</strong>
+<a href="http://www.cagataycebi.com/linux/file_system/file_system.html" rel="nofollow">Çağatay Çebi</a> ||
+<a href="https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi" rel="nofollow">ubuntu-tr</a></p>
+</article>
+</div>
+
+</div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+        <button type="submit" class="btn" data-close-dialog>Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-MvNlmXbTAwL0N0zMxw8W6vtjWLf0QFvwVzvN8rZIJNdzFy9OJp2d4LQD9WA2rDNcHewz0PB9x/0G0Z9FOuUWgw==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-a2f69f341e3df821fdcb56e335ef9920.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-ixxvBZF3eRHUBFtQhqjNyIJRouOkAqo1Glgy607wMwbpAT1Gu/1tGo5impwGiQi9DBWBeaXnVFEXmNTyPZjT3g==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-1f0ca6fc0ad418e21430c85ad0f2544d.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  </body>
+</html>
+
