@@ -1,4 +1,5 @@
 
+
 # Linux Arayüzünü Özelleştirmek
 Bu bölümde Linux un en sevilen yanlarından olan grafiksel arayüzü özelleştirmeyi öğreneceğiz. Sizlerin de bildiği gibi Linux dışındaki işletim sistemlerinde bu grafiksel özelleştirme oldukça sınırlıdır. Windows ve macOS gibi dağıtımlarda sistem belirli bir arayüz ile gelir ve sizlere yalnızca bir kaç özelleştirme imkanı sunar. 
 
@@ -55,24 +56,29 @@ Burada yer alan seçenekler sistem arayüzünde yapabileceğimiz temasal değiş
 **Ses;** Sistem seslerini kapsayan kısımdır, değiştirilmesi önerilmez.
 Geri kalan kısımlar da zaten bildiğimiz masaüstü arkaplanı ve kilit ekranı görünümünü ifade ediyor.
 
+Artık Gnome3 masaüstü ortamında değiştirebileceğimiz kısımlara göz attığımıza göre sırası ile nasıl değiştirebiliriz görelim.
+
 Tema kurulumunu yapmak için öncelikle hoşumuza gidecek bir tema edinmemiz gerekiyor. 
 Bunun için https://www.gnome-look.org/ adresine girelim. Bu site gnome ile ilgili temasal değişiklikleri içeren oldukça geniş çaplı bir platform. Ama ben şimdi örnek olası için çok detaya girmeden yalnızca genel temayı değiştirmeyi ele alacağım. 
+
+***Uygulamalar Kısmını Değiştirmek***
+
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/6.png)
-Tema değişimi için GTK3 Themes yazan sekmeye tıklayalım.
+Tema değişimi için ***GTK3 Themes*** yazan sekmeye tıklayalım.
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/7.png)
 Buradan gözünüze hitap eden bir tema belirleyebilirsiniz ben şimdi örnek olması açısından ilk temayı seçiyorum. Açılan tema sayfasından tema ile ilgili detaylı bilgi alabilir ve ekran görüntüleri ile tema hakkında fikir sahibi olabilirsiniz. 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/8.gif)
-Temayı indirmek için Download butonuna basalım ve buradan istediğimiz içeriği indirelim. Gördüğünüz gibi bu temanın bir çok farklı varyasyonu bulunuyormuş, ben herhangi birini seçiyorum.  Ve "save file" diyerek dosyanın inmesini sağlıyorum. 
+Temayı indirmek için **Download** butonuna basalım ve buradan istediğimiz içeriği indirelim. Gördüğünüz gibi bu temanın bir çok farklı varyasyonu bulunuyormuş, ben herhangi birini seçiyorum.  Ve ***Save File*** diyerek dosyanın inmesini sağlıyorum. 
 
 Bu arada ben burada sizlere yol göstermek amacıyla örnekler verdiğim için çok fazla tema içeriğini karıştırmıyorum ancak sizler elbette deneye deneye hoşunuza gidecek temayı bulabilirsiniz. Zaten kurulum işlemi de oldukça basit olduğundan çok çabucak bir sürü tema deneyebilirsiniz. 
 
-Neyse dosyamız da inmiş oldu. Şimdi dosyamızı sistemin görebilmesi için usr/share/themes klasörüne çıkarmamız gerekiyor. 
+Neyse dosyamız da inmiş oldu. Şimdi dosyamızı sistemin görebilmesi için ***usr/share/themes*** klasörüne çıkarmamız gerekiyor. 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/9.png)
 
 Evet dosyamı ilgili konuma çıkardım. Artık böylelikle sistem yeni eklediğimiz tema içeriğini görebilecek. 
-Hemen yeni temayı kurmak için ince ayarları açalım. İnce ayar menüsüne arama çubuğuna "tweaks" yazarak da ulaşabilirsiniz. 
+Hemen yeni temayı kurmak için ince ayarları açalım. İnce ayar menüsüne arama çubuğuna ***"tweaks"*** yazarak da ulaşabilirsiniz. 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/10.gif)
-Evet ince ayar menüsünü açtık, buradan görünüm sekmesine tıklayalım. Gördüğünüz gibi burada sistemdeki temasal ayarların çoğu bulunuyor. Burada değişiklik yaparak sisteme istediğimiz görünümü verebiliriz.
+Evet ince ayar menüsünü açtık, buradan görünüm sekmesine tıklayalım. Ve buradan Uygulamalar kısmından indirdiğimiz temayı seçerek kurulması sağlayalım. İşte yeni bir tema kurulum işlemi bu kadar kolay.
 
 
 
