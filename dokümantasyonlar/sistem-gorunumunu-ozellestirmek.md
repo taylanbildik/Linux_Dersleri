@@ -127,6 +127,7 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 # Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri
 
 > **Hatırlatma;** Bu işlemleri yapmadan önce **sisteminizin güncel olduğunda emin olun**, aksi takdirde sisteminiz güncel değilse kurulum gerçekleşmeyecektir.
+
 >  **Bilgilendirme;** Sisteminize birden fazla masaüstü ortamı kurabilir ve dilediğiniz zaman bu ortamlara geçiş yapabilirsiniz. Yani aşağıdaki tüm masaüstü ortamlarını kurup tüm bu ortamlar arasında kolayca geçiş yapabilirsiniz. 
 
 ## **XFCE Masaüstü Ortamı**
@@ -191,10 +192,11 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 
 # Masaüstü Ortamını Aktif Hale Getirmek
 İlgili masaüstü ortamını kurduktan sonra kullanabilmeniz için ilgili ortamı seçip aktif hale getirmemiz gerekiyor. Öncelikle kurduğumuz masaüstü ortamının sistem tarafından tanınması için kurulum işlemi bittikten sonra bilgisayarımızı yeniden başlatıyoruz. Sistem yeniden başlatıldıktan sonra karşımıza aşağıdaki gibi giriş(login) ekranı geliyor. Bu ekrana kullanıcı adımızı giriyoruz. Ve daha sonra dişli-çark simgesine tıklayarak buradan dilediğimiz masaüstü ortamını seçiyoruz. Ve parolamızı girerek sistemi açıyoruz. 
-
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_1.gif?raw=true)
 İşte bu kadar yeni masaüstü ortamı karşımızda! 
 
-Eğer herhangi bir zaman masaüstü ortamını değiştirmek isterseniz de sadece oturumu kapatın(logout) ve yine dişli-çark simgesinden kullanmak istediğiniz masaüstü ortamını seçin. Bu şekilde dilediğiniz zaman masaüstü ortamları arasında geçiş yapabilirsiniz.
+Eğer herhangi bir zaman masaüstü ortamını değiştirmek isterseniz de sadece oturumu kapatın(logout) ve yine dişli-çark simgesinden kullanmak istediğiniz masaüstü ortamını seçin. Bu şekilde dilediğiniz zaman masaüstü ortamları arasında geçiş yapabilirsiniz. Geçiş işlemi gif resmi ile aşağıda açıklanmıştır.
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_2.gif?raw=true)
 
 
-Yeni bir masaüstü ortamı seçtik ve kurduk diyelim. Peki bu ortamlara nasıl yeni tema yüklemesi yapacağım diyorsanız; Yapmanız gereken tek şey kullanmakta olduğunuz masaüstü ortamına uygun tema paketlerine ulaşmak. Bunun içinde örneğin **XFCE** kullanıyorsanız internette "***xfce themes***" şeklinde arama yaptığınızda karşınıza bir çok kaynaktan bir çok kullanışlı tema paketleri çıkacaktır. Diğer ortamlar için de elbette isimlerine göre kde themes, cinnamon themes, mate themes.. şeklinde araştırma yapmanız yeterli olacaktır.
+Yeni bir masaüstü ortamı seçtik ve kurduk diyelim. Peki bu ortamlara nasıl yeni tema yüklemesi yapacağım diyorsanız; Öncelikle yapmanız gereken ilk şey kullanmakta olduğunuz masaüstü ortamına uygun tema paketlerine ulaşmak. Bunun içinde örneğin **XFCE** kullanıyorsanız internette "***xfce themes***" şeklinde arama yaptığınızda karşınıza bir çok kaynaktan bir çok kullanışlı tema paketleri çıkacaktır. Diğer ortamlar için de elbette isimlerine göre ***kde themes***, ***cinnamon themes***, ***mate themes*** .. şeklinde araştırma yapmanız yeterli olacaktır. Daha sonra da bu temaların nasıl kurulduğunu sistemi kurcalayarak oldukça rahat şekilde bulabilirsiniz. Şimdi sen neden burada tek tek açıklamıyorsun diyecek olursanız; ben zaten Gnome3 üzerinden detaylıca tema kurulumunu sizlere örnek olması açısından gösterdim. Ancak bu noktadan sonra sizlerin de yeni kullanacağınız sistemi daha iyi tanıyabilmeniz için biraz kurcalamanız ve kendi kendinize bu değişimin nasıl yapıldığını keşfetmeniz gerekiyor. Neticede bu sistemi kullanacak olan kişiler sizlersiniz ve dolayısıyla gerçekten verimli bir sistem olup olmadığını ancak detaylıca araştırma ve deneme yanılma yolu ile öğrenebilirsiniz. Bakın bakalım bu ortamlarda çalışmak aradığını bulmak sizin için ne kadar kolay, hangi masaüstü ortamı size daha konforlu geliyor. 
