@@ -1,5 +1,3 @@
-
-
 # Linux Arayüzünü Özelleştirmek
 Bu bölümde Linux un en sevilen yanlarından olan grafiksel arayüzü özelleştirmeyi öğreneceğiz. Sizlerin de bildiği gibi Linux dışındaki işletim sistemlerinde bu grafiksel özelleştirme oldukça sınırlıdır. Windows ve macOS gibi dağıtımlarda sistem belirli bir arayüz ile gelir ve sizlere yalnızca bir kaç özelleştirme imkanı sunar. 
 
@@ -117,7 +115,7 @@ Cinnamon Gnome baz alınarak alınarak geliştirildiği için en çok tercih edi
 Mate masaüstü ortamı da Gnome3'ün hantallığından bunalan kullanıcılar için harika bir alternatiftir. Bir zamanlar bir çok kullanıcı tarafından oldukça sevilen Gnome2'nin çatallamasıdır, ve özlem duyulan Gnome2'nin temsilcisidir. Sistem çok fazla kaynak tüketmez ayrıca sizleri grafiksel olarak da yormaz. Günlük rutin işlerinizi de çok rahat şekilde yerine getirebilirsiniz.
 
 ### e17
-Güçlüdür, aynı zamanda gayet de şıktır. Hani olağan üstü görsel bir arayüz sunmaz ama sunduğu performansın yanında içinizi daraltacak bir görünüme de sahip değildir. Bir çok cihazda oldukça verimli şekilde çalışmaktadır. Deneyimlemenizde fayda var derim :)
+Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir arayüz sunmaz ama sunduğu performansın yanında içinizi daraltacak bir görünüme de sahip değildir. Bir çok cihazda oldukça verimli şekilde çalışmaktadır. Deneyimlemenizde fayda var derim :)
 
 # Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri
 
