@@ -78,9 +78,24 @@ Neyse dosyamız da inmiş oldu. Şimdi dosyamızı sistemin görebilmesi için *
 Evet dosyamı ilgili konuma çıkardım. Artık böylelikle sistem yeni eklediğimiz tema içeriğini görebilecek. 
 Hemen yeni temayı kurmak için ince ayarları açalım. İnce ayar menüsüne arama çubuğuna ***"tweaks"*** yazarak da ulaşabilirsiniz. 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/10.gif)
-Evet ince ayar menüsünü açtık, buradan görünüm sekmesine tıklayalım. Ve buradan Uygulamalar kısmından indirdiğimiz temayı seçerek kurulması sağlayalım. İşte yeni bir tema kurulum işlemi bu kadar kolay.
+Evet ince ayar menüsünü açtık, buradan görünüm sekmesine tıklayalım. Ve buradan ***Uygulamalar *** kısmından indirdiğimiz temayı seçerek kurulması sağlayalım. İşte yeni bir tema kurulum işlemi bu kadar kolay. Diğer temasal değişim işlemleri de aynı şekilde gerçekleşiyor. Hemen kısaca diğer değişimleri de yapalım.
 
+***İmleç Kısmını Değiştirmek***
 
+İmleci değiştirmek için öncelikle yeni bir imleç paketi indirmemiz gerekiyor. Paketi indirdikten sonra imleç dosyasını ***/usr/share/icons/*** konumuna atmamız gerekiyor. Böylelikle sistem yeni imlecimizi tanıyabilecek. İndirdiğimiz imleç dosyasını ilgili konuma attıktan sonra yine ince ayar menüsünden ***Görünüm*** sekmesine gerek buradan **imleç** değişimi yapılabilir. Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/imlec.gif?raw=true)
+
+***Simgeler Kısmını Değiştirmek***
+
+Simgeler kısmını değiştirmek için tıpkı imleç değiştirirken yaptığımız gibi, indirdiğimiz simge dosyalarını ***/usr/share/icons/*** konumuna taşımamız gerekiyor. Hem imlecin hem de simgelerin aynı konumda bulunması kafanızı karıştırmasın. Zaten dosya yapıları farklı olduğundan sistem kolayca ayırt edebiliyor. Siz sadece beğendiğiniz simge paketini ***/usr/share/icons/*** konumuna atın ve ince ayar menüsünden ***Görünüm*** sekmesine gelerek **simgeler** kısmından indirdiğiniz simgeyi bularak seçin. Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/simgeler.gif?raw=true)
+
+***Kabuk Kısmını Değiştirmek***
+
+Kabuk diye bahsedilen kısmın sistemdeki genel arayüz içerisinde bulunan panelleri karşıladığını daha önce söylemiştik. Şimdi değişimi için yeni bir arayüz paketi indirelim ve bu paketi ***/usr/share/themes/*** konumuna çıkaralım. Ve daha sonra ince ayar menüsünden ***Görünüm*** sekmesine gelerek **kabuk** kısmından indirdiğiniz kabuk temasını bularak seçelim. Ve işlem bu kadar ! Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/kabuk.gif?raw=true)
+
+Benim Gnome3 ile ilgili göstereceğim temasal değişiklikler bu kadar, dileyen arkadaşlar çok daha fazla kurcalayarak çok daha fazla seçeneğe ulaşabilir. Şimdi Gnome3 masaüstü ortamını bir kenara bırakarak yeni masaüstü ortamlarını tanıyalım.
 
 # Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri
 
