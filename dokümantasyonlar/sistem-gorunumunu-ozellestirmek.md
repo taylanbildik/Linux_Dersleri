@@ -97,6 +97,28 @@ Kabuk diye bahsedilen kısmın sistemdeki genel arayüz içerisinde bulunan pane
 
 Benim Gnome3 ile ilgili göstereceğim temasal değişiklikler bu kadar, dileyen arkadaşlar çok daha fazla kurcalayarak çok daha fazla seçeneğe ulaşabilir. Şimdi Gnome3 masaüstü ortamını bir kenara bırakarak yeni masaüstü ortamlarını tanıyalım.
 
+# Masaüstü Ortamları ve Kısaca Özellikleri
+
+Baştan belirtmek isterim ki benim burada yazacağım şeyler kendi deneyimlerim ve genel gözlemlerimdir. Yani tam anlamıyla sizi yönlendirmeyebilir. Ben burada sizlerin kurulum yapmadan önce daha iyi fikir sahibi olabilmeniz için Kali Linux dağıtımında kullanılabilen masaüstü ortamlarının başlıca özeliklerini kısaca açıklamaya çalıştım. Ancak burada belirttiğim özellikler bir çok faktöre göre değişmektedir, yani siz buradan fikir sahibi olun ancak kesinlikle ve kesinlikle kendiniz deneyerek hangisinin sizin için en ideali olduğuna kendiniz karar verin. Uyarımı peşin peşin yaptıktan sonra hadi artık lafı daha fazla uzatmadan Kali Linux'a uygun olan masaüstü ortamlarının genel özelliklerini tanımaya başlayalım.
+
+### XFCE
+Görsel olarak oldukça yalındır ve hiç bir gereksiz görsel arayüz ögesi kullanmaz. Önceliği sistemin maksimum verimde çalışmasıdır, minimal bir sistemdir. Çok hafif olduğundan sistemi yormadan oldukça hızlı şekilde çalışır.  Eğer benim işim performans görsellik önemli değil diyorsanız tercih edebilirsiniz.
+
+### KDE
+Daha çok Windows'u andırır, asıl hedefi grafiksel arayüz kullanıcılarıdır. Yani konsoldan ziyade kullanıcının her işi grafiksel arayüzde yapabilmesi üzerine dizayn edilmiştir. İlk defa Linux kullanmaya başlayacak kullanıcılar için geçiş evresinde sıklıkla tercih edilen bir temadır. Ancak ben yine de kullanıcıyı konsoldan uzaklaştırdığı ve bu sebeple Linux' un gerçek gücünü ortaya koyamadığı için pek de önermiyorum. Bu söylediklerimden bu ortam kötüdür anlamı çıkmasın, sadece konsol üzerine yoğunlaşacak arkadaşlara öneri olarak belirtiyorum. Geçiş evresinde kullanılabilir ancak aman ha bağımlılık yapmasın yoksa konsol hakimliği, sisteme hükmetmek falan yalan olur söyleyeyim :)
+
+### LXDE
+Az bir donanım özelliği ile çok iyi işler çıkarabileceğiniz oldukça yalın masaüstü ortamıdır. Dolayısı ile grafiksel arayüz kısmında pek bir şey beklememek lazım. Amacınız sitemi verimli şekilde kullanmaksa ve elinizde güçlü bir donanım yoksa tercih edebilirsiniz. 
+
+### Cinnamon
+Cinnamon Gnome baz alınarak alınarak geliştirildiği için en çok tercih edilen masaüstü ortamıdır. Hatta son zamanlarda bir çok kullanıcıya göre kötüye giden Gnome3 için harika bir alternatiftir. Grafiksel arayüzünün kullanıcı dostu olması ve sistemi de çok fazla yormaması Cinnamon'u normal kullanıcılar arasında popüler yapmıştır. Hatta en çok kullanılan Linux dağıtımı olan Linux Mint' de varsayılan olarak Cinnamon kullanmaktadır. Ve Mint' in bu başarısı Cinnamon'un kullanışlı yapısına bağlanmaktadır.
+
+### MATE
+Mate masaüstü ortamı da Gnome3'ün hantallığından bunalan kullanıcılar için harika bir alternatiftir. Bir zamanlar bir çok kullanıcı tarafından oldukça sevilen Gnome2'nin çatallamasıdır, ve özlem duyulan Gnome2'nin temsilcisidir. Sistem çok fazla kaynak tüketmez ayrıca sizleri grafiksel olarak da yormaz. Günlük rutin işlerinizi de çok rahat şekilde yerine getirebilirsiniz.
+
+### e17
+Güçlüdür, aynı zamanda gayet de şıktır. Hani olağan üstü görsel bir arayüz sunmaz ama sunduğu performansın yanında içinizi daraltacak bir görünüme de sahip değildir. Bir çok cihazda oldukça verimli şekilde çalışmaktadır. Deneyimlemenizde fayda var derim :)
+
 # Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri
 
 ## **XFCE Masaüstü Ortamı**
