@@ -1,3 +1,4 @@
+
 # Linux Arayüzünü Özelleştirmek
 Bu bölümde Linux un en sevilen yanlarından olan grafiksel arayüzü özelleştirmeyi öğreneceğiz. Sizlerin de bildiği gibi Linux dışındaki işletim sistemlerinde bu grafiksel özelleştirme oldukça sınırlıdır. Windows ve macOS gibi dağıtımlarda sistem belirli bir arayüz ile gelir ve sizlere yalnızca bir kaç özelleştirme imkanı sunar. 
 
@@ -125,6 +126,9 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 
 # Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri
 
+> **Hatırlatma;** Bu işlemleri yapmadan önce **sisteminizin güncel olduğunda emin olun**, aksi takdirde sisteminiz güncel değilse kurulum gerçekleşmeyecektir.
+>  **Bilgilendirme;** Sisteminize birden fazla masaüstü ortamı kurabilir ve dilediğiniz zaman bu ortamlara geçiş yapabilirsiniz. Yani aşağıdaki tüm masaüstü ortamlarını kurup tüm bu ortamlar arasında kolayca geçiş yapabilirsiniz. 
+
 ## **XFCE Masaüstü Ortamı**
 
 **XFCE Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
@@ -184,3 +188,13 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 **Kurulu Olan e17 Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
 
 	apt-get remove e17
+
+# Masaüstü Ortamını Aktif Hale Getirmek
+İlgili masaüstü ortamını kurduktan sonra kullanabilmeniz için ilgili ortamı seçip aktif hale getirmemiz gerekiyor. Öncelikle kurduğumuz masaüstü ortamının sistem tarafından tanınması için kurulum işlemi bittikten sonra bilgisayarımızı yeniden başlatıyoruz. Sistem yeniden başlatıldıktan sonra karşımıza aşağıdaki gibi giriş(login) ekranı geliyor. Bu ekrana kullanıcı adımızı giriyoruz. Ve daha sonra dişli-çark simgesine tıklayarak buradan dilediğimiz masaüstü ortamını seçiyoruz. Ve parolamızı girerek sistemi açıyoruz. 
+
+İşte bu kadar yeni masaüstü ortamı karşımızda! 
+
+Eğer herhangi bir zaman masaüstü ortamını değiştirmek isterseniz de sadece oturumu kapatın(logout) ve yine dişli-çark simgesinden kullanmak istediğiniz masaüstü ortamını seçin. Bu şekilde dilediğiniz zaman masaüstü ortamları arasında geçiş yapabilirsiniz.
+
+
+Yeni bir masaüstü ortamı seçtik ve kurduk diyelim. Peki bu ortamlara nasıl yeni tema yüklemesi yapacağım diyorsanız; Yapmanız gereken tek şey kullanmakta olduğunuz masaüstü ortamına uygun tema paketlerine ulaşmak. Bunun içinde örneğin **XFCE** kullanıyorsanız internette "***xfce themes***" şeklinde arama yaptığınızda karşınıza bir çok kaynaktan bir çok kullanışlı tema paketleri çıkacaktır. Diğer ortamlar için de elbette isimlerine göre kde themes, cinnamon themes, mate themes.. şeklinde araştırma yapmanız yeterli olacaktır.
