@@ -1,18 +1,18 @@
 
 # Linux Arayüzünü Özelleştirmek
-Bu bölümde Linux un en sevilen yanlarından olan grafiksel arayüzü özelleştirmeyi öğreneceğiz. Sizlerin de bildiği gibi Linux dışındaki işletim sistemlerinde bu grafiksel özelleştirme oldukça sınırlıdır. Windows ve macOS gibi dağıtımlarda sistem belirli bir arayüz ile gelir ve sizlere yalnızca bir kaç özelleştirme imkanı sunar. 
+Bu bölümde Linux'un en sevilen yanlarından olan grafiksel arayüzü özelleştirmeyi öğreneceğiz. Sizlerin de bildiği gibi Linux dışındaki işletim sistemlerinde bu grafiksel özelleştirme oldukça sınırlıdır. Windows ve macOS gibi dağıtımlarda sistem belirli bir arayüz ile gelir ve sizlere yalnızca bir kaç özelleştirme imkanı sunar. 
 
-Ancak Linux'ta durum böyle değildir. Linux, kullanıcısına bir çok konuda olduğu gibi grafiksel arayüz konusunda da tam özelleştirme imkanı tanır. Zaten Linux un en sevilen yanlarından biri de bu sınırsız müdahale ve özelleştirme imkanıdır. Buara bahsedilen grafiksel arayüze müdahalenin kullanıcıya sağladığı imkanlar kullanıcının ihtiyaçlarına göre değişmektedir. 
+Ancak Linux'ta durum böyle değildir. Linux, kullanıcısına bir çok konuda olduğu gibi grafiksel arayüz konusunda da tam özelleştirme imkanı tanır. Zaten Linux un en sevilen yanlarından biri de bu sınırsız müdahale ve özelleştirme imkanıdır. Burada bahsedilen grafiksel arayüze müdahalenin kullanıcıya sağladığı imkanlar kullanıcının ihtiyaçlarına göre değişmektedir. 
 
 Şöyle ki örneğin kullanıcı göze hitap eden bir sistem görünümü istiyorsa kendi zevklerine göre arayüzde özelleştirmeler yaparak severek kullanacağı bir sistem görünümü ortaya çıkarabilir. Ya da kullanıcı için sistem performansı daha ön plandaysa buna uygun arayüzü de tercih edebilir. Yani kısacası bu özelleştirme imkanı kullanıcıyı belirli bir arayüz kalıbına zorlamadan ihtiyaçlarına göre bir arayüz kullanma imkanı tanır.
 İşte Linux'un kullanıcıları tarafından çok sevilmesinin ardında sistem ile ilgili herhangi bir sınırlamanın olmaması ve kullanıcının ihtiyacına göre sistemin baştan aşağı tıpkı bir hamur gibi şekil alması yatmaktadır. 
 Kısacası Linux ne eksiği ne de fazlalığı olan bir işletim sistemidir. Linux sizin neye ihtiyacınız varsa size onu sunabilecek potansiyelde bir sistemdir. Bu da size bilgisayara gerçek anlamda hükmetme imkanı tanır.
 
-İşte tüm bu esneklik sayesinde Linux kullanıcıları diğer işletim sistemlerine oranla Linux'u çok daha efektif şekilde kullanabiliyorlar. Aslında bu özelleştirme imkanı ve avantajları konusunda çok daha fazla şey söylenebilir ancak Linux'un sağladığı tüm bu güzellikleri anlamanın en iyi yolu bizzat sizlerin de deneyimleyip görmesidir. Tüm bu söylediklerimizden yola çıkacak olursak sonuçta, Linux'u özelleştirmenin bir sınırı bulunmuyor ancak biz bu kısımda genel olarak özelleştirme imkanlarının neler olduğunu kısaca görmüş olacağız.
+İşte tüm bu esneklik sayesinde Linux kullanıcıları diğer işletim sistemlerine oranla Linux'u çok daha efektif şekilde kullanabiliyorlar. Aslında bu özelleştirme imkanı ve avantajları konusunda çok daha fazla şey söylenebilir ancak Linux'un sağladığı tüm bu güzellikleri anlamanın en iyi yolu bizzat sizlerin de deneyimleyip görmesidir. Tüm bu söylediklerimizden yola çıkacak olursak; sonuçta, Linux'u özelleştirmenin bir sınırı bulunmuyor ancak biz bu kısımda genel olarak özelleştirme imkanlarının neler olduğunu kısaca görmüş olacağız.
 
 Evet, özelleştirmenin sınırsız olduğundan ve bizim ihtiyaçlarımıza göre değişebileceğinden bahsettik. Bu durumda özelleştirme yapmadan önce bizim ihtiyacımızın ne olduğunu belirlememiz gerekiyor. İhtiyacımızı belirlerken oldukça fazla etmen olduğundan ben burada başlıca etmenlerden olan performans ve güzel görünüm etmenlerini kısaca ele alıp örneklendirmeye çalışacağım.
 
-Ancak örnek vermeden önce grafiksel arayüzü değiştirme hakkında öğrenmemiz gereken iki kavram bulunuyor. Bu kavramlardan biri masaüstü ortamını değiştirmek diğeri ise yalnızca pencere yöneticisini değiştirmektir. Hangi işlemin bizim için daha uygun olduğuna karar verebilmemiz için öncelikle bu seçeneklerin neleri ifade ettiğini kısaca el alalım.
+Ancak örnek vermeden önce grafiksel arayüzü değiştirme hakkında öğrenmemiz gereken iki kavram bulunuyor. Bu kavramlardan biri **masaüstü ortamı**nı değiştirmek diğeri ise yalnızca **pencere yöneticisi**ni değiştirmektir. Hangi işlemin bizim için daha uygun olduğuna karar verebilmemiz için öncelikle bu seçeneklerin neleri ifade ettiğini kısaca ele alalım.
 
 **Masaüstü ortamı** dediğimiz şey, grafiksel arayüzün tamamını kapsayan arayüz paketi bütününe deniyor. Burada kast edilen arayüz bütünü; sistemde yer alan simgeleri, araç çubuklarını, duvar kağıtlarını, pencere yöneticisini ve sürükle bırak gibi kolaylaştırıcı imkanları kapsayan kısımlardır. Yani masaüstü ortamı dediğimiz şey bizlere kapsamlı grafiksel arayüz sunar.
 
@@ -20,8 +20,8 @@ Diğer bir seçeneğimiz olan **pencere yöneticisi** ise bizlere yalnızca penc
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox.png)
 
 Şimdi hangi seçeneği hangi durumda seçmemiz gerektiği konusuna değinecek olursak;
-Masaüstü ortamı içerisinde tüm grafiksel arayüz araçlarını barındıracağı için eğer sistemi kullanırken çok fazla grafiksel öge olduğunu ve bunların da sisteminizi yavaşlattığını düşünüyorsanız masaüstü ortamını kaldırarak sistemi yalnızca pencereler ile de yönetebilirsiniz.
-Buradaki açıklama sizi tam olarak yönlendirmemiş olabilir ancak ileri ki kısımlarda hem yeni masaüstü ortamı kurulumunu hem de pencere yöneticisi kurulumunu göreceğiniz için hangisinin sizin için uygun olacağına kendiniz karar verebiliyor olacaksınız. Yani buradaki açıklamalar sizin için yeterli gelmediyse endişelenmeniz gerek yok.
+Masaüstü ortamı, içerisinde tüm grafiksel arayüz araçlarını barındıracağı için eğer sistemi kullanırken çok fazla grafiksel öge olduğunu ve bunların da sisteminizi yavaşlattığını düşünüyorsanız masaüstü ortamını kaldırarak sistemi yalnızca pencereler ile de yönetebilirsiniz.
+Buradaki açıklama sizi tam olarak yönlendirmemiş olabilir ancak ileri ki kısımlarda hem yeni masaüstü ortamı kurulumunu hem de pencere yöneticisi kurulumunu göreceğiniz için hangisinin sizin için uygun olacağına kendiniz karar verebiliyor olacaksınız. Yani buradaki açıklamalar sizin için yeterli gelmediyse endişelenmeniz gerek yok. Şimdi devam edelim.
 
 ## Masaüstü ortamını nasıl değiştirebiliriz ?
 
@@ -32,14 +32,15 @@ Yani biz yeni bir masaüstü ortamı kurduğumuzda tüm bu ögeler de yeni masa�
 ### Gnome3 Masaüstü Ortamını Özelleştirmek
 Kullanmakta olduğumuz Kali Linux dağıtımı varsayılan olarak en çok kullanılan masaüstü ortamlarından olan Gnome3 masaüstü ortamı ile birlikte geliyor. Gnome3 masaüstü ortamı oldukça yaygın şekilde kullanılmakta ve grafiksel arayüz bakımından bir çok kolaylık sunmaktadır. Ancak son dönemlerde geliştirici ekibin almış olduğu radikal kararlar doğrultusunda; masaüstünde yer alan kısayolların ve bazı önemli grafiksel arayüz araçlarının kaldırılması ile birlikte bir çok kullanıcı tarafından Gnome3 masaüstü ortamı kullanışsız bulunmaktadır. Ayrıca Gnome3 çok fazla grafiksel öge ve gereğinden fazla animasyonlu içerik barındırdığından sistem performansını da diğer masaüstü ortamlarına göre oldukça fazla olumsuz etkilemektedir. Bu noktada belirtmeliyim ki Gnome3 masaüstü ortamını kötülemek gibi bir niyetim yok, dileyen arkadaşlar elbette severek kullanmaya devam edebilir. Ancak son dönemlerde edindiğim tecrübeler ve bana yapılan geri bildirimler ile birlikte artık Gnome3 masaüstü ortamının pek de verimli çalışmadığı kanaatine varmış bulunuyorum. 
 Fakat yine de Gnome3 masaüstü ortamını kullanmaya devam edecek olan arkadaşlar için Gnome3 temasında nasıl değişiklik yapabileceğimizi ele almak istiyorum.
-Öncelikle bu tema değişikliklerinin bir sınırının olmadığı için bu özelleştirmelerin tamamını kapsamlı şekilde anlatmam mümkün değil. Ancak ben bu kısımda sizlere genel olarak yeni bir temayı nasıl edinebileceğinizi ve bu temanızı nasıl sisteme geçirebileceğinizi göstereceğim.
 
-Gnome3 masaüstü arayüzünü kullanıyorken genel tema değişimlerini ince ayarlar menüsü üzerinden gerçekleştiriyoruz. Bu nedenle öncelikle ince ayarlar menümüzden ne gibi değişiklikler yapabileceğimizi öğrenmek için ince ayarlar menüsünü açalım.
+Öncelikle bu tema değişikliklerinin bir sınırının olmadığı için bu özelleştirmelerin tamamını kapsamlı şekilde anlatmam mümkün değil. Ancak ben bu kısımda sizlere genel olarak yeni bir temayı nasıl edinebileceğinizi ve bu temanızı sisteme nasıl geçirebileceğinizi göstereceğim.
+
+Gnome3 masaüstü arayüzünü kullanıyorken genel tema değişimlerini **ince ayarlar(tweaks)** menüsü üzerinden gerçekleştiriyoruz. Bu nedenle öncelikle ince ayarlar menümüzden ne gibi değişiklikler yapabileceğimizi öğrenmek için ince ayarlar menüsünü açalım.
 İnce ayarlar menüsü açıldıktan sonra "**Görünüm**" sekmesine gelelim.
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/tweaks.gif)
 Burada yer alan seçenekler sistem arayüzünde yapabileceğimiz temasal değişiklikleri gösteriyor. Görünüm sekmesinde yer alan seçenekleri sırasıyla ele alacak olursak;
 
-**Uygulamalar;** Sistemdeki pencerelerin görünümünü değiştiriyor. Herhangi bir uygulama çalıştığında uygulamayı çevreleyen çerçevelere pencere deniyor. Örnek için aşağıdaki görsele bakabilirsiniz.
+**Uygulamalar;** Sistemdeki pencerelerin görünümünü değiştiriyor. Herhangi bir uygulama çalıştığında uygulamayı çevreleyen çerçevelere pencere deniyor. Örnek için aşağıdaki "***Uygulamalar***" kısmı değiştirilmiş görsele bakabilirsiniz.
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/1.png)
 
 **İmleç;** İmlecin görünümünü sağlayan kısım. Aşağıdaki görselde değiştirilmiş hali verilmiştir.
@@ -53,12 +54,12 @@ Burada yer alan seçenekler sistem arayüzünde yapabileceğimiz temasal değiş
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/5.jpg)
 
 **Ses;** Sistem seslerini kapsayan kısımdır, değiştirilmesi önerilmez.
+
 Geri kalan kısımlar da zaten bildiğimiz masaüstü arkaplanı ve kilit ekranı görünümünü ifade ediyor.
 
 Artık Gnome3 masaüstü ortamında değiştirebileceğimiz kısımlara göz attığımıza göre sırası ile nasıl değiştirebiliriz görelim.
-
 Tema kurulumunu yapmak için öncelikle hoşumuza gidecek bir tema edinmemiz gerekiyor. 
-Bunun için https://www.gnome-look.org/ adresine girelim. Bu site gnome ile ilgili temasal değişiklikleri içeren oldukça geniş çaplı bir platform. Ama ben şimdi örnek olası için çok detaya girmeden yalnızca genel temayı değiştirmeyi ele alacağım. 
+Bunun için https://www.gnome-look.org/ adresine girelim. Bu site gnome ile ilgili temasal değişiklikleri içeren oldukça geniş çaplı bir platform. Ama ben şimdi örnek olması için çok detaya girmeden yalnızca genel temayı değiştirmeyi ele alacağım. 
 
 ***Uygulamalar Kısmını Değiştirmek***
 
@@ -71,7 +72,7 @@ Temayı indirmek için **Download** butonuna basalım ve buradan istediğimiz i�
 
 Bu arada ben burada sizlere yol göstermek amacıyla örnekler verdiğim için çok fazla tema içeriğini karıştırmıyorum ancak sizler elbette deneye deneye hoşunuza gidecek temayı bulabilirsiniz. Zaten kurulum işlemi de oldukça basit olduğundan çok çabucak bir sürü tema deneyebilirsiniz. 
 
-Neyse dosyamız da inmiş oldu. Şimdi dosyamızı sistemin görebilmesi için ***usr/share/themes*** klasörüne çıkarmamız gerekiyor. 
+Neyse dosyamız da inmiş oldu. Şimdi dosyamızı sistemin görebilmesi için ***/usr/share/themes/*** klasörüne çıkarmamız gerekiyor. 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/9.png)
 
 Evet dosyamı ilgili konuma çıkardım. Artık böylelikle sistem yeni eklediğimiz tema içeriğini görebilecek. 
@@ -110,7 +111,7 @@ Daha çok Windows'u andırır, asıl hedefi grafiksel arayüz kullanıcılarıd�
 
 ## **LXDE Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/lxde.png)
-Az bir donanım özelliği ile çok iyi işler çıkarabileceğiniz oldukça yalın masaüstü ortamıdır. Dolayısı ile grafiksel arayüz kısmında pek bir şey beklememek lazım. Amacınız sistemi verimli şekilde kullanmaksa ve elinizde güçlü bir donanım yoksa tercih edebilirsiniz. 
+Az bir donanım gücü ile çok iyi işler çıkarabileceğiniz oldukça yalın masaüstü ortamıdır. Dolayısı ile grafiksel arayüz kısmında pek bir şey beklememek lazım. Amacınız sistemi verimli şekilde kullanmaksa ve elinizde güçlü bir donanım yoksa tercih edebilirsiniz. 
 
 ## **Cinnamon Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/cinnamon.jpg)
@@ -118,7 +119,7 @@ Cinnamon Gnome baz alınarak alınarak geliştirildiği için en çok tercih edi
 
 ## **Mate Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/mate.png)
-Mate masaüstü ortamı da Gnome3'ün hantallığından bunalan kullanıcılar için harika bir alternatiftir. Bir zamanlar bir çok kullanıcı tarafından oldukça sevilen Gnome2'nin çatallamasıdır, ve özlem duyulan Gnome2'nin temsilcisidir. Sistem çok fazla kaynak tüketmez ayrıca sizleri grafiksel olarak da yormaz. Günlük rutin işlerinizi de çok rahat şekilde yerine getirebilirsiniz.
+Mate masaüstü ortamı da Gnome3'ün hantallığından bunalan kullanıcılar için harika bir alternatiftir. Bir zamanlar bir çok kullanıcı tarafından oldukça sevilen [Gnome2'nin çatallamasıdır](https://mate-desktop.org/tr/), ve özlem duyulan Gnome2'nin temsilcisidir. Sistem çok fazla kaynak tüketmez ayrıca sizleri grafiksel olarak da yormaz. Günlük rutin işlerinizi de çok rahat şekilde yerine getirebilirsiniz.
 
 ## **e17 Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/e17.png)
@@ -127,7 +128,8 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 # Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri
 
 > **Hatırlatma;** Bu işlemleri yapmadan önce **sisteminizin güncel olduğunda emin olun**, aksi takdirde sisteminiz güncel değilse kurulum gerçekleşmeyecektir.
->  **Bilgilendirme;** Sisteminize birden fazla masaüstü ortamı kurabilir ve dilediğiniz zaman bu ortamlara geçiş yapabilirsiniz. Yani aşağıdaki tüm masaüstü ortamlarını kurup tüm bu ortamlar arasında kolayca geçiş yapabilirsiniz. 
+
+>  **Bilgilendirme;** Sisteminize birden fazla masaüstü ortamı kurabilir ve dilediğiniz zaman bu ortamlara geçiş yapabilirsiniz. Yani aşağıdaki tüm masaüstü ortamlarını kurup tüm bu ortamlar arasında dilediğiniz zaman kolayca geçiş yapabilirsiniz. 
 
 ## **XFCE Masaüstü Ortamı**
 
@@ -151,6 +153,7 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 **Kurulu Olan KDE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
 
 	apt-get remove kde-plasma-desktop kde-plasma-netbook kde-standard
+
 ## **LXDE Masaüstü Ortamı**
  
 **LXDE Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
@@ -160,6 +163,7 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 **Kurulu Olan LXDE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
 
 	apt-get remove lxde-core lxde
+
 ## **Cinnamon Masaüstü Ortamı**
  
 **Cinnamon Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
@@ -169,6 +173,7 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 **Kurulu Olan Cinnamon Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
 
 	apt-get remove cinnamon
+
 ## **Mate Masaüstü Ortamı**
  
 **Mate Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
@@ -179,7 +184,7 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 
 	apt-get remove mate-core
 	
-## **e17 Masaüstü Ortamı**
+## **e17(Enlightenment) Masaüstü Ortamı**
  
 **e17 Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
 
@@ -190,11 +195,22 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 	apt-get remove e17
 
 # Masaüstü Ortamını Aktif Hale Getirmek
-İlgili masaüstü ortamını kurduktan sonra kullanabilmeniz için ilgili ortamı seçip aktif hale getirmemiz gerekiyor. Öncelikle kurduğumuz masaüstü ortamının sistem tarafından tanınması için kurulum işlemi bittikten sonra bilgisayarımızı yeniden başlatıyoruz. Sistem yeniden başlatıldıktan sonra karşımıza aşağıdaki gibi giriş(login) ekranı geliyor. Bu ekrana kullanıcı adımızı giriyoruz. Ve daha sonra dişli-çark simgesine tıklayarak buradan dilediğimiz masaüstü ortamını seçiyoruz. Ve parolamızı girerek sistemi açıyoruz. 
-
+İlgili masaüstü ortamını kurduktan sonra kullanabilmeniz için ilgili ortamı seçip aktif hale getirmemiz gerekiyor. Öncelikle kurduğumuz masaüstü ortamının sistem tarafından tanınması için **kurulum işlemi bittikten sonra bilgisayarımızı yeniden başlatıyoruz**. Sistem yeniden başlatıldıktan sonra karşımıza aşağıdaki gibi giriş(login) ekranı geliyor. Bu ekrana kullanıcı adımızı giriyoruz. Ve daha sonra dişli-çark simgesine tıklayarak buradan dilediğimiz masaüstü ortamını seçiyoruz. Ve parolamızı girerek sistemi açıyoruz. 
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_1.gif?raw=true)
 İşte bu kadar yeni masaüstü ortamı karşımızda! 
 
-Eğer herhangi bir zaman masaüstü ortamını değiştirmek isterseniz de sadece oturumu kapatın(logout) ve yine dişli-çark simgesinden kullanmak istediğiniz masaüstü ortamını seçin. Bu şekilde dilediğiniz zaman masaüstü ortamları arasında geçiş yapabilirsiniz.
+Eğer herhangi bir zaman masaüstü ortamını değiştirmek isterseniz de sadece oturumu kapatın(logout) ve yine kullanıcı adınızı girdikten sonra dişli-çark simgesinden kullanmak istediğiniz masaüstü ortamını seçin. Bu şekilde dilediğiniz zaman masaüstü ortamları arasında geçiş yapabilirsiniz. Geçiş işlemi gif resmi ile aşağıda açıklanmıştır.
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_2.gif?raw=true)
 
 
-Yeni bir masaüstü ortamı seçtik ve kurduk diyelim. Peki bu ortamlara nasıl yeni tema yüklemesi yapacağım diyorsanız; Yapmanız gereken tek şey kullanmakta olduğunuz masaüstü ortamına uygun tema paketlerine ulaşmak. Bunun içinde örneğin **XFCE** kullanıyorsanız internette "***xfce themes***" şeklinde arama yaptığınızda karşınıza bir çok kaynaktan bir çok kullanışlı tema paketleri çıkacaktır. Diğer ortamlar için de elbette isimlerine göre kde themes, cinnamon themes, mate themes.. şeklinde araştırma yapmanız yeterli olacaktır.
+Yeni bir masaüstü ortamı seçtik ve kurduk diyelim. Peki bu ortamlara nasıl yeni tema yüklemesi yapacağım diyorsanız; 
+
+Öncelikle yapmanız gereken ilk şey kullanmakta olduğunuz masaüstü ortamına uygun tema paketlerine ulaşmak. Bunun için de örneğin **XFCE** kullanıyorsanız internette "***xfce themes***" şeklinde arama yaptığınızda karşınıza bir çok kaynaktan bir çok kullanışlı tema paketleri çıkacaktır. Diğer ortamlar için de elbette isimlerine göre ***kde themes***, ***cinnamon themes***, ***mate themes ..***  şeklinde araştırma yapmanız yeterli olacaktır. 
+
+Daha sonra da bu temaların nasıl kurulduğunu sistemi kurcalayarak oldukça rahat şekilde bulabilirsiniz. Şimdi sen neden burada tek tek açıklamıyorsun diyecek olursanız; ben zaten Gnome3 üzerinden detaylıca tema kurulumunu sizlere örnek olması açısından gösterdim. Ancak bu noktadan sonra sizlerin de yeni kullanacağınız sistemi daha iyi tanıyabilmeniz için biraz kurcalamanız ve kendi kendinize bu değişimin nasıl yapıldığını keşfetmeniz gerekiyor. Neticede bu sistemi kullanacak olan kişiler sizlersiniz ve dolayısıyla gerçekten verimli bir sistem olup olmadığını ancak detaylıca araştırma ve deneme yanılma yolu ile öğrenebilirsiniz. Yeni bir tema kurmak vesilesiyle; bakın bakalım bu ortamlarda çalışmak aradığını bulmak sizin için ne kadar kolay, hangi masaüstü ortamı size daha konforlu geliyor. 
+
+# Pencere Yöneticisi Kurulumu Ve Kullanımı
+
+Sistemi yalnızca pencere yöneticisi ile yönetmek performans açısından oldukça verimlidir. Zira bir çok masaüstü ortamında gördüğümüz fazladan grafiksel ögeler ve animasyonlu içerikler sistemi boş yere yorarak bizlere düşük verimli işlem gücü sağlıyorlar. Eğer amacınız işlerinizi en kısa sürede en verimli şekilde halletmekse ve elinizdeki cihaz güçlü bir donanıma sahip değilse sistemi, pencere yöneticisinden kullanmak sizin için en ideal tercih olabilir. Sistemi yalnızca pencere yöneticisi ile yönetmek, kullanıcılar tarafından başlarda biraz garipsense de zamanla bu yönetim formuna tüm kullanıcılar adapte olur. Yani eğer başlarda kullanımı biraz alışılmadık gelirse anlayın ki yalnız değilsiniz, olay alışkanlık meselesi rahat olun.. :)
+
+Şimdi de Kali Linux Dağıtımında kullanabileceğimiz pencere yöneticilerine göz atalım.
