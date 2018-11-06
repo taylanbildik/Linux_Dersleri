@@ -31,6 +31,7 @@ Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
 - [Dosya İndirmek](https://github.com/taylanbildik/Linux_Dersleri/tree/master/dok%C3%BCmantasyonlar/konsoldan_dosya_indirmek.md#konsol-%C3%9Czerinden-dosya-%C4%B0ndirmek)
 - [Zamanlanmış Görevler](https://github.com/taylanbildik/Linux_Dersleri/tree/master/dok%C3%BCmantasyonlar/zamanlam%C4%B1%C5%9F_g%C3%B6revler.md#zamanlanm%C4%B1%C5%9F-g%C3%B6revler)
 - [Log Dosyaları](https://github.com/taylanbildik/Linux_Dersleri/tree/master/dok%C3%BCmantasyonlar/log_kay%C4%B1tlar%C4%B1.md#log-kay%C4%B1tlar%C4%B1)
+- [Linux Arayüzünü Özelleştirmek](https://github.com/taylanbildik/Linux_Dersleri/blob/master/dok%C3%BCmantasyonlar/sistem-gorunumunu-ozellestirmek.md#linux-aray%C3%BCz%C3%BCn%C3%BC-%C3%B6zelle%C5%9Ftirmek)
 
 
 ### Tek parça ve sıralı Linux Dokümantasyonu için [buraya](https://github.com/taylanbildik/Linux_Dersleri/tree/master/dok%C3%BCmantasyonlar/Linux_dok%C3%BCmantasyonu.md) tıklayın.
