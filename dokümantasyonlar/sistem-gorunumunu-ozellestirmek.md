@@ -226,6 +226,8 @@ Pencere yöneticisi konusunda kullanabileceğiniz çok fazla alternatif bulunuyo
 **Kurulu Olan i3 Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
 
 	apt-get remove i3-wm
+	
+>**i3 Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://i3wm.org/docs/userguide.html) Bakabilirsiniz:**
 
 ## **awesome WM Pencere Yöneticisi**
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/awesome.png?raw=true) 
@@ -236,6 +238,7 @@ Pencere yöneticisi konusunda kullanabileceğiniz çok fazla alternatif bulunuyo
 **Kurulu Olan awesome WM  Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
 
 	apt-get remove awesome
+>**awesome WM Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://awesomewm.org/doc/manpages/awesome.1.html) Bakabilirsiniz:**
 	
 ## **Xmonad Pencere Yöneticisi**
  ![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xmonad.png?raw=true)
@@ -246,7 +249,8 @@ Pencere yöneticisi konusunda kullanabileceğiniz çok fazla alternatif bulunuyo
 **Kurulu Olan Xmonad Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
 
 	apt-get remove xmonad
-	
+>**Xmonad Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://xmonad.org/manpage.html) Bakabilirsiniz:**
+
 ## **Openbox Pencere Yöneticisi**
  ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox-1.png?raw=true)
 **Openbox Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
@@ -266,8 +270,11 @@ Pencere yöneticisi konusunda kullanabileceğiniz çok fazla alternatif bulunuyo
 **Kurulu Olan dwm Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
 
 	apt-get remove dwm
-
-
+>**dwm Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://dwm.suckless.org/tutorial/) Bakabilirsiniz:**
+---
 Başlıca pencere yöneticilerinin kurulumlarını ele aldık. Ancak bu anlattıklarım dışındaki pencere yöneticileri için de [bu adreste](https://www.slant.co/topics/390/~best-window-managers-for-linux) yer alan listeye bakıp, listede yer alan pencere yöneticisinin kali depolarında yer alıp almadığını [bu adresten](http://pkg.kali.org/) teyit ederek kurulumunu yapabilirsiniz.
 Ben örnek olması açısından listede yer alan ***fluxbox*** isimli pencere yöneticisini sorgulayıp, eğer depolarda mevcutsa kurulumunu yapmak istiyorum. İşlemleri aşağıdaki gif resiminden takip edebilirsiniz.
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/fluxbox.gif?raw=true)
+Tekrar belirteyim verdiğim adreste yer alan linkteki her pencere yöneticisi Kali Linux için uygun olmayabilir, o yüzden mutlaka depolarda olup olmadığını teyit edin.
+
+**Son olarak;** pencere yöneticisinin temasını nasıl değiştirebiliriz diyecek olursanız, bu indireceğiniz pencere yöneticisine göre değişir dolayısıyla bu tema değişimini bireysel olarak internetten araştırarak ve sistemi kurcalayarak bulmanız gerekiyor. Üstelik bu araştırma süreci içerisinde pencere yöneticisini daha yakında tanıyıp, size uygunluğunu anlayabilirsiniz. Eğer bu işlem bile sizlere zor geliyorsa, muhtemelen pencere yöneticisi kullanmak sizi mutlu etmeyecektir. Tek başınıza tema değişme olayını sakın gözünüzde büyütmeyin bu işlem oldukça kolay, tıpkı masaüstü ortamını değiştirmek gibi. Sadece araştırın ve deneyin.
