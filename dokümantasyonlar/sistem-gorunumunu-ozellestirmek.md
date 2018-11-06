@@ -214,3 +214,60 @@ Daha sonra da bu temaların nasıl kurulduğunu sistemi kurcalayarak oldukça ra
 Sistemi yalnızca pencere yöneticisi ile yönetmek performans açısından oldukça verimlidir. Zira bir çok masaüstü ortamında gördüğümüz fazladan grafiksel ögeler ve animasyonlu içerikler sistemi boş yere yorarak bizlere düşük verimli işlem gücü sağlıyorlar. Eğer amacınız işlerinizi en kısa sürede en verimli şekilde halletmekse ve elinizdeki cihaz güçlü bir donanıma sahip değilse sistemi, pencere yöneticisinden kullanmak sizin için en ideal tercih olabilir. Sistemi yalnızca pencere yöneticisi ile yönetmek, kullanıcılar tarafından başlarda biraz garipsense de zamanla bu yönetim formuna tüm kullanıcılar adapte olur. Yani eğer başlarda kullanımı biraz alışılmadık gelirse anlayın ki yalnız değilsiniz, olay alışkanlık meselesi rahat olun.. :)
 
 Şimdi de Kali Linux Dağıtımında kullanabileceğimiz pencere yöneticilerine göz atalım.
+
+Pencere yöneticisi konusunda kullanabileceğiniz çok fazla alternatif bulunuyor. Bu sebepten burada hepsine değinmemiz mümkün değil. O yüzden biz de bu kısımda [buradaki listede](https://www.slant.co/topics/390/~best-window-managers-for-linux) yer alan başlıca 5 pencere yöneticisi kurulumunu ele alacağız.  Benim bu listedeki favorim openbox ancak siz kendiniz deneyimleyerek kendiniz için ideal olana karar verebilirsiniz.
+
+## **i3 Pencere Yöneticisi**
+ ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/i3.png?raw=true)
+**i3 Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
+
+	apt-get install i3-wm
+
+**Kurulu Olan i3 Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
+
+	apt-get remove i3-wm
+
+## **awesome WM Pencere Yöneticisi**
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/awesome.png?raw=true) 
+**awesome WM  Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
+
+	apt-get install awesome
+
+**Kurulu Olan awesome WM  Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
+
+	apt-get remove awesome
+	
+## **Xmonad Pencere Yöneticisi**
+ ![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xmonad.png?raw=true)
+**Xmonad Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
+
+	apt-get install xmonad
+
+**Kurulu Olan Xmonad Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
+
+	apt-get remove xmonad
+	
+## **Openbox Pencere Yöneticisi**
+ ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox-1.png?raw=true)
+**Openbox Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
+
+	apt-get install openbox
+
+**Kurulu Olan Openbox Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
+
+	apt-get remove openbox
+	
+## **dwm Pencere Yöneticisi**
+ ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/dwm.png?raw=true)
+**dwm Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
+
+	apt-get install dwm
+
+**Kurulu Olan dwm Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
+
+	apt-get remove dwm
+
+
+Başlıca pencere yöneticilerinin kurulumlarını ele aldık. Ancak bu anlattıklarım dışındaki pencere yöneticileri için de [bu adreste](https://www.slant.co/topics/390/~best-window-managers-for-linux) yer alan listeye bakıp, listede yer alan pencere yöneticisinin kali depolarında yer alıp almadığını [bu adresten](http://pkg.kali.org/) teyit ederek kurulumunu yapabilirsiniz.
+Ben örnek olması açısından listede yer alan ***fluxbox*** isimli pencere yöneticisini sorgulayıp, eğer depolarda mevcutsa kurulumunu yapmak istiyorum. İşlemleri aşağıdaki gif resiminden takip edebilirsiniz.
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/fluxbox.gif?raw=true)
