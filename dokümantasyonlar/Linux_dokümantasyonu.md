@@ -74,7 +74,7 @@
 	  <th scope="row">18</th>
 	  <th scope="row"><a href="#joker-karakterlerwildcards" >Joker Karakterler</a></th>
 	  <th scope="row">24</th>
-	  <th scope="row"><a href="linux-aray%C3%BCz%C3%BCn%C3%BC-%C3%B6zelle%C5%9Ftirmek" >Linux Arayüzünü Özelleştirmek</a></th>
+	  <th scope="row"><a href="#linux-arayüzünü-özelleştirmek" >Linux Arayüzünü Özelleştirmek</a></th>
     </tr>
   </tbody>
 </table>
