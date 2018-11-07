@@ -31,7 +31,7 @@
       <th scope="row">8</th>
       <th scope="row"><a href="#dizinler-hakk%C4%B1nda" >Dizin İşlemleri</a></th>
 	  <th scope="row">14</th>
-	  <th scope="row"><a href="#disk-%C4%B0%C5%9Flemleri" >Disk İşlemleri</a></th>
+	  <th scope="row"><a href="#disk-işlemleri" >Disk İşlemleri</a></th>
 	  <th scope="row">20</th>
 	  <th scope="row"><a href="#vim-edit%C3%B6r%C3%BC" >Vim Editörü</a></th>
     </tr>
@@ -39,18 +39,18 @@
       <th scope="row">3</th>
 	  <th scope="row"><a href="#komut-sat%C4%B1r%C4%B1" >Komut Satırı</a></th>
 	  <th scope="row">9</th>
-      <th scope="row"><a href="#dosya-%C4%B0%C5%9Flemleri" >Dosya İşlemleri</a></th>
+      <th scope="row"><a href="#dosya-işlemleri" >Dosya İşlemleri</a></th>
 	  <th scope="row">15</th>
-	  <th scope="row"><a href="#%C3%87al%C4%B1%C5%9Fma-seviyelerirunlevels" >Çalışma Seviyeleri - Servisler</a></th>
+	  <th scope="row"><a href="#çalışma-seviyelerirunlevels" >Çalışma Seviyeleri - Servisler</a></th>
 	  <th scope="row">21</th>
-	  <th scope="row"><a href="#konsol-%C3%9Czerinden-dosya-%C4%B0ndirmek" >Dosya İndirmek</a></th>
+	  <th scope="row"><a href="#konsol-üzerinden-dosya-indirmek" >Dosya İndirmek</a></th>
     </tr>
     </tr>
 	  <tr>
       <th scope="row">4</th>
 	  <th scope="row"><a href="#k%C4%B1sayollar" >Kısayollar</a></th>
 	  <th scope="row">10</th>
-	  <th scope="row"><a href="#dosya-ar%C5%9Fiv-%C4%B0%C5%9Flemleri" >Dosya Arşivleme</a></th>
+	  <th scope="row"><a href="#dosya-arşiv-işlemleri" >Dosya Arşivleme</a></th>
 	  <th scope="row">16</th>
 	  <th scope="row"><a href="#sembolik-link-ve-kat%C4%B1-link" >Sembolik Link ve Katı Link</a></th>
 	  <th scope="row">22</th>
@@ -62,7 +62,7 @@
 	  <th scope="row">11</th>
 	  <th scope="row"><a href="#eri%C5%9Fim-yetkileri" >Erişim Yetkileri</a></th>  
 	  <th scope="row">17</th>
-	  <th scope="row"><a href="#kurma-kald%C4%B1rma-g%C3%BCncelleme-%C4%B0%C5%9Flemleri" >Güncelleme Kurma Kaldırma İşlemleri</a></th>
+	  <th scope="row"><a href="#kurma-kaldırma-güncelleme-işlemleri" >Güncelleme Kurma Kaldırma İşlemleri</a></th>
 	  <th scope="row">23</th>
 	  <th scope="row"><a href="#log-kay%C4%B1tlar%C4%B1" >Log Dosyaları</a></th>
     </tr>
@@ -70,7 +70,7 @@
       <th scope="row">6</th>
 	  <th scope="row"><a href="#bilgi-almak" >Bilgi Alma Komutları</a></th>
 	  <th scope="row">12</th>
-	  <th scope="row"><a href="#kullan%C4%B1c%C4%B1-%C4%B0%C5%9Flemleri" >Kullanıcı İşlemleri</a></th>
+	  <th scope="row"><a href="#kullanıcı-işlemleri" >Kullanıcı İşlemleri</a></th>
 	  <th scope="row">18</th>
 	  <th scope="row"><a href="#joker-karakterlerwildcards" >Joker Karakterler</a></th>
 	  <th scope="row">24</th>
