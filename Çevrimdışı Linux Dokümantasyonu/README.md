@@ -7,7 +7,7 @@ Dokümantasyon içerisinde yer alan hareketli resimler(.gif) nedeniyle çevrimd�
 
 Dosyaları indirmek için aşağıdaki butona tıklayın.
 
-<a href="https://drive.google.com/file/d/1OV3yjK9L3-3RhrCatO9swj0Jm1FtLung/view?usp=sharing">
+<a href="https://drive.google.com/open?id=1ybGOhDd-gisQkVHgQsklHkJdUwRdOEfK">
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/button.png">
 </a>
 
