@@ -2,7 +2,7 @@
 # Linux Arayüzünü Özelleştirmek
 Bu bölümde Linux'un en sevilen yanlarından olan grafiksel arayüzü özelleştirmeyi öğreneceğiz. Sizlerin de bildiği gibi Linux dışındaki işletim sistemlerinde bu grafiksel özelleştirme oldukça sınırlıdır. Windows ve macOS gibi dağıtımlarda sistem belirli bir arayüz ile gelir ve sizlere yalnızca bir kaç özelleştirme imkanı sunar. 
 
-Ancak Linux'ta durum böyle değildir. Linux, kullanıcısına bir çok konuda olduğu gibi grafiksel arayüz konusunda da tam özelleştirme imkanı tanır. Zaten Linux un en sevilen yanlarından biri de bu sınırsız müdahale ve özelleştirme imkanıdır. Burada bahsedilen grafiksel arayüze müdahalenin kullanıcıya sağladığı imkanlar kullanıcının ihtiyaçlarına göre değişmektedir. 
+Ancak Linux'ta durum böyle değildir. Linux, kullanıcısına bir çok konuda olduğu gibi grafiksel arayüz konusunda da tam özelleştirme imkanı tanır. Zaten Linux'un en sevilen yanlarından biri de bu sınırsız müdahale ve özelleştirme imkanıdır. Burada bahsedilen grafiksel arayüze müdahalenin kullanıcıya sağladığı imkanlar kullanıcının ihtiyaçlarına göre değişmektedir. 
 
 Şöyle ki örneğin kullanıcı göze hitap eden bir sistem görünümü istiyorsa kendi zevklerine göre arayüzde özelleştirmeler yaparak severek kullanacağı bir sistem görünümü ortaya çıkarabilir. Ya da kullanıcı için sistem performansı daha ön plandaysa buna uygun arayüzü de tercih edebilir. Yani kısacası bu özelleştirme imkanı kullanıcıyı belirli bir arayüz kalıbına zorlamadan ihtiyaçlarına göre bir arayüz kullanma imkanı tanır.
 İşte Linux'un kullanıcıları tarafından çok sevilmesinin ardında sistem ile ilgili herhangi bir sınırlamanın olmaması ve kullanıcının ihtiyacına göre sistemin baştan aşağı tıpkı bir hamur gibi şekil alması yatmaktadır. 
