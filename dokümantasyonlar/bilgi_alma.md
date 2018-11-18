@@ -270,7 +270,7 @@ Komutun kullanımına gelecek olursak örnek üzerinden açıklayalım. Benim ka
 
 Daha önceden kullandığımız bir komutu aynı şekilde tekrar kullanmak için ise komut satırına <code>!komut</code> şeklinde komut girmeliyiz. Örnek vermek gerekirse daha önceki kısımlarda <code>stat</code> komutu ile <kbd>root</kbd> dizini hakkında bilgi edinmiştik. Ve bu bilgiye ulaşmak için <code>stat /root</code> komutunu kullanmıştık. Ben şimdi tekrar aynı komuta ulaşmak için komut satırına <code>!stat</code> yazıyorum ve çıktısı tıpkı <code>stat /root</code> yazdığımda olduğu gibi oluyor. Yani bu sayede komutun geri kalanını uzun uzun yazmak gibi bir dert kalmıyor.
 
-<img src="(https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/38.png" width="875">
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/38.png)
 
 Eğer son kullandığımız komutu tekrar kullanmak istersek komut satırına <code>!!</code> yazmamız yeterli olacaktır.
 
