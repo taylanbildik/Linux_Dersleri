@@ -10,8 +10,7 @@ Kısacası Linux ne eksiği ne de fazlalığı olan bir işletim sistemidir. Lin
 
 İşte tüm bu esneklik sayesinde Linux kullanıcıları diğer işletim sistemlerine oranla Linux'u çok daha efektif şekilde kullanabiliyorlar. Aslında bu özelleştirme imkanı ve avantajları konusunda çok daha fazla şey söylenebilir ancak Linux'un sağladığı tüm bu güzellikleri anlamanın en iyi yolu bizzat sizlerin de deneyimleyip görmesidir. Tüm bu söylediklerimizden yola çıkacak olursak; sonuçta, Linux'u özelleştirmenin bir sınırı bulunmuyor ancak biz bu kısımda genel olarak özelleştirme imkanlarının neler olduğunu kısaca görmüş olacağız.
 
-#.
-
+# Arayüz İle İlgili Kavramlar
 Evet, özelleştirmenin sınırsız olduğundan ve bizim ihtiyaçlarımıza göre değişebileceğinden bahsettik. Bu durumda özelleştirme yapmadan önce bizim ihtiyacımızın ne olduğunu belirlememiz gerekiyor. İhtiyacımızı belirlerken oldukça fazla etmen olduğundan ben burada başlıca etmenlerden olan performans ve güzel görünüm etmenlerini kısaca ele alıp örneklendirmeye çalışacağım.
 
 Ancak örnek vermeden önce grafiksel arayüzü değiştirme hakkında öğrenmemiz gereken iki kavram bulunuyor. Bu kavramlardan biri **masaüstü ortamı**nı değiştirmek diğeri ise yalnızca **pencere yöneticisi**ni değiştirmektir. Hangi işlemin bizim için daha uygun olduğuna karar verebilmemiz için öncelikle bu seçeneklerin neleri ifade ettiğini kısaca ele alalım.
