@@ -6,6 +6,7 @@ wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linu
 cd /usr/bin && wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/cb-compositor && wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/cb-include.cfg && cd /root
 echo "compton indirme & kurulum başarılı !"
 apt-get install gmrun
+apt-get install geany
 ## Konfigure ediliyor openbox , autostart , menu
 echo "Openbox dizini oluşturuluyor.."
 mkdir -p ~/.config/openbox/ && cd ~/.config/openbox/
