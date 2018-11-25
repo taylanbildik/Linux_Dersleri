@@ -1,21 +1,11 @@
-
-## Sistemi Güncelleyelim.
-echo "Depolar Güncelleniyor.."
-apt-get update && apt-get upgrade
-echo 'Güncelleme Başarılı !'
-
-## Yükleme
-echo "Openbox ve desteklenen gerekli uygulamalar yükleniyor.."
-apt-get install openbox gmrun lxappearance thunar obmenu nitrogen tint2 xcompmgr xfce4-power-manager git git-core geany ttf-droid gtk2-engines-murrine gtk2-engines-pixbuf gtk3-engines-unico -y
-echo "Kurulum başarılı !"
-
-## compton kuruluyor ve cb-compositor configure ediliyor..
+## Gerekli compton kuruluyor ve cb-compositor configure ediliyor..
 echo "compton indirme & kurulum devam ediyor.."
+
 cd /root && wget https://www.dropbox.com/s/r8rqh26ixazgt10/compton-git_20120926-1_i386.deb && dpkg -i compton-git_20120926-1_i386.deb && apt-get install -f
 wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/compton.conf && mv compton.conf /root/.config/
 cd /usr/bin && wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/cb-compositor && wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/cb-include.cfg && cd /root
 echo "compton indirme & kurulum başarılı !"
-
+apt-get install gmrun
 ## Konfigure ediliyor openbox , autostart , menu
 echo "Openbox dizini oluşturuluyor.."
 mkdir -p ~/.config/openbox/ && cd ~/.config/openbox/
@@ -54,8 +44,20 @@ echo "0"
 echo "Lütfen bekleyin..."
 echo "Openbox menüsü oluşturulacaktır ( ancak kali araçları bu menüde yer almaz bunu düzeltmek için şimdi güncelleyelim!)"
 echo "Menü yeniden yapılandırılıyor......."
-wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/obmenugen && sudo mv obmenugen /usr/bin/ && obmenugen
-echo "Menü eklemesi tamamlandı !"
-## Bitiş..
-echo "Openbox'ınız kuruldu .. Şimdi sistemi yeniden başlatarak oturum açın ve Openbox'a giriş yapın."
-echo "Tüm işlem bu kadardı.. Herhangi bir sorunla karşılaşırsanız benimle iletişime geçebilirsiniz.."
+echo "Menü aracını indirelim.."
+git clone git://github.com/trizen/obmenu-generator
+echo "Menü aracını indi, şimdi ilgili dosyaları ilgili konumlara taşıyalım.."
+cp obmenu-generator/obmenu-generator /usr/bin
+cp -r obmenu-generator/schema.pl ~/.config/obmenu-generator
+rm ~/.config/obmenu-generator
+mv obmenu-generator/ ~/.config/obmenu-generator
+cd .config/
+chmod -R u=rwx obmenu-generator
+echo "Taşıma tamamlandı..! Doğru şekilde çalışması için son birkaç ayarlama daha yapalım.."
+cpan Linux::DesktopFiles
+cpan Data::Dump
+chmod 777 /usr/bin/obmenu-generator
+echo "Ayarlamalar tamam, şimdi sistemi konfigure ederek ayarların geçerli olmasını sağlayalım."
+openbox --reconfigure && openbox --restart
+obmenu-generator -p
+echo "Tamamdır, artık sağ tıklayıp güncellenmiş listeyi görebilirsiniz."
