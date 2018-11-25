@@ -60,5 +60,5 @@ cpan Data::Dump
 chmod 777 /usr/bin/obmenu-generator
 echo "Ayarlamalar tamam, şimdi sistemi konfigure ederek ayarların geçerli olmasını sağlayalım."
 openbox --reconfigure && openbox --restart
-obmenu-generator -p
+obmenu-generator -p -i
 echo "Tamamdır, artık sağ tıklayıp güncellenmiş listeyi görebilirsiniz."
