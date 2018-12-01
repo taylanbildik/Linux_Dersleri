@@ -1,7 +1,7 @@
 Gerekli Ortamın Kurulması
 =
 
-Linux işletim sistemini kurmak veya herhangi bir kurulum işlemi gerçekleştirmeden kullanmak için çok fazla seçenek bulunuyor. Ben sadece içlerinde bilmediğiniz bir alternatif seçenek olması ihtimaline karşı genel kullanımları aşağıda listeliyorum. 
+Linux işletim sistemini kurmak veya Linux'u herhangi bir kurulum işlemi gerçekleştirmeden kullanmak için çok fazla seçenek bulunuyor. Ben sadece içlerinde bilmediğiniz bir alternatif seçenek olması ihtimaline karşı genel kullanım seçeneklerini aşağıda listeliyorum. 
 
 Kurulum ve Kullanım Metodları
 -
