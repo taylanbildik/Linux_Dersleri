@@ -22,15 +22,18 @@ Mantığını oturtmanız ve kavramların daha kolay yerleşmesi açısından bi
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/shell-kernel.png)
 Bu benzetme sayesinde isimlerin de nereden geldiği az çok açıklığa kavuşmuş oldu. 
 **Shell'in görevi bir üst kısımda belirttiğimiz gibi kullanıcı ile kernel arasında aracı bir katman olarak kullanıcıdan gelen girdileri kernele uygun şekilde iletmektir**. Sistemde yapmak istediklerimiz ve yapabileceklerimiz Shell'in esnek ve kullanışlı yapısına yani yeteneklerine bağlı olarak değişmektedir. Bu bağlamda Shell'in sisteme hükmetmekteki anahtarlardan olduğunu söyleyebiliriz. Shell hakkındaki biraz önceki açıklamalara("yeteneklerine bağlı olarak değişmektedir") bakarak birden fazla Shell programının olduğunu tahmin etmiş olabilirsiniz. Tebrik ederim çok doğru, **Linux** sistemlerinde **BASH** dışında (**ksh,tcsh,zsh,fish...**) gibi birçok **Shell** (**kabuk**) programı mevcuttur. Ancak yetenekleri dolayısıyla olsa gerek **en çok tercih edilen kabuk programı BASH kabuk programıdır**.
+
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/1.png)
+
 İnanmıyorsanız bir test edelim sizin sisteminizde hangi kabuk programı kullanılıyor.
 
 Bunun için konsolunuzu açın ve aşağıdaki komutu girin diyecektim ki... *"Hayda.. daha konsol nedir açıklamadın ki !"* diyeceksiniz, haklısınız temeli oturtmak adına buralara kadar geldik ama direk konsol şudur demedik. Ancak zaten bu kısıma kadar **Konsol**'un ne olduğunu dolaylı olarak da olsa açıklamış olduk.
 
 **Konsol, kullanıcı ile Shell arasından yer alarak kullanıcının komut girmesini sağlayan grafiksel ve komut satırı arayüzüne sahip bir araçtır.** Biz komutlarımızı bu araç aracılığı ile Shell'e ulaştırırız Shell ise kullanıcıdan gelen girdileri yorumlayarak Kernel'e aktarır.
+
 Aşağıdaki basit diyagrama bakarak bu yapıları daha net kavrayabilirsiniz.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/diagram.png" class="center">
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/diagram.png)
 
 Konsol Ekranı Açmak (Terminal/Komut Satırı)
 -
