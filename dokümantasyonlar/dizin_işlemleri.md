@@ -1,11 +1,12 @@
+
 Dizinler Hakkında
 =
-Linux işletim sisteminde bütün programlar, aygıtlar, dosyalar ve genel olarak sistem, hiyerarşik bir düzen içersindedir. Yani komut satırını kullanacaksak her şeyi oluşturan bu hiyerarşik düzen içerisinde rahat şekilde geziyor olabilmemiz gerek. Bu bölümde bu hiyerarşide gezinme ve görüntüleme için gerekli komutlara değineceğiz.
+Linux işletim sisteminde bütün programlar, aygıtlar, dosyalar ve genel olarak sistem, hiyerarşik bir düzen içerisindedir. Yani komut satırını kullanacaksak her şeyi oluşturan bu hiyerarşik düzen içerisinde rahatlıkla gezebiliyor olmamız gerekiyor. İşte bu bölümde, hiyerarşide rahatlıkla gezinme ve görüntüleme için gerekli komutlara tek tek değineceğiz.
 
 pwd
 -
 
-Bu komut sayesinde o an bulunduğumuz dizinin adını öğrenebiliriz. Genellikle sistem yöneticilerinin sık kullandığı bir komuttur.
+**Bu komut sayesinde o an bulunduğumuz dizinin adını öğrenebiliriz.** Genellikle sistem yöneticilerinin sık kullandığı bir komuttur.
 
 Örnek vermek gerekirse Linux'ta hiyerarşik bir düzen var dedik. Bu hiyerarşik düzen **kök dizinine**(**root**) bağlıdır her kullanıcı buna **root** da dahil kendi **ev dizinine**(**home**) sahiptir. Böylece neden **root**(**kök**) isminin kullanıldığını da tekrar anlamış oluyoruz. Konsol çalışmaya varsayılan olarak kendi ev dizininde başlar. Root kullanıcısının ev dizini <kbd>/root</kbd> dizinidir. Bunu teyit etmek istersek <code>pwd</code> komutunu kullanabiliriz.
 
@@ -26,24 +27,24 @@ Komutumuzu kullanırken gitmek istediğimiz dizinin adresini vermeliyiz. Ben ön
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/3.png)
 
-Artık gitmek istediğim dizinin içerisindeyiz. Eğer bir önceki dizine (bir dizin geriye) dönmek istersek komut satırına <code>cd ..</code> yazmamız yeterli.
+Artık gördüğünüz gibi gitmek istediğim dizinin içerisindeyim. Eğer bir önceki dizine (bir dizin geriye) dönmek istersek komut satırına <code>cd ..</code> yazmamız yeterli.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/4.png)
 
-Eğer direk olarak ana dizine dönmek istersek <code>cd</code> 
-komutunu kullanmalıyız.
+Eğer direk olarak **ana dizine dönmek** istersek de <code>cd</code> 
+komutunu kullanmamız gerekiyor.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/5.png)
 
-Örneğin bir alt dizine geçip orada yer alan başka bir klasöre girmek istiyoruz diyelim. Bunun için komutumuzu <code>cd ../klasör_adı</code> şeklinde bir kullanabiliriz. Ben örnek olması açısından <kbd>/etc</kbd> dizini içerisindeyken bir geri dizine dönüp daha sonra home konumuna gelmek için <code>cd ../home</code> komutunu kullanıyorum. 
+Örneğin bir alt dizine geçip orada yer alan başka bir klasöre girmek istiyoruz diyelim. Bunun için komutumuzu <code>cd ../klasör_adı</code> şeklinde bir kullanabiliriz. Ben örnek olması açısından <kbd>/etc</kbd> dizini içerisindeyken bir geri dizine dönüp daha sonra **home** konumuna gelmek için <code>cd ../home</code> komutunu kullanıyorum. 
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/6.png)
 
-Ancak dikkat etmeniz gereken nokta komutu yazarken iki noktadan(..) hemen sonra boşluk bırakmadan gitmek istediğimiz dizini belirtiyoruz. Eğer boşluk bırakarak yazarsak aşağıdaki şekilde bir uyarı alırız.
+Ancak dikkat etmeniz gereken nokta komutu yazarken **iki noktadan(..) hemen sonra boşluk bırakmadan** gitmek istediğimiz dizini belirtiyoruz. Eğer boşluk bırakarak yazarsak aşağıdaki şekilde bir uyarı alırız.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/7.png)
 
-Eğer sürekli iki dosya arasında gidip geliyorsak bir önceki dosyaya <code>cd -</code> komutu ile dönebiliriz.
+Eğer sürekli iki dizin arasında gidip geliyorsak bir önceki dizine <code>cd -</code> komutu ile dönebiliriz.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/8.gif)
 
@@ -88,21 +89,21 @@ Bizim yukarıdaki çıktımızda gizli dosyalar bulunmuyor. Eğer istersek gizli
 ### ls -h
 
 
-Listelenen dizinlerin boyutunu okunaklı(human readable) şekilde verir. Okunaklıdan kasıt dosya boyutunu **KB**, **MB**, **GB** türünden büyüklük olarak vermesidir. Karşılaştırmanız acısından bir normal şekilde birde daha okunaklı şekilde olanın çıktılarını aşağıda veriyorum. (Ayrıca komutumuza <code>-l</code> parametresini eklemiş olmamızın sebebi dizin ayrıntılarını dolayısıyla da dosya boyutunu görebilmektir.)
+Listelenen dizinlerin boyutunu **okunaklı(human readable)** şekilde verir. Okunaklıdan kasıt dosya boyutunu **KB**, **MB**, **GB** türünden büyüklük olarak vermesidir. Karşılaştırmanız açısından bir normal şekilde birde daha okunaklı şekilde olanın çıktılarını aşağıda veriyorum. (Ayrıca komutumuza <code>-l</code> parametresini eklemiş olmamızın sebebi dizin ayrıntılarını dolayısıyla da dosya boyutunu görebilmektir.)
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/15.png)
 
 ### ls -i
 
 
-Düğüm numarasını verir. Düğüm(inode) numarası nedir diyecek olursanız bu konuya ileride değineceğiz şimdiilik bu parametrenin bu görevi yerine getirdiğini bilsek yeter.
+Düğüm numarasını verir. Düğüm(inode) numarası nedir diyecek olursanız bu konuya ileride değineceğiz şimdilik bu parametrenin bu görevi yerine getirdiğini bilsek yeter.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/16.png)
 
 ### ls -S
 
 
-Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralanacağından komutun daha net anlaşılması için <kbd>/root/run</kbd> dizini altında işlem yaptım.
+Dosya büyüklüğüne göre sıralar. Dosyalar büyüklüklerine göre sıralanacağından komutun daha net anlaşılması için içerisinde farklı boyutlara sahip dosyaları barındıran <kbd>/root/run</kbd> dizini altında işlem yaptım.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/17.png)
 
@@ -120,7 +121,7 @@ Konsola basılan çıktıyı ters çevirerek basar. Karşılaştırmanız açıs
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/19.png)
 
-Örneğin `ls -tl` komutu ile dosyları oluşturulma tarihlerine göre en yeniden eskiye doğru sıraldık. Bu sıralayı en eskiden yeniye doğru yapmak istersek komutumuza `r` parametresi ekleyerek kullanmamız gerekir.
+Örneğin `ls -tl` komutu ile dosyaları oluşturulma tarihlerine göre en yeniden eskiye doğru sıraladık. Bu sıralamayı en eskiden yeniye doğru yapmak istersek komutumuza `r` parametresi ekleyerek kullanmamız gerekir.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/20.png" width="875">
 
@@ -128,7 +129,7 @@ Bir başka örnek `ls -Sl` komutu ile dosya ve dizinleri büyükten küçüğe s
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/21.png" width="875">
 
-Yukarıda bahsi geçen <code>ls</code> komutu, açıkladığım parametreleri dışında da oldukça fazla parametreye sahip. Bunları öğrenmek için man kılavuz sayfasını inceleyin lütfen.
+Yukarıda bahsi geçen <code>ls</code> komutu, açıkladığım parametreleri dışında da oldukça fazla parametreye sahip. Bunları öğrenmek için **man kılavuz sayfasını** inceleyin lütfen.
 
 Dizin Oluşturma Ve Silme
 =
@@ -157,7 +158,7 @@ rm
 
 Komutumuzu ileride dosya işlemleri bölümünde tekrardan ele alacağız. Ancak şimdi <code>rm</code> yani silme komutunun dizinler üzerinde kullanımı öğrenmeliyiz.
 
-Dizin dediğimiz şey iç içe sırlanmış klasör ve dosyalardan oluşan bir yol. Yani bu yolu silmek istediğimizde içerisindeki her şeyi de silmeliyiz. Bu yüzden komutumuzu <code>-r</code> parametresi ile birlikte kullanarak dizinin içerisindeki dosyalar da dahil her şeyi silmesini söylemiş oluruz. Yani komutun dizin silme işlemi için kullanım <code>rm -r silinecek_dizin</code> şeklindedir.
+Dizin dediğimiz şey iç içe sıralanmış klasör ve dosyalardan oluşan bir yol. Yani bu yolu silmek istediğimizde içerisindeki her şeyi de silmeliyiz. Bu yüzden komutumuzu <code>-r</code> parametresi ile birlikte kullanarak dizinin içerisindeki dosyalar da dahil her şeyi silmesini söylemiş oluruz. Yani komutun dizin silme işlemi için kullanım <code>rm -r silinecek_dizin</code> şeklindedir.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/25.png)
 
@@ -173,6 +174,6 @@ Eğer silmeden(işlem yapılmadan) önce bize sorulsun yani bizi uyarsın istiyo
 
 Gördüğünüz gibi konsol işlem yapmadan önce her işi bize sordu ve "**y**" yanıtını aldığı için silme işlemine devam etti. Bu sayede dizinleri kontrollü şekilde silmiş olduk.(Kullandığınız sistemin diline göre onaylama yanıtı değişmektedir. Örneğin kullandığınız dil Türkçe ise onay vermek için kullanılan yanıt "**e**"{burdaki "**e**" den kasıt "**evet**" onayının kısaltması olan "**e**" karakteridir.} olacaktır.)
 
-Ayrıca dizin silme işlemlerini <code>rm -ri dizin1 dizin2 dizin3</code> şeklinde kullanarak toplu şekilde silme işlemi de gerçekleştirebilirsiniz.
+Ayrıca dizin silme komutunu<code>rm -ri dizin1 dizin2 dizin3</code> şeklinde kullanarak toplu şekilde silme işlemi de gerçekleştirebilirsiniz.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/5-%20Dizin%20%C4%B0%C5%9Flemleri/28.png)
