@@ -117,4 +117,4 @@ Eğer `zip` komutu ile sıkıştırdığımız dosyayı açmak istersek <kbd>.zi
 
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/7-%20Dosya%20Ar%C5%9Fivleme/15.png)
 
-Konsolun bize sorduğu soru "***bulunduğumuz dizinde aynı dosyadan bir tane daha var ne yapmak istersiniz?***" gibi bir sorudur.
+Konsolun bize sorduğu soru " ***bulunduğumuz dizinde aynı dosyadan bir tane daha var ne yapmak istersiniz?*** " gibi bir sorudur.
