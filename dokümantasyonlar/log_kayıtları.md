@@ -1,10 +1,11 @@
+
 Log Kayıtları
 -
-Sistemde olan sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere **log** deniyor. Neden **log**(kayıt) tutulmak zorunda diye soracak olursanız; kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır **log** dosyaları. Anlayacağınız **log**(kayıt) dosyaları sistem bütünü için çok önemli yer tutmaktadır.
+Sistemde meydana gelen hatalar, sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere **log** deniyor. Neden **log**(**kayıt**) tutulmak zorunda diye soracak olursanız; kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır **log** dosyaları. Anlayacağınız **log**(kayıt) dosyaları sistem bütünü için çok önemli yer tutmaktadır.
 
 Log Dosyaları
 -
-Linux sisteminde **log** dosyalarının çok büyük kısmı <kbd>/var</kbd> dizini altında <kbd>log</kbd> klasörü içerisinde tutuluyor. Ayrıca log dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına `cd /var/log` yazarak **log** dosyalarının tutulduğu dizine gidip dizin içerisinde iken `ls` komutu ile dizin içeriğini listeleyelim.
+Linux sisteminde **log** dosyalarının çok büyük kısmı <kbd>/var</kbd> dizini altında <kbd>log</kbd> klasörü içerisinde tutuluyor. Ayrıca <kbd>log</kbd> dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına `cd /var/log` yazarak **log** dosyalarının tutulduğu dizine gidip dizin içerisinde iken `ls` komutu ile dizin içeriğini listeleyelim.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/1.png" width="875" >
 
@@ -19,7 +20,7 @@ Hemen örnek olması açısından oturum açma işlemlerini ve detaylarını tut
 
 Komutumuzu girmemizle birlikte konsol bize son 5 oturum açma işlemlerini ve detaylarını listelemiş oldu.
 
-Hazır yeri gelmişken `tail` komutuyla sistemdeki olayların anlık olarak takibini yapalım. Bunun için sistemdeki olayların kaydını tutan <kbd>messages</kbd> dosyasını okumalıyız. Bu okuma işlemini sistemdeki anlık hareketleri takip etmek için yaptığımızdan, okuduğumuz dosyaya yeni eklenen her veriyi anlık görmek için `tail -f messages` komutunu kullanıyoruz. Buradaki `tail -f` komutunu açıklayacak olursam; biliyorsunuz `tail` komutu dosyanının alt kısımlarını görüntülememize olanak tanıyan bir komut. Ve bu komutun `-f ` parametreside bu görüntülenecek kısım için dosyayı sürekli yeniden tarayarak dosyaya en son eklenen verileri bize göstermekle mükellef. Yani `tail` komutunun `f` parametresi bize yalnızca dosyaya en son eklenen ifadeleri güncel şekilde listeliyor.
+Hazır yeri gelmişken `tail` komutuyla sistemdeki olayların anlık olarak takibini yapalım. Bunun için sistemdeki olayların kaydını tutan <kbd>messages</kbd> dosyasını okumalıyız. Bu okuma işlemini sistemdeki anlık hareketleri takip etmek için yaptığımızdan, okuduğumuz dosyaya yeni eklenen her veriyi anlık görmek için `tail -f messages` komutunu kullanıyoruz. Buradaki `tail -f` komutunu açıklayacak olursam; biliyorsunuz `tail` komutu dosyanın alt satırlarını görüntülememize olanak tanıyan bir komut. Ve bu komutun `-f ` parametresi de bu görüntülenecek kısım için dosyayı sürekli yeniden tarayarak dosyaya en son eklenen verileri bize göstermekle mükellef. Yani `tail` komutunun `f` parametresi bize yalnızca dosyaya en son eklenen ifadeleri güncel şekilde listeliyor.
  
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/3.png" width="875" > 
  
@@ -33,7 +34,7 @@ Elbetteki çıktı çok daha uzun ancak ben örnek olması açısından çıktı
  
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/5.png" width="875" >
 
-Gördüğünüz gibi "fail" ifadesinin geçtiği yani hataların belirtildiği tüm iletiler karşımıza gelmiş oldu.
+Gördüğünüz gibi "**fail**" ifadesinin geçtiği, yani **hataların** belirtildiği tüm iletiler karşımıza gelmiş oldu.
 
 
 last
@@ -54,10 +55,10 @@ Veya sondan 4 oturuma bakmak istersem komutumuzu `last -4` şeklinde kullanırı
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/8.png" width="875" >
 
-Ayrıca kullanıcı adına göre oturum açma bilgisi sorgulayabiliriz. Örneğin ben yalnızca "burak" isimli kullanıcı hesabının oturum hareketlerini görmek istersem, konsola `last burak` şeklinde yazdığımda karşıma yalnızca "burak" kullanıcı hesabının oturum hareketleri gelir.
+Ayrıca kullanıcı adına göre oturum açma bilgisi sorgulayabiliriz. Örneğin ben yalnızca "**burak**" isimli kullanıcı hesabının oturum hareketlerini görmek istersem, konsola `last burak` şeklinde yazdığımda karşıma yalnızca "**burak**" kullanıcı hesabının oturum hareketleri gelir.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/9.png" width="875" >
 
-Gördüğünüz gibi yalnızca "burak" kullanıcı hesabının oturum açma bilgileri listelenmiş oldu. Yani kullanıcıya göre oturum bilgilerini öğrenmek için, komutu `last kullanıcı_adı` şeklinde kullanabilirsiniz.
+Gördüğünüz gibi yalnızca "**burak**" kullanıcı hesabının oturum açma bilgileri listelenmiş oldu. Yani kullanıcıya göre oturum bilgilerini öğrenmek için, komutu `last kullanıcı_adı` şeklinde kullanabilirsiniz.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/20-%20Log%20Dosyalar%C4%B1/10.png" width="875" >
