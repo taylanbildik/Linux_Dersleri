@@ -3,7 +3,7 @@
 </p>
 
 <p align="center" style="bold">
-<b>Kali linux üzerinden işlenen adım adım linux komut satırı dersleri dokümantasyon kaynağıdır.</b><br>
+<b>Kali Linux üzerinden işlenen Linux komut satırı dersleri dokümantasyon kaynağıdır.</b><br>
 </p>
 
 Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
