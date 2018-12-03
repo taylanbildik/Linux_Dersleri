@@ -1,4 +1,5 @@
 
+  
 Dosya İşlemleri
 =
 Konumuz itibari ile dosyalarla epeyce haşır neşir olacağız. Yapacağımız işlemleri kısaca tanımlamak gerekirse; dosya kopyalama, taşıma, değiştirme, görüntüleme, düzenleme gibi işlemelerle dosyalar üzerinde hakimiyet kuracağız.
@@ -8,7 +9,7 @@ touch
 
 <code>touch</code> komutu bize kolaylıkla metin dosyası oluşturma imkanı tanıyor. İşte bu yüzden dosya işlemleri konumuza <code>touch</code> komutu ile başlamak gayet doğru bir karar olacaktır.
 
-Kendimize <code>touch</code> komutunu kullanarak boş bir dosya oluşturmak için komut satırına <code>touch dosya_ismi</code> şeklinde yazmamız gerekiyor. Burada fark ettiyseniz herhangi bir uzantı girmeme gerek kalmadı. Çünkü Linux sisteminde uzantı belirtme zorunluluğu bulunmuyor. Bu durumu gözlemlemek için konsola <code>touch yeni</code> komutunu vererek "yeni" adından bir dosya oluşturalım. 
+Kendimize <code>touch</code> komutunu kullanarak boş bir dosya oluşturmak için komut satırına <code>touch dosya_ismi</code> şeklinde yazmamız gerekiyor. Burada fark ettiyseniz herhangi bir uzantı girmeme gerek kalmadı. Çünkü Linux sisteminde uzantı belirtme zorunluluğu bulunmuyor. Bu durumu gözlemlemek için konsola <code>touch yeni</code> komutunu vererek "**yeni**" adından bir dosya oluşturalım. 
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/1.png)
 
@@ -172,7 +173,7 @@ Komutumuzun ardından terminal ekranında karşımıza <kbd>profile</kbd> dosyas
 less
 -
 
-Bu komutumuz da üst kısımda açıkladığımız **more** komutu ile aynı işlevdedir. Ayrıntısını merak ederseniz man sayfasına göz atmanız yeterli olacaktır.
+Bu komutumuz da üst kısımda açıkladığımız `more` komutu ile aynı işlevdedir. Ayrıntısını merak ederseniz man sayfasına göz atmanız yeterli olacaktır.
 
 Ben yine de <code>less</code> komutu ile **profile** dosyasının içeriğinin okunduğu şeklini aşağıya bırakıyorum. Eğer <code>more</code> komutunda bir problem yaşamadıysanız bu komut kullanımında da kesinlikle yaşamazsınız.
 
@@ -389,7 +390,7 @@ Bu kısımda dosyaları kopyalama taşıma ve silme gibi işlemleri ele alacağ�
 
 Komutumuzu açıklayacak olursak;
 
-**Desktop** dizinindeyken **ls** komutu ile bulunduğumuz dizindeki dosyaları listeliyoruz. Ve çıktıda da görüldüğü üzere masaüstünde "**filazof**" isimli bir belge bulunuyor.
+**Desktop** dizinindeyken `ls` komutu ile bulunduğumuz dizindeki dosyaları listeliyoruz. Ve çıktıda da görüldüğü üzere masaüstünde "**filazof**" isimli bir belge bulunuyor.
 
 `cd yeni_dizin` komutuyla  <kbd> yeni_dizin </kbd> konumuna gidiyoruz.
 
