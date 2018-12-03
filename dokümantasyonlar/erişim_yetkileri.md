@@ -1,9 +1,10 @@
+
 Erişim Yetkileri
 =
 
-Linux sistemlerinin yapısı gereği güvenlik açısından dosya ve dizinlere ait birçok kısıtlama ve yetkilendirme ayarları vardır. Bu yetkilerin hepsine sahip olan tek kullanıcı ise root kullanıcısıdır. Bu yüzden sistemi kullanırken eğer root kullanıcısı isek önümüzde uyarıcı bizi kısıtlayıcı bir mekanizma olmayacağından kimi durumlarda yapacağımız değişiklikler sorunlara yol açabilir. Bu yüzden root kullanıcısıyken yapılan işlemlere dikkat etmek gerekir.(Hatta kimi dağıtımlarda root kullanıcı hesabı varsayılan olarak engellenmiştir, ancak istenildiği takdirde ve gereken ayarlar yapıldığında kullanılabilir olur.)
+Linux sistemlerinin yapısı gereği güvenlik açısından, dosya ve dizinlere ait birçok kısıtlama ve yetkilendirme ayarları vardır. Bu **yetkilerin hepsine sahip olan tek kullanıcı** ise **root** kullanıcısıdır. Bu yüzden sistemi kullanırken eğer root kullanıcısı isek önümüzde uyarıcı bizi kısıtlayıcı bir mekanizma olmayacağından, kimi durumlarda yapacağımız değişiklikler sistemle ilgili büyük sorunlara yol açabilir. Bu yüzden root kullanıcısıyken yapılan işlemlere dikkat etmek gerekir.(Hatta kimi dağıtımlarda root kullanıcı hesabı varsayılan olarak engellenmiştir, ancak istenildiği takdirde ve gereken ayarlar yapıldığında kullanılabilir duruma getirilir.)
 
-Bu girizgahtan sonra her kullanıcının kendine verilen yetkiler çerçevesince hareket edebildiğini öğrenmiş olduk. Kullanıcıların dosya veya dizinler ile ilgili yapabileceği üç eylem bulunmaktadır. Bunlar;
+Bu girizgahtan sonra, her kullanıcının kendine verilen yetkiler çerçevesince hareket edebildiğini öğrenmiş olduk. Kullanıcıların dosya veya dizinler ile ilgili yapabileceği üç eylem bulunmaktadır. Bunlar;
 
 **okuma(r):** Klasör listesini ve dosya içeriğini görüntüleme.
 
@@ -29,7 +30,7 @@ Geriye kalan kısımları ayrı ayrı açıklayacak olursak <kbd>-</kbd> işaret
 
 <kbd>rw-r--r--</kbd>=<kbd>rw-</kbd> <kbd>r--</kbd> <kbd> r--</kbd>
 
-Sırayla birinci harf kümesi dosya sahibinin izinlerini, ikinci harf kümesi grup izinleri ve son küme de diğer kullanıcıların izinlerini belirtir. 
+Sırayla; birinci harf kümesi dosya sahibinin izinlerini, ikinci harf kümesi grup izinleri ve son küme de diğer kullanıcıların izinlerini belirtir. 
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/2.png)
 
@@ -43,15 +44,15 @@ Buna göre yukarıdaki dosyalarda bulunan izinleri açıklayacak olursak;
 
 **rwx :** dosyanın sahibi olan kullanıcı okuyabilir, yazabilir, çalıştırabilir.
 
-**r-x :** dosya sahibi kullanıcı grubu ile aynı gruba dahil kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
+**r-x :** dosya sahibi kullanıcı grubu ile aynı gruba dahil kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz(değişiklik yapamaz).
 
-**r-x :** diğer kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz.
+**r-x :** diğer kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz(değişiklik yapamaz).
 
 
 Yetkilerin Değişimi(chmod)
 -
 
-Erişim yetkisini değiştirme işlemini ancak en yetkili kişi olan root yapabilir. Bu değişim işlemini daha önceden de kullandığımız `chmod` komutu sayesinde gerçekleştirilir.
+Erişim yetkisini değiştirme işlemini, ancak en yetkili kişi olan root yapabilir. Bu değişim işlemi; daha öncede de kullandığımız `chmod` komutu sayesinde gerçekleştirilir.
 
 `chmod` komutunun parametrelerini tanıyarak örnek verme işlemine geçelim.
 
@@ -78,11 +79,11 @@ Genel parametreleri gördüğümüze göre gelin birkaç örnek yapalım.
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/3.png)
 
 
-Daha sonra klasörde yer alan tüm dosyalara `*` joker karakteri ile ulaştık ve `chmod +w *` komutumuzu kullanarak herkese açık olacak şekilde yazma(w) yetkisi verdik.
+Daha sonra klasörde yer alan tüm dosyalara `*` joker karakteri ile ulaştık ve `chmod +w *` komutumuzu kullanarak **herkese açık** olacak şekilde **yazma(w)** yetkisi verdik.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/4.png)
 
-Aynı grupta bulunan kullanıclar için yine konumumuzda bulunan tüm dosyaları `*` sayesinde kapsayacak şekilde `g+rx *` komutumuzu verdik.
+**Aynı grupta bulunan kullanıcılar** için, yine konumumuzda bulunan tüm dosyaları `*` sayesinde kapsayacak şekilde `g+rx *` komutumuzu verdik.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/5.png)
 
@@ -110,9 +111,9 @@ Daha net anlaşılması adına bir örnek daha yapalım. Şimdi de; dosyanın sa
 
 Dosya sahibi kullanıcıya verilecek tüm yetkiler için `r(4)+w(2)+x(1)=7` sayısını kullanacağız.
 
-Dosya sahibi ile ortak gruptaki kullanıcılar için vereceğimiz yazma yetkisi için yazma(w) karakterinin sayısal karşılığı olan `2` sayısını kullanacağız.
+Dosya sahibi ile ortak gruptaki kullanıcılar için vereceğimiz yazma yetkisi için **yazma(w)** karakterinin sayısal karşılığı olan `2` sayısını kullanacağız.
 
-Diğer kullanıcılar için vereceğimiz yalnız okuma yetkisi için ise okuma(r) karakterinin sayısal karşılığı olan `4` sayısını kullanacağız.
+Diğer kullanıcılar için vereceğimiz yalnız okuma yetkisi için ise **okuma(r)** karakterinin sayısal karşılığı olan `4` sayısını kullanacağız.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/9.png)
 
@@ -120,25 +121,25 @@ Diğer kullanıcılar için vereceğimiz yalnız okuma yetkisi için ise okuma(r
 
 Son bir ayrıntı daha verelim. Eğer verdiğimiz izinlerin o dizinle beraber alt klasörlerinde de etkili olmasını istersek komutumuzu `-R` parametresi ile birlikte kullanmalıyız.
 
-Örneğin bulunduğum konumdaki "metin" isimli klasörün erişim yetkilerini listedim. Sonuç olarak hiç bir yetkinin bulunmadığını belirten <kbd>--------- </kbd> şeklinde bir çıktı geldi. 
+Örneğin bulunduğum konumdaki "**metin**" isimli klasörün erişim yetkilerini listeledim. Sonuç olarak hiçbir yetkinin bulunmadığını belirten <kbd>--------- </kbd> şeklinde bir çıktı geldi. 
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/10.png)
 
-Daha sonra "metin" isimli klasörün içerisine girerek oradaki dosya ve dizinlerin erişim izinlerini sorguladım. Sonuç olarak <kbd>rwxrwxrwx</kbd> şeklinde bütün yetkilere sahip dosya ve dizinlerin olduğunu gördüm. 
+Daha sonra "**metin**" isimli klasörün içerisine girerek oradaki dosya ve dizinlerin erişim izinlerini sorguladım. Sonuç olarak <kbd>rwxrwxrwx</kbd> şeklinde bütün yetkilere sahip dosya ve dizinlerin olduğunu gördüm. 
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/11.png)
 
-Daha sonra bir üst dizine dönerek ekleyeceğim erişim izinlerinin tüm alt dosyalarda da dahil geçerli olması için komutuma ek olarak `-R` parametresini kulladım ve komutumu `chmod -R 422 metin` şeklinde yazdım. 
+Daha sonra bir üst dizine dönerek ekleyeceğim erişim izinlerinin tüm alt dosyalarda dahil olmak üzere, geçerli olması için komutuma ek olarak `-R` parametresini kulladım ve komutumu `chmod -R 422 metin` şeklinde yazdım. 
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/12.png)
 
-Sonuç olarak bütün dosya ve dizinlerde ve alt klasörlede dahil olmak üzere tüm dosyaların vermiş olduğum yetki erişim izinleri **422** ifadesine karşılık gelen; dosya sahibi için okuma(**r**) , dosya sahibi ile aynı gruptaki kullanıcılar için yazma(**w**) ve diğer kullanıclar için de yazma(**w**) yetkisi şeklinde yetkilendirildiğini görmüş oldum.
+Sonuç olarak bütün dosya ve dizinlerde ve alt klasörlerde dahil olmak üzere tüm dosyaların vermiş olduğum yetki erişim izinleri **422** ifadesine karşılık gelen; dosya sahibi için okuma(**r**) , dosya sahibi ile aynı gruptaki kullanıcılar için yazma(**w**) ve diğer kullanıcılar için de yazma(**w**) yetkisi şeklinde yetkilendirildiğini görmüş oldum.
 
 Eğer örneklere ve açıklamalara rağmen yine de anlamadıysanız ister konuyu tekrar okuyup kendiniz de alıştırmalar yapın isterseniz de bu konuyu şimdilik geçin ihtiyacınız olduğunda burada olduğunu bilerek tekrar göz atın. Seçim sizlere kalmış.
 
 chattr
 -
-Hepimizin başına mutlaka gelen ve çok can sıkıcı bir durum var. Bu durum yanlışlıkla silinen dosyalar. Her nasıl ve neden olursa olsun eğer önemli gördüğümüz dosyalar varsa bir şekilde silinmeden onları koruma altına almamız mümkün. Bizlere bu koruma imkanını veren komut `chattr` komutudur. Aslında `chattr` komutu bir tek silinmeye karşı korumuyor, genel olarak dosyanın değiştirilmesine(silme, değiştirme vs.) engel olmak amacıyla kullanılıyor. Yani bu komutumuz bir nevi ilgili dosyayı dokunulamaz kılıyor. Öyle ki herhangi bir yanlış durumda dosyanın kaybolmasına engel olmak adına root kullanıcısının bile değişiklik yapmasına imkan tanımıyor. Komutun kullanım alanına bir örnek daha vererek daha iyi anlamış olalım. Örneğin sistemde bir konfigürasyon dosyasını düzenlediniz ve sistemi yeniden başlattınız fakat bir bakıyorsunuz ki düzenlediğiniz(değiştirdiğiniz) ayarlar kaybolmuş ve dosya eski haline dönmüş. İşte bu gibi durumlarda sistemin bile ilgili dosyaya müdahale etmesini engellemek için oldukça kullanışlı olan `chattr` komutunu kullanabiliyoruz.
+Hepimizin başına mutlaka gelen ve çok can sıkıcı bir durum var. Bu durum yanlışlıkla silinen dosyalar. Her nasıl ve neden olursa olsun eğer önemli gördüğümüz dosyalar varsa bir şekilde silinmeden onları koruma altına almamız mümkün. Bizlere bu koruma imkanını veren komut `chattr` komutudur. Aslında `chattr` komutu bir tek silinmeye karşı korumuyor, genel olarak dosyanın değiştirilmesine(silme, değiştirme vs.) engel olmak amacıyla kullanılıyor. Yani bu komutumuz bir nevi ilgili dosyayı dokunulamaz kılıyor. Öyle ki herhangi bir yanlış durumda dosyanın kaybolmasına engel olmak adına **root kullanıcısının bile** değişiklik yapmasına imkan tanımıyor. Komutun kullanım alanına bir örnek daha vererek daha iyi anlamış olalım. Örneğin sistemde bir konfigürasyon dosyasını düzenlediniz ve sistemi yeniden başlattınız, fakat bir bakıyorsunuz ki düzenlediğiniz(değiştirdiğiniz) ayarlar kaybolmuş ve dosya eski haline dönmüş. İşte bu gibi durumlarda sistemin bile ilgili dosyaya müdahale etmesini engellemek için oldukça kullanışlı olan `chattr` komutunu kullanabiliyoruz.
 
 Komutun kullanımı `chattr +i dosya_adı` şeklindedir. Hemen bir örnek yapalım.
 
@@ -155,4 +156,4 @@ Eğer bu işlemi geri almak ve dosyamızı üzerinde değişiklikler yapılabili
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/8-%20Eri%C5%9Fim%20Yetkileri/14.png)
 
-Çıktıda da görüldüğü gibi hedef dosyamızın solundaki `-i` işareti yok olmuş. Dolayısıyla <kbd>test.txt</kbd> isimli dosyamızın artık eski halinde dönerek düzenlenebilir forma girmiş olduğunu gördük. Ve dosyamızı silerek bu durumu teyit ettik.
+Çıktıda da görüldüğü gibi hedef dosyamızın solundaki `-i` işareti yok olmuş. Dolayısıyla <kbd>test.txt</kbd> isimli dosyamızın artık eski halinde dönerek, düzenlenebilir forma girmiş olduğunu gördük. Ve dosyamızı silerek bu durumu teyit ettik.
