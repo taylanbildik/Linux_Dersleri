@@ -1,13 +1,14 @@
 
+  
 Vim Editörü
 =
 
-Vim Editörü Terminalden kullanılabilen ve komut alabilen yaygın kullanıma sahip bir editördür. Vim editörünün kullanımının yaygın olmasının nedeni çok hafif bir editör olmasından kaynaklanmaktadır. Uzaktan erişim durumunda bağlantı(ağ/network) üzerinde fazlaca yük bindirmeden kolayca efektif şekilde gerekli işlemleri yerine getirir. Günümüzde daha yetenekli editörler de vardır ancak biraz eski alışkanlıklardan biraz da hafif şekilde çalışmasından dolayı hala tercih edilen bir editördür. Genelde öğrenmek isteyen kişilere ilk öğrenim aşamasında fazlaca karışık gelse de sonraları kullandıkça benimsenir. Bu durumu ileride sizler de gözlemleyeceksiniz. Ayrıca önceki adı `vi` olan editörün günümüzde gelişmiş versiyonu, `vim` ismini almış ve görsel arayüze sahip versiyonu ise `gvim` adıyla isimlendirilmiştir.
+Vim Editörü Terminalden kullanılabilen ve komut alabilen yaygın kullanıma sahip bir editördür. Vim editörü kullanımının yaygın olmasının nedeni çok hafif bir editör olmasından kaynaklanmaktadır. Uzaktan erişim durumunda bağlantı(ağ/network) üzerinde fazlaca yük bindirmeden kolayca efektif şekilde gerekli işlemleri yerine getirir. Günümüzde daha yetenekli editörler de vardır ancak biraz eski alışkanlıklardan biraz da hafif şekilde çalışmasından dolayı hala tercih edilen bir editördür. Genelde öğrenmek isteyen kişilere ilk öğrenim aşamasında fazlaca karışık gelse de sonraları kullandıkça benimsenir. Bu durumu ileride sizler de gözlemleyeceksiniz. Ayrıca önceki adı `vi` olan editörün günümüzde gelişmiş versiyonu, `vim` ismini almış ve görsel arayüze sahip versiyonu ise `gvim` adıyla isimlendirilmiştir.
 
 vi-vim-gvim
 -
 
-Editörü konsoldan açmak istersek `vim` komutu yeterli olacaktır. Ayrıca görsel arayüze sahip versiyonu olan `gvim` editörünü açmak için de `gvim` şeklinde komut kullanımı yeterli olacaktır. Ancak görsel arayüz genel olarak pek tercih edilmiyor. Kullanıcılar terminal üzerinden tek pencerede hızlı işlem yapmak adına ve biraz da geçmişten gelen alışkanlıklarından dolayı editörü terminal üzerinden kullanmayı tercih ediyorlar.
+Editörü konsoldan açmak istersek `vim` komutu yeterli olacaktır. Ayrıca görsel arayüze sahip versiyonu olan `gvim` editörünü açmak için de `gvim` şeklinde komut kullanımı yeterli olacaktır. Ancak yeri gelmişken belirteyim görsel arayüz genel olarak pek tercih edilmiyor. Kullanıcılar terminal üzerinden tek pencerede hızlı işlem yapmak adına ve biraz da geçmişten gelen alışkanlıklarından dolayı editörü terminal üzerinden kullanmayı tercih ediyorlar.
 
 Konsola `vim` komutunu vererek editörümüzü açalım.
 
@@ -20,7 +21,7 @@ Editörle çalışmak için <kbd>i</kbd> tuşuna basıyoruz ve editör sol alt k
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/2.png" width="875" >
 
 
-Gerekli ifadeleri girdikten sonra komut vermek istersek <kbd>ESC</kbd> tuşuna bastırktan sonra komutları `:` karakteri başta olacak şekilde vermemiz gerekiyor. Kullanabileceğimiz bazı komutlar aşağıdaki şekildedir.
+Gerekli ifadeleri girdikten sonra komut vermek istersek <kbd>ESC</kbd> tuşuna bastıktan sonra komutları `:` karakteri başta olacak şekilde vermemiz gerekiyor. Kullanabileceğimiz bazı komutlar aşağıdaki şekildedir.
 
 **:q =** Eğer yapılan değişiklikler kayıt edilmişse Vim editörünü kapatır. Aksi durumda uyarı verecektir.
 
@@ -48,15 +49,15 @@ Adım adım açıklayalım:
 
 İlk önce vim editörü ile <kbd>x_dosyasi</kbd> ve <kbd>y_dosyasi</kbd> isminde iki dosya oluşturuyorum ve bu dosyaların içerisine:
 
-<kbd>x_dosyasi</kbd> için ; "Bu dosya x dosyasının içeriğini temsil ediyor".
+<kbd>x_dosyasi</kbd> için ; "*Bu dosya x dosyasının içeriğini temsil ediyor*".
 
-<kbd>y_dosyasi</kbd> için ; "Bu dosya ise y dosyasının içeriğini temsil etmekte.."
+<kbd>y_dosyasi</kbd> için ; "*Bu dosya ise y dosyasının içeriğini temsil etmekte..*"
 
 İfadelerini ekliyorum daha sonra dosya içeriklerini `cat` komutu yardımı ile inceleyerek teyit ediyorum.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/4.png" width="875" >
 
-Sıra geldi vim editörü ile oluşturulan bu dosyalardan birini diğerine eklemeye. Ben <kbd>x_dosyasi</kbd>'na <kbd>y_dosyasi</kbd> içeriğini eklemek üzere, <kbd>x_dosyasi</kbd>'nı `vim x_dosyasi` komutu ile açıyorum.
+Şimdi Vim editörü ile oluşturulan bu dosyalardan birini diğerine eklemeye geldi sıra; Ben <kbd>x_dosyasi</kbd>'na <kbd>y_dosyasi</kbd> içeriğini eklemek üzere, <kbd>x_dosyasi</kbd>'nı `vim x_dosyasi` komutu ile açıyorum.
 
 Vim editörü içerisinde açılan <kbd>x_dosyası</kbd>'ndayken `:r y_dosyasi` komutunu veriyorum.
 
@@ -69,7 +70,7 @@ Böylelikle <kbd>y_dosyasi</kbd> içerisinde yer alan ifadeler <kbd>x_dosyasi</k
 Bu durumu hemen `cat` komutu yardımı ile teyit ettik zaten.
 
 
-Konsol komutlarını vim editörü içerisinde kullanabileceğimizden bahsetmiştik. Bunu yapabilmemiz için komuttan önce iki nokta üst üste ve ünlem karakterlerini kullanmalıyız yani örnek kullanımı `:!komut` şeklindedir. Hemen bu durumu `ls` komutu için deneyelim.
+Konsol komutlarını vim editörü içerisinde kullanabileceğimizden bahsetmiştik. Bunu yapabilmemiz için komuttan önce **iki nokta üst üste ve ünlem** karakterlerini kullanmalıyız yani örnek kullanımı `:!komut` şeklindedir. Hemen bu durumu `ls` komutu için deneyelim.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/7.gif" width="875" >
 
@@ -87,7 +88,7 @@ Komut sonucunda oluşturmuş olduğum <kbd>dizinler</kbd> dosyası içeriği aş
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/8.gif" width="875" >
 
-Kullandığımız komut bütününü açıklayacak olursak(aslında bunları zaten biliyorsunuz yine de açıklama gereksinimi duydum)`:r` komutu içerik aktarma işlevinde `!ls` komutu ise dizin altındaki dosya-klasörleri listelemekle görevli.
+Kullandığımız komut bütününü açıklayacak olursak(aslında bunları zaten biliyorsunuz ama ben yine de açıklama gereksinimi duydum) `:r` komutu içerik aktarma işlevinde `!ls` komutu ise dizin altındaki dosya-klasörleri listelemekle görevli.
 
 Dosyayı `:x` komutu ile kaydettik ve ayrıca teyit etmek için `cat dizinler` komutunu kullandık.
 
@@ -98,7 +99,7 @@ Komutumuzu verdikten sonra <kbd>dosya1</kbd> vim editöründe açılacaktır. Ge
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/9.gif" width="875" >
 
-Eğer geçiş yaptığımız dosyadan bir öncekine dönmek istersek `:previous` komutunu kullanmamız yeterli olacaktır.
+Eğer geçiş yaptığımız dosyadan bir öncekine dönmek istersek de  `:previous` komutunu kullanmamız yeterli olacaktır.
 
 Ayrıca kaç dosyanın vim editöründe çalıştığını pencere ekranının üst bilgi kısmından öğrenebiliriz. Örneğin ben 3 dosya ile çalıştığım için üst kısımda bulunduğum dosya bilgisi ile beraber **dosya1 (~) (1 of 3) - VIM** şeklinde bir üst bilgi yazısı bulunuyor.
 
@@ -129,15 +130,13 @@ Eğer direk olarak konsol üzerinden veri girişi yapmak istersek konsola `vim -
 
 Böylelikle konsol bize **Vim: Reading from stdin...** çıktısını verecek ve bizden veri girişi bekleyecektir.
 
-Ben örnek olması açısından konsoldan birkaç ifade ekliyorum.
+Ben örnek olması açısından konsoldan vim editörüne birkaç ifade ekliyorum.
 
 <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/17-%20Vim%20Edit%C3%B6r%C3%BC/12.gif" width="875" >
 
 İfade giriş işlemim tamamlandığında <kbd>Ctrl + D</kbd> tuş kombinasyonunu uygulayarak, vim editörü ekranına yazdığım ifadeler ile birlikte dönmüş oluyorum.
 
-
-
-Ayrıca oluşturduğumuz dosyaları şifreleyerek koruma imkanımız da var. Bu durumu bir örnek üzerinden anlatalım.
+Ayrıca vim editörü ile oluşturduğumuz dosyaları şifreleyerek koruma imkanımız da var. Bu durumu bir örnek üzerinden anlatalım.
 
 `vim vim_metni` komutu ile bir belge açıyorum ve içerisini bazı ifadeler ekleyerek belgeyi kaydediyorum.
 
@@ -160,9 +159,9 @@ Konsol çıktısında da görüldüğü gibi bizden bir parola isteniyor. Eğer 
 
 **Ancak sizlere önemli bir uyarı;**
 
-Bu dosya şifreleme olayı iyi hoş ancak çok çok önemli bir nokta var o da belirlediğiniz şifre. Eğer uzun, karmaşık yazarsanız bu şifreyi unutma riskiniz yüksek olacağından daha sonra bulmanız veya bir şekide kırmanız da bir o kadar zor olacaktır. Ayrıca kısa ve kolay şifreler de kolayca kırılabileceğinden pek güvenli bir yol sayılmaz. Yani anlayacağınız ne unutacağınız kadar uzun veya karmaşık ne de kolay kırlabilecek kadar kısa olsun. Şimdiden sizleri uyarıyorum sonradan bu durum yüzünden aman başınız ağrımasın.
+Bu dosya şifreleme olayı iyi hoş ancak çok çok önemli bir nokta var o da belirlediğiniz şifre. Eğer uzun, karmaşık yazarsanız bu şifreyi unutma riskiniz yüksek olacağından daha sonra bulmanız veya bir şekilde kırmanız da bir o kadar zor olacaktır. Ayrıca kısa ve kolay şifreler de kolayca kırılabileceğinden pek güvenli bir yol sayılmaz. Yani anlayacağınız ne unutacağınız kadar uzun veya karmaşık ne de kolay kırılabilecek kadar kısa olsun. Şimdiden sizleri uyarıyorum sonradan bu durum yüzünden aman başınız ağrımasın.
 
-Konumuza yavaş yavaş bitirmek üzere devam edecek olursak.
+Vim editörü konusunu yavaş yavaş bitirmek üzere devam edecek olursak.
 
 Örneğin vim editöründe kod yazıyordunuz ve kod 101. satırda hata verdi. Bu durumda 101. satırı aramak yerine editöre `:101` şeklinde yazarak hatalı kodun bulunduğu satıra ulaşabiliyoruz. Yani direk olarak atlamak istediğimiz satırı vim editörüne `:satır_numarası` şeklinde girerek bu işlemi gerçekleştirebiliriz.
 
@@ -179,4 +178,4 @@ Vim editörü anlatımının burada sonuna geliyoruz. Ancak dediğim gibi zaten 
 
 Neticede internette yer alan tüm zengin kaynaklar ile birlikte man kılavuz sayfasından, vim editörü içerisinde iken `:help` komutundan ve daha önce verdiğim vim editörü [wiki kaynağından](http://vim.wikia.com/wiki/Vim_Tips_Wiki) diğer tüm bilgilere ulaşabilirsiniz.(Benim önerim ilk başlarda ayrıntıları kolay kavramak adına vim editörü için geniş çaplı Türkçe kaynak sağlayan [bu adresi](http://www.omeroner.com/vim-nedir-ve-nasil-kullanilir/) kullanmanızdır.) 
 
-Ve unutmayın bu araç ancak ve ancak öğrenmek isteyen kişinin kendi kendine kurcalaması ve bolca alıştırmalar yapmasıyla öğrenilebilir.
+Ve unutmayın bu araç ancak ve ancak, öğrenmek isteyen kişinin kendi kendine kurcalaması ve bolca alıştırmalar yapmasıyla öğrenilebilir.
