@@ -1,7 +1,9 @@
 
 ﻿Çevrimdışı(Offline) Linux Dokümantasyonu
 -
-Burada yer alan dosyalar sayesinde internet bağlantısının bulunmadığı durumlarda yani çevrimdışıyken dokümantasyonda yer alan tüm bilgilere erişebiliyor olacaksınız.
+Burada yer alan dosyalar sayesinde internet erişiminizin bulunmadığı durumlarda, yani çevrimdışıyken dokümantasyonda yer alan tüm bilgilere herhangi bir program kurulumuna gerek kalmadan erişebiliyor olacaksınız. 
+
+Yine de web dosyaları ile uğraşmadan tek bir uygulama ile, dokümantasyonu çevrimdışı şekilde takip etmek isterseniz ["Linux Dersleri Masaüstü Uygulamaları"](https://github.com/taylanbildik/Linux_Dersleri#linux-dok%C3%BCmantasyonu-%C3%A7evrimd%C4%B1%C5%9F%C4%B1-masa%C3%BCst%C3%BC-uygulamalar%C4%B1) 'na göz atın lütfen.
 
 Dokümantasyon içerisinde yer alan hareketli resimler(.gif) nedeniyle çevrimdışı dokümantasyon kaynağı local html dosyaları kullanılarak oluşturulmuştur. 
 
@@ -17,7 +19,7 @@ Burada yer alan dosyaları indirip bir dizine kaydedin.
   <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/1.png">
 </p>
 
-Daha sonra istediğiniz içeriğe kolayca ulaşabilmek için dosya içerisinde yer alan "***İçindekiler***" isimli html dosyasını açın.(Dosyayı herhangi bir web tarayıcı programı ile açabilirisiniz.)
+Daha sonra istediğiniz içeriğe kolayca ulaşabilmek için, dosya içerisinde yer alan "***İçindekiler***" isimli html dosyasını açın.(Dosyayı herhangi bir web tarayıcı programı ile açabilirisiniz.)
 <p>
   <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/local.gif">
 </p>
