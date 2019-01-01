@@ -6,7 +6,80 @@
 <b>Kali Linux üzerinden işlenen Linux komut satırı dersleri dokümantasyon kaynağıdır.</b><br>
 </p>
 
-Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyonu
+# Linux Dokümantasyonu Çevrimdışı Masaüstü Uygulamaları
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/multi-pltfrm.png)
+Dokümantasyonun tüm içeriğine internet bağlantısına ihtiyaç duymadan ulaşabileceğiniz masaüstü uygulamaları; **Linux(Debian)**, **Windows** ve **MacOS** platformları için hazırlanmıştır.
+
+# Linux(Debian)
+Bu dokümantasyonun şu an için yalnızca Debian tabanlı Linux dağıtımlarında çalıştırılabilir, Linux masaüstü uygulaması bulunmaktadır.
+
+## Linux-64bit 
+Eğer **64 bit**'lik **Debian** tabanlı bir Linux işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
+
+<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/Linux/Linux_0.1.0_amd64.deb"><img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/button_linux-amd-deb.png"></a>
+
+Dosya(.deb) boyutu: **78~MB** 
+
+Kurulu uygulama boyutu: **180~MB**
+
+
+## Linux-32bit 
+Eğer **32 bit**'lik **Debian** tabanlı bir Linux işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
+
+<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/Linux/Linux_0.1.0_i386.deb"><img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/button_linux-i-deb.png"></a>
+
+Dosya(.deb) boyutu: **79~MB** 
+
+Kurulu uygulama boyutu: **182~MB**
+
+### Kurulum İşlemi
+Sisteminize uygun olan debian paketini(.deb) indirdikten sonra, dosyanın bulunduğu konumdan terminali(konsol ekranını) açın ve paketi açmak için konsola aşağıdaki komutu girin.
+
+    dpkg -i indirdiğiniz_paketin_adı
+Kurulum işlemini aşağıdaki gif resmine bakarak takip edebilirsiniz.
+ 
+ ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/linux-kurulum.gif?raw=true)   
+    
+### Kurulu Uygulamayı Kaldırma İşlemi
+Sistemde yer alan "Linux Dersleri" uygulamasını kaldırmak için aşağıdaki komutu girmeniz yeterlidir.
+
+    dpkg -r linux
+    
+Kurulu olan uygulamayı kaldırmak için gereken işlemi aşağıdaki gif resminden takip edebilirsiniz.
+
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/linux-kald%C4%B1r.gif?raw=true)
+
+# Windows
+
+## Windows-64bit 
+Eğer **64 bit**'lik **Windows** işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
+
+<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/Windows/Linux-Dersleri-win64-Kurulum.exe"><img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/button_linux-win64.png?raw=true"></a>
+
+Dosya(setup) boyutu: **78~MB** 
+
+Kurulu uygulama boyutu: **180~MB**
+
+
+## Windows-32bit 
+Eğer **32 bit**'lik **Windows** işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
+
+<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/Windows/Linux-Dersleri-win32-Kurulum.exe"><img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/button_linux-win32.png?raw=true"></a>
+
+Dosya(setup) boyutu: **79~MB** 
+
+Kurulu uygulama boyutu: **182~MB**
+
+# MacOS
+Eğer kullanmakta olduğunuz işletim sistemi **Mac** ise aşağıdaki kurulum imajını indirmeniz gerek.
+
+<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/MacOS/Linux_Dersleri-Kurulum.dmg.zip"><img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/button_linux-macos.png?raw=true"></a>
+
+Dosya(.zip) boyutu: **98~MB** 
+
+Kurulu uygulama boyutu: **176~MB**
+
+Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyon Müfredatı
 -
 - [Linux Nedir ?](https://github.com/taylanbildik/Linux_Dersleri/tree/master/dok%C3%BCmantasyonlar/linux_nedir.md#linux-nedir-)
 - [Gerekli Ortamın Kurulması](https://github.com/taylanbildik/Linux_Dersleri/tree/master/dok%C3%BCmantasyonlar/gerekli_ortam%C4%B1n_kurulmas%C4%B1.md#gerekli-ortam%C4%B1n-kurulmas%C4%B1)
