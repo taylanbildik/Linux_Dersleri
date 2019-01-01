@@ -8,10 +8,11 @@
 
 # Linux Dokümantasyonu Çevrimdışı Masaüstü Uygulamaları
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/multi-pltfrm.png)
-Dokümantasyonun tüm içeriğine internet bağlantısına ihtiyaç duymadan ulaşabileceğiniz masaüstü uygulamaları; **Linux(Debian)**, **Windows** ve **MacOS** platformları için hazırlanmıştır.
+Dokümantasyonun tüm içeriğine internet bağlantısına ihtiyaç duymadan ulaşabileceğiniz masaüstü uygulamaları; **Linux(Debian)**, **Windows** ve **MacOS** platformları için hazırlanmıştır. 
+Uygulamalar henüz beta aşamasında olduğu için sizlerden gelecek her türlü geri bildirimin faydalı olacağını belirtmek isterim. 
 
 # Linux(Debian)
-Bu dokümantasyonun şu an için yalnızca Debian tabanlı Linux dağıtımlarında çalıştırılabilir, Linux masaüstü uygulaması bulunmaktadır.
+Bu dokümantasyonun şu an için yalnızca **Debian** tabanlı Linux dağıtımlarında çalıştırılabilir, Linux masaüstü uygulaması bulunmaktadır.
 
 ## Linux-64bit 
 Eğer **64 bit**'lik **Debian** tabanlı bir Linux işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
@@ -33,15 +34,16 @@ Dosya(.deb) boyutu: **79~MB**
 Kurulu uygulama boyutu: **182~MB**
 
 ### Kurulum İşlemi
-Sisteminize uygun olan debian paketini(.deb) indirdikten sonra, dosyanın bulunduğu konumdan terminali(konsol ekranını) açın ve paketi açmak için konsola aşağıdaki komutu girin.
+Sisteminize uygun olan **Debian paketini**(***.deb***) indirdikten sonra, dosyanın bulunduğu konumdan terminali(konsol ekranını) açın ve paketi kurmak için konsola aşağıdaki komutu girin.
 
     dpkg -i indirdiğiniz_paketin_adı
+    
 Kurulum işlemini aşağıdaki gif resmine bakarak takip edebilirsiniz.
  
  ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/linux-kurulum.gif?raw=true)   
     
 ### Kurulu Uygulamayı Kaldırma İşlemi
-Sistemde yer alan "Linux Dersleri" uygulamasını kaldırmak için aşağıdaki komutu girmeniz yeterlidir.
+Sistemde yer alan "***Linux Dersleri***" uygulamasını kaldırmak için aşağıdaki komutu girmeniz yeterlidir.
 
     dpkg -r linux
     
@@ -78,6 +80,12 @@ Eğer kullanmakta olduğunuz işletim sistemi **Mac** ise aşağıdaki kurulum i
 Dosya(.zip) boyutu: **98~MB** 
 
 Kurulu uygulama boyutu: **176~MB**
+
+### Kurulum İşlemi
+Programı kurmak için; öncelikle indirdiğiniz ***.zip*** arşivini açmalısınız. Arşivi açtıktan sonra ***.dmg*** dosyasını çift tıklayarak çalıştırın. Daha sonra, karşınıza çıkan kurulum asistanı penceresinde gösterildiği gibi; uygulamanın simgesini ***"Applications"*** simgesinin üzerine sürükleyin. 
+
+Kurulum işlemini aşağıdaki gif resmine bakarak takip edebilirsiniz.
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/mac-kurulum.gif?raw=true)
 
 Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyon Müfredatı
 -
