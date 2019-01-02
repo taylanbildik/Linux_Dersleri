@@ -9,7 +9,7 @@
 # Linux Dokümantasyonu Çevrimdışı Masaüstü Uygulamaları
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/multi-pltfrm.png)
 Dokümantasyonun tüm içeriğine internet bağlantısına ihtiyaç duymadan ulaşabileceğiniz masaüstü uygulamaları; **Linux(Debian)**, **Windows** ve **MacOS** platformları için hazırlanmıştır. 
-Uygulamalar henüz beta aşamasında olduğu için sizlerden gelecek her türlü geri bildirimin faydalı olacağını belirtmek isterim. 
+**Uygulamalar henüz beta aşamasında olduğu için sizlerden gelecek her türlü geri bildirimin faydalı olacağını belirtmek isterim.**
 
 # Linux(Debian)
 Bu dokümantasyonun şu an için yalnızca **Debian** tabanlı Linux dağıtımlarında çalıştırılabilir, Linux masaüstü uygulaması bulunmaktadır.
@@ -34,6 +34,8 @@ Dosya(.deb) boyutu: **79~MB**
 Kurulu uygulama boyutu: **182~MB**
 
 ### Kurulum İşlemi
+**Not:** Kurulum işleminden önce sisteminizin güncel olduğundan emin olun. Aksi takdirde kurulum hata verebilir. Kurulum aşamasında hata alırsanız sisteminizi güncelleyip kurulumu tekrar deneyin lütfen.
+
 Sisteminize uygun olan **Debian paketini(.deb)** indirdikten sonra, dosyanın bulunduğu konumdan terminali(konsol ekranını) açın ve paketi kurmak için konsola aşağıdaki komutu girin.
 
     dpkg -i indirdiğiniz_paketin_adı
