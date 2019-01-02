@@ -7,9 +7,19 @@
 </p>
 
 # Linux Dokümantasyonu Çevrimdışı Masaüstü Uygulamaları
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/multi-pltfrm.png)
+![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/multi-pltfrm.png)
 Dokümantasyonun tüm içeriğine internet bağlantısına ihtiyaç duymadan ulaşabileceğiniz masaüstü uygulamaları; **Linux(Debian)**, **Windows** ve **MacOS** platformları için hazırlanmıştır. 
-**Uygulamalar henüz beta aşamasında olduğu için sizlerden gelecek her türlü geri bildirimin faydalı olacağını belirtmek isterim.**
+**Uygulamalar henüz beta aşamasında olduğu için, sizlerden gelecek her türlü geri bildirimin faydalı olacağını belirtmek isterim.**
+
+**_Eğer uygulamaya destek olmak istiyorsanız, uygulamanın amacına ulaşabilmesi için uygulamayı Linux öğrenmek isteyen herkes ile paylaşın lütfen. Ne kadar fazla insana ulaşabilirsek, uygulamanın verimi o kadar artacaktır._**
+
+**Not 1:** Proje  **henüz beta aşamasında**  olup sadece  **en temel işlemleri yapmak üzere kurgulanmıştır**. Ben üç platformda(**Linux(Debian)**, **Windows** ve **MacOS** platformları) da test ettim herhangi bir çalıştırma sorunu ile karşılaşmadım, eğer olursa; sizler  **karşılaştığınız problemleri mutlaka bana iletin**  ki; hep birlikte, herkes adına daha kullanışlı bir uygulama ortaya koyabilelim.
+
+**Not 2**: Uygulama henüz kendi içerisinde güncelleme modülü barındırmıyor maalesef. Yani  **uygulamanın güncel versiyonlarını, **[Github](https://github.com/taylanbildik/Linux_Dersleri/releases)** sayfasından takip etmeniz gerek**. (Güncellemeler geri bildirimlere bağlı yapılacağından, olursa tahmini ayda 1 güncelleme şeklinde olabilir. Yani aylık olarak Github sayfasına bakmanız yeterli olacaktır.)
+
+**Not 3:**  Dokümantasyonun  **android üzerinden çevrimdışı kullanılabilmesi için de proje gelişim aşamasındadır**.
+
+![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/uygulama.gif?raw=true)
 
 # Linux(Debian)
 Bu dokümantasyonun şu an için yalnızca **Debian** tabanlı Linux dağıtımlarında çalıştırılabilir, Linux masaüstü uygulaması bulunmaktadır.
@@ -42,7 +52,7 @@ Sisteminize uygun olan **Debian paketini(.deb)** indirdikten sonra, dosyanın bu
     
 Kurulum işlemini aşağıdaki gif resmine bakarak takip edebilirsiniz.
  
- ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/linux-kurulum.gif?raw=true)   
+ ![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/linux-kurulum.gif?raw=true)   
     
 ### Kurulu Uygulamayı Kaldırma İşlemi
 Sistemde yer alan "***Linux Dersleri***" uygulamasını kaldırmak için aşağıdaki komutu girmeniz yeterlidir.
@@ -51,7 +61,7 @@ Sistemde yer alan "***Linux Dersleri***" uygulamasını kaldırmak için aşağ�
     
 Kurulu olan uygulamayı kaldırmak için gereken işlemi aşağıdaki gif resminden takip edebilirsiniz.
 
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/linux-kald%C4%B1r.gif?raw=true)
+![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/linux-kald%C4%B1r.gif?raw=true)
 
 # Windows
 
@@ -87,7 +97,7 @@ Kurulu uygulama boyutu: **176~MB**
 Programı kurmak için; öncelikle indirdiğiniz ***.zip*** arşivini açmalısınız. Arşivi açtıktan sonra ***.dmg*** dosyasını çift tıklayarak çalıştırın. Daha sonra, karşınıza çıkan kurulum asistanı penceresinde gösterildiği gibi; uygulamanın simgesini ***"Applications"*** simgesinin üzerine sürükleyin. 
 
 Kurulum işlemini aşağıdaki gif resmine bakarak takip edebilirsiniz.
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/mac-kurulum.gif?raw=true)
+![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/mac-kurulum.gif?raw=true)
 
 Sıralı Şekilde Konu Konu Linux Komut Satırı Dokümantasyon Müfredatı
 -
