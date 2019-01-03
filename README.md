@@ -72,7 +72,7 @@ Eğer **64 bit**'lik **Windows** işletim sistemi kullanıyorsanız aşağıdaki
 
 Dosya(setup) boyutu: **78~MB** 
 
-Kurulu uygulama boyutu: **180~MB**
+Kurulu uygulama boyutu: **164~MB**
 
 
 ## Windows-32bit 
@@ -82,7 +82,7 @@ Eğer **32 bit**'lik **Windows** işletim sistemi kullanıyorsanız aşağıdaki
 
 Dosya(setup) boyutu: **79~MB** 
 
-Kurulu uygulama boyutu: **182~MB**
+Kurulu uygulama boyutu: **142~MB**
 
 # MacOS
 Eğer kullanmakta olduğunuz işletim sistemi **Mac** ise aşağıdaki kurulum imajını indirmeniz gerek.
