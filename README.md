@@ -22,14 +22,14 @@ Dokümantasyonun tüm içeriğine internet bağlantısına ihtiyaç duymadan ula
 ![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/uygulama.gif?raw=true)
 
 # Linux(Debian)
-Bu dokümantasyonun şu an için yalnızca **Debian** tabanlı Linux dağıtımlarında çalıştırılabilir, Linux masaüstü uygulaması bulunmaktadır.
+Bu dokümantasyonun şu an için yalnızca **Debian** tabanlı Linux dağıtımlarında çalıştırılabilir masaüstü uygulaması bulunmaktadır.
 
 ## Linux-64bit 
 Eğer **64 bit**'lik **Debian** tabanlı bir Linux işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
 
-<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/Linux/Linux_0.1.0_amd64.deb"><img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/button_linux-amd-deb.png"></a>
+<a href="https://github.com/taylanbildik/Linux_Dersleri/releases/download/0.1.1/Linux-Dersleri-Linux_0.1.1_amd64.deb">Linux-64</a>
 
-Dosya(.deb) boyutu: **78~MB** 
+Dosya(.deb) boyutu: **76~MB** 
 
 Kurulu uygulama boyutu: **180~MB**
 
@@ -37,9 +37,9 @@ Kurulu uygulama boyutu: **180~MB**
 ## Linux-32bit 
 Eğer **32 bit**'lik **Debian** tabanlı bir Linux işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
 
-<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/Linux/Linux_0.1.0_i386.deb"><img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/button_linux-i-deb.png"></a>
+<a href="https://github.com/taylanbildik/Linux_Dersleri/releases/download/0.1.1/Linux-Dersleri-Linux_0.1.1_i386.deb">Linux-32</a>
 
-Dosya(.deb) boyutu: **79~MB** 
+Dosya(.deb) boyutu: **77~MB** 
 
 Kurulu uygulama boyutu: **182~MB**
 
@@ -68,9 +68,9 @@ Kurulu olan uygulamayı kaldırmak için gereken işlemi aşağıdaki gif resmin
 ## Windows-64bit 
 Eğer **64 bit**'lik **Windows** işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
 
-<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/Windows/Linux-Dersleri-win64-Kurulum.exe"><img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/button_linux-win64.png?raw=true"></a>
+<a href="https://github.com/taylanbildik/Linux_Dersleri/releases/download/0.1.1/Linux-Dersleri-win64-0.1.1-Kurulum.exe">Windows-64</a>
 
-Dosya(setup) boyutu: **78~MB** 
+Dosya(setup) boyutu: **91~MB** 
 
 Kurulu uygulama boyutu: **164~MB**
 
@@ -78,18 +78,18 @@ Kurulu uygulama boyutu: **164~MB**
 ## Windows-32bit 
 Eğer **32 bit**'lik **Windows** işletim sistemi kullanıyorsanız aşağıdaki dosyayı indirmeniz gerek. 
 
-<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/Windows/Linux-Dersleri-win32-Kurulum.exe"><img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/button_linux-win32.png?raw=true"></a>
+<a href="https://github.com/taylanbildik/Linux_Dersleri/releases/download/0.1.1/Linux-Dersleri-win32-0.1.1-Kurulum.exe">Windows-32</a>
 
-Dosya(setup) boyutu: **79~MB** 
+Dosya(setup) boyutu: **84~MB** 
 
 Kurulu uygulama boyutu: **142~MB**
 
 # MacOS
 Eğer kullanmakta olduğunuz işletim sistemi **Mac** ise aşağıdaki kurulum imajını indirmeniz gerek.
 
-<a href="https://github.com/taylanbildik/Linux_Dersleri/raw/master/Kaynaklar/MacOS/Linux_Dersleri-Kurulum.dmg.zip"><img src="https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/Ana%20Sayfa/button_linux-macos.png?raw=true"></a>
+<a href="https://github.com/taylanbildik/Linux_Dersleri/releases/download/0.1.1/linux-dersleri-macOS_0.1.1-Kurulum.dmg.zip">MacOS</a>
 
-Dosya(.zip) boyutu: **98~MB** 
+Dosya(.zip) boyutu: **95~MB** 
 
 Kurulu uygulama boyutu: **176~MB**
 
