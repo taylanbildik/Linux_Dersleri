@@ -241,7 +241,7 @@ Ben <kbd>yaşlar.txt</kbd> ve <kbd>isimler.txt</kbd> adlı dosyaları aynı anda
 tee
 -
 
-Yazmak istediğimiz ifadeleri hem komut satırına yansıtıp hem de bu ifadelerim bir dosya içerisine kayıt olmasını isterseniz kullanacağınız komut <code>tee</code> komutu olacaktır.
+Yazmak istediğimiz ifadeleri hem komut satırına yansıtıp hem de bu ifadelerin bir dosya içerisine kayıt olmasını isterseniz kullanacağınız komut <code>tee</code> komutu olacaktır.
 
 Örnek üzerinden devam edelim.
 
