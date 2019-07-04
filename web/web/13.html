@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/14.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div>
+  </nav>
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+  <h1>Süreçler (process)</h1>
+  <p>Süreç(process) denilen kavram genel olarak; bir program çalıştığında programın belleğe yüklenme işlemine deniyor. Bizler de bu bölümde süreçler hakkında bilgi almak, işlem yapmak ve gerektiğinde müdahalede bulunmak gibi işlemleri yapabilmek adına ilgili komutları öğreneceğiz.</p>
+<h2>ps</h2>
+<p>Bu komutumuz çalışan süreçleri görüntülememizi sağlıyor.</p>
+<p>Komut tek başına <strong><code>ps</code></strong> şeklinde kullanıldığında mevcut konsol üzerinden çalıştırılmış süreçleri verir.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/1-min.png" class="responsive"></p>
+<p>Genellikle sistemdeki tüm işlemleri görmek için <strong><code>ps -aux</code></strong> komut bütünü kullanıyor.
+Komut <strong><code>aux</code></strong> parametreleri ile <strong><code>ps -aux</code></strong> şeklinde kullanıldığında sistemde ve terminallerde çalışan tüm süreçleri ve süreç sahiplerini gösteriyor.(Çıktı çok uzun olacağından aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.)</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/2-min.png" class="responsive"></p>
+<p>Ancak gerektiği zaman doğru çıktıları almak adına <strong><code>ps</code></strong> komutunun parametrelerine bakalım.</p>
+<p><strong>e :</strong> Sistemde çalışan her süreç.(Çıktı çok uzun olacağından aradaki çıktıları atlayarak kısa çıktıları aşağıdaki şekilde verdim.)</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/3-min.png" class="responsive"></p>
+<p><strong>u :</strong> Kullanıcı adına göre süreç bilgileri verir.</p>
+<p>Parametrenin komut ile kullanımı <strong><code>ps -u kullanıcı</code></strong> şeklindedir.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/4-min.png" class="responsive"></p>
+<p><strong>p :</strong> Süreç numarasına(PID) göre süreç bilgisi verir.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/5-min.png" class="responsive"></p>
+<p>Eğer aradığımız özel bir süreç varsa daha önce görmüş olduğumuz <strong><code>grep</code></strong> komutu yardımı ile o süreç hakkında doğrudan bilgi alabiliriz.
+Şöyle ki eğer ben "<strong>bash</strong>" süreci hakkında bilgi almak istiyorsam konsola <strong><code>ps -aux | grep "bash"</code></strong> yazmam yeterli olacaktır.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/6-min.png" class="responsive"></p>
+<p>Çıktıda görüldüğü gibi yalnızca ulaşmak istediğim "<strong>bash</strong>" süreci hakkında çıktı almış oldum.</p>
+<h2>pstree</h2>
+<p>Süreçleri hiyerarşik bir biçimde görüntülemek istersek <strong><code>pstree</code></strong> komutumuzu da kullanabiliriz. Bu komut Windows işletim sisteminde de <strong><code>tree</code></strong> olarak kullanılabiliyor. Neyden bahsettiğimizi anlamak için hemen konsola <strong><code>pstree</code></strong> komutumuzu verelim.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/7-min.png" class="responsive"></p>
+<p>Komutumuz isminde(<strong><code>pstree</code></strong>) de yer aldığı gibi, süreçleri tıpkı bir ağaç gibi dallanıp budaklanarak hiyerarşik şekilde karşımıza getiriyor.</p>
+<h2>top</h2>
+<p>Bu komut da tıpkı <strong><code>ps</code></strong> komutunda olduğu gibi süreçler hakkında bilgi verir ancak bu işlemi <strong><code>ps</code></strong> komutundan farklı olarak 3 saniyede bir yenilenecek şekilde anlık değişimleri verecek şekilde yapar. Temel kullanımı <strong><code>top</code></strong> şeklindedir.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/8-min.png" class="responsive"></p>
+<p>Eğer varsayılan olarak kullanılan 3 saniyede bir güncelleme tekrarında bir değişiklik yapmak istersek, komutumuzu <strong><code>d</code></strong> parametresiyle birlikte yani <strong><code>top -d saniye</code></strong> şeklinde yazarak istediğimiz saniye aralığında süreç bilgilerinin çıktılarının güncellenmesini sağlayabiliriz.
+Ben örnek olması açısından bu yenileme hızını 1 saniye olarak ayarlamak için komutumu <strong><code>top -d 1</code></strong> şeklinde yazıyorum.
+Ve ayrıca bu ekranı kapatmak istesek ise sadece <strong><mark>q</mark></strong> tuşuna basmamız yeterli.
+Gif resminde de görüldüğü gibi <strong><code>top -d 1</code></strong> komutu ile her saniye yenilenen süreçler bilgi tablosu <strong><mark>q</mark></strong> tuşuna basmamızla sonlanmış oldu.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/9-min.gif" class="responsive"></p>
+<h2>pgrep</h2>
+<p>Çalışan süreçlerin belirli kriterlere göre sıralanmasını sağlayan komuttur.</p>
+<p>Süreç işlemlerinde çalışan süreç üzerinde değişiklik yapabilmemiz için ilk önce değişiklik yapacağımız süreci bulmamız gerekiyor. İşte <strong><code>pgrep</code></strong> komutu da bizlere lazım olan <strong>çalışan süreç numaralarını(pid)</strong> veriyor. Süreç numarası sistemde süreçlerin haberleşmesini sağlayan numaradır ve tüm süreçler için benzersiz olacak şekilde atanır. Buraya takılmadan devam edelim.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/10-min.png" class="responsive"></p>
+<p>Örnek vererek komutumuzun kullanımını görmüş olalım.</p>
+<p>Örnek göstermek adına <em>armitage</em> aracını çalıştırıyorum. Çalışmakta olan <em>armitage</em> aracının süreci üzerinden örneğimizi yapalım.
+Çalıştırmış olduğumuz <em>amitage</em> aracının süreç numaralarını(<strong>procces id(pid)</strong>) sorgulamak üzere <strong><code>pgrep armitage</code></strong> komutumuzu giriyoruz.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/11-min.png" class="responsive"></p>
+<p>Ve çıktı da görüldüğü gibi <strong><code>pgrep armitage</code></strong> komutu sayesinde <em>armitage</em> aracının <strong>süreç numaralarını(pid)</strong> görmüş olduk.</p>
+<p>Şimdi de <strong><code>pgrep</code></strong> komutunun birkaç işlevsel parametresini görelim.</p>
+<p><strong>l :</strong> Süreçlerin numaraları ile beraber süreç isimlerini de görmek için kullanılır.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/12-min.png" class="responsive"></p>
+<p><strong>lu :</strong> Belirtilen kullanıcıdaki, süreçlerin numaraları ile beraber süreç isimlerini de görmek için kullanılır. Burada <strong><code>u</code></strong> parametresi hedef kullanıcı belirtmemizi sağlar <strong><code>l</code></strong> parametresini zaten bir önceki kısımda açıklamıştık.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/13-min.png" class="responsive"></p>
+<p>İleride bu bilgiler bize lazım olacak şimdi süreçleri sonlandırma komutları ile devam edelim.</p>
+<h2>kill-killall</h2>
+<p>Komutlarımız isimlerinden de anlaşılabileceği gibi süreçleri sonlandırma(öldürme) işleminde kullanılıyorlar.
+<strong>Kullanım şekilleri;</strong></p>
+<p><strong><strong><code>kill süreç_numarası(pid)</code></strong></strong> : Süreçleri pid(süreç numarası) ile sonlandırmak.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/14-min.png" class="responsive"></p>
+<p><strong><strong><code>kill -9 süreç_numarası(pid)</code></strong></strong> : Kapanmaya karşı direnen süreçleri pid(süreç numarası) ile sonlandırmak.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/15-min.png" class="responsive"></p>
+<p><strong><strong><code>killall süreç_ismi</code></strong></strong> : Süreçleri isimleri ile sonlandırmak.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/16-min.png" class="responsive"></p>
+<p><strong><strong><code>killall -9 süreç_ismi</code></strong></strong> : Kapanmaya karşı direnen süreçleri isimleri ile sonlandırmak.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/17-min.png" class="responsive"></p>
+<p><strong><strong><code>killall -i süreç_ismi</code></strong></strong> : Süreçleri isimlerini kullanarak ve onay alarak sonlandırmak.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/18-min.png" class="responsive"></p>
+<h2>xkill</h2>
+<p>Bu komutumuz yanıt vermeyen bir programı grafiksel arayüzden kapatmamızı sağlayan ilginç bir komuttur.</p>
+<p>Diyelim ki <em>leafpad</em> aracımızı açtık ve her ne sebeple olursa olsun yanıt vermeyi kesti, bu noktada eğer l<em>eafpad</em> aracını anında kapatmak istersek konsola <strong><code>xkill</code></strong> yazıyoruz ve fare imleci çarpı işaretine dönüşüyor. Bu çarpı işareti ile tıkladığımız araç otomatik olarak kapanıyor.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/19-min.gif" class="responsive"></p>
+<p>Anlatım havada kalmış olabilir o yüzden <strong><code>xkill</code></strong> komutunun kullanımını kesinlikle sizler de hemen deneyin akılda kalması kolay bir komut zaten.</p>
+<h2>fg-bg-jobs</h2>
+<p>Son olarak gayet kullanışlı komutlar olan <strong><code>fg</code></strong> ve <strong><code>bg</code></strong> komutlarına değinerek süreçler konumuzu bitirelim. Konsoldan komut verildiğinde, verdiğimiz komut doğrultusunda gerçekleşen işlem süreci bitmeden, konsoldan tekrar başka bir komut vermemiz mümkün olmuyor. Bu gibi durumlarda eğer yeni bir komut girişi yapmak istersek, süreci arka plana alıp yeni komutumuzu ancak öyle çalıştırabiliriz.
+İşte bu komutlarımız da konsoldan çalıştırdığımız süreçleri arka plana ve arkaplandaki süreçleri önplana taşıma gibi işleve sahiptirler. Ayrıca <strong><code>jobs</code></strong> komutu da bu süreçlerin durumunu takip etmemizi sağlar. Bu durum örnekler ile daha iyi anlaşılacaktır.</p>
+<p>Kullanımın rahat şekilde anlaşılması için adım adım gidelim.</p>
+<p>Konsoldan <em>leafpad</em> uygulamasını açalım. Bunun için konsola <strong><code>leafpad</code></strong> yazmamız yeterli.</p>
+<p>Yazdıktan sonra ekrana <em>leafpad</em> uygulaması geldi.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/20-min.png" class="responsive"></p>
+<p>Programı çalıştırdığımız konsol şu anda <em>leafpad</em> uygulamasını çalıştırmakla meşgul. Yani bu demek oluyor ki eğer biz bu konsol üzerinden yeni bir komut girmek istersek bu mümkün olmayacak. İşte bu yüzden halihazırda çalışan <em>leafpad</em> uygulamasının çalışmasını durdurup arka plana atmalıyız ki yeni komutlar girdiğimizde konsol <em>leafpad</em> uygulaması ile meşgul olmasın.</p>
+<p>Konsolda çalışan <em>leafpad</em> uygulamamızı arka plana atmak yani duraklatmak için <strong><mark>Ctrl + Z </mark></strong> tuş kombinasyonunu kullanıyoruz. Bu işlemin ardından konsol bize aşağıdaki gibi bir çıktı basarak <em>leafpad</em> uygulamasının durduğunu haber veriyor.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/21-min.png" class="responsive"></p>
+<p>Konsolun bize <em>leafpad</em> programının durduğunu haber verdiğini söylemiştik. Ayırca bu gibi durumlarda sürecin durumunu sorgulama yapmak için <strong><code>jobs</code></strong> komutunu da kullanabiliyoruz.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/22-min.png" class="responsive"></p>
+<p>Artık <em>leafpad</em> programımızın durdurulduğundan kesin eminiz. Hatta <em>leafpad</em> uygulamasına grafiksel arayüzden bir şeyler yazmaya çalıştığımızda uygulama durdurulduğu için hiç bir tepki vermiyor. Yani konsolumuz artık <em>leafpad</em> uygulamasının sürecini işlemiyor. Bunu teyit etmek için önceden konsola komut veremediğimizi ele alırsak denemek için konsola <strong><code>ls</code></strong> komutumuzu giriyoruz.
+Adımların her birini genel olarak -min.gif olarak verdiğim resimde görebilirsiniz.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/23-min.gif" class="responsive"></p>
+<p><strong><code>ls</code></strong> komutunun çıktısını alabildik bu da demek oluyor ki konsol ekranımız önceden olduğu gibi <em>leafpad</em> uygulaması ile meşgul değil, böylelikle yeni komutlar alabiliyor.</p>
+<p><em>Leafpad</em> programı durduruldu ancak biz hem <em>leafpad</em> programını kullanmak hem de aynı konsol ekranından yeni komutlar girebilmek istiyoruz. İşte bu noktada durdurulan <em>leafpad</em> süreçlerinin arka plana alınarak çalıştırılmasına devam edilmesi gerekiyor. Bu işlevi de <strong><code>bg</code></strong> komutu sağlıyor. Komut satırımıza <strong><code>bg</code></strong> komutumuzu girdiğimizde artık <em>leafpad</em> programı süreçleri <strong>arka planda</strong> çalışır duruma geçiyor ve biz hem konsol ekranından yeni komutlar girebiliyoruz hem de <em>leafpad</em> uygulamamızı kullanabiliyoruz. <em>Leafpad</em> uygulamasının çalışır olduğunu <strong><code>jobs</code></strong> komutu ile de aşağıdaki şekilde teyit edebiliriz.</p>
+<p><img src="img/10-%20S%C3%BCre%C3%A7%20%C4%B0%C5%9Flemleri/24-min.gif" class="responsive"></p>
+<p>Eğer arka plana attığımız program sürecini tekrar eskisi gibi konsol üzerinden(<strong>ön planda</strong>) çalışır hale getirmek istersek <strong><code>fg</code></strong> komutumuzu kullanabiliriz. Bu komutumuzu kullandığımızda konsol artık yeni komut almayacak ve tekrar sadece <em>leafpad</em> uygulaması ile meşgul olacak.</p>
+<p>Yukarıda verilen -min.gif ile bu durumlar ele alınmıştır.</p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", 
+	targets: ["body"],
+	levels: 2,
+	persist: "session",
+	animate: 0 
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>

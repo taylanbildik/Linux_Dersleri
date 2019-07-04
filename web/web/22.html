@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  @media screen and (min-width: 1080px) {
+  .selector {
+     font-size: 40px;
+  }
+}
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  <!-- Static navbar -->
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <!--if you want, also is possible change to fluid container-->
+      <!--<div class="container-fluid">-->
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/23.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <!-- Main component for a primary marketing message or call to action -->
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text"><h1>Zamanlanmış Görevler</h1>
+<p>Sistemde yapılması gereken rutin işlerin zamanı geldiğinde otomatik olarak yapılması işine zamanlanmış görevler deniyor. Bu rutin işlere örnek söylemek gerekirse; benim her pazartesi sistemi yedeklemem gerekiyor diyelim, bunu her pazartesi elle yapmak yerine bu işi zamanlanmış görevlere ekleyerek otomatiğe bağlayabilirim. İşte zamanlanmış görevler bu ve bunun gibi durumlarda sıkça kullanılıyor.</p>
+<h2>cron</h2>
+<p>Rutin tekrarları sağlayan zamanlanmış görevleri yerine getirmemizi sağlayan servisimizin adı <strong><code>cron</code></strong>'dur.</p>
+<p>Anlatıma <strong><code>cron</code></strong> servisinin çalışma durumunu kontrol ederek başlayalım. Bunun için konsola <strong><code>service cron status</code></strong> komutunu verelim.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/1-min.png" class="responsive"></p>
+<p>Cron servisimizin çalıştığını teyit etmiş olduk. Cron servisinin yapılandırma dosyası <strong><mark>/etc/crontab</mark></strong> konumunda yer alıyor göz atmak için konsola <strong><code>cat /etc/crontab</code></strong> komutunu verebiliriz.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/2-min.png" class="responsive"></p>
+<p>Şimdi de düzenleme yapmak adına konsola <strong><code>crontab -e</code></strong> komutunu verelim. Burada yer alan <strong><code>-e</code></strong> parametresi "<strong>edit</strong>" kelimesini yani "<strong>düzenleme</strong>" ifadesini temsil ediyor.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/3-min.png" class="responsive"></p>
+<p>Konsol bize düzenleme yaparken hangi aracı kullanmak istediğimizi soruyor. Ben <strong>nano</strong> aracını seçiyorum yani konsola <strong>2</strong> rakamını giriyorum.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/4-min.png" class="responsive"></p>
+<p>Çıktıda bize bir örnek kullanım gösterilmiş biz bu kullanımı ele alarak servisin kullanım şeklini görelim.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/5-min.png" class="responsive"></p>
+<p>Yukarıdaki şema yeterince açıklayıcı olmadıysa endişelenmenize gerek yok. Örnekler üzerinden yapacağımız anlatım ile <strong>cron</strong> servisimizin kullanımını rahat şekilde anlamış olacağınıza inanıyorum.</p>
+<p>Zamanlanmış görevleri yerine getiren servis <strong>cron</strong> ve bu servisin yerine getirdiği işlere de <strong>cron job</strong> deniliyor. Bu tanımın çok da önemi yok ancak bunu böyle bilseniz daha iyi olur. Bizler de kendi zamanlanmış görevlerimizi (cron jobs) atamak istersek <strong><code>crontab -e</code></strong> komutu ile açtığımız dosyanın son satırına yapmak istediğimiz işi ve tam tarih düzenini girmemiz gerekiyor. Bu görevleri nasıl oluşturacağımızı konunun devamında örnekler üzerinden öğreniyor olacağız.</p>
+<h1><em>Örnekler</em></h1>
+<p>Kullanımın anlaşılması amacıyla örnekleri olabildiğince basit tuttum.</p>
+<p>Sizlere vereceğim örnekler ne kadar gereksiz gelse de örneği konuyu anlamak adına kullandığımızı unutmayın ve asıl anlatılmak istenen noktaya odaklanın lütfen.</p>
+<p>O anın tarihi detaylarını bir dosyaya kaydetmek istiyorum diyelim.
+Tarihi detayları <strong><mark>zamanlar.txt</mark></strong> isimli klasöre kaydetmek için
+<strong><code>* * * * * echo `date` &gt;&gt; ~/Desktop/zamanlar.txt</code></strong> komutunu kullanacağım.</p>
+<p>Bütün yıl boyunca her dakikanın çıktılarını kaydetmesini istersem aşağıdaki şekilde bir kullanım işimizi görür.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/6-min.png" class="responsive"></p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/7-min.png" class="responsive"></p>
+<p>Yıldız işareti (<strong><mark>*</mark></strong>) olan kısımlar hepsini kapsamaktadır yani haftanın bütün günleri, ayın bütün günleri ve saatin bütün dakikaları.. gibi.</p>
+<p>Komutun düzenli hali <strong><code>* * * * * echo `date` &gt;&gt; ~/Desktop/zamanlar.txt </code></strong> şeklindedir.</p>
+<p>Bir süre geçtikten sonra masaüstünde(Desktop dizininde) yer alan <strong><mark>zamanlar.txt</mark></strong> dosyasını <strong><code>cat zamanlar.txt</code></strong> komutu ile kontrol ediyorum.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/8-min.png" class="responsive"></p>
+<p>Görev istediğimiz şekilde yani her dakikada yazılacak şekilde otomatik olarak gerçekleşmiş oldu.</p>
+<p>Şimdi spesifik bir zaman belirleyerek görevin yerine getirilme durumunu ele alalım.</p>
+<p>Her gün 10:25 da otomatik olarak <strong><mark>test.txt</mark></strong> isimli belgeye "test yazısı" yazdırmak için kalıbı <strong>crontab</strong> dosyasına aşağıdaki şekilde yazmalıyız.(Ayrıca başta hangi ifadenin neyin karşılığı olduğunu belirttiğim için tekrar tekrar üzerlerine yazmıyorum. Eğer şaşırırsanız yukarıdaki kısımları tekrar gözden geçirebilirsiniz.)</p>
+<div class="highlight highlight-source-shell"><pre>25 10 <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>test yazısı<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/Desktop/test.txt</pre></div>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/9-min.png" class="responsive"></p>
+<p><strong><code>ls -l</code></strong> komutu ile de dosyamızın üretildiği tarihi sorguladık ve çıktıdan da anladığımız üzere verdiğimiz görev zamanında yerine getirilmiş.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/10-min.png" class="responsive"></p>
+<h3>Eğer belirli bir saat-tarih arasında belirli kere tekrar eden görev atamak istersek kullanım şekilleri aşağıdaki örneklerdeki gibi olacaktır.</h3>
+<p>Belirli aralıklar ile olacaksa aralıkları <strong>-</strong>(<strong>kısa çizgi</strong>) işareti ile ayırarak belirtmemiz gerekiyor. Yani örneğin;</p>
+<p>Her saatin ilk 5 ile 20 dakikası arasında komutum çalışsın istersem:</p>
+<div class="highlight highlight-source-shell"><pre>5-20 <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> komut</pre></div>
+<p>Her gün saat 3 ile 5 arasında her dakika komutum çalışsın istersem:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">*</span> 3-5 <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> komut</pre></div>
+<p>Her ayın 5 ile 15. günleri arasında saat 16 ile 22 arasındaki her saatin ilk 20 dakikası komutum çalışsın istersem.</p>
+<div class="highlight highlight-source-shell"><pre>0-20 16-22 5-15 <span class="pl-k">*</span> <span class="pl-k">*</span> komut</pre></div>
+<p>Haziran ayında ilk 20 gününün her cuma günü saat 12 ile 15 arasındaki 35 ile 55 dakikaları arasında komutum çalışsın istersem:</p>
+<div class="highlight highlight-source-shell"><pre>35-55 12-15 1-20 6 5 komut </pre></div>
+<hr>
+<p>Belirli gün ve tarihlerde olacaksa o tarihleri <strong>,</strong>(<strong>virgül</strong>) işareti ile ayırarak tek tek belirtmemiz gerekiyor. Yani örneğin;</p>
+<p>Her saatin 5 10 15 ve 20. dakikalarında komutum çalışsın istersem:</p>
+<div class="highlight highlight-source-shell"><pre>5,10,15,20 <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> komut</pre></div>
+<p>Her gün saat 3 5 ve 7 de komutum çalışsın istesem:</p>
+<div class="highlight highlight-source-shell"><pre>0 3,5,7 <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> komut</pre></div>
+<p>Her ayın 20 22 24 ve 26. günleri 2 4 6 ve 8 saatlerinin 5. ve 10. dakikalarında komutum çalışsın istersem:</p>
+<div class="highlight highlight-source-shell"><pre>5,10 2,4,6,8 20,22,24,26 <span class="pl-k">*</span> <span class="pl-k">*</span> komut</pre></div>
+<hr>
+<p>Belirli süre içinde belirli kez çalışmasını istersek <strong>/</strong>(<strong>taksim</strong>) işareti ile kaç kez olacağını belirtebiliyoruz. Yani örneğin;</p>
+<p>5 dakikada bir çalışmasını istersem:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">*</span>/5 <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> komut</pre></div>
+<p>10 saatte bir komutumun çalışmasını istersem:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">*</span> <span class="pl-k">*</span>/10 <span class="pl-k">*</span> <span class="pl-k">*</span> <span class="pl-k">*</span> komut</pre></div>
+<p>Elbette örnekleri çoğaltmak mümkün ancak daha fazlası gereksiz olacaktır. Ayrıca atadığınız zamanlanmış görevlerin doğruluğunu kontrol etmek isterseniz <a target="_blank" href="https://crontab.guru" rel="nofollow">bu adresten</a> verdiğiniz zaman aralığının karşılığını görebilir ve hata yapmaktan kaçınabilirsiniz.</p>
+<p>Yani bu konu sizlerin de biraz kurcaladıktan sonra anlayacağı kolay bir konudur.</p>
+<p>Eğer belirlenen zamanlanmış görevleri listelemek istersek <strong><code>crontab -l</code></strong> komutunu kullanabiliriz. Buradaki <strong><code>-l</code></strong> parametresi "<strong>list</strong>" kelimesini yani "<strong>listeleme</strong>" işlevini temsil ediyor.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/11-min.png" class="responsive"></p>
+<p>Şayet oluşturduğumuz tüm zamanlanmış görevleri silmek istersek <strong><code>crontab -r</code></strong> komutunu kullanmalıyız. Buradaki <strong><code>-r</code></strong> parametresi "<strong>remove</strong>" kelimesini yani "<strong>silme</strong>" işlevini temsil ediyor.</p>
+<p><img src="img/19-%20Zamanlanm%C4%B1%C5%9F%20G%C3%B6revler/12-min.png" class="responsive"></p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+/***********************************************
+* Fluid Text Resizer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* Please keep this notice intact
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+	targets: ["body"], //target elements to resize text within: ["selector1", "selector2", etc]
+	levels: 2, //number of levels users can magnify (or shrink) text
+	persist: "session", //enter "session" or "none"
+	animate: 0 //animation duration of text resize. Enter 0 to disable
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+    <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  @media screen and (min-width: 1080px) {
+  .selector {
+     font-size: 40px;
+  }
+}
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+    <!-- Static navbar -->
+    <nav class="navbar nav-down navbar-default navbar-fixed-top " >
+        <div class="container">
+
+            <!--if you want, also is possible change to fluid container-->
+            <!--<div class="container-fluid">-->
+
+            <center><div id="sizecontroldiv" class="controlstyle">
+                <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        		<a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        		<a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        		<a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        		<a href="./hakkında.html" class="btn btn-success navbar-btn">İleri</a>
+
+            </div>
+            </center>
+
+        </div><!--/.container-fluid -->
+    </nav>
+
+    <!-- Main component for a primary marketing message or call to action -->
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text"><h1>Linux Arayüzünü Özelleştirmek</h1>
+<p>Bu bölümde Linux'un en sevilen yanlarından olan grafiksel arayüzü özelleştirmeyi öğreneceğiz. Sizlerin de bildiği gibi Linux dışındaki işletim sistemlerinde bu grafiksel özelleştirme oldukça sınırlıdır. Windows ve macOS gibi dağıtımlarda sistem belirli bir arayüz ile gelir ve sizlere yalnızca bir kaç özelleştirme imkanı sunar.</p>
+<p>Ancak Linux'ta durum böyle değildir. <strong>Linux, kullanıcısına bir çok konuda olduğu gibi grafiksel arayüz konusunda da tam özelleştirme imkanı tanır.</strong> Zaten Linux'un en sevilen yanlarından biri de bu sınırsız müdahale ve özelleştirme imkanıdır. Burada bahsedilen grafiksel arayüze müdahalenin kullanıcıya sağladığı imkanlar kullanıcının ihtiyaçlarına göre değişmektedir.</p>
+<p>Şöyle ki; örneğin kullanıcı göze hitap eden bir sistem görünümü istiyorsa kendi zevklerine göre arayüzde özelleştirmeler yaparak severek kullanacağı bir sistem görünümü ortaya çıkarabilir. Ya da kullanıcı için sistem performansı daha ön plandaysa, buna uygun arayüzü de tercih edebilir. Yani kısacası bu özelleştirme imkanı kullanıcıyı belirli bir arayüz kalıbına zorlamadan ihtiyaçlarına göre bir arayüz kullanma imkanı tanır.
+İşte Linux'un kullanıcıları tarafından çok sevilmesinin ardında sistem ile ilgili herhangi bir sınırlamanın olmaması ve kullanıcının ihtiyacına göre sistemin baştan aşağı tıpkı bir hamur gibi şekil alması yatmaktadır.
+Kısacası Linux ne eksiği ne de fazlalığı olan bir işletim sistemidir. Linux sizin neye ihtiyacınız varsa size onu sunabilecek potansiyelde bir sistemdir. Bu da size bilgisayara gerçek anlamda hükmetme imkanı tanır.</p>
+<p>İşte tüm bu esneklik sayesinde Linux kullanıcıları diğer işletim sistemlerine oranla Linux'u çok daha efektif şekilde kullanabiliyorlar. Aslında bu özelleştirme imkanı ve avantajları konusunda çok daha fazla şey söylenebilir ancak Linux'un sağladığı tüm bu güzellikleri anlamanın en iyi yolu bizzat sizlerin de deneyimleyip görmesidir. Tüm bu söylediklerimizden yola çıkacak olursak; sonuçta, Linux'u özelleştirmenin bir sınırı bulunmuyor ancak biz bu kısımda genel olarak özelleştirme imkanlarının neler olduğunu kısaca görmüş olacağız.</p>
+<h1>Arayüz Değişimi İle İlgili Kavramlar</h1>
+<p>Evet, özelleştirmenin sınırsız olduğundan ve bizim ihtiyaçlarımıza göre değişebileceğinden bahsettik. Bu durumda özelleştirme yapmadan önce bizim ihtiyacımızın ne olduğunu belirlememiz gerekiyor. İhtiyacımızı belirlerken oldukça fazla etmen olduğundan ben burada başlıca etmenlerden olan performans ve güzel görünüm etmenlerini kısaca ele alıp örneklendirmeye çalışacağım.</p>
+<p>Ancak örnek vermeden önce grafiksel arayüzü değiştirme hakkında öğrenmemiz gereken iki kavram bulunuyor. Bu kavramlardan biri <strong>masaüstü ortamı</strong> değiştirmek diğeri ise yalnızca <strong>pencere yöneticisi</strong> değiştirmektir. Hangi işlemin bizim için daha uygun olduğuna karar verebilmemiz için öncelikle bu seçeneklerin neleri ifade ettiğini kısaca ele alalım.</p>
+<p><strong>Masaüstü ortamı</strong> dediğimiz şey, grafiksel arayüzün tamamını kapsayan arayüz paketi bütününe deniyor. Burada kast edilen arayüz bütünü; sistemde yer alan simgeleri, araç çubuklarını, duvar kağıtlarını, pencere yöneticisini ve sürükle bırak gibi kolaylaştırıcı imkanları kapsayan kısımlardır. Yani masaüstü ortamı dediğimiz şey bizlere kapsamlı grafiksel arayüz sunar.</p>
+<p>Diğer bir seçeneğimiz olan <strong>pencere yöneticisi</strong> ise bizlere yalnızca pencereler üzerinden çalışma imkanı sunar. Yani pencere yöneticisi içerisinde, masaüstü ortamında olduğu gibi  araç çubukları, animasyonlu menüleri ve bunun gibi kapsamlı grafiksel arayüz ögelerini barındırmaz. Böylelikle kullanıcının sistemi daha performanslı kullanabilmesi için yalnızca pencereler üzerinden sistemin yönetilebilmesini sağlar. Örnek olması açısından yalnızca pencere yöneticisini kullandığınızda sistemin nasıl gözükeceğini, aşağıdaki <em><strong>openbox</strong></em> pencere yöneticisi ekran görüntüsüne bakarak görebilirsiniz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox-min.png" class="responsive"></p>
+<p>Şimdi hangi seçeneği hangi durumda seçmemiz gerektiği konusuna değinecek olursak;
+Masaüstü ortamı, içerisinde tüm grafiksel arayüz araçlarını barındıracağı için eğer sistemi kullanırken çok fazla grafiksel öge olduğunu ve bunların da sisteminizi yavaşlattığını düşünüyorsanız masaüstü ortamını kaldırarak sistemi yalnızca pencereler ile de yönetebilirsiniz.
+Buradaki açıklama sizi tam olarak yönlendirmemiş olabilir ancak ileri ki kısımlarda hem yeni masaüstü ortamı kurulumunu hem de pencere yöneticisi kurulumunu göreceğiniz için hangisinin sizin için uygun olacağına kendiniz karar verebiliyor olacaksınız. Yani buradaki açıklamalar sizin için yeterli gelmediyse endişelenmeniz gerek yok. Şimdi devam edelim.</p>
+<h2>Masaüstü ortamını nasıl değiştirebiliriz ?</h2>
+<p>Masaüstü ortamı dediğimiz şeyin grafiksel arayüz içerisindeki ögelerin tamamına yakınını kapsadığını daha önceki kısımda belirtmiştik. Yani  arkaplan, menü çubuğu, araç çubuğu, gösterge paneli ve bunlar gibi her şey masaüstü ortamını kapsıyor.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/desktop-env-min.png?raw=true" class="responsive">
+Yani biz yeni bir masaüstü ortamı kurduğumuzda tüm bu ögeler de yeni masaüstü ortamı ile birlikte değişiyor. Eğer şu anda kullanmakta olduğunuz mevcut masaüstü ortamını değiştirmek isterseniz birbirinden farklı bir çok masaüstü ortamı seçeneğiniz bulunuyor. Ben başlıca masaüstü ortamlarının genel özelliklerinden bahsedeceğim ancak ondan önce mevcut masaüstü ortamımızı nasıl kendimize göre düzenleyip özelleştirebiliriz onu öğrenelim.</p>
+<h3>Gnome3 Masaüstü Ortamını Özelleştirmek</h3>
+<p>Kullanmakta olduğumuz Kali Linux dağıtımı varsayılan olarak en çok kullanılan masaüstü ortamlarından olan <strong>Gnome 3</strong> masaüstü ortamı ile birlikte geliyor. <strong>Gnome 3</strong> masaüstü ortamı oldukça yaygın şekilde kullanılmakta ve grafiksel arayüz bakımından bir çok kolaylık sunmaktadır. Ancak son dönemlerde geliştirici ekibin almış olduğu radikal kararlar doğrultusunda; masaüstünde yer alan kısayolların ve bazı önemli grafiksel arayüz araçlarının kaldırılması ile birlikte bir çok kullanıcı tarafından <strong>Gnome 3</strong> masaüstü ortamı kullanışsız bulunmaktadır. Ayrıca <strong>Gnome 3</strong> çok fazla grafiksel öge ve gereğinden fazla animasyonlu içerik barındırdığından sistem performansını da diğer masaüstü ortamlarına göre oldukça fazla olumsuz etkilemektedir. Bu noktada belirtmeliyim ki <strong>Gnome 3</strong> masaüstü ortamını kötülemek gibi bir niyetim yok, dileyen arkadaşlar elbette severek kullanmaya devam edebilir. Ancak son dönemlerde edindiğim tecrübeler ve bana yapılan geri bildirimler ile birlikte artık <strong>Gnome 3</strong> masaüstü ortamının pek de verimli çalışmadığı kanaatine varmış bulunuyorum.
+Fakat yine de <strong>Gnome 3</strong> masaüstü ortamını kullanmaya devam edecek olan arkadaşlar için <strong>Gnome 3</strong> temasında nasıl değişiklik yapabileceğimizi ele almak istiyorum.</p>
+<p>Öncelikle belirtmek isterim ki; bu tema değişikliklerinin bir sınırının olmadığı için bu özelleştirmelerin tamamını kapsamlı şekilde anlatmam mümkün değil. Ancak ben bu kısımda sizlere genel olarak, yeni bir temayı nereden bulabileceğinizi ve bulduğunuz bu temayı sisteme nasıl geçirebileceğinizi göstereceğim.</p>
+<p><strong>Gnome 3</strong> masaüstü arayüzünü kullanıyorken genel tema değişimlerini <strong>ince ayarlar(tweaks)</strong> menüsü üzerinden gerçekleştiriyoruz. Bu nedenle öncelikle ince ayarlar menümüzden ne gibi değişiklikler yapabileceğimizi öğrenmek için ince ayarlar menüsünü açalım.
+İnce ayarlar menüsü açıldıktan sonra "<strong>Görünüm</strong>" sekmesine gelelim.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/tweaks-min.gif" class="responsive">
+Burada yer alan seçenekler sistem arayüzünde yapabileceğimiz temasal değişiklikleri gösteriyor. Görünüm sekmesinde yer alan seçenekleri sırasıyla ele alacak olursak;</p>
+<p><strong>Uygulamalar;</strong> Sistemdeki pencerelerin görünümünü değiştiriyor. Herhangi bir uygulama çalıştığında uygulamayı çevreleyen çerçevelere pencere deniyor. Örnek için aşağıdaki "<em><strong>Uygulamalar</strong></em>" kısmı değiştirilmiş görsele bakabilirsiniz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/1-min.png" class="responsive"></p>
+<p><strong>İmleç;</strong> İmlecin görünümünü sağlayan kısım. Aşağıdaki görselde değiştirilmiş hali verilmiştir.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/2-min.png" class="responsive"></p>
+<p><strong>Simgeler;</strong> Sistemde yer alan simgelerin görünümünden sorumlu kısım. Aşağıda değiştirilmiş halleri verilmiştir.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/3-min.png" class="responsive">
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/4-min.png" class="responsive"></p>
+<p><strong>Kabuk;</strong> Sistem genelindeki panelleri kapsayan kısımı ifade ediyor. Aşağıdaki görselde panelleri değiştirilmiş görüntü verilmiştir.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/5-min.jpg" class="responsive"></p>
+<p><strong>Ses;</strong> Sistem seslerini kapsayan kısımdır, değiştirilmesi önerilmez.</p>
+<p>Geri kalan kısımlar da zaten bildiğimiz masaüstü arkaplanı ve kilit ekranı görünümünü ifade ediyor.</p>
+<p>Artık <strong>Gnome 3</strong> masaüstü ortamında değiştirebileceğimiz kısımlara göz attığımıza göre sırası ile nasıl değiştirebiliriz görelim.
+Tema kurulumunu yapmak için öncelikle hoşumuza gidecek bir tema edinmemiz gerekiyor.
+Bunun için <a href="https://www.gnome-look.org/" rel="nofollow">https://www.gnome-look.org/</a> adresine girelim. Bu site Gnome ile ilgili temasal değişiklikleri içeren oldukça geniş çaplı bir platform. Ama ben şimdi örnek olması için çok detaya girmeden yalnızca genel temayı değiştirmeyi ele alacağım.</p>
+<p><em><strong>Uygulamalar Kısmını Değiştirmek</strong></em></p>
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/6-min.png" class="responsive">
+Tema değişimi için <em><strong>GTK3 Themes</strong></em> yazan sekmeye tıklayalım.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/7-min.png" class="responsive">
+Buradan gözünüze hitap eden bir tema belirleyebilirsiniz ben şimdi örnek olması açısından ilk temayı seçiyorum. Açılan tema sayfasından tema ile ilgili detaylı bilgi alabilir ve ekran görüntüleri ile tema hakkında fikir sahibi olabilirsiniz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/8-min.gif" class="responsive">
+<p>Temayı indirmek için <strong>Download</strong> butonuna basalım ve buradan istediğimiz içeriği indirelim. Gördüğünüz gibi bu temanın bir çok farklı varyasyonu bulunuyormuş, ben herhangi birini seçiyorum.  Ve <em><strong>Save File</strong></em> diyerek dosyanın inmesini sağlıyorum.</p>
+<p>Bu arada ben burada sizlere yol göstermek amacıyla örnekler verdiğim için çok fazla tema içeriğini karıştırmıyorum ancak sizler elbette deneye deneye hoşunuza gidecek temayı bulabilirsiniz. Zaten kurulum işlemi de oldukça basit olduğundan çok çabucak bir sürü tema deneyebilirsiniz.</p>
+<p>Neyse dosyamız da inmiş oldu. Şimdi dosyamızı sistemin görebilmesi için <em><strong>/usr/share/themes/</strong></em> klasörüne çıkarmamız gerekiyor.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/9-min.png" class="responsive"></p>
+<p>Evet dosyamı ilgili konuma çıkardım. Artık böylelikle sistem yeni eklediğimiz tema içeriğini görebilecek.
+Hemen yeni temayı kurmak için ince ayarları açalım. İnce ayar menüsüne arama çubuğuna <em><strong>"tweaks"</strong></em> yazarak da ulaşabilirsiniz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/10-min.gif" class="responsive">
+Evet ince ayar menüsünü açtık, buradan görünüm sekmesine tıklayalım. Ve buradan ***Uygulamalar *** kısmından indirdiğimiz temayı seçerek kurulması sağlayalım. İşte yeni bir tema kurulum işlemi bu kadar kolay. Diğer temasal değişim işlemleri de aynı şekilde gerçekleşiyor. Hemen kısaca diğer değişimleri de yapalım.</p>
+<p><em><strong>İmleç Kısmını Değiştirmek</strong></em></p>
+<p>İmleci değiştirmek için öncelikle yeni bir imleç paketi indirmemiz gerekiyor. Paketi indirdikten sonra imleç dosyasını <em><strong>/usr/share/icons/</strong></em> konumuna atmamız gerekiyor. Böylelikle sistem yeni imlecimizi tanıyabilecek. İndirdiğimiz imleç dosyasını ilgili konuma attıktan sonra yine ince ayar menüsünden <em><strong>Görünüm</strong></em> sekmesine gerek buradan <strong>imleç</strong> değişimi yapılabilir. Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/imlec-min.gif?raw=true" class="responsive"></p>
+<p><em><strong>Simgeler Kısmını Değiştirmek</strong></em></p>
+<p>Simgeler kısmını değiştirmek için tıpkı imleç değiştirirken yaptığımız gibi, indirdiğimiz simge dosyalarını <em><strong>/usr/share/icons/</strong></em> konumuna taşımamız gerekiyor. Hem imlecin hem de simgelerin aynı konumda bulunması kafanızı karıştırmasın. Zaten dosya yapıları farklı olduğundan sistem kolayca ayırt edebiliyor. Siz sadece beğendiğiniz simge paketini <em><strong>/usr/share/icons/</strong></em> konumuna atın ve ince ayar menüsünden <em><strong>Görünüm</strong></em> sekmesine gelerek <strong>simgeler</strong> kısmından indirdiğiniz simgeyi bularak seçin. Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/simgeler-min.gif?raw=true" class="responsive"></p>
+<p><em><strong>Kabuk Kısmını Değiştirmek</strong></em></p>
+<p>Kabuk diye bahsedilen kısmın sistemdeki genel arayüz içerisinde bulunan panelleri karşıladığını daha önce söylemiştik. Şimdi değişimi için yeni bir arayüz paketi indirelim ve bu paketi <em><strong>/usr/share/themes/</strong></em> konumuna çıkaralım. Ve daha sonra ince ayar menüsünden <em><strong>Görünüm</strong></em> sekmesine gelerek <strong>kabuk</strong> kısmından indirdiğiniz kabuk temasını bularak seçelim. Ve işlem bu kadar ! Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/kabuk-min.gif?raw=true" class="responsive"></p>
+<p>Benim <strong>Gnome 3</strong> ile ilgili göstereceğim temasal değişiklikler bu kadar, dileyen arkadaşlar çok daha fazla kurcalayarak çok daha fazla seçeneğe ulaşabilir. Şimdi <strong>Gnome 3</strong> masaüstü ortamını bir kenara bırakarak yeni masaüstü ortamlarını tanıyalım.</p>
+<h1>Masaüstü Ortamları ve Kısaca Özellikleri</h1>
+<p>Baştan belirtmek isterim ki benim burada yazacağım şeyler kendi deneyimlerim ve genel gözlemlerimdir. Yani tam anlamıyla sizi yönlendirmeyebilir. Ben burada sizlerin kurulum yapmadan önce daha iyi fikir sahibi olabilmeniz için Kali Linux dağıtımında kullanılabilen masaüstü ortamlarının başlıca özeliklerini kısaca açıklamaya çalıştım. Ancak burada belirttiğim özellikler bir çok faktöre göre değişmektedir, yani siz buradan fikir sahibi olun ancak kesinlikle ve kesinlikle kendiniz deneyerek hangisinin sizin için en ideali olduğuna kendiniz karar verin. Uyarımı peşin peşin yaptıktan sonra hadi artık lafı daha fazla uzatmadan Kali Linux'a uygun olan masaüstü ortamlarının genel özelliklerini tanımaya başlayalım.</p>
+<h2><strong>XFCE Masaüstü Ortamı</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xfce-min.png" class="responsive">
+Görsel olarak oldukça yalındır ve hiç bir gereksiz görsel arayüz ögesi kullanmaz. Önceliği sistemin maksimum verimde çalışmasıdır, minimal bir sistemdir. Çok hafif olduğundan sistemi yormadan oldukça hızlı şekilde çalışır.  Eğer benim işim performans görsellik önemli değil diyorsanız tercih edebilirsiniz.</p>
+<h2><strong>KDE Masaüstü Ortamı</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/kde-min.png" class="responsive">
+Daha çok Windows'u andırır, asıl hedefi grafiksel arayüz kullanıcılarıdır. Yani konsoldan ziyade kullanıcının her işi grafiksel arayüzde yapabilmesi üzerine dizayn edilmiştir. İlk defa Linux kullanmaya başlayacak kullanıcılar için geçiş evresinde sıklıkla tercih edilen bir temadır. Ancak ben yine de kullanıcıyı konsoldan uzaklaştırdığı ve bu sebeple Linux' un gerçek gücünü ortaya koyamadığı için pek de önermiyorum. Bu söylediklerimden bu ortam kötüdür anlamı çıkmasın, sadece konsol üzerine yoğunlaşacak arkadaşlara öneri olarak belirtiyorum. Geçiş evresinde kullanılabilir ancak aman ha bağımlılık yapmasın yoksa konsol hakimliği, sisteme hükmetmek falan yalan olur söyleyeyim :)</p>
+<h2><strong>LXDE Masaüstü Ortamı</strong></h2>
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/lxde-min.png" class="responsive">
+<p>Az bir donanım gücü ile çok iyi işler çıkarabileceğiniz oldukça yalın masaüstü ortamıdır. Dolayısı ile grafiksel arayüz kısmında pek bir şey beklememek lazım. Amacınız sistemi verimli şekilde kullanmaksa ve elinizde güçlü bir donanım yoksa tercih edebilirsiniz.</p>
+<h2><strong>Cinnamon Masaüstü Ortamı</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/cinnamon-min.jpg" class="responsive">
+Cinnamon Gnome baz alınarak alınarak geliştirildiği için en çok tercih edilen masaüstü ortamıdır. Hatta son zamanlarda bir çok kullanıcıya göre kötüye giden Gnome3 için harika bir alternatiftir. Grafiksel arayüzünün kullanıcı dostu olması ve sistemi de çok fazla yormaması Cinnamon'u normal kullanıcılar arasında popüler yapmıştır. Hatta en çok kullanılan Linux dağıtımı olan Linux Mint' de varsayılan olarak Cinnamon kullanmaktadır. Ve Mint' in bu başarısı Cinnamon'un kullanışlı yapısına bağlanmaktadır.</p>
+<h2><strong>Mate Masaüstü Ortamı</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/mate-min.png" class="responsive">
+Mate masaüstü ortamı da Gnome3'ün hantallığından bunalan kullanıcılar için harika bir alternatiftir. Bir zamanlar bir çok kullanıcı tarafından oldukça sevilen <a target="_blank" href="https://mate-desktop.org/tr/" rel="nofollow">Gnome2'nin çatallamasıdır</a>, ve özlem duyulan Gnome2'nin temsilcisidir. Sistem çok fazla kaynak tüketmez ayrıca sizleri grafiksel olarak da yormaz. Günlük rutin işlerinizi de çok rahat şekilde yerine getirebilirsiniz.</p>
+<h2><strong>e17 Masaüstü Ortamı</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/e17-min.png" class="responsive">
+Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir arayüz sunmaz ama sunduğu performansın yanında içinizi daraltacak bir görünüme de sahip değildir. Birçok cihazda oldukça verimli şekilde çalışmaktadır. Deneyimlemenizde fayda var derim :)</p>
+<h1>Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri</h1>
+<blockquote>
+<p><strong>Hatırlatma;</strong> Bu işlemleri yapmadan önce <strong>sisteminizin güncel olduğunda emin olun</strong>, aksi takdirde sisteminiz güncel değilse kurulum gerçekleşmeyecektir.</p>
+</blockquote>
+<blockquote>
+<p><strong>Bilgilendirme;</strong> Sisteminize birden fazla masaüstü ortamı kurabilir ve dilediğiniz zaman bu ortamlara geçiş yapabilirsiniz. Yani aşağıdaki tüm masaüstü ortamlarını kurup tüm bu ortamlar arasında dilediğiniz zaman kolayca geçiş yapabilirsiniz.</p>
+</blockquote>
+<h2><strong>XFCE Masaüstü Ortamı</strong></h2>
+<p><strong>XFCE Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
+</code></strong></pre>
+<p><strong>Kurulu Olan XFCE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
+</code></strong></pre>
+<h2><strong>KDE Masaüstü Ortamı</strong></h2>
+<p><strong>Debian için Standart KDE Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install kali-defaults kali-root-login desktop-base kde-standard
+</code></strong></pre>
+<p><strong>KDE Full Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install kali-defaults kali-root-login desktop-base kde-full
+</code></strong></pre>
+<p><strong>Kurulu Olan KDE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove kde-plasma-desktop kde-plasma-netbook kde-standard
+</code></strong></pre>
+<h2><strong>LXDE Masaüstü Ortamı</strong></h2>
+<p><strong>LXDE Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install lxde-core lxde kali-defaults kali-root-login desktop-base
+</code></strong></pre>
+<p><strong>Kurulu Olan LXDE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove lxde-core lxde
+</code></strong></pre>
+<h2><strong>Cinnamon Masaüstü Ortamı</strong></h2>
+<p><strong>Cinnamon Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install kali-defaults kali-root-login desktop-base cinnamon
+</code></strong></pre>
+<p><strong>Kurulu Olan Cinnamon Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove cinnamon
+</code></strong></pre>
+<h2><strong>Mate Masaüstü Ortamı</strong></h2>
+<p><strong>Mate Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install kali-defaults kali-root-login desktop-base mate-desktop-environment-extra
+</code></strong></pre>
+<p><strong>Kurulu Olan Mate Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove mate-core
+</code></strong></pre>
+<h2><strong>e17(Enlightenment) Masaüstü Ortamı</strong></h2>
+<p><strong>e17 Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install e17
+</code></strong></pre>
+<p><strong>Kurulu Olan e17 Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove e17
+</code></strong></pre>
+<h1>Masaüstü Ortamını Aktif Hale Getirmek</h1>
+<p>İlgili masaüstü ortamını kurduktan sonra kullanabilmeniz için ilgili ortamı seçip aktif hale getirmemiz gerekiyor. Öncelikle kurduğumuz masaüstü ortamının sistem tarafından tanınması için <strong>kurulum işlemi bittikten sonra bilgisayarımızı yeniden başlatıyoruz</strong>. Sistem yeniden başlatıldıktan sonra karşımıza aşağıdaki gibi giriş(login) ekranı geliyor. Bu ekrana kullanıcı adımızı giriyoruz. Ve daha sonra dişli-çark simgesine tıklayarak buradan dilediğimiz masaüstü ortamını seçiyoruz. Ve parolamızı girerek sistemi açıyoruz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_1-min.gif?raw=true" class="responsive">
+İşte bu kadar yeni masaüstü ortamı karşımızda!</p>
+<p><strong>Eğer herhangi bir zaman masaüstü ortamını değiştirmek isterseniz de sadece oturumu kapatın(logout) ve yine kullanıcı adınızı girdikten sonra dişli-çark simgesinden kullanmak istediğiniz masaüstü ortamını seçin.</strong> Bu şekilde dilediğiniz zaman masaüstü ortamları arasında geçiş yapabilirsiniz. Geçiş işlemi gif resmi ile aşağıda açıklanmıştır.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_2-min.gif?raw=true" class="responsive"></p>
+<p>Yeni bir masaüstü ortamı seçtik ve kurduk diyelim. Peki bu ortamlara nasıl yeni tema yüklemesi yapacağım diyorsanız;</p>
+<p>Öncelikle yapmanız gereken ilk şey kullanmakta olduğunuz masaüstü ortamına uygun tema paketlerine ulaşmak. Bunun için de örneğin <strong>XFCE</strong> kullanıyorsanız internette "<em><strong>xfce themes</strong></em>" şeklinde arama yaptığınızda karşınıza bir çok kaynaktan bir çok kullanışlı tema paketleri çıkacaktır. Diğer ortamlar için de elbette isimlerine göre <em><strong>kde themes</strong></em>, <em><strong>cinnamon themes</strong></em>, <em><strong>mate themes ..</strong></em>  şeklinde araştırma yapmanız yeterli olacaktır.</p>
+<p>Daha sonra da bu temaların nasıl kurulduğunu sistemi kurcalayarak oldukça rahat şekilde bulabilirsiniz. Şimdi sen neden burada tek tek açıklamıyorsun diyecek olursanız; ben zaten <strong>Gnome 3</strong> üzerinden detaylıca tema kurulumunu sizlere örnek olması açısından gösterdim. Ancak bu noktadan sonra sizlerin de yeni kullanacağınız sistemi daha iyi tanıyabilmeniz için biraz kurcalamanız ve kendi kendinize bu değişimin nasıl yapıldığını keşfetmeniz gerekiyor. Neticede bu sistemi kullanacak olan kişiler sizlersiniz ve dolayısıyla gerçekten verimli bir sistem olup olmadığını ancak detaylıca araştırma ve deneme yanılma yolu ile öğrenebilirsiniz. Yeni bir tema kurmak vesilesiyle; bakın bakalım bu ortamlarda çalışmak aradığını bulmak sizin için ne kadar kolay, hangi masaüstü ortamı size daha konforlu geliyor.</p>
+<h1>Pencere Yöneticisi Kurulumu Ve Kullanımı</h1>
+<p>Sistemi yalnızca pencere yöneticisi ile yönetmek performans açısından oldukça verimlidir. Zira bir çok masaüstü ortamında gördüğümüz fazladan grafiksel ögeler ve animasyonlu içerikler sistemi boş yere yorarak bizlere düşük verimli işlem gücü sağlıyorlar. Eğer amacınız işlerinizi en kısa sürede en verimli şekilde halletmekse ve elinizdeki cihaz güçlü bir donanıma sahip değilse sistemi, pencere yöneticisinden kullanmak sizin için en ideal tercih olabilir. Sistemi yalnızca pencere yöneticisi ile yönetmek, kullanıcılar tarafından başlarda biraz garipsense de zamanla bu yönetim formuna tüm kullanıcılar adapte olur. Yani eğer başlarda kullanımı biraz alışılmadık gelirse anlayın ki yalnız değilsiniz, olay alışkanlık meselesi rahat olun.. :)</p>
+<p>Şimdi de Kali Linux Dağıtımında kullanabileceğimiz pencere yöneticilerine göz atalım.</p>
+<p>Pencere yöneticisi konusunda kullanabileceğiniz çok fazla alternatif bulunuyor. Bu sebepten burada hepsine değinmemiz mümkün değil. O yüzden biz de bu kısımda <a target="_blank" href="https://www.slant.co/topics/390/~best-window-managers-for-linux" rel="nofollow">buradaki listede</a> yer alan başlıca 5 pencere yöneticisi kurulumunu ele alacağız.  Benim bu listedeki favorim <strong>openbox</strong> ancak siz kendiniz deneyimleyerek kendiniz için ideal olana karar verebilirsiniz.</p>
+<h2><strong>i3 Pencere Yöneticisi</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/i3-min.png?raw=true" class="responsive">
+<strong>i3 Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install i3-wm
+</code></strong></pre>
+<p><strong>Kurulu Olan i3 Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove i3-wm
+</code></strong></pre>
+<blockquote>
+<p><strong>i3 Pencere Yöneticisi Temel Kullanım Kılavuzu İçin <a target="_blank" href="https://i3wm.org/docs/userguide.html" rel="nofollow">Bu Kaynağa</a> Bakabilirsiniz:</strong></p>
+</blockquote>
+<h2><strong>awesome WM Pencere Yöneticisi</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/awesome-min.png?raw=true" class="responsive">
+<strong>awesome WM  Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install awesome
+</code></strong></pre>
+<p><strong>Kurulu Olan awesome WM  Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove awesome
+</code></strong></pre>
+<blockquote>
+<p><strong>awesome WM Pencere Yöneticisi Temel Kullanım Kılavuzu İçin <a target="_blank" href="https://awesomewm.org/doc/manpages/awesome.1.html" rel="nofollow">Bu Kaynağa</a> Bakabilirsiniz:</strong></p>
+</blockquote>
+<h2><strong>Xmonad Pencere Yöneticisi</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xmonad-min.png?raw=true" class="responsive">
+<strong>Xmonad Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install xmonad
+</code></strong></pre>
+<p><strong>Kurulu Olan Xmonad Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove xmonad
+</code></strong></pre>
+<blockquote>
+<p><strong>Xmonad Pencere Yöneticisi Temel Kullanım Kılavuzu İçin <a target="_blank" href="https://xmonad.org/manpage.html" rel="nofollow">Bu Kaynağa</a> Bakabilirsiniz:</strong></p>
+</blockquote>
+<h2><strong>Openbox Pencere Yöneticisi</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox-1-min.png?raw=true" class="responsive">
+<strong>Openbox Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install openbox
+</code></strong></pre>
+<p><strong>Kurulu Olan Openbox Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove openbox
+</code></strong></pre>
+<h2><strong>dwm Pencere Yöneticisi</strong></h2>
+<p><img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/dwm-min.png?raw=true" class="responsive">
+<strong>dwm Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong></p>
+<pre><strong><code>apt-get install dwm
+</code></strong></pre>
+<p><strong>Kurulu Olan dwm Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
+<pre><strong><code>apt-get remove dwm
+</code></strong></pre>
+<blockquote>
+<p><strong>dwm Pencere Yöneticisi Temel Kullanım Kılavuzu İçin <a target="_blank" href="https://dwm.suckless.org/tutorial/" rel="nofollow">Bu Kaynağa</a> Bakabilirsiniz:</strong></p>
+</blockquote>
+<hr>
+<p>Başlıca pencere yöneticilerinin kurulumlarını ele aldık. Ancak bu anlattıklarım dışındaki pencere yöneticileri için de <a target="_blank" href="https://www.slant.co/topics/390/~best-window-managers-for-linux" rel="nofollow">bu adreste</a> yer alan listeye bakıp, listede yer alan pencere yöneticisinin kali depolarında yer alıp almadığını <a target="_blank" href="http://pkg.kali.org/" rel="nofollow">bu adresten</a> teyit ederek kurulumunu yapabilirsiniz.
+Ben örnek olması açısından listede yer alan <em><strong>fluxbox</strong></em> isimli pencere yöneticisini sorgulayıp, eğer depolarda mevcutsa kurulumunu yapmak istiyorum. İşlemleri aşağıdaki gif resiminden takip edebilirsiniz.
+<img src="img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/fluxbox-min.gif?raw=true" class="responsive">
+Tekrar belirteyim verdiğim adreste yer alan linkteki her pencere yöneticisi Kali Linux için uygun olmayabilir, o yüzden mutlaka depolarda olup olmadığını teyit edin.</p>
+<p><strong>Son olarak;</strong> pencere yöneticisinin temasını nasıl değiştirebiliriz diyecek olursanız, bu indireceğiniz pencere yöneticisine göre değişir dolayısıyla bu tema değişimini bireysel olarak internetten araştırarak ve sistemi kurcalayarak bulmanız gerekiyor. Üstelik bu araştırma süreci içerisinde pencere yöneticisini daha yakında tanıyıp, size uygunluğunu anlayabilirsiniz. Eğer bu işlem bile sizlere zor geliyorsa, muhtemelen pencere yöneticisi kullanmak sizi mutlu etmeyecektir. Tek başınıza tema değiştirme olayını sakın gözünüzde büyütmeyin bu işlem oldukça kolay, tıpkı masaüstü ortamını değiştirmek gibi. Sadece araştırın ve deneyin.</p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+/***********************************************
+* Fluid Text Resizer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* Please keep this notice intact
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+	targets: ["body"], //target elements to resize text within: ["selector1", "selector2", etc]
+	levels: 2, //number of levels users can magnify (or shrink) text
+	persist: "session", //enter "session" or "none"
+	animate: 0 //animation duration of text resize. Enter 0 to disable
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+

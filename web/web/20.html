@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  @media screen and (min-width: 1080px) {
+  .selector {
+     font-size: 40px;
+  }
+}
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/21.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div>
+  </nav>
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	
+<h1>Vim Editörü</h1>
+<p>Vim Editörü Terminalden kullanılabilen ve komut alabilen yaygın kullanıma sahip bir editördür. Vim editörü kullanımının yaygın olmasının nedeni çok hafif bir editör olmasından kaynaklanmaktadır. Uzaktan erişim durumunda bağlantı(ağ/network) üzerinde fazlaca yük bindirmeden kolayca efektif şekilde gerekli işlemleri yerine getirir. Günümüzde daha yetenekli editörler de vardır ancak biraz eski alışkanlıklardan biraz da hafif şekilde çalışmasından dolayı hala tercih edilen bir editördür. Genelde öğrenmek isteyen kişilere ilk öğrenim aşamasında fazlaca karışık gelse de sonraları kullandıkça benimsenir. Bu durumu ileride sizler de gözlemleyeceksiniz. Ayrıca önceki adı <strong><code>vi</code></strong> olan editörün günümüzde gelişmiş versiyonu, <strong><code>vim</code></strong> ismini almış ve görsel arayüze sahip versiyonu ise <strong><code>gvim</code></strong> adıyla isimlendirilmiştir.</p>
+<h2>vi-vim-gvim</h2>
+<p>Editörü konsoldan açmak istersek <strong><code>vim</code></strong> komutu yeterli olacaktır. Ayrıca görsel arayüze sahip versiyonu olan <strong><code>gvim</code></strong> editörünü açmak için de <strong><code>gvim</code></strong> şeklinde komut kullanımı yeterli olacaktır. Ancak yeri gelmişken belirteyim görsel arayüz genel olarak pek tercih edilmiyor. Kullanıcılar terminal üzerinden tek pencerede hızlı işlem yapmak adına ve biraz da geçmişten gelen alışkanlıklarından dolayı editörü terminal üzerinden kullanmayı tercih ediyorlar.</p>
+<p>Konsola <strong><code>vim</code></strong> komutunu vererek editörümüzü açalım.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/1-min.png" class="responsive"></p>
+<p>Editörle çalışmak için <strong><mark>i</mark></strong> tuşuna basıyoruz ve editör sol alt köşede <strong><mark>--INSERT--</mark></strong> yazısı ile içerik almaya hazır olduğunu belirtiyor.</p>
+<p>Örnek olması açısından editöre aşağıdaki şekilde birkaç dize yazı ekledim.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/2-min.png" class="responsive"></p>
+<p>Gerekli ifadeleri girdikten sonra komut vermek istersek <strong><mark>ESC</mark></strong> tuşuna bastıktan sonra komutları <strong><code>:</code></strong> karakteri başta olacak şekilde vermemiz gerekiyor. Kullanabileceğimiz bazı komutlar aşağıdaki şekildedir.</p>
+<p><strong>:q =</strong> Eğer yapılan değişiklikler kayıt edilmişse Vim editörünü kapatır. Aksi durumda uyarı verecektir.</p>
+<p><strong>:q! =</strong> Editörü kaydetmeden direk olarak kapatır.</p>
+<p><strong>:w =</strong> Yapılan değişiklikleri kaydeder.</p>
+<p><strong>:wq =</strong> Yapılan değişiklikleri kaydeder ve çıkar. Daha önce isim verilmemiş bir dosya ise <strong>:wq dosya_ismi</strong> şeklinde kullanılmalıdır.</p>
+<p>Dosya oluşturmak üzere vi editöründe <strong><mark>ESC</mark></strong> tuşuna basıp <strong><code>:wq vi_dosyasi</code></strong> komutunu girelim.</p>
+<p>Dosyamız oluştu, hemen bu durumu teyit etmek için <strong><code>ls -l</code></strong> komutunu kullanalım.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/3-min.gif" class="responsive"></p>
+<p><strong><mark>vi_dosyasi </mark></strong> isimli dosyanın oluşturulduğunu teyit ettikten sonra tekrar <strong><code>vim</code></strong> editörü ile açmak için <strong><code>vim vi_dosyasi</code></strong> şeklinde komutumuzu kullanıyoruz.</p>
+<p>Dosya oluşturup tekrar açtığımıza göre artık daha farklı komutlara ve diğer konsol komutlarını vim editörü aracılığı ile nasıl kullanacağımıza bakalım.</p>
+<p><strong>:x =</strong> Editörü kapatır ve değişiklikleri kaydeder.</p>
+<p><strong>:r dosya_adı</strong> = Hedef dosyayı okur ve içeriği mevcut dosyaya aktarır. Daha iyi anlaşılması için örneği inceleyin.</p>
+<p>Adım adım açıklayalım:</p>
+<p>İlk önce vim editörü ile <strong><mark>x_dosyasi</mark></strong> ve <strong><mark>y_dosyasi</mark></strong> isminde iki dosya oluşturuyorum ve bu dosyaların içerisine:</p>
+<p><strong><mark>x_dosyasi</mark></strong> için ; "<em>Bu dosya x dosyasının içeriğini temsil ediyor</em>".</p>
+<p><strong><mark>y_dosyasi</mark></strong> için ; "<em>Bu dosya ise y dosyasının içeriğini temsil etmekte..</em>"</p>
+<p>İfadelerini ekliyorum daha sonra dosya içeriklerini <strong><code>cat</code></strong> komutu yardımı ile inceleyerek teyit ediyorum.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/4-min.png" class="responsive"></p>
+<p>Şimdi Vim editörü ile oluşturulan bu dosyalardan birini diğerine eklemeye geldi sıra; Ben <strong><mark>x_dosyasi</mark></strong>'na <strong><mark>y_dosyasi</mark></strong> içeriğini eklemek üzere, <strong><mark>x_dosyasi</mark></strong>'nı <strong><code>vim x_dosyasi</code></strong> komutu ile açıyorum.</p>
+<p>Vim editörü içerisinde açılan <strong><mark>x_dosyası</mark></strong>'ndayken <strong><code>:r y_dosyasi</code></strong> komutunu veriyorum.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/5-min.gif" class="responsive"></p>
+<p>Böylelikle <strong><mark>y_dosyasi</mark></strong> içerisinde yer alan ifadeler <strong><mark>x_dosyasi</mark></strong> içerisine eklenmiş oldu.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/6-min.png" class="responsive"></p>
+<p>Bu durumu hemen <strong><code>cat</code></strong> komutu yardımı ile teyit ettik zaten.</p>
+<p>Konsol komutlarını vim editörü içerisinde kullanabileceğimizden bahsetmiştik. Bunu yapabilmemiz için komuttan önce <strong>iki nokta üst üste ve ünlem</strong> karakterlerini kullanmalıyız yani örnek kullanımı <strong><code>:!komut</code></strong> şeklindedir. Hemen bu durumu <strong><code>ls</code></strong> komutu için deneyelim.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/7-min.gif" class="responsive"></p>
+<p>Vim editörü içerisinde <strong><code>:!ls</code></strong> komutunu verdiğimizde sistem otomatik olarak vim editöründen çıkarak konsolda bize <strong><code>ls</code></strong> komutunun çıktılarını bastı. Eğer bu durumda tekrar vim editörüne dönmek istersek <strong><mark>enter</mark></strong> tuşuna basmamız yeterli olacaktır.</p>
+<p>Şimdi biz neden konsol varken bu editörden komut vermekle uğraşalım diye düşünmüş olabilirsiniz sizlere bu durumu örnek ile açıklayalım.</p>
+<p>Örnek olması açısından <strong><code>ls</code></strong> komutunun çıktılarını bir dosyaya kaydetmek isteyelim.</p>
+<p>Bunun için vim editörü ile bir dosya oluşturuyorum.</p>
+<p><strong><code>vim dizinler</code></strong> komutu ile vim editörü içerisinde boş bir dosya açıyorum ve bu dosya içerisindeyken <strong><code>:r !ls</code></strong> komutunu veriyorum.</p>
+<p>Komut sonucunda oluşturmuş olduğum <strong><mark>dizinler</mark></strong> dosyası içeriği aşağıdaki şekilde oluyor.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/8-min.gif" class="responsive"></p>
+<p>Kullandığımız komut bütününü açıklayacak olursak(aslında bunları zaten biliyorsunuz ama ben yine de açıklama gereksinimi duydum) <strong><code>:r</code></strong> komutu içerik aktarma işlevinde <strong><code>!ls</code></strong> komutu ise dizin altındaki dosya-klasörleri listelemekle görevli.</p>
+<p>Dosyayı <strong><code>:x</code></strong> komutu ile kaydettik ve ayrıca teyit etmek için <strong><code>cat dizinler</code></strong> komutunu kullandık.</p>
+<p>Vim editörü ile birden fazla dosya ile işlem yapmamız mümkün bunun için komutu <strong><code>vim dosya1 dosya2 dosya3</code></strong> şeklinde kullanabiliriz.</p>
+<p>Komutumuzu verdikten sonra <strong><mark>dosya1</mark></strong> vim editöründe açılacaktır. Gerekli değişiklikleri yaptıktan sonra eğer diğer dosyalara geçiş yapmak istersek çalıştığımız dosyayı kaydettikten sonra <strong><code>:next</code></strong> komutu ile <strong><mark>dosya2</mark></strong>'ye geçiş sağlanacaktır. Aynı şekilde <strong><mark>dosya3</mark></strong> dosyasına da geçmek mümkün olacaktır.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/9-min.gif" class="responsive"></p>
+<p>Eğer geçiş yaptığımız dosyadan bir öncekine dönmek istersek de  <strong><code>:previous</code></strong> komutunu kullanmamız yeterli olacaktır.</p>
+<p>Ayrıca kaç dosyanın vim editöründe çalıştığını pencere ekranının üst bilgi kısmından öğrenebiliriz. Örneğin ben 3 dosya ile çalıştığım için üst kısımda bulunduğum dosya bilgisi ile beraber <strong>dosya1 (~) (1 of 3) - VIM</strong> şeklinde bir üst bilgi yazısı bulunuyor.</p>
+<p>Dosyada bulunan ifadeleri değiştirmek istersek <strong><code>:satır_sayısı s/eski_ifade/yeni_ifade/g</code></strong> şeklinde bir komut bütünümüz bulunuyor. Bu gösterim ile anlamamış olabilirsiniz o yüzden hemen birkaç örnek ile konuyu açıklayalım.</p>
+<p><strong><mark>linux</mark></strong> isimli bir dosya oluşturuyorum ve içerisine aşağıdaki ifadeleri ekliyorum.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/10-min.gif" class="responsive"></p>
+<p>İlk önce burada yer alan 1. ve 2. satırdaki <strong>linux</strong> ifadelerini <strong>LİNUX</strong> ile değiştirmek üzere vim editörü içerisinde iken <strong><code>:1,2s/linux/LİNUX/g</code></strong> komutunu veriyorum. Daha sonra <strong><code>:x</code></strong> komutu ile dosyayı kaydederek vim editörünü kapatıyorum.
+Ve dosya içeriğini <strong><code>cat</code></strong> komutu ile sorguladık.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/11-min.gif" class="responsive"></p>
+<p>Görüldüğü gibi 1. ve 2. satırdaki <strong>linux</strong> ifadeleri <strong>LİNUX</strong> şeklinde değişmiş oldu.</p>
+<p>Eğer tüm satırlardaki <strong>linux</strong> ifadelerini <strong>LİNUX</strong> olarak değiştirmek istersek komutu başına yüzde işaretini ekleyerek <strong><code>:%s/linux/LİNUX/g</code></strong> şeklinde kullanmamız yeterli olacaktır.</p>
+<p>Komutumuzu verdikten sonraki çıktı ile bu durumu teyit ettik.</p>
+	
+<p>Vim editörü çok güçlü bir araç ve gerçekten çok farklı kullanım şekilleri-özellikleri var. Yani bu editörün kendisini anlatmak zaten başlı başına koca bir kaynak oluşturmakla eşdeğer. Hatta bu durumu vim editörünün kendi <a target="_blank"  href="http://vim.wikia.com/wiki/Vim_Tips_Wiki" rel="nofollow">wiki kaynağından</a> da teyit edebilirsiniz.</p>
+<p>Biz yine de birkaç kısa kullanım şeklini daha görelim.</p>
+<p>Eğer direk olarak konsol üzerinden veri girişi yapmak istersek konsola <strong><code>vim -</code></strong> komutunu girmeliyiz.</p>
+<p>Böylelikle konsol bize <strong>Vim: Reading from stdin...</strong> çıktısını verecek ve bizden veri girişi bekleyecektir.</p>
+<p>Ben örnek olması açısından konsoldan vim editörüne birkaç ifade ekliyorum.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/12-min.gif" class="responsive"></p>
+<p>İfade giriş işlemim tamamlandığında <strong><mark>Ctrl + D</mark></strong> tuş kombinasyonunu uygulayarak, vim editörü ekranına yazdığım ifadeler ile birlikte dönmüş oluyorum.</p>
+<p>Ayrıca vim editörü ile oluşturduğumuz dosyaları şifreleyerek koruma imkanımız da var. Bu durumu bir örnek üzerinden anlatalım.</p>
+<p><strong><code>vim vim_metni</code></strong> komutu ile bir belge açıyorum ve içerisini bazı ifadeler ekleyerek belgeyi kaydediyorum.</p>
+<p>Dosyamızın özelliklerini <strong><code>file vim_metni</code></strong> komutu ile öğrenip, dosyanın içeriğini ise <strong><code>cat vim_metni</code></strong> komutu ile okuyalım.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/13-min.gif" class="responsive"></p>
+<p>İstediğimiz bilgilere kolayca ulaşabildik. Bu durumu birde dosyamızı şifreleyerek test edelim. Bunun için konsola <strong><code>vim -x vim_metni</code></strong> şeklinde komut veriyoruz ve konsol bizden şifre belirlememizi istiyor.</p>
+<p>Dosyamıza birkaç veri daha ekledikten sonra dosyamızı <strong><code>:w</code></strong> komutu ile kaydettik. Ve sonuç olarak vim editörü alt bilgi çubuğunda bize dosyanın şifrelendiğini aşağıdaki çıktıda yer alan <strong>"vim_metni" [crypted]</strong> şekilde ifade ederek belirtti.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/14-min.png" class="responsive"></p>
+<p>Daha sonra dosyamızı tekrar <strong><code>file</code></strong> ve <strong><code>cat</code></strong> komutları ile sınadık.
+Çıktı da görüldüğü üzere dosyamız artık şifrelenmiş durumda. Yani dosyayı tekrar okunaklı şekilde açabilmemiz için şifresini girmemiz gerekecek. Bu durumu hemen <strong><mark>vim_metni</mark></strong> isimli dosyamızı açmaya çalışarak test edelim. Bunun için konsola <strong><code>vim vim_metni</code></strong> komutunu giriyoruz. Ve konsol bize aşağıdaki çıktıyı veriyor.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/15-min.png" class="responsive"></p>
+<p>Konsol çıktısında da görüldüğü gibi bizden bir parola isteniyor. Eğer parolayı doğru girersek dosyamız açılacaktır.</p>
+<p><strong>Ancak sizlere önemli bir uyarı;</strong></p>
+<p>Bu dosya şifreleme olayı iyi hoş ancak çok çok önemli bir nokta var o da belirlediğiniz şifre. Eğer uzun, karmaşık yazarsanız bu şifreyi unutma riskiniz yüksek olacağından daha sonra bulmanız veya bir şekilde kırmanız da bir o kadar zor olacaktır. Ayrıca kısa ve kolay şifreler de kolayca kırılabileceğinden pek güvenli bir yol sayılmaz. Yani anlayacağınız ne unutacağınız kadar uzun veya karmaşık ne de kolay kırılabilecek kadar kısa olsun. Şimdiden sizleri uyarıyorum sonradan bu durum yüzünden aman başınız ağrımasın.</p>
+<p>Vim editörü konusunu yavaş yavaş bitirmek üzere devam edecek olursak.</p>
+<p>Örneğin vim editöründe kod yazıyordunuz ve kod 101. satırda hata verdi. Bu durumda 101. satırı aramak yerine editöre <strong><code>:101</code></strong> şeklinde yazarak hatalı kodun bulunduğu satıra ulaşabiliyoruz. Yani direk olarak atlamak istediğimiz satırı vim editörüne <strong><code>:satır_numarası</code></strong> şeklinde girerek bu işlemi gerçekleştirebiliriz.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/16-min.gif" class="responsive"></p>
+<p>Eğer yazdığınız ifadeler içerisinden herhangi bir ifadeyi bulmak isterseniz <strong><code>/aranacak_ifade</code></strong> şeklinde yazarsanız ilgili ifadeye ulaşmış olursunuz. Ve aynı ifadenin başka yerlerde geçmesi durumunda bir sonraki ifadeye gitmek için <strong><code>:/</code></strong> komutu, bir önceki aynı ifadeye dönmek için ise <strong><code>:?</code></strong> komutunu kullanıyoruz.</p>
+<p><img src="img/17-%20Vim%20Edit%C3%B6r%C3%BC/17-min.gif" class="responsive"></p>
+<p>Eğer aradığımız ifadede büyük küçük harf duyarlılığı olmadan hedefteki aranan ifadenin aynısı olan bütün ifadeleri bulmak istersek <strong><code>:set ic</code></strong> komutunu verdikten sonra ifademizi <strong><code>/ARNACAK_İFADE</code></strong> şeklinde ya da <strong><code>/aranacak_ifade</code></strong> hatta <strong><code>ArAnAcAk_İfAdE</code></strong> şeklinde dahi belirtebiliriz. Sonuçta aynı karakter bütününü içeren ifadeler karşımıza gelecektir.</p>
+<p>Vim editörü anlatımının burada sonuna geliyoruz. Ancak dediğim gibi zaten vim editörü başlı başına bir dokümantasyon konusu ki bu bilgileri burada izah etsek bile fazlaca gereksiz ayrıntıya değinmiş, sizlere boş yere yormuş olurduk. Vim editörü ancak baştan beri bahsi geçen kendi kendine öğrenme, deneme, alıştırma yapma ve özümseme ile öğrenilecek bir konudur. Kullanmanız şart değil kimisi çok sever kullanır kimisi ayrıntılarından nefret eder bırakır.</p>
+<p>Neticede internette yer alan tüm zengin kaynaklar ile birlikte man kılavuz sayfasından, vim editörü içerisinde iken <strong><code>:help</code></strong> komutundan ve daha önce verdiğim vim editörü <a target="_blank"  href="http://vim.wikia.com/wiki/Vim_Tips_Wiki" rel="nofollow">wiki kaynağından</a> diğer tüm bilgilere ulaşabilirsiniz.(Benim önerim ilk başlarda ayrıntıları kolay kavramak adına vim editörü için geniş çaplı Türkçe kaynak sağlayan <a target="_blank"  href="http://www.omeroner.com/vim-nedir-ve-nasil-kullanilir/" rel="nofollow">bu adresi</a> kullanmanızdır.)</p>
+<p>Ve unutmayın bu araç ancak ve ancak, öğrenmek isteyen kişinin kendi kendine kurcalaması ve bolca alıştırmalar yapmasıyla öğrenilebilir.</p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", 
+	targets: ["body"],
+	levels: 2,
+	persist: "session",
+	animate: 0 
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>

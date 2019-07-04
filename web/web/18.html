@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/19.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div>
+  </nav>
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+  <h1>Joker Karakterler (wildcards)</h1>
+  <p>Bu kavram sizlere kesinlikle yabancı değil, daha önceki kısımlarda defaatle kullanmış ve <strong>joker(wildcard) karakterlerinin</strong> az da olsa işlevini görmüştük. Bu kısımda da bu konu hakkında bilgi sahibi olacağız.</p>
+<h2>joker (wildcard)</h2>
+<p>Linux kullanımında işimizi konsoldan yürüteceğimiz zaman bir komutun tek seferde birden fazla nesneyi etkilemesini yani kapsamasını isteyebiliriz. Örneğin bir dizindeki dosyaların tamamını silmek istiyoruz diyelim; bu iş için aşağıdaki gibi tüm dosya adlarını komut satırına yazmak çok zahmetli ve gereksiz olacaktır.</p>
+<p><img src="img/15-%20Joker%20Karakterler/1-min.png" class="responsive "></p>
+<p>Yukarıdaki kullanımın yerine joker karakter(wildcard) desteğini kullanmak bizlere çok fazla avantaj sağlar. Ayrıca gördüğünüzde şaşırmayın, kimi kaynaklarda <strong>joker karakterler(wildcards)</strong> "<strong>globbing</strong>" olarak da adlandırılmaktadır.</p>
+<p>Bahsi geçen joker karakterler ve kullanım alanları aşağıdaki gibidir;</p>
+<p><strong><strong><code>*</code></strong></strong> : Anlamı <strong><code>*</code></strong> olan yere herhangi bir şey gelebileceğidir.</p>
+<p>Örneğin "<strong>dosya</strong>" ismiyle başlayan tüm belgeleri tek seferde silmek için komutu <strong><code>rm  dosya*</code></strong> şeklinde kullanabilirim.</p>
+<p><img src="img/15-%20Joker%20Karakterler/2-min.png" class="responsive "></p>
+<p>Ayrıca bu yıldız (asterix)<strong><mark>*</mark></strong> işaretinin farklı kullanım şekilleri de var. Farklı kullanımların açıklaması ile devam edelim.</p>
+<p>Herhangi bir komutu, örneğin listeleme işlevinde olan <strong><code>ls</code></strong> komutunu <strong><code>ls dosya*</code></strong> şeklinde kullanırsak komut yıldız (asterix) <strong><code>*</code></strong> işaretinden önce yazmış olduğumuz "<strong>dosya</strong>" ismi ile başlayan tüm her şeyi kapsar.</p>
+<p><img src="img/15-%20Joker%20Karakterler/3-min.png" class="responsive "></p>
+<p>Aynı şekilde yıldız (asterix) <strong><mark>*</mark></strong> işaretinden sonra bir ifade belirtirsek de komut o ifade ile bitenleri kapsayacak şekilde çalışır.</p>
+<p><img src="img/15-%20Joker%20Karakterler/4-min.png" class="responsive "></p>
+<p><strong>? :</strong> Herhangi bir tek karakterle eşleşir.</p>
+<p>Karakterin kullanımına örnek olarak. Diyelim ki dizin içerisinde hem "<strong>index_page</strong>" hem de "<strong>index-page</strong>" şeklinde birbirine yakın yazılışlara sahip iki dosyamız var. Yani başlangıç ve bitiş isimleri aynı ancak aradaki işaretler farklı. İşte böyle bir durumda hem <strong><mark> _ </mark></strong> işaretini hem de <strong><mark> - </mark></strong> işaretini karşılayacak olan soru işareti <strong><mark>?</mark></strong> joker karakterini kullanabiliriz.</p>
+<p><img src="img/15-%20Joker%20Karakterler/5-min.png" class="responsive "></p>
+<p>Çıktılarda da görüldüğü gibi <strong><mark>?</mark></strong> karakteri dosya isimlerinin arasında yer alan <strong><mark>-</mark></strong> ve <strong><mark>_</mark></strong> işaretini de karşılayarak <strong><code>ls -l index?page</code></strong> şeklindeki komut ile çıktıya her ikisini de basmış oldu.</p>
+<p><strong>[] :</strong> <strong><mark>?</mark></strong> karakterine benzer olmakla birlikte daha çok hedefe odaklı çalışır.</p>
+<p><strong><mark>[]</mark></strong> karakterinin kullanımı, iki köşeli parantez arasına ulaşmak istediğiniz hedefteki ayırt edici karakterli yazmak üzerinedir.</p>
+<p>Örnek olması açısında "<strong>dosya</strong>" isimli belgelerden sadece sonunda <strong>2,3,4</strong> olanları kapsayacak bir komut olması için konsola <strong><code>ls -l [234]</code></strong> komutunu verdim.</p>
+<p><img src="img/15-%20Joker%20Karakterler/6-min.png" class="responsive "></p>
+<p>Bir örnek daha verelim.</p>
+<p><strong>[Dd]osya[Aa]dı</strong> şeklinde bir belirtme; <strong>DosyaAdı, Dosyaadı, dosyaAdı, dosyaadı</strong> şeklindeki bütün isimleri kapsayacaktır. Bu sayede ilgili dosyalar için tüm küçük büyük harf kombinasyonu kolaylıkla sağlanmış olur.</p>
+<p><img src="img/15-%20Joker%20Karakterler/7-min.png" class="responsive "></p>
+<p>Ayrıca kullanım şekillerine çok fazla örnek verilebilir ancak burada birkaç örnek daha vererek keşfi size bırakıyorum.</p>
+<p><strong>Not</strong> : Burada belirtilen <strong>x y z</strong> temsili değerleri ifade etmektedir !</p>
+<p><strong>[0-9] :</strong> 0'dan 9'a kadar olan rakamları kapsar.</p>
+<p><img src="img/15-%20Joker%20Karakterler/8-min.png" class="responsive "></p>
+<p><strong>[x,y,z] :</strong> belirtilen değerlerle eşleşenleri basar.</p>
+<p><img src="img/15-%20Joker%20Karakterler/9-min.png" class="responsive "></p>
+<p><strong>[x-z] :</strong> x ile z değerleri arasındaki karakterlerle eşleşir.</p>
+<p><img src="img/15-%20Joker%20Karakterler/10-min.png" class="responsive "></p>
+<p><strong>[xyz] :</strong> belirtilen değerlerle eşleşenleri basar.</p>
+<p><img src="img/15-%20Joker%20Karakterler/11-min.png" class="responsive "></p>
+<p><strong>[!xyz] :</strong> Belirtilen karakterlerin dışındakileri diğer tüm karakterleri basar.</p>
+<p><img src="img/15-%20Joker%20Karakterler/12-min.png" class="responsive "></p>
+<p><strong>[!x-z] :</strong> Verilen x ile z değeri arasındaki değerler haricindeki karakterler basar.</p>
+<p><img src="img/15-%20Joker%20Karakterler/13-min.png" class="responsive "></p>
+<p>Temel ve en çok başvurulan joker karakterler bu şekildedir. Sizler de joker karakterler sayesinde konsoldan çalışırken oldukça pratik şekilde işlemlerinizi yerine getirebilirsiniz. Konuyu daha iyi anlamak adına mutlaka ama mutlaka kendiniz de örnek denemeler yapın.</p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", 
+	targets: ["body"],
+	levels: 2,
+	persist: "session",
+	animate: 0 
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>

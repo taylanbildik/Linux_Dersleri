@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/16.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div>
+  </nav>
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+  <h1>Çalışma Seviyeleri (Runlevels)</h1>
+  <p>Sistem açıldığında hangi çalışma seviyesindeyse o seviyeye göre belirlenmiş olan hizmetler başlatılır. İşte bu olaya da <strong>Runlevels(çalışma seviyeleri)</strong> deniyor. Linux sisteminde <strong>7 farklı seviye</strong> bulunuyor.</p>
+<p>Seviyeler ve ifade ettikleri aşağıdaki tabloda verilmiştir.</p>
+<table>  <thead> <tr> <th>Runlevel</th> <th>Çalışma Modu</th> <th>İşlevler</th> </tr></thead> <tbody> <tr> <th scope="row">0</th> <td>Halt</td><td>Kapatma işleminin başladığı seviye.</td></tr><tr> <th scope="row">1</th> <td>Tek Kullanılıcı</td><td>Ağ servisleri olmadan sistem bakımı için kullanılan seviye.</td></tr><tr> <th scope="row">2</th> <td>Ağ Desteği Olmadan Çok Kullanıcılı</td><td>Ağ desteği olmadan normal kullanım seviyesi.</td></tr><tr> <th scope="row">3</th> <td>Ağ Destekli Çok Kullanıcılı</td><td>Ağ destekli normal kullanım seviyesi.</td></tr><tr> <th scope="row">4</th> <td>Tanımsız</td><td>Kullanılmıyor ancak kullanıcı tarafından tanımlanabilir durumdaki seviye.</td></tr><tr> <th scope="row">5</th> <td>Grafiksel Kullanıcı Arayüzü</td><td>Grafiksel arayüzün çalıştığı seviye. Hemen her Linux dağıtımında bu seviye varsayılan olarak başlatılır.</td></tr><tr> <th scope="row">6</th> <td>Yeniden Başlatma(Reboot)</td><td>Sistemin yeniden başlatıldığı seviye.</td></tr></tbody> </table>  
+<p>O anda hangi seviyede çalıştığımızı öğrenmek istersek komut satırına <strong><code>runlevel</code></strong> komutunu vermemiz yeterli.</p>
+<p><img src="img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/1-min.png" class="responsive"></p>
+<p>Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de, daha önce de söylediğimiz gibi Linux, sistemi varsayılan olarak 5. seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu <strong><code>init çalışma_seviyesi</code></strong> şeklinde yapabiliriz.</p>
+<p>Bu şekilde sistemi yeniden başlatana kadar seçtiğimiz çalışma seviyesinde devam edebiliriz. Ancak dediğim gibi sistemi yeniden başlattığınızda sistem varsayılan olarak 5. seviyede başlayacaktır.</p>
+<p>Ayrıca yeri gelmişken sistemi kapatmak istersek bunu hiç bir hizmetin çalışmadığını <strong>0. runlevel</strong> ile yani <strong><code>init 0</code></strong> komutunu vererek yapabiliriz.</p>
+<p>Ayrıca kapatma işlemi için;</p>
+<p><strong><code>shutdown -h now</code></strong> beklemeden direk sistemi kapatacaktır.</p>
+<p><strong><code>shutdown -h now+5</code></strong> 5 dakika sonra sistemi kapatacaktır.</p>
+<p><strong><code>halt</code></strong> sisteminizi doğrudan kapatacaktır(halt kavramının 0.seviyede hiç bir servisin çalışmadığı durumu temsil ettiğini söylemiştik).</p>
+<p>Eğer sistemi yeniden başlatmak istersek <strong><code>init 6</code></strong> veya <strong><code>reboot</code></strong> komutunu kullanabiliriz.</p>
+<h2>service</h2>
+<p>Şimdi ise sistemdeki servisleri açıp-kapatmayı ve bu servislerin durumunu sorgulamayı görelim. Komutumuzun işlevlerinin kullanım kalıpları aşağıdakiler gibidir.</p>
+<p>Örnek kullanımları <strong>ssh servisi</strong> üzerinden gösterelim.</p>
+<p>Servisimizin durumunu sorgulamak için komut satırımıza <strong><code>service ssh status</code></strong> yazıyoruz.</p>
+<p><img src="img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/2-min.png" class="responsive"></p>
+<p>Komut satırı çıktı olarak bize <em><strong>ssh</strong></em> servisinin kapalı olduğunu bildirdi.</p>
+<p>Şimdi <strong>servisimizi başlatmak</strong> üzere komut satırına <strong><code>service ssh start</code></strong> komutumuzu veriyoruz.</p>
+<p><img src="img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/3-min.png" class="responsive"></p>
+<p><strong>Servisimizi başlattıktan sonra durumu kontrol etmek</strong> için tekrar <strong><code>service ssh status</code></strong> komutumuzu verdik ve görüldüğü gibi <em><strong>ssh</strong></em> servisimiz artık çalışır durumda.</p>
+<p>Şimdi ise çalışan <strong>servisimizi kapatmak</strong> için komut satırına <strong><code>service ssh stop</code></strong> komutumuzu veriyoruz.</p>
+<p><img src="img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/4-min.png" class="responsive"></p>
+<p>Çıktıda da görüldüğü gibi <em><strong>ssh</strong></em> servisimiz kapatılmış oldu. Bunu da <strong><code>service ssh status</code></strong> komutu ile teyit etmiş olduk.</p>
+<p>Komutumuzun diğer bir kullanım şeklide de <strong>servisi yeniden başlatmak</strong>. Bunun için <strong><code>service ssh restart</code></strong> komutumuzu kullanıyoruz.</p>
+<p><img src="img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/5-min.png" class="responsive"></p>
+<p>Servisimizin durumunu <strong><code>service ssh status</code></strong> komutu ile kontrol ettik ve servisimizin yeniden başladığını görmüş olduk.</p>
+<p>Son olarak ise sistemde bulunan tüm servislerin sıralanmasını sağlayan <strong><code>service --status-all</code></strong> komutunu görelim.</p>
+<p><img src="img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/6-min.gif" class="responsive"></p>
+<p>Çıktıdaki servislerin sol tarafında yer alan <strong><mark>[ - ]</mark></strong> işareti servisin <strong>çalışmadığını</strong>, <strong><mark>[ + ]</mark></strong> işareti servisin <strong>çalıştığını</strong> ve <strong><mark>[ ? ]</mark></strong> işareti ise <strong>servisin durumunun belirsiz olduğunu</strong> ifade ediyor.</p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", 
+	targets: ["body"],
+	levels: 2,
+	persist: "session",
+	animate: 0 
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+

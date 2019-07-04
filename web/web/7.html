@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+        <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}		
+					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  @media screen and (min-width: 1080px) {
+  .selector {
+     font-size: 40px;
+  }
+}
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+        
+        <nav class="navbar nav-down navbar-default navbar-fixed-top">
+                <div class="container">
+
+                        
+
+                        <center><div id="sizecontroldiv" class="controlstyle">
+                                <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/8.html" class="btn btn-success navbar-btn">İleri</a>
+
+                        </div>
+                        </center>
+
+                </div>
+  </nav>
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text"><h1>Linux Dosya Sistemi Hiyerarşisi</h1>
+<p>Linux’un Windows’dan farklı olan dosya hiyerarşi sistemini kavramak ve ileride ele alacağımız dosya-dizin işlemleri konularında zorluk çekmemek adına bu kısımda “<em><strong>Linux dosya sistemi hiyerarşisi</strong></em>” konusunu ele alacağız.</p>
+<h2>Nedir bu hiyerarşi ve neden gerekli?</h2>
+<p>Hiyerarşi kelimesinin sözlükteki genel anlamı; “<em>Yunanca yetki, rütbe veya aşama sırası anlamında kullanılan kelime</em>.” şeklindedir.</p>
+<p>Linux sistemlerinde de aynı şekilde sınıflandırma yapılarak dosyaların sıraya koyulmasına, bunun sonucunda tıpkı bir ağaç misali oluşan dosya sistemlerine genel olarak “<strong>Linux dosya sistemi hiyerarşisi</strong>” deniyor.</p>
+<p>Genellikle bütün dağıtımlarda aynı hiyerarşik düzen vardır.(Genellikle diyorum çünkü küçük farkların dışında tüm dağıtımlar aynı hiyerarşik yapıya sahiptir. Zaten eğer her dağıtımın hiyerarşik dosya sistemi tamamen farklı olsaydı o zaman geliştiriciler için ayrı bir uğraş ve içinden çıkılmaz bir karmaşa olurdu. O yüzden buraya çok takılmayın lütfen, istisnalar kaideyi bozmaz diyerek devam ediyoruz. :) )</p>
+<p>Linux <strong>"Tekil Hiyerarşik Klasör Yapısı"</strong>'nı benimsemiştir. Yani bu da şu demek oluyor; her şey <strong><mark>/</mark></strong> (<strong>slash</strong>) simgesiyle ifade edilen <strong><code>root</code></strong> klasöründen başlar, aşağıya doğru iner. Merak edenler için de söyleyelim “<strong>Root</strong>” kelimesinin karşılığı da Türkçe olarak “<strong>kök</strong>” anlamına geliyor. Bu sayede “<strong>root</strong>” kelimesinin de nereden geldiği ve neden kullanıldığı da az çok açıklığa kavuşuyor sanırım.</p>
+<p><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/1-min.png" class="responsive" ></p>
+<p>Linux, <strong><code>/</code></strong> (<strong>root</strong>) klasöründen başlayarak, <strong>boot</strong> işlemindeki önem sırasına göre klasörleri ilgili konumlara yerleştirir. Bu yerleştirme işleminde, yani klasörler arası geçişlerde klasörler arasını ayırmak için <strong><mark>/</mark></strong>(<strong>slash</strong>) işareti kullanılır. Herhangi bir dizin ya da dosyanın sistemdeki adresi önce kök dizinden başlar sonra o dosya ya da dizine ulaşmak için geçilmesi gereken dizinler arasına yine <strong><mark>/</mark></strong> yazılarak elde edilir. Örneğin <strong><code>/home/burak</code></strong> yolu, <strong>kök dizininde</strong>(<strong>/</strong>), <strong>home</strong> isimli dizin içindeki <strong>burak</strong> dizininin konumunu belirtir. Bu ifadede en baştaki <strong><code>/</code></strong> işareti <strong>kök dizini</strong> belirtmektedir.</p>
+<p><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/2-min.gif" class="responsive" ></p>
+<p>Ayrıca belirtmekte fayda var, <strong>Linux küçük büyük harf duyarlılığına sahiptir.</strong> Yani Linux'ta <strong><code>DOSYA_ADI</code></strong>, <strong><code>Dosya_Adı</code></strong>, <strong><code>dosya_adı</code></strong>, <strong><code>DoSyA_aDı</code></strong>.. vb. gibi isimlendirilmiş dosyaların hepsi <strong>ayrı/farklı</strong> bir dosya olarak tanınır. Windows'ta ise aynı isimli dosyalar, küçük büyük harf ayrımı gözetilmeksizin aynı olarak tanınır. Hemen bu durumu teyit etmek için Windows ve Linux sistemlerinde dosya oluşturma işlemi gerçekleştirelim.</p>
+<p><strong>#Windows</strong>
+<img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/3-min.gif" class="responsive" >
+<strong>Gördüğünüz gibi Windows işletim sisteminde büyük küçük harf duyarlılığı bulunmuyor.</strong></p>
+<p>Gelin bu durumu birde Linux sisteminde test edelim.</p>
+<p><strong>#Linux</strong>
+<img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/4-min.gif" class="responsive" >
+Test sonucundan da anlaşılacağı gibi Linux işletim sisteminde küçük büyük harf duyarlılığı bulunuyor.
+<strong>O yüzden işlemlerimizi yaparken özellikle de ileride konsol(terminal/komut penceresi) ekranından işlem yaparken bu küçük büyük harf duyarlılığı son derece önem kazanacak.</strong> Bu önemli detayı da öğrendikten sonra gelin anlatıma devam edelim.</p>
+<p>Daha iyi anlaşılması adına anlatımları Windows ile karşılaştırma yaparak gerçekleştiriyorum. Ve yine bir karşılaştırma daha; Windows işletim sistemine bir program eklediğimizde programın dosyaları <strong><code>Program Files</code></strong>(Program Dosyaları) dizini içerisine programın kendi adındaki bir klasöre eklenir.(Örneğin <strong><code>C:\Program Files\program_adı</code></strong> şeklinde.) Programın dosyaları tek bir dosya içerisindedir yani.(<em>Anlatımda kast edilen program dosyalarının tek dosya içerisinde bulunma durumuna harici sistem kayıt dosyaları ve benzeri dosyalar dahil değildir.</em>) Ancak Linux'ta bir program eklenme durumunda programın tüm dosyaları programın isminin yer aldığı bir klasöre gitmez.</p>
+<p>Örneğin; sistem otomatik olarak program <strong>dokümanlarını</strong> <strong><code>/usr /share /doc /program_ad/</code></strong> altına koyarken, eğer varsa <strong>info</strong> dosyaları da,<strong><code>/usr/share/info</code></strong> dizini içerisine atar. Yani kısacası, programı kurduğunuzda programın dosyaları ilgili konumlara otomatik olarak dağılır. Tek bir klasör içerisinde yer almaz.</p>
+<p>Özetle Linux sisteminde her şey bir dosya(<strong>root-kök dosyası</strong>(<strong><code>/</code></strong>)) içerisinde yer alır. Ve bu dosya sistemi hiyerarşik bir yapıda bulunur. Tüm bu <strong>tek kök dosya sistemi</strong> ve hiyerarşik yapılanmanın amacı <strong>çok kullanıcılı ve dağıtık bir sistemi güvenli ve kolay bir şekilde kurup yönetebilmektir</strong>. Buradaki "<strong>dağıtık</strong>" kavramı ne diyecek olursanız; Örneğin birden çok bilgisayarın olduğu bir ağda bilgisayarlardan birisindeki bir ağ dizinine(<em>neden ağ üzerinden bağlanıyor? neden ağ dizini aracılı ile yapılıyor ? gibi sorularınız varsa buradaki ağ kavramı bilgisayarları birbirine bağlayan bağlantı ağı anlamında. Yani buradaki esas önemli nokta bilgisayarların birbirine bağlanmasıdır.</em>) kök dosyası altındaki dosyalar istenildiği gibi dağıtılarak bölünebilir. Örneğin x_bilgisayarı'na <strong><code>/bin</code></strong> dizini bağlanır, bir diğer bilgisayara <strong><code>/var</code></strong> dizini içerisindeki e-posta sunucusunun dosyalarının olduğu dizin, bir diğerine de <strong><code>/home</code></strong> dizini bağlanabilir.</p>
+<p>Bu sayede fiziksel olarak pek çok bilgisayara dağılmış olan bir sunucu tek bir kök dosya sisteminden, sanki tek bir bilgisayarmış gibi yönetilerek kullanılabilir. Bu sayede hem iş yükü dağılımı yapılarak sistem performansı arttırılmış olur hem de yetkilendirme ve yönetim kısıtlamaları dahilinde sistemin ayrı ayrı parçalara dağılımı ile sisteme ekstra güvenlik önlemi katılmış olunur.
+Biraz daha net anlamak adına aşağıdaki görseli inceleyebilirsiniz.</p>
+<p><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/5-min.png" class="responsive" >
+Siz şimdi "<em>ben sadece kişisel bilgisayarımdan kullanacağım bu dosya sistemi benim için gereksiz.</em>" diyebilirsiniz. Ancak bu dosya sistemi tekil kullanıcılar için de sağladığı güvenlik özellikleri nedeniyle gerekli bir sistemdir.</p>
+<p>Daha iyi anlamak için benzer bir duruma masaüstü kullanıcıları için örnek verelim.</p>
+<p>Örneğin sistemde "<strong>burak</strong>" isimli kullanıcı hesabı var diyelim. Burak kullanıcısının sistemi kullanması için gereken sistem dosyalarını çalıştırma yetkisi var yani sistemi normal bir şekilde kullanabiliyor. Ancak burak kullanıcısının dosyaları değiştirme yetkisi yoksa <strong><code>/home/burak</code></strong> dizininden önceki dizinlerde değişiklik(dosyaları silme, üzerine veri yazma vs..) yapamaz. Bu sistem sayesinde bütün kullanıcılar, yetkileri dahilinde işlemlerini güvenli şekilde yerine getirirler. Bu sayede yönetim ve güvenlik sağlama işi kolaylaşır.
+Bu duruma örnek olması için çok basit bir test yapalım.
+<strong>Root(yetkili ve tüm izinlere sahip kullanıcı)</strong> ile <strong>burak</strong> isimli kullanıcı hesaplarından "<em><strong>Deneme</strong></em>" isimli dosyada değişiklik yapıp, yaptığımız değişikliği kaydetmeye çalışalım.</p>
+<p><img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/7-min.gif" class="responsive" ></p>
+<p>Gördüğünüz gibi "<strong>root</strong>" kullanıcı hesabındayken kayıt işlemini tamamlayabildim ancak "<strong>burak</strong>" kullanıcı hesabında yetki iznim olmadığı için dosyada yaptığım değişikliği kayıt edemedim.
+<strong>Bu da demek oluyor ki kullanıcılar sadece sahip oldukları yetkileri dahilinde işlemler gerçekleştirebiliyor.</strong> Bu sayede sistem yönetimi ve güvenliği kolaylıkla sağlanabiliyor.</p>
+<p>Artık kısaca Linux dosya sisteminin neden bu şekilde olduğunu ve sağladığı avantajları anladıysak, gelin bu hiyerarşik yapıdaki dosyalara ve işlevlerine daha da yakından bakalım.</p>
+<p>Aşağıda verilenler bilgiler kesinlikle ezberlenecek bilgiler değil. Bu bilgileri anlayarak okuyup özümseyin zaten ihtiyaç duyduğunuzda bu bilgilere buradan tekrar bakabileceksiniz. Bu bilgiler de zamanla yeri geldikçe/ihtiyaç duydukça kullanmanız ile kalıcı hale gelecektir.</p>
+<h2>/bin</h2>
+<p>İşletim sisteminizi kullanmak için gereken birçok komut <strong><code>/bin</code></strong> klasörü altındadır. <strong>cat, mkdir, cp, ls, mv, rm</strong> vb. <strong>temel komutların hepsi buradadır</strong>. Sistem boot ettiğinde, ilk olarak <strong><code>/bin</code></strong> klasörü çalışır hâle getirilir. Sistemde ne kadar ciddi bir sorun olursa olsun <strong><code>/bin</code></strong> klasöründeki komutlar çalışmaya devam eder. Bu sayede sisteminizde bir sorun meydana geldiğinde <strong><code>/bin</code></strong> klasörü altındaki temel komutları kullanarak sistemi onarabiliriz.</p>
+<h2>/boot</h2>
+<p>Boot, işletim sisteminin yüklenme evresidir. <strong><code>/boot</code></strong> klasörü, boot işlemi için gerekli olan tüm dosyaları içerir (çekirdek görüntüsü, sistem haritası, önyükleyici yapılandırması gibi). Bilgisayarın başlangıç (boot) aşamasında gerekmeyen ayar ve yapılandırma dosyaları burada bulunmaz; başka klasörlerden gerektiği zamanlarda yüklenir.</p>
+<h2>/dev</h2>
+<p>Linux'ta her şey bir dosyadır; donanım aygıtları da öyle. USB girişleri, seri ve paralel portlar, depolama ortamları, CD-ROM'lar vb... Bütün aygıtlar <strong><code>/dev</code></strong> klasörü altında tutulan dosyalardan ibarettir. Örneğin <strong><code>/dev</code></strong> altında bulunan <strong><code>sda1</code></strong> dosyası, sabit diskinizi temsil eder. Ya da <strong><code>/dev/dsp</code></strong>, ses aygıtınızdır. Bunları programlar vasıtasıyla kullanırız; ancak bu dosyalar üzerinden doğrudan müdahale etmek de mümkündür.</p>
+<p>Birkaç aygıt dosyası ve işlevi.</p>
+<div><table><thead><tr><th>Konumu</th><th>Cihaz Açıklaması</th></tr></thead><tbody><tr><td><strong><mark> /dev/ttyS0 </mark></strong></td><td>Fare, modem gibi aygıtların bağlandığı seri port (COM 1).</td></tr><tr><td><strong><mark>/dev/psaux</mark></strong></td><td>PS/2 girişi; fare ve klavyeler içindir.</td></tr><tr><td><strong><mark>/dev/lp0</mark></strong></td><td>Paralel port (LPT 1); yazıcı, tarayıcı vs...</td></tr><tr><td><strong><mark>/dev/dsp</mark></strong></td><td>Birincil ses aygıtı
+</td></tr><tr><td><strong><mark>/dev/usb </mark></strong></td><td>USB aygıtları</td></tr><tr><td><strong><mark>/dev/sda</mark></strong></td><td>SCSI aygıtlar, USB bellekler, harici CD-ROM'lar vs...</td></tr><tr><td><strong><mark>/dev/scd</mark></strong></td><td>SCSI CD-ROM'lar</td></tr><tr><td><strong><mark>/dev/js0 </mark></strong></td><td>Oyun çubuğu (Joystick)</td></tr></tbody></table></div>
+<hr>
+<h2>/etc</h2>
+<p>İşletim sistemini bir vücuda benzetirsek, <strong><code>/etc</code></strong> klasörünü, sinir sisteminin merkezi olarak görebiliriz. Sisteme dair bütün ayarları ve bilgisayara özel birçok yapılandırma bilgisini içerir.</p>
+<h2>/home</h2>
+<p><strong><code>home</code></strong> klasörü kullanıcıların kalesi olarak tabir edilir. <strong><code>home</code></strong> klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin <strong>/home/ahmet</strong> , <strong>/home/ayşe</strong> gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları burada tutulmaktadır. Ayrıca kullanıcılar <strong><code>/home</code></strong> dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. <strong><code>/home</code></strong> dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.</p>
+<h2>/initrd</h2>
+<p><strong>initrd</strong>, "<strong>initial ramdisk</strong>" kısaltmasıdır. Anlamı, yaklaşık olarak "<strong>Başlangıç Bellek Diski</strong>" şeklinde ifade edilebilir. Boot aşamasında ilk önce çekirdek (kernel) yüklenir. Bundan sonra bilgisayarınızın belleğinde bir Bellek Diski oluşturulur. Oluşturulan Bellek Disk üzerinde <strong><code>/</code></strong> (root) yansısı açılır ve kök dizin olarak monte edilir. <strong><code>/initrd</code></strong> bu işlemlerin yapılması ve Linux'un yüklenmesi için gereklidir.</p>
+<h2>/lib</h2>
+<p>Çekirdek modülleri ve paylaşılan kütüphane dosyaları bu klasörde bulunur. Kütüphane dosyaları, sistemi başlatmak ve <strong><code>/bin</code></strong> ile <strong><code>/sbin</code></strong> içerisindeki komutları çalıştırmak için gereklidir. Paylaşılan kütüphane dosyalarını, Windows'ta DLL ile eş tutabiliriz. Linux'ta kütüphane dosyalarının sonu "<strong>.so</strong>" ile biter.</p>
+<h2>/lib64 /lib32</h2>
+<p>Halen 32 bit ve 64 bit sistemler arasında geçiş yapıyoruz. Bu nedenle, kütüphane dosyalarının derleme süresi boyunca kullanılan kayıt boyutunu netleştiren <strong><code>/lib32</code></strong> ve <strong><code>/lib64</code></strong> adlı dizinlerle karşılaşabilirsiniz. Yani bu sayede 64 bitlik bir bilgisayar, eski uygulamalara uyumluluk için bazı 32 bitlik ikili dosyalara ve kütüphanelere sahip olabilir.</p>
+<h2>/lost+found</h2>
+<p>İngilizce bir terim olan “<strong>Lost and Found</strong>” <strong>kayıp eşya bürosu</strong> demektir. <strong><code>/lost+found</code></strong> klasörü de tam olarak bu işlevi görmektedir. Bazen sisteminizde herhangi bir problem olur; örneğin bilgisayarı resetlerseniz, elektrik gider sonrasında bilgisayarı yeniden başlatırsınız. Bu gibi durumlarda Linux'ta <strong>fsck</strong> (<strong>File System Check</strong>) komutu devreye sokulur. Düzeltilemeyen bir sorun varsa, bağlantıları kopmuş kayıp dosyalar ortaya çıkmışsa, bunlar <strong><code>/lost+found</code></strong> altına atılır. Kısaca özetlersek; kötü bir sistem kapanmasından sonra, olması gereken bazı dosyaları bulamıyorsanız, kayıp eşya bürosuna bakmanızda yarar var.</p>
+<h2>/media</h2>
+<p>Kaldırılabilir aygıtların (USB bellek, SD kart, CD vb.) ve sistem başlangıcında bağlanmayan sabit disk bölümlerinin bağlanma noktasıdır. Söz konusu depolama ortamları sisteme bağlanmamış iken dizin içeriği boş görünür.</p>
+<h2>/mnt</h2>
+<p>İşletim sisteminin kurulu olduğu disk bölümü hariç olmak üzere sistem başlangıcında bağlanan sabit disk bölümleri ve donanım aygıtlarının bağlanma noktasıdır. (İşletim sisteminin kurulu olduğu disk bölümünün içeriği ise doğrudan <strong><code>/</code></strong> (<strong>kök dizin</strong>) altında bulunur.)</p>
+<p>Bağlama(mount) işlemi, bir disk bölümünün sisteme bağlanarak kullanıma hazır hâle gelmesi demektir. Nereye bağladığınız sizin tercihinizdir, değiştirmeniz mümkündür. Yani bir diski, <strong><code>/media</code></strong> veya <strong><code>/mnt</code></strong> klasörüne ya da bir başka yere bağlamanız fark etmeyecektir. <strong><code>/media</code></strong> ve <strong><code>/mnt</code></strong> sadece genel kabul görmüş bağlantı noktalarıdır.</p>
+<h2>/opt</h2>
+<p>İşletim sisteminden bağımsız, sistem için zorunlu olmayan 3. parti kullanıcı programları bu dizinde bulunur. Örneğin; Google Earth programını indirip kurmak istediğinizde, varsayılan olarak kurulacağı nokta, <strong><code>/opt/google-earth</code></strong> adresidir.</p>
+<p>Elbette üçüncü parti bir programı kurarken bu kurulum konumunu değiştirebilir, size uygun gelen bir başka konuma yükleyebilirsiniz. Ancak daha önce de bahsettiğimiz gibi bazı şeyler genel kabule dayanır.</p>
+<h2>/proc</h2>
+<p>Süreçler, sistem belleği, bağlı aygıtlar, donanım yapılandırmalarıyla ilgili bilgileri içeren özel bir “sanal” dosya sistemidir. Bildiğimiz anlamda fiziksel dosyalar bulundurmaz; sistem durumuna dair bilgi içeren sanal dosyaları vardır. Bir bilgi alma merkezi olarak görülebilir, birçok uygulama buradaki bilgilerden yararlanmaktadır. Örneğin <strong><code>cat /proc/swaps</code></strong> yazarak sisteminizdeki takas dosyalarına dair bilgi alabilir ya da <strong><code>cat /proc/cpuinfo</code></strong> komutuyla işlemcinizin özelliklerini görebilirsiniz.</p>
+<p><strong><code>/proc</code></strong> klasörü içerisindeki dosyalar, sadece sistem durumunu görüntülemek için kullanılmaz, gerektiğinde sistemde ayarlama yapmak için de kullanılabilir.</p>
+<h2>/root</h2>
+<p><strong>Linux/Unix</strong> sistemlerde, işletim sistemine her türlü müdahalede bulunabilme yetkisine sahip, "<strong>root</strong>" adıyla tanımlanmış, süper yetkili özel bir kullanıcı hesabı vardır. <strong><code>/root</code></strong> dizini, bu özel kullanıcı hesabının ev dizinidir. Daha iyi anlamak adına örneğin; "<strong>burak</strong>" isimli kullanıcı hesabının ev dizini <strong><code>/home/burak</code></strong> şeklindeyken "<strong>root</strong>" kullanıcısının ev dizini <strong><code>/root</code></strong> dizini şeklindedir. <strong>Root</strong> kullanıcısına daha önce de belirttiğimiz şekilde "<strong>kök kullanıcı</strong>" da denilir.</p>
+<p>Kullanıcıların, sistemi root hesabıyla açma ihtiyacı bulunmaması nedeniyle ve ayrıca sistemi root olarak açmanın güvenlik zaafiyetine yol açabilecek olması nedeniyle pek çok Linux dağıtımında root hesabıyla sisteme giriş yapılması, öntanımlı olarak engellemiştir. Ancak istisnaya dahil olan "<strong>Kali Linux</strong>" dağıtımı penetrasyon testleri ve bunun gibi siber güvenlik işlemleri için oluşturulduğundan kullanıcılar için kolaylık olması için tam yetkili olarak çalışır.</p>
+<h2>/run</h2>
+<p>Son önyüklemeden bu yana çalışan sistemle ilgili bilgileri tutar. Tutulan bilgilere örnek vermek gerekirse şu anda oturum açmış kullanıcılar, sisteme bağlanan aygıtlar, ağ ile bağlantı(network) değişimleri ve bunun gibi bilgileri tutar.</p>
+<h2>/sbin</h2>
+<p>Linux'ta normal kullanıcının kullanabileceği komutlarla, kök kullanıcının (root) kullanabileceği komutlar ayrılmıştır. root tarafından kullanılacak bakım ve yönetim için kullanılan önemli programlar, <strong><code>/sbin</code></strong> altında tutulur. Daha az öneme sahip yönetim komutlarıysa, <strong><code>/usr/sbin</code></strong> klasöründedir. Eğer yerelde, yani kullandığınız makineye özgü kök kullanıcı (root) komutları bulunuyorsa, bunları da <strong><code>/usr/local/sbin</code></strong> altında bulabilirsiniz.</p>
+<h2>/usr</h2>
+<p>Unix ilk çıktığında, kullanıcılara ait ev klasörleri, <strong><code>/usr</code></strong> altında tutulurdu. Örneğin; "<strong>burak</strong>" isimli bir kullanıcının ev klasörü <strong><code>/usr/burak</code></strong> şeklindeydi. Bu yöntem zamanla değişti ve <strong><code>/home </code></strong>klasörü doğmuş oldu. <strong><code>/usr</code></strong> klasörü hâlâ çok önemli bir yapıdır ve işletim sisteminizde kullandığınız her şeyle ilişkisi bulunur.</p>
+<p>Kurduğunuz pek çok program <strong><code>/usr</code></strong> içine kurulur. Her ne kadar Linux'ta kurulan bir programa ait tüm dosyalar <strong><code>usr</code></strong> dizini içine atılmıyor olsa da <strong><code>usr</code></strong> dizini Windows'taki <strong><code>Program Files</code></strong> klasörü ile benzer görev görmektedir. <strong><code>/opt</code></strong> adresi işletim sistemi dışında gelen 3.parti programlar içindir. Fakat işletim sistemi aracılığıyla ya da paket yönetim sistemlerini kullanarak yüklediğiniz her şey <strong><code>/usr</code></strong> altına aktarılır. Aynı zamanda yüklediğiniz programların çalışmak için ihtiyaç duyacağı kütüphane dosyaları, <strong><code>/usr/lib</code></strong> altındadır.</p>
+<p><strong><code>/usr</code></strong>, daha geniş bir tanımla; tüm kullanıcılarca paylaşılan verileri (programlar, komutlar, kütüphaneler, dokümanlar gibi) içeren dizindir. <strong><code>/usr</code></strong> ile ilgili söylenebilecek bir başka nokta da "local" klasörüdür. Linux, sunucu olarak birçok istemciye hizmet verebilecek bir işletim sistemidir. Bir Linux sunucu (server) kurarsanız, ona bağlanan yüzlerce istemci (client) olabilir. Her istemci bilgisayara, <strong><code>/usr</code></strong> altındaki programların ayrı ayrı yüklenmesi gerekmez; bir başka konumdan bu komutları çalıştırabilirsiniz. Ancak <strong><code>/usr</code></strong> altında bulunan "local" klasörü sadece kullandığınız makineye özeldir. Örneğin <strong><code>/usr/local/bin</code></strong> klasörü içinde bulunan bütün komutlar, direkt olarak kullandığınız makineye yüklenmiştir. <strong><code>/usr/bin</code></strong> komutları ise geneldir ve bir ağ üstündeki bütün makinelerden erişilebilir. Yani neticede "local" ifadesini gördüğünüzde, bunun sadece sizin makinenize özel olduğunu bilin.</p>
+<h2>/var</h2>
+<p>Log dosyaları, e-posta ve yazıcı kuyrukları gibi değişken sistem bilgilerini barındırır. Sisteminize dair tutulan log'ları buradan görebilir; güvenlik durumunu buradan kontrol edebilirsiniz.</p>
+<h2>/tmp</h2>
+<p>Geçici dosyalar içindir. Birçok program, burayı geçici depolama alanı olarak kullanır. <strong><code>/tmp</code></strong> klasörünün içeriği genellikle KB'lar mertebesinde kalır ve genellikle işletim sistemi yeniden başlarken içindeki dosyalar silinir. Her ne kadar <strong><code>tmp</code></strong> klasörü geçici dosyalar için de olsa bu klasör altında bulunan dosyaları, ne yaptığınızdan emin değilseniz, kesinlikle silmemelisiniz! Aksi taktirde sisteminizde ya da bazı programlarda birçok sorunla karşılaşabilirsiniz.</p>
+<hr>
+<p>Hatırlamanıza yardımcı olması için anlatılanları birde kısaca şematik şekilde aşağıdaki görsel ile verdim. Eğer konuyu anlayarak ve özümseyerek okuduysanız bu grafiğe bakarak bir çırpıda hangi dosyanın, genel olarak hangi işlevde olduğunu hatırlayabilirsiniz.
+<img src="img/4%20-Linux%20Dosya%20Sistemi%20Hiyerar%C5%9Fisi/6-min.png" class="responsive" ></p>
+<p><strong>Kaynakça :</strong>
+<a target="_blank" href="http://www.cagataycebi.com/linux/file_system/file_system.html" rel="nofollow">Çağatay Çebi</a> ||
+<a target="_blank" href="https://wiki.ubuntu-tr.net/index.php?title=Linux_dosya_sistemi_hiyerar%C5%9Fisi" rel="nofollow">ubuntu-tr</a></p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", 
+	targets: ["body"],
+	levels: 2,
+	persist: "session",
+	animate: 0 
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+
+

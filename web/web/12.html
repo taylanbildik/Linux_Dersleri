@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/13.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div>
+  </nav>
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text"><h1>Kullanıcı İşlemleri</h1>
+<p>Linux'ta birçok kullanıcı hesabının olabildiğini ve bunlar içinde en yetkilinin root kullanıcısı olduğunu önceki derslerimizde tecrübe etmiştik. Ancak sistemde root kullanıcısı olmadan da root kullanıcısının yetkilerine sahip olmamız mümkün. Bu imkanı bize <strong>Linux Grup Yönetimi</strong> veriyor.</p>
+<h2>Grup Yönetimi</h2>
+<p>Aynı grupta yer alan kullanıcılar bizim tanımlamamızla aynı haklara sahip olabiliyorlar.</p>
+<p>Biraz daha ayrıntılı vermek gerekirse <strong>Linux</strong> ve <strong>UNIX</strong> sistemlerindeki kullanıcılar bir veya daha fazla gruba aşağıdaki nedenlerle atanır:</p>
+<ul>
+<li>Dosyaları veya diğer kaynakları Grup yönetimi sayesinde ilgili kullanıcılarla paylaşarak, sistemde erişim sınırlamalarıyla güvenlik sağlaması.</li>
+<li>Kullanıcı yönetim ve denetiminde  kolaylık sağlıyor olması.</li>
+<li>Grup üyeliği, bu gruba izin verilen dosyalara, dizinlere veya cihazlara özel erişim sağlar. Bu madde baştaki madde ile benzer amaca hizmet ederek tamamen kontrolü elde tutmayı sağlamak için kullanılır.</li>
+</ul>
+<p>Yani genel olarak <strong>Grup sistemini</strong> bir çeşit <strong>kontrol mekanizması</strong> gibi düşünebilirsiniz.</p>
+<p>Bu kısa bilgilendirmeden sonra gelin grup yönetimi ile ilgili işlemlere geçelim.</p>
+<p>Bir grup oluşturulduğunda bu grubun bilgisi <strong><mark>/etc</mark></strong> dizini içerisinde yer alan <strong><mark>group</mark></strong> isimli dosyada tutuluyor.
+Yani mevcut grupları görüntülemek istersek <strong><mark>/etc</mark></strong> dizini içerisinde yer alan <strong><mark>group</mark></strong> dosyasına bakmamız gerekir.
+Bunun için <strong><code>less /etc/group</code></strong> , <strong><code>more /etc/group</code></strong> , <strong><code>cat /etc/group</code></strong> komutlarından herhangi birini kullanabiliriz. Çıktıları aşağıdaki şekilde olacaktır.(Çıktıyı uzun olması nedeni ile aşağıdaki çıktının görselini keserek verdim.)</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/0-min.png" class="responsive"></p>
+<p>Hemen bu çıktıda yer alan kısımlara bir açıklık getirelim. Bunun için bir grubu bölüm bölüm numaralandırarak açıklayalım. Ben bu durum için örnek bir grup belirtiyorum.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/1-min.png" class="responsive"></p>
+<p>Belirtilen numaralı kısımların açıklamaları:</p>
+<p><strong>1. Grup_ismi :</strong> Gruba verilen isimdir.</p>
+<p><strong>2. Parola :</strong> Parola alanını belirtiyor. Genelde parola kullanılmaz ancak kimi durumlarda kullanıldığı oluyor, bizim çıktımızda da <strong>x</strong> ile belirtilen alan parola kısmının boş olduğunu belirtiyor. Bu parola belirleme işlemi çok sık kullanılmasa da, ayrıcalıklı gruplarda uygulamak için yararlıdır.</p>
+<p><strong>3. Grup Kimliği (GID) :</strong> Atanan grup kimliğini(grup numarasını) belirtiyor.</p>
+<p><strong>4. Grup Listesi :</strong> Grubun üyesi olan kullanıcıların kullanıcı adlarının bir listesidir. Kullanıcı adları, virgülle ayrılmış şekilde belirtiliyor.</p>
+<p>Bu alanların neleri ifade ettiğini öğrendiğimize göre, gelin hangi kullanıcının hangi gruba dahil olduğunu nasıl öğrenebiliriz onu görelim.</p>
+<h2>Kullanıcı Gruplarını Sorgulamak</h2>
+<p>Kullanıcıların ait olduğu grupları görmek istersek komut satırına <strong><code>id kullanıcı_adı</code></strong> şeklinde komut vermemiz yeterli olacaktır.
+Ben "<strong>burak</strong>" kullanıcı hesabı için sorgulama yapmak üzere konsola <strong><code>id burak</code></strong> şeklinde komutumu veriyorum.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/2-min.png" class="responsive"></p>
+<p>Gördüğünüz gibi "<strong>burak</strong>" kullanıcı hesabı için burada; <strong>uid</strong>(<strong>u</strong>ser <strong>id</strong> /kullanıcı numarası), <strong>gid</strong>(group id/grup numarası) ve dahil olduğu <strong>gruplar</strong> listelenmiş oldu.</p>
+<p>Burada yeri gelmişken çıktıda da görülen <strong>uid</strong>(user id/kullanıcı numarası) ve <strong>gid</strong>(group id/grup numarası) kavramlarına değinelim. Bu numara aralıkları kullanıcı hesabına göre değişiklik gösteriyor. Yani kullanıcı çeşidine göre numaraları üç temel gruba ayırabiliriz. O da şu şekilde ;</p>
+<ul>
+<li><strong>root kullanıcısı :</strong> UID=0, GID=0</li>
+<li><strong>sistem kullanıcısı :</strong> UID=1 - 499, GID=1 - 499</li>
+<li><strong>normal kullanıcı :</strong> UID=500 &lt; X, GID=500 &lt; X (Buradaki X ifadeleri 500'den büyük tüm sayıları temsil etmektedir.)</li>
+</ul>
+<p>Ayrıca <strong><code>id</code></strong> komutunun birçok parametresi vardır bazıları birazdan göreceğimiz grup oluşturma kısmındaki parametrelerden oluşuyor. Detaylı bilgi için man sayfasına bakabilirsiniz. Ben yine de örnek olması açısından birkaç parametresini gösteriyorum ve daha sonra grup oluşturma ile konumuza devam ediyoruz.</p>
+<p><strong>g</strong> : <strong><code>id -g kullanıcı_adı</code></strong> belirtilen kullanıcının <strong>grup numarasını</strong>(<strong>gid</strong>) verecektir.</p>
+<p><strong>u</strong> : <strong><code>id -u kullanıcı_adı</code></strong> belirtilen kullanıcının <strong>kullanıcı numarasını</strong>(<strong>uid</strong>) verecektir.</p>
+<p><strong>G</strong> : <strong><code>ìd -G kullanıcı_adı</code></strong> belirtilen kullanıcının <strong>dahil olduğu tüm grupları</strong>(<strong>groups</strong>) verecektir.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/3-min.png" class="responsive"></p>
+<p>Yukarıdaki parametreler haricindekiler için man kılavuz sayfasına bakın lütfen.</p>
+<h2>Sıra geldi yeni grup oluşturmaya..</h2>
+<p>Yeni bir grup oluşturmak istersek <strong><code>groupadd yeni_grup_adı</code></strong> şeklinde komutumuzu kullanırız.</p>
+<p>Ben örnek olması açısından "<strong>yeni</strong>" isimli bir grup oluşturmak için komut satırına <strong><code>groupadd yeni</code></strong> şeklinde komutumu veriyorum.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/5-min.png" class="responsive"></p>
+<p>Ve oluşturduğumuz grubu sorgulamak için grup bilgilerinin tutulduğu dosyaya bakmak üzere <strong><code>cat /etc/group | grep grup_adı</code></strong> komutunu ya da <strong><code>tail -n 1 /etc/group</code></strong> kullanabiliriz.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/6-min.png" class="responsive"></p>
+<p>Ayrıca grup oluşturulurken kullanılabilecek bazı parametreler var. <strong>Bunlar;</strong></p>
+<p><strong>g :</strong>  Grup id belirleme. İstediğiniz numarayı başka bir gruba ait numara ile aynı olmayacak şekilde verebilirsiniz.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/7-min.png" class="responsive"></p>
+<p>Eğer aynı grup id ile başka bir grup eklemek istersek konsol bize "<em><strong>bu id ye sahip başka bir grubun halihazırda bulunduğu</strong></em>" uyarısını verecektir. Dolayısı ile grup ekleme işlemi başarısız olacaktır.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/8-min.png" class="responsive"></p>
+<p><strong>f :</strong> işlemi hatalar olsa bile zorlayarak tamamlar. Genelde bu kullanım sorunlar çıkardığı için pek tavsiye edilmez.</p>
+<p>Parametreler bunlar ile sınırlı değil ancak sizler <strong><code>man groupadd</code></strong> ve <strong><code>groupadd --help</code></strong> komutları yardımı ile diğer parametreleri de keşfedebilirsiniz.</p>
+<p>Ayrıca oluşturduğunuz grupları silmek isterseniz konsola <strong><code>groupdel grup_adı</code></strong> şeklinde komut yazmanız yeterli olacaktır.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/9-min.png" class="responsive"></p>
+<h2>Kullanıcı Yönetimi</h2>
+<p>Sistemimize yeni bir kullanıcı eklemek için kullanabileceğimiz iki farklı komut var. Bunlar <strong><code>adduser</code></strong> ve <strong><code>useradd</code></strong> komutlarıdır.</p>
+<h3>adduser</h3>
+<p>Yeni kullanıcı eklemek için komutumuzu <strong><code>adduser kullanıcı_adı</code></strong> şeklinde veriyoruz. Böylelikle oluşturduğumuz kullanıcıya ait ev dizini <strong><code>home/kullanıcı_adı</code></strong> şeklinde otomatik olarak oluşmuş oluyor.
+Ben örnek olaması açısından "<strong>hasan</strong>" isimli bir kullanıcı hesabı eklemek üzere konsola <strong><code>adduser hasan</code></strong> komutunu veriyorum.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/10-min.png" class="responsive"></p>
+<p>Çıktıları inceleyecek olursak ev dizini otomatik olarak oluşturulmuş ve "<strong>hasan</strong>" isimli kullanıcı "<strong>hasan</strong>" grubuna dahil edilmiş.
+Yeni eklemiş olduğumuz "<strong>hasan</strong>" isimli kullanıcı hesabını teyit etmek için; Sistemde kullanıcı hesapları ile ilgili bilgilerin tutulduğu <strong><mark>etc</mark></strong> dizini içerisindeki <strong><mark>passwd</mark></strong> dosyaya bakalım.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/11-min.png" class="responsive"></p>
+<p>Dosyanın en alt satırına baktığımızda yeni eklemiş olduğumuz "<strong>hasan</strong>" isimli kullanıcı hesabının eklenmiş olduğunu görüyoruz.
+Son olarak da <strong><mark>home</mark></strong> dizinine "<strong>hasan</strong>" kullanıcı hesabı için dosya oluşturulmuş mu buna bakalım.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/12-min.png" class="responsive"></p>
+<p>Çıktıda görüldüğü gibi <strong><mark>home</mark></strong> dizininde oluşturmuş olduğum "<strong>hasan</strong>" isminde kullanıcı dosyası bulunuyor.</p>
+<h3>useradd</h3>
+<p>Kullanıcı oluşturmak için bahsettiğimiz 2. komut olan <strong><code>useradd</code></strong> komutu kullanımı; <strong><code>useradd -m kullanıcı_adı</code></strong> şeklindedir. Burada komutumuz ile birlikte kullanmış olduğumuz <strong><code>m</code></strong> parametresi ile, oluşturduğumuz kullanıcıya ait ev dizininin otomatik oluşmasını sağladık. Birde son olarak kullanıcıya ait bir parola belirlemek üzere <strong><code>passwd kullanıcı_adı</code></strong> şeklinde komutumuzu vererek parolamızı oluşturuyoruz.</p>
+<p>Parola oluşturma işleminde kullandığımız <strong><code>passwd kullanıcı_adı</code></strong> şeklindeki komut bütün hesaplar için şifre güncelleme işleminde de kullanılıyor. Ve bir bilgi daha; bu parola bilgileri <strong><mark>/etc</mark></strong> dizini altındaki <strong><mark>shadow</mark></strong> isimli dosyada şifreli şekilde tutuluyor.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/4-min.png" class="responsive"></p>
+<p>Ben örnek olması açısından "<strong>ali</strong>" isimli bir kullanıcı hesabı oluşturmak üzere komutumu <strong><code>useradd -m ali</code></strong> şeklinde verdikten sonra "<strong>ali</strong>" isimli kullanıcı hesabı için şifre belirlemek üzere <strong><code>passwd ali</code></strong> komutunu kullandım.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/13-min.png" class="responsive"></p>
+<p>Görüldüğü gibi "<strong>ali</strong>" isimli kullanıcı hesabımız başarılı şekilde oluşturulmuş oldu. Şimdi <strong><mark>home</mark></strong> dizinini ve <strong><mark>passwd</mark></strong> dosyasına bakarak bu durumu teyit edelim.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/14-min.png" class="responsive"></p>
+<p>Çıktı sonuçlarında bir problem olmadığına göre konumuza, kullanıcı silme işlemi ile devam edebiliriz.</p>
+<h3>Kullanıcı Silmek</h3>
+<p>Oluşturulan kullanıcı hesabını ev dizini ile birlikte silmek için <strong><code>deluser --remove-home kullanıcı_adı</code></strong> komutunu kullanmamız yeterli olacaktır.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/15-min.png" class="responsive"></p>
+<p>Kullanıcı silme işlemlerini kontrol etmek adına <strong><mark>home</mark></strong> dizinini kontrol edelim.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/16-min.png" class="responsive"></p>
+<p>Çıktıda "<strong>hasan</strong>" ya da "<strong>ali</strong>" bulunmadığına göre kullanıcı silme işlemimiz başarılı şekilde tamamlanmış oldu.</p>
+<h3>Gruplara Kullanıcı Ekleme-Çıkarma İşlemi</h3>
+<p>Yeni grup ve yeni kullanıcı hesabı nasıl oluşturulur bunları gördük.
+Şimdi sıra geldi gruba yeni kullanıcı ekleme ve gruptan kullanıcı çıkarma işlemlerine.</p>
+<p><strong>Gruba Kullanıcı Eklemek</strong>
+Var olan bir gruba yeni bir kullanıcı eklemek için <strong><code>gpasswd</code></strong> komutunun <strong><code>a</code></strong> parametresini kullanarak, komutumuzu <strong><code>gpasswd -a kullanıcı_adı ekleneceği_grup_adı</code></strong> şeklinde kullanmamız yeterlidir.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/17-min.png" class="responsive"></p>
+<p><strong>Gruptan Kullanıcı Çıkarmak</strong></p>
+<p>Eğer gruba dahil olan bir kullanıcıyı gruptan çıkarmak istersek de <strong><code>gpasswd</code></strong> komutunun <strong><code>d</code></strong> parametresini kullanarak, komutu <strong><code>gpasswd -d kullanıcı_adı çıkarılacağı_grup_adı</code></strong> şeklinde kullanmamız gerekmektedir.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/18-min.png" class="responsive"></p>
+<h3>Aktif-Pasif Hesap Ayarlama</h3>
+<p>Varolan bir kullanıcı hesabını kilitlemek için <strong><code>usermod -L kullanıcı_adı</code></strong> komutunu kullanırız. Buradaki kilitlemekten kasıt kullanıcının sisteme giriş yapmasını engellemek için parolasının kilitlenmesidir. Parolayı devre dışı bırakmak için, sistem otomatik olarak şifreli parolanın önüne '<strong>!</strong>' işareti koyar ve kullanıcı hesabına giriş yapamaz.</p>
+<p>Bu durumu denemek için öncelikle kullanıcı hesaplarının parolalarının şifreli bir şekilde tutulduğu dosya olan <strong><mark>shadow</mark></strong> dosyasına bakalım.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/20-min.png" class="responsive"></p>
+<p>"<strong>burak</strong>" isimli kullanıcının parolasını yukarıdaki şekildedir. Daha sonra karşılaştırma yaparken tekrar ele alacağız.</p>
+<p>Konsol ekranına <strong><code>usermod -L burak</code></strong> yazarsam "<strong>burak</strong>" kullanıcısının hesabını kilitlemiş olurum. Bu kilitleme işlemini; kullanıcının hesaba girişte kullandığı parolanın önüne sistem tarafından otomatik olarak getirilen <strong><code>!</code></strong>(ünlem işareti) sayesinde gerçekleşmektedir.
+Bu durumu teyit etmek için tekrar <strong><mark>shadow</mark></strong> dosyasına bakalım ve önceki hali ile sonraki halini kıyaslayarak görelim.
+<img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/19-min.png" class="responsive">
+<img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/20-min.png" class="responsive">
+<img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/21-min.png" class="responsive"></p>
+<p>Gördüğünüz gibi hesabı kilitleme işleminde; hesaba girişte kullanılan parolanın önüne otomatik olarak gelen <strong><code>!</code></strong> (ünlem işareti) hesaba girmeyi engelleyerek hesabı kilitlemiş oluyor.</p>
+<p>Pasif durumdaki hesabı aktif hale getirmek için ise <strong><code>usermod -U kullanıcı_adı</code></strong> komutu kullanılır. Aynı şekilde hesabın tekrar aktif hale getirilmesi de devre dışı bırakılmış olan kullanıcı parolasının  önündeki '<strong>!</strong>' işaretinin kaldırılmasıyla gerçekleşir.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/22-min.png" class="responsive"></p>
+<p>Eğer anlamadığınız bir nokta varsa bu durumu -min.gif ile anlattım, dikkatlice takip ederseniz gayet net anlaşılacaktır.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/23-min.gif" class="responsive"></p>
+<h3>Kimlik Değişimi</h3>
+<p>Örneğin ben "<strong>burak</strong>" kullanıcısıyken, yapmak istediğim işlem ancak "<strong>root</strong>" kullanıcısının yetki alanındaysa ve ben "<strong>root</strong>" hesabının parolasını biliyorsam, "<strong>root</strong>" hesabının kimliğine bürünerek o işlemi gerçekleştirebilirim.</p>
+<p>Geçiş işlemleri için <strong><code>su</code></strong> komutunu kullanıyoruz. Komutun kullanımı ile ilgili iki farklı durum var, bunlar:</p>
+<ul>
+<li><strong>su kullanıcı_adı :</strong> diğer kullanıcı kimliğine geçiş yapar.</li>
+<li><strong>su - kullanıcı_adı :</strong> diğer kullanıcı kimliğine geçiş yapar ve direk olarak geçiş yapılan kullanıcının kabuğunda çalışmaya başlar.</li>
+</ul>
+<p>Bu durum en iyi örnekler ile açıklanabilir. İlk önce "<strong>root</strong>" kullanıcısıyken "<strong>burak</strong>" isimli kullanıcı hesabına giriş yapacağım daha sonra "<strong>burak</strong>" isimli kullanıcıdan "<strong>root</strong>" hesabına giriş işlemini gerçekleştireceğim. Adımları sırasıyla takip edin lütfen.</p>
+<p>Hemen mevcut kullanıcı oturumunu daha önce öğrenmiş olduğumuz <strong><code>whoami</code></strong> komutu ile sorgulayalım.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/24-min.png" class="responsive"></p>
+<p>"<strong>root</strong>" kullanıcısıyken "<strong>burak</strong>" hesabına geçiş yapmak için <strong><code>su burak</code></strong> komutunu kullanıyoruz. Ve <strong><code>whoami</code></strong> komutu ile geçiş durumunu kontrol ediyoruz.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/25-min.png" class="responsive"></p>
+<p>Geçiş yaptığımız "<strong>burak</strong>" hesabından "<strong>root</strong>" hesabına dönmek için <strong><code>exit</code></strong> komutunu kullanmamız yeterli.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/26-min.png" class="responsive"></p>
+<p>Şimdi <strong><code>su - burak</code></strong> komutu kullanarak geçiş yapacağımız kullanıcı kabuğunda çalışalım.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/27-min.png" class="responsive"></p>
+<p>Görsellere dikkatlice bakacak olursanız; <strong><code>su burak</code></strong> komutunu kullanarak geçiş yaptığımızda <strong><code>burak@taylan:/root$</code></strong> olan konsol ismi <strong><code>su - burak</code></strong> komutunu kullandığımızda direk olarak geçiş yaptığımız hesabın kabuğunda çalışmaya başlayarak <strong><code>burak@taylan:~$</code></strong> şeklinde oldu. Yani <strong><code>su - burak</code></strong> komutu bize tıpkı o hesap oturumunu açmışız gibi tepki verdi.
+Aşağıda çıktılara tekrar bakarsanız aradaki farkı daha net anlayabilirsiniz.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/28-min.png" class="responsive"></p>
+<p>Fark etmiş olacaksınız ki başta geçiş yapabilmemiz için geçeceğimiz hesabın parolasını bilmemiz gerektiğini söylemiştim. Ancak "<strong>burak</strong>" hesabına yaptığımız geçişlerde parola sorulmadı. Bunun sebebi "<strong>burak</strong>" hesabının normal kullanıcı olmasıdır. Şimdi bu durumu birde "<strong>burak</strong>" hesabındayken "<strong>root</strong>" kullanıcısı için iki farklı kullanımda da deneyelim.</p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/29-min.png" class="responsive"></p>
+<p><img src="img/9-%20Kullan%C4%B1c%C4%B1%20%C4%B0%C5%9Flemleri/30-min.png" class="responsive"></p>
+<p>Gördüğünüz gibi yönetici hesabına erişmek için bizlerden parola bilgisi istendi. Bu durum da başta açıkladığımız yetkili hesaplara geçişlerde şifre sorma olayını açıklıyor.</p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", 
+	targets: ["body"],
+	levels: 2,
+	persist: "session",
+	animate: 0 
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+

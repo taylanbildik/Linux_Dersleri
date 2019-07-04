@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+article.dark{
+ background-color:rgb(233, 231, 219);
+ color:#000;
+}	
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  <!-- Static navbar -->
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <!--if you want, also is possible change to fluid container-->
+      <!--<div class="container-fluid">-->
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/3.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <!-- Main component for a primary marketing message or call to action -->
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	<h1>Gerekli Ortamın Kurulması</h1>
+<p>Linux işletim sistemini kurmak veya Linux'u herhangi bir kurulum işlemi gerçekleştirmeden kullanmak için çok fazla seçenek bulunuyor. Ben sadece içlerinde bilmediğiniz bir alternatif seçenek olması ihtimaline karşı genel kullanım seçeneklerini aşağıda listeliyorum.</p>
+<h2>Kurulum ve Kullanım Metodları</h2>
+<ul>
+<li>Sanal olarak kurulum (Vmware &amp; Virtualbox)</li>
+<li>İkincil işletim sistemi olarak kurmak (Dualboot)</li>
+<li>Live versiyon olarak kullanmak.</li>
+<li>Linux VPS aracılığı ile kullanmak.</li>
+</ul>
+<h3>Sanal Olarak Kullanmak;</h3>
+<p><strong>Sanallaştırma işlemi kısaca;</strong> kurmak istediğiniz yeni bir işletim sistemini, diske kalıcı kuruluma ihtiyaç duymadan, mevcut işletim sistemi üzerinden sanallaştırma teknolojisi ile çalıştırabilmeniz anlamına gelir. Sanallaştırma teknolojisi sayesinde, kullanmakta olduğunuz işletim sisteminden çıkmadan, tıpkı program çalıştırır gibi; herhangi bir işletim sistemini sanal olarak çalıştırabilirsiniz.  Sanallaştırma işlemini; bu iş için geliştirilmiş olan <strong>vmware</strong> ve <strong>virtualbox</strong> gibi özel yazılımlar yerine getiriyor.</p>
+<h3>Avantajları</h3>
+<ul>
+<li>Sistemin yedeğini alarak, büyük bir sorun ile karşılaştığımızda
+aldığımız yedeği kolaylıkla geri yükleyebiliriz.</li>
+<li>Snapshot(anlık görüntü) özelliği sayesinde sistemi olduğu gibi kaydedip, daha sonra istediğimiz zaman kaldığı yerden çalışmaya devam edebiliriz.</li>
+<li>Diske kalıcı kurulum gerektirmez, ve kurulu olan sistemin dosyalarına kesinlikle müdahale etmez. Yani kurulu sisteme hiç bir zarar vermeden sanal olarak çalışır.</li>
+<li>Aynı anda birden çok işletim sistemini çalıştırabilir.(Bilgisayarınızın performansına göre değişiklik gösterebilir.)</li>
+<li>Kendinize göre ayarladığınız sanal makineyi kopyalayıp istediğiniz bilgisayarda aynı şekilde çalıştırabilirsiniz.</li>
+</ul>
+<p><strong>Kısacası;</strong> yeni öğrenmeye başlayan kişiler için test alanı görevi görür, snapsot ve yedekleme özellikleri sayesinde hatalardan kolaylıkla geri dönülmesi mümkündür. Eğer; sisteme zarar vermeden gönül rahatlığı ile her şeyi kurcalayayım, deneme yanılma ile öğreneyim derseniz sizin için biçilmiş kaftandır.</p>
+<h4>Dezavantajları</h4>
+<p>Sanallaştırmanın sağladığı avantajlarının yanında, dezavantajlarının sayısı ve etkisi çok büyük değildir.</p>
+<ul>
+<li>Mevcut işletim sistemi üzerinde çalıştığı için performans sorunları yaşanabilir.(Bilgisayarınızın performansına göre değişiklik gösterir.)</li>
+<li>Fiziksel ortamda oluşan herhangi bir donanım sorunu sanal makineyi de etkiler.</li>
+</ul>
+<p><em><strong>Vmware;</strong></em> ücretli bir yazılımdır ve içerisinde bir çok ekstra özellik barındırır. Bu özellikler genellikle işletmelerin işine yarayacak türdendir. Eğer bireysel bir kullanıcıysanız muhtemelen bir çok ekstra özelliği kullanmanız gerekmez.(Bu fazla özellikler sistemin daha hantal çalışmasına neden olabilir.)</p>
+<p><em><strong>Virtualbox:</strong></em> tamamen ücretsiz, vmware ile hemen hemen aynı özelliklere sahip yazılımdır. Eğer bireysel bir kullanıcıysanız; virtualbox yazılımını tercih edebilirsiniz.(Virtualbox yazılımı içerisinde çok fazla ekstra özellik barındırmadığından bireysel kullanıcılar için vmware yazılımına oranla daha performanslı çalışır.)</p>
+<h3>İkincil İşletim Sistemi Olarak Kullanmak</h3>
+<p><strong>Bu yöntem, özetle;</strong> mevcut işletim sisteminin yanına, diskte alan açarak ikincil bir sistem olarak kurmak ve kullanmaktır. Bu kurulumun ardından sistem, başlangıçta hangi işletim sistemini kullanmak istediğinizi sorar ve seçiminize göre ilgili sistemi başlatır.</p>
+<h4>Avantajları</h4>
+<ul>
+<li>Sanal kuruluma oranla performans açısında oldukça verimlidir.</li>
+<li>Var olan sistemi silmeden yanına kurduğunuz için, ihtiyacınız olduğunda diğer sisteme geçiş yapabilirsiniz.</li>
+</ul>
+<h4>Dezavantajları</h4>
+<ul>
+<li>Sistem yedeğini almak ve ilgili yedeğe dönmek, sanal kullanıma oranla daha zahmetlidir.</li>
+<li>Snapshot özelliği olmadığından sistemde herhangi bir kritik hata meydana geldiğinde, sistemi onarması çok daha uzun sürer.</li>
+<li>Kurulum işlemi ve kurulum sonrası sistem ayarlarının yapılandırılması, diğer kurulum işlemlerine oranla biraz daha uğraştırıcı olabilir.</li>
+</ul>
+<p>Öğrenme aşamasında, kullanıcıların hata yapması çok doğal bir durumdur.  Etkili öğrenim için bire bir uygulama şart, bu yüzden kullanıcılar sürekli deneme yanılma yöntemiyle yeni şeyler keşfeder ve daha fazlası için sistemi kurcalar. Bu duruma bağlı olarak kullanıcının alıştırmaları sırasında meydana gelebilecek olası hatalar, kullanıcının öğrenme şevkini kırarak, öğrenme sürecini sekteye uğratabilir. Eğer Linux işletim sistemini ilk defa kullanacaksınız, daha hızlı ve etkili öğrenebilmek için bu yöntemi kullanmayın. Ancak sanal olarak kullandığınızda sistem performansı sizin için çok sorun oluyorsa olabilir, ama bundan önce diğer kullanım alternatiflerini de değerlendirebilirsiniz. Bu yüzden lütfen yazının tamamını okuyup sizin için en ideal olanına kendiniz karar verin.</p>
+<h3>Live Versiyon Olarak Kullanmak</h3>
+<p>Live olarak kullanmak; Linux işletim sistemini USB diskimiz üzerine kurup, sistemi bu USB disk ile başlatıp Linux işletim sistemini bu USB disk üzerinden kullanmaktır. Üstelik USB üzerinden kullanımda tek bir kullanım modu da bulunmuyor. Aşağıda farklı kullanım modları sırasıyla açıklanmıştır. <strong>"Live Versiyon Olarak Kullanma" seçeneğini, sanal kullanımda performans sorunu yaşayan arkadaşlara kesinlikle öneririm.</strong></p>
+<p><strong>Boot Menüsünde Yer Alan Seçenekler</strong></p>
+<img src="img/0-%20Gerekli%20Ortam%C4%B1n%20Kurulmas%C4%B1/boot_menu.jpg" class="responsive">
+<p><strong>Live:</strong></p>
+<p>Kali Linux işletim sistemini USB diskiniz üzerinden kullanırsınız ve <strong>sistemi kapattığınızda</strong>  veya USB diskinizi bilgisayardan çıkardığınızda  <strong>sistemde yaptığınız tüm değişiklikler silinir.</strong>  Yani bu mod isminden de anlaşılacağı gibi yalnızca kullanım sırasında bilgileri tutar, daha sonra sistem kapandığında tüm bilgiler silinir ve sistem ilk baştaki haline döner. Bu mod sayesinde her defasında üzerinde hiç bir değişiklik yapılmamış temiz bir sistem üzerinde çalışabilirsiniz.</p>
+<p><strong>Live (failsafe):</strong></p>
+<p>Tıpkı live modunda olduğu gibi bilgileri yalnızca kullanım sırasında tutar. Genellikle sistemde sorun meydana geldiğinde sorunun kaynağını anlamak adına kullanılan, <strong>güvenli mod</strong>  diye tabir edilen moddur.</p>
+<p><strong>Live (forensic mode):</strong></p>
+<p>Adli moddur, ve mevcut sistem üzerinde inceleme yapılacağı zaman tercih edilir. Bu mod  <strong>mevcut sistemde hiç bir kalıntı bırakmadan sistemi inceleme</strong> işleminde kullanıldığı ve genellikle bir suçun kanıtlanması gibi olaylarda tercih edildiği için adli(<strong>forensic</strong>) mod olarak tabir edilir.</p>
+<p><strong>Live USB Persistence:</strong></p>
+<p>Kali Linux işletim sistemini USB diskiniz üzerinden tıpkı sabit bir diske kurmuşcasına kullanabilmenize olanak sağlayan moddur. Bu mod ile sistemde yapılan tüm değişiklikler USB disk üzerinde kayıt olur ve daha sonra bu bilgilere tekrar bu mod aracılığı ile ulaşabilirsiniz. Yani  <strong>live modun kalıcı halidir. Sistemde yapılan tüm değişiklikler tekrar ulaşabileceğiniz şekilde kalıcı olarak USB üzerine yazılır.</strong></p>
+<p><strong>Live USB Encrypted Persistence:</strong></p>
+<p>Bu mod ise bir üst kısımda bahsedilen kalıcı(persistence) modun şifrelenmiş halidir. Diğer moddan farklı olarak isminden de anlaşılacağı üzere bu mod  <strong>sistemde yapılan değişiklikleri kaydederken bu bilgileri şifreleyerek kayıt eder.</strong></p>
+<p><strong>Install:</strong></p>
+<p>Sabit diske kurulum işlemini başlatmak için kullanılan seçenektir.</p>
+<p><strong>Graphical Install:</strong></p>
+<p>Sabit diske kurulum işlemini  <strong>grafiksel arayüz</strong>  ile başlatmak için kullanılan seçenektir.</p>
+<h4>Avantajları</h4>
+<ul>
+<li>Sabit diske kurulum gerektirmez, yalnızca USB disk yeterlidir.</li>
+<li>Bir çok ihtiyaca göre bir çok kullanım modu vardır.</li>
+<li>Live modu sayesinde sistemi kurcalamaktan korkmadan etkili öğrenme sağlayabilirsiniz.</li>
+</ul>
+<h4>Dezavantajları</h4>
+<ul>
+<li>Bu kullanımdan verim alabilmek için en az <strong>8 GB</strong> USB diskiniz olmalı.</li>
+<li>Boot etmek için bir kaç ön hazırlık gerekir.</li>
+</ul>
+<h3>VPS Üzerinden Kullanım</h3>
+<p>Bu kullanım yöntemi de, uzaktaki özel bir sunucu sistemine bağlanılarak, bağlanılan sistemi herhangi bir yüksek donanım gücüne ihtiyaç duymadan yönetebilmemize olarak tanır.  Özetle; uzaktaki sunucu sisteminde, sizin istediğiniz işletim sisteminiz başlatılır, siz de bu sistemi uzaktan komutlar vererek yönetirsiniz.</p>
+<h4>Avantajları</h4>
+<ul>
+<li>Mevcut donanımınızın çok güçlü olması gerekmez.</li>
+<li>İstenilen yerden ve istenilen cihazdan(<em>pc, laptop, tablet, telefon..</em>) uzak sunucudaki sisteme komut verilebilir.</li>
+<li>Sistem yedeği alma ve üst düzey sistem performansı imkanı vardır.</li>
+</ul>
+<h4>Dezavantajları</h4>
+<ul>
+<li>Bu hizmetler ücretlidir.</li>
+</ul>
+<p>Bu kısımda neden kurulum detaylarını anlatmıyorsun diyecek olursanız, burada izahı dokümantasyonu uzatacak ve çok da verimli olmayacaktır. Kurulum işlemini verimli şekilde anlatabilmek için en iyi yol, kurulum işlemlerini videolu şekilde göstermektir. Bu noktada hem bana destek olmak hem de kurulumları ve diğer tüm içerikleri videolu şekilde takip edebilmek için  <a href="https://www.udemy.com/kali-linux-ile-sifirdan-temel-linux-egitimi/?couponCode=DOKUMAN" rel="nofollow">buradan</a>  kursumu  <strong>indirimli</strong>  olarak satın alıp devam edebilirsiniz. Ancak kursu almak gibi bir niyetiniz yoksa, elbette bu kursu almadan da internet üzerinden araştırarak çok fazla kaynağa ulaşabilirsiniz. Yine de; ilerleyen kısımlarda işleyeceğimiz konular da aynı şekilde  <strong>videolu</strong>  ve özellikle  <strong>renklendirilmiş görsel animasyonlar</strong>  ile çok daha net anlaşılabilecek konulardır. Yani bu dokümantasyonda temel linux öğrenimi için gereken her bilgi mevcut, ancak benim  <strong>kurs videolarımın artısı buraya bağlantılı ve açıklık getirici</strong>  şekilde ilerliyor olmasıdır.  <strong>Bu yüzden lütfen burada yazdıklarıma reklam gözü ile bakmayın, ben sadece bir eğitimin tamamlayıcı bütünü olan videolardan bahsediyorum.</strong>  Yani burada herhangi bir dayatma söz konusu değil kesinlikle, kursa kayıt olup olmamak tamamen sizlerin isteğine bağlı bir durum. Eğer buradaki kavramları öğrenmekte güçlük çekerseniz; içerisinde  <strong>alıştırmaları</strong>,  <strong>pratik testleri</strong>  ve  <strong>soru-cevap</strong>  imkanı olan kursuma göz atabilirsiniz. Üstelik kursu beğenmemeniz halinde  <strong>30 gün içinde koşulsuz şartsız olarak</strong>  kursu iade edebilirsiniz. Kursun kalitesi hakkında fikir sahibi olmak için bu dokümantasyona, kurs müfredatına ve kurs yorumlarına bakarak bilgi edinebilirsiniz.</p>
+    <a target="_blank"  href="https://www.udemy.com/kali-linux-ile-sifirdan-temel-linux-egitimi/?couponCode=DOKUMAN">
+      <img src="img/0-%20Gerekli%20Ortam%C4%B1n%20Kurulmas%C4%B1/1-min.png" class="responsive">
+    </a>
+
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+/***********************************************
+* Fluid Text Resizer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* Please keep this notice intact
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+	targets: ["body"], //target elements to resize text within: ["selector1", "selector2", etc]
+	levels: 2, //number of levels users can magnify (or shrink) text
+	persist: "session", //enter "session" or "none"
+	animate: 0 //animation duration of text resize. Enter 0 to disable
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+
+

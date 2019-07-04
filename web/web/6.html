@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+        <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}	
+				
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+        
+        <nav class="navbar nav-down navbar-default navbar-fixed-top">
+                <div class="container">
+
+                        
+
+                        <center><div id="sizecontroldiv" class="controlstyle">
+                                <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/7.html" class="btn btn-success navbar-btn">İleri</a>
+
+                        </div>
+                        </center>
+
+                </div>
+  </nav>
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text"><h1>Bilgi Almak</h1>
+<p>Bilgi alma komutları sistemimizde bulunan herhangi bir şey hakkında(programlar, dosyalar, kayıtlar, ayarlar vb..) bilgi almamızı sağlayan komutlara verilen genel isimdir ve bu komutlara gerekli durumlarda çok sık başvururuz. Şimdi bilgi alma komutlarının neler olduğuna ve kullanım şekillerine bakalım.</p>
+<h2>uname</h2>
+<p>Tek başına çekirdek adını verse de aldığı parametreler ile farklı bilgiler de sunabilir. Kısaca bilmemiz gereken; <strong>bu komut genel olarak sistemde kullanılan çekirdek hakkında bilgiler verir</strong>. Hangi parametrenin ne iş yaptığını <strong><code>man uname</code></strong> komutu ile öğrenebileceğinizi biliyorsunuz. Bizde kullanım şekillerini <strong>man</strong> kılavuz sayfası üzerinden açıklayalım.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/0-min.png" class =" responsive"></p>
+<p>Eğer parametresiz kullanıldıysa <strong><code>-s</code></strong> parametresi gibi <strong>yalnızca çekirdek ismini</strong> gösterir. Yani <strong><code>uname</code></strong> komutu ile <strong><code>uname -s</code></strong> komutu aynıdır.
+Parametreler ve ifade ettikleri;</p>
+<pre><strong><code> -a, --all
+        Bu parametre ile bütün bilgileri aşağıdaki seçenek sırasıyla gösterilir; -p ve -i bilinmiyorsa atlanır.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/1-min.png" class =" responsive"></p>
+<pre><strong><code> -s, --
+        çekirdek ismini gösterir.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/2-min.png" class =" responsive"></p>
+<pre><strong><code> -n, --nodename
+        ağ düğümü konak ismini diğer bir değişle hostname(host adını) gösterir.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/3-min.jpg" class =" responsive"></p>
+<pre><strong><code> -r, --kernel-release
+        çekirdeğin derleniş sürümünü gösterir.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/4-min.jpg" class =" responsive"></p>
+<pre><strong><code> -v, --kernel-version
+        çekirdeğin sürümünü gösterir.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/5-min.jpg" class =" responsive"></p>
+<pre><strong><code> -m, --machine
+        makine donanım ismini gösterir.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/6-min.jpg" class =" responsive"></p>
+<pre><strong><code> -p, --processor
+        işlemci türünü veya "unknown" gösterir.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/7-min.jpg" class =" responsive"></p>
+<pre><strong><code> -i, --hardware-platform
+        donanım platformunu veya "unknown" gösterir.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/8-min.jpg" class =" responsive"></p>
+<pre><strong><code> -o, --operating-system
+        işletim sistemini gösterir.
+</code></strong></pre>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/9-min.jpg" class =" responsive"></p>
+<pre><strong><code> --help 
+        Bu yardım iletisini gösterir ve çıkar.
+
+ --version
+        Sürüm bilgilerini gösterir ve çıkar.
+</code></strong></pre>
+<h2>hostname</h2>
+<p>Bilgisayarımızın adını, diğer bir deyişle bilgisayarımızın ağ üzerindeki adını verir. Eğer isterseniz bu adı değiştirebilirsiniz. Örneğin; komut satırına <strong><code>hostname burak</code></strong> yazarsanız <strong>hostname</strong> yani <strong>bilgisayarınızın adı</strong> <em>burak</em> olarak değişmiş olacaktır.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/10-min.png" class =" responsive"></p>
+<p>Ancak bu ayar kalıcı değildir. Oturumu kapatıp tekrar açtığınızda değiştirmiş olduğunuz adın tekrar eski haline döndüğünü görebilirsiniz. Kalıcı olmasını ayarlardan kolaylıkla sağlayabiliriz. Sürümden sürüme değişiklik gösterse de sırasıyla; **Ayarlar &gt;Sistem &gt;Ayrıntılar &gt;Genel aygıt adı: ** kutusuna istediğiniz ismi yazabilirsiniz. Eğer dediğim yoldan ulaşamadıysanız ayarları biraz kurcalayarak bulabilirsiniz.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/11-min.gif" class ="responsive"></p>
+<p>Ayrıca tamamen komut satırından da <strong>kalıcı bir hostname değişikliği</strong> yapmak mümkün. Bunun için <strong><mark> /etc/hostname</mark></strong> konumunda yer alan <strong><mark>hostname</mark></strong> dosyasını açmamız gerek. Dosyamızı açmak için konsola <strong><code> nano -w /etc/hostname</code></strong> komutunu veriyoruz.
+Komutun ardından açılan dosyada ismimizin yerine istediğimiz ismi yazıyoruz. Ve <strong><mark>Ctrl + X</mark></strong> tuş kombinasyonu ile dosyamızdaki değişiklikleri kaydederek çıkıyoruz.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/12-min.png" class =" responsive"></p>
+<p>Değişikliğin geçerli olması için oturumun kapatılıp tekrar açılması gerek daha sonra <strong>hostname</strong> yani <strong>bilgisayarınızın ismi</strong> değişmiş olacaktır.</p>
+<h2>lsb_release</h2>
+<p>Bu komut kullandığımız dağıtım hakkında farklı bilgiler sunan parametrelere sahiptir. Detaylı bilgi için <strong>man</strong> kılavuz sayfasını kontrol edebilirsiniz. Ben örnek olması açısından <strong><code>lsb_release -a </code></strong> komutunun çıktısını veriyorum.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/13-min.png" class =" responsive"></p>
+<h2>whoami</h2>
+<p>Sinemayı takip eden arkadaşların aklına ilk ne geldi biliyorum :)</p>
+<p><strong>Bu komut kimlik sorgu işlevi görüyor.</strong> Komut satırımıza komutumuzu vererek sonucuna bakalım.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/14-min.png" class =" responsive"></p>
+<p>Komut çıktısı bize mevcut kullanıcının <strong><code>root</code></strong> kimliği ile çalıştığını göstermiş oldu.</p>
+<p>Yine <strong><code>whoami</code></strong> komutuna benzer ancak çok ufak farkların olduğu birkaç komutu daha peş peşe komut satırına girerek çıkan sonuçlar üzerinden anlatıma devam edelim.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/15-min.png" class =" responsive"></p>
+<p>Sıra sıra bakalım:</p>
+<p><strong>whoami:</strong> mevcut kullanıcının hangi kimlikle çalıştığını gösteriyor.</p>
+<p><strong>who:</strong> sistemde hangi kullanıcının çalıştığını gösteriyor.</p>
+<p><strong>w:</strong> hangi kullanıcı hangi uygulamayı çalıştırıyor bunun bilgisini gösteriyor.</p>
+<p>Bunun dışında bu komutlar da parametre alabiliyorlar. Hangi parametreleri aldıklarını nasıl öğrenebileceğinizi zaten biliyorsunuz.</p>
+<h2>uptime</h2>
+<p><strong><code>uptime</code></strong> komutu <strong>sistemimizin ne kadar zamandır açık olduğu bilgisini</strong> verir.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/16-min.png" class =" responsive"></p>
+<h2>date</h2>
+<p>İsminden de anlaşılacağı gibi bu komut bize <strong>sistemin o anki tarih ve saat bilgisini</strong> veriyor.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/17-min.png" class =" responsive"></p>
+<h2>cal</h2>
+<p>Komutumuz Türkçe olarak takvim anlamına gelen İngilizce "<strong>Calendar</strong>" ifadesinin kısaltmasıdır. Komutumuz tek başına kullanıldığında bize konsol ekranı üzerinden, bulunduğumuz <strong>tarihin takvim bilgisini</strong> verir.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/18-min.png" class =" responsive"></p>
+<p>Ancak daha önceki veya sonraki tarihlerde yer alan takvim bilgilerine komutumuzu <strong><code>cal ay yıl</code></strong> şeklinde kullanarak ulaşabiliyoruz.</p>
+<p>Örnek üzerinden açıklayalım.</p>
+<p>Eğer 2002 yılının Ocak ayına gitmek istiyorsam komutumu <strong><code>cal 1 2002</code></strong> şeklinde kullanırım.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/19-min.png" class =" responsive"></p>
+<p>Eğer ileri bir tarihe yani 3003 yılının Haziran ayına gitmek istersem de komutumu <strong><code>cal 6 3003</code></strong> şeklinde kullanırım.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/20-min.png" class =" responsive"></p>
+<p>Gördüğünüz gibi ileri geri herhangi bir tarih hakkında takvim bilgisi almak istesek <strong><code>cal</code></strong> komutunu kullanabiliyoruz.</p>
+<h2>which</h2>
+<p>Herhangi bir komutun tam yol bilgisini öğrenmek için kullanılır.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/21-min.png" class =" responsive"></p>
+<h2>whereis</h2>
+<p>Bu komutunda özel parametreleri vardır man sayfasından kontrol edin lütfen. Bunun dışında parametresiz hali <strong><code>apropos</code></strong> komutuna benzer şekilde bir çıktı verir. Ancak <strong><code>apropos</code></strong> komutundan farklı olarak <strong>ilgili komutun man sayfası konumunun tam dizin adresini belirtir.</strong></p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/22-min.png" class =" responsive"></p>
+<p>Ayrıca diğer parametrelerini de kesinlikle man sayfasından inceleyin.</p>
+<h2>locate</h2>
+<p><strong>Bu komut ile aradığımız bir dosyanın nerede olduğunu öğrenebiliriz.</strong> Komutun çıktısı bize dosyanın bulunduğu dizin veya dizinleri veriyor. Örneğin daha önce <strong>PATH</strong> yoluna eklediğim <strong><mark>komut.sh</mark></strong> dosyasını <strong><code>locate</code></strong> komutu ile aratıyorum. Sonuç aşağıdaki şekilde:</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/23-min.png" class =" responsive"></p>
+<p>Bu komutun ne kadar kıymetli olduğunu işiniz düştükçe ve kullandıkça anlayacaksınız. Genelde bir dosyayı arama çubuğu yardımı ile aramak sonuç vermez ve bu arama işlemi oldukça hantal çalışır. Örneğin  dosya konumunu bilmediniz ancak sistem var olan bir dosyaya ulaşmak istiyorsunuz diyelim.. İşte tam bu noktada <strong><code>locate</code></strong> komutu çıkageliyor ve bize saniyeler içerisinde sonucu veriyor. Komutu denemek amacıyla Kali Linux içerisinde yer alan bir araç olan <em><strong>armitage</strong></em> aracını aratıyorum. Bunun için komut satırına <strong><code>locate armitage</code></strong> yazmalıyım.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/24-min.png" class ="responsive"></p>
+<p>Çıktıda da görüldüğü gibi aradığımız ifadeyi içeren tüm dosyaların nerede olduğunu bir çırpıda buluverdik. Sanırım bu komut sayesinde yavaş yavaş da olsa komut satırının gücünü fark etmeye başlıyoruz :)</p>
+<h2>dmidecode</h2>
+<p>Eğer daha önce de Linux işletim sistemini deneyimleyip sorunlar ile karşılaştıysanız, forumlardan destek istediğinizde; muhtemelen insanlar sizden bu komutun çıktıları istemiş olabilirler. <strong>Bu komutun işlevi sistemin donanım ve BIOS bilgilerini göstermektir.</strong> Bu komut sayesinde sistem donanımı ve işleyişi hakkında çok fazla bilgiye ulaşabiliriz. Ayrıca bu komutumuz da parametre alarak çalışmaktadır.</p>
+<p>Bu komutun sunduğu bilgiler çok fazla olduğu için, bilgilerin daha net anlaşılması adına; bu bilgilere belirli bir düzene sahip olan <strong>DMI(Desktop Management Interface)</strong> ile, yani <strong>Masaüstü Yönetim Arayüzü</strong> tabloları ile ulaşıyoruz. Tabloda yer alan sıralamayı ve hangi bilgileri alabileceğinizi direk olarak görmek isterseniz, komut satırına <strong><code>dmidecode</code></strong> yazın ve sonuçların kategorize şekilde karşınıza geldiğine kendiniz tanık olun.</p>
+<p>Bahsi geçen tablo sıralı şekilde ve Numara-Türkçe karşılığı olacak şekilde aşağıdaki gibidir.</p>
+<div> <table> <thead> <tr> <th>Numara </th> <th>Açıklama</th> </tr></thead> <tbody><tr> <td>0</td><td>Bios</td></tr><tr> <td>1</td><td>Sistem</td></tr><tr> <td>2</td><td>Baz kurulu</td></tr><tr> <td>3</td><td>Şasi</td></tr><tr> <td>4</td><td>İşlemci</td></tr><tr> <td>5</td><td>Bellek denetleyicisi </td></tr><tr> <td>6</td><td>Bellek modülü</td></tr><tr> <td>7</td><td>Önbellek</td></tr><tr> <td>8</td><td>Port bağlantısı</td></tr><tr> <td>9</td><td>Sistem yuvaları</td></tr><tr> <td>10</td><td>On Board Cihazları</td></tr><tr> <td>11</td><td>OEM Dizeleri</td></tr><tr> <td>12</td><td>Sistem Yapılandırma Seçenekleri</td></tr><tr> <td>13</td><td>BIOS Dili</td></tr><tr> <td>14</td><td>Grup Dernekler</td></tr><tr> <td>15</td><td>Sistem Event Log</td></tr><tr> <td>16</td><td>Fiziksel Bellek Array</td></tr><tr> <td>17</td><td>Bellek Cihazı</td></tr><tr> <td>18</td><td>32-bit bellek hatası</td></tr><tr> <td>19</td><td>Bellek Dizisi Haritalı Adres</td></tr><tr> <td>20</td><td>Bellek Cihazo Haritalı Adres</td></tr><tr> <td>21</td><td>Dahili İşaret Aygıtı</td></tr><tr> <td>22</td><td>Taşınabilir Pil</td></tr><tr> <td>23</td><td>Sistem Sıfırlama</td></tr><tr> <td>24</td><td>Dananım Güvenlik</td></tr><tr> <td>25</td><td>Sistem Güç Denetimleri</td></tr><tr> <td>26</td><td>Gerilim Probu</td></tr><tr> <td>27</td><td>Soğutma Cihazı</td></tr><tr> <td>28</td><td>Sıcaklık Probu</td></tr><tr> <td>29</td><td>Elektrik Akımı Probu</td></tr><tr> <td>30</td><td>Uzaktan Erişim</td></tr><tr> <td>31</td><td>Boot Bütünlüğü Hizmetleri</td></tr><tr> <td>32</td><td>Sistem Önyükleme</td></tr><tr> <td>33</td><td>64-bit Bellek Hatası</td></tr><tr> <td>34</td><td>Yönetim Cihazı</td></tr><tr> <td>35</td><td>Yönetimi Cihaz Bileşeni</td></tr><tr> <td>36</td><td>Yönetimi Cihaz Eşik Verileri</td></tr><tr> <td>37</td><td>Bellek Kanal</td></tr><tr> <td>38</td><td>IPMI Cihazı</td></tr><tr> <td>39</td><td>Güç Kaynağı</td></tr></tbody></table> </div>
+<p>Başta belirttiğim gibi <strong><code>dmidecode</code></strong> kendi içinde parametre alan bir komut olduğu için istediğimiz spesifik bilgiye doğrudan da ulaşmamız mümkün. Detaylı bilgi için man kılavuz sayfasına bakın lütfen. Ancak küçük bir örnek vermem gerekirse bios hakkında bilgi edinmek istediğimizde konsola <strong><code>dmidecode -t bios</code></strong> komutunu girmemiz yeterli.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/25-min.png" class =" responsive"></p>
+<p>Burada ayrıca <strong><code>dmidecode -t bios</code></strong> komutu yerine, bios'un sıralamada bulunan numarasını yani <strong><code>dmidecode -t 0</code></strong> yazarak da aynı işlemi gerçekleştirebilirdik.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/26-min.png" class =" responsive"></p>
+<h2>fdisk-l</h2>
+<p>Başlıkta da yer aldığı gibi bu bölümde <strong><code>fdisk</code></strong> komutunun yalnızca <strong><code>l</code></strong> parametresinin işlevini göreceğiz. Bu komutu burada vermemin sebebi sistem hakkında bilgi alırken diskin de sistem dahilinde olmasıdır. Zaten ileride tekrar ele alacağımızdan şimdilik bu kadarı da yeterli olacaktır. Bu komutu diskler üzerinde işlem gerçekleştirirken kullanıyoruz. Eğer komut satırımıza <strong><code>fdisk -l</code></strong> şeklinde komut verirsek karşımıza sistemimizdeki disk bölümleri sıralı ve düzenli şekilde listelenecektir.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/27-min.png" class =" responsive"></p>
+<h2>df</h2>
+<p>Bu komut ile disk kullanımı hakkında ayrıntılı bilgiye ulaşabiliyoruz.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/28-min.png" class =" responsive"></p>
+<p>Bu komutumuz da parametre alabiliyor, yani dileyen arkadaşlar konsolda <strong><code>man df</code></strong> şeklinde komut girerek gerekli bilgilere ulaşabilirler.</p>
+<h2>du</h2>
+<p>Bir dizinin, içerdiği tüm dosyalar ile birlikte diskte kapladığı toplam alanı verir. Ayrıca boyutla ilgili düzgün bir çıktı almak istersek <strong><code>h</code></strong>  parametresini de kullanabiliriz.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/29-min.png" class =" responsive"></p>
+<h2>free</h2>
+<p>Bu komut ile kullanılan bellek miktarını <strong>KB</strong> cinsinden öğrenebiliriz. Ancak çıktımızın <strong>MB</strong> cinsinden olmasını istersek <strong><code>-m</code></strong> parametresini <strong><code>free</code></strong> komutumuza ekleyerek kullanmamız yeterli olacaktır.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/30-min.png" class =" responsive"></p>
+<h2>modinfo</h2>
+<p>Bu komut sayesinde Linux Kernel(çekirdek) modüllerinin bilgisi alınabilir. Bu modülleri ekran bastırmak isterseniz komut satırına <strong><code>lsmod</code></strong> yazarak modülleri listeleyebilirsiniz.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/31-min.png" class =" responsive"></p>
+<p>Örneğin modüller içinden <strong>battery</strong> modülü hakkında bilgi almak istersek komut satırına <strong><code>modinfo battery</code></strong> şeklinde yazmamız yeterli olacaktır.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/32-min.png" class =" responsive"></p>
+<h2>stat</h2>
+<p>Bu komut dosyalar veya dizinler hakkındaki bilgileri almamıza olanak sağlar. Kullanımı <strong><code>stat dizin</code></strong> şeklindedir. Örneğin <strong>root</strong> dizinine bakalım. Bunun için komut satırımıza <strong><code>stat /root</code></strong> komutunu veriyoruz.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/33-min.png" class ="responsive"></p>
+<p>Gördüğünüz gibi <strong>root</strong> dizini hakkında bilgiler basılmış oldu.</p>
+<h2>vmstat</h2>
+<p>Bu komut sayesinde sistemimizin o anlık genel durumunu görebiliriz. Ancak komutu verdikten sonra sistem durumu listelenip sonlanacaktır. Eğer sistemin durumunu bir süre izlemek istersek <strong><code>vmstat gecikme_hızı yenilenme_sayısı</code></strong> şeklinde komut vermeliyiz. Ben <strong>her 2 saniyede bir yenilenmesini ve bunu 3 defa</strong> yapmasını istiyorum. Bunun için komut satırına <strong><code>vmstat 2 3 </code></strong> komutunu veriyorum.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/34-min.png" class =" responsive"></p>
+<h2>history</h2>
+<p>Bu kısıma gelene kadar konsola bir çok komut yazdık. Peki o yazılan komutların daha sonra kullanılmak üzere saklandığını biliyor muydunuz ?</p>
+<p>Evet girilen her komut <strong><mark>.bash_history </mark></strong> dosyasında tutuluyor. Biz bu dosyanın içeriğini yani daha önceki yazdığımız kodları görmek istersek komut satırına <strong><code>history</code></strong> yazmalıyız. Çıktı çok uzun olacağından çıktının tamamını aşağıda vermedim.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/35-min.png" class =" responsive"></p>
+<p>Hazır liste uzun demişken eğer bu listenin limitini öğrenmek istersek komut satırına <strong><code>echo $HISTSIZE</code></strong> yazarak bu değeri tutan ortam değişkeninin, ne kadar komutu <strong><mark>history</mark></strong> dosyasında tutulabileceğini görebiliriz.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/36-min.png" class =" responsive"></p>
+<p>Bu çıktı bize komutların tutulduğu dosyada en son <strong>1000 komuta kadar</strong> kayıt yapıldığını belirtiyor. Eğer tutulan komutların 1000 'den daha fazla olmasını isterseniz <strong><mark>.bashrc</mark></strong> dosyasında <strong><code>HISTSIZE=1000</code></strong> yazan değeri istediğiniz doğrultuda düzenleyebilirsiniz.</p>
+<p>Komutun kullanımına geçmeden önce bu komutu sadece basit ve kısa komutların tekrar kullanılması olarak değerlendirmeyin. Örneğin sürekli kullandığınız çok uzun ve karmaşık bir komut düşünün. Bu komutun her defasında yazılması eziyet, bir yere kopyalanıp oradan tekrar tekrar kopyala-yapıştır şeklinde kullanılması ise hantallık olacaktır.</p>
+<p>Komutun kullanımına gelecek olursak örnek üzerinden açıklayalım. Benim kayıt dosyamın bir kısmı aşağıdaki şekilde, ben burada yer alan <strong>600. komutu</strong> yani <strong><code> vmstat</code></strong> komutunu kullanmak istiyorum. Bunun için komut satırına <strong><code>!600</code></strong> yazmam yeterli olacaktır. Komutun kullanımı <strong><code>!komut_numarası</code></strong> şeklinde. Örnek için çıktıyı inceleyebilirsiniz.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/37-min.png" class =" responsive"></p>
+<p>Daha önceden kullandığımız bir komutu aynı şekilde tekrar kullanmak için ise komut satırına <strong><code>!komut</code></strong> şeklinde komut girmeliyiz. Örnek vermek gerekirse daha önceki kısımlarda <strong><code>stat</code></strong> komutu ile <strong><mark>root</mark></strong> dizini hakkında bilgi edinmiştik. Ve bu bilgiye ulaşmak için <strong><code>stat /root</code></strong> komutunu kullanmıştık. Ben şimdi tekrar aynı komuta ulaşmak için komut satırına <strong><code>!stat</code></strong> yazıyorum ve çıktısı tıpkı <strong><code>stat /root</code></strong> yazdığımda olduğu gibi oluyor. Yani bu sayede komutun geri kalanını uzun uzun yazmak gibi bir dert kalmıyor.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/38-min.png" class =" responsive"></p>
+<p>Eğer son kullandığımız komutu tekrar kullanmak istersek komut satırına <strong><code>!!</code></strong> yazmamız yeterli olacaktır.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/39-min.png" class =" responsive"></p>
+<p>Bunlar dışında da çok farklı kullanım şekilleri de mevcut. Bu bilgilere <strong><code>man</code></strong> komutu yardımı ile nasıl ulaşacağınızı zaten biliyorsunuz.</p>
+<p>Ayrıca son yazılan komutlara ulaşmak için klavyede yer alan yön tuşlarından <strong><mark>↑</mark></strong>(yukarı) ve <strong><mark>↓</mark></strong>(aşağı) tuşlarını kullanarak önceki ve sonraki komutlarınıza ulaşabilirsiniz. Genellikle yön tuşlarını kullanmak bize anlık işlemlerimizde hız katmaktadır. Sizler de bu pratiklikleri mutlaka yeri geldikçe sıklıkla kullanacaksınız.</p>
+<p><img src="img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/40-min.gif" class ="responsive"></p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", 
+	targets: ["body"],
+	levels: 2,
+	persist: "session",
+	animate: 0 
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+
+

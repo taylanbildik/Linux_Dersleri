@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  @media screen and (min-width: 1080px) {
+  .selector {
+     font-size: 40px;
+  }
+}
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  <!-- Static navbar -->
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <!--if you want, also is possible change to fluid container-->
+      <!--<div class="container-fluid">-->
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/24.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <!-- Main component for a primary marketing message or call to action -->
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text"><h2>Log Kayıtları</h2>
+<p>Sistemde meydana gelen hatalar, sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere <strong>log</strong> deniyor. Neden <strong>log</strong>(<strong>kayıt</strong>) tutulmak zorunda diye soracak olursanız; kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır <strong>log</strong> dosyaları. Anlayacağınız <strong>log</strong>(kayıt) dosyaları sistem bütünü için çok önemli yer tutmaktadır.</p>
+<h2>Log Dosyaları</h2>
+<p>Linux sisteminde <strong>log</strong> dosyalarının çok büyük kısmı <strong><mark>/var</mark></strong> dizini altında <strong><mark>log</mark></strong> klasörü içerisinde tutuluyor. Ayrıca <strong><mark>log</mark></strong> dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına <strong><code>cd /var/log</code></strong> yazarak <strong>log</strong> dosyalarının tutulduğu dizine gidip dizin içerisinde iken <strong><code>ls</code></strong> komutu ile dizin içeriğini listeleyelim.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/1-min.png" class="responsive"></p>
+<p>Bir çok kayıt dosyası listelenmiş oldu.
+Örneğin ben buradan, oturum açma işlemlerini ve detaylarını tutan <strong><mark>auth.log</mark></strong> dosyasını açarak sistemde yapılmış olan oturum açma işlemlerini ve detaylarını inceleyebilirim. Ancak bu noktada bir kısa bilgi Linux sistemi <strong>log</strong> dosyalarının çok fazla yer kaplamasını önlemek için üzerine yazma metodunu kullanıyor. Bu noktada <strong>cron</strong> servisi ile <strong>log</strong> kayıtları her hafta eklenerek maksimum 1 ay kadar eskiyi yani 4 haftayı kayıt altında tutuyor. Bu tutulan kayıtlar 4 hafta sonunda; "<em>log_dosyası.1.gz</em>", "<em>log_dosyası.2.gz</em>", "<em>log_dosyası.3.gz</em>" şeklinde arşivlenerek saklanıyor. Yani örneğin siz eğer <strong><mark>auth.log</mark></strong> dosyasının bu ay değil de geçmişteki aylardaki kayıtlarına bakmak isterseniz. Arşivlenmiş olan "<em>auth.log.1.gz</em>", "<em>auth.log.2.gz</em>", "<em>auth.log.3.gz"</em> şeklindeki dosyalara bakmanız gerekir.</p>
+<p><strong>Log</strong> dosyalarını incelerken kolaylık olması açısından daha önce de kullanmış olduğumuz ve dosyanın alt(tail/kuyruk) kısımlarını listeleyen <strong><code>tail</code></strong> komutundan yararlanacağız. Bu sayede uzun uzadıya dosyanın tamamına bakmak yerine son eklenen bilgileri inceleyebileceğiz.</p>
+<p>Hemen örnek olması açısından oturum açma işlemlerini ve detaylarını tutan <strong><mark>auth.log</mark></strong> kayıt dosyasını açalım. Bu açma işlemini de yalnızca dosyada en son yapılmış 5 değişikliği gösterecek şekilde yapalım. Bunun için konsola <strong><code>tail -n 5 auth.log</code></strong> komutumuzu giriyoruz.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/2-min.png" class="responsive"></p>
+<p>Komutumuzu girmemizle birlikte konsol bize son 5 oturum açma işlemlerini ve detaylarını listelemiş oldu.</p>
+<p>Hazır yeri gelmişken <strong><code>tail</code></strong> komutuyla sistemdeki olayların anlık olarak takibini yapalım. Bunun için sistemdeki olayların kaydını tutan <strong><mark>messages</mark></strong> dosyasını okumalıyız. Bu okuma işlemini sistemdeki anlık hareketleri takip etmek için yaptığımızdan, okuduğumuz dosyaya yeni eklenen her veriyi anlık görmek için <strong><code>tail -f messages</code></strong> komutunu kullanıyoruz. Buradaki <strong><code>tail -f</code></strong> komutunu açıklayacak olursam; biliyorsunuz <strong><code>tail</code></strong> komutu dosyanın alt satırlarını görüntülememize olanak tanıyan bir komut. Ve bu komutun <strong><code>-f </code></strong> parametresi de bu görüntülenecek kısım için dosyayı sürekli yeniden tarayarak dosyaya en son eklenen verileri bize göstermekle mükellef. Yani <strong><code>tail</code></strong> komutunun <strong><code>f</code></strong> parametresi bize yalnızca dosyaya en son eklenen ifadeleri güncel şekilde listeliyor.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/3-min.png" class="responsive"></p> 
+<h2>dmesg</h2>
+<p>Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler ve kernel hakkındaki kayıtlar <strong><mark>/proc/kmsg</mark></strong> dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını <strong><code>dmesg</code></strong> komutu ile görüntüleyebiliriz. Yani <strong><code>dmesg</code></strong> komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/4-min.png" class="responsive"></p>
+<p>Elbetteki çıktı çok daha uzun ancak ben örnek olması açısından çıktıları kısaca verdim. Eğer siz bu çıktıları filtrelemek isterseniz <strong><code>grep</code></strong> komutunu kullanarak ilgili çıktılara rahatlıkla ulaşabileceğinizi biliyorsunuz. Örneğin yalnızca hataları görüntülemek istersek konsola <strong><code>dmesg | grep "fail" </code></strong> şeklinde yazdığımızda, konsol bize yalnızca sistem açılışında belirtilen hataları basacaktır.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/5-min.png" class="responsive"></p>
+<p>Gördüğünüz gibi "<strong>fail</strong>" ifadesinin geçtiği, yani <strong>hataların</strong> belirtildiği tüm iletiler karşımıza gelmiş oldu.</p>
+<h2>last</h2>
+<p>Komutumuzun isminden de az çok anlaşılacağı gibi; en son oturum açan kullanıcıları listelemek için <strong><code>last</code></strong> komutunu kullanabiliriz.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/6-min.png" class="responsive"></p>
+<p><strong><code>last</code></strong> komutuyla en son oturum açan kullanıcılar uzunca listelenmiş oldu.</p>
+<p>Eğer uzunca liste almak istemezsek komutumuzu en son listelemek istediğimiz satır sayısını belirterek <strong><code>last -satır_sayısı</code></strong> şeklinde belirterek istediğimiz uzunlukta çıktı elde edebiliriz.</p>
+<p>Örneğin ben sadece son 2 oturum hareketini görüntülemek istersem komutumu <strong><code>last -2</code></strong> şeklinde belirtmem yeterli.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/7-min.png" class="responsive"></p>
+<p>Veya sondan 4 oturuma bakmak istersem komutumuzu <strong><code>last -4</code></strong> şeklinde kullanırım.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/8-min.png" class="responsive"></p>
+<p>Ayrıca kullanıcı adına göre oturum açma bilgisi sorgulayabiliriz. Örneğin ben yalnızca "<strong>burak</strong>" isimli kullanıcı hesabının oturum hareketlerini görmek istersem, konsola <strong><code>last burak</code></strong> şeklinde yazdığımda karşıma yalnızca "<strong>burak</strong>" kullanıcı hesabının oturum hareketleri gelir.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/9-min.png" class="responsive"></p>
+<p>Gördüğünüz gibi yalnızca "<strong>burak</strong>" kullanıcı hesabının oturum açma bilgileri listelenmiş oldu. Yani kullanıcıya göre oturum bilgilerini öğrenmek için, komutu <strong><code>last kullanıcı_adı</code></strong> şeklinde kullanabilirsiniz.</p>
+<p><img src="img/20-%20Log%20Dosyalar%C4%B1/10-min.png" class="responsive"></p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+/***********************************************
+* Fluid Text Resizer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* Please keep this notice intact
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+	targets: ["body"], //target elements to resize text within: ["selector1", "selector2", etc]
+	levels: 2, //number of levels users can magnify (or shrink) text
+	persist: "session", //enter "session" or "none"
+	animate: 0 //animation duration of text resize. Enter 0 to disable
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>

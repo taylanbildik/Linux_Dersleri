@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  @media screen and (min-width: 1080px) {
+  .selector {
+     font-size: 40px;
+  }
+}
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  <!-- Static navbar -->
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <!--if you want, also is possible change to fluid container-->
+      <!--<div class="container-fluid">-->
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/22.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <!-- Main component for a primary marketing message or call to action -->
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text"><h1>Konsol Üzerinden Dosya İndirmek</h1>
+<p>İndirmek istediğimiz dosyanın direk indirme linkini biliyorsak bu dosyamızı herhangi bir ekstra program kullanmadan veya tarayıcıya ihtiyaç duymadan konsol üzerinden <strong><code>wget</code></strong> komutu yardımı ile indirmemiz mümkün. Gelin anlatıma <strong><code>wget</code></strong> komutunu ve kullanım şekillerini açıklayarak devam edelim.</p>
+<h2>wget</h2>
+<p>Eğer daha önce linux ile ilgili yönergeler okuduysanız veya videolar izlediyseniz <strong><code>wget</code></strong> komutuna mutlaka denk gelmişsinizdir. Kullanımı oldukça kolaydır ve parametreler alarak çalışır. Birkaç kullanım şekline değinecek olursak:</p>
+<p><strong>Tekil Dosya İndirmek :</strong></p>
+<p><strong><code>wget</code></strong> komutunun en temel kullanım şeklidir. Hedef link aracılığı ile tekil dosya indirme işlevinde kullanılır.</p>
+<p>Kullanımı: <strong><code>wget indirilecek_dosya_linki</code></strong></p>
+<p>Örnek olarak aircrack-ng aracını indirdim. Ve indirme işlemini <strong><code>ls -l</code></strong>
+komutu ile teyit ettim.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/1-min.gif" class="responsive"></p>
+<p>Ve.. bulunduğum dizin içerisine istediğim dosya(aircrack-ng) indirilmiş oldu.</p>
+<p><strong>Toplu Dosya İndirmek :</strong></p>
+<p>Bir metin belgesinin içerisine kayıt ettiğimiz linklerde yer alan dosyaları tek seferde <strong><code>wget</code></strong> komutu ile beraber <strong><code>-i</code></strong> parametresi kullanarak indirmemiz mümkün. Hemen örnek üzerinden bu durumu görelim.</p>
+<p>Örneğin ben T.C Resmi Gazetesi pdflerinden 5 tanesini aynı anda indirmek istiyorum diyelim. Bunun için bu pdflerin indirme linklerini bir metin belgesine kaydetmem gerekiyor. Ben bu işlemi <strong><code>leafpad resmi_gazeteler</code></strong> komutu ile "resmi_gazeteler" isimli bir dosya oluşturarak ve içerisine gerekli linkleri ekleyerek gerçekleştiriyorum.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/2-min.png" class="responsive"></p>
+<p>Artık sıra geldi toplu indirmelere. Bu işlem için konsola <strong><code>wget -i resmi_gazeteler</code></strong> komutumu giriyorum.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/3-min.gif" class="responsive"></p>
+<p>PDF belgelerimiz toplu şekilde indirilmiş oldu şimdi de bu dosyaların varlığını teyit etmek için konsola <strong><code>ls -l</code></strong> komutunu verdim.</p>
+<p><strong>Özel Konum Belirterek İndirmek :</strong>
+Eğer dosyanın konsolun üzerinde çalıştığı konuma değil de bizim istediğimiz özel bir konuma indirilmesini istersek bunun için <strong><code>wget -P kaydedilecek_dizin_yolu dosya_linki</code></strong> şeklinde komut vermemiz gerekiyor.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/4-min.gif" class="responsive"></p>
+<p>Dosyamızı istediğimiz konuma indirmek için indireceğimiz dizin adresinin tam yolunu belirtmemiz gerekiyordu bu nedenle buradaki <strong><code>~/Desktop</code></strong> kullanımı sizi şaşırtmasın <strong><mark>~</mark></strong> işareti ana dizini temsil ediyor.</p>
+<p>Ve sonuç olarak indirdiğimiz konuma gelerek dosyanın varlığını teyit etmiş olduk.</p>
+<p><strong>Özel Konum Ve İsim Belirterek İndirmek :</strong> İndirilecek dosyanın adını değiştirerek istediğimiz konuma indirmesini istersek <strong><code>wget</code></strong> komutumuzu <strong><code>-O</code></strong> parametresi ile birlikte <strong><code>wget -O kaydedilecek_dizin_yolu /dosyanın_yeni_adı indirme_linki</code></strong> şeklinde kullanıyoruz.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/5-min.gif" class="responsive"></p>
+<p>Dosyamızı "aircrack" ismi ile indirip <strong><mark>/Desktop</mark></strong> dizinine kaydettik bu durumu da <strong><code>ls -l</code></strong> komutu ile teyit ettik.</p>
+<p>Ayrıca indirilen dosyanın konumunu değiştirmeden yalnızca ismini değiştirmek isterseniz de herhangi bir konum belirtmeden yalnızca yeni dosya ismini belirtmeniz yeterli olacaktır. Örneğin <strong><code>wget yeni_isim dosya_link</code></strong> şeklinde bir kullanım indirilen dosyanın isminde değişiklik yapılarak indirilmesini sağlar.</p>
+<p><strong>Kesintiye Uğrayan İndirmenin Devam Ettirilmesi :</strong>
+Bir şekilde dosyanın indirme süreci kesilirse yani dosya tam olarak indirilemez ise dosyanın geri kalanının daha sonra indirilmesi mümkündür. Kesintiye uğrayan dosyayı tekrar indirmek için <strong><code>wget</code></strong> komutuna ek olarak <strong><code>-c</code></strong> parametresi eklenmelidir. Böylelikle <strong><code>wget -c indirme_linki</code></strong> şeklinde bir kullanım sonucunda eğer dosya tam olarak indirilemezse sonradan dosyayı tekrar baştan indirmek yerine kaldığı yerden devam ettirme şansımız olur. Bu durum özellikle de büyük dosyalar için gerçekten çok büyük kolaylık sağlıyor.
+Adım adım yaptığım işlemleri inceleyelim.</p>
+<p>İlk olarak içi tamamen boş olan <strong><mark>/Documents</mark></strong> dizinine <strong><code>cd /Documents</code></strong> komutu ile ulaştım. Bu dizinin içerisinin boş olduğunu <strong><code>ls -l</code></strong> komutu ile teyit ettim.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/6-min.png" class="responsive"></p>
+<p><strong><mark>/Documents</mark></strong> dizini içerisinde iken <strong><code>wget</code></strong> komutu ile dosyamı indirmeye başladım. Daha sonra indirme işlemini <strong><mark>Ctrl + Z</mark></strong> tuş kombinasyonu ile durdurdum. Durdurmamdaki amaç daha sonra devam ettirebilme özelliğini test etmekti.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/7-min.gif" class="responsive"></p>
+<p>İndirme işlemi durdurduktan sonra <strong><mark>/Documents</mark></strong> dizinini kontrol etmek için <strong><code>ls -l</code></strong> komutunu kullandım. Ve dosyamın <strong>638681</strong> bayt kadarının inmiş olduğunu gördüm.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/8-min.png" class="responsive"></p>
+<p>Durdurmuş olduğum indirme işlemine devam etmek üzere <strong><code>wget</code></strong> komutu ile beraber <strong><code>-c</code></strong> parametresini de kullanarak dosya indirme işlemini kaldığı yerden devam ettirdim.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/9-min.gif" class="responsive"></p>
+<p>Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini <strong><code>ls -l</code></strong> komutu ile teyit ettim.</p>
+<p>Çıktıları karşılaştıracak olursanız başta <strong>638681</strong> bayt'ta kalan indirme sonuç itibari ile <strong>4379880</strong> bayt yani dosyanın tamamı şeklinde indirilmiş oldu. Yani dosya indirme işlemi yarıda dahi kesilse en baştan indirmemize gerek kalmadan <strong><code>wget</code></strong> komutunun <strong><code>-c</code></strong> parametresi sayesinde kaldığı yerden indirme işlemini devam ettirebiliyoruz.</p>
+<p><strong>İndirme Hızını Belirlemek :</strong>
+Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceğini belirleyebiliriz. Bu limitleme işlemi için komutumuzu <strong><code>wget --limit-rate=indirme_limitiK indirme_linki</code></strong> şeklinde kullanıyoruz.</p>
+<p>Örnek olması açısından ben dosyayı indirirken 300KB/s hızında indirme limiti koyuyorum.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/10-min.gif" class="responsive"></p>
+<p>Zaten üst kısımda yer alan çıktının sonucunda da bu hız sınırlamasının sonucu olarak ortalama indirme hızı (300 KB/s) olarak gözüküyor.</p>
+<p><strong>Arka Planda İndirmek :</strong>
+İndirmek istediğimiz dosyanın arka planda inmesini <strong><code>-b</code></strong> parametresi ile sağlarız. İndirme işleminin sonuçlarını öğrenmek istersek indirilen dosya ile aynı konumda yer alan <strong><mark>wget-log</mark></strong> dosyasını incelememiz yeterli olacaktır.</p>
+<p><img src="img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/11-min.gif" class="responsive"></p>
+<p>Dosyamızı arka planda indiriyoruz ve konsol çıktıda bize indirme detaylarının <strong><mark>wget-log</mark></strong> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek <strong><code>cat wget-log</code></strong> komutu ile kayıt dosyasına bakabiliriz.</p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+/***********************************************
+* Fluid Text Resizer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* Please keep this notice intact
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+	targets: ["body"], //target elements to resize text within: ["selector1", "selector2", etc]
+	levels: 2, //number of levels users can magnify (or shrink) text
+	persist: "session", //enter "session" or "none"
+	animate: 0 //animation duration of text resize. Enter 0 to disable
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+

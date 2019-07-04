@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <link href="css/mobile.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<style>
+mark { 
+    background-color: rgba(27,31,35,.05);
+    color: lightseagreen;
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+    border-radius: 4px;
+}					
+.responsive {
+    width: 100%;
+    height: auto;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+	</style>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+
+  
+  <nav class="navbar nav-down navbar-default navbar-fixed-top">
+    <div class="container">
+
+      
+
+      <center><div id="sizecontroldiv" class="controlstyle">
+        <a href="../index.html" class="btn btn-success navbar-btn" >Geri</a>
+        <a class="btn btn-warning navbar-btn" href="#smaller">Küçült</a>
+        <a class="btn btn-dark navbar-btn"  onclick="dark()">MOD</a>
+        <a class="btn btn-warning navbar-btn" href="#bigger">Büyüt</a>
+        <a href="../web/12.html" class="btn btn-success navbar-btn">İleri</a>
+
+      </div>
+      </center>
+
+    </div>
+  </nav>
+
+
+</div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text"><h1>Erişim Yetkileri</h1>
+<p>Linux sistemlerinin yapısı gereği güvenlik açısından, dosya ve dizinlere ait birçok kısıtlama ve yetkilendirme ayarları vardır. Bu <strong>yetkilerin hepsine sahip olan tek kullanıcı</strong> ise <strong>root</strong> kullanıcısıdır. Bu yüzden sistemi kullanırken eğer root kullanıcısı isek önümüzde uyarıcı bizi kısıtlayıcı bir mekanizma olmayacağından, kimi durumlarda yapacağımız değişiklikler sistemle ilgili büyük sorunlara yol açabilir. Bu yüzden root kullanıcısıyken yapılan işlemlere dikkat etmek gerekir.(Hatta kimi dağıtımlarda root kullanıcı hesabı varsayılan olarak engellenmiştir, ancak istenildiği takdirde ve gereken ayarlar yapıldığında kullanılabilir duruma getirilir.)</p>
+<p>Bu girizgahtan sonra, her kullanıcının kendine verilen yetkiler çerçevesince hareket edebildiğini öğrenmiş olduk. Kullanıcıların dosya veya dizinler ile ilgili yapabileceği üç eylem bulunmaktadır. Bunlar;</p>
+<p><strong>okuma(r):</strong> Klasör listesini ve dosya içeriğini görüntüleme.</p>
+<p><strong>yazma(w):</strong> Dosya veya klasör üzerinde değişiklik yapma.</p>
+<p><strong>çalıştırma(x):</strong> Hedef dosyayı çalıştırma veya klasör içerisine erişme.</p>
+<p>Aslında bu eylemler sizlere yabancı gelmemeli. Zira daha önce <strong><code>chmod</code></strong> komutu yardımı ile gerekli dosyanın iznini değiştirmiş ve dosyamızı çalıştırmayı başarmıştık.</p>
+<p>Şimdi mevcut dosyalarımızın ne tür izinleri barındırdığına göz atalım. Bunun için komut satırına ayrıntılı liste yazdırmak üzere <strong><code>ls -l</code></strong> komutumuzu veriyoruz.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/1-min.png" class="responsive"></p>
+<p>Şimdi listemizi inceleyerek bulunan izinleri ele alalım.</p>
+<p><strong><mark>drwxr-xr-x</mark></strong> ve <strong><mark>-rw-r--r-- </mark></strong> şeklinde gördüğümüz kısımlar dosya izinlerini ifade ediyor.</p>
+<p>Bazı ifadelerin başında olan <strong><mark>d</mark></strong> harfi o ifadenin dizin olduğunu belirtiyor.</p>
+<p>Geriye kalan kısımları ayrı ayrı açıklayacak olursak <strong><mark>-</mark></strong> işareti ile ayrılan kısımlar o izine sahip kullanıcı grubunu temsil ediyor. Daha iyi anlamak için <strong><mark>d</mark></strong> harfi hariç <strong><mark>-</mark></strong> işaretini ayırdığımız zaman geri kalan harfleri üç adet üçlü grup haline getirelim;</p>
+<p><strong><mark>rwxr-xr-x</mark></strong>=<strong><mark>rwx</mark></strong> <strong><mark> r-x </mark></strong> <strong><mark>r-x</mark></strong></p>
+<p><strong><mark>rw-r--r--</mark></strong>=<strong><mark>rw-</mark></strong> <strong><mark>r--</mark></strong> <strong><mark> r--</mark></strong></p>
+<p>Sırayla; birinci harf kümesi dosya sahibinin izinlerini, ikinci harf kümesi grup izinleri ve son küme de diğer kullanıcıların izinlerini belirtir.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/2-min.png" class="responsive"></p>
+<p>Buna göre yukarıdaki dosyalarda bulunan izinleri açıklayacak olursak;</p>
+<p><strong>r :</strong> okuma yetkisi</p>
+<p><strong>w :</strong> yazma yetkisi</p>
+<p><strong>x :</strong> çalıştırma yetkisi</p>
+<p><strong>rwx :</strong> dosyanın sahibi olan kullanıcı okuyabilir, yazabilir, çalıştırabilir.</p>
+<p><strong>r-x :</strong> dosya sahibi kullanıcı grubu ile aynı gruba dahil kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz(değişiklik yapamaz).</p>
+<p><strong>r-x :</strong> diğer kullanıcılar okuyabilir, çalıştırabilir fakat yazamaz(değişiklik yapamaz).</p>
+<h2>Yetkilerin Değişimi(chmod)</h2>
+<p>Erişim yetkisini değiştirme işlemini, ancak en yetkili kişi olan root yapabilir. Bu değişim işlemi; daha öncede de kullandığımız <strong><code>chmod</code></strong> komutu sayesinde gerçekleştirilir.</p>
+<p><strong><code>chmod</code></strong> komutunun parametrelerini tanıyarak örnek verme işlemine geçelim.</p>
+<p><strong>u :</strong> Dosya-dizinin sahibi</p>
+<p><strong>g :</strong> Dosya-dizinin sahibi ile aynı grupta bulunan kullanıcılar</p>
+<p><strong>o :</strong> Diğer kullanıcılar</p>
+<p><strong>a :</strong> Herkese açık.</p>
+<p><strong>= :</strong> Yetki eşitleme</p>
+<p><strong>+ :</strong> Yetki ekleme</p>
+<p><strong>- :</strong> Yetki çıkarma</p>
+<p>Genel parametreleri gördüğümüze göre gelin birkaç örnek yapalım.</p>
+<p>Örnek göstermek adına anlatımı, içerisindeki dosyaların hiç birinde yetkinin bulunmadığı bir klasör üzerinden gerçekleştireceğim.</p>
+<p>İlk olarak klasörde yer alan dosyaların herhangi bir yetkiye sahip olmadıklarını teyit etmek için ayrıntılı çıktı almak üzere <strong><code>ls -l</code></strong> komutunu kullandık.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/3-min.png" class="responsive"></p>
+<p>Daha sonra klasörde yer alan tüm dosyalara <strong><code>*</code></strong> joker karakteri ile ulaştık ve <strong><code>chmod +w *</code></strong> komutumuzu kullanarak <strong>herkese açık</strong> olacak şekilde <strong>yazma(w)</strong> yetkisi verdik.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/4-min.png" class="responsive"></p>
+<p><strong>Aynı grupta bulunan kullanıcılar</strong> için, yine konumumuzda bulunan tüm dosyaları <strong><code>*</code></strong> sayesinde kapsayacak şekilde <strong><code>g+rx *</code></strong> komutumuzu verdik.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/5-min.png" class="responsive"></p>
+<p>Gruptaki kullanıcılara(g), okuma-yazma-çalıştırma yetkisi (rwx), kullanıcıya(u) yazma yetkisi(r), diğer kullanıcılara ise yalnızca çalıştırma yetkisi(x) verdik.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/6-min.png" class="responsive"></p>
+<p>Ve en son yine bulunduğumuz konumdaki tüm dosyaların yetkilerini kaldırdık.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/7-min.png" class="responsive"></p>
+<p>Bu kullanımların dışında yetkilendirme işlemleri daha önceden de rastladığımız ve fark etmeden de olsa kullanmış olduğumuz sayısal şekilde de ifade edilebiliyor.</p>
+<p>Bu durumu yetkilerin sayısal karşılığını vererek anlatmaya devam edelim.</p>
+ Yetki kalıplarının sayısal karşılıkları. <table><thead> <tr> <th>#</th> <th>dosyanın sahibi</th> <th>sahibiyle aynı gruptakiler</th> <th>diğer kullanıcılar</th> </tr></thead> <tbody> <tr> <th scope="row">r</th> <td>4</td><td>4</td><td>4</td></tr><tr> <th scope="row">w</th> <td>2</td><td>2</td><td>2</td></tr><tr> <th scope="row">x</th> <td>1</td><td>1</td><td>1</td></tr></tbody> </table>
+<p>Yetkilerin sayısal değerlerini kullanarak bir örnek yapalım.</p>
+<p>Örneğin biz sadece dosyanın sahibine bütün yetkileri vermek istiyoruz diyelim. Bunun için ilk başta yetki kalıplarının numara karşılıklarını toplamalıyız. Yani bütün yetkileri vereceğimiz için <strong><mark>r=4 </mark></strong>+<strong><mark> w=2</mark></strong> +<strong><mark> x=1</mark></strong>=<strong><mark>toplam sayı 7</mark></strong> etti. Bizler de sadece dosya sahibine bu yetkiyi vermek istediğimizden normalde vereceğimiz <strong><code>chmod rwx- -----</code></strong> komutumuzu diğer kullanıcılara yetki vermek istemediğimiz için o alanları 0 bırakarak komutu <strong><code>chmod 700 dosya</code></strong> şeklinde veriyoruz. Böylelikle sadece dosyanın sahibi tüm yetkilere sahip olmuş oluyor.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/8-min.png" class="responsive"></p>
+<p>Daha net anlaşılması adına bir örnek daha yapalım. Şimdi de; dosyanın sahibine tüm yetkileri, ortak gruptakilere yalnızca yazma yetkisini, diğer kullanıcılara da sadece okuma yetkisini verelim.</p>
+<p>Dosya sahibi kullanıcıya verilecek tüm yetkiler için <strong><code>r(4)+w(2)+x(1)=7</code></strong> sayısını kullanacağız.</p>
+<p>Dosya sahibi ile ortak gruptaki kullanıcılar için vereceğimiz yazma yetkisi için <strong>yazma(w)</strong> karakterinin sayısal karşılığı olan <strong><code>2</code></strong> sayısını kullanacağız.</p>
+<p>Diğer kullanıcılar için vereceğimiz yalnız okuma yetkisi için ise <strong>okuma(r)</strong> karakterinin sayısal karşılığı olan <strong><code>4</code></strong> sayısını kullanacağız.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/9-min.png" class="responsive"></p>
+<p>Çıktıdan da anlaşılacağı üzere sayısal karşılıklar istediğimiz yetkilendirme işlemini gerçekleştirdi.</p>
+<p>Son bir ayrıntı daha verelim. Eğer verdiğimiz izinlerin o dizinle beraber alt klasörlerinde de etkili olmasını istersek komutumuzu <strong><code>-R</code></strong> parametresi ile birlikte kullanmalıyız.</p>
+<p>Örneğin bulunduğum konumdaki "<strong>metin</strong>" isimli klasörün erişim yetkilerini listeledim. Sonuç olarak hiçbir yetkinin bulunmadığını belirten <strong><mark>--------- </mark></strong> şeklinde bir çıktı geldi.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/10-min.png" class="responsive"></p>
+<p>Daha sonra "<strong>metin</strong>" isimli klasörün içerisine girerek oradaki dosya ve dizinlerin erişim izinlerini sorguladım. Sonuç olarak <strong><mark>rwxrwxrwx</mark></strong> şeklinde bütün yetkilere sahip dosya ve dizinlerin olduğunu gördüm.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/11-min.png" class="responsive"></p>
+<p>Daha sonra bir üst dizine dönerek ekleyeceğim erişim izinlerinin tüm alt dosyalarda dahil olmak üzere, geçerli olması için komutuma ek olarak <strong><code>-R</code></strong> parametresini kulladım ve komutumu <strong><code>chmod -R 422 metin</code></strong> şeklinde yazdım.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/12-min.png" class="responsive"></p>
+<p>Sonuç olarak bütün dosya ve dizinlerde ve alt klasörlerde dahil olmak üzere tüm dosyaların vermiş olduğum yetki erişim izinleri <strong>422</strong> ifadesine karşılık gelen; dosya sahibi için okuma(<strong>r</strong>) , dosya sahibi ile aynı gruptaki kullanıcılar için yazma(<strong>w</strong>) ve diğer kullanıcılar için de yazma(<strong>w</strong>) yetkisi şeklinde yetkilendirildiğini görmüş oldum.</p>
+<p>Eğer örneklere ve açıklamalara rağmen yine de anlamadıysanız ister konuyu tekrar okuyup kendiniz de alıştırmalar yapın isterseniz de bu konuyu şimdilik geçin ihtiyacınız olduğunda burada olduğunu bilerek tekrar göz atın. Seçim sizlere kalmış.</p>
+<h2>chattr</h2>
+<p>Hepimizin başına mutlaka gelen ve çok can sıkıcı bir durum var. Bu durum yanlışlıkla silinen dosyalar. Her nasıl ve neden olursa olsun eğer önemli gördüğümüz dosyalar varsa bir şekilde silinmeden onları koruma altına almamız mümkün. Bizlere bu koruma imkanını veren komut <strong><code>chattr</code></strong> komutudur. Aslında <strong><code>chattr</code></strong> komutu bir tek silinmeye karşı korumuyor, genel olarak dosyanın değiştirilmesine(silme, değiştirme vs.) engel olmak amacıyla kullanılıyor. Yani bu komutumuz bir nevi ilgili dosyayı dokunulamaz kılıyor. Öyle ki herhangi bir yanlış durumda dosyanın kaybolmasına engel olmak adına <strong>root kullanıcısının bile</strong> değişiklik yapmasına imkan tanımıyor. Komutun kullanım alanına bir örnek daha vererek daha iyi anlamış olalım. Örneğin sistemde bir konfigürasyon dosyasını düzenlediniz ve sistemi yeniden başlattınız, fakat bir bakıyorsunuz ki düzenlediğiniz (değiştirdiğiniz) ayarlar kaybolmuş ve dosya eski haline dönmüş. İşte bu gibi durumlarda sistemin bile ilgili dosyaya müdahale etmesini engellemek için oldukça kullanışlı olan <strong><code>chattr</code></strong> komutunu kullanabiliyoruz.</p>
+<p>Komutun kullanımı <strong><code>chattr +i dosya_adı</code></strong> şeklindedir. Hemen bir örnek yapalım.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/13-min.png" class="responsive">
+Bu tür dosyaları listelemek için <strong><code>lsattr</code></strong> komutu kullanılıyor. Bizde dosyaların durumunu daha sonradan karşılaştırabilmek adına ilk olarak konsola <strong><code>lsattr</code></strong> komutunu verdik.</p>
+<p><strong><mark>test.txt </mark></strong> isimli dosyamızı <strong><code>chattr +i test.txt</code></strong> komutu ile koruma altına aldık.</p>
+<p>Daha sonra bunu teyit etmek için <strong><code>lsattr</code></strong> komutunu kullandık.</p>
+<p>Komutumuzun çıktısında görüldüğü gibi dosyamızın sol tarafında izinler kısmında <strong><code>-i</code></strong> şeklinde bir ifade var. İşte bu ifade dosyamızın artık düzenlenemeyecek olduğunun işaretidir. Dosyayı silmeye çalışarak bu durumu teyit ettik.</p>
+<p>Eğer bu işlemi geri almak ve dosyamızı üzerinde değişiklikler yapılabilir hale getirmek istersek <strong><code>chattr -i test.txt</code></strong> komutumuzu kullanmamız yeterli olacaktır. Örneği aşağıda inceleyebilirsiniz.</p>
+<p><img src="img/8-%20Eri%C5%9Fim%20Yetkileri/14-min.png" class="responsive"></p>
+<p>Çıktıda da görüldüğü gibi hedef dosyamızın solundaki <strong><code>-i</code></strong> işareti yok olmuş. Dolayısıyla <strong><mark>test.txt</mark></strong> isimli dosyamızın artık eski halinde dönerek, düzenlenebilir forma girmiş olduğunu gördük. Ve dosyamızı silerek bu durumu teyit ettik.</p>
+	<h1></h1>
+<center>
+	<h1>Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery1.min.js"></script>
+
+<script type="text/javascript" src="js/fluidtextresizer.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv", 
+	targets: ["body"],
+	levels: 2,
+	persist: "session",
+	animate: 0 
+})
+
+</script>
+<script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#E9E7DB';
+				document.body.style.color='#000';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+				document.body.style.color='#000';
+        }
+    }
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+
