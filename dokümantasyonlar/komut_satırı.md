@@ -148,7 +148,7 @@ Ortam değişkenleri dedik ancak şu ana kadar sadece **PATH** değişkeninden b
 
 **printenv :** Sistemde bulunan bütün çevresel değişkenleri verir.
 
-**env :** Sistemde bulunan bütün "export" edilmiş yani değiştirilmiş değişkenlerle beraber değişkenleri gösterir.
+**env :** Sistemde bulunan bütün "export" edilmiş yani dışa(alt kabuklara) aktarılmış değişkenlerle beraber değişkenleri gösterir.
 
 Ben aşağıda sadece <code>printenv</code> komutunun çıktısını veriyorum. Sizler diğer komutları da mutlaka uygulayarak aralarındaki farkları kendi gözlerinizle görün.
 
