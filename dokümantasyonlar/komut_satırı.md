@@ -87,54 +87,75 @@ Oluşturmuş olduğum betik dosyasının dizin içerisindeki tam konumu aşağı
 
 Programımızın dizin adresi belli olduğuna göre artık bu dizini **PATH ortam değişkenine** ekleyip istediğimiz zaman, istediğimiz yerden **programımızı**(**komut.sh**) çalıştırabiliriz.
 
-PATH(yola)Dizin Ekleme
--
+Oluşturmuş olduğumuz **komut.sh** dosyasına konsol üzerinden sadece ismini kullanarak ulaşabilmek için uygulayabileceğimiz iki yöntem bulunuyor. Şimdi sırasıyla bu iki yöntemi de ele alalım.
 
-PATH(yola) yeni dizin eklemek için öncelikle her defasında oturum başlatılırken okunan <kbd>profile</kbd> isimli dosyada değişiklik yapmalıyız ki eklediğimiz dizin her daim biz silene kadar geçerli olsun. <kbd>profile</kbd> dosyasında değişiklik yapmak için komut satırına dosyamızın bulunduğu tam konumu belirtmek üzere <code>nano -w /etc/profile</code> komutunu giriyoruz.
+## PATH(yola)Dizin Adresi Ekleme
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.png)
+PATH yolu üzerine ekleyeceğimiz yeni dizini, her oturum başlangıcında sistem tarafından otomatik olarak okunan bir dosya içerisinde belirtmeliyiz ki yaptığımız değişiklik biz silene kadar geçerli olsun. Ekleme işlemi için kullanacağımız dosya, oturum başlangıcında okunan herhangi bir dosya olabilir. Biz örnek olması açısından **/etc** dizini altında yer alan **bash.bashrc** dosyası üzerinden çalışalım. **bash.bashrc**  dosyasında değişiklik yapmak için komut satırına dosyamızın bulunduğu tam konumu belirtmek üzere  `nano /etc/bash.bashrc`  komutunu giriyoruz.
 
-Ve komut satırında karşımıza yukarıdaki gibi <kbd>profile</kbd> dosyasının içeriği geliyor. Şimdi yapmamız gereken; programımızın (komut.sh) bulunduğu tam dizin konumunu bu dosyaya uygun şekilde eklemek.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.1.png)
+
+Ve komut satırında karşımıza yukarıdaki gibi  **bash.bashrc**  dosyasının içeriği geliyor. Şimdi yapmamız gereken; programımızın (komut.sh) bulunduğu tam dizin konumunu bu dosyaya uygun şekilde eklemek.
 
 Bunun için dosyanın en alt satıra inerek, eklemek istediğim dosyanın tam dizin adresini aşağıdaki şeklinde dosyaya ekliyorum.
+```
+PATH="/root/Desktop/yeni_dizin/yeni/en_yeni":$PATH
+```
 
-     PATH="/root/Desktop/yeni_dizin/yeni/en_yeni":$PATH
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.2.png)
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/8.png)
+Yazma işlemi bittikten sonra dosyada yaptığımız değişiklikleri kaydedip dosyayı kapatmak için  Ctrl + X  tuş kombinasyonu uyguluyoruz. Bana, "_**Değiştirilen tampon kaydedilsin mi? ("Hayır" demek değişiklikleri SİLECEK.)**_  " şeklinde bir uyarı veriyor. Dosyada yaptığım değişikliği kaydetmek için  **e**  tuşuna basarak devam ediyorum.
 
-Yazma işlemi bittikten sonra dosyada yaptığımız değişiklikleri kaydedip dosyayı kapatmak için <kbd>Ctrl + X</kbd> tuş kombinasyonu uyguluyoruz. Bana, "***Değiştirilen tampon kaydedilsin mi?  ("Hayır" demek değişiklikleri SİLECEK.)*** "  şeklinde bir uyarı veriyor. Dosyada yaptığım değişikliği kaydetmek için <kbd>e</kbd> tuşuna basarak devam ediyorum.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.3.png)
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/9.png)
+Son olarak bana, "_**Yazılacak Dosya Adı: /etc/bash.bashrc**_" diye belirtiyor,  **buradaki ismi değiştirmeden kaydediyoruz**. Eğer ismi değiştirirsek sistem bu dosyayı okuyamayacağı için problem çıkacaktır.
 
-Son olarak bana, "***Yazılacak Dosya Adı:  /etc/profile***" diye belirtiyor, **buradaki ismi değiştirmeden kaydediyoruz**. Eğer ismi değiştirirsek sistem bu dosyayı okuyamayacağı için problem çıkacaktır.
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.4.png)
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/10.png)
+Bu adımları geçtikten sonra istediğimiz dizin  **PATH(yol) ortam değişkenine**  eklenmiş oldu. Ancak yaptığımız değişikliklerin geçerli olabilmesi için, oturumun kapatılıp tekrar açılması ya da `source` komutu ile değiştirmiş olduğumuz dosyanın tekrar konfigüre edilmesi gerekiyor. 
 
-Bu adımları geçtikten sonra istediğimiz dizin **PATH(yol) ortam değişkenine** eklenmiş oldu. Ancak yaptığımız değişikliklerin geçerli olabilmesi için, oturumun kapatılıp tekrar açılması gerekiyor. Çünkü <kbd>profile</kbd> dosyası yalnızca oturum açılırken okunuyor.
-		
-Oturumu kapatıp tekrar giriş yaptım. Şimdi sırada eklediğimiz dizinin PATH yolunda ekli olup olmadığını kontrol etmek var bunun için konsola <code>echo $PATH</code> komutunu veriyoruz.
+    source /etc/bash.bashrc
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/11.png" width="875">
-	
-Gördüğünüz gibi dizin yola(PATH) eklenmiş bulunuyor.
-Artık dosyayı çalıştırmadan önce son bir ayar daha yapmamız gerek. Daha sonra "komut.sh" dosyamızı aynı leafpad programında olduğu gibi istediğimiz zaman komut satırından ismi ile çalıştırabiliyor olacağız. 
-Son işlemimiz yetkilendirme işlemi. Bu neden gerekli diyecek olursanız işlemin gerekliliğini kendi gözlerinizle görmek için bu kısmı atlayarak dosyayı çalıştırmaya çalışın. Bunun için komut satırına <code>komut.sh</code> yazalım.
+![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.5.png)
+
+Neticede yeni dizini PATH yolu üzerine ekleyip, yapılan bu değişikliğin sistem tarafından algınlanmasını sağladık. Şimdi de bu değişikliği teyit etmek üzere konsola `echo $PATH` komutunu girelim.
+
+[![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.6.png)](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/11.png)
+
+Gördüğünüz gibi dizin, yola(PATH) eklenmiş bulunuyor. Artık dosyayı çalıştırmadan önce son bir ayar daha yapmamız gerek. Daha sonra "**komut.sh**" dosyamızı aynı leafpad programında olduğu gibi istediğimiz zaman komut satırından ismi ile çalıştırabiliyor olacağız. 
+
+Son işlemimiz yetkilendirme işlemi. Bu neden gerekli diyecek olursanız işlemin gerekliliğini kendi gözlerinizle görmek için bu kısmı atlayarak dosyayı çalıştırmaya çalışın. Bunun için komut satırına  `komut.sh`  yazalım.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/12.png)
 
-Gördüğünüz gibi konsol bize "**Erişim engellendi**" diye bildirdi ve dosyayı bulmasına rağmen çalıştırmadı. İşte bu durumu yaşamamak için "komut.sh" dosyamızın bulunduğu konuma giderek (<code>cd Desktop/yeni_dizin/yeni/en_yeni/</code>) <code>chmod +rwx komut.sh</code> komutunu vermemiz gerekiyor. Böylelikle dosyayı çalıştırma izni de elde etmiş olacağız. Yani artık konsola <code>komut.sh</code> yazdığımız anda bizim oluşturmuş olduğumuz "komut.sh" betik dosyası çalışarak "**Program Çalıştı**" yazısını konsola basacak.
+Gördüğünüz gibi konsol bize "**Erişim engellendi**" diye bildirdi ve dosyayı bulmasına rağmen çalıştıramadı. İşte bu durumu yaşamamak için "**komut.sh**" dosyamızın bulunduğu konuma giderek (`cd Desktop/yeni_dizin/yeni/en_yeni/`)  `chmod +rwx komut.sh`  komutunu vermemiz gerekiyor. Böylelikle dosyayı çalıştırma izni de elde etmiş olacağız. 
+
+Yani artık konsola  `komut.sh`  yazdığımız anda bizim oluşturmuş olduğumuz "**komut.sh**" betik dosyası çalışarak "**Program Çalıştı**" yazısını konsola basacak.
 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/13.png)
 
-Sizler de bu yolla sıklıkla kullandığınız dosyaları kolay erişilebilir kılabilirsiniz. 
-Burada vermiş olduğum komutları ayrıntılı şekilde ileride zaten açıklayacağım, siz şimdilik konunun temeline ve ne neden oluyor ona hakim olsanız yeter. Ancak kafalarda soru işareti ile devam etmemek adına ben yinede tek tek izah edeyim hangi komutu neden kullandık.
-		
-<code>nano -w /etc/profile</code> bu komutta; <code>nano</code> komutu, konsol üzerinden dosya içeriğini okumamıza olanak sağlayan bir araç ve <code>nano</code> komutunun yanındaki <code>-w</code> karakteri ise dosyada değişiklik yapmamıza olanak sağlayan parametredir. Biz bu parametre sayesinde nano aracı ile belgeyi **yazma(write)** kipinde açmış oluyoruz. Geri kalan <code>/etc/profile</code> kısmı ise <kbd>profile</kbd> dosyasının bulunduğu konumu belirtiyor. Bu sayede nano aracı ile yazma kipinde <kbd>/etc/profile</kbd> konumundaki <kbd>profile</kbd> dosyasını komut satırı üzerinden görebiliyor ve değişiklik yapabiliyoruz.
+Sizler de bu yolla sıklıkla kullandığınız dosyaları kolay erişilebilir kılabilirsiniz. Burada kullanımış olduğumuz komutları ve komutlar ile bağlantılı konuları ileriki bölümlerde zaten tek tek ele alacağız. Sizler şimdilik konunun temelinde ne var ve hangi işlemi neden yaptık ona hakim olsanız yeter. Ancak kafalarda soru işareti ile devam etmemek adına ben yinede tek tek izah edeyim hangi komutu neden kullandık.
 
-<code>PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH"</code> ifadesi ise mevcut **PATH(yola) yeni dizin ekleme**mize olanak sağlayan bir bütündür. Burada açıklanacak özel bir durum yok kullanım şekli itibari ile, burada yazdığımız ifade PATH yoluna dizin ekleme işlemi için gereken ifade bütünüdür.
+`nano /etc/bash.bashrc`  bu komutta;  `nano`  komutu, konsol üzerinden dosya içeriğini okumamıza olanak sağlayan bir araçtır. Geri kalan  `/etc/bash.bashrc`  kısmı ise  **bash.bashrc**  dosyasının bulunduğu konumu belirtiyor. Bu sayede nano aracı ile `/etc` dizininde bulunan **bash.bashrc**  dosyasını komut satırı üzerinden görebiliyor ve değişiklik yapabiliyoruz.
 
-<code>echo $PATH</code> komutunu daha önce de görmüştük buradki <code>echo</code> komutu **PATH ortam değişkeni**nde bulunan dizinleri görmemizi sağlıyor.
-<code>chmod +rwx komut.sh</code> komutunda, <code>chmod</code> yetkilendirme ayarlamaları yapmamıza olanak sağlıyor. <code>+rwx</code> parametrelerinden "**+**" işareti **ekleme**, "**r** " işareti **okuma**, " **w** "işareti **yazma**, "**x**"  işareti ise **çalıştırma** yetkisi olmak üzere bizlere **bir bütün olarak dosyayı çalıştırabilmemiz için gereken yetkilendirmeyi** sağlıyor. Geri kalan <code>komut.sh</code> kısım ise zaten yetkilendirme vermek istediğimiz dosyanın adı.	
+`PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH"`  ifadesi ise mevcut  **PATH yoluna yeni dizin ekleme**mize olanak sağlayan bir bütündür. Burada yazdığımız ifade, PATH yolunda yer alan eski dizin adreslerine zarar vermeden yeni dizin ekleme işlemi için gereken ifade bütünüdür.
+
+`echo $PATH`  komutunu daha önce de görmüştük buradaki  `echo`  komutu PATH değişken değerini konsola bastırarak  **PATH ortam değişkeni**nde bulunan dizinleri görmemizi sağlıyor.  `chmod +rwx komut.sh`  komutunda,  `chmod`  yetkilendirme ayarlamaları yapmamıza olanak sağlıyor.  `+rwx`  parametrelerinden "**+**" işareti  **ekleme**, "**r**  " işareti  **okuma**, "  **w**  "işareti  **yazma**, "**x**" işareti ise  **çalıştırma**  yetkisi olmak üzere bizlere  **bir bütün olarak dosyayı çalıştırabilmemiz için gereken yetkilendirmeyi**  sağlıyor. Geri kalan  `komut.sh`  kısım ise zaten yetkilendirme vermek istediğimiz dosyanın adı.
+
+PATH Yoluna Dosya Ekleme
+-
+
+PATH yoluna yeni dizin adresi tanımlamadan, komut dosyamızı PATH üzerinde var olan bir konuma taşıyarak da dosyamızın çalıştırılmak üzere bulunabilmesini sağlayabiliriz. 
+
+Üstelik bu ikinci yöntem yani var olan PATH yolu üzerine komut dosyamızı taşıma işlemi, ilk işleme oranla çok daha güvenli bir yoldur. Özellikle sunucu yönetiminde erişim yetkilerinin kısıtlanması ve sunucu güvenliğinin sağlanması açısından istisnai durumlar hariç ikinci yöntem tercih edilir. Benim önerim de, yeni bir PATH yolu belirtmek yerine var olan yolları kullanmanızdır. Hemen söylediklerimizi teyit etmek için PATH yolu üzerinde yer alan bir dizine komut dosyamızı taşıyalım ve dosyamızı konsoldan çalıştırmayı deneyelim. Ben örnek olması açısından **/usr/local/sbin** konumuna dosyamı taşıyorum. 
+
+Taşımanın ardından komut satırından dosyamı ismi ile çalıştırmayı deniyorum. 
+
+![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.7.png)
+
+Gördüğünüz gibi sistem tarafından tanımlanmış olan PATH yolu üzerinde yer alan herhangi bir dizine taşımış olduğumuz komut dosyamız bulunup çalıştırılabildi. Burada dosyamızın çalıştırma yetkisi bulunduğundan herhangi bir sorun çıkmadı. Ancak ilk kullanımda olduğu gibi çalıştırma yetkisi bulunmayan bir dosyayı PATH yolu üzerindeki bir konuma taşıdığımızda  da çalıştırma yetkisine ihtiyaç duyulur. Yani her iki kullanımda da dosyanın çalıştırılabilirlik yetkisinin bulunması gerektiğini lütfen unutmayın.
+
+Böylelikle iki farklı yöntemle PATH ortam değişkeninin işlevinden nasıl faydalanabileceğimizi net bir biçimde görmüş olduk.
 
 			
 Şimdi bu kısımlar sizlere çok fazla detaya girilmiş belki de gereksiz yere eklenmiş gibi gelebilir ancak bu dokümanı bir bütün olarak kabul etmelisiniz. Dokümantasyon bir sefer okudum bitti değil ihtiyacınız oldukça tekrar tekrar bakasınız diye var. Yani buraları okuyup uygulayıp kavradıktan sonra böyle bir ihtiyacınız olduğunda bu konunun burada olduğunu bilin. Burada yer alan anlatımlar temeli oluşturma üzerine sıralı ve bağlantılı şekilde ilerliyor. Burada bunları ezberlemenize gerek yok zaten öğrenmenin temelinde de ezber yok.(Aman M.E.B. duymasın*!) O yüzden rahat olun her şey kullandıkça gelişecek ancak dediğim gibi artık böyle bir şeyin varlığından haberdarsınız yeri geldiğinde ihtiyacınız olan bilgiler burada olacak. 
