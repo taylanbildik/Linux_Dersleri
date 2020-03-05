@@ -89,7 +89,7 @@ Birkaç aygıt dosyası ve işlevi.
 /home
 -
 
-`home` klasörü kullanıcıların kalesi olarak tabir edilir. `home` klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin **/home/ahmet** , **/home/ayşe** gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları burada tutulmaktadır. Ayrıca kullanıcılar `/home` dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. `/home` dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.
+`home` klasörü kullanıcıların kalesi olarak tabir edilir. `home` klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin **/home/ahmet** , **/home/ayşe** gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları burada tutulmaktadır. Ayrıca kullanıcılar `/home` dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. 
 
 
 /initrd
