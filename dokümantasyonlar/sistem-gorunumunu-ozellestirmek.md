@@ -204,6 +204,11 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 **Eğer herhangi bir zaman masaüstü ortamını değiştirmek isterseniz de sadece oturumu kapatın(logout) ve yine kullanıcı adınızı girdikten sonra dişli-çark simgesinden kullanmak istediğiniz masaüstü ortamını seçin.** Bu şekilde dilediğiniz zaman masaüstü ortamları arasında geçiş yapabilirsiniz. Geçiş işlemi gif resmi ile aşağıda açıklanmıştır.
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_2.gif?raw=true)
 
+Bir önceki yöntem ile ortamı değiştirmek mümkün olsa da aslında daha kullanışlı olan yöntem konsola `sudo update-alternatives --config x-session-manager` komutunu girip karşımıza gelen ortamlardan seçim yapmaktır.
+
+![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/update-min.png?raw=true)
+
+Ortam seçimi için tek yapmanız gereken, listelenmiş olan ortam numarasını girip işlemi onaylamaktır. Bu işlemin ardından bilgisayarınızı yeniden başlattığınızda sistem seçmiş olduğunuz ortam ile başlatılacaktır.
 
 Yeni bir masaüstü ortamı seçtik ve kurduk diyelim. Peki bu ortamlara nasıl yeni tema yüklemesi yapacağım diyorsanız; 
 
