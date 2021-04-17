@@ -80,92 +80,134 @@
 </table>
 
 
-Linux Nedir ?
-=
-Başlamadan.. Şunu bilin ki Linux tek başına işletim sistemi değil **çekirdektir**!
+<h1 id="kime">Bu Eğitim Kimler İçin ?</h1>
+<p>Bu eğitim serisi, Linux sistemlerini nasıl yönetebileceğimizi sıfırdan başlayarak sıralı şekilde ele aldığımız temel konu anlatımlarından oluşturulmuştur. Linux sistem yönetiminin temellerini bildikten sonra isterseniz buradaki bilgileri; sistem yönetimi alanına giriş yapmak, gündelik işleriniz yani kişisel kullanım için ya da siber güvenlik gibi Linux bilmenin elzem olduğu farklı disiplinlerde kullanabilirsiniz. Özetle bu eğitim hobi meslek hangi amaçla olursa olsun sıfırdan Linux öğrenmek ya da tekrar etmek isteyen herkes için kolay takip edilebilir sıralı ve düzenli bir <strong>temel</strong> eğitim imkanı sunuyor. Eğer daha önce Linux sistemini kullanmak istediyseniz ve öğrenmeye nereden başlayacağınız konusunda kafa karışıklığı yaşadıysanız hiç endişelenmeyin. Tüm anlatımları sıfırdan ve öğrenmenizi kolaylaştıracak şekilde sıralı olarak ele alıyor olacağız.</p>
+<h1 id="onsoz">Önsöz</h1>
+<p>Öncelikle sizleri temin ederim ki Linux kesinlikle öcü değildir. Eğer müfredat sırlamasına riayet ederek temel çalışma yapısına hakim olursanız, kullanması yani yönetmesi son derece keyifli ve kolay olan bir işletim sistemidir. Dijitalleşen dünyamızda ulusal özgürlüğün önemli bir parçasının özgür işletim sistemleri olduğunu düşündüğüm için; dileyen herkesin en azından kendi ihtiyaçlarını karşılayabilecek düzeyde temel Linux bilgisine kolayca ulaşabilmesi adına bu sıralı dokümanı sizlere sunuyorum. Kendinize ve hepimizin geleceğine yatırım yapmak için dokümanı takip edebilir ve tüm tanıdıklarınızla dokümanı özgürce paylaşabilirsiniz.</p>
+<p>Baştan belirteyim ben sizlere kesinlikle balık vermek niyetinde değilim çünkü benim vereceğim balık size yeterli büyüklükte ya da yeterince taze gelmeyebilir. Benim amacım sizlere nasıl balık tutacağınızı öğretmek. Sizler öğrendiğiniz bu bilgiler ile ihtiyacınıza göre ister küçük isterseniz de kendinizi geliştirip çok daha büyük balıklar tutabiliyor olacaksınız. Bu yolda merak bizim öğretmenimiz olacak.</p>
+<h1 id="girizgah">Girizgah</h1>
+<p>İşletim sistemi dediğimizde aklınıza ne geliyor ?</p>
+<p>İşletim sistemlerini; pek çok farklı amaca hizmet eden bileşenlerin, kullanıcıdan aldığı emirleri yerine getirmek için bir bütün halinde uyum içerisinde çalışması şeklinde tanımlayabiliriz. Elbette bu tanımlama tek başına işletim sistemin ne olduğu ve nasıl çalıştığını ifade etmek için yetersiz. Ancak bütünü anlamada, eğitim süreci boyunca bizlere yardımcı olabilir. Şimdi sırasıyla <strong>GNU/Linux</strong> işletim sistemini tanımamızı sağlayacak temel kavramlardan bahsederek anlatıma devam edelim.</p>
 
-UNIX
--
-Burada sizlere çok tarihi veya çok teknik olmayan bir üslupla, Linux hakkında genel bilgi sahibi olmanızı sağlayacak şekilde Linux'un ortaya çıkış hikayesini anlatacağım. Zamanında **Bell Laboratuvarı**'nda geliştirilen **UNIX** adında bir işletim sistemi vardı. Bu sistem kendi bünyesinde bulundurduğu araçları sayesinde çeşitli üniversiteler ve diğer ihtiyaç duyulan kurumlarda kullanılıyordu. Buraya kadar her şey gayet güzel ancak **Unix** lisans ücreti istiyordu ve tabii ki bu durum sistemi kullanabilecek kişilerin sayısını da oldukça azaltıyordu. Yani insanlar ihtiyaç duysalar dahi lisans ücretinden dolayı bu sistemi kullanamıyorlardı. Bunun sonucunda *"para ödemek yerine bende kendi işletim sistemimi yazarım"* diye düşünenler ortaya çıktı ve bu da **UNIX**'e mecbur olunmadığı, eğer istenirse yeni bir sistemin yazılabileceği düşüncesini ortaya koydu.  Bunun sonucunda birçok işletim sistemi geliştirme girişimleri oldu ancak sonuçta geliştirilen sistemler stabil şekilde çalışmıyorlardı. Tabi bu durum sonsuza kadar böyle kalmayacaktı..
+<div class="alert alert-primary"><strong>ℹ️ Not:</strong>  Buradaki anlatımlar ileride ele alacağımız teknik anlatımların kritik olan temelini oluşturduğu için atlamadan devam etmeniz son derece önemli. Yani bu bölümde ele aldığımız anlatımlar en az teknik anlatımlar kadar gereklidir ve herkesin kolay takip edebilmesi için sıfırdan ele alınmıştır. Zaten anlatımlar tarihi detaylardan ziyade konuyu kavramamız için gerekli olan bilgilere odaklandığı için çok tarihi detaylara değinmeyeceğiz. Eğer bahsi geçen çalışmaların tarihi detaylarını öğrenmek isterseniz wikipedia gibi harici kaynaklar size pek çok tarihi detay sağlayacaktır. Bir an önce sistemi kurup teknik anlatımlara ve uygulamalara geçmek istediğinizi biliyorum. Ancak lütfen biraz sabırlı olun ve bu bölümün tüm eğitimin önemli bir parçası olduğunu unutmayın.</div>
+<h1 id="linux">Linux Nedir ?</h1>		  
+<p>Başlamadan.. Şunu bilin ki <strong>Linux</strong> tek başına işletim sistemi değil <strong>çekirdektir</strong>!</p>
+<h2 id="unix">UNIX</h2>
+<p>Bu kısımda, çok tarihi veya çok teknik olmayan bir üslupla, Linux hakkında genel bilgi sahibi olmanızı sağlayacak şekilde Linux'un ortaya çıkış hikayesini ele alacağız. </p>
 
-Linus Torvalds
--
-Bir efsanenin doğuşu..
+<p>Zamanında <strong>Bell Laboratuvarı</strong>'nda geliştirilen <strong>UNIX</strong> adında bir işletim sistemi vardı. Bu sistem kendi bünyesinde bulundurduğu araçları sayesinde çeşitli üniversiteler ve diğer ihtiyaç duyulan kurumlarda kullanılıyordu. Buraya kadar her şey gayet güzel ancak <strong>Unix</strong> lisans ücreti istiyordu ve tabii ki bu durum sistemi kullanabilecek kişilerin sayısını da oldukça azaltıyordu. Yani insanlar ihtiyaç duysalar dahi lisans ücretinden dolayı bu sistemi kullanamıyorlardı. Bunun sonucunda <em>"para ödemek yerine bende kendi işletim sistemimi yazarım"</em> diye düşünenler ortaya çıktı ve bu da <strong>UNIX</strong>'e mecbur olunmadığı, eğer istenirse yeni bir sistemin yazılabileceği düşüncesini ortaya koydu.  Bunun sonucunda birçok işletim sistemi geliştirme girişimleri oldu ancak sonuçta geliştirilen sistemler stabil şekilde çalışmıyorlardı. Tabi bu durum sonsuza kadar böyle kalmayacaktı.. </p>
+<h2 id="linus">Linus Torvalds</h2>
+<img align="right" src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Linux Nedir/Linus.png" width="240" height="360">
+<p>Bir efsanenin doğuşu..</p>
+<p>Buraları her ne kadar istemesem de kısaca geçmek durumundayım ama eğer "Linux kullanıyorum" demek istiyorsanız kesinlikle bu konuları araştırın ve ayrıca <a target="_blank"  href="https://www.youtube.com/watch?v=cEhnQN1ZmDI" >Revolution OS</a> belgeselini de mutlaka izleyin derim.</p>
+<p>İnsanların lisans ücretinden kaçmak için kendi işletim sistemini yazma akımı devam ediyorken bu durum <a target="_blank"  href="https://tr.wikipedia.org/wiki/Linus_Torvalds" rel="nofollow">Linus Torvalds</a>'ı da etkilemiş olacak ki Linus, <a target="_blank"  href="https://tr.wikipedia.org/wiki/Unix" rel="nofollow">UNIX</a>'ten esinlenerek <strong>Helsinki Üniversitesi</strong>'ndeyken kendi <strong>işletim sistemi çekirdeğini</strong> yazdı. <strong>UNIX</strong>'ten esinlendi ancak bunu hiçbir kod alıntısı yapmadan sıfırdan yazarak başardı. Daha sonra Linus, bu geliştirdiği çekirdeğin çeşitli insanlara ve gruplara(geliştirici topluluklar vb..) ulaşmasını sağlayarak, insanların verdiği dönütlerle düzenlemeler yaptı. Böylelikle Linus, çekirdeğin daha da kullanışlı hale gelmesini sağlamış oldu. Ve en nihayetinde Linus, bu geliştirdiği <strong>çekirdeğe</strong>(<strong>kernel</strong>) "<a target="_blank"  href="https://tr.wikipedia.org/wiki/Linux" rel="nofollow">Linux</a>" adını verdi. Ancak <strong>Linux</strong> bir <strong>çekirdekti</strong> ve içerisinde <strong>UNIX</strong> gibi kullanışlı araçları bulundurmuyordu.</p>
 
-Buraları her ne kadar istemesem de kısaca geçmek durumundayım ama eğer *"Linux kullanıyorum"* demek istiyorsanız kesinlikle bu konuları araştırın ve ayrıca [Revolution OS](https://www.youtube.com/watch?v=cEhnQN1ZmDI) belgeselini de mutlaka izleyin derim.
+<p>Linux cephesinde bunlar yaşanıyorken <a target="_blank"  href="https://tr.wikipedia.org/wiki/Richard_Stallman" rel="nofollow">Richard Stallman</a>'da , <a target="_blank"  href="https://tr.wikipedia.org/wiki/GNU_Genel_Kamu_Lisans%C4%B1" rel="nofollow">GNU genel kamu lisansı</a>nı ortaya atarak  <a target="_blank"  href="https://tr.wikipedia.org/wiki/%C3%96zg%C3%BCr_yaz%C4%B1l%C4%B1m" rel="nofollow">özgür yazılım</a>ı savunuyordu. Nedir bu <strong>genel kamu lisansı</strong> ve <strong>özgür yazılım</strong> diyecek olursanız lütfen okumaya devam edin.</p>
+<h2 id="acik-ozgur">Açık Kaynak ve Özgür Yazılım</h2>
+<p>Açık kaynak en basit haliyle, yazılımların kaynak kodlarının herkese açık şekilde yayınlanmış olmasıdır. Bu sayede yazılımların tüm çalışma yapısı şeffaf bir biçimde herkes tarafından denetlenebilir. Şeffaf denetim imkanı olduğu için yazılım içerisinde zararlı kodlar bulunma ihtimali de son derece düşürülmüş olur. Böylelikle mevcut yazılımın geliştirilmesi ve ihtiyaç halinde daha verimli alternatiflerinin ortaya konulabilmesi için iyi bir zemin sağlanır. Açık kaynağın sağladığı avatajlar dolayısıyla "açık kaynak" genellikle "özgür yazılım" adıyla birlikte anılır. İki kavram arasındaki farkı <strong>Richard Stallman</strong> aşağıdaki ifadeler ile net biçimde açıklamıştır.</p>
 
-İnsanların lisans ücretinden kaçmak için kendi işletim sistemini yazma akımı devam ediyorken bu durum [Linus Torvalds](https://www.wikiwand.com/tr/Linus_Torvalds)'ı da etkilemiş olacak ki Linus, [UNIX](https://www.wikiwand.com/tr/UNIX)'ten esinlenerek **Helsinki Üniversitesi**'ndeyken kendi **işletim sistemi çekirdeğini** yazdı. **UNIX**'ten esinlendi ancak bunu hiçbir kod alıntısı yapmadan sıfırdan yazarak başardı. Daha sonra Linus, bu geliştirdiği çekirdeğin çeşitli insanlara ve gruplara(geliştirici topluluklar vb..) ulaşmasını sağlayarak, insanların verdiği dönütlerle düzenlemeler yaptı. Böylelikle Linus, çekirdeğin daha da kullanışlı hale gelmesini sağlamış oldu. Ve en nihayetinde Linus, bu geliştirdiği **çekirdeğe**(**kernel**) "[Linux](https://www.wikiwand.com/tr/Linux)" adını verdi. Ancak **Linux** bir **çekirdekti** ve içerisinde **UNIX** gibi kullanışlı araçları bulundurmuyordu.
+<div class="alert alert-primary"><em>“Her iki kavramda hemen hemen aynı kategoride yer alan yazılımları tasvir ediyor olsa da, esasen farklı değerleri temsil ediyorlar. Açık kaynak (open source) bir geliştirme metodolojisi iken, özgür yazılım (free software) ise sosyal bir harekettir.”</em></div>
 
-Linux cephesinde bunlar yaşanıyorken [Richard Stallman](https://www.wikiwand.com/tr/Richard_Stallman)'da , [GNU genel kamu lisansı](https://www.wikiwand.com/tr/GNU_Genel_Kamu_Lisans%C4%B1)nı ortaya atarak  [özgür yazılım](https://tr.wikipedia.org/wiki/%C3%96zg%C3%BCr_yaz%C4%B1l%C4%B1m)ı savunuyordu. Nedir bu **genel kamu lisansı** ve **özgür yazılım** diyecek olursanız lütfen okumaya devam edin.
+<p>
+Açık kaynağın ve özgür yazılımın(free software) birlikte anılmasının yansıması olarak genellikle insanlar açık kaynağın ücretsiz yazılım demek olduğu yanılgısına düşebiliyorlar. Açık kaynak Richard Stallman'ın da belirttiği şekilde yalnızca bir geliştirme metodolojisidir. Bu sebeple hem ücretli hem de ücretsiz açık kaynaklı pek çok yazılım bulunmaktadır. <strong style="color:red;">Yani açık kaynak ve ayrıca özgür yazılım "ücretsiz-bedava" demek değildir.</strong> Yazılımların özgür olmasını sağlayan, sahip oldukları lisans türleridir. Richard Stallman da açık kaynağı ve özgür yazılımı desteklediği için bu doğrultuda GPL lisansını sunmuştur.</p>
 
-GPL
--
+<h2 id="gpl">GPL</h2>
+<img align="left" src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Linux Nedir/richard.jpg" width="240" height="360" style="padding-right: 10px">
+<p>GNU GPL (<strong>G</strong>eneral <strong>P</strong>ublic <strong>L</strong>icense - Genel Kamu Lisansı) açık kaynağı destekleyici bir lisans türü olup, ilk defa açık kaynak kodlu yazılımların kapalı kaynak kodlu hale getirilerek satılmasından rahatsız olunması sonucu öneri olarak geliştirilmiştir.</p>
+<p>GPL 4 temel özgürlük üzerine kurulmuştur bunlar:</p>
+<ul>
+<li><strong>Özgürlük 1:</strong> Programı sınırsız kullanma özgürlüğü.</li>
+<li><strong>Özgürlük 2:</strong> Programın nasıl çalıştığını inceleme ve amaçlara uygun değiştirme özgürlüğü.</li>
+<li><strong>Özgürlük 3:</strong> Programın kopyalarını sınırsız dağıtma özgürlüğü.</li>
+<li><strong>Özgürlük 4:</strong> Programın değiştirilmiş halini dağıtma özgürlüğü.</li>
+</ul>
+<p>GPL, <strong>Richard Stallman</strong> tarafından geliştirilmiş çok akıllıca detaylarla bağlayıcılığı bulunan lisans türüdür. Burda herkes kazançlıdır. <a target="_blank"  href="https://tr.wikipedia.org/wiki/Kaynak_kodu" rel="nofollow">Kaynak kodları</a> paylaşılmak zorunda olduğu için her şey şeffaftır. Burada insani bir hizmet vardır. Yani savunulan şey daha fazla rant değil, insanların gönül rahatlığı ile sınır olmadan ihtiyaçlarını karşılamasıdır. Bu konu hakkında ayrıca avantajları ve dezavantajları sıralayabiliriz ancak konuyu çok genişletmemek ve sizlere <strong>araştırma, kendi kendine bulup öğrenme alışkanlığı</strong> kazandırmak adına bu konuyu burada kesiyorum. Ben yazmaktan üşenmiyorum ancak benim burada yazıyı genişletmem, sizin araştırıp kendi kendinize öğrenmenizden ve bu araştırma alışkanlığını kazanmanızdan daha yararınıza olmayacaktır.  Bir de benim konu içinde veya dışında belirtmiş olduğum kaynaklarla sakın ola sınırlı kalmayın. Ben sadece bir başlangıç noktası ve referans olması adına sizlerle bu bilgileri paylaşıyorum.
+Bu durumdan hiç hoşlanmamış olabilirsiniz, ancak araştırma ve kendi kendine öğrenme ateşi sizi sardığında bana bu konuda hak vereceğinizi umuyorum. Bu noktada söylediklerimin daha net anlaşılması için Konfüçyüs'ün en bilindik sözünü alıntılamak isterim.</p>
+<div class="alert alert-primary"><em>"Bir kişiye iyilik yapmak istiyorsan ona balık verme, balık tutmayı öğret."</em>
+</div>
+<p>Açık kaynak, özgür yazılım ve GPL lisansından bahsettiğimize göre artık GNU oluşumunu doğru şekilde anlamak için gereken zeminimiz hazır demektir.</p>
+<h2 id="gnu">GNU</h2>
+<img align="right" src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Linux Nedir/gnu.png" width="346" height="346"><p><strong>GNU</strong>(<strong>G</strong>nu is <strong>N</strong>ot <strong>U</strong>nix/<strong>GNU Unix Değildir</strong>), açık kaynak hareketi doğrultusunda geliştirilen araçların içinde bulunduğu <strong>ücretsiz ve herkes için ulaşılabilir özgür bir işletim sistemidir</strong>. Ancak GNU için her şey her daim güllük gülistanlık değildi. GNU, içerisinde kendine ait güçlü araçları bulundurmasının yanı sıra kararlı bir çekirdeğe sahip değildi. Çekirdek için denemeler yapılmış ancak istenen düzeyde kararlı bir çekirdek oluşturulamamıştı.</p>
+<p>Tam da bu noktada <strong>Linus Torvalds</strong>'ın sıfırdan geliştirip topluluğa sunduğu <strong>çekirdek</strong>(<strong>Linux</strong>) yazılımı, <strong>GNU</strong> ile tencere kapak uyumu olacak şekilde bir araya geldi. Böylelikle ortaya bir <strong>GNU/Linux</strong> efsanesi çıktı. İşte <strong>GNU/Linux</strong> devrimi kısaca bu şekilde oldu. Hem <strong>GNU</strong>'nun hem de <strong>Linux</strong>'un topluluğa bağlı dönütlerle geliştirilmesi doğrultusunda <strong>herkese açık, ücretsiz ve sınırsız geliştirilme potansiyeline sahip, gerçek anlamda insana hizmet eden  özgür bir işletim sistemi</strong> ortaya çıkmış oldu.</p>
+<img align="right" src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Linux Nedir/gnu-linux.png" width="200" height="200">
+<h2 id="sonuc">Sonuç Olarak</h2>
+<p>Anlatımın başında da söylediğimiz şekilde; <strong>Linux</strong> bir işletim sistemi değil, <strong>çekirdektir(kernel).</strong> <strong>GNU/Linux</strong> bütünü bir <strong>işletim sistemidir</strong>. Ancak genellikle söylenmesi uzun veya zor geldiği için, zamanla sadece <strong>Linux</strong> olarak geçmeye başlamıştır. Ben de yazılarımda <strong>GNU/Linux</strong> yerine <strong>Linux</strong> kullanıyor olacağım. Ancak emin olun <strong>çekirdekten</strong>(<strong>kernel</strong>) yani <strong>Linux</strong>'tan bahsettiğimde ve <strong>GNU/Linux</strong>(<strong>işletim sistemi</strong>)'tan bahsettiğimde hangisini kastettiğimi anlıyor olacaksınız. Ayrıca söz konusu Linux olduğunda sürekli karşınıza çıkacak olan penguen logosu, Linux'un "<strong>tux</strong>" olarak ifade edilen maskotudur.</p>
 
-GNU GPL (General Public License - Genel Kamu Lisansı) açık kaynağı destekleyici bir lisans türü olup, ilk defa açık kaynak kodlu yazılımların kapalı kaynak kodlu hale getirilerek satılmasından rahatsız olunması sonucu öneri olarak geliştirilmiştir.
+<p> GNU/Linux sisteminin ortaya çıkış hikayesini teknik ya da tarihi detaylara girmeden, daha fazlasını araştırmak istediğinizde referans noktalarınız olacak şekilde ele aldık. Biz şimdi sıklıkla duyacağımız bir diğer önemli konu olan "<strong>dağıtım</strong>" kavramı ile anlatımlarımıza devam edelim.</p>
 
-GPL 4 temel özgürlük üzerine kurulmuştur bunlar:
+<h1 id="dagitim">Dağıtım(Distro) Nedir ve Hangisini Seçmeliyiz ?</h1>
+<p>İngilizce “<strong>distro</strong>” olarak geçen “<strong>dağıtım</strong>” kavramını açıklamadan önce, GNU/Linux sisteminin yapısını iyi anlamamız gerekiyor.<br>
+GNU/Linux’un, içerisinde sistemin yönetilebilmesini sağlayan pek çok farklı aracı barındıran sistem bütününe verilen genel isim olduğunu öğrendik.</p> 
+<p><img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Linux Nedir/gnulinux.png" class="responsive"></p>
+<p>GNU/Linux dediğimiz sistem bütünü de zaman içerisinde insanların ihtiyaçlarına göre farklı dağıtımlar altında özelleştirilerek çoğalmıştır. Bu özelleştirmenin ne anlama geldiğini öğrenmek için burada bahsi geçen araçların neler olduğunu iyi kavramamız gerekiyor.</p>
+<p><img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Linux Nedir/dagitim.png" class="responsive"></p>
+<p>Tüm GNU/Linux dağıtımların ortak özelliği Linux çekirdeğini kullanmasıdır. Peki ama "Linux" yani "çekirdek" dediğimiz yapının görevi tam olarak nedir ?</p> <p>Çekirdek, yazılımlardan yani kullanıcının kullandığı araçlardan gelen emirleri donanıma yaptırmakla mükellef yapıdır. Burada bahsi geçen araçlar basit bir metin editörü ya da daha farklı herhangi bir işlevsel yazılım olabilir. Örneğin bizler basit bir metin hazırlamak ya da sisteme program yüklemek hatta herhangi bir dosyayı görüntülemek için aslında ne yapıyoruz? Bize bu imkanı sunan aracı çalıştırıp işimizi hallediyoruz değil mi ? İşte işletim sistemi dediğimiz şey de aslında biz kullanıcıların doğrudan ya da dolaylı olarak kullandığı araçlar bütününe verdiğimiz isimdir. Bizler işimizi halletmek üzere aracımızı kullanır gerisine karışmayız.</p> 
+<p><img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Linux Nedir/kernel_sema.png" class="responsive"></p>
+<p>İşte burada bahsi geçen araçlar zaman içerisinde farklı ihtiyaçlara hitap edebilecek şekilde bir araya getirilip bir çok alt işletim sistemini yani dağıtımları ortaya çıkarmıştır. Özetle Linux dediğimiz çekirdek yapısı tüm dağıtımlarda ortaktır ancak dağıtımların içerisinde varsayılan olarak yüklü gelen araçlar ihtiyaçlara göre özelleştirilmiştir. Bu özelleştirmenin sonucunda da “dağıtım-distro” kavramı ortaya çıkmıştır.</p>
+<p>Bu konunun teknik ayrıntılarına ileride ayrıca değinmiş olacağız. Bu sayede bahsetmiş olduğumuz pek çok kavram yerli yerine oturmuş olacak. Dağıtım kavramının şimdilik daha net anlaşılabilmesi için teknik anlatımın dışında gerçek hayattaki duruma örnek göstermemiz gerekirse; örneğin sunucu yönetiminde grafiksel arayüze ihtiyaç duyulmayacağından sunucu için kullanılan dağıtımın grafiksel arabirim araçlarına ihtiyacı yoktur. Çünkü grafiksel arayüz profesyonel kullanımda performansı ve yapılabilecek işlerin çeşitliliğini potansiyel olarak düşürebilir. Bu duruma benzer şekilde, örneğin ev ya da ofis kullanıcıları için de grafiksel arayüz önemlidir ve bu kullanıcılara hitap eden dağıtımlar da bu durumu dikkate alarak grafiksel arabirimlerini kullanıcıların rahat yönetebileceği şekilde seçerler. Yani profesyonel sunucu yönetiminde yöneticilerin her türlü işini komutlar ile çözebilmesi beklenirken, sıradan kullanıcılar her işini komutlar ile çözmek istemeyebilir. Örneğin sıradan kullanıcı web üzerinde gezinti yapıp video izlemek isteyebilir ancak sunucuyu yöneten kişilerin böylesi bir işleme ihtiyacı yoktur. Çünkü sunucuyu yöneten insanların beklentisi sunucuyu vermli şekilde yönetip denetlemektir. Örneğimizi şimdilik daha fazla uzatmaya gerek yok, eğitim içerisinde ihtiyaçlar meselesinin neye göre değiştiğini zaten bizzat görmüş olacaksınız. İşte tıpkı örneğimizde olduğu gibi zaman içerisinde pek çok farklı amaç için pek çok farklı dağıtım ortaya çıkmıştır. Elbette ihtiyaçlara cevap verecek dağıtımlar oluşturabilmenin en temel dayanağı açık kaynak ve özgür yazılım felsefesidir. Bu durum da bizlere açık kaynağın ve özgür yazılım ilkelerinin ne kadar değerli olduğunu bir kez daha hatırlatıyor.</p>
+<p>Konumuza dönecek olursak piyasada pek çok farklı türde dağıtım bulunuyor. Tüm bu dağıtımlar hakkında bilgi almak üzere <a href="https://distrowatch.com/">https://distrowatch.com/</a> adresini ziyaret edebiliriz. Bu sayfa üzerinden herkesin kullanımına açık olan pek çok dağıtım hakkında bilgi almamız mümkündür. Hatta hangi dağıtım son zamanlarda ne kadar popüler olduğunun bilgisine dahi buradan ulaşabiliriz. Popüler dağıtımlara Debian, Monjoro, Mint, Ubuntu, Fedora ve benzer pek çok dağıtımı saymamız mümkündür. Pek çok dağıtımın varlığından haberdar olduğumuzda, aklımıza tek bir soru geliyor;</p> <p>Peki ama biz hangi dağıtımı seçmeliyiz yani hangi dağıtım bize daha uygun ?</p>
+<p>Aslında bu sorunun cevabı sizin hangi amaçla bu sistemleri kullanmak istediğinize bağlı olarak değişir. Ancak bizim bu eğiti serisi içerisinde ele alacağımız dağıtım türü, "Debian tabanlı" olan dağıtımlardır. Peki ama “Debian tabanlı dağıtım” da ne demek ?</p> <p><strong>Debian tabanlı dağıtım</strong>, isminden de anlaşılacağı gibi Debian dağıtımını temel alarak oluşturulmuş alt dağıtımlara verilen genel isimdir. Debian dağıtımı oldukça köklü olan bir dağıtım türüdür. Linux çekirdeği etrafında stabil şekilde çalışan pek çok araç ekleyerek zaman içerisinde sorunsuzca çalışan bir dağıtım halini almıştır. Stabil şekilde çalıştığı için, farklı amaçlarla dağıtım oluşturmak isteyen kişiler sıfırdan oluşturmakla uğraşmak yerine Debian dağıtımını değiştirerek isteklerine uygun dağıtımlar oluşturmuşlardır. İşte Debian dağıtımını amaçları doğrultusunda değiştirip yeni bir dağıtım olarak sunan sistemlere "Debian tabanlı dağıtımlar" deniliyor. Benzer durum diğer ana dağıtımlar için de geçerlidir. Örneğin Pardus başlarda bağımsız şekilde sıfırdan geliştiriliyorken bu bağımsız sürüm bırakılarak, Debian dağıtımı üzerinden tekrar geliştirileren Debian tabanlı dağıtım halini almıştır.</p>
+<p>Distro watch üzerinde gördüğümüz pek çok dağıtım Debian gibi oldukça köklü olan ana dağıtımların özelleştirilmesi ile oluşturulmuştur. Hatta dağıtımların açıklamalarına tek tek göz attığınızda Ubuntu, Mint, Kali, Pardus ve benzeri pek çok dağıtımın aslında Debian tabanlı olduğunu görebilirsiniz. Bu dağıtımların Debian tabanlı olması demek temel yönetim araçlarının ortak olması demektir. Örneğin Debian tabanlı dağıtımlar paket yönetimi için yani sisteme program yükleyip kaldırma gibi işlemler için ortak olarak <code>apt</code>(<em>Advanced Package Tool</em>- <em>Gelişmiş Paketleme Aracı</em>) isimli aracı kullanır. Yani örneğin siz "Pardus" da kullansanız "Kali Linux" da kullansanız <code>apt</code> paket yönetim aracı varsayılan olarak yüklü gelecektir. İşte bizler de bu eğitimde Debian tabanlı dağıtımları nasıl yönetebileceğimizi öğrenmiş olacağız. Yani sizler burada yer alan anlatımları dilerseniz Kali Linux haricindeki Debian tabanlı(Pardus, Ubuntu, Mint, Parrot, Deepin, vb..) olan herhangi bir dağıtımdan da rahatlıkla takip edebilirsiniz.</p>
+<p>Benim anlatımları Debian tabanlı dağıtım üzerinden gerçekleştiriyor olma nedenim, kullanımının hem profesyonel hem de standart ev kullanıcıları arasında yaygın olmasıdır. Debian dağıtımları, standart ev kullanıcılarından tutun da dünya çapında hizmet sunan Google gibi şirketlerin sunucu altyapılarına kadar, pek çok farklı alanda yaygın kullanıma sahiptir. Öğrenmesi ve kullanması kolay olduğundan ve öğrenmenin bizlere sunacağı katkıdan dolayı Debian GNU/Linux dünyasını tanımak için iyi bir başlangıç noktasıdır. Ayrıca Pardus işletim sistemimizin de Debian tabanlı olduğunu dikkate alarak, Debian dağıtımları üzerinden ilerlemenin doğru bir yaklaşım olduğunu düşünüyorum.</p>
 
-- **Özgürlük 1:** Programı sınırsız kullanma özgürlüğü.
-- **Özgürlük 2:** Programın nasıl çalıştığını inceleme ve amaçlara uygun değiştirme özgürlüğü.
-- **Özgürlük 3:** Programın kopyalarını sınırsız dağıtma özgürlüğü.
-- **Özgürlük 4:** Programın değiştirilmiş halini dağıtma özgürlüğü.
+<p>Ben anlatımlar sırasında siber güvenlik alanında sıklıkla kullanılan Debian tabanlı "Kali Linux" dağıtımı üzerinden ilerliyor olacağım. Elbette daha önce de belirttiğim gibi, sizler dilediğiniz Debian tabanlı dağıtımı seçip kullanabilirsiniz. Kurulum anlatımlarına geçmeden önce özellikle ilk defa Linux öğrenme gayretinde olan kişilerin kafasında hiç bir soru işareti kalmaması adına temel kavramların hepsini ele alalım istiyorum. Yani neden hala kurulumları anlatmadığımı merak ediyorsanız, eğitimden maksimum verimi alabilmeniz adına sıfırdan sırasıyla ilerlemeye gayret ettiğimi bilmenizi isterim.</p> 
 
-GPL, **Richard Stallman** tarafından geliştirilmiş çok akıllıca detaylarla bağlayıcılığı bulunan lisans türüdür. Burda herkes kazançlıdır. [Kaynak kodları](https://www.wikiwand.com/tr/A%C3%A7%C4%B1k_kaynak) paylaşılmak zorunda olduğu için her şey şeffaf ve dolayısıyla oldukça berraktır . Burada insani bir hizmet vardır. Yani savunulan şey daha fazla rant değil, insanların gönül rahatlığı ile sınır olmadan ihtiyaçlarını karşılamasıdır. Bu konu hakkında ayrıca avantajları ve dezavantajları sıralayabiliriz ancak konuyu çok genişletmemek ve sizlere **araştırma, kendi kendine bulup öğrenme alışkanlığı** kazandırmak adına bu konuyu burada kesiyorum. Ben yazmaktan üşenmiyorum ancak benim burada yazıyı genişletmem, sizin araştırıp kendi kendinize öğrenmenizden ve bu araştırma alışkanlığını kazanmanızdan daha yararınıza olmayacaktır.  Bir de benim konu içinde veya dışında belirtmiş olduğum kaynaklarla sakın ola sınırlı kalmayın. Ben sadece bir başlangıç noktası ve referans olması adına sizlerle bunları paylaşıyorum. 
-Bu durumdan hiç hoşlanmamış olabilirsiniz, ancak araştırma ve kendi kendine öğrenme ateşi sizi sardığında bana bu konuda hak vereceğinizi umuyorum. Bu noktada söylediklerimin daha net anlaşılması için sözümü Konfüçyüs'ün en bilindik sözü ile noktalamak istiyorum.
+<p>İlk defa Linux ile tanışan kullanıcıların akıllarında soru işareti oluşturabilecek bir başka durum da farklı dağıtımlar üzerinden eğitimi takip ederken grafiksel arayüzde değişiklikler olabilmesidir. Bu durumun sebebini bir sonraki kısımda kısaca açıklamaya çalışalım.</p>
+<h2 id="farklar">Dağıtımlar ve Sürümler Arası Farklılıklar Hakkında</h2>
+<p>Buradaki anlatımları Debian tabanlı olduğu sürece istediğiniz bir dağıtım üzerinden takip edebileceğinizi söyledik. Ancak Kali Linux dışındaki debian tabanlı bir dağıtımı kullandığınızda hatta doğrudan Kali kullanmanıza karşın benim eğitimi hazırlarken kullandığım Kali sürümü dışındaki bir sürümü kullandığınızda, sizin kullandığınız sistemin anlatımlar sırasında kullanılan sistemden farklı gözüktüğüne şahit olacaksınız. Hatta basit bir test gerçekleştirmek üzere Kali Linux dağıtımının farklı sürümlerde nasıl göründüğüne dair genel bir bakış atabiliriz.</p><p><img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Linux Nedir/kali-versions.png" class="responsive"></p> <p>Sürümler arasında farklılık olduğunu bir bakışta fark edebiliyoruz ancak hiç merak etmeyin bu farklılığın hiç bir önemi yok. Bu eğitimin sonunda sizler için tüm sürümler aynı derecede kolay kullanılabilir olacak ve bu farklılıklar sizin için de sıradanlaşacak. Çünkü sürümler ve dağıtımlar arasında farklılık olmasının nedeni daha önce de bahsetmiş olduğumuz, ihtiyaçlara uygun özelleştirmelerdir. Örneğin benim eğitimi hazırladığım dönemde metinleri grafiksel arayüzde açıp düzenleyebilme olanağı tanıyan leafpad isimli araç Kali Linux dağıtımında varsayılan olarak yüklü geliyordu. Ancak daha yeni sürümlerde leafpad aracı varsayılan olarak yüklü gelmemeye  ve bu araç yerine alternatif bir metin editörü kullanılmaya başlandı. Belki daha ileriki sürümlerde daha farklı bir metin editörü de yüklü gelebilir. Ayrıca varsayılan olarak yüklü gelen araçlar dışında sistemin görünümünün değişmesinin bir başka nedeni de kullanıcı ile etkileşimi sağlayan masaüstü ortamı ve pencere yöneticileri gibi araçların birden fazla sayıda olması ve bu araçların da sürekli gelişmeye devam etmesidir. Yani mevcut sistemin grafiksel görünümü diğer bir deyişle “makyajı” sürümden sürüme veya <a href="../dokümantasyonlar/sistem-gorunumunu-ozellestirmek.md#linux-arayüzünü-özelleştirmek">ileride ele alacağımız</a> şekilde kullanıcının isteği doğrultusunda değiştirilebilir bir aracı katmandır sadece. Hatta özellikle sunucu olarak kullanılan dağıtımlarda bu grafiksel arayüzün varsayılan olarak yüklü gelmediğinden de daha önce bahsetmiştik hatırlarsanız. Peki ama hem varsayılan olarak yüklü gelen araçlar hem de grafiksel arayüz, sürümlere ve dağıtımlara göre değişkenlik gösteriyorsa biz bu eğitimde ne öğreneceğiz ? Nasıl bu eğitimi takip edeceğiz ? Yoksa öğreneceğimiz bilgiler geçici bilgiler mi ?</p>
+<p>Biz bu eğitimde Debian tabanlı sistemlerde standart olan yönetim araçlarını, komutlar ile sistemi yönetmemizi sağlayan Bash kabuğunun kullanımını ve Linux’un sahip olduğu temel standartları öğreniyor olacağız. Kısacası bu eğitimde anlatılan bilgiler standart olan temel Linux sistem yönetimini içeriyor. Yani örneğin ben grafiksel arayüzde leafpad aracını kullanarak bir metin düzenlemeyi gösteriyorken, sizler de kendi sisteminizde yüklü bulunan metin editörü aracını kullanabilirsiniz. Zaten grafiksel arayüzün nasıl kullanılacağını anlamanız oldukça kısa sürecektir zira grafiksel arayüzler her daim kolay kullanılır şekilde tasarlanıyor. Örneğin sizler win7 den win8 ya da win10 işletim sistemine geçerken sistemi kullanmak için özel bir eğitim aldınız mı ? Pek sanmıyorum. Eminim ki istisnalar hariç kısa süre içerisinde yeni grafiksel arayüzü çözüp sistemi efektif şekilde kullanmayı başardınız. Aynı durumu Linux için de geçerli. Yani sizler hangi grafiksel arayüze sahip olursanız olun bu arayüzü çözmeniz çok kısa sürecektir. Ve bu gibi alışkanlıkları şimdiden edinmek yani kendi kendine araştırıp sorunu çözebilmek, özellikle Linux kullanırken en çok ihtiyaç duyacağınız yetidir kesinlikle. Çünkü söz konusu Linux olduğunda potansiyel olarak sınırsız çeşitliliğe sahip bir sistemden bahsettiğimiz için her birimiz her daim öğrenci kalmaya devam ediyoruz aslında.</p>
+<p>Öğrenme süreciniz hiç bir zaman bitmeyeceği için öğrenmeyi öğrenmek üzere bu eğitimde iyi bir temel atmaya odaklanacağız. Sizler buradan edineceğiniz temel bilgilerinizin üzerine, zaman içerisinde ihtiyaç duydukça pek çok yeni bilgiyi araştırıp katabiliyor olacaksınız. Örneğin sizin kullandığınız sistemdeki metin editörünün hangisi olduğunu sistemi kurcalayarak ya da kurcalayarak bulamazsanız kısa internet araştırması ile öğrenmeniz mümkündür. Ayrıca eğitim içerisinde istediğimiz yeni araçları nasıl kurabileceğimizi de <a href="../dokümantasyonlar/kurma-kaldırma-güncelleme_işlemleri.md#kurma-kaldırma-güncelleme-İşlemleri">öğreniyor</a> olacağımızdan sistemi yönetme konusunda zorluk yaşamayacaksınız.</p> <p>Neticede arayüzler sürekli değişme potansiyelinde olduğu için sizlerin bu eğitimde odaklanmanız gereken tek nokta Linux sistem yönetiminin temelleridir. Ayrıca yaşadığınız her türlü problemde size seve seve yardımcı olacak pek çok forum alanı olduğunu lütfen unutmayın. Zaten eğitime devam ettikçe temel Linux bilginiz sayesinde sorunlarınızı kendi kendinize nasıl çözebileceğinizi de öğrenmiş olacaksınız.</p> <p>Özetle bu eğitim sizin kullandığınız dağıtım veya sürüme göre grafiksel olarak farklı görünüyor olabilir ancak yönetimine dair anlatılan tüm bilgiler geçerliliğini korumaya devam edecektir.  Sizden tek ricam tüm eğitimi baştan sonra sırası ile sabırla ve etkileşimde olarak yani uygulama ve araştırmaya açık olarak bitirmenizdir. Eğitimi bitirdiğinizde bahsetmiş olduğumuz tüm konularda bana hak vereceğinize ve Linux sistemini rahatlıkla kullanabiliyor olacağınıza emin olabilirsiniz. Dokümanı buraya kadar okuma sabrını gösterebildiyseniz, tüm eğitimini kolayca bitirebileceğinize olan inancım tam. Siz sabırlı okuyucuma saygılarımı sunarak, <strong>aramıza hoş geldiniz</strong> demekten mutluluk duyuyorum.</p>
+ 
 
-> **"Bir kişiye iyilik yapmak istiyorsan ona balık verme, balık tutmayı öğret." *Konfüçyüs***
-
-GNU
--
-
-**GNU** (**G**nu is **N**ot **U**nix/**GNU Unix Değildir**), açık kaynak hareketinin doğrultusunda geliştirilen araçların içinde bulunduğu **ücretsiz ve herkes için ulaşılabilir bir işletim sistemidir**. Ancak GNU için her şey her daim güllük gülistanlık değildi. GNU, içerisinde kendine ait güçlü araçları bulundurmasının yanı sıra kararlı bir çekirdeğe sahip değildi. Çekirdek için denemeler yapılmış ancak kararlı bir çekirdek oluşturulamamıştı.
-
-Tam da bu noktada **Linus Torvalds**'ın geliştirip topluluğa sunduğu ve topluluk doğrultusunda geliştirdiği çekirdek yazılımı, **GNU** ile tencere kapak uyumu olacak şekilde bir araya geldi. Böylelikle ortaya bir **GNU/Linux** efsanesi çıktı. İşte **GNU/Linux** devrimi kısaca bu şekilde oldu. Hem **GNU**'nun hem de **Linux**'un topluluğa bağlı dönütlerle geliştirilmesi doğrultusunda **herkese açık, ücretsiz ve sınırsız geliştirilme potansiyeline sahip, gerçek anlamda insana hizmet eden  özgür bir işletim sistemi** ortaya çıkmış oldu.
-
-Sonuç Olarak
--
-**Linux** bir işletim sistemi değil, **çekirdektir(kernel).** **GNU/Linux** bütünü bir **işletim sistemidir**. Ancak genellikle söylenmesi uzun veya zor geldiği için, zamanla sadece **Linux** olarak geçmeye başlamıştır. Ben de yazılarımda **GNU/Linux** yerine **Linux** kullanıyor olacağım. Ancak emin olun **çekirdekten**(**kernel**) yani **Linux**'tan bahsettiğimde ve **GNU/Linux**(**işletim sistemi**)'tan bahsettiğimde hangisini kastettiğimi anlıyor olacaksınız.
+<p>Temel kavramları ve eğitimin ilerleyiş biçimini ele aldığımıza göre gerekli olan çalışma ortamını kurmak üzere anlatımlarımıza devam edebiliriz.</p>
 
 
 ----------
 
 
+Gerekli Ortamın Kurulması
+=========================
 
-# Gerekli Ortamın Kurulması
+Linux işletim sistemini kurmak veya Linux'u herhangi bir kurulum işlemi gerçekleştirmeden kullanmak için çok fazla seçenek bulunuyor. Ben sadece içlerinde bilmediğiniz bir alternatif seçenek olması ihtimaline karşı **genel kullanım seçeneklerini** aşağıda listeliyorum.
 
-Linux işletim sistemini kurmak veya Linux'u herhangi bir kurulum işlemi gerçekleştirmeden kullanmak için çok fazla seçenek bulunuyor. Ben sadece içlerinde bilmediğiniz bir alternatif seçenek olması ihtimaline karşı genel kullanım seçeneklerini aşağıda listeliyorum.
+Kurulum ve Kullanım Metodları
+-----------------------------
 
-## Kurulum ve Kullanım Metodları
+*   Sanal olarak kurulum (Vmware & Virtualbox)
+*   İkincil işletim sistemi olarak kurmak (Dualboot)
+*   Live versiyon olarak kullanmak.(Tüm dağıtımlarda bu özellik bulunmayabilir.)
+*   Linux VPS aracılığı ile kullanmak.
 
--   Sanal olarak kurulum (Vmware & Virtualbox)
--   İkincil işletim sistemi olarak kurmak (Dualboot)
--   Live versiyon olarak kullanmak.
--   Linux VPS aracılığı ile kullanmak.
+* * *
 
 ### Sanal Olarak Kullanmak;
 
-**Sanallaştırma işlemi kısaca;** kurmak istediğiniz yeni bir işletim sistemini, diske kalıcı kuruluma ihtiyaç duymadan, mevcut işletim sistemi üzerinden sanallaştırma teknolojisi ile çalıştırabilmeniz anlamına gelir. Sanallaştırma teknolojisi sayesinde, kullanmakta olduğunuz işletim sisteminden çıkmadan, tıpkı program çalıştırır gibi; herhangi bir işletim sistemini sanal olarak çalıştırabilirsiniz.  Sanallaştırma işlemini; bu iş için geliştirilmiş olan **vmware** ve **virtualbox** gibi özel yazılımlar yerine getiriyor.
+**Sanallaştırma işlemi kısaca;** kurmak istediğiniz yeni bir işletim sistemini, diske kalıcı kuruluma ihtiyaç duymadan, mevcut işletim sistemi üzerinden sanallaştırma teknolojisi ile çalıştırabilmeniz anlamına gelir. Sanallaştırma teknolojisi sayesinde, kullanmakta olduğunuz işletim sisteminden çıkmadan, tıpkı program çalıştırır gibi; herhangi bir işletim sistemini sanal olarak çalıştırabilirsiniz. Sanallaştırma işlemini; bu iş için geliştirilmiş olan **vmware** ve **virtualbox** gibi özel yazılımlar yerine getiriyor.
 
 ### Avantajları
- - Sistemin yedeğini alarak, büyük bir sorun ile karşılaştığımızda
-   aldığımız yedeği kolaylıkla geri yükleyebiliriz.
- - Snapshot(anlık görüntü) özelliği sayesinde sistemi olduğu gibi kaydedip, daha sonra istediğimiz zaman kaldığı yerden çalışmaya devam edebiliriz. 
- - Diske kalıcı kurulum gerektirmez, ve kurulu olan sistemin dosyalarına kesinlikle müdahale etmez. Yani kurulu sisteme hiç bir zarar vermeden sanal olarak çalışır.
- - Aynı anda birden çok işletim sistemini çalıştırabilir.(Bilgisayarınızın performansına göre değişiklik gösterebilir.)
- - Kendinize göre ayarladığınız sanal makineyi kopyalayıp istediğiniz bilgisayarda aynı şekilde çalıştırabilirsiniz.
 
-**Kısacası;** yeni öğrenmeye başlayan kişiler için test alanı görevi görür, snapsot ve yedekleme özellikleri sayesinde hatalardan kolaylıkla geri dönülmesi mümkündür. Eğer; sisteme zarar vermeden gönül rahatlığı ile her şeyi kurcalayayım, deneme yanılma ile öğreneyim derseniz sizin için biçilmiş kaftandır.
- 
- 
+*   Sistemin yedeğini alarak, büyük bir sorun ile karşılaştığımızda aldığımız yedeği kolaylıkla geri yükleyebiliriz.
+*   Snapshot(anlık görüntü) özelliği sayesinde sistemi olduğu gibi kaydedip, daha sonra istediğimiz zaman kaldığı yerden çalışmaya devam edebiliriz.
+*   Diske kalıcı kurulum gerektirmez, ve kurulu olan sistemin dosyalarına kesinlikle müdahale etmez. Yani kurulu sisteme hiç bir zarar vermeden sanal olarak çalışır.
+*   Aynı anda birden çok işletim sistemini çalıştırabilir.(Bilgisayarınızın performansına göre değişiklik gösterebilir.)
+*   Kendinize göre ayarladığınız sanal makineyi kopyalayıp istediğiniz bilgisayarda aynı şekilde çalıştırabilirsiniz.
+
+**Kısacası;** yeni öğrenmeye başlayan kişiler için test alanı görevi görür, snapshot ve yedekleme özellikleri sayesinde hatalardan kolaylıkla geri dönülmesi mümkündür. Eğer; sisteme zarar vermeden gönül rahatlığı ile her şeyi kurcalayayım, deneme yanılma ile öğreneyim derseniz "sanal olarak kullanım" sizin için biçilmiş kaftandır.
+
 #### Dezavantajları
- Sanallaştırmanın sağladığı avantajlarının yanında, dezavantajlarının sayısı ve etkisi çok büyük değildir.
- 
- - Mevcut işletim sistemi üzerinde çalıştığı için performans sorunları yaşanabilir.(Bilgisayarınızın performansına göre değişiklik gösterir.)
- - Fiziksel ortamda oluşan herhangi bir donanım sorunu sanal makineyi de etkiler.
-  
- ***Vmware;*** ücretli bir yazılımdır ve içerisinde bir çok ekstra özellik barındırır. Bu özellikler genellikle işletmelerin işine yarayacak türdendir. Eğer bireysel bir kullanıcıysanız muhtemelen bir çok ekstra özelliği kullanmanız gerekmez.(Bu fazla özellikler sistemin daha hantal çalışmasına neden olabilir.)
 
- ***Virtualbox:*** tamamen ücretsiz, vmware ile hemen hemen aynı özelliklere sahip yazılımdır. Eğer bireysel bir kullanıcıysanız; virtualbox yazılımını tercih edebilirsiniz.(Virtualbox yazılımı içerisinde çok fazla ekstra özellik barındırmadığından bireysel kullanıcılar için vmware yazılımına oranla daha performanslı çalışır.)
+Sanallaştırmanın sağladığı avantajlarının yanında, dezavantajlarının sayısı ve etkisi çok büyük değildir.
+
+*   Mevcut işletim sistemi üzerinde çalıştığı için performans sorunları yaşanabilir.(Bilgisayarınızın performansına göre değişiklik gösterir.)
+*   Çok fazla yedek alındığında ve çok fazla sanal makine oluşturulduğunda disk alanı ve çalışma organizasyonunuz kötü etkilenebilir.(Sahip olduğunuz organizasyon becerisi ve disk kapasitesi ile bu sorun pek de önemli sayılmaz.)
+
+Söz konusu sanallaştırma olduğunda çeşitli araçlar bulunsa da bizler en sık tercih edilen "Vmware" ve "Virtualbox" araçlarından kısaca bahsedelim.
+
+_**Vmware;**_ ücretli bir yazılımdır ve içerisinde bir çok ekstra özellik barındırır. Bu özellikler genellikle işletmelerin işine yarayacak türdendir. Eğer bireysel bir kullanıcıysanız muhtemelen bir çok ekstra özelliği kullanmanız gerekmez.(Bu fazla özellikler sistemin daha hantal çalışmasına neden olabilir.)
+
+_**Virtualbox:**_ tamamen ücretsiz, vmware ile hemen hemen aynı özelliklere sahip yazılımdır. Üstelik "Windows", "MacOS" ve "Linux" platformlarında kullanılabilir. Eğer bireysel bir kullanıcıysanız; virtualbox yazılımını tercih etmenizi öneririm.(Virtualbox yazılımı içerisinde çok fazla ekstra özellik barındırmadığından bireysel kullanıcılar için vmware yazılımına oranla daha performanslı çalışır.)
+
+* * *
 
 ### İkincil İşletim Sistemi Olarak Kullanmak
 
@@ -173,78 +215,85 @@ Linux işletim sistemini kurmak veya Linux'u herhangi bir kurulum işlemi gerçe
 
 #### Avantajları
 
- - Sanal kuruluma oranla performans açısında oldukça verimlidir. 
- - Var olan sistemi silmeden yanına kurduğunuz için, ihtiyacınız olduğunda diğer sisteme geçiş yapabilirsiniz.
+*   Sanal kuruluma oranla performans açısında oldukça verimlidir.
+*   Var olan sistemi silmeden yanına kurduğunuz için, ihtiyacınız olduğunda diğer sisteme geçiş yapabilirsiniz.
 
 #### Dezavantajları
-- Sistem yedeğini almak ve ilgili yedeğe dönmek, sanal kullanıma oranla daha zahmetlidir.
-- Snapshot özelliği olmadığından sistemde herhangi bir kritik hata meydana geldiğinde, sistemi onarması çok daha uzun sürer. 
-- Kurulum işlemi ve kurulum sonrası sistem ayarlarının yapılandırılması, diğer kurulum işlemlerine oranla biraz daha uğraştırıcı olabilir.
 
-Öğrenme aşamasında, kullanıcıların hata yapması çok doğal bir durumdur.  Etkili öğrenim için bire bir uygulama şart, bu yüzden kullanıcılar sürekli deneme yanılma yöntemiyle yeni şeyler keşfeder ve daha fazlası için sistemi kurcalar. Bu duruma bağlı olarak kullanıcının alıştırmaları sırasında meydana gelebilecek olası hatalar, kullanıcının öğrenme şevkini kırarak, öğrenme sürecini sekteye uğratabilir. Eğer Linux işletim sistemini ilk defa kullanacaksınız, daha hızlı ve etkili öğrenebilmek için bu yöntemi kullanmayın. Ancak sanal olarak kullandığınızda sistem performansı sizin için çok sorun oluyorsa olabilir, ama bundan önce diğer kullanım alternatiflerini de değerlendirebilirsiniz. Bu yüzden lütfen yazının tamamını okuyup sizin için en ideal olanına kendiniz karar verin.
+*   Sistem yedeğini almak ve ilgili yedeğe dönmek, sanal kullanıma oranla daha zahmetlidir.
+*   Snapshot özelliği olmadığından sistemde herhangi bir kritik hata meydana geldiğinde, sistemi onarması çok daha uzun sürebilir.
+*   Kurulum işlemi ve kurulum sonrası sistem ayarlarının yapılandırılması, diğer kurulum işlemlerine oranla biraz daha uğraştırıcı olabilir.
+
+Öğrenme aşamasında, kullanıcıların hata yapması çok doğal bir durumdur. Etkili öğrenim için sizlerin de bildiği üzere uygulama yaparak ilerlenmesi şarttır. Uygulamalar esnasında kullanıcılar sürekli deneme yanılma yöntemiyle yeni şeyler keşfeder ve daha fazlası için sistemi kurcalar. Sistemin kullanımı sırasında meydana gelebilecek olası hatalar, yeni başlayan kullanıcıların öğrenme şevkini kırarak öğrenme sürecini sekteye uğratabilir. Eğer Linux işletim sistemini ilk defa kullanacaksınız, daha hızlı ve etkili öğrenebilmek için bu yöntemi(İkincil İşletim Sistemi) kullanmayın. Ancak sanal olarak kullandığınızda sistem performansı sizin için çok sorun oluyorsa elbette bu yöntem ile de eğitime devam edebilirsiniz. Yine de yeni başlayan kullanıcıların bu kullanım yönteminden önce diğer kullanım alternatiflerini de değerlendirmesi faydalı olacaktır. **Bu yüzden lütfen yazının tamamını okuyup sizin için en ideal olan yönteme kendiniz karar verin.**
+
+* * *
 
 ### Live Versiyon Olarak Kullanmak
-Live olarak kullanmak; Linux işletim sistemini USB diskimiz üzerine kurup, sistemi bu USB disk ile başlatıp Linux işletim sistemini bu USB disk üzerinden kullanmaktır. Üstelik USB üzerinden kullanımda tek bir kullanım modu da bulunmuyor. Aşağıda farklı kullanım modları sırasıyla açıklanmıştır. **"Live Versiyon Olarak Kullanma" seçeneğini, sanal kullanımda performans sorunu yaşayan arkadaşlara kesinlikle öneririm.** 
 
-**Boot Menüsünde Yer Alan Seçenekler**
+Live olarak kullanmak; Linux işletim sistemini USB diskimiz üzerine kurup, sistemi bu USB disk ile başlatıp Linux işletim sistemini bu USB disk üzerinden kullanmaktır. Üstelik USB üzerinden kullanımda tek bir kullanım modu da bulunmuyor. Aşağıda farklı kullanım modları sırasıyla açıklanmıştır. **"Live Versiyon Olarak Kullanma" seçeneğini, sanal kullanımda performans sorunu yaşayan arkadaşlara kesinlikle öneririm.** Ancak maalesef ki tüm dağıtımlar live kullanımı doğrudan desteklemiyor. Doğrudan live modu desteklenmediğinde uygulanabilecek çözümler olsa da bu konu temel eğitimin dışındadır. İleride bir blog yazısı ile ayrıca bu konuya değinebiliriz. Yine de Kali Linux gibi live modunu destekleyen bir dağıtım kullanıyorsanız bu modu da mutlaka deneyimlemenizi öneririm.
 
-![](https://udemy-images.s3.amazonaws.com/redactor/raw/2018-08-14_21-31-07-f123de1dd35b3d13c3d1be22b73253e5.jpg)
+##### Avantajları
 
+*   Sabit diske kurulum gerektirmez, yalnızca USB disk yeterlidir.
+*   Bir çok ihtiyaca göre bir çok kullanım modu vardır.
+*   Live modu sayesinde sistemi kurcalamaktan korkmadan etkili öğrenme sağlayabilirsiniz.
 
-**Live:**
+##### Dezavantajları
 
-Kali Linux işletim sistemini USB diskiniz üzerinden kullanırsınız ve **sistemi kapattığınızda**  veya USB diskinizi bilgisayardan çıkardığınızda  **sistemde yaptığınız tüm değişiklikler silinir.**  Yani bu mod isminden de anlaşılacağı gibi yalnızca kullanım sırasında bilgileri tutar, daha sonra sistem kapandığında tüm bilgiler silinir ve sistem ilk baştaki haline döner. Bu mod sayesinde her defasında üzerinde hiç bir değişiklik yapılmamış temiz bir sistem üzerinde çalışabilirsiniz.
+*   Bu kullanımdan verim alabilmek için en az **8 GB** USB diskiniz olmalı.
+*   Boot etmek için bir kaç ön hazırlık gerekir.
 
-  
-**Live (failsafe):**
+#### Boot Menüsünde Yer Alan Seçenekler
 
-Tıpkı live modunda olduğu gibi bilgileri yalnızca kullanım sırasında tutar. Genellikle sistemde sorun meydana geldiğinde sorunun kaynağını anlamak adına kullanılan, **güvenli mod**  diye tabir edilen moddur.
+Daha önce de belirttiğimiz şekilde, tüm dağıtımlarda USB üzerinden kullanım seçenekleri bire bir aynı değildir. Yine de ben anlatım sırasında Kali Linux kullanacağım için, Kali Linux dağıtımının USB üzerinden kullanımını desteklediği modlara kısaca değinmek istiyorum.
 
-**Live (forensic mode):**
+![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/0-%20Gerekli%20Ortam%C4%B1n%20Kurulmas%C4%B1/boot-menu.jpg)
 
-Adli moddur, ve mevcut sistem üzerinde inceleme yapılacağı zaman tercih edilir. Bu mod  **mevcut sistemde hiç bir kalıntı bırakmadan sistemi inceleme** işleminde kullanıldığı ve genellikle bir suçun kanıtlanması gibi olaylarda tercih edildiği için adli(**forensic**) mod olarak tabir edilir.
+#### Live:
 
+Kali Linux işletim sistemini USB diskiniz üzerinden kullanırsınız ve **sistemi kapattığınızda** veya USB diskinizi bilgisayardan çıkardığınızda **sistemde yaptığınız tüm değişiklikler silinir.** Yani bu mod isminden de anlaşılacağı gibi yalnızca kullanım sırasında bilgileri tutar, daha sonra sistem kapandığında tüm bilgiler silinir ve sistem ilk baştaki haline döner. Bu mod sayesinde her defasında üzerinde hiç bir değişiklik yapılmamış temiz bir sistem üzerinde çalışabilirsiniz.
 
-**Live USB Persistence:**
+#### Live (failsafe):
 
-Kali Linux işletim sistemini USB diskiniz üzerinden tıpkı sabit bir diske kurmuşcasına kullanabilmenize olanak sağlayan moddur. Bu mod ile sistemde yapılan tüm değişiklikler USB disk üzerinde kayıt olur ve daha sonra bu bilgilere tekrar bu mod aracılığı ile ulaşabilirsiniz. Yani  **live modun kalıcı halidir. Sistemde yapılan tüm değişiklikler tekrar ulaşabileceğiniz şekilde kalıcı olarak USB üzerine yazılır.**
+Tıpkı live modunda olduğu gibi bilgileri yalnızca kullanım sırasında tutar. Genellikle sistemde sorun meydana geldiğinde sorunun kaynağını anlamak adına kullanılan, **güvenli mod** diye tabir edilen moddur.
 
-**Live USB Encrypted Persistence:**
+#### Live (forensic mode):
 
-Bu mod ise bir üst kısımda bahsedilen kalıcı(persistence) modun şifrelenmiş halidir. Diğer moddan farklı olarak isminden de anlaşılacağı üzere bu mod  **sistemde yapılan değişiklikleri kaydederken bu bilgileri şifreleyerek kayıt eder.**
+Adli moddur, ve mevcut sistem üzerinde inceleme yapılacağı zaman tercih edilir. Bu mod **mevcut sistemde hiç bir kalıntıya ya da değişikliğe neden olmadan sistemin incelenebilmesine** olanak tanır. Genellikle bir suçun kanıtlanması gibi olaylarda tercih edildiği için adli(**forensic**) mod olarak tabir edilir.
 
-**Install:**
+#### Live USB Persistence:
+
+Kali Linux işletim sistemini USB diskiniz üzerinden tıpkı sabit bir diske kurulmuşcasına kullanabilmenize olanak sağlar. Bu mod ile sistemde yapılan tüm değişiklikler USB disk üzerinde kayıt olur ve daha sonra bu bilgilere tekrar bu mod aracılığı ile ulaşabilirsiniz. Yani **live modunun kalıcı halidir. Sistemde yapılan tüm değişiklikler tekrar ulaşabileceğiniz şekilde kalıcı olarak USB üzerine yazılır.**
+
+#### Live USB Encrypted Persistence:
+
+Bu mod ise bir üst kısımda bahsedilen kalıcı(persistence) modun şifrelenmiş halidir. Diğer moddan farklı olarak "Encrypted" isminden de anlaşılacağı üzere, **sistemde yapılan değişiklikler diske yazılırken şifrelenerek kayıt edilir.** Diskin şifresi bilinmeden kalıcı bilgilere ulaşmak ya da disk şifresini sıfırlamak mümkün değildir. USB diskin kolayca kaybolup istenmeyen kişilerin eline geçme ihtimali için bu modun kullanımı tavsiye edilir. Yine de şifrenin unutulmaması kalıcı bilgilere ulaşma noktasında oldukça kritiktir.
+
+#### Install:
 
 Sabit diske kurulum işlemini başlatmak için kullanılan seçenektir.
-  
-**Graphical Install:**
 
-Sabit diske kurulum işlemini  **grafiksel arayüz**  ile başlatmak için kullanılan seçenektir.
+#### Graphical Install:
 
-#### Avantajları
-- Sabit diske kurulum gerektirmez, yalnızca USB disk yeterlidir.
-- Bir çok ihtiyaca göre bir çok kullanım modu vardır.
-- Live modu sayesinde sistemi kurcalamaktan korkmadan etkili öğrenme sağlayabilirsiniz.
+Sabit diske kurulum işlemini **grafiksel arayüz** ile başlatmak için kullanılan seçenektir.
 
-#### Dezavantajları
-- Bu kullanımdan verim alabilmek için en az **8 GB** USB diskiniz olmalı.
-- Boot etmek için bir kaç ön hazırlık gerekir.
+* * *
 
 ### VPS Üzerinden Kullanım
 
-Bu kullanım yöntemi de, uzaktaki özel bir sunucu sistemine bağlanılarak, bağlanılan sistemi herhangi bir yüksek donanım gücüne ihtiyaç duymadan yönetebilmemize olarak tanır.  Özetle; uzaktaki sunucu sisteminde, sizin istediğiniz işletim sisteminiz başlatılır, siz de bu sistemi uzaktan komutlar vererek yönetirsiniz.
+Uzaktaki özel bir sunucu sistemine bağlanılarak, bağlanılan sistemi herhangi bir yüksek donanım gücüne ihtiyaç duymadan yönetebilmemize olarak tanır. Özetle; sizin istediğiniz işletim sistemini uzak sunucuda başlatılır, siz de bu sistemi uzaktan komutlar vererek yönetirsiniz.
 
-#### Avantajları 
-- Mevcut donanımınızın çok güçlü olması gerekmez.
-- İstenilen yerden ve istenilen cihazdan(*pc, laptop, tablet, telefon..*) uzak sunucudaki sisteme komut verilebilir.
-- Sistem yedeği alma ve üst düzey sistem performansı imkanı vardır.
+#### Avantajları
 
-#### Dezavantajları 
-- Bu hizmetler ücretlidir. 
+*   Mevcut donanımınızın çok güçlü olması gerekmez.
+*   İstenilen yerden ve istenilen cihazdan(_pc, laptop, tablet, telefon.._) uzak sunucudaki sisteme komut verilebilir.
+*   Sistem yedeği alma ve üst düzey sistem performansı imkanı vardır.
 
-Bu kısımda neden kurulum detaylarını anlatmıyorsun diyecek olursanız, burada izahı dokümantasyonu uzatacak ve çok da verimli olmayacaktır. Kurulum işlemini verimli şekilde anlatabilmek için en iyi yol, kurulum işlemlerini videolu şekilde göstermektir. Bu noktada hem bana destek olmak hem de kurulumları ve diğer tüm içerikleri videolu şekilde takip edebilmek için  [buradan](https://www.udemy.com/kali-linux-ile-sifirdan-temel-linux-egitimi/?couponCode=GITHUB)  kursumu  **indirimli**  olarak satın alıp devam edebilirsiniz. Ancak kursu almak gibi bir niyetiniz yoksa, elbette bu kursu almadan da internet üzerinden araştırarak çok fazla kaynağa ulaşabilirsiniz. Yine de; ilerleyen kısımlarda işleyeceğimiz konular da aynı şekilde  **videolu**  ve özellikle  **renklendirilmiş görsel animasyonlar**  ile çok daha net anlaşılabilecek konulardır. Yani bu dokümantasyonda temel linux öğrenimi için gereken her bilgi mevcut, ancak benim  **kurs videolarımın artısı buraya bağlantılı ve açıklık getirici**  şekilde ilerliyor olmasıdır.  **Bu yüzden lütfen burada yazdıklarıma reklam gözü ile bakmayın, ben sadece bir eğitimin tamamlayıcı bütünü olan videolardan bahsediyorum.**  Yani burada herhangi bir dayatma söz konusu değil kesinlikle, kursa kayıt olup olmamak tamamen sizlerin isteğine bağlı bir durum. Eğer buradaki kavramları öğrenmekte güçlük çekerseniz; içerisinde  **alıştırmaları**,  **pratik testleri**  ve  **soru-cevap**  imkanı olan kursuma göz atabilirsiniz. Üstelik kursu beğenmemeniz halinde  **30 gün içinde koşulsuz şartsız olarak**  kursu iade edebilirsiniz. Kursun kalitesi hakkında fikir sahibi olmak için bu dokümantasyona, kurs müfredatına ve kurs yorumlarına bakarak bilgi edinebilirsiniz.
+#### Dezavantajları
 
-[![](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/0-%20Gerekli%20Ortam%C4%B1n%20Kurulmas%C4%B1/1.png)](https://www.udemy.com/kali-linux-ile-sifirdan-temel-linux-egitimi/?couponCode=GITHUB)
+*   Bu hizmetler ücretlidir.
+
+Bu kısımda neden kurulum detaylarını anlatmıyorsun diyecek olursanız, burada izahı dokümantasyonu uzatacak ve çok da verimli olmayacaktır. Kurulum işlemini verimli şekilde anlatabilmek için en iyi yol, kurulum işlemlerini videolu şekilde göstermektir. Dilerseniz bu dokümantasyonun [video eğitiminden](https://www.udemy.com/course/kali-linux-ile-sifirdan-temel-linux-egitimi/?referralCode=04ABD09E6ED5DA93F7A2) ya da internette araştırma yaparak kurulum işlemleri hakkında detaylıca bilgi edinebilirsiniz.
 
 ----------
 
