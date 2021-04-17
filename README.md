@@ -1,13 +1,8 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/Ana%20Sayfa/linux_komut_sat%C4%B1r%C4%B1_logo.gif">
-</p>
-
-<p align="center" style="bold">
-<b>Kali Linux üzerinden işlenen Linux komut satırı dersleri dokümantasyon kaynağıdır.</b><br>
-</p>
-
+# Doküman Hakkında
+<img align="left" width="250" height="140" src="https://img-a.udemycdn.com/course/750x422/1584822_8460_4.jpg?XRSwknvB1ecrTXToblvmsrq7r78I91kqA6QSO2KY2YvUfZFRXzUWw3ZtDs5x2lJ4MkQkq8XTBaaeZCPRjKYcfx_6_Vc-xjCnpBOerai6QJ4uxKWQpF6FtlWG60swuIBc">Buradaki doküman videolu eğitim olarak ele aldığımız [Kali Linux ile Sıfırdan Temel Linux Eğitimi](https://www.udemy.com/course/kali-linux-ile-sifirdan-temel-linux-egitimi/?referralCode=04ABD09E6ED5DA93F7A2)'nin komut satırı dersleri dokümantasyon kaynağıdır. Bu eğitim serisi, Linux sistemlerini nasıl yönetebileceğimizi sıfırdan başlayarak sıralı şekilde ele aldığımız temel konu anlatımlarından oluşturulmuştur. Müfredat ve daha fazla bilgi için aşağıdaki bilgileri gözden geçirebilirsiniz.
 
 # Linux Komut Satırı Dokümantasyon Müfredatı
+
 <table class="table table-striped">
 
   <tbody>
