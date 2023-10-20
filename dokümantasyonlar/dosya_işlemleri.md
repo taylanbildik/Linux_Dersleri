@@ -1,458 +1,894 @@
+# Kopyalama Taşıma Silme İşlemleri
 
-  
-Dosya İşlemleri
-=
-Konumuz itibari ile dosyalarla epeyce haşır neşir olacağız. Yapacağımız işlemleri kısaca tanımlamak gerekirse; dosya kopyalama, taşıma, değiştirme, görüntüleme, düzenleme gibi işlemelerle dosyalar üzerinde hakimiyet kuracağız.
+Şimdiye kadar dosya oluşturma ve düzenlemeye dair pek çok araçtan söz etmiş olduk. Anlatımın devamında dosyalarla ilgili birkaç ayrıntıdan daha bahsediyor olacağız. Fakat diğer ayrıntılardan bahsetmeden önce belki de en temel işlevler olan kopyalama taşıma ve silme işlevlerini yerine getirebileceğimiz araçlarından bahsetmek istiyorum.
 
-touch
--
+# `cp` Komutu
 
-<code>touch</code> komutu bize kolaylıkla metin dosyası oluşturma imkanı tanıyor. İşte bu yüzden dosya işlemleri konumuza <code>touch</code> komutu ile başlamak gayet doğru bir karar olacaktır.
+Komut satırı üzerinden dosya veya dizinleri kopyalamak istediğimizde “**c**o**p**y” ifadesinin kısaltmasından gelen `cp` aracını kullanabiliyoruz. 
 
-Kendimize <code>touch</code> komutunu kullanarak boş bir dosya oluşturmak için komut satırına <code>touch dosya_ismi</code> şeklinde yazmamız gerekiyor. Burada fark ettiyseniz herhangi bir uzantı girmeme gerek kalmadı. Çünkü Linux sisteminde uzantı belirtme zorunluluğu bulunmuyor. Bu durumu gözlemlemek için konsola <code>touch yeni</code> komutunu vererek "**yeni**" adından bir dosya oluşturalım. 
+Ben denemek için öncelikle “orijinal” isminde bir dosya oluşturup, içerisine "ben dosyayım" yazıp kaydediyorum. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/1.png)
+```bash
+└─$ echo "ben dosyayım" > orijinal
 
-Görüldüğü üzere dosyamız bulunduğumuz ana dizinde oluşmuş oldu. Bunu teyit etmek için de çıktıda görüldüğü gibi daha önce öğrenmiş olduğumuz listeleme görevinde olan <code>ls</code> komutunu kullandık.
+└─$ cat orijinal 
+ben dosyayım
+```
 
-Peki bir tane değil de birden fazla dosya oluşturmak istersek ? İşte bunun için de komutumuzu <code>touch yeni1 yeni2 yeni3</code> şeklinde yazmamız yeterli.
+Bakın dosyam sorunsuzca kaydedildi.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/2.png)
+## Dosya İsmini Değiştirmek
 
-Çıktıda görüldüğü gibi aynı andan 3 dosya oluşturmayı başardık.
+Eğer bu dosyayı bulunduğum dizine farklı bir isimle kopyalamak istersem `cp orijinal dosya dosyanın_kopyası` şeklinde komut girebilirim. 
 
-Aslında <code>touch</code> komutunun çok farklı kullanım yöntemleri de mevcut ancak ben son olarak dosyaların tarih etiketlerini nasıl değiştirebiliriz bunu göstermek istiyorum.
+```bash
+└─$ cp orijinal kopya
 
-Dosyamızın tarih etiketini düzenlemek için **touch** komutunun <code>t</code> parametresini kullanacağız. Kullanımı ise <code>touch -t YYYYAAGGSSDD.SS dosya_adı</code> şeklindedir.
-Öncelikle dosyamızın mevcut tarih etiketine bakalım.
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/3.png)
+└─$ ls
+kopya  orijinal
 
-Şimdi dosyamızın tarih etiketini daha önceki bir tarihe çevirelim.
-Ben burada örnek olması açısından tarih olarak **2015.01.01** ve saat **22:15:32**  zamanlamasını kullanıyorum. Nasıl kullanıldığını daha net anlamak için örneği inceleyebilirsiniz.
+└─$ paste orijinal kopya 
+ben dosyayım    ben dosyayım
+```
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/4.png)
+Bakın orijinal dosya ile kopyalamış olduğum dosyanın içeriği birebir aynı. Tek fark kopyalanırken oluşturulan dosya isminin benim istediğim şekilde olması. `cp` komutunun en temel kullanımı bu şekilde.
 
-Gördüğünüz gibi dosyamın tarih etiketi değişmiş oldu. Bu değişme işlemini ileri veya geri tüm tarihler için kullanabilirsiniz.
+Eğer mevcut bulunduğumuz dizine değil de istediğimiz farklı bir dizine dosya veya dizin kopyalamak istersek tek yapmamız gereken kopyanın tam olarak hangi dizine hangi isimle kaydolacağını belirtmek. Ben orijinal dosyasını, kendi ev dizinimdeki ***Documents*** klasörünün altına aynı isimde kopyalamak istiyorum. Bunun için `cp orijinal ~/Documents` şeklinde yazıyorum. 
 
+```bash
+└─$ cp orijinal ~/Documents/
 
+└─$ ls ~/Documents/                                              
+belgeler  bulbeni  metinler  metin.txt  orijinal
+```
 
-cat
--
+Bakın burada ilk olarak orijinal dosyanın yani kopyalanacak dosyanın ismini girip, daha sonra kopyanın tam olarak nereye kaydolması gerektiğini belirtebiliyoruz. Burada klasör isminden sonra özellikle bir dosya ismi belirtmediğim için orijinal dosyanın ismi de birebir kopyalanıp bu dizine kaydoldu. 
 
-<code>cat</code> komutu temelde dosya içeriğini terminal ekranından okumamıza olanak sağlayan komuttur. Ancak bu komut bizlere temel işlevinin dışında da dosyalar ile ilgili pek çok işlem yapma imkanı sağlıyor. Sırasıyla bunların bazılarına göz atacağız. Ama ilk olarak temel işlevi olan terminal üzerinden dosya okuma işlevini görelim.
+Eğer dosyayı farklı bir isimle kopyalamak isteseydim, dizin adresinden sonra dosyanın ismini belirtebilirdim. Örneğin `cp orijinal ~/Documents/kopya` şeklinde komut girebilirim. 
 
-Bunun için konsola açmak istediğimiz dosyanın konumundayken <code>cat açılacak_dosya</code> şeklinde komut vermemiz gerek.
-Ben masaüstü konumunda yer alan "***test.txt***" isimli dosyanın içeriğini okumak üzere konsola <code>cat test.txt</code> komutunu veriyorum.(Dosyayı grafik arayüzü aracılığı ile de açarak durumu kıyaslamanızı istedim.)
+```bash
+└─$ cp orijinal ~/Documents/kopya                                
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/5.png)
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/6.png)
+└─$ ls ~/Documents/                                              
+belgeler  bulbeni  kopya  metinler  metin.txt  orijinal
+```
 
-Şimdi ise tıpkı <code>touch</code> komutunda çoklu dosyalar ile ilgili işlem yaptığımız gibi <code>cat</code> komutu ile de çoklu dosya okuma işlemini gerçekleştirelim. Çoklu dosya okuma işlemi için komut satırına <code> cat dosya1 dosya2 dosya3</code> şeklinde okumak istediğimiz dosyaların adlarını yazıyoruz.
+Bakın istediğim dizine tam olarak istediğim isimde dosyamı sorunsuzca kopyalayabildim. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/7.png)
+Tabii ki ben yalnızca mevcut bulunduğum dizindeki bir dosyayı başka bir dizine kopyalamak üzere örnekler gösterdim ama yetkiniz olduğu sürece istediğiniz dizindeki dosyayı istediğiniz başka bir konuma kopyalayabilirsiniz. Örneğin ben `cp ~/Documents/orijinal /tmp/` komutu ile ***Documents*** dizini altındaki “***orijinal***” isimli dosyayı ***/tmp*** dizini altında kopyalayabilirim. 
 
-Dosya içeriğine yazı eklemek istersek <code>cat > dosya_adı</code> şeklinde komut verdiğimizde, komut satırı imleci bir alt satıra geçerek bizden yazmak istediğimiz bilgiyi bekler. Yazma işlemimiz bittikten sonra kaydederek kapatmak için <kbd> Ctrl + D</kbd> tuş kombinasyonunu kullanırız. Ayrıca komutta girdiğimiz isimde bir dosya yoksa o isimde bir dosya oluşur ve girilen veriler içerisine işlenir.
+```bash
+└─$ cp ~/Documents/orijinal /tmp/                                
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/8.gif)
+└─$ cat /tmp/orijinal                                            
+ben dosyayım
+```
 
-Ancak var olan bir dosyanın adıyla bu komutu kullandıysanız ve dosya içerisinde yazı bulunuyorsa bu işlemin ardından dosyada bulunan eski veriler silinerek yalnızca girilen yeni veriler dosyaya işlenip kayıt oluyor. 
+Bakın dosyam sorunsuzca kopyalanmış.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/9.gif)
+Şimdiye kadar tek bir dosayı kopyalamayı ele aldım ama aslında birden fazla dosyayı da aynı anda kopyalayabiliriz. Örnek olması için öncelikle `touch a b c d` komutu ile ***a b c*** ve ***d*** isimli dosyalar oluşturup bu dosyalarımı tek seferde ***Document*** klasörüne kopyalamak istersem komutumu `cp a b c d ~/Documents/` şeklinde girmem yeterli. 
 
-Bizler eğer önceki veriler silinmesin ve üzerine yeni veri ekleyebilelim istersek, komutumuzu <code>cat >> yeni3.txt</code> şeklinde kullanarak; yeni gireceğimiz verileri girdikten sonra <kbd>Ctrl + D</kbd> tuş kombinasyonu ile dosyamızı yeni eklenmiş verileriyle birlikte kaydedip kapatabiliriz.
+```bash
+└─$ touch a b c d
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/10.gif)
+└─$ cp a b c d ~/Documents/
 
-Gördüğünüz gibi yeni eklediğimiz veri dosyamızın içine işlenmiş oldu üstelik eski veriler de yok olmadan.
+└─$ ls ~/Documents/
+a  belgeler  c  kopya     metin.txt
+b  bulbeni   d  metinler  orijinal
+```
 
-Ayrıca yeri gelmişken kullanmış olduğumuz <kbd>></kbd> yönlendirme operatörü ile ilgili bir örnek daha yapalım ki kullanım alanının biraz daha farkına varmış olalım. Örneğin <code>ls -ls</code> çıktısının içeriğini "***liste***" adında bir dosya oluşturarak içerisine aktaralım. Bunun için <code> ls -ls > liste</code> komutunu kullanabiliriz. Şayet yeni dosya oluşturmak istemiyorsak ve gireceğimiz veriler var olan dosyaya yazılsın istiyorsak o zaman <kbd>></kbd> operatörü yerine <kbd>>></kbd> operatörünü kullanırsak yeni veriler dosyaya eklenmiş olur.
+Bakın tek seferde birden fazla dosyamızı istediğimiz dizine kopyalamayı başarmışız.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/11.png)
-Komutta açıklanacak bir durum yok zaten hepsi bildiğimiz komutlar. Burada asıl önemli olan <kbd>></kbd>  operatörünün kullanımıydı. Eğer anladıysak ne âlâ.. devam edelim.
+Bu çoklu kopyalama işleminden sonra muhtemelen `cp` aracının girdiğimiz argümanlardan hangilerinin kopyalanacak dosyalar, hangisinin dosyaların kopyalanacağı dizin olduğunu nasıl anladığını merak etmiş olabilirsiniz. Aslında çok basit, birden fazla dosya ismi belirtildiği durumda en sondaki argümanın bu dosyaların kopyalanacağı adres olması zorunlu. Yani `cp` aracı bu beklenti ile komutumuzu okuyor. Dolayısıyla girdiğimiz komuttaki en son argüman `cp` aracı için, bu argümandan önceki tüm dosyaların kopyalanacağı dizini temsil ediyor.
 
-<code>cat</code> komutunun işlevlerine devam ediyoruz; şimdi ise sırada, bir dosyada yer alan verileri başka bir dosyaya kopyalamak var. Bunun için komutumuzu <code>cat veri_alınan_dosya > veri_alan_dosya</code> şeklinde kullanıyoruz.
+Neticede birden fazla dosyamızı tek seferde başarılı şekilde kopyalamayı başardık. Bu harika fakat bazen kopyalama işlemini kontrollü şekilde gerçekleştirmek de isteyebiliriz. Çünkü özellikle çoklu şekilde dosyaları bir yerden başka bir yere kopyalarken, hedef gösterdiğimiz dizinde bizim kopyaladığımız dosyalar ile aynı isimde dosyalar bulunabiliyor. Eğer özellikle önlem almazsak, kopyalama emri verdiğimiz için kopyaladığımız dosyalar aynı isimli dosyaların üzerine yazılıyor. Yani ilgili dizindeki aynı isimli dosyaların içerikleri tahrip ediliyor. Bu duruma çözüm olarak, üzerine yazılma durumu varsa `cp` aracının bizi uyarıp bizden izin istemesini talep edebiliriz. Bunun için `-i` seçeneğini kullanmamız yeterli.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/12.png)
+Ben aynı isimli dosyayı `cp` komutu ile ilgiliniz dizine taşıyacak olursak, herhangi bir uyarı vermeden yeni taşınan dosya eskisinin üzerine yazılacak. Yani eski dosyadaki veriler silinecek. 
 
-Komutumuzun kullanım şekilleri elbette bunlar ile sınırlı değil.
-Belki defalarca söyledim ancak bu komut için de söylemem gerek; daha fazla detay için lütfen **man kılavuz sayfasına** göz atın.
+```bash
+└─$ cat yeni/dosya 
+bu bir dosya
 
-tac
--
+└─$ echo "bu yeni" > dosya                                       
 
-İsminden de anlamış olacaksınız ki <code>tac</code> komutu önce gördüğümüz <code>cat</code> komutunun tersi şekilde çıktı veriyor. Bu durumu daha iyi anlamak için karşılaştırmalı olarak verilen çıktıyı inceleyiniz.
+└─$ cp dosya yeni/
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/13.png)
+└─$ cat yeni/dosya 
+bu yeni
+```
 
-rev
--
+Bakın herhangi bir uyarı olmadan eski dosya silindi. Eğer biz üzerine yazma konusunda uyarılmak yani kontrollü şekilde kopyalamak yapmak istiyorsak `i` seçeneğini kullanabiliriz. 
 
-Hazır terslikten bahsetmişken <code>rev</code> komutundan da söz etmemek olmaz. Bu komut dizeleri sondan başa doğru çevirerek ters şekilde ekrana basıyor. Bu durum en iyi örnek ile açıklanır. Hatta <code>cat</code> komutu ile de karşılaştırırsak sonuç daha net oraya çıkacaktır.
+```bash
+└─$ echo "bu son" > dosya
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/14.png)
+└─$ cp -i dosya yeni/                                            
+cp: overwrite 'yeni/dosya'? y
+```
 
+Aynı isimli dosya mevcut olduğu için kopyalamadan önce üzerine yazma için “**y**” yani “yes” ile onay alındı. Eğer üzerine yazmak istemeseydim “**n**” yani “no” ile reddedebilirdim.
 
-Çıktılarda görüldüğü gibi dosya içeriğinde yer alan ifadeler <code>rev</code> komutu sayesinde ters şekilde ekrana basılmış oldu.
+## Klasörleri Kopyalamak
 
-"*Şimdi ben bu komutu nerede kullanacağım? neden öğrendim?*" demeyin. Bu konuya daha önce de değinmiştim, şimdi tekrar söylüyorum; burada öğrendiğimiz her komutu her zaman doğrudan kullanmayabilirsiniz, ancak yeri geldiğinde böyle bir komutun varlığından haberdar olarak gerektiğinde dokümantasyona bakmak suretiyle komutun kullanımına en kısa sürede ulaşabilirsiniz. Yani artık bu komutun varlığından haberdarsınız, eğer hatırlamak için bakmanız gerekirse burada olacak..
+Şimdiye kadar hep dosyalar üzerinde çalıştık ancak dilersek dizinleri de kopyalayabiliyoruz. Fakat dizinler kendi içlerinde alt dizinler ve dosyalar barındırabileceği için bir dizini kopyalarken alt dizinlerin de kopyalanması için “recursive” yani “özyinelemeli” kopyalama seçeneğini de komutumuzu eklememiz gerekiyor. Buradaki “özyineleme” ifadesi, dizin altındaki tüm alt dizinlere teker teker bakıp, tüm dosya ve klasörlerin otomatik olarak seçilip kopyalanabilmesini sağlıyor. Zaten Linux üzerinde dizinlerle çalışırken içi dolu olan dizinler üzerinde işlem yapmak için istisnalar hariç hep “recursive” yani “özyineleme” seçeneğini özellikle aktifleştirmemiz gerekiyor. Şimdiye kadar bu durumu zaten bizzat tekrar tekrar deneyimledik. Şimdi tekrar `cp` aracına dönecek olursak, öncelikle herhangi bir seçenek belirtmeden bir dizini kopyalamayı deneyebiliriz. 
 
-echo
--
+Ben denemek için kendi ev dizinimdeki “***yeni***” isimli klasörü “***Documents***” dizini altına taşımak üzere `cp ~/yeni/ ~/Documents/` şeklinde komutumu giriyorum. 
 
-Bu komutumuzu daha önce defaatle kullanmak durumunda kalmıştık hatırlarsanız. Kullandıkça da işlevinden bahsetmiştik ancak şimdi komutumuzu ele alarak biraz daha yakından bakmaya başlıyoruz.
+```bash
+└─$ cp ~/yeni/ ~/Documents/
+cp: -r not specified; omitting directory '/home/taylan/yeni/
+```
 
-Temel işlevi terminal ekranına istenilen bilgileri çıktı olarak göndermektir. Komutumuzu kullanırsak daha net anlaşılacaktır. Örneğin komut satırına "**Merhabalar**" yazdırmak isteyelim, bunun için komut satırına <code>echo Merhabalar</code> şeklinde komutumuzu girmemiz yeterli.
+Bakın komut hata verdi ve hata çıktısında `-r` seçeneğini kullanmadığım için dizinin kopyalanamadığı belirtilmiş. Şimdi aynı komutumuzu çağırıp bu kez `-r` seçeneğini de ekleyip tekrar deneyelim.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/15.png)
+```bash
+└─$ cp -r yeni/ Documents/
 
-"**Merhabalar**" çıktımızı almış olduk. <code>echo</code> komutu sadece ekrana basma işlevine sahip değil. Örneğin bir dosya oluşturup içerisine istediğimiz ifadeyi yazabiliriz. Bunun için komut satırına <code>echo "yazılacak_ifade"> dosya_adı</code> şeklinde komutu giriyoruz.
+└─$ ls ~/Documents/
+a  belgeler  c  kopya     metin.txt  yeni
+b  bulbeni   d  metinler  orijinal
+```
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/16.png)
+Bu kez herhangi bir hata almadık ve `ls` komutu ile de bu dizin taşınmış olduğunuz bizzat teyit etmiş olduk. 
 
-Sırasıyla yaptığım işlemleri açıklayayım.
+Ben yalnızca en sık kullanacağımız yöntemleri ele aldım ancak `cp —help` komutu ile bizzat görebileceğiniz gibi `cp` aracının pek çok ek seçeneği mevcut. İhtiyaç duymanız halinde bu özelliklere göz atıp kullanabilirsiniz. 
 
-İlk önce <code>cd Desktop</code> komutu ile masaüstü konumuna geldim.
+# `mv` Komutu
 
-Daha sonra <code>echo "Deneme Metni" > deneme</code> komutunu vererek masaüstü konumuna <kbd>deneme</kbd> isimli bir dosya oluşturarak içerisine "***Deneme Metni***" ifadesini yazmış oldum.
+Dosya veya dizinleri kopyalamak yerine taşımak yani yerini değiştirmek istediğimizde İngilizce “**m**o**v**e” yani “taşıma” ifadesinin kısaltmasından gelen `mv` aracını kullanabiliyoruz. `mv` aracının kullanımı da tıpkı `cp` aracı gibi oldukça kolay. Zaten her iki aracın da hemen hemen pek çok seçeneği ortak kısaltmalar ile tanımlandığı için rahatlıkla kullanabiliyoruz. Gelin örnekler üzerinden temel kullanımını ele alalım.
 
-<code>ls</code> komutu ile de bulunduğum konumdaki dosyaları listeleyerek içerisinde oluşturduğum "**deneme**" adlı dosyanın bulunup bulunmadığını teyit ettim.
+Taşımak istediğimiz dosyayı `mv dosya_adı tanışanacağı_yeni_konum` şeklinde belirtmemiz yeterli oluyor. Ben örnek olarak mevcut bulunduğum dizindeki “***dosya***” isimli dosyayı Documents dizini altında taşımak üzere `mv dosya Documents` şeklinde komutumu giriyorum.
 
-<code>cat deneme</code> ile de <code>cat</code>komutunun en temel kullanım işlevi olan içeriği ekran basma işlevini kullanarak oluşturduğum dosyanın içeriğine baktım.
+```bash
+└─$ mv dosya Documents/
 
-Sonuç itibari ile her şey sorunsuz ilerledi ve finalde yeni oluşturmuş olduğum <kbd>deneme</kbd> isimli dosyanın içerisine "***Deneme Metni***" ifadesini yazdırmış oldum.
+└─$ ls Documents/                                                
+a  belgeler  c  dosya  metinler   orijinal
+b  bulbeni   d  kopya  metin.txt
+```
 
-Ancak şöyle bir hatırlatmada bulunayım; eğer var olan bir dosyanın içeriğine yeni içerikler eklemek isterseniz daha önce de kullandığımız şekilde <kbd> >> </kbd> parametresini kullanın. **Aksi halde dosya içeriğindeki her şey silinir ve yalnızca sizin son yazdığınız ifade kalır.**
+Gördüğünüz gibi ilgili dosya taşınmış oldu. Benzer şekilde klasör de taşıyabiliriz. 
 
-Var olan dosya içeriğine yeni bir ifade eklemek için komutu <code>echo "Yeni ifade" >> dosya_adı</code> şeklinde girmemiz gerek.
+```bash
+└─$ mv klasor/ Documents/                                        
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/17.png)
+└─$ ls Documents/                                                
+a  belgeler  c  dosya   kopya     metin.txt
+b  bulbeni   d  klasor  metinler  orijinal
+```
 
-Şimdi <code>echo</code> komutunun <code>ls</code> komutu görevi gördüğü bir kullanıma değineceğiz.
+Benzer şekilde istersek aynı anda birden fazla klasörü veya dosyayı da taşıyabiliriz. Ben denemek için genişletme karakterinin de yardımıyla “dosya” “kopya” ve “klasör” için komutumu giriyorum.
 
-Örneğin bulunduğumuz dizinde yer alan dosyaları görmek istersek komut satırına <code>echo *</code> şeklinde yazmamız halinde çıktı bizlere bulunduğumuz konumda yer alan dosyaları verir. Bu komut kullanımını <code>ls</code> komutu ile karşılaştırdığımızda daha net anlaşılacaktır.
+```bash
+└─$ mv Documents/{dosya,kopya,klasor} Pictures/                
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/18.png)
+└─$ ls Pictures/                                                 
+ bulbeni
+ dosya
+ klasor
+ kopya
+```
 
-<kbd> * </kbd> (**yıldız işareti**) joker karakteridir ve herhangi dosya dizin isimlerinin yerini tutar. Yani <code>echo</code> komutuna <kbd> * </kbd> karakteri eklediğimizde mevcut dizinde yer alan tüm dosya dizinler  <kbd>* </kbd> parametresi ile kapsanacağı için ne var ne yok listeleniyor. Bu duruma örnek olması açısından bulunduğumuz dizinde yer alan dosyalarda örneğin "**list**" adı ile başlayanları çıktı olarak almak istersek komut satırına <code>echo liste*</code> şeklinde komut vermemiz yeterlidir. (İleride ele alacağımız ***Joker karakter/wildcard*** konusundan bu karakterler açıklanmıştır.)
+Gördüğünüz gibi aynı anda birden fazla dosya ve klasörü taşımamız da mümkün. Ben örnek sırasında kolaylık olsun diye köşeli parantez genişletmesini kullandım fakat çoklu taşıma için elbette genişletme kullanmak zorunda değilsiniz. Taşınması gerekenlerin dizinlerini ve isimlerini eksiksiz şekilde belirtmeniz yeterli.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/19.png)
+Ben örnekler sırasında dosya veya klasörlerin isimlerini değiştirmek istemediğim için yalnızca taşınacakları adresleri belirttim. Bunun yerine taşındıkları konumda hangi isimle kaydedilmeleri gerektiğini de spesifik olarak belirtebiliyoruz aslında. Ben örnek olarak “***Pictures***” dizini altındaki “***dosya***” isimli dosyayı Desktop konumuna “***yepyeni-dosya***” ismiyle taşımak istiyorum.
 
-Son olarak <code>echo</code> komutunun kullanım şekillerinden olan, bir komutun çıktılarının <code>echo</code> komutu ile ekrana basılması var. Ancak doğrudan <code>echo komut</code> şeklinde yazılan komutlar istenmeyen bir sonuç çıkaracaktır. Verdiğimiz komutun çıktılarını alma işlemini gerçekleştirebilmek için <code>echo</code> komutunun bu iş için kullanım özelliklerinden olan iki farklı seçenek bulunuyor. Bunlardan biri **ters tırnak** <kbd>'</kbd> işaretini diğeri ise <code>$(komut)</code> parametre bütünüdür. Bunları sırayla görelim.
+```bash
+└─$ mv Pictures/dosya Desktop/yepyeni-dosya                      
 
-İlk olarak **ters tırnak** işaretli olan kullanımı ele alalım.
+└─$ ls Desktop/
+test.txt  yeni-dizin  yepyeni-dosya
+```
 
-Ters tırnak işaretini oluşturmak için Türkçe klavyede <kbd>AltGr + ,</kbd> (**AltGr ile birlikte virgül tuşuna basmak gerek**)tuş kombinasyonunu kullanabiliriz. Komutun kullanımını için ise istediğimiz komutu tırnak içerisinde <code>echo</code> komutunun yanında kullanmak üzere  `echo 'komut'` şeklinde yazıyoruz.
+Gördüğünüz gibi taşınacağı konumun ardından isim belirttiğimizde taşıma ile birlikte isim değişikliğini de gerçekleştirmiş oluyoruz. Bu yaklaşım herhangi bir dosya ve klasörün ismini değiştirmek için kullanılan temel yaklaşımdır. Yani örneğin ben mevcut bulunduğum dizindeki klasörün yalnızca ismini değiştirmek için kullanabilirim.
 
-Hemen bu kullanım ile ilgili bir örnek yapalım ve <code>ls</code> komutunun çıktılarını <code>echo</code> komutu yardımı ile basalım.
+```bash
+└─$ ls Pictures/
+ bulbeni
+ klasor
+ kopya
+'Yeni Klasor'
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/20.png)
+┌──(taylan@linuxdersleri)-[~]
+└─$ mv Pictures/klasor/ Pictures/yeni-isim
 
-Ve ikinci yol olan `$(komut)` parametre bütünü; yine <code>ls</code> komutu için örneklendirilecek olursa, kullanımı `echo $(ls) ` şeklinde komut parantez içine gelecek şekilde olmalıdır.
+┌──(taylan@linuxdersleri)-[~]
+└─$ ls Pictures/                                                 
+ bulbeni
+ kopya
+ yeni-isim
+'Yeni Klasor'
+```
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/21.png)
+Gördüğünüz gibi ilgili klasörün dizin adresini değiştirmeden yalnızca ismini değiştirmiş olduk. İsim değiştirebilme özelliği süper ama isim değiştirmek için `mv` komutunu kullanırken, **o dizinde daha önceden yeni tanımladığınız isimde bir klasör olmamasına mutlaka dikkat edin**. Aksi halde `mv` komutu isim değiştirmek yerine, o isimdeki klasörün içerisine taşır.
 
-Sonuç itibari ile ilk <code>echo ls</code> komutunun çıktısı olan "**ls**" ifadesi bizim almak istediğimiz çıktıyı bizlere vermedi. Yani bu kullanım bizim yapmak istediğimiz iş olan, komutun çıktılarının ekrana bastırılması için doğru bir kullanım değildi. Doğru kullanım şekli ise ikinci ve üçüncü komut olan <code>echo 'ls'</code>, `echo $(ls)` şeklindedir. Bu komutların çıktısı istediğimiz şekilde, yani `ls` komutunun çıktısını(bulunduğumuz dizinde yer alan dosyaların bilgisi) ekrana basacak şekilde bizlere verdi. Sözü edilen durumu aşağıdaki çıktıyı inceleyerek bir bütün halinde kavrayabilirsiniz.
+```bash
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/22.png)
+└─$ mv Pictures/yeni-isim/ Pictures/Yeni\ Klasor
 
+└─$ ls -R Pictures/                 
+Pictures/:
+ bulbeni
+ kopya
+'Yeni Klasor'
 
-more
--
+Pictures/bulbeni:
 
-Şimdiye kadar öyle ya da böyle terminal üzerinden dosya okuma işlemi yapmamıza yardımcı olan komutlar gördük. Bu komutumuz da aynı şekilde metin dosyalarını terminal üzerinden okumamıza olanak sağlayan bir komuttur.
+'Pictures/Yeni Klasor':
+yeni-isim
 
-Örneğin daha önce de içeriğini okuyup değişiklik yapmış olduğumuz dosya olan <kbd>profile</kbd> dosyasının içeriğini <code>more</code> komutu yardımı ile okuyalım.
+'Pictures/Yeni Klasor/yeni-isim':
+deneme.txt  dosya1  dosya2  dosys3  liste  liste2  oku-beni
+```
 
-Bunun için <kbd>/etc/profile</kbd> konumunda bulunan dosyamı <code>more</code> komutu ile açmak üzere konsola <code>more /etc/profile</code> şeklinde konsola yazarak <kbd>profile</kbd> dosya içeriğini okumaya teşebbüs ediyorum.
-Komutumuzun ardından terminal ekranında karşımıza <kbd>profile</kbd> dosyasının içeriği aşağıdaki gibi geldi.
+Gördüğünüz gibi ben klasör ismini daha önce var olan “***Yeni Klasor***” olarak değiştirmek üzere `mv` komutunu kullandığımda, `mv` aracı isim değişikliğinden ziyade bu klasörün hedef dizin adresi olduğunu düşündüğü için bu dizin altında taşıma yapıyor. Zaten bu durumu tahmin etmek zor değil ancak, yine de dikkat etmeniz için özellikle vurgulamak istedim.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/23.png)
+Ayrıca olası veri kayıplarını önlemek adına daha önce `cp` aracını ele alırken de bahsetmiş olduğum üzerine yazma durumlarından da kısaca bahsetmek istiyorum. Örneğin çoklu şekilde dosya veya klasörleri taşıyorsak daha önce `cp` komutunda olduğu gibi her adımda bizden onay alınmasını talep edebiliriz. 
 
-Çıktıda görüldüğü gibi dosyanın içeriği ancak terminal ekranına sığacak şekilde görüntüleniyor. Hatta alt kısımda **--More--(77%)** şeklinde yazan yazı bizlere içeriğin devamı olduğunu belirtiyor. Eğer devamını okumak istersek <kbd>enter</kbd> tuşuna basarak adım adım alt satırlara bakabiliriz. Ayrıca <kbd>space</kbd> tuşu ile de sayfa sayfa atlayarak içeriğe göz atabiliriz. Eğer atladığınız sayfadan bir önceki sayfaya geri dönmek istersek <kbd>b</kbd>(**back/geri**) tuşunu, şayet dosya içeriğini görüntüleyen bu ekranı kapatmak istersek ise <kbd>q</kbd>(**quit/çıkış**) tuşunu kullanmamız yeterli.
+Örneğin benim bulunduğum dizinde a b c d isimli dosyalar var. Ayrıca yeni isimli klasör içinde de aynı isimli dosyalar mevcut. Eğer ben mevcut bulunduğum dizindeki dosyaları yeni klasörüne taşırsam, dosyalar bu klasörün içindekilerin üzerine yazılıyor olacak. 
 
-less
--
+```bash
+└─$ ls yeni/                                                     
+a  b  c  d  dosya  kopya  orijinal
 
-Bu komutumuz da üst kısımda açıkladığımız `more` komutu ile aynı işlevdedir. Ayrıntısını merak ederseniz man sayfasına göz atmanız yeterli olacaktır.
+┌──(taylan@linuxdersleri)-[~]
+└─$ mv a b c d yeni
 
-Ben yine de <code>less</code> komutu ile **profile** dosyasının içeriğinin okunduğu şeklini aşağıya bırakıyorum. Eğer <code>more</code> komutunda bir problem yaşamadıysanız bu komut kullanımında da kesinlikle yaşamazsınız.
+┌──(taylan@linuxdersleri)-[~]
+└─$ ls yeni/                                              
+a  b  c  d  dosya  kopya  orijinal
+```
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/24.png)
+Gördüğünüz gibi herhangi bir uyarı almadan taşıma işlemi gerçekleştirildi. Ben taşıma işlemi sırasında onay alınması için `-i` seçeneğini kullanmak istiyorum. Bunun için yine aynı isimli dosyalar oluşturup bunları kontrollü şekilde taşımayı deneyelim. Hatta benzersiz dosyaları da dahil edelim.
 
+```bash
+└─$ touch a b c d                                      
 
-head-tail
--
+┌──(taylan@linuxdersleri)-[~]
+└─$ mv -i a b c d dosya1 dosya2 yeni/                                   
+mv: overwrite 'yeni/a'? y
+mv: overwrite 'yeni/b'? y
+mv: overwrite 'yeni/c'? n
+mv: overwrite 'yeni/d'? n
 
-Aslında komutların isimleri yani **head(kafa/baş)** ve **tail(kuyruk)** bizlere komut hakkında az çok bilgi veriyor. Şöyle ki bir dosyanın sadece baş kısmında ilk 10 satırı görüntülemek istersek <code>head</code> şayet son 10 satırı görüntülemek istersek ise <code>tail</code> komutunu kullanırız. Ayrıca bu komutlar özel parametre alarak istenildiği sayıda baştan veya sondan olmak üzere istenilen satırların görüntülenmesine olanak sağlar. Daha iyi anlamak adına hemen kullanımlarına geçelim.
+┌──(taylan@linuxdersleri)-[~]
+└─$ ls yeni/
+a  b  c  d  dosya  dosya1  dosya2  kopya  orijinal
+```
 
-Dosya içeriğinin ilk 10 satırını görüntülemek için <code>head dosya_adı</code> şeklinde komutumuzu kullanıyoruz.
+Gördüğünüz gibi yalnızca aynı isimli dosyaların taşınması için onay istendi. Benim “y” ile onayladıklarım taşınırken, “n” ile reddettiklerim taşınmadı. Ayrıca benzersiz olan dosyalar da herhangi bir soru sorulmadan taşınmış oldu. Bu yaklaşım sayesinde üzerine yazma tehlikesi olmadan, çoklu şekilde dosya taşımamız mümkün oluyor. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/25.png)
+Denemek için “***Documents”*** dizini altındaki “***a” “b” “c” “d”*** ve “***bulbeni”*** isimli dosyaları “***yeni/”*** dizinine taşıyabiliriz. 
 
-Şimdi burada 10 satır içerik yok gibi gelebilir ancak dosya içerisindeki boş satırlar da bu 10 satıra dahil olduğundan çıktıyı boş satırlar ile saydığınızda tam olarak 10 satırın görüntülendiğini göreceksiniz.
+```bash
+└─$ ls Documents/
+a  b  belgeler  bulbeni  c  d  metinler  metin.txt  orijinal
 
-Dosya içeriğinin son 10 satırını görüntülemek için <code>tail dosya_adı</code> şeklinde komutumuzu kullanıyoruz.
+└─$ mv -n Documents/[a-d] Documents/bulbeni yeni/
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/26.png)
-Şimdi istediğimiz sayıda baştan veya sondan dizinleri görüntüleyelim. Ben örnek olması açısından **baştan 6 sondan 2** satırı görüntülemek üzere komutumu veriyorum. Komutun kullanımı <code>head -n 6</code> ve <code>tail -n 2</code> şeklinde.
+└─$ ls Documents/                                                                                                
+a  b  belgeler  c  d  metinler  metin.txt  orijinal
 
-**Baştan 6 satırın çıktıları.**
+└─$ ls yeni/                                                                                                     
+a  b  bulbeni  c  d  dosya  dosya1  dosya2  kopya  orijinal
+```
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/27.png)
+Gördüğünüz gibi “***a” “b” “c” “d”*** dosyaları ile aynı isimli dosyalar “***yeni/”*** klasöründe bulunduğu için bunlar taşınmazken, “***bulbeni***” isimli dosya taşınmış oldu. Örnek üzerinden bizzat teyit ettiğimiz gibi siz de üzerine yazmaya karşı otomatik olarak korumak isterseniz `-n` seçeneğini kullanabilirsiniz. 
 
-**Sondan 2 satırın çıktıları.**
+`mv` komutu hakkında temelde bilmemiz gerekenler bunlar. Kendi kendinize biraz daha kurcalarsanız ne kadar kolay kullanılabilir olduğunu bizzat deneyimleyebilirsiniz. Ben kendimi tekrar etmek istemediğim için çok fazla örnek vermedim ama siz kendi kendinize hem dosya hem de dizinleri taşıyarak alıştırmalar yapıp `mv` aracının kullanımını iyi biçimde kavrayın. Ayrıca her zaman olduğu gibi elbette daha fazlası için `mv —help` komutu ile diğer seçenekleri ve özellikleri görüntüleyebilirsiniz.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/28.png)
+# `rm` Komutu
 
-nl
--
+Kopyalama ve taşıma araçlarından ve bunların temel kullanımlarından bahsettik. Şimdi bir diğer temel işlev olan silme işlevinden de bahsetmek istiyorum. Daha önce de çok kısaca bahsettiğimiz gibi mevcut dosya ve klasörleri komut satırı üzerinden silmek istediğimizde `rm` aracını kullanabiliyoruz. `rm` aracının ismi İngilizce "**r**e**m**ove" yani "silme/kaldırma" ifadesinin kısaltmasından geliyor. Tıpkı `cp` ve `mv` aracında olduğu gibi `rm` aracının kullanımı da son derece kolay.
 
-Bu komutun işlevi satırları numaralandırarak çıktı vermektir. Hemen görelim.
+İstersek tek bir dosyayı istersek de aynı anda birden fazla dosyayı silmek için tek yapmamız gereken, silmek istediğimiz dosyaların isimlerini `rm` komutundan sonra yazmak. Ben bulunduğum dizindeki “a” isimli dosyayı silmek istiyorum.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/29.png)
+```bash
+└─$ ls                                                           
+a  b  bulbeni  c  d  dosya  dosya1  dosya2  kopya  orijinal
 
-Çıktıda da görüldüğü üzere dosya içeriğinde yer alan ifadeler satır satır numaralandırılarak ekrana basılmış oldu.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm a
 
-Ayrıca eğer listelenen içerik uzunsa bir önceki öğrendiğimiz <code>head-tail</code> komutları yardımı ile bu alanı düzenli şekilde sınırlandırabiliriz.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ ls                                                           
+b  bulbeni  c  d  dosya  dosya1  dosya2  kopya  orijinal
+```
 
-sort
--
+Bakın “a” isimli dosya artık bulunmuyor.
 
-Dosya çıktılarının alfabetik olarak düzenlenmesini sağlar. Örnek üzerinden devam edelim. Ben <kbd>isimler.txt</kbd> adında bir dosya oluşturdum ve içerisine karışık olarak isimler ekledim.
-Ve bu isimleri alfabetik sıraya dizmek için <code>sort isimler.txt</code> komutunu kullandım.
+Eğer birden fazla dosyayı silmek istersem isimlerin peş peşe yazmam yeterli. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/30.png)
+```bash
+└─$ ls                                                           
+b  bulbeni  c  d  dosya  dosya1  dosya2  kopya  orijinal
 
-Eğer ters alfabetik şekilde yani **z den a ya doğru** sıralamak istersek <code>-r</code> parametresi kullanılır.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm b c d                                                     
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/31.png)
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ ls                                                           
+bulbeni  dosya  dosya1  dosya2  kopya  orijinal
+```
 
+Gördüğünüz gibi birden fazla dosyayı sorunsuzca silmiş olduk. Ben bulunduğum konumdaki dosyaları sildim. Ancak elbette sistem üzerinde yetkinizin bulunduğu tüm dosyaları tam dizin adreslerini belirterek silebilirsiniz. 
 
-paste
--
+```bash
+└─$ ls ~/Documents/
+a  b  belgeler  c  d  metinler  metin.txt  orijinal
 
-Örneğin iki dosyanın içeriğini aynı anda yan yana olacak şekilde komut satırında listelemek istersek, bu işi yapmamızı <code>paste </code> komutu sağlıyor. Kullanımı <code>paste dosya1 dosya2</code> şeklindedir.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm ~/Documents/orijinal 
 
-Ben <kbd>yaşlar.txt</kbd> ve <kbd>isimler.txt</kbd> adlı dosyaları aynı anda yana yana görüntülemek adına komut satırına <code>paste isimler.txt yaşlar.txt</code> komutunu verdim.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ ls ~/Documents/                                     
+a  b  belgeler  c  d  metinler  metin.txt
+```
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/32.png)
+***Documents*** klasörü altındaki “***orijinal***” isimli dosyayı sorunsuzca silmiş oldum.
 
+İşte dosyaları tekil veya çoklu şekilde silmek bu kadar kolay. Tek yapmanız gereken silmek istediğiniz dosyanın tam olarak konumunu belirtmek.
 
-tee
--
+Ayrıca ben üzerinde özellikle durmadım ama fark ettiyseniz toplu şekilde dosya silerken bizden ekstra bir onay alınmadan tek seferde tüm dosyalar silinmişti. Bu durum kimi zaman istenmeyen sonuçlara yol açabilir. Önlem olarak eğer istersek silmeden önce her dosya için bizden onay istenmesini sağlayabiliriz. Bu sayede toplu silme işlemlerinde yanlış dosyaları silme riskinden kaçınabiliriz. Örnek senaryomuzda, bir dizin içinde tüm dosyaları silmek üzere konsola `rm *` komutunu girdiğimizi farz edelim. Bu durumda kabuk yıldız işareti sayesinde bulunduğumuz dizindeki tüm dosyaları kapsayacağı için tüm dosyaların silinmesi emrini vermiş oluyoruz.
 
-Yazmak istediğimiz ifadeleri hem komut satırına yansıtıp hem de bu ifadelerin bir dosya içerisine kayıt olmasını isterseniz kullanacağınız komut <code>tee</code> komutu olacaktır.
+Örneğin ben şu an içinde bulunduğum “***yeni***” klasörü içerisindeki yer şeyi silmek üzere `rm *` komutunu girebilirim. Fakat ben tüm dosyaları silmek istemiyorum, bazılarını eleyip geri kalanları silmek istiyorum. Bunun için `cp` ve `mv` komutlarında da olduğu gibi `-i` seçeneğini kullanabiliriz. Denemek için komutumuza `-i` seçeneğini de ekleyip bu şekilde girelim.
 
-Örnek üzerinden devam edelim.
+```bash
+└─$ ls                                                           
+bulbeni  dosya  dosya1  dosya2  kopya  orijinal
 
-<code>tee metin</code> komutu ile "**metin**" isminde bir dosya açıyorum ve içerisine birtakım ifadeler ekliyorum daha sonra ekleme işlemim bittiğinde dosyayı kaydederek kapatmak üzere <kbd>Ctrl + D</kbd> tuş kombinasyonunu uyguluyorum. En son oluşturmuş olduğum dosya içeriğine bakmak üzere <code>cat</code> komutunu kullanıyorum.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm -i *                                                      
+rm: remove regular empty file 'bulbeni'? n
+rm: remove regular file 'dosya'? y
+rm: remove regular empty file 'dosya1'? y
+rm: remove regular empty file 'dosya2'? y
+rm: remove regular file 'kopya'? y
+rm: remove regular file 'orijinal'? n
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/33.png)
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ ls                                                           
+bulbeni  orijinal
+```
 
-Çıktıda da görüldüğü üzere terminal ekranında yazdığımız her bir satır tekrar ederek konsola basıldı ve sonuçta oluşturmuş olduğumuz "**metin**" isimli dosyanın içeriği de yazmış olduğumuz ifadeler ile dolmuş oldu.
+Gördüğünüz gibi “**y**” ile onay verdiklerim silinirken, “**n**” ile reddettiklerim silinmedi. 
 
-cmp
--
+Neticede `i` seçeneği sayesinde tüm silme işleminin adım adım bizden onay alınarak gerçekleştirilmesini sağlamış olduk. 
 
-Bu komut sayesinde dosyalar arasından karşılaştırma yapmamız mümkün.
+Tamamdır bence dosyaları silmekle ilgili tüm temel bilgilerden bahsettik. Şimdi klasörleri nasıl silebileceğimizi örnekler üzerinden ele alalım.
 
-Örneğin ben <kbd>isimler.txt </kbd> dosyasını kopyaladım ve 5. satırındaki ismi değiştirdim. Ve bu iki dosyayı <code>cmp</code> komutu ile kıyasladım.
+## Klasörlerin Silinmesi
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/34.png)
+Normalde `rm` komutunu ekstra bir seçenek belirtmeden kullandığımızda `rm` aracı yalnızca kendisine argüman olarak verilmiş olan dosyaları siliyor. Yani aynı isimle eşleşen klasörleri silmiyor. Klasörleri silmesi için silinmek istenilenin klasör olduğunu İngilizce “**d**irectory” yani “klasör” ifadesinin kısaltmasından gelen `-d` seçeneği ile özellikle belirtmemiz gerekiyor.
 
-İki dosyanın da içeriğini <code>cat</code> komutu ile yazdırdık görüldüğü üzere iki dosya arasındaki fark, bir dosyada *mehmet* ismi yerine *enes* isminin yer almasıdır. <code>cmp</code> komutunun çıktısında da bu durum farklı olan satır ve bayt bilgisi verilerek ifade edeliyor.
+Hemen deneyelim. Ben test etmek için `mkdir sil-beni` komutu ile yeni klasör oluşturup, `rm` komutu ile oluşturduğum klasörü silmeyi deniyorum. 
 
+```bash
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ mkdir sil-beni                                               
 
-grep
--
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm sil-beni/                                                 
+rm: cannot remove 'sil-beni/': Is a directory
+```
 
-Bu komut en çok kullanılan terminal komutları içerisinde bulunuyor. Bu komutumuzu bizler de oldukça sık kullanıyor olacağız. Dosya ya da komut çıktısında bir ifade aramak için yani bir nevi filtreleme işlemi için <code>grep</code> komutunu kullanabiliriz. Komutun kullanım şekillerini örnekler ile açıklamaya devam edelim.
+Bakın aldığımız çıktıda, klasör olduğu için silinemediği konusunda uyarıldık. Eğer “directory” yani “klasör” ifadesinin kısaltması olan `d` seçeneğini kullanırsak silebileceğiz. 
 
-Eğer bir dosya içerisindeki herhangi bir kelimeyi sorgulamak istersek komutumuzu `grep "aranacak_ifade" dosya_adı` şeklinde komut satırına giriyoruz. Ben basit bir örnek olması açısından <kbd>isimler.txt</kbd> dosyası içerisinde "hasan" ismi var mı diye kontrol etmek üzere konsola `grep "hasan" isimler.txt` komutunu veriyorum.
+```bash
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm -d sil-beni/                                              
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/35.png)
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ ls                                                           
+bulbeni  orijinal
+```
 
-Arama işleminde, Linux sistemi gereği **büyük küçük harf duyarlılığına sahip olduğundan**(Hatırlarsanız daha önce bu durumu test etmiştik.) "**hasan**" şeklinde arama yaptığımızda diğer büyük küçük haldeki anahtar kelimeler çıktıda basılmayacaktır. Eğer bu küçük büyük harf duyarlılığı dışında arama yapmak istersek `-i` parametresini kullanabiliriz.  Bu durumu gözlemlemek için büyük küçük harflerden oluşan kelimelerin olduğu bir dosya üzerinde `grep` komutunu kullanalım.
+Gördüğünüz gibi `d` seçeneği sayesinde klasörüm sorunsuzca silinmiş oldu.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/36.png)
+Dosyalara benzer şekilde klasörleri de çoklu şekilde silebiliriz. Ben denemek için `mkdir x y z` komutu ile birden fazla klasör oluşturacağım. Ve bunları da `rm -di x y z` komutu ile kontrollü şekilde sileceğim.
 
-Eğer arama işlemini tek dosya yerine bulunduğumuz dizin içerisindeki tüm dosyaları kapsayacak şekilde gerçekleştirmek istersek wildcard yani genel kapsama işlevinde olan joker `*` karakteri yardımıyla bu işlemi gerçekleştirebiliriz.
+```bash
+└─$ mkdir x y z
 
-Hemen örneklere geçelim. **hasan** ismini masaüstü konumundayken aratıyorum. Bunun için `grep "hasan" *` komutunu konsola verdim. 
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm -di x y z
+rm: remove directory 'x'? y
+rm: remove directory 'y'? n
+rm: remove directory 'z'? y
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/37.png)
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ ls                                                           
+bulbeni  orijinal  y
+```
 
-Gördüğünüz gibi çıktı bize içerisinde "**hasan**" ifadesi geçen tüm dosyaları verdi. 
+Gördüğünüz gibi `i` seçeneği sayesinde benden onay alınan klasörler silinmiş oldu.
 
-Çıktıda aradığımız ifadenin hangi dosyada yer aldığını bulmuş olduk. Ayrıca yukarıdaki komutu `grep -r "hasan" *` şeklinde de yazabilirdik. Genellikle de bu 2. komut kullanılıyor ancak hangi şekilde kullanacağınızı seçmek size kalmış dilediğiniz kullanabilirsiniz.
+## İçerisi Dolu Olan Klasörlerin Silinmesi
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/38.png)
+Şu ana kadar klasörleri silerken hiç bir problem yaşamadık, çünkü klasör içerikleri boştu. Eğer klasörlerin içinde başka dosyalar ve klasörler bulunuyorsa, `rm -d` komutu ile silmemiz mümkün değil. 
 
-İkinci kullanım şeklinde ilkinden farklı olarak "***grep: yeni_dizin: Bir dizin***" gibi bir çıktı almadık.
+Mesela teyit etmek için daha önceden oluşturduğum ***Documents*** dizini altındaki klasörümü silmeyi deneyebilirim. 
 
-Wildcardlardan söz etmişken dosya içerisinde arama işleminin başka bir kullanım şekline de değinelim isterim. Eğer aranacak kelime belirli bir isim ile başlayan dosyalar içerisinde aranacaksa bunu wildcard(joker) yardımıyla özellikle belirtebiliriz.
+```bash
+└─$ ls -R ~/Documents/                                           
+/home/taylan/Documents/:
+a  b  belgeler  c  d  metinler  metin.txt
 
-Kullanımı `grep "aranacak_ifade" dosya_adı_başlangıcı*` şeklindedir. Ben ilk önce masaüstünde yer alan dosyaları listeledim daha sonra "**hasan**" ifadesini aramaya koyuldum. İlk önce "**metin**" ismi ile başlayan belgelerde `grep "hasan" metin*` komutunu kullanarak aradım. 
+/home/taylan/Documents/belgeler:
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/39.png)
+/home/taylan/Documents/metinler:
+1.gz  2.gz  3.gz  4.gz  5.gz
 
-Ancak çıktıda da görüleceği gibi "**hasan**" ifadesi "**metin**" ismi ile başlayan belgeler içerisinde yer almıyormuş ki komut çıktısı bize hiç bir sonuç vermedi. 
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm -d ~/Documents/metinler                                   
+rm: cannot remove '/home/taylan/Documents/metinler': Directory not empty
+```
 
-Bende "**hasan**" ismini bu sefer "**isimler**" adıyla başlayan belgeler içerisinde aramak için `grep "hasan" isimler*` komutunu kullandım. Bunun neticesinde komut satırı bize "**hasan**" isminin geçtiği belgelerin yerini vermiş oldu. 
+Gördüğünüz gibi “***metinler***” klasörünün içerisi dolu olduğu için silme işlemi reddedildi. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/40.png)
+İçerisi dolu dizinleri silmek için `-r` seçeneğini kullanmamız gerekiyor. Buradaki `r` seçeneği İngilizce “**r**ecursive” yani “özyinelemeli” ifadesinin kısaltmasından geliyor. Bu seçenek sayesinde klasörün içinde iç içe birden fazla klasör ve dosya olsa da tüm dosyaların ve klasörlerin silinebilmesi mümkün oluyor. Hatırlıyorsanız klasör içeriklerini kopyalarken de bu şekilde “recursive” seçeneğini eklemiştik. En alt dizine kadar bakılıp silmesi de özyineleme özelliğini temsil ediyor yani. Hatta “recursive” yani “özyineleme” seçeneğini yalnızca klasörler üzerinde kullandığımız için bu seçenek varken aslında `rm` aracına ek olarak `-d` seçeneğini de girmemiz gerekmiyor. Yani `rm -r silinecek-klasör` şeklinde komutumuzu girdiğimizde, belirttiğimiz dizin tüm içeriğiyle birlikte silinecektir. 
 
-Buradaki asıl kullanım amacı; komutu, belirli isimlere sahip olan dosyalar içerisinden anahtar kelimeyi aramak üzerine sınırlandırmak.
+```bash
+└─$ rm -r ~/Documents/metinler/
 
-Bunların dışında arama sonucunun görüntülenmesini de sınırlandırabiliriz;
-Örnek olması açısından "**filozof**" isimli dosyadan "**jo**" ile başlayan isimleri listeliyorum.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ ls -R ~/Documents/                                           
+/home/taylan/Documents/:
+a  b  belgeler  c  d  metin.txt
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/41.png)
+/home/taylan/Documents/belgeler:
+```
 
-Arama sonucu sonrasında kaç satır gözükeceğini `-A` parametresi sayesinde `grep -A görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
+Bakın yalnızca `-r` seçeneğini kullanarak içi dolu klasörü silmeyi başardım.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/42.png)
+Ben kullanmadım ancak özellikle iç içe klasörler ve dosyalar barındıran klasörleri silerken, `i` seçeneğini ekleyerek yanlış bir dosyayı veya klasörü silmediğinizden emin olmanızı da önerebilirim. Yine de klasörden tek seferde kurtulmak istediğinize eminseniz elbette `i` seçeneğini kullanmak zorunda değilsiniz.
 
-Sonucun üzerindeki kaç satırın gözükeceğini `-B` parametresi sayesinde `grep -B görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
+Ayrıca hatırlıyorsanız, boş dizinleri silmek için daha önce `rmdir` aracını kullanmıştık. İşte `rm -d` komutu `rmdir` aracı ile aynı işlevi görüyor. İçerisi dolu olan dizinleri silmek için de `rm -r` komutunu kullanıyoruz. Dolayısıyla emin olmadığınız sürece `rm -r` komutunu kullanmanız önermem. Yine de elbette klasörü içeriğiyle birlikte silmek istediğinizden eminseniz kullanabilirsiniz.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/43.png)
+Son olarak eğer, tüm silme adımlarının ayrıntılarını da takip etmek isterseniz “verbose” yani “ayrıntılı” ifadesinin kısaltması olan `v` seçeneğini de kullanabilirsiniz. Toplu şekilde klasör silerek kullanımı teyit edebiliriz. Çabucak test etmek için `mkdir {1..9}` komutuyla yeni klasörler oluşturup, toplu şekilde silmek ve silme işlemiyle ilgili ayrıntıları da öğrenmek için `rm -dv {1..9}` şeklinde komutumuzu girebiliriz. 
 
-Baştan ve sondan kaç satır görüntüleneceğini ise `-C` parametresi sayesinde `grep -C görüntülenecek_satır_sayısı "aranacak_ifade" dosya_adı` şeklinde komut girerek sağlarız.
+```bash
+└─$ ls                                                           
+1  2  3  4  5  6  7  8  9  bulbeni  orijinal  y
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/44.png)
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ rm -dv {1..9}                                                
+removed directory '1'
+removed directory '2'
+removed directory '3'
+removed directory '4'
+removed directory '5'
+removed directory '6'
+removed directory '7'
+removed directory '8'
+removed directory '9'
+```
 
-Şimdi ise sıklıkla kullanılan **pipe** ile `grep` kullanımına bakalım. 
-Pipe nedir diyecek olursanız kabaca iki işlemi(process) birbirine bağlayan `|` görünümündeki yardımcı argüman diyebiliriz. Zaten daha önce de iki işlemin birbirine bağlanması gereken durumlarla karşılaşmış ve pipe kullanmıştık.
+Bakın tüm silme işlemi adım adım bastırıldı. Bu şekilde toplu silme işlemlerini takip etmek istiyorsanız `v` seçeneğini de kullanabilirsiniz.
 
-`grep` ile kullanımına geçecek olursak örneğin masaüstünde yer alan dosyalardan yalnızca "**metin**" isimli olanları listelemek isteyelim. Bunun için ilk olarak masüstünde yer alan dosyalarımızı listelemek üzere komut satırına `ls` daha sonra ise `ls` komutundan gelecek olan çıktıları pipe yardımı ile `grep` komutuna bağlayarak listelenen bütün bu dosyalar içerisinden sadece "**metin**" adı geçenleri filtreleyebilelim..
+Neticede `rm` komutu hakkında bilmemiz gereken tüm temel yaklaşımlardan bahsettik. Diğer seçenekleri görmek için yardım sayfasına göz atabilirsiniz. 
 
-Bu işlemi gerçekleştirmek için `ls | grep "metin"` komut bütününü kullanıyorum.
+# shred Komutu | Dosyaları Geri Döndürülemez Şekilde Silmek
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/45.png)
+Geri döndürülemez yani kalıcı silme kavramından bahsetmeden önce silme işlemlerinin temelde nasıl işlediğinden çok kısaca bahsetmek istiyorum. Bu sayede kalıcı silmeden kastın ne olduğu daha net anlaşılabilir.
 
-`grep` komutunun kullanım şekli ve alanı elbette bu kadar ile sınırlı değil ancak sizler daha fazla bilgiye nasıl ulaşacağınızı biliyorsunuz.
+Eğer herhangi bir dosyayı sildiğinizde o dosyanın tamamen yok olduğunu düşünüyorsanız kesinlikle yanılıyorsunuz. Kısaca özetlemek gerekirse işletim sistemleri dosya silme emri aldığında o dosyayı gerçekten diskten silmek yerine, dosyaya ulaşmanızı sağlayan yolun bilgisini silerler. 
 
+![shred-1.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/shred-1.webp)
 
-find
--
+Yani aslında dosya hala disk üzerinde mevcut olmasına rağmen, sadece dosyaya giden bağlantı siliniyor. Bu yöntemin kullanılma nedeni dosyayı gerçekten silmeye oranla çok daha hızlı sonuç vermesidir. Peki ama gerçek silme işleminden kastımız tam olarak ne ?
 
-`find` komutu da hemen hemen daha önce görmüş olduğumuz `locate` komutu ile aynı görevi görüyor. Örneğin, isminin birazını bildiğimiz ama dosya dizinini tam olarak hatırlamadığımız dosyaları bulmamıza yardımcı oluyor.
+Gerçek silme işlemi dediğimiz kavram; disk üzerinde yer kaplayan her türlü verinin ancak üzerine yeni veriler yazılması ile ortadan kaldırılabilecek olmasını ifade ediyor. 
 
-Komut kullanım kalıbı `find dosya_yolu -name aranacak_ifade` şeklindedir. Tam kullanım şekli için aşağıdaki örneği inceleyebilirsiniz.
+![shred-2.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/shred-2.webp)
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/46.png)
+Çünkü üstüne yeni veri yazılarak tahrip edilmeyen her türlü verinin tekrar kurtarılma ihtimali var. Adli bilişim alanında bu iş için kullanılan pek çok yazılımsal ve harici olarak fiziksel kurtarma yöntemi bulunuyor.
 
-Çıktıda <kbd>etc</kbd> konumda yer alan içerisinde "**local**" ifadesi geçen dosyalar komutumuz sayesinde listelenmiş oldu. Ancak aradığımız şeyi bulmak adına değiştirilme tarihi, boyut, dosya-dizin gibi ayrıntıları belirterek çıktıları daha spesifik şekilde sınırlandırabiliriz. Bazı özel arama parametreleri açıklayalım hemen.
+İşin özü eğer bir dosyadan geri döndürülemez şekilde kurtulmak istiyorsak o dosyayı silerken üzerine birden fazla kez rastgele veri yazılmasını sağlamamız gerekiyor. Pek çok işletim sisteminde bu üzerine yazma işlemi için harici yazılımlar yükleyip kullanmamız gerekebiliyor. Ancak söz konusu Linux olduğunda pek çok dağıtımda varsayılan olarak yüklü gelen `shred` isimli aracı kullanabilme kolaylığa sahibiz.
 
-- **type f :** Yalnızca dosyalar.
-- **type d :** Yalnızca dizinler.
-- **size +500k :** 500 KB'tan büyük olan dosyalar.
-- **size -500k :** 500 KB'tan küçük olan dosyalar.
-- **ctime 10 :** Tam olarak 10 gün önce değişikliğe uğramış dosya/dizinler.
-- **ctime -10 :** 10 günden daha kısa bir süre önce değişikliğe uğramış dosya/dizinler.
-- **ctime +10 :** 10 günden daha uzun bir süre önce değişikliğe uğramış dosya/dizinler.
-- **perm 755 :** Yalnızca erişim izni 755 olan dosya/dizinler.
-Örnek olması açısından yukarıdaki arama parametrelerinin ilk ikisinin çıktılarını aşağıya ekliyorum.
+Zaten `shred` ifadesi Türkçe olarak "parçalamak" anlamına geliyor. Eğer herhangi bir arama motoruna yazarsanız, karşınıza parçalanmış kağıt görselleri çıkacaktır. Bu aracı kullanarak, dosyaların üzerine veriler yazılarak tahrip edilmesini sağlayabiliyoruz. Dosya içeriği tahrip olduktan sonra da dosyayı güvenle sıradan şekilde silebiliyoruz çünkü dosya geri getirilse bile orijinali tahrip edildiği için gerçek içeriğine ulaşılamıyor.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/47.png)
+Silme mekanizmalarından bence yeterince bahsettik. Şimdi lafı daha fazla uzatmadan `shred` komutunun kullanımından bahsederek devam edelim.
 
+## `shred` Komutu
 
-xargs
--
-`xargs` komutunun görevi kabaca kendisinden önce verilen girdi verilerini kendisinden sonrakine tek tek aktarmaktır. Biliyorum böyle denilince hiçbir şey anlaşılmıyor. O yüzden `xargs` komutunu `find` komutuyla birlikte kullanarak örnek üzerinden komutumuzu ve kullanım mantığını açıklamış olalım.
+`shred` komutunu herhangi bir ek seçenek belirtmeden kullandığımızda varsayılan olarak kendisine argüman olarak verilmiş olan dosyanın üzerine 3 kez rastgele bitler yazılmasını sağlıyor. Eğer daha fazla kez yazılmasını istersek, `-n` seçeneğini kullanıp kaç kez yazılması gerektiğini özellikle de belirtebiliyoruz.. Ayrıca `-v` seçeneğini ekleyerek “**v**erbose” yani “ayrıntılı” çıktı vermesini de sağlayabiliriz. Bu sayede tüm adımları konsoldan takip edebiliriz.
 
-Örneğin <kbd>.jpg</kbd> uzantılı bir resim dosyasını araştırıp daha sonra bulduğumuz bu dosyayı silelim. Ben duvar kağıdı için daha önce internetten bir <kbd>.jpg</kbd> uzantılı bir resim indirmiştim. Bu resim hem **indirilenler(downloads)** hem de **resimler** konumunda yer alıyor, söylediğim gibi aslında dosyanın konumunu biliyorum ancak komutun kullanımını denemek üzere dosyanın konumunu bilmiyormuşçasına bir test edelim. Testimizde <kbd>root</kbd> dizinindeki <kbd>.jpg</kbd> uzantılı dosyaları araştıralım ve silelim.
+Ben denemek için `echo “bu bir dosyadır” > okubeni` komutu ile içerisi dolu yeni bir dosya oluşturuyorum. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/48.png)
+```bash
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ echo "bu bir dosyadır" > okubeni                             
 
-Çıktıda da görüldüğü gibi <kbd>.jpg</kbd> uzantılı resim dosyalarını tek tek bulup silmeden önce, çıktıda belirtilen konumlarda bulunuyorlardı. Ancak arama ve tek tek otomatik olarak silme işlemini gerçekleştirmemiz ile birlikte dosyalar silindi. Silinme durumunu da tekrar arama işlevindeki `find` komutunu vererek teyit etmiş olduk.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ cat okubeni                                                  
+bu bir dosyadır
+```
 
-Komutumuzun işleyişi tam olarak şöyle oldu;
+Şimdi `shred` aracını kullanarak dosya içeriğine rastgele bitler yazılmasını sağlayabiliriz. Ben varsayılan şekilde yani 3 kez rastgele bitler yazılması için `shred` aracına özellikle bir sayı vermek istemiyorum ama işlem adımlarını takip etmek için “verbose” yani ayrıntılı çıktı seçeneğini ekleyeceğim. 
 
-`find /root -name *.jpg` komutu ile <kbd>root</kbd> dizini altındaki tüm <kbd>.jpg</kbd> uzantılı dosyaları listeledik.
+```bash
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ shred -v okubeni                                             
+shred: okubeni: pass 1/3 (random)...
+shred: okubeni: pass 2/3 (random)...
+shred: okubeni: pass 3/3 (random)...
 
-Bu listelenen dosya konum ve varlık bilgilerini `xargs` komutuna `pipe( | )` argümanı sayesinde aktardık.
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ cat okubeni                                                  
+�r��WwQ%���uuD��J󶤈�����X����m�M���h�E"E�-�F:����ǀi�7▒.>�        d��zO���R�e)a�������F�Z� 䵙x�Z;$s��/��}C���F����u}��o(�K��h���W軄R��XP�KLB�d>�4�7r���c�C�#BD��v�O�I忧�ٱ�-O�/��)%m��
+```
 
-`xargs` komutu ise eline geçen bu bilgiler sayesinde dosyanın konumunu saptayarak tek tek silme işlemini gerçekleştirebildi.
+Gördüğünüz gibi dosyanın içeriği tamamen okunamaz halde. Artık bu dosyayı `rm` komutu ile gönül rahatlığıyla silebiliriz çünkü dosya geri getirilse bile içeriğindeki verilere ulaşılması pek olası değil. Çünkü içerisine 3 kez rastgele veriler yazıldı. İşte `shred` aracının kullanımı bu kadar kolay.
 
-`xargs` komutu `exec` isimli başka bir komuta benzer şekilde çalışmaktadır. Merak edip öğrenmek isteyen arkadaşlar ayrıca `exec` komutuna bakabilirler.
+Ayrıca daha önce de bahsettiğim şekilde istersek kaç kez rastgele veri yazılacağını da `-n` seçeneğinin ardından özellikle belirtebiliyoruz. Örneğin ben 5 kez rastgele veri yazılmasını istersem `shred -n 5 dosya-adı` şeklinde komutumu girebilirim. Hatta sayıyı belirtmeye ek olarak rastgele yazma işleminden hemen sonra bu dosyanın silinmesini de sağlayabiliriz. Dosyanın silinmesi için de `-u` seçeneğini eklememiz yeterli oluyor.
 
-Dosya Kopyalama-Taşıma-Silme İşlemleri
--
-Bu kısımda dosyaları kopyalama taşıma ve silme gibi işlemleri ele alacağız. Zaten kullanacağımız komutlar kısa oldukları için kullanımı ve akılda kalması çok kolay. İlk olarak dosya kopyalama işlemi ile anlatıma başlayalım.
+Ben denemek için bu “***okubeni***” dosyasının üzerine 5 kez rastgele veri yazılıp daha sonra silinmesini için komutumu girmek istiyorum. Tabii tüm işlem adımlarını takip edebilmek için bir de `-v` seçeneği ile ayrıntıların da bastırılmasını istiyorum. Bunun için `shred -uvn 5 okubeni` şeklinde komutumu giriyorum. 
 
-### cp
+```bash
+└─$ shred -uvn 5 okubeni 
+shred: okubeni: pass 1/5 (random)...
+shred: okubeni: pass 2/5 (ffffff)...
+shred: okubeni: pass 3/5 (random)...
+shred: okubeni: pass 4/5 (000000)...
+shred: okubeni: pass 5/5 (random)...
+shred: okubeni: removing
+shred: okubeni: renamed to 0000000
+shred: 0000000: renamed to 000000
+shred: 000000: renamed to 00000
+shred: 00000: renamed to 0000
+shred: 0000: renamed to 000
+shred: 000: renamed to 00
+shred: 00: renamed to 0
+shred: okubeni: removed
+```
 
-`cp` komutu kopyalama işlevindedir. Kullanımı `cp kaynak hedef` şeklindedir. Örnek üzerinden açıklayalım.
+Bakın öncelikle dosya içeriğine rastgele 5 kez veriler yazılmış, daha sonra dosya silinmiş ve son olarak dosyanın isminin de silinmesi için dosya ismi de adım adım sıfırlar ile doldurularak yok edilmiş. Bu yaklaşım sayesinde dosyanın isminin dahi disk üzerinden kurtarılması pek olası değil.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/49.png)
+Hatta teyit etmek için `ls` komutu ile mevcut dizinimizi listeleyebiliriz. 
 
+```bash
+┌──(taylan@linuxdersleri)-[~/yeni]
+└─$ ls                                                           
+bulbeni  orijinal  y
+```
 
-Komutumuzu açıklayacak olursak;
+Bakın gördüğünüz gibi dosyamız işlem sonunda otomatik olarak silinmiş.
 
-**Desktop** dizinindeyken `ls` komutu ile bulunduğumuz dizindeki dosyaları listeliyoruz. Ve çıktıda da görüldüğü üzere masaüstünde "**filazof**" isimli bir belge bulunuyor.
+Ayrıca benim örnekler üzerinde kullandığım dosyanın içeriği çok küçük olduğu için tüm işlem çok kısa sürede tamamlandı ancak bu durum her zaman böyle olmayabilir. Yani üzerine yazma işlemi, üzerine yazılacak olan dosyanın boyutuna göre değişken uzunlukta sürebilir, sabırla işlem tamamlanana kadar beklemelisiniz. Benim dosya boyutum çok küçük olduğu için işlem çok kısa sürede tamamlandı.
 
-`cd yeni_dizin` komutuyla  <kbd> yeni_dizin </kbd> konumuna gidiyoruz.
+Kalıcı olarak istediğiniz dosyalarınızı bu yaklaşım sayesinde güvenli şekilde silebilirsiniz. 
 
-`ls` komutu ile buradaki dosyaları listeliyoruz. Bu dizinde ise yalnızca "**yeni**" isimli bir klasör mevcut.("**filazof**" isimli dosyanın bu konumda bulunmadığını teyit etmiş olduk.)
+# Linux Geri Dönüşüm Kutusu
 
-`cd ..` komutu ile bir önceki dizine dönüyoruz.
-"filazof" dosyasını <kbd>yeni_dizin</kbd> konumuna taşımak üzere `cp filazof yeni_dizin` şeklinde komutumuzu kullanıyoruz.
+Komut satırı üzerinden bir dosyayı sildiğimizde, normalde grafiksel arayüzde olduğu gibi sildiğimiz dosya çöp kutusuna gönderilmiyor. Yani çöp kutusu olarak geçen dizin yalnızca grafiksel arayüzdeki dosya silme işlemlerinde kullanılan sembolik bir dosya yolu.
 
-Daha sonrasında ise `cd yeni_dizin` komutu ile yeni_dizin konumuna gidip `ls` komutu yazarak "**filazof**" isimli dosyamızın kopyalandığını teyit etmiş oluyoruz.
+Denemek için grafiksel arayüzdeyken bir dosyanın üzerine tıklayıp silebilir daha sonra geri dönüşüm klasörüne bakabiliriz.  
 
-Eğer bir dosyayı A dizininden B dizinine taşırsak ve B dizini içerisinde A dizininden taşıdığımız belge ile aynı isimde dosya varsa, taşıdığımız dosya mevcut konumda bulunan aynı isimdeki eski dosyanın üzerine yazılacaktır. Bu da B konumunda var olan eski dosyanın önceki içeriğinin yok olması demek. Böyle talihsiz bir durum yaşamamak için `cp` komutunu kullanmadan önce `-i` parametresini de eklememizde fayda var. Bu parametre `cp` komutunun aynı isimli bir dosya ile karşılaşma durumunda bize onay sormasını sağlayacaktır.
+![trash.gif](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/trash.gif)
 
-Anlatılanları daha iyi anlamak adına hemen bir örnek yapalım. Daha önceden <kbd>yeni_dizin</kbd> konumuna taşımış olduğumuz "**filazof**" dosyasını `-i` parametresini kullanarak tekrar `cp` komutu ile taşımaya çalışalım.
+Bakın silmiş olduğumuz dosya burada bulunuyor. Şimdi denemek için `touch deneme` komutu ile yeni bir dosya oluşturup bu dosyayı da `rm` komutu ile silelim. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/50.png)
+![trash-on-commanline.gif](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/trash-on-commanline.gif)
 
-Çıktıda da görüldüğü gibi `-i` parametresini kullanarak yazdığımız kopyalama komutu bize "***cp: 'Desktop/merhaba''ın üzerine yazılsın mı? ***" şeklinde bir uyarıda bulundu ve bizden onay bekledi.
+Bakın komut satırı üzerinden silme işlemi gerçekleştirdiğimiz için çöp kutusuna herhangi bir dosya eklenmedi. Zaten komut satırı üzerinden sildiğimizde buradaki çöp kutusuna geliyor olsaydı önceki silme işlemlerinin kalıntılarını burada görüyor olmamız gerekiyordu.
 
-Elbette bu işlemleri çoklu dosya taşıma için de kullanabiliriz.
+Komut satırından silinen dosyaların burada gözükmüyor olmasına ek olarak Windows sisteminden de aşina olduğumuz gibi grafiksel arayüzdeyken, <kbd>Shift</kbd> + <kbd>Delete</kbd> tuşlaması ile bir dosya veya klasörü sildiğimizde bu dosya veya klasör bu çöp dizinine gelmeden komut satırında olduğu şekilde siliniyor. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/51.png)
+![shift-delete.gif](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/shift-delete.gif)
 
-Hangi komutu neden kullandık zaten bir önceki örneğe benzer olduğu için tekrar açıklamıyorum. Çıktıları inceleyerek çok rahat şekilde anlayabilirsiniz.
+Tabii ki <kbd>Shift</kbd> + <kbd>Delete</kbd> tuşlaması bizim `shred` komutu ile sildiğimiz gibi silmiyor ancak en azından sadece çöp dizinine de taşımış olmuyor.
 
-Eğer o anda çalıştığımız dizine başka bir konumdan dosya kopyalamak istersek komutumuzu `cp kopyalanacak_dosya_konumu .` şeklinde kullanabiliriz. **Nokta( . )** bizim o anda bulunduğumuz çalışma konumunu ifade ediyor. Örneği incelediğinizde her şey daha net anlaşılacaktır.
+Komut satırından veya <kbd>Shift</kbd> + <kbd>Delete</kbd> ile grafiksel arayüzden sildiğiniz dosyaları geri getirmek isterseniz de `testdisk` gibi harici veri kurtarma yazılımları ile ilgili dosyalarınızı kurtarabilirsiniz. Tabii ki daha önce de belirttiğim şekilde eğer `shred` aracı ile dosya içeriklerini tahrip ettiyseniz yani kalıcı olarak sildiyseniz kurtarma yazılımları ile, ilgili dosyaları kurtarmanız pek olası değil.
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/52.png" width="875">
+Artık böylelikle silme ve kurtarma planlarınızı, şimdiye kadar bahsettiğimiz bilgiler ışığında gerçekleştirebilirsiniz.
 
-Görüldüğü üzere kopyalanacak olan dosyanın konumunu belirttik ancak bulunduğumuz konuma yani kopyalamak istediğimiz konumun direk adresini belirtmemize gerek kalmadı. Bunun yerine bulunduğumuz konumu temsil eden `.`(nokta) kullanmamız dosyanın kopyalanmasını sağladı.
+# Sembolik ve Katı Link | Soft Link & Hard Link
 
-Eğer bulunduğumuz konumdan bir üst konuma kopyalamak istersek komutu `cp dosya_adresi ..` şeklinde kullanmamız yeterli olacaktır.
+Anlatımın devamında çok kısaca sembolik ve katı linklerden de bahsetmek istiyorum.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/53.png)
+Fakat sembolik ve katı linklerden bahsetmeden önce, link yapısını yani aslında buradaki link ifadesinden kastımızı anlamak için öncelikle "inode" kavramı üzerinde durmamız gerekiyor. Merak etmeyin çok ayrıntıya girmeyeceğiz.
 
-Çıktıları karşılaştırarak dosyayı bir önceki dizine kopyalamayı (iki nokta) `..` ile kolaylıkla yapabildiğimizi görebilirsiniz.
-(Eğer "deneme" isimli dosyayı kopyalarken kullandığımız komutta yer alan, dosyanın konumunu belirtme kısmı kafanızı karıştırdıysa belirteyim; çıktıda kopyalanan konumda yer alan <kbd>~</kbd> işareti **ana dizin adresini** yani **root** kullanıcısı için `/root` konumunu belirtiyor. "**deneme**" isimli dosya bu konumda olduğu için direk bu şekilde bir kullanımı tercih ettim. Bunun yerine `cp /root/deneme ..` komutunu da kullanabilirdim.)
+## inode
 
+Dosya sistemindeki veriler depolama birimlerimizde yani diskte bloklar halinde tutuluyorlar. Dosyalarla ilişkili olan verilerin hangi bloklarda olduğunun bilgisini de bizlere “**i**ndex **node**” yani kısaca “**inode**” olarak isimlendirilen yapı haber veriyor.
 
-### mv
-Bu komut dosya taşıma ve uzantı değiştirme gibi işlevlere sahiptir. Dosya taşıma işlevi tıpkı `cp` komutunda olduğu gibidir. Yani komutun kullanımı `mv dosya_konumu taşınacak_konum` şeklindedir.
+Örneğin ben ***metin.txt*** isimli bir dosyanın içerisine “merhabalar” yazıp kaydettiğimde, “merhabalar“ ifadesi diskte belirli bir bloğa kaydediliyor. Ve bu verinin disk üzerinde tam olarak bulunduğu bloğun veya blokların bilgisi de **inode** olarak isimlendirilen benzersiz sayısal bir değere atanıyor. ***metin.txt*** dosyası ise bu **inode** değerine link olarak bağlanıyor. Bu sayede biz ***metin.txt*** dosyasının içeriğini okumak istediğimizde aslında arkaplanda ***metin.txt*** dosyasının bağlı olduğu **inode** değerine bakılıyor. **inode** değerinin disk üzerinde işaret ettiği bloklardan da bu veriler getiriliyor. Neticede biz metin.txt ismiyle ilişkili olan "merhabalar" verisine disk üzerinde kaydedildiği yerden tekrar ulaşmış oluyoruz. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/54.png)
+![inode.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/inode.webp)
 
-### rm
+Yani aslında buradaki ***metin.txt*** dosyası yalnızca benzersiz bir **inode** değerine bağlı olan **linktir**. **inode** değeri de ilgili verinin diskteki yerini bildiği için ***metin.txt*** linki üzerinden bu veriye ulaşabiliyoruz.
 
-Dosya dizin silme işlevinde kullandığımız komuttur. Kullanımı `rm silinecek_dosya_dizin` şeklindedir.
+İşte tıpkı bu örneğimizde olduğu gibi dosya sistemindeki benzersiz olan her bir dosya ve klasörün de benzersiz bir inode değeri bulunuyor. Bizim gördüğümüz dosya ve klasör isimleri de yalnızca bu inode değerlerine yönlendirme yapan linkler aslında. Dosya veya klasör isminden inode değerine, inode değerleri üzerinden de disk üzerinde depolanmış olan verilere kolayca erişebiliyoruz. Buradaki linkler yalnızca biz insanların disk üzerindeki verilere kolay erişebilmesi için okunaklı isimlerden oluşan bağlantı noktaları aslında. Yani diskteki “xx yy zz” bloklarındaki verileri okumak istiyorum demek yerine, “metin.txt” dosyasını okumak istiyorum demek bizim için çok daha kolay olduğu için dosya ve klasör isimleri yalnızca birer linktir. 
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/55.png)
+Tamam temel seviye için "inode" ve "link" kavramı hakkında bu kadarlık bilgi yeterli.
 
+Şimdi esas konumuz olan link kavramına odaklanacak olursak, Linux üzerinde **sembolik** ve **katı** olmak üzere iki link çeşidi bulunuyor. Gelin öncelikle sembolik linkten bahsederek başlayalım.
 
+## Sembolik Link | Soft Link
 
-Dosyalar tekil olarak silinebileceği gibi çoklu silme işlemi de gerçekleştirilebilir. Hatta daha önce gördüğümüz joker karakterleri de kullanırsak isim, uzantı gibi filtrelere göre sınırlandırarak toplu dosya silme işlemi gerçekleştirebiliriz. Örnek olması açısından masaüstünde yer alan 2 adet <kbd>.py</kbd> uzantılı dosyayı tek seferde `rm *.py` komutu ile siliyorum.
+Ben "**sembolik link**" diyor olacağım ancak farklı kaynaklarda “**soft link**” olarak ifade edildiğini de görebilirsiniz. Sembolik linkleri, Windows sisteminden de alışık olduğumuz sıradan kısayollara benzetebiliriz. Sembolik linklerin görevleri yalnızca orijinal içeriğe yönlendirme yapmaktır.
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/56.png)
+Daha anlaşılır olması için gerçek bir örnek üzerinden devam edebilmek adına öncelikle nasıl sembolik link oluşturabileceğimizi öğrenelim.
 
+Link oluşturmak için “**l**i**n**k” ifadesinin kısaltmasından gelen `ln` komutunu kullanıyoruz. Sembolik link oluşturmak için de “**s**ymbolic” ifadesinin kısalması olan `s` seçeneğini kullanmamız gerekiyor.
 
-Joker karakterlerin kullanım alanları oldukça geniştir. Sizler de ihtiyacınıza göre filtreleme yaparak bu işlemleri istediğiniz doğrultuda gerçekleştirebilirsiniz.(Bu konuyu detaylıca ileride [Joker Karakterler](https://github.com/taylanbildik/Linux_Dersleri/blob/master/joker_karakterler%28wildcards%29.md) kısmında ele alacağız.)
+Ben test ortamı hazırlamak için öncelikle kendi ev dizinimde `mkdir linkler` komutuyla “***linkler***” isimli bir klasör oluşturup, `echo “deneme” > ~/linkler/metin` komutuyla, bu dizin altında “***metin***” isimli dosyaya “deneme” ifadesini ekliyorum. 
 
-### shred
+```bash
+└─$ mkdir linkler
 
-Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. `shred` komutu dosyanın içerisine rastgele bitler yazarak dosyanın okunmaz hale gelmesini sağlıyor. Parametresiz kullanımda dosyaya 3 kez rastgele bit eklerken `n` parametresini kullanarak bu eklenecek olan rastgele bit sayısını istediğimiz doğrultuda düzenleyebiliyoruz. Eğer yapılan işlemi komut satırından takip etmek istersek `v` parametresini de kullanabiliriz. Ayrıca `u` parametresini kullanmamız halinde dosya işlem sonrasında silinir.
+┌──(taylan@linuxdersleri)-[~]
+└─$ echo "deneme" > ~/linkler/metin
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/57.png" width="875">
+┌──(taylan@linuxdersleri)-[~]
+└─$ cat ~/linkler/metin                                            
+deneme
+```
 
-<img src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/6-%20Dosya%20%C4%B0%C5%9Flemleri/58.png" width="875">
+Test ortamımız hazır. Şimdi bu dosyanın sembolik linkini oluşturmayı deneyelim.
+
+Sembolik link oluştururken dosya ve klasörlerin tam dosya dizin adreslerini mutlaka belirtmemiz gerekiyor. Çünkü sembolik dosyaları sistem üzerinde herhangi bir dosya konumunda kullanabiliriz. **Tam dizin adresini belirtmezsek doğru şekilde çalışmaz.** Örneğin ben tam dizin adresi yerine göreceli yolu belirterek yeni bir sembolik link oluşturmak ve bu linki başka bir konuma taşımak istiyorum.
+
+```bash
+└─$ ln -s linkler/metin sembolik_metin2
+
+└─$ mv sembolik_metin2 Documents/                                             
+
+└─$ cat Documents/sembolik_metin2                                             
+cat: Documents/sembolik_metin2: No such file or directory
+```
+
+Gördüğünüz gibi orijinal dosyanın tam dizin adresini belirtmediğim için sembolik link dosyasının konumunu değiştirdiğimde bu dosya göreli yola göre orijinal dosyayı aradığı için bu dosya bulunamadı. **Dolayısıyla link belirtirken tam dizin adresini girmeniz şart!**
+
+Ben bu dizindeki dosyanın sembolik linkini mevcut bulunduğum dizinde oluşturmak için `ln -s ~/linkler/metin sembolik_metin` şeklinde komutumu giriyorum. Teyit etmek için `ls -l sembolik_metin`  komutuyla listeleyelim. 
+
+```bash
+└─$ ln -s ~/linkler/metin sembolik_metin
+
+└─$ ls -l sembolik_metin 
+lrwxrwxrwx 1 taylan taylan 13 Jun 26 04:07 sembolik_metin -> /home/taylan/linkler/metin
+```
+
+Bakın burada ***sembolik_metin*** dosyasının oluşturulduğunu görebiliyorum. Ayrıca çıktılara dikkatlice bakacak olursanız, ok işaretinin orijinal dosyaya referans verdiğini görebilirsiniz. Buradaki çıktının anlamı “***sembolik_metin***" isimli dosyanın “***metin***" dosyasının sembolik bir bağlantısı olduğu. Bunlar dışında çıktıların en solunda yani dosya türünün belirtildiği bölümde “**l**” karakteri bulunuyor. Buradaki “**l**” ifadesi “sembolik link” anlamına geliyor. Dolayısıyla her iki şekilde de başarılı şekilde sembolik linkimizi üretmeyi başardığımızı teyit etmiş olduk.
+
+Hemen sembolik linkin nasıl bir işlevi olduğunu görmek için birkaç basit örnek yapalım. Öncelikle oluşturduğumuz sembolik link üzerinden orijinal dosyanın içeriğini okumayı deneyebiliriz. Ben bunun için `cat sembolik-metin` şeklinde komutumu giriyorum. 
+
+```bash
+└─$ cat sembolik_metin 
+deneme
+```
+
+Bakın konsola “deneme” ifadesi bastırıldı. Yani sembolik link üzerinden orijinal dosyamızın içeriğine ulaşmış olduk.
+
+Şimdi orijinal dosyaya yeni veri ekleyerek bu durumu tekrar test edelim. 
+
+```bash
+└─$ echo "yeni" >> ~/linkler/metin 
+
+└─$ cat sembolik_metin 
+deneme
+yeni
+```
+
+Bakın orijinal dosyadaki değişikliğe bu dosya üzerinden de erişebiliyoruz. Neticede sembolik linkler aslında orijinal dosyaların kısayolları görevinde olduğu için tek yaptığı orijinal dosyaya yönlendirme yapmak. Dolayısıyla orijinal dosya içeriğindeki değişikliklere sembolik link dosyaları üzerinden de aynen ulaşabiliyoruz.
+
+Şimdi tersini deneyelim. Yani sembolik dosyanın üzerine yeni veri ekleyip orijinal dosyaya etki edip etmeyeceğini görelim. Ben yeni veri eklemek üzere `echo “sembolik ekleme” >> sembolik-metin` şeklinde komutumu giriyorum. 
+
+```bash
+└─$ echo "sembolik ekleme" >> sembolik_metin 
+
+└─$ cat sembolik_metin                                           
+deneme
+yeni
+sembolik ekleme
+
+└─$ cat linkler/metin                                            
+deneme
+yeni
+sembolik ekleme
+```
+
+Bakın sembolik bağlantıdaki değişiklik orijinal dosyada da geçerli olmuş. Peki ama nasıl ?
+
+Biz burada bu dosyaya veri eklemek üzere komutumuzu girdiğimizde, bu sembolik linke yönlendirmiş olduğumuz veriler orijinal dosyaya yönlendirilip, bu dosya üzerinden diskteki verilere ekleme yapılması sağlanıyor. Bu sayede tıpkı orijinal dosya üzerinden ekleme yapmışız gibi değişiklikler geçerli oluyor.
+
+![soft-link.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/soft-link.webp)
+
+Yani bizzat teyit ettiğimiz gibi sembolik bağlantılar aslında orijinal dosyaya yönlendirme yapan kısayol dosyaları. Bu sebeple örneğin orijinal dosya silinirse, sembolik linkler üzerinden diskteki verilere ulaşmamız mümkün olmuyor. Çünkü dediğimiz gibi sembolik linkler yalnızca orijinal dosyaya yönlendirme yapıyor, bu orijinal dosya da zaten disk üzerindeki verilere ulaşmamızı sağlayan bir bağlantı. Eğer bu bağlantı kesilirse, diskteki veriler silinmemiş olsa bile o verilere ulaşmamız mümkün olmuyor. 
+
+![soft-link-hard-link-deleted.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/soft-link-hard-link-deleted.webp)
+
+Zaten biz standart şekilde dosya sildiğimizde arkaplanda yalnızca diskteki o verilere giden bu bağlantı adresi silinmiş oluyor. Yani diskte veriler mevcut olsa da o verilere ulaşmamızı sağlayan bağlantıyı kaybettiğimiz için ulaşamıyoruz. Bu sebeple standart şekilde silinen ve üzerine veri yazılamayan verilerin diskten kurtarılması mümkün oluyor.
+
+Teorik olarak açıkladık. Şimdi bu durumu bizzat deneyimlemek için orijinal dosya olan “***linkler***” klasörü içerisindeki “***metin***” dosyasını silmek üzere `rm linkler/metin` şeklinde komutumuzu girip, `cat` komutu ile sembolik link dosyasını okumayı deneyebiliriz. 
+
+```bash
+└─$ rm linkler/metin                                             
+
+┌──(taylan@linuxdersleri)-[~]
+└─$ cat sembolik_metin                                           
+cat: sembolik_metin: No such file or directory
+```
+
+Bakın böyle bir dosya veya dizin yok hatası alıyoruz. `ls -l` komutu ile listeleyelim. 
+
+![soft-link-deleted.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/soft-link-deleted.webp)
+
+Bakın sembolik link dosyası gözüküyor ama orijinal dosya silindiği için bu sembolik link kırmızı renkle listelenmiş oldu. Zaten sembolik link bizi bu dosyaya yönlendirdiği, ama bu dizinde böyle bir dosya olmadığı için bu hatayı aldık.
+
+Yani benim `cat sembolik-metin` komutunu girmemle, `cat linkler/metin` komutunu girmem aynı şey. 
+
+```bash
+└─$ cat sembolik_metin                                                      
+cat: sembolik_metin: No such file or directory
+
+└─$ cat linkler/metin
+cat: linkler/metin: No such file or directory
+```
+
+Bakın yine böyle bir dosya ve dizin yok şeklinde `cat` komutu bize hata döndürdü. İşte gördüğünüz gibi sembolik linkler yalnızca orijinal dosyalara yani aslında orijinal linklere yönlendirme yapan kısayollardır. Orijinal bağlantılar olmazsa, disk üzerindeki verilere ulaşmamız mümkün olmuyor.
+
+### Klasörler için Sembolik Link
+
+Aynı şekilde klasörler için de sembolik linkeler oluşturabilirsiniz. Ben denemek için `ln -s linkler linkler-sembolik` komutu ile yeni sembolik klasörümü oluşturmak istiyorum.
+
+```bash
+└─$ ln -s ~/linkler/ linkler-sembolik                                           
+
+└─$ ls -l linkler-sembolik
+lrwxrwxrwx 1 taylan taylan 8 Jun 26 04:38 linkler-sembolik -> /home/taylan/linkler/
+```
+
+Bakın tıpkı sembolik dosyada olduğu gibi sembolik klasör de bağlı olduğu klasöre yönlendirme yapıyor. Sembolik klasörler de tıpkı dosyalar gibi yalnızca orijinal klasöre yönlendirme yaptığı için orijinal klasör silinirse sembolik link çalışmaz.
+
+Denemek için `echo “deneme” > linkler-sembolik/metin` şeklinde komutumuzu girebiliriz. 
+
+```bash
+└─$ echo "deneme" > linkler-sembolik/metin
+
+└─$ ls linkler-sembolik                                                       
+metin
+
+└─$ ls linkler
+metin
+```
+
+Yukarıdaki çıktılara bakacak olursanız, sembolik klasöre yönlendirmiş olduğum dosyanın orijinal klasöre kaydolduğunu görebilirsiniz. Yani tıpkı dosyalar olduğu gibi sembolik klasörler de orijinal klasöre yönlendirme yapan kısayollar aslında. 
+
+Ben örnekler sırasında birer tane sembolik dosya ve klasör oluşturdum. Ancak istiyorsanız tek bir dosya veya klasör için birden fazla sembolik link de oluşturabilirsiniz. Zaten sembolik linkler kısayol görevinde olduğu için kısayol yapısına ihtiyaç duyulan her yerde kullanılabilir. Örneğin sık kullandığınız bir dizin veya dosya için masaüstünüzde bir sembolik bağlantı oluşturabilirsiniz. 
+
+### Sembolik Linkleri Silmek
+
+Sembolik link dosyalarını silmek için de doğrudan silmek istediğiniz sembolik link dosyasının ismini `rm` komutuna argüman olarak verebilirsiniz. 
+
+```bash
+└─$ rm sembolik_metin 
+
+└─$ ls -l sembolik-metin
+ls: cannot access 'sembolik-metin': No such file or directory
+
+└─$ rm -d linkler-sembolik
+
+└─$ ls -l linkler-sembolik                                                    
+ls: cannot access 'linkler-sembolik': No such file or directory
+```
+
+Gördüğünüz gibi sembolik dosya ve klasörleri standart şekilde silmiş olduk.
+
+## Katı Link
+
+Şimdi katı linklerden bahsedecek olursak. Sembolik linklere “soft link” denilmesi gibi, katı linklere de “hard link” denebiliyor. Katı link oluşturmak için doğrudan `ln` komutunu seçenek belirtmeden kullanabiliyoruz.
+
+Ben denemek için yine `echo “orijinal dosyayım” > linkler/metin` şeklinde komutumu giriyorum.
+
+```bash
+└─$ echo "orijinal dosyayım" > linkler/metin
+```
+
+Şimdi bu dosya için bir katı link oluşturmak üzere `ln linkler/metin kati-metin` şeklinde komutumuzu girebiliriz.
+
+```bash
+└─$ ln linkler/metin katı-metin                                               
+
+┌──(taylan@linuxdersleri)-[~]
+└─$ ls -l katı-metin                                                          
+-rw-r--r-- 2 taylan taylan 19 Jun 26 04:47 katı-metin
+```
+
+Bakın dosyam oluşturulmuş fakat bu dosyanın bir link dosyası olduğuna dair burada herhangi bir emare yok. Halbuki sembolik linkte açıkça link dosyası olduğu ve hangi dosyaya bağlı olduğu buradaki çıktılarda belirtiliyordu.
+
+Burada katı linke dair özel bir çıktı almadık çünkü aslında katı link dediğimiz kavram sistemimiz üzerindeki tüm standart dosya ve dizinleri temsil ediyor. Yani benim oluşturduğum orijinal metin dosyası da disk üzerindeki verilere yönlendirme yapan bir katı link.
+
+![hard-link.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/hard-link.webp)
+
+Ben burada “***kati-metin***” isimli yeni bir katı link oluşturduğumda, tıpkı orijinal dosya gibi doğrudan beni diskteki verilere yönlendiren inode değerine bir bağlantı oluşturmuş oldum.
+
+![hard-link2.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/hard-link2.webp)
+
+Sembolik linkte nasıl oluyordu. Sembolik linkler, orijinal linklere yani aslında katı linkli dosyalara yönlendirme yapıyordu, oradan da disk üzerindeki verilere ulaşabiliyorduk.
+
+![soft-link2.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/soft-link2.webp)
+
+Katı linkte ise hem orijinal dosya hem de yeni oluşturduğumuz katı link dosyası inode değerine bağlı olduğu için aynı disk verisinin yerini biliyor ve bizi oraya yönlendirebiliyor.
+
+Dolayısıyla ben orijinal veya bu yeni oluşturduğum katı link dosyasında değişiklik yaptığımda diskteki bu veri değiştiği için bu değişikliğe her iki dosya üzerinden de ulaşabiliyorum. Hatta orijinal dosya silinse bile yeni oluşturduğum katı link dosyası, inode sayesinde verilerin disk üzerinde tam olarak hangi bloklarda olduğunu bildiği için benim o verilere ulaşmam mümkün oluyor.
+
+![hard-link3.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/hard-link3.webp)
+
+Hemen bu durumu bizzat teyit etmek için öncelikle basit bir test olarak yeni oluşturduğumuz katı link dosyası üzerinden yeni veri eklemeyi deneyebiliriz.
+
+Ben denemek için `echo “yeni veri” >> katı-metin` şeklinde komutumu giriyorum.
+
+```bash
+└─$ echo "yeni veri" >> katı-metin 
+
+└─$ cat katı-metin                                                            
+orijinal dosyayım
+yeni veri
+
+└─$ cat linkler/metin                                                         
+orijinal dosyayım
+yeni veri
+```
+
+Eklediğim değişikliğe her iki dosya üzerinden de aynı şekilde ulaşabildim. Benzer şekilde `echo “orijinal ekleme” >> linkler/metin` şeklinde tekrar orijinal dosya üzerinden veri eklemeyi de deneyebiliriz.
+
+```bash
+└─$ echo "orijinal ekleme" >> linkler/metin 
+
+└─$ cat linkler/metin                                   
+orijinal dosyayım
+yeni veri
+orijinal ekleme
+
+└─$ cat katı-metin                                   
+orijinal dosyayım
+yeni veri
+orijinal ekleme
+```
+
+Bakın orijinal dosya üzerindeki değişiklik bu dosyayı da aynen etkiliyor. Çünkü zaten tüm değişiklikler inode değeri üzerinden gerçekleştirildiği için iki dosya aynı veriye erişebilen iki ayrı dosya gibi.
+
+Şimdi ben son olarak orijinal dosyayı sildiğimde bu diskteki bu verilere ulaşıp ulaşamayacağımı test etmek için `rm linkler/metin` komutunu girip orijinal dosyamı siliyorum.
+
+```bash
+└─$ rm linkler/metin                                                          
+
+└─$ cat katı-metin                                                            
+orijinal dosyayım
+yeni veri
+orijinal ekleme
+```
+
+Gördüğünüz gibi orijinal dosya silinmiş olmasına rağmen hala disk üzerindeki aynı verilere erişmeye devam edebiliyorum. Çünkü işleyiş aslında aşağıdaki şemadaki gibi.
+
+![hard-link3.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/hard-link3.webp)
+
+En nihayetinde gördüğünüz gibi aslında sistemiz üzerindeki standart dosya ve klasörler disk üzerindeki veri bloklarına inode üzerinden yönlendirme yapan bağlantı adresleri. Biz bu bağlantı adresleri yani linkler sayesinde kolay okunabilir isimlerle diskteki verilerimizi düzenle tutup tekrar tekrar erişebiliyoruz.
+
+Yani katı link oluşturma yaklaşımı sayesinde disk üzerinde tekrar aynı veriler için fazladan depolama alanı harcanmasına gerek kalmadan, dosyaların yedeklerinin alınması mümkün oluyor. Daha önce de silme işleminin aslında verilere ulaşmamızı sağlayan bağlantıların silinmesinden ibaret olduğunu söylemiştik. Eğer verilere ulaşmamızı sağlayan birden fazla katı link olursa, bir katı link silinse bile diskimiz üzerindeki verilere ulaşmaya devam edebiliyoruz. Katı link yaklaşımı tam olarak bu amaçla kullanılıyor. Ve disk üzerinde fazladan depolama alını işgal etmeden yedeklemek için harika bir çözüm.
+
+Tabii ki katı linkler örneklerimiz üzerinden bizzat teyit ettiğimiz gibi mevcut verilerin üzerine yazılmasına engel olmuyor. Yalnızca ilişkili verilere giden yolun silinmesi ihtimali için yedekleme imkanı tanıyor. Yani eğer üzerine veri yazılması konusunda endişe duyduğunuz verileriniz varsa tabii ki bunları başka bir dizine kopyalayıp tekrar aynı verilerin diskte farklı bloklarda yedeklenmesini sağlamanız gerekiyor.
+
+![backup.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/metin/backup.webp)
+
+Bakın dosyayı kopyaladığımızda, dosya içindeki veriler disk üzerinde başka bir bloğa yazılıp, bu bloğun adresi de yeni inode numarası üzerinden ulaşılabilir oluyor. Bu sayede orijinal dosyanın üzerine veri yazılsa bile bu bloktaki verilere müdahale  edilmemiş oluyor.
+
+Katı link ile standart kopyalanmış dosyaların farkı işte tam olarak bu.
+
+### Klasörler için Katı Link
+
+Standart dosya sistemi yani hiyerarşik dizin yapısı gereği, klasörler için katı link oluşturmayacağımızı da belirtmek istiyorum. İnanmıyorsanız `ln linkler/ linkler-katı` komutuyla yeni bir tane oluşturmayı deneyebiliriz. 
+
+```bash
+└─$ ln linkler/ linkler-katı                                                  
+ln: linkler/: hard link not allowed for directory
+```
+
+Bakın dizinler için hard link yani katı linkler kabul edilmiyormuş.
+
+Umarım sembolik ve katı linklerin farkları ve kullanım biçimleri net bir biçimde anlaşılmıştır. Biraz pratik yaparsanız ve gerekiyorsa bu dersi baştan dikkatlice tekrar dinlerseniz aslında ne kadar kolay olduğunu zaten göreceksiniz.
+
+Ve artık böylelikle dosya işlemleri için bilmemiz gereken temel araçları tanıdığımıza göre bu bölümü sonlandırabiliriz.
