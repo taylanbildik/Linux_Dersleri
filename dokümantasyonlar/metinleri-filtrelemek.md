@@ -1,4 +1,6 @@
-# pipe Hakkında
+# Metinleri Filtrelemek
+
+## pipe Hakkında
 
 Şimdiye kadar sistem üzerindeki yapıların dosya olarak ele alındığından ve dolayısıyla dosya içeriklerini yani baytları istediğimiz gibi manipüle edilip yönlendirebilmenin neden çok önemli olduğundan pek çok kez söz ettik. Her şeyin aslında bir bayt akışı olduğunu vurguladık hep. Vurgulamaya da devam edeceğiz. Özetle sistemi komut satırı üzerinden yöneten kişi olarak bizim işimiz gücümüz hep bayt akışlarını kontrol etmek.
 
