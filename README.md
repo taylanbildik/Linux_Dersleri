@@ -78,12 +78,10 @@
 
 Buradaki "[Türkçe Temel Linux Dokümantasyonu](https://github.com/taylanbildik/Linux_Dersleri)" içeriğini kolay takip edebilmeniz için hem web hem de android uygulamaları geliştirilmiştir. Tüm doküman içeriğine kesintisiz şekilde dilediğiniz cihazdan ulaşmak ve kolayca takip edebilmek için uygulamaları kullanabilirsiniz. 
 
-## Web Platformu
+## Web Platformu | [linuxdersleri.net](https://linuxdersleri.net)
 Dilediğiniz cihazdan kolayca doküman içeriğini takip edebileceğiniz web platformudur.
 
 ![web-platform-image](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/web-platformu.png)
-
-**Web Platform Adresi:** [linuxdersleri.net](https://linuxdersleri.net)
 
 **Projenin Github Adresi:** [Linux-Dersleri](https://github.com/Linux-Dersleri/linux-dersleri.github.io)
 
