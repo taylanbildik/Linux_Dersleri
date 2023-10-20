@@ -15,8 +15,7 @@ Bu 0 ve 1 sinyalleri de bilgisayarlar üzerindeki en küçük veri birimi olan *
 ![aschii.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/aschii.webp)
 Neticede burada esas vurgulamak istediğim, biz tek bir karakteri kullandığımızda örneğin klavyemizden “a” tuşuna bastığımızda bu karakter toplam 8 bitten 1 bayta karşılık geliyor ve bilgisayar bu “a” karakterini ikili kod olarak ele alıp işliyor. Elbette sizlerin de bildiği gibi büyüklük birimleri bitlerden ve baytlardan ibaret değil. Aşağıdaki tabloya bakarak diğer büyüklük birimlerini de görebiliriz. Normalde bizler hep ondalık sayı sistemine göre karşılıklarını telaffuz ediyoruz ancak bazı komut çıktılarında da karşılaşabileceğimiz gibi büyüklük birimlerinin ikili gösterimi de bulunuyor. 
 
-![decimal-binary-table](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/decimal-binary.webp)[Tablo Kaynağı](https://en.wikipedia.org/wiki/Byte#Multiple-byte_units){:target="_blank"}
-
+![decimal-binary-table](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/decimal-binary.webp)[Tablo Kaynağı](https://en.wikipedia.org/wiki/Byte#Multiple-byte_units)
 **Ondalık(Decimal) Gösterim:**
 
 1000 bayt = 1 kilobayt, 
@@ -151,7 +150,7 @@ MBR, artık eskimiş olan ancak hala çok sık karşılaştığımız ve karşı
 ![mbr-max.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/mbr-max.webp)
 ## GPT
 
-**GPT**, zaman içinde disk kapasitelerinin artması ve diskleri daha fazla alana bölümlenebilmesi ihtiyaçları doğrultusunda **MBR**'ın yetersiz kaldığı noktada geliştirilmiş olan yeni nesil disk bölümleme tablosudur. GPT maksimum 8 [ZiB](https://en.wikipedia.org/wiki/ZiB){:target="_blank"}'a kadar olan disk boyutlarını destekliyor. Yani eski nesil bölümleme tablosu olan MBR'a oranla günümüz şartları için gereken büyüklükleri destekliyor. Ayrıca GPT sayesinde diski 128 bölüme ayırmamız da mümkündür. Hatta bu sayı bölümleme tablosunda daha fazla alan ayrılarak genişletilebilir ancak bizim için 128 bölüm bile son derece yeterli. Üstelik GPT disk bölümleme tablosunda “**primary**” ve “**extended**” yani “**birincil**” ve “**genişletilmiş**” diye bir ayrım da bulunmuyor. Tüm bölümler birincil olarak ayrılıyor. MBR üzerinde ise mantıksal bölümlerle birlikte maksimum 15 bölüm oluşturulabiliyor. 
+**GPT**, zaman içinde disk kapasitelerinin artması ve diskleri daha fazla alana bölümlenebilmesi ihtiyaçları doğrultusunda **MBR**'ın yetersiz kaldığı noktada geliştirilmiş olan yeni nesil disk bölümleme tablosudur. GPT maksimum 8 [ZiB](https://en.wikipedia.org/wiki/ZiB)'a kadar olan disk boyutlarını destekliyor. Yani eski nesil bölümleme tablosu olan MBR'a oranla günümüz şartları için gereken büyüklükleri destekliyor. Ayrıca GPT sayesinde diski 128 bölüme ayırmamız da mümkündür. Hatta bu sayı bölümleme tablosunda daha fazla alan ayrılarak genişletilebilir ancak bizim için 128 bölüm bile son derece yeterli. Üstelik GPT disk bölümleme tablosunda “**primary**” ve “**extended**” yani “**birincil**” ve “**genişletilmiş**” diye bir ayrım da bulunmuyor. Tüm bölümler birincil olarak ayrılıyor. MBR üzerinde ise mantıksal bölümlerle birlikte maksimum 15 bölüm oluşturulabiliyor. 
 
 Yani özetle MBR'a oranla GPT hem maksimum boyut hem de bölüm sayısı ile çok daha kullanışlı bir bölümleme tablosudur.
 
