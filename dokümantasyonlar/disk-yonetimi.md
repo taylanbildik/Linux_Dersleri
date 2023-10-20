@@ -13,9 +13,13 @@ Bu 0 ve 1 sinyalleri de bilgisayarlar üzerindeki en küçük veri birimi olan *
 **8 tane bit** yan yana getirilerek de bir **bayt** oluşturuluyor. Baytlar da büyük **B** ile ifade ediliyor. Bir bayt 2^8 den tam 256 farklı değeri temsil edebiliyor. Bu baytlar da **ascii** gibi standartlarca belirlenmiş olan özel karaktere karşılık geliyor. Örneğin büyük **A** harfinin ikili sayı sistemindeki karşılığı **0 1 0 0 0 0 0 1** olup **ascii** kodu **65’**tir. Bizi şu an doğrudan ilgilendirmediği için **ascii** kodunun nasıl hesaplandığına değinmek istemiyorum. Kısa bir ek araştırma ile ulaşabilirsiniz.
 
 ![aschii.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/aschii.webp)
+
 Neticede burada esas vurgulamak istediğim, biz tek bir karakteri kullandığımızda örneğin klavyemizden “a” tuşuna bastığımızda bu karakter toplam 8 bitten 1 bayta karşılık geliyor ve bilgisayar bu “a” karakterini ikili kod olarak ele alıp işliyor. Elbette sizlerin de bildiği gibi büyüklük birimleri bitlerden ve baytlardan ibaret değil. Aşağıdaki tabloya bakarak diğer büyüklük birimlerini de görebiliriz. Normalde bizler hep ondalık sayı sistemine göre karşılıklarını telaffuz ediyoruz ancak bazı komut çıktılarında da karşılaşabileceğimiz gibi büyüklük birimlerinin ikili gösterimi de bulunuyor. 
 
-![decimal-binary-table](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/decimal-binary.webp)[Tablo Kaynağı](https://en.wikipedia.org/wiki/Byte#Multiple-byte_units)
+![decimal-binary-table](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/decimal-binary.webp)
+
+[Tablo Kaynağı](https://en.wikipedia.org/wiki/Byte#Multiple-byte_units)
+
 **Ondalık(Decimal) Gösterim:**
 
 1000 bayt = 1 kilobayt, 
@@ -39,11 +43,13 @@ Yine de ikili sayı sistemine oranla ticari olarak, ondalık gösterim daha büy
 Normalde karıştırılanın aksine örneğin 1 gigabayt 1024 megabayt değildir. Hatta teyit etmek için Google’a “**1 gb to mb**” şeklinde yazıp aratabiliriz. 
 
 ![gb-to-mb.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/gb-to-mb.webp)
+
 Bakın **1 gigabyte**’ın **1000 megabyte** olduğu belirtiliyor. Zaten bu sebeple satın aldığımız diskler sisteme bağladığımızda bizim beklediğimizden daha az depolama alanına sahip gözüküyor. 
 
 Örneğin **1 terabayt**lık disk, sistem üzerinde yaklaşık **931 gibibyte** olarak gözüküyor. Çünkü depolama alanının büyüklük birimi **terabayttan gibibyte** dönüştürülüyor. Yine Google üzerinden de bu durumu teyit edebiliriz. 
 
 ![tb-to-gib.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/tb-to-gib.webp)
+
 Bakın **1 terabayt** aslında yaklaşık olarak **931 gibibayt**. Bilgisayar, ikili sayı sistemi üzerinden hesaplama yaptığı için onluktan ikili düzene geçişte bu farklar ortaya çıkıyor. Bizler de işletim sistemleri üzerinde bu büyüklük farklarını görebiliyoruz.
 
 En genel haliyle büyüklük birimleri hakkında bilmemiz gerekenler bunlar. 
@@ -62,11 +68,13 @@ Büyüklük birimlerinden bahsettiğimize göre verilerin diskte nasıl depoland
 Sektör birimi dışında bir de blok olarak isimlendirilen işletim sistemleri için gruplanmış birimler vardır. Bloklar, en genel tanımıyla işletim sisteminin adresleyebileceği yani işaret edebileceği bir sektör grubudur. Bir blok yalnızca tek bir sektörden ibaret olabilir, ya da 2'li 4'lü 8'li 16'lı gibi birden çok sektörün bir araya gelmesiyle de oluşturulabilir.
 
 ![block.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/block.webp)
+
 Blok olarak ifade ettiğimiz birim, aslında dosya sisteminin adresleyebileceği en küçük depolama birimini temsil eden bir soyutlamadır. Hatırlıyorsanız inode kavramından bahsederken, inode’un aslında disk üzerindeki verilerin hangi bloklarda olduğunu söyleyen yapı olduğunu öğrenmiştik. Yani aslında verilerin disk üzerinde bloklar halinde tutulduğunu daha önce de üstü kapalı şekilde görmüştük. Verilerin disk üzerinde bloklar halinde tutulmasının nedeni, diskin en verimli şekilde işletim sistemi tarafından yönetilebilmesini sağlamaktır. Ama şu an bu konunun detaylarına girmek istemiyorum. Anlatımın devamında neden blok yaklaşımın kullanıldığından zaten bahsedeceğiz. Şimdi blok kavramının tam olarak neyi ifade ettiği üzerinde biraz daha duralım. 
 
 İşletim sisteminin ana yapısı olan çekirdek, tüm dosya sistemi işlemlerini blok birimleri üzerinden ele alınır. Burada depolama bağlamında kullandığımız "blok" ifadesi, disk donanımı ile sistemin kaynaklarını yönetmekten sorumlu olan çekirdek arasında arabirim oluşturabilen en küçük boyuttur. Yani fiziksel olarak böyle bir gruplama söz konusu değil. Yalnızca soyut olarak sektörlerin gruplanmış haline blok diyoruz. Dolayısıyla işletim sisteminin emirleri doğrultusunda bir diskten veri okunurken veya bir diske veri yazılırken, veriler bloklar halinde okunur veya yazılır. Örneğin Linux sisteminin varsayılan dosya sistemi formatı olan **ext4**’ün, standart blok boyutu **4096 byte**dir. Disk üzerindeki en küçük birim olan tek bir sektör **512 byte** veri tutabildiği için bize soyutlama katmanı sunan ext4’ün varsayılan olarak ele aldığı en küçük disk birimi **8 sektörden meydana gelmiş tek bir bloktur**. Yani **ext4** dosya sistemine sahip disk bölümlerine veriler yazılırken veya okunurken disk üzerinde **4096 byte** karşılık gelen 8’er sektörlük birimler kullanılır. Bu da her veri kümesi için 4096 baytlık veri bloklarının kullanılacağı anlamına geliyor. 
 
 ![ext4-sector.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/ext4-sector.webp)
+
 Belki buradaki açıklamalarım yeterince anlaşılır gelmemiş olabilir. Hemen somut bir örnek üzerinden açıklamalarımızı pekiştirelim.
 
 Örneğin bir metin belgesi oluşturup içerisine tek bir karakter girersek, bu karakter 1 byte veriye karşılık gelecektir. Zaten tek bir karakterin 1 byte karşılık(~çoğunlukla) geldiğinden anlatımın başında bahsetmiştik. Bu karakter 1 byte karşılık geliyor ancak, bizim kullandığımız dosya sisteminin en küçük birimi olan blok boyutu 4096 byte olduğu için dosya içerisine yazdığımız 1 baytlık veri de olsa, disk üzerinde bu veri 4096 baytlık disk bölümü işgal edecek. Çünkü mevcut dosya sisteminin ele alabileceği yani kontrol edebileceği en küçük birim bu 4096 baytlık bloktur. Hemen uygulamalı şekilde bu durumu gözlemleyelim. 
@@ -106,6 +114,7 @@ Tüm bu çıktılardan biz şimdilik yalnızca büyüklükler hakkında bilgi su
 Bakın dosyanın gerçek boyutu(Size:) **1** bayt olarak gözüküyor. Blocks ifadesinin karşısında da kaç tane sektörü işgal ettiği yazıyor. Hemen yanında da bloğun boyutu yazıyor. Buradaki “io” ifadesi “**i**nput **o**utput” ifadesinden geliyor. Bu bilgi de mevcut dosya sisteminin tek bir blok boyutunu belirtiyor. Neticede 1 baytlık bu dosyanın 4096 baytlık bir blok üzerinde 8 sektörlük disk alanını işgal ettiğini bu çıktılara bakarak teyit edebiliyoruz. Bizim örneğimizdeki tek bir karakterin diskte barındırılması için; bir sektör 512 bayt olduğu için tek bir blok için 8 sektör yani 4096 baytlık alan kullanılmış oldu.
 
 ![1byte.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/1byte.webp)
+
 Emin olmak için dosya boyutunu bir blok boyutunu aşacak şekilde revize edebiliriz. Ben örnek olarak `echo {1..1045} > test2` şeklinde komutumu giriyorum. 
 
 ```bash
@@ -131,6 +140,7 @@ Change: 2023-07-09 05:12:35.272248119 -0400
 Bakın dosyanın boyutu 4096 byte'ı sadece biraz geçmiş olmasına rağmen 16 sektörü yani toplam iki blokluk 8192 byte alanı işgal ediyor.
 
 ![4118byte.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/4118byte.webp)
+
 İşte bizzat teyit edebildiğimiz gibi dosya sisteminin sahip olduğu blok boyutuna göre veriler, bloklar halinde diskte depolanıyor ve tekrar bu bloklar üzerinden okunuyor. Tam da bu noktada muhtemelen, bu yaklaşımla depolama biriminin tam olarak verimli kullanılamadığını yani bloklardaki boş disk alanlarının kullanılması gerektiğini düşünmüş olabilirsiniz. Ancak bu tam olarak doğru bir yaklaşım sayılmaz.
 
 İşletim sistemi çekirdeğinin kontrolündeki dosya sistemine göre en küçük birim blok olduğu için bir bloğun kısmi bir bölümünü kullanamayız. Çünkü dosya sistemi bloktan daha küçük bir alana adresleme yapamaz. Yani ilk örneğimizde olduğu gibi 1 baytlık dosya için 4096 baytlık blok kullanılmak zorunda. Eğer bu dosyaya yeni veri eklenmezse başka bir dosyayla ilişkili olan herhangi bir veri bu bloğa yazılamaz. Çünkü dosya sistemi bloğun bir kısmına adresleme yapamaz. Yalnızca bloğun bütününe adresleme yapabilir. Zaten inode kavramını ele alırken bu durumdan da bahsetmiştik hatırlarsanız. Yani örneğin bir bloğun bir kısmında X dosyasının verileri bir kısmında da Y dosyasının verileri barındırılamaz. Çünkü barındırılsa bile dosya sistemi, bloktan daha küçük birimleri kontrol edemediği için X ve Y dosyası gibi bir ayrım gözetmeden yalnızca tüm bloğu işaret edebilir. Zaten hatırlarsanız inode değeri de dosyanın içindeki verilerin hangi bloklarda olduğunu söylüyordu. İlgili verilerin, bloğun tam olarak neresinde olduğuna bakılmıyor, komple bloğun kendisi ele alınıyor. Yani özetle veriler dosya sistemi tarafından blok blok ele alınıyor. Bu nedenle bir dosya aslında tüm bloğu tüketmese bile yani tüm bloğu doldurmasa bile, disk üzerindeki bloğa ayrılmış olan sektörlerin bir kısmı boş kalabilir. Dolayısıyla sistemde barındırılacak dosyaların genel boyutlarına göre blok boyutlarının belirlenmesi önemlidir. Eğer çoğunlukla büyük boyutlu dosyalar barındırılacaksa blok boyutları büyük olabilir. Ya da küçük boyutlu dosyalar bulunacaksa da blok boyutları küçük şekilde konfigüre edilebilir.
@@ -148,6 +158,7 @@ Fiziksel diskimizi yazılımsal olarak bölümlere ayırıp farklı amaçlar iç
 MBR, artık eskimiş olan ancak hala çok sık karşılaştığımız ve karşılaşmaya devam edeceğimiz disk bölümleme tablosudur. MBR disk bölümleme tablosu maksimum 2 TB'a kadar olan disk boyutlarını destekliyor. Ve MBR disk bölümleme tablosu kullanılarak disk yalnızca 4 birincil bölüme ayrılabiliyor. Yine de birincil bölüm sınırlamasını aşmak için, birincil bölümlerden birini mantıksal bölümlere ayrılan genişletilmiş bölüm olarak da kullanabiliyoruz. Yani MBR bölümleme tablosunda maksimum 3 birincil ve 1 genişletilmiş bölüm üzerinden 12 mantıksal olmak üzere toplam 15 tane bölüm oluşturabiliyoruz. 
 
 ![mbr-max.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/mbr-max.webp)
+
 ## GPT
 
 **GPT**, zaman içinde disk kapasitelerinin artması ve diskleri daha fazla alana bölümlenebilmesi ihtiyaçları doğrultusunda **MBR**'ın yetersiz kaldığı noktada geliştirilmiş olan yeni nesil disk bölümleme tablosudur. GPT maksimum 8 [ZiB](https://en.wikipedia.org/wiki/ZiB)'a kadar olan disk boyutlarını destekliyor. Yani eski nesil bölümleme tablosu olan MBR'a oranla günümüz şartları için gereken büyüklükleri destekliyor. Ayrıca GPT sayesinde diski 128 bölüme ayırmamız da mümkündür. Hatta bu sayı bölümleme tablosunda daha fazla alan ayrılarak genişletilebilir ancak bizim için 128 bölüm bile son derece yeterli. Üstelik GPT disk bölümleme tablosunda “**primary**” ve “**extended**” yani “**birincil**” ve “**genişletilmiş**” diye bir ayrım da bulunmuyor. Tüm bölümler birincil olarak ayrılıyor. MBR üzerinde ise mantıksal bölümlerle birlikte maksimum 15 bölüm oluşturulabiliyor. 
@@ -170,9 +181,11 @@ Yani aslında biz cihazımızı başlattığımızda BIOS veya UEFI (modern sist
 BIOS genel işlem akışı.
 
 ![bios.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/bios.webp)
+
 UEFI genel işlem akışı.
 
 ![uefi.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/uefi.webp)
+
 Esasen bu konu pek çok detayı barındırıyor, fakat temel seviye için bu başlangıç yeterli. Netleştirmek için mutlaka ek olarak araştırmanızı öneririm. Yine de bu bölümdeki anlatımları takip etmek için şimdilik bu kadarlık bilgi yeterli.
 
 # Dosya Sistemi Nedir ?
@@ -180,14 +193,17 @@ Esasen bu konu pek çok detayı barındırıyor, fakat temel seviye için bu ba�
 Dosya sistemi, en genel haliyle disk bölümündeki verilerin nasıl ele alınacağını belirleyen yapıdır. Dosya sistemi ifadesi, isminde de yer aldığı şekilde dosyaların diskteki veri karşılıklarının nasıl depolanıp ne şekilde ele alınacağını belirleyen sistematik bir metodolojiyi temsil eder. Dosya sistemi olmadan diskteki veriler yalnızca yığınlardan ibarettir. Dosya sistemi olmadan diskteki verilere erişip onları yönetemeyiz. 
 
 ![file-systemd-vs.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/file-systemd-vs.webp)
+
 Tek bir diski birden fazla bölüme ayırabildiğimiz için de esasen aynı fiziksel diskteki farklı bölümlerde birbirinden farklı dosya sistemlerini kullanmamız da mümkündür. 
 
 ![multi-filesystem](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/multi-filesystem.webp)
+
 Bu sayede aynı disk aygıtı üzerinden, ihtiyaca yönelik farklı dosya sistemleri kullanılabilir. Yani diski bölümledikten sonra işiniz bitmiyor aslında. Bu disk bölümü için bir de dosya sistemi tanımlaması yapmanız gerekiyor. Aksi halde işletim sistemi üzerinden disk bölümündeki verilere ulaşılması mümkün olmuyor. Çünkü dosya sistemleri, verilerin diskte nasıl depolandığı ve tekrar nasıl erişilebileceğini işletim sistemine izah ediyor. 
 
 Dizinlerde gezintiyi ele aldığımız bölümde Linux sisteminin "**dosya sistemi hiyerarşisini**" de kısaca açıklamıştık. Linux sisteminde tüm dosyalar “**kök dizin**” olarak ifade edilen “**/**“ dizininden başlayıp alt klasörlerde hiyerarşik düzende tutuluyor. Linux, farklı dizinlere farklı disk bölümlerini bağlamayı da mümkün kıldığı için kök dizin altında gözüken ancak birbirinden farklı disk bölümlerinde birbirinden farklı dosya sistemlerine sahip klasörler tek bir dizin hiyerarşisi içerisinde gözükebiliyor.
 
 ![file-systemd-hierarchy](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/file-systemd-hierarchy.webp)
+
 Normalde Windows sisteminden bildiğimiz üzere işletim sisteminin kurulu olduğu disk “**C:**” olarak isimlendirilir ve ek disk aygıtları ya da bölümleri de **D:** **E:** **F:** gibi isimler ile ayrı olarak bağlanıp kullanılır. Linux'ta ise tüm disk aygıtları kök dizin altındaki uygun klasöre bağlanarak kullanılıyor. Yani ayrı olarak ele alınmıyor, tekil hiyerarşi olduğu için bu hiyerarşiye dahil ediliyor. 
 
 Linux sistemi pek çok farklı dosya sistemini destekliyor. Bunları görmek için `cat /proc/filesystem` komutunu girebiliriz.
@@ -243,48 +259,62 @@ Ayrıca zaman içinde arayüz değişiminden dolayı, buradaki sanal disk ekleme
 Öncelikle sanal makinenizi kapatmanız gerekiyor. Çünkü makine açıkken ayarlarını değiştirmemiz mümkün değil.
 
 ![close-virtualbox.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/close-virtualbox.webp)
+
 Sanal makinenizin üzerine sağ tıklayıp ayarları açın.
 
 ![virtualbox-settings.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-settings.webp)
+
 Ayar penceresindeki “**Depolama**” sekmesine tıklayın.
 
 ![virtualbox-settings-storage.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-settings-storage.webp)
+
 Denetleyici üzerindeki disk ekleme ikonuna tıklayın.
 
 ![virtualbox-controller.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-controller.webp)
+
 Yeni disk oluşturmak üzere “**Oluştur**” butonuna basın.
 
 ![virtualbox-add-disk.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-add-disk.webp)
+
 Bu pencerede bize oluşturmak istediğimiz sanal diskin türü soruluyor. Standart olan seçenekle devam edebiliriz. Merak ediyorsanız diğer seçenekleri araştırabilirsiniz.
 
 ![virtualbox-add-disk2.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-add-disk2.webp)
+
 İlgili disk bölümü sanal makinede doldurulmadığı sürece gerçek diskteki alan dolmayacağı için varsayılan seçenekle devam edebilirsiniz. Eğer burada “Tam boyutu önceden ayır” seçeneğini seçerseniz, ilgili disk sanal sistemde kullanılsa da kullanılmasa da mevcut diskinizden sizin belirlediğiniz disk boyutu kadar alan ayrılacaktır. Bu yöntem sanal diskin hızlı çalışmasını sağlasa da eğer diskinizde çok alan yoksa bu seçeneği seçmenizi önermem. Bırakın, sanal disk kullanıldıkça fiziksel diskinizden alan ayrılsın.
 
 ![virtualbox-add-disk3.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-add-disk3.webp)
+
 Sanal diskin boyutunu ve nerede barındırılması gerektiğini belirlememiz gerekiyor. Ben açıklamalar sırasında vereceğim örnekler için yeterli olacağından, yalnızca 2GB boyutunda disk oluşturuyorum. 
 
 ![virtualbox-add-disk4.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-add-disk4.webp)
+
 Son olarak oluşturduğunuz yeni sanal diski makineye eklemek için buradan seçmemiz gerek.
 
 ![virtualbox-add-disk5.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-add-disk5.webp)
+
 Gördüğünüz gibi disk bölümü sanal makineye eklenmiş bulunuyor.
 
 ![virtualbox-add-disk-final.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-add-disk-final.webp)
+
 Bu şekilde sanal makinenize sanal diskler ekleyebilirsiniz. Ben tıpkı burada ele aldığım şekilde örnekler sırasında kullanmak üzere 2 tane daha 1GB’lık disk ekleyeceğim.
 
 ![virtualbox-add-disk-final2.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-add-disk-final2.webp)
+
 Sanal SATA disklerini oluşturdum.
 
 Örnek için yalnızca SATA denetleyicisi üzerinden disk oluşturdum ama farklı disk biçimlerini de kullanabiliriz. Pratikler sırasında farklı disk biçimlerini de görebilmek adına oluşturduğumuz sanal disklere ek olarak bir de sanal `NVMe` disk de eklesek iyi olabilir. Bunun için öncelikle uygun denetleyiciyi eklememiz gerekiyor.
 
 ![virtualbox-add-controller.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-add-controller.webp)
 ![virtualbox-controller-nvme.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-controller-nvme.webp)
+
 Tıpkı daha önce SATA denetleyicisi üzerinden yaptığımız gibi, şimdi de bu denetleyici üzerinden aynı şekilde yeni disk ekleyebiliriz.
 
 ![virtualbox-controller-nvme2.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-controller-nvme2.webp)
+
 Ben 10GB ve 1GB olmak üzere iki tane NVMe disk eklemek istiyorum.
 
 ![virtualbox-controller-nvme3.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/virtualbox-controller-nvme3.webp)
+
 Ben örnek olarak anlatım sırasında bu diskleri kullanıyor olacağım. Sizler bu kadar disk oluşturmak zorunda değilsiniz. Ben sadece birden fazla diskin nasıl görüneceği hakkında fikir sahibi olabilmemiz için birden fazla ve farklı türde disk ekledim sadece. Hepsini doğrudan kullanmayacağım. Sizler dilediğiniz boyutta dilediğiniz kadar disk oluşturabilirsiniz. Yani fiziksel diskinizde uygun alan yoksa benimle aynı şekilde ve sayıda disk oluşturmak zorunda değilsiniz. 1 veya 2 disk oluşturabiliyorsanız da beni rahatlıkla takip edebilirsiniz. Yalnızca açıklamalarımı dikkatlice takip etmeniz yeterli. Şimdi sanal makinemizi çalıştırıp diskler üzerinde pratik yapmaya başlayabiliriz.
 
 # Blok Aygıtlarını Listelemek | `lsblk`
@@ -1334,6 +1364,7 @@ Söz konusu LVM olduğunda temelde üç katman bulunuyor.
 Yapıyı en genel haliyle aşağıdaki şekilde soyutlayabiliriz.
 
 ![LVM-structure.webp](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/disk/LVM-structure.webp)
+
 Bu iş için tanımlanan fiziksel disklerdeki depolama alanları birleştirilip tek bir grup içerisinde toparlanıyor, daha sonra bu toplam disk kapasitesinden sanal olarak ihtiyaca yönelik disk bölümleri oluşturulabiliyor. Bu sayede disk alanlarını genişletip küçültme gibi işlevler, veri kayıpları olmadan kolayca ele alınabiliyor. Yani fiziksel olarak tek bir diskte sahip olmamız veya fiziksel sınırlara takılmamız gerekmiyor. Soyutlayarak çok daha pratik çözümler üretebiliyoruz. Bu yaklaşım sayesinde yedekleme, snapshot, ve diğer disk yönetimi sorunlarını kolayca idare edebiliyoruz.
 
 # LVM Kurulumu
