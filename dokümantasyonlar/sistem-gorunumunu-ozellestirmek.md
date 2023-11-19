@@ -74,10 +74,10 @@ Temayı indirmek için **Download** butonuna basalım ve buradan istediğimiz i�
 
 Bu arada ben burada sizlere yol göstermek amacıyla örnekler verdiğim için çok fazla tema içeriğini karıştırmıyorum ancak sizler elbette deneye deneye hoşunuza gidecek temayı bulabilirsiniz. Zaten kurulum işlemi de oldukça basit olduğundan çok çabucak bir sürü tema deneyebilirsiniz. 
 
-Neyse dosyamız da inmiş oldu. Şimdi dosyamızı sistemin görebilmesi için ***/usr/share/themes/*** klasörüne çıkarmamız gerekiyor. 
+Şimdi dosyamızı sistemin görebilmesi için ***/usr/share/themes/*** klasörüne çıkarmamız gerekiyor. 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/9.png)
 
-Evet dosyamı ilgili konuma çıkardım. Artık böylelikle sistem yeni eklediğimiz tema içeriğini görebilecek. 
+Dosyayı ilgili konuma çıkardım. Artık böylelikle sistem yeni eklediğimiz tema içeriğini görebilecek. 
 Hemen yeni temayı kurmak için ince ayarları açalım. İnce ayar menüsüne arama çubuğuna ***"tweaks"*** yazarak da ulaşabilirsiniz. 
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/10.gif)
 Evet ince ayar menüsünü açtık, buradan görünüm sekmesine tıklayalım. Ve buradan ***Uygulamalar *** kısmından indirdiğimiz temayı seçerek kurulması sağlayalım. İşte yeni bir tema kurulum işlemi bu kadar kolay. Diğer temasal değişim işlemleri de aynı şekilde gerçekleşiyor. Hemen kısaca diğer değişimleri de yapalım.
@@ -101,11 +101,11 @@ Benim **Gnome 3** ile ilgili göstereceğim temasal değişiklikler bu kadar, di
 
 # Masaüstü Ortamları ve Kısaca Özellikleri
 
-Baştan belirtmek isterim ki benim burada yazacağım şeyler kendi deneyimlerim ve genel gözlemlerimdir. Yani tam anlamıyla sizi yönlendirmeyebilir. Ben burada sizlerin kurulum yapmadan önce daha iyi fikir sahibi olabilmeniz için Kali Linux dağıtımında kullanılabilen masaüstü ortamlarının başlıca özeliklerini kısaca açıklamaya çalıştım. Ancak burada belirttiğim özellikler bir çok faktöre göre değişmektedir, yani siz buradan fikir sahibi olun ancak kesinlikle ve kesinlikle kendiniz deneyerek hangisinin sizin için en ideali olduğuna kendiniz karar verin. Uyarımı peşin peşin yaptıktan sonra hadi artık lafı daha fazla uzatmadan Kali Linux'a uygun olan masaüstü ortamlarının genel özelliklerini tanımaya başlayalım.
+Baştan belirtmek isterim ki buradaki anlatımlar kendi deneyimlerim ve genel gözlemlerimdir yani tam anlamıyla sizi yönlendirmeyebilir. Ben burada sizlerin kurulum yapmadan önce daha iyi fikir sahibi olabilmeniz için Kali Linux dağıtımında kullanılabilen masaüstü ortamlarının başlıca özeliklerini kısaca açıklamaya çalıştım. Ancak burada belirttiğim özellikler bir çok faktöre göre değişmektedir, yani siz buradan fikir sahibi olun ancak kesinlikle bizzat deneyerek hangisinin sizin için en ideali olduğuna kendiniz karar verin.
 
 ## **XFCE Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xfce.png)
-Görsel olarak oldukça yalındır ve hiç bir gereksiz görsel arayüz ögesi kullanmaz. Önceliği sistemin maksimum verimde çalışmasıdır, minimal bir sistemdir. Çok hafif olduğundan sistemi yormadan oldukça hızlı şekilde çalışır.  Eğer benim işim performans görsellik önemli değil diyorsanız tercih edebilirsiniz.
+Görsel olarak oldukça yalındır, gereksiz görsel arayüz ögesi kullanmaz. Önceliği sistemin maksimum verimde çalışmasıdır, minimal bir sistemdir. Çok hafif olduğundan sistemi yormadan oldukça hızlı şekilde çalışır. Sistem performansı görsellikten önce geliyorsa tercih edebilirsiniz.
 
 ## **KDE Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/kde.png)
@@ -113,11 +113,11 @@ Daha çok Windows'u andırır, asıl hedefi grafiksel arayüz kullanıcılarıd�
 
 ## **LXDE Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/lxde.png)
-Az bir donanım gücü ile çok iyi işler çıkarabileceğiniz oldukça yalın masaüstü ortamıdır. Dolayısı ile grafiksel arayüz kısmında pek bir şey beklememek lazım. Amacınız sistemi verimli şekilde kullanmaksa ve elinizde güçlü bir donanım yoksa tercih edebilirsiniz. 
+Az bir donanım gücü ile çok iyi işler çıkarabileceğiniz, oldukça yalın masaüstü ortamıdır. Dolayısı ile grafiksel arayüz kısmında pek bir şey beklememek lazım. Amacınız sistemi verimli şekilde kullanmaksa ve elinizde güçlü bir donanım yoksa tercih edebilirsiniz. 
 
 ## **Cinnamon Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/cinnamon.jpg)
-Cinnamon Gnome baz alınarak alınarak geliştirildiği için en çok tercih edilen masaüstü ortamıdır. Hatta son zamanlarda bir çok kullanıcıya göre kötüye giden Gnome3 için harika bir alternatiftir. Grafiksel arayüzünün kullanıcı dostu olması ve sistemi de çok fazla yormaması Cinnamon'u normal kullanıcılar arasında popüler yapmıştır. Hatta en çok kullanılan Linux dağıtımı olan Linux Mint' de varsayılan olarak Cinnamon kullanmaktadır. Ve Mint' in bu başarısı Cinnamon'un kullanışlı yapısına bağlanmaktadır.
+Cinnamon, Gnome baz alınarak alınarak geliştirildiği için en çok tercih edilen masaüstü ortamıdır. Hatta son zamanlarda bir çok kullanıcıya göre kötüye giden Gnome3 için harika bir alternatiftir. Grafiksel arayüzünün kullanıcı dostu olması ve sistemi de çok fazla yormaması Cinnamon'u normal kullanıcılar arasında popüler yapmıştır. Hatta en çok kullanılan Linux dağıtımı olan Linux Mint' de varsayılan olarak Cinnamon kullanmaktadır.
 
 ## **Mate Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/mate.png)
@@ -125,13 +125,13 @@ Mate masaüstü ortamı da Gnome3'ün hantallığından bunalan kullanıcılar i
 
 ## **e17 Masaüstü Ortamı**
 ![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/e17.png)
-Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir arayüz sunmaz ama sunduğu performansın yanında içinizi daraltacak bir görünüme de sahip değildir. Birçok cihazda oldukça verimli şekilde çalışmaktadır. Deneyimlemenizde fayda var derim :)
+Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir arayüz sunmaz ama sunduğu performansın yanında içinizi daraltacak bir görünüme de sahip değildir. Birçok cihazda oldukça verimli şekilde çalışmaktadır.
 
 # Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri
 
-> **Hatırlatma;** Bu işlemleri yapmadan önce **sisteminizin güncel olduğunda emin olun**, aksi takdirde sisteminiz güncel değilse kurulum gerçekleşmeyecektir.
+> **Hatırlatma;** Kurulum işlemlerinden önce **sisteminizin güncel olduğunda emin olun**. Repolardaki paket isimleri zaman içinde değişmiş olabilir. Ayrıca farklı bir dağıtıma kurulum gerçekleştirirken de, kullanmakta olduğunuz dağıtımın repolarında bu paketlerin hangi isimle mevcut olduğunu kontrol edip yükleyebilirsiniz. Tüm dağıtım repolarında bu paketler bulunmuyor da olabilir. Harici olarak paketleri araştırıp kurabilirsiniz. Ben yalnızca örnek olark Kali dağıtımı üzerinden açıkladım.
 
->  **Bilgilendirme;** Sisteminize birden fazla masaüstü ortamı kurabilir ve dilediğiniz zaman bu ortamlara geçiş yapabilirsiniz. Yani aşağıdaki tüm masaüstü ortamlarını kurup tüm bu ortamlar arasında dilediğiniz zaman kolayca geçiş yapabilirsiniz. 
+> **Bilgilendirme;** Sisteminize birden fazla masaüstü ortamı kurabilir ve dilediğiniz zaman bu ortamlara geçiş yapabilirsiniz. Yani aşağıdaki tüm masaüstü ortamlarını, kurup tüm bu ortamlar arasında dilediğiniz zaman kolayca geçiş yapabilirsiniz. 
 
 ## **XFCE Masaüstü Ortamı**
 
