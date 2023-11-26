@@ -83,7 +83,8 @@ Dilediğiniz cihazdan kolayca doküman içeriğini takip edebileceğiniz web pla
 
 ![web-platform-image](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/web-platformu.png)
 
-**Projenin Github Adresi:** [Linux-Dersleri](https://github.com/Linux-Dersleri/linux-dersleri.github.io)
+### Projenin Github Adresi: [Linux-Dersleri](https://github.com/Linux-Dersleri/linux-dersleri.github.io)
+### Platform Tanıtım Videosu: https://youtu.be/g00i4px9r6w
 
 ![](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/img/menu/platform.gif)
 
