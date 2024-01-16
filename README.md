@@ -96,6 +96,15 @@ Mevcut web platformunun mobil uyumlu olmasına ek olarak, doğrudan çevrimdış
 [<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/6.png" height="400">](https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri)
 [<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/7.png" height="400">](https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri)
 
+## iOS Test Uygulaması
+Linuxdersleri.net adresinde bulunan "[Temel Linux](https://www.linuxdersleri.net/temel-linux)" eğitimi içerisindeki anlatımlardan yola çıkılarak hazırlanmış olan basit [test uygulaması](https://apps.apple.com/tr/app/linux-testi/id6474895980). Her defasında 20 soru ile boş vakitlerinizde kendinizi test edebilirsiniz. 
+
+[<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/0a.png" height="400">](https://apps.apple.com/tr/app/linux-testi/id6474895980)
+[<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/3a.png" height="400">](https://apps.apple.com/tr/app/linux-testi/id6474895980)
+[<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/4a.png" height="400">](https://apps.apple.com/tr/app/linux-testi/id6474895980)
+[<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/5a.png" height="400">](https://apps.apple.com/tr/app/linux-testi/id6474895980)
+
+
 
 ## :postbox: Geri Bildirimde Bulunun
 Fark etmiş olduğunuz hata, eksiklik ve yazım yanlışlarını bildirebilirsiniz.
