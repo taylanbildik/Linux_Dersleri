@@ -1,5 +1,5 @@
 # Doküman Hakkında
-<img align="left" width="250" height="140" src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/linux-doc.png">Buradaki doküman, videolu eğitim olarak ele aldığımız [Kali Linux ile Sıfırdan Temel Linux Eğitimi](https://www.udemy.com/course/kali-linux-ile-sifirdan-temel-linux-egitimi/?referralCode=04ABD09E6ED5DA93F7A2)'nin komut satırı dersleri dokümantasyon kaynağıdır. Bu eğitim serisi, Linux sistemlerini nasıl yönetebileceğimizi sıfırdan başlayarak sıralı şekilde ele aldığımız temel konu anlatımlarından oluşturulmuştur. Müfredat ve daha fazla bilgi için aşağıdaki bilgileri gözden geçirebilirsiniz.
+<img align="left" width="250" height="140" src="https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/linux-doc.png">Buradaki doküman, videolu eğitim olarak ele aldığımız [Kali Linux ile Sıfırdan Temel Linux Eğitimi](https://www.linuxdersleri.net/kurs)'nin komut satırı dersleri dokümantasyon kaynağıdır. Bu eğitim serisi, Linux sistemlerini nasıl yönetebileceğimizi sıfırdan başlayarak sıralı şekilde ele aldığımız temel konu anlatımlarından oluşturulmuştur. Müfredat ve daha fazla bilgi için aşağıdaki bilgileri gözden geçirebilirsiniz.
 
 # Linux Komut Satırı Dokümantasyon Müfredatı
 
