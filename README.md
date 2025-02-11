@@ -88,6 +88,7 @@ Dilediğiniz cihazdan kolayca doküman içeriğini takip edebileceğiniz web pla
 
 ![](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/img/menu/platform.gif)
 
+<!--
 ## Android Uygulaması
 Mevcut web platformunun mobil uyumlu olmasına ek olarak, doğrudan çevrimdışı şekilde kullanabileceğiniz "[android uygulaması](https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri)" da mevcuttur.
 
@@ -103,7 +104,7 @@ Linuxdersleri.net adresinde bulunan "[Temel Linux](https://www.linuxdersleri.net
 [<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/3a.png" height="400">](https://apps.apple.com/tr/app/linux-testi/id6474895980)
 [<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/4a.png" height="400">](https://apps.apple.com/tr/app/linux-testi/id6474895980)
 [<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/5a.png" height="400">](https://apps.apple.com/tr/app/linux-testi/id6474895980)
-
+-->
 
 
 ## :postbox: Geri Bildirimde Bulunun
